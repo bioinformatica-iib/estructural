@@ -67,6 +67,7 @@ hide_footer: True
 
 </style>
 
+<!---
 <div class="table">
 
 |**Fecha** |   **Horario**   |  **Tipo**    |   **Tema**	|   **Docente** |
@@ -111,3 +112,4 @@ hide_footer: True
 |           | 14 - 18hs|          |	REVISION EXAMEN                  |F. Agüero , L. Chemes , M. Nielsen |
 
 </div>
+-->

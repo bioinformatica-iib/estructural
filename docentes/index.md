@@ -6,6 +6,7 @@ menubar_toc: true
 hero_height: is-small
 ---
 
+<!---
 ## Profesores Clases Teóricas
 
 **Profesor Titular:** 
@@ -26,3 +27,4 @@ hero_height: is-small
 
 **Ayudante ad-honorem**
 * Lic. Ibel Carri
+--->

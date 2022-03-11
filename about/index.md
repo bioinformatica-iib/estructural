@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Información General
-permalink: /about/
+permalink: /about
 menubar_toc: true
 toc_title: Contenidos
 hide_hero: false
 hero_height: is-small
 ---
-
+<!---
 ## Correlativas para alumnos de grado UNSAM
 
 * CB14 Estadistica Aplicada
@@ -90,4 +90,5 @@ Todas las instancias evaluatorias (teórico + práctico) con puntaje de 7 o más
 * Visualización de genomas
 * Genómica comparativa
 * Short Read Mapping
+--->
 

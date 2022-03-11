@@ -10,5 +10,6 @@ show_sidebar: false
 menubar: contents
 hero_height: is_small
 ---
-
+<!---
 ![flyer]({{ site.baseurl }}/img/2021_Bioinfo_flyer.png)
+--->
