@@ -10,6 +10,7 @@ show_sidebar: false
 menubar: contents
 hero_height: is_small
 ---
+{% include notification.html message="This resource is not available yet." %}
 <!---
 ![flyer]({{ site.baseurl }}/img/2021_Bioinfo_flyer.png)
 --->
