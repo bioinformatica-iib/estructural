@@ -3,7 +3,7 @@
 ## Para acceder al sitio:
 
 Donde se hace el deploy:  
-[Sitio Web Generado](https://bioinformatica-iib.github.io/introduccion-bioinformatica/)
+[Sitio Web Generado](https://bioinformatica-iib.github.io/estructural/)
 
 ## Para editar este sitio:
 
