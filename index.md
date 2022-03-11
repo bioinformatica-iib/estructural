@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 # {% include notification.html message="Este sitio se encuentra en construcción" %}
 
-title: Curso de Introducción a la Bioinformática
+title: Bioinformática Estructural
 subtitle: IIBio-UNSAM
 layout: page
 show_sidebar: false
