@@ -10,11 +10,10 @@ hero_height: is-small
 ## Profesores Clases Teóricas
 
 **Profesor Titular:** 
-* Dr. Fernán Agüero
+* Dra. Lucía B. Chemes
 
 **Profesores Invitados:**
-* Dr. Morten Nielsen
-* Dra. Lucía B. Chemes
+* Alguno?
 
 ## Profesores Clases Prácticas
 
@@ -22,9 +21,7 @@ hero_height: is-small
 * Dra. Juliana Glavina
 
 **Ayudantes:**
-* Ing. Leonel Bracco
 * Lic. Heli García Álvarez
+* Lic. Alejandro Ricci
 
-**Ayudante ad-honorem**
-* Lic. Ibel Carri
 --->

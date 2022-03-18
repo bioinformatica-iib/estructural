@@ -1,7 +1,6 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-# {% include notification.html message="Este sitio se encuentra en construcción" %}
 
 title: Bioinformática Estructural
 subtitle: IIBio-UNSAM
