@@ -11,7 +11,14 @@ hero_height: is-small
 El curso proveerá una base teórica y práctica para el estudio de relaciones estructura-función de proteínas utilizando herramientas bioinformáticas. Se introducirán bases de datos y herramientas que permiten identificar dominios funcionales de proteínas, predecir la estructura de proteínas a partir de la secuencia, discernir regiones plegadas y flexibles de proteínas y analizar diferentes tipos de interacciones proteína-proteína. A lo largo de los trabajos prácticos, los alumnos adquirirán manejo de herramientas de visualización y análisis de estructura y secuencia de proteínas utilizando los programas Chimera y Jalview. El curso está dirigido a estudiantes avanzados de grado, estudiantes de doctorado y postdocs/investigadores con formación experimental que deseen adquirir conceptos de bioinformática estructural, y a alumnos con formación bioinformática que no tengan conocimientos previos de estructura-función de proteínas. Los alumnos podrán aplicar estas herramientas a sus temas de estudio durante la cursada.
 
 ## Requisitos
-El curso no requiere formación bioinformática previa o conocimientos previos de programación. Se recomienda contar con conocimientos básicos de bioquímica/función de proteínas y manejo básico de computadoras. 
+El curso no requiere formación bioinformática previa o conocimientos previos de programación. Se recomienda contar con conocimientos básicos de bioquímica/función de proteínas y manejo básico de computadoras.
+
+### Alumnos de Grado de Licenciatura de Biotecnología de UNSAM
+**Correlativa:** Bioquímica de Proteínas 
+
+## Tipo de Curso
+* Curso de posgrado
+* Materia optativa de grado (UNSAM)
 
 ## Inscripción
 (AGREGAR LINK AL FORM ACÁ)
