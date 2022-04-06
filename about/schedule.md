@@ -56,21 +56,21 @@ hide_footer: True
 | Lunes, 09/05/2022	    | 9 - 12hs  | Teórica   | T1a. Introducción al curso. | L. Chemes |
 |                       |           |           | T1b. Bases de Datos y anotación de proteínas. | L. Chemes |
 |                       | 13 - 17hs | Práctico  | TP1. Bases de Datos de proteínas | J. Glavina |
-| Martes, 10/05/2022    | 9 - 12hs  | Teórica   | T2. Estructura de Proteínas | L.Chemes |
+| Martes, 10/05/2022    | 9 - 12hs  | Teórica   | T2. Estructura de Proteínas | L. Chemes |
 |                       | 13 - 17hs | Práctico  | TP2. Visualización de Proteínas utilizando Chimera | J. Glavina |
-| Miércoles, 11/05/2022	|  9 - 12hs	| Teórica   | T3. Modelado por Homología | L.Chemes |
+| Miércoles, 11/05/2022	|  9 - 12hs	| Teórica   | T3. Modelado por Homología | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | TP3. Modelado por Homología - Parte I | J. Glavina |
 | Jueves, 12/05/2022    | 9 - 12hs	| Teórica   | Discusión y problemas ||
 |                       | 13 - 17hs | Práctico  | TP4.Modelado por Homología - Parte II | J. Glavina |
-| Viernes, 13/05/2022	| 9 - 12hs  | Teórica   | T4. Interacciones proteína-proteína | L.Chemes |
+| Viernes, 13/05/2022	| 9 - 12hs  | Teórica   | T4. Interacciones proteína-proteína | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | TP5. Interacciones proteína-proteína | J. Glavina |
-| Lunes, 16/05/2022	    | 9 - 12hs	| Teórica   | T5. Proteínas desordenadas y predicción de desorden | L.Chemes |
+| Lunes, 16/05/2022	    | 9 - 12hs	| Teórica   | T5. Proteínas desordenadas y predicción de desorden | L. Chemes |
 |                       | 13 - 17hs | Práctico  | TP6. Predicción de desorden y Bases de Datos | J. Glavina |
-| Martes, 17/05/2022	| 9 - 12hs  | Teórica   | T6. Motivos Lineales: Identificación en secuencia | L.Chemes |
+| Martes, 17/05/2022	| 9 - 12hs  | Teórica   | T6. Motivos Lineales: Identificación en secuencia | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | TP7. Motivos Lineales | J. Glavina |
-| Miércoles, 18/05/2022	| 9 - 12hs	| Teórica   | T7. Motivos Lineales | L.Chemes |
+| Miércoles, 18/05/2022	| 9 - 12hs	| Teórica   | T7. Motivos Lineales | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | TP8. Trabajo práctico integrador | J. Glavina |
-| Jueves, 19/05/2022	| 9 - 12hs	| Teórica   | Consultas teóricas y del trabajo final | L.Chemes |
+| Jueves, 19/05/2022	| 9 - 12hs	| Teórica   | Consultas teóricas y del trabajo final | L. Chemes |
 |                       | 13 - 17hs	|           | LIBRE   |   |
 | Viernes, 20/05/2022	|	        |           | LIBRE   |   |
 | Viernes, 27/05/2022	| 9 - 13hs	|           | Evaluación Final    |   |
