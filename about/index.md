@@ -21,7 +21,8 @@ El curso no requiere formación bioinformática previa o conocimientos previos d
 * Materia optativa de grado (UNSAM)
 
 ## Inscripción
-(AGREGAR LINK AL FORM ACÁ)
+
+* Formulario de inscrpción: [aquí](https://forms.gle/pnbtBqZXDALiV2b67)
 
 **Nota para la inscripción:** Si sos estudiante de posgrado (doctorado, postdoctorado, investigador, profesionales, etc) en el formulario deberás incluir detalles de tu formación, una breve carta de motivación y un breve resumen de tu línea de investigación.
 
