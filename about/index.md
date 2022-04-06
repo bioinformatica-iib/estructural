@@ -39,7 +39,7 @@ El curso no requiere formación bioinformática previa o conocimientos previos d
 * **Evaluación final:** Viernes 27/5 9-13 hs.
 * **Teóricos:** 9 a 12hs
 * **Prácticos:** 13 a 17 hs.
-* [**Cronograma completo**](/introduccion-bioinformatica/about/schedule/)
+* [**Cronograma completo**](/estructural/about/schedule/)
 
 ## Asistencia
 * **Teóricas:** Asistencia opcional (recomendada)
