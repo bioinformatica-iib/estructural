@@ -3,8 +3,8 @@
     - name: Información General
       link: /
       items: 
-        - name: Sobre el curso
-          link: /about/
+        - name: Sobre el curso1
+          link: /about
         - name: Cronograma
           link: /about/schedule/
     - name: Clases Teóricas
