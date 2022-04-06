@@ -20,14 +20,14 @@ El curso no requiere formación bioinformática previa o conocimientos previos d
 
 **Becas:** Existe la posibilidad de Becas para aquellos estudiantes que no tengan posibilidad de financiar la asistencia al curso. En este caso, se solicitará una breve justificación del pedido. Se otorgarán hasta dos becas de asistencia.
 
-## Costos:
+## Costos
 * **Alumnos de Grado UNSAM:** Gratis.
 * **Alumnos de Post-Grado UNSAM:** Gratis.
 * **Alumnos de Grado, Post-Grado y Docentes de otras Universidades:** $5000
 * **Empresas/Profesionales Independientes:** $10000
 * **Alumnos / Docentes / Profesionales Internacionales:** USD $100
 
-## Modalidad del curso: 
+## Modalidad del curso
 
 * **Modalidad:** Curso intensivo - modalidad Virtual
 * **Horas de cursada:** 64 hs
