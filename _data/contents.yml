@@ -3,7 +3,7 @@
     - name: Información General
       link: /
       items: 
-        - name: Sobre el curso1
+        - name: Sobre el curso
           link: /about
         - name: Cronograma
           link: /about/schedule/
