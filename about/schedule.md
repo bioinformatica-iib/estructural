@@ -68,7 +68,7 @@ hide_footer: True
 |                       | 13 - 17hs | Práctico  | TP6. Predicción de desorden y Bases de Datos | J. Glavina |
 | Martes, 17/05/2022	| 9 - 12hs  | Teórica   | T6. Motivos Lineales: Identificación en secuencia | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | TP7. Motivos Lineales | J. Glavina |
-| Miércoles, 18/05/2022	| 9 - 12hs	| Teórica   | T7. Motivos Lineales | L. Chemes |
+| Miércoles, 18/05/2022	| 9 - 12hs	| Teórica   | T7. Motivos Lineales: Métodos experimentales | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | TP8. Trabajo práctico integrador | J. Glavina |
 | Jueves, 19/05/2022	| 9 - 12hs	| Teórica   | Consultas teóricas y del trabajo final | L. Chemes |
 |                       | 13 - 17hs	|           | LIBRE   |   |
