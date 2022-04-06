@@ -53,10 +53,10 @@ El curso no requiere formación bioinformática previa o conocimientos previos d
 * **Teóricas:** Asistencia opcional (recomendada)
 * **Prácticas:** Trabajos Prácticos (8 Trabajos prácticos, deberán asistir a 7 como mínimo)
 
-## Progama
+## Programa
+* Programa completo aquí. Descargar.
 
 ### Programa Teórico resumido
-Ver programa completo aquí
 * Bases de Datos de Proteínas: Uniprot (Swissprot, Trembl), Interpro, PDB, PFAM.
 * Estructura de Proteínas y relaciones estructura-función
 * Modelado por Homología
@@ -66,7 +66,6 @@ Ver programa completo aquí
 * Motivos Lineales: Estudio experimental e Identificación en secuencia.
 
 ### Programa Práctico resumido
-Ver programa completo aquí
 * Bases de Datos de Proteínas: Uniprot (Swissprot, Trembl), Interpro, PDB, PFAM.
 * Visualización de Proteínas en ChimeraX
 * Modelado por Homología: HHPred y AlphaFold
