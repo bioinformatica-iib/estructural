@@ -9,9 +9,8 @@ hero_height: is-small
 
 ## Profesores Clases Teóricas
 
-**Profesor Titular:** 
+**Profesora Titular:** 
 * Dra. Lucía B. Chemes
-
 
 ## Profesores Clases Prácticas
 
