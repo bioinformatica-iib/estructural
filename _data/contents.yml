@@ -4,7 +4,7 @@
       link: /
       items: 
         - name: Sobre el curso
-          link: /about/    
+          link: /about/
         - name: Cronograma
           link: /about/schedule/
     - name: Clases Teóricas
