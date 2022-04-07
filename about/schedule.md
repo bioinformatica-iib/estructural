@@ -35,17 +35,17 @@ hide_footer: True
     .table tr:nth-child(12) { border-top: 1.5px solid black; }
     .table tr:nth-child(13) { border-bottom: 1.5px solid black; }
 
-    .table tr:nth-child(16) { background: #e6e6e6ff; }
-    .table tr:nth-child(17) { background: #e6e6e6ff; }
+    .table tr:nth-child(16) { background: #abd5abff; }
     .table tr:nth-child(16) { border-top: 1.5px solid black; }
-    .table tr:nth-child(17) { border-bottom: 1.5px solid black; }
-
-    .table tr:nth-child(19) { background: #abd5abff; }
-
+    .table tr:nth-child(16) { border-bottom: 1.5px solid black; }
+    
+    .table tr:nth-child(19) { background: #e6e6e6ff; }
+    .table tr:nth-child(19) { border-top: 1.5px solid black; }
     .table tr:nth-child(20) { background: #abd5abff; }
+    .table tr:nth-child(20) { border-bottom: 1.5px solid black; }
+
     .table tr:nth-child(21) { background: #ffaaaaff; }
-    .table tr:nth-child(20) { border-top: 1.5px solid black; }
-    .table tr:nth-child(21) { border-bottom: 1.5px solid black; }
+    .table tr:nth-child(21) { border-bottom: 2px solid black; }
 
 </style>
 
@@ -68,11 +68,11 @@ hide_footer: True
 |                       | 13 - 17hs | Práctico  | TP6. Predicción de desorden y Bases de Datos | J. Glavina |
 | Martes, 17/05/2022	| 9 - 12hs  | Teórica   | T6. Motivos Lineales: Identificación en secuencia | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | TP7. Motivos Lineales | J. Glavina |
-| Miércoles, 18/05/2022	| 9 - 12hs	| Teórica   | T7. Motivos Lineales: Métodos experimentales | L. Chemes |
+| Miércoles, 18/05/2022	|	        |           | FERIADO POR CENSO NACIONAL   |   |
+| Jueves, 19/05/2022	| 9 - 12hs	| Teórica   | T7. Motivos Lineales: Métodos experimentales | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | TP8. Trabajo práctico integrador | J. Glavina |
-| Jueves, 19/05/2022	| 9 - 12hs	| Teórica   | Consultas teóricas y del trabajo final | L. Chemes |
+| Viernes, 20/05/2022	| 9 - 12hs	| Teórica   | Consultas teóricas y del trabajo final | L. Chemes |
 |                       | 13 - 17hs	|           | LIBRE   |   |
-| Viernes, 20/05/2022	|	        |           | LIBRE   |   |
 | Viernes, 27/05/2022	| 9 - 13hs	|           | Evaluación Final    |   |
 
 
