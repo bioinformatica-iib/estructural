@@ -29,8 +29,8 @@ url: "https://bioinformatica-iib.github.io/" # the base hostname & protocol for 
 # theme: minima
 # theme : just-the-docs
 # remote_theme: pmarsceill/just-the-docs
-theme: bulma-clean-theme
-#remote_theme: chrisrhymes/bulma-clean-theme
+# theme: bulma-clean-theme
+remote_theme: chrisrhymes/bulma-clean-theme
 
 plugins:
   - jekyll-feed
