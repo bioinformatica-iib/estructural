@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 title: Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
-subtitle: IIBio-UNSAM
+subtitle: EByN-UNSAM
 layout: page
 show_sidebar: false
 menubar: contents
