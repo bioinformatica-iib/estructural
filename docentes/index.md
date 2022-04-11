@@ -12,22 +12,22 @@ hero_height: is-small
   <img class= "is-rounded" src="./img/lucia.png">
 </figure>
 
-**Profesora Titular:** 
-Dra. Lucía B. Chemes
+**Profesora Titular** 
+<br>Dra. Lucía B. Chemes
 
 <figure class="image is-128x128">
   <img class= "is-rounded" src="./img/nico.png">
 </figure>
 
-**Profesor invitado:** 
-Dr. Nicolás Palópoli
+**Profesor invitado** 
+<br>Dr. Nicolás Palópoli
 
 <figure class="image is-128x128">
   <img class= "is-rounded" src="./img/toby.png">
 </figure>
 
-**Profesor invitado:** 
-Dr. Toby J. Gibson
+**Profesor invitado** 
+<br>Dr. Toby J. Gibson
 
 ## Profesores Clases Prácticas
 
