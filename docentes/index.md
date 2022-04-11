@@ -12,7 +12,7 @@ hero_height: is-small
   <img class= "is-rounded" src="./img/lucia.png">
 </figure>
 
-**Profesora Titular** 
+**Profesora Responsable** 
 <br>Dra. Lucía B. Chemes
 
 <figure class="image is-128x128">
