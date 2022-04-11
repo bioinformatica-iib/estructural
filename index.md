@@ -9,7 +9,11 @@ show_sidebar: false
 menubar: contents
 hero_height: is_small
 ---
-{% include notification.html message="This resource is not available yet." %}
+
+<p style="text-align:center">
+<img src="./img/2022_Estructural_Flyer_Difusion_Cuadrado.png" alt="UniProt Homepage" style="max-width:70%">
+</p>
+
 <!---
-![flyer]({{ site.baseurl }}/img/2021_Bioinfo_flyer.png)
+{% include notification.html message="This resource is not available yet." %}
 --->
