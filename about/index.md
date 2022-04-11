@@ -22,7 +22,7 @@ El curso no requiere formación bioinformática previa o conocimientos previos d
 
 ## Inscripción
 
-* Formulario de inscrpción: [aquí](https://forms.gle/pnbtBqZXDALiV2b67)
+* Formulario de inscripción: [aquí](https://forms.gle/pnbtBqZXDALiV2b67)
 
 **Nota para la inscripción:** Si sos estudiante de posgrado (doctorado, postdoctorado, investigador, profesionales, etc) en el formulario deberás incluir detalles de tu formación, una breve carta de motivación y un breve resumen de tu línea de investigación.
 
@@ -43,7 +43,7 @@ El curso no requiere formación bioinformática previa o conocimientos previos d
 
 ## Horarios
 
-* **Cursada:** Lunes 9/5 al Miércoles 18/5 (full time), Jueves 19/5 9-13 hs 
+* **Cursada:** Lunes 9/5 al Miércoles 18/5 (full time), Viernes 20/5 9-13 hs 
 * **Evaluación final:** Viernes 27/5 9-13 hs.
 * **Teóricos:** 9 a 12hs
 * **Prácticos:** 13 a 17 hs.
@@ -54,7 +54,7 @@ El curso no requiere formación bioinformática previa o conocimientos previos d
 * **Prácticas:** Trabajos Prácticos (8 Trabajos prácticos, deberán asistir a 7 como mínimo)
 
 ## Programa
-* Programa completo aquí. Descargar.
+* Programa completo [[Descargar]](https://drive.google.com/file/d/1J8DlOdotnBCLUN9nbzCpP1tSFCxHPbwN/view?usp=sharing)
 
 ### Programa Teórico resumido
 * Bases de Datos de Proteínas: Uniprot (Swissprot, Trembl), Interpro, PDB, PFAM.
