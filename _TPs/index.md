@@ -2,10 +2,11 @@
 layout: page
 title: Trabajos Prácticos
 hero_height: is-small
+gallery: tps
 ---
+
 <!---
 Agregar arriba cuando esté listo
-gallery: tps
 --->
 
 {% include notification.html message="This resource is not available yet." %}
