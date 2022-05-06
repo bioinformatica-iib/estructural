@@ -1,10 +1,10 @@
 - title: 
-  # images:
-  #   - link: TPs/db_uniprot/featured.jpg
-  #     alt: The alt text for the image
-  #     description: |- 
-  #       [TP N°1. UniProt](databases/)
-  #     ratio: is-16by9
+  images:
+    - link: TPs/db_uniprot/featured.png
+      alt: The alt text for the image
+      description: |- 
+        [TP N°1. UniProt](db_uniprot/)
+      ratio: is-16by9
   #   - link: TPs/db_interpro/featured.jpg
   #     alt: The alt text for the image
   #     description: |- 
