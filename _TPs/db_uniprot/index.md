@@ -342,7 +342,7 @@ Las búsquedas en Pfam pueden realizarse utilizando la secuencia de interés, el
 
 
 <p style="text-align:center">
-<img src="./img/Pfam_homepage.png" alt="Homepage de Pfam" style="max-width:25%">
+<img src="./img/Pfam_homepage.png" alt="Homepage de Pfam" style="max-width:70%">
 </p>
 
 <figcaption align = "center">
@@ -467,7 +467,7 @@ Una entrada InterPro puede ser de distintos tipos:
 Para realizar una búsqueda se puede utilizar el código de acceso de InterPro, que está formado por IPR más un número, o un identificador de UniProtKB o un identificador de cualquier otra base de datos miembro de interpro. Así como también se puede utilizar la secuencia de la proteína, o keywords relacionadas con la función o actividad de una proteína.
 
 <p style="text-align:center">
-<img src="./img/Interpro_homepage.png" alt="Homepage de InterPro" style="max-width:25%">
+<img src="./img/Interpro_homepage.png" alt="Homepage de InterPro" style="max-width:70%">
 </p>
 
 <figcaption align = "center">
