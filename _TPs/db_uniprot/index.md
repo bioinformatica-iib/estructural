@@ -428,11 +428,10 @@ La interfaz de TMHMM Server 2.0 es simple. Se usa la caja de búsqueda en la pá
     ```
 
 2. Inspeccione los resultados de la búsqueda. ¿Cuántas hélices transmembrana encontró?
-3. Entre los estadísticos encontrará ‘Exp number of AAs in TMHs’. Este es el número esperado de aminoácidos en hélices transmembrana según este HMM como método de predicción. Cuando este número es mayor que 18, la proteína es probablemente una proteína transmembrana. ¿Es la bacteriorodopsina una proteína transmembrana?
-4. Otro estadístico es ‘Exp number, first 60 AAs’. Este valor es el mismo que el anterior pero limitado a los primeros 60 aminoácidos. Si este estadístico no posee un valor bajo, es decir de unos pocos residuos, entonces puede llegar a ocurrir que una hélice transmembrana predicha en la región N-terminal sea en realidad un péptido señal. Se pueden utilizar otras herramientas dedicadas a la predicción de péptidos señal, como SignalP. (https://services.healthtech.dtu.dk/service.php?SignalP-5.0). sabiendo que Halobacterium es una Archea, ¿SignalP predice el N-terminal como un péptido señal?
+3. Entre los estadísticos encontrará *Exp number of AAs in TMHs*. Este es el número esperado de aminoácidos en hélices transmembrana según este HMM como método de predicción. Cuando este número es mayor que 18, la proteína es probablemente una proteína transmembrana. ¿Es la bacteriorodopsina una proteína transmembrana?
+4. Otro estadístico es *Exp number, first 60 AAs*. Este valor es el mismo que el anterior pero limitado a los primeros 60 aminoácidos. Si este estadístico no posee un valor bajo, es decir de unos pocos residuos, entonces puede llegar a ocurrir que una hélice transmembrana predicha en la región N-terminal sea en realidad un péptido señal. Se pueden utilizar otras herramientas dedicadas a la predicción de péptidos señal, como [SignalP](https://services.healthtech.dtu.dk/service.php?SignalP-5.0). sabiendo que Halobacterium es una Archea, ¿SignalP predice el N-terminal como un péptido señal?
 5. En el gráfico, los bloques rojos corresponden a hélices transmembrana, las líneas azules indican regiones en el interior y los segmentos violetas corresponden a regiones en el exterior. Observando el gráfico, ¿puede haber otra hélice transmembrana que el modelo esté descartando?
 6. ¿Cuántos pasos transmembrana tienen las Rodopsinas? En base a las herramientas aprendidas en este trabajo práctico ¿Se le ocurre donde puede encontrar esta información? (Pista: Tiene el Accession number de esta proteína!).
-
 
 
 ## InterPro - (Adicional)
@@ -447,9 +446,9 @@ Dentro de las muchas bases de datos que usa InterPro están:
 * CATH/Gene3D: una base de datos de superfamilias de dominios con una estructura conocida y su predicción en genomas completos.
 * MobiDB: un recurso central para la anotación de desorden intrínseco en secuencias UniProt.
 
-Dado que las distintas bases de datos probablemente posean información redundante, un equipo de curadores de InterPro chequean manualmente y fusionan las *signatures* que se refieren a la misma familia, dominio o sitio en una entrada única de InterPro. Por lo tanto, cada**protein signature**posee un único código de acceso InterPro junto al código correspondiente de las bases de datos individuales.
+Dado que las distintas bases de datos probablemente posean información redundante, un equipo de curadores de InterPro chequean manualmente y fusionan las *signatures* que se refieren a la misma familia, dominio o sitio en una entrada única de InterPro. Por lo tanto, cada **protein signature** posee un único código de acceso InterPro junto al código correspondiente de las bases de datos individuales.
 
-Lo más importante de InterPro es la integración de múltiples fuentes de información, cada una con sus fortalezas y no en la cantidad de información que se extrae de ellas. Esto convierte a InterPro en una fuerte herramienta de diagnóstico. Sin embargo, una vez que se encuentran las **signatures* de interés, en general se aconseja ir a las bases de datos correspondientes para mayor información.
+Lo más importante de InterPro es la integración de múltiples fuentes de información, cada una con sus fortalezas y no en la cantidad de información que se extrae de ellas. Esto convierte a InterPro en una fuerte herramienta de diagnóstico. Sin embargo, una vez que se encuentran las *signatures* de interés, en general se aconseja ir a las bases de datos correspondientes para mayor información.
 
 Una entrada InterPro puede ser de distintos tipos:
 * Un Dominio (**domain**) en InterPro son unidades discretas con secuencia, estructura o función distintiva que se puede encontrar en diferentes contextos biológicos.
@@ -461,7 +460,7 @@ Una entrada InterPro puede ser de distintos tipos:
     * Sitio de unión (**binding site**), es una secuencia corta que contiene uno o más residuos conservados que forman un sitio de interacción de la proteína.
     * Sitios de modificación post-traduccionales (**PTMs, Post-translational modification sites**), una secuencia corta que contiene uno o más residuos conservados que son modificados post-traduccionalmente.
     * Sitio conservado (**conserved site**), una secuencia corta que posee uno o más residuos conservados.
-* Los **unintegrated** son **signatures* de bases de datos que no están integradas en InterPro. Estas **signatures* pueden no haber sido curadas aún o no cumplir con los estándares de InterPro para su integración. Sin embargo, pueden brindar información importante de una proteína de interés.
+* Los **unintegrated** son *signatures* de bases de datos que no están integradas en InterPro. Estas *signatures* pueden no haber sido curadas aún o no cumplir con los estándares de InterPro para su integración. Sin embargo, pueden brindar información importante de una proteína de interés.
 
 ### Realizando búsquedas en InterPro
 Para realizar una búsqueda se puede utilizar el código de acceso de InterPro, que está formado por IPR más un número, o un identificador de UniProtKB o un identificador de cualquier otra base de datos miembro de interpro. Así como también se puede utilizar la secuencia de la proteína, o keywords relacionadas con la función o actividad de una proteína.
@@ -485,15 +484,15 @@ Realice una búsqueda en InterPro con el identificador de Pfam PF00571.
 1. ¿En qué entrada de InterPro está integrada?
 2. ¿Corresponde a una proteína, un dominio u otra cosa?
 3. ¿Corresponde a la misma entidad que Pfam? ¿Estas entidades son similares o al menos tienen algo en común?
-4. ¿Qué **signatures* de otras bases de datos fueron fusionados con Pfam para crear la entrada de InterPro?
+4. ¿Qué *signatures* de otras bases de datos fueron fusionados con Pfam para crear la entrada de InterPro?
 5. ¿Cuántas proteínas corresponden a esta entrada? ¿Cuántas arquitecturas de dominio? ¿Cuántas proteínas tienen dos ocurrencias repetidas de esta entrada seguida por un dominio transporter-associated (IPR005170)?
 
 ### Ejercicio 2. Proteína KDM5C.
-Busque en InterPro la entrada correspondiente a la demetilasa lisin-específica 5C (UniProtKB  entry P41229). Hacia la izquierda pueden expandirse las **signatures* que definen los distintos tipos de entradas de InterPro, mientras que en la sección central se observan las predicciones de las **signatures* para la proteína de interés.
-1. ¿Qué **signatures* son reconocidas en esta proteína?
-2. Las **signatures* son mapeadas en la secuencia query en los resultados principales. Observe la sección *Homologous superfamilies*. ¿Cuál es la arquitectura de esta superfamily?
-3. La signature más cercana al C-terminal en esta superfamily es un zinc finger. ¿Qué **signatures* de InterPro describen esta región? ¿Qué tipo de **signatures* son? ¿De donde proviene la información que utilizó InterPro para esta asignación? A la izquierda puede observar los identificadores que las **signatures* provenientes de las distintas bases de datos.
-4. Entre las **signatures* identificadas está la entrada de dominio IPR001606. ¿Qué bases de datos fueron procesadas para crear esta entrada? ¿Estas mapean todas a la misma región exacta de la proteína de interés? Si la respuesta es no, ¿por qué cree que es así?
+Busque en InterPro la entrada correspondiente a la demetilasa lisin-específica 5C (UniProtKB  entry P41229). Hacia la izquierda pueden expandirse las *signatures* que definen los distintos tipos de entradas de InterPro, mientras que en la sección central se observan las predicciones de las *signatures* para la proteína de interés.
+1. ¿Qué *signatures* son reconocidas en esta proteína?
+2. Las *signatures* son mapeadas en la secuencia query en los resultados principales. Observe la sección *Homologous superfamilies*. ¿Cuál es la arquitectura de esta superfamily?
+3. La signature más cercana al C-terminal en esta superfamily es un zinc finger. ¿Qué *signatures* de InterPro describen esta región? ¿Qué tipo de *signatures* son? ¿De donde proviene la información que utilizó InterPro para esta asignación? A la izquierda puede observar los identificadores que las *signatures* provenientes de las distintas bases de datos.
+4. Entre las *signatures* identificadas está la entrada de dominio IPR001606. ¿Qué bases de datos fueron procesadas para crear esta entrada? ¿Estas mapean todas a la misma región exacta de la proteína de interés? Si la respuesta es no, ¿por qué cree que es así?
 5. ¿Puede identificar regiones intrínsecamente desordenadas en esta proteína? (‘mobidb’ es la fuente en este caso para la anotación de estas regiones).
 6. ¿Cuántas proteínas similares a P41229 existen aproximadamente?
 
@@ -512,8 +511,8 @@ GALLPGGAVQPTGMHWYSRFLYRLAEELLG
 ```
 1. ¿Pertenece a alguna family?
 2. ¿Puede encontrar el nombre de la entrada de la base de datos PRINTS utilizada para construir esta family signature de InterPro?
-3. ¿Cuál es la diferencia entre las InterPro **signatures* IPR001767 y IPR003587?
-4. Considerando las dos **signatures* del punto anterior y IPR000320, ¿puede describir la arquitectura de esta proteína? ¿Cómo difiere de la arquitectura presentada en la sección *Homologous superfamilies*?
+3. ¿Cuál es la diferencia entre las InterPro *signatures* IPR001767 y IPR003587?
+4. Considerando las dos *signatures* del punto anterior y IPR000320, ¿puede describir la arquitectura de esta proteína? ¿Cómo difiere de la arquitectura presentada en la sección *Homologous superfamilies*?
 5. ¿Cuál es el rol biológico de esta proteína? (*Pista*: clickee en el nombre de la familia de la proteína).
 6. ¿Tiene un péptido señal esta proteína?
 7. ¿Cómo podría saber a simple vista que esta proteína tiene actividad peptidasa?
