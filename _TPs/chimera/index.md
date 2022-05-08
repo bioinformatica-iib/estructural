@@ -56,19 +56,49 @@ Si bien los datos principales y recursos son compartidos, cada sitio provee un c
 
 ### El archivo PDB. ¿Cómo están codificadas las estructuras?
 
-Las estructuras tridimensionales de las proteínas pueden generarse por diferentes métodos (cristalografía de rayos X o X-Ray, resonancia magnética nuclear o RMN, criomicroscopía electrónica o CryoEM) y están codificadas en archivos pdb. Un archivo pdb está compuesto por múltiples líneas de registros, cada uno identificado por una etiqueta determinada incluidos dentro de distintas secciones. En la figura se muestra un fragmento de la sección de coordenadas que describe la estructura de la proteína dando las coordenadas “x”, “y” y “z” (azul claro) de cada uno de los átomos identificados.
+Las estructuras tridimensionales de las proteínas pueden generarse por diferentes métodos (cristalografía de rayos X o X-Ray, resonancia magnética nuclear o RMN, criomicroscopía electrónica o CryoEM) y están codificadas en archivos pdb. Un archivo pdb está compuesto por múltiples líneas de registros, cada uno identificado por una etiqueta determinada incluidos dentro de distintas secciones. En la Figura 1 se muestra un fragmento de la sección de coordenadas que describe la estructura de la proteína dando las coordenadas “x”, “y” y “z” (azul claro) de cada uno de los átomos identificados.
+
+<p style="text-align:center">
+<img src="./img/archivo_pdb_fig1.png" alt="Archivo PDB">
+</p>
+
+<figcaption align = "center">
+
+**Fig 1.** Archivo PDB.
+
+</figcaption>
+<br>
+<br>
+
 
 En cada línea, además, se identifica si es un átomo (rojo) perteneciente a un aminoácido o nucleótido, o heteroátomo (azul oscuro), la numeración (verde oscuro), el nombre del átomo (naranja), el nombre del residuo en el que está incluido el átomo (violeta), la cadena a la que pertenece (negro), el número del residuo al que pertenece (verde claro). Este archivo puede incluir más columnas para cada átomo con datos relacionados con la movilidad del átomo (el factor de temperatura o B-factor), el sı́mbolo que representa al átomo y la carga del mismo (señaladas con “...” en la figura). El encabezado o header del archivo PDB puede tener muchísima información no relacionada directamente con la conformación tridimensional de la proteína, sino con cómo se hizo el experimento, las publicaciones relacionadas y otros. La descripción del resto del contenido de las secciones del archivo pdb puede obtenerse en la sección documentación de [http://www.wwpdb.org/](http://www.wwpdb.org/). Recientemente, se desarrolló un nuevo formato de archivo, MMCIF, que puede codificar estructuras de complejos macromoleculares mucho más grandes. Sin embargo, no todos los programas utilizados para visualizar estructuras soportan este formato.
 
 ### ¿Qué significa la resolución de una estructura?
-Otra característica de las estructuras es la resolución con la cuál se obtuvieron. Hay una muy buena explicación en pdb-101 que traigo aquí.
+Otra característica de las estructuras es la resolución con la cuál se obtuvieron. Hay una muy buena explicación en [pdb-101](https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/resolution) que traigo aquí.
+
 La resolución es una medida de la calidad de los datos que se recolectaron del cristal. Si el cristal es perfecto, es decir que todas las proteínas están estructuralmente alineadas de manera idéntica, entonces el patrón de difracción generado mostrará detalles muy finos. Por otro lado, si las proteínas en el cristal no alinean estructuralmente debido a movimientos o flexibilidad local, el patrón de difracción no brindará mucha información. Estructuras de alta resolución, con valores de 1 Å o similar, están altamente ordenadas y es fácil ver cada átomo en un mapa de densidad electrónica. Estructuras de baja resolución, con valores de 3 Å o mayores, muestran los contornos de la cadena proteica y la estructura atómica debe inferirse. En general, la localización de los átomos en estructuras que tienen un valor de resolución pequeño es de mayor confianza.
 
-En esta imagen se muestra el mapa de densidad electrónica de distintas estructuras (las regiones de alta densidad electrónica se muestran en azul y amarillo) dentro de un rango de resoluciones. Las tres primeras muestran la tirosina 103 de la mioglobina (con palitos verdes se muestra el modelo atómico), los pdbs correspondientes son 1a6m (resolución de 1.0 Å), 106m (resolución de 2.0 Å) y 108m (resolución de 2.7 Å). El último ejemplo muestra la tirosina 130 de la cadena B de la hemoglobina del pdb 1s0h (resolución de 3.0 Å).  
+<p style="text-align:center">
+<img src="./img/resolucion_fig2.png" alt="Archivo PDB">
+</p>
+
+<figcaption align = "center">
+
+**Fig 2.** Resolución en una estructura.
+
+</figcaption>
+<br>
+<br>
+
+En la Figura 2 se muestra el mapa de densidad electrónica de distintas estructuras (las regiones de alta densidad electrónica se muestran en azul y amarillo) dentro de un rango de resoluciones. Las tres primeras muestran la tirosina 103 de la mioglobina (con palitos verdes se muestra el modelo atómico), los pdbs correspondientes son 1a6m (resolución de 1.0 Å), 106m (resolución de 2.0 Å) y 108m (resolución de 2.7 Å). El último ejemplo muestra la tirosina 130 de la cadena B de la hemoglobina del pdb 1s0h (resolución de 3.0 Å).
+
 En la estructura de resolución de 1.0 Å se pueden ver la alta densidad electrónica en cada uno de los carbonos del anillo de la tirosina. A medida que aumenta ese valor, la densidad electrónica se va reduciendo (disminuye el contorno amarillo).
 Si bien los archivos PDB pueden inspeccionarse con un editor de texto cualquiera (para revisar el encabezado por ejemplo), normalmente es mejor utilizar un programa de visualización particular que mostrará la estructura en un sistema virtual de coordenadas tridimensionales. De esta manera, el usuario podrá hacer zoom, rotar y trasladar la estructura. Cambiar la representación, mostrar las uniones y calcular las distancias, encontrar características estructurales de interés, etc. Estas herramientas pueden accederse online y están disponibles en los sitios de PDB, pero existen programas más poderosos y versátiles que se pueden descargar (como UCSF Chimera o Pymol).
+
 Los archivos PDB normalmente tienen un modelo para cada molécula. Sin embargo, una entrada PDB puede tener uno o múltiples modelos de la misma molécula. Por ejemplo, debido a características de la técnica, las estructuras resueltas por NMR usualmente tienen 20 modelos alternativos en el mismo archivo.  
+
 Muchas entradas PDB poseen missing residues. Estas son porciones que no fueron observadas durante la determinación experimental de la estructura posiblemente debido a un aumento en la flexibilidad de esa región. La amplitud de estas regiones puede variar desde pequeños loops dentro de dominios globulares hasta largos segmentos desordenados. 
+
 La secuencia de la proteína en un PDB no necesariamente se corresponde al 100% con la de la entrada UniProt, debido a decisiones del experimentalista o dificultades técnicas. Siempre hay que revisar.
 
 ## PDB - Ejercicios
@@ -77,12 +107,21 @@ La secuencia de la proteína en un PDB no necesariamente se corresponde al 100% 
 
 La proteína oxy-mioglobina de organismo Physeter catodon posee una estructura cuyo PDB ID es 1A6M.
 1. Busque la estructura en el PDB. Si quiere, puede descargar el archivo PDB utilizando los botones en la parte superior derecha. 
-2. Inspecciona la sección ‘Structure Summary’. ¿Cuándo se publicó la estructura en la PDB? ¿Es una estructura de buena calidad?
-3. En la sección ‘Macromolecules’, encontrará la mención a la proteína Mioglobina. ¿Cuántas cadenas tiene? ¿Puede identificar su UniProt accession?
-4. En la sección ‘Protein Feature View’ hay un mapeo sitio-específico entre UniProt y el PDB, con algunos adicionales de otras bases de datos. Si hace click en expand, podrá acceder a toda la información. ¿Qué tipo de estructura secundaria adopta esta proteína? ¿Puede encontrar los sitios de unión del hierro? ¿Qué aminoácidos están involucrados?
-5. Vuelva a la pestaña Structure summary ¿Esta estructura tiene unida una molécula de oxígeno?
-6. En la sección Macromolecules, en la subsección Entity groups encuentre cuantas cadenas de otras entradas en el PDB son 100% idénticas a esta proteína.
-7. Inspeccione la pestaña Experiment y responda: ¿A qué pH fueron realizados los experimentos de cristalización?
+2. Inspecciona la sección *Structure Summary*. 
+    * ¿Cuándo se publicó la estructura en la PDB?
+    * ¿Es una estructura de buena calidad?
+3. En la sección *Macromolecules*, encontrará la mención a la proteína Mioglobina.
+    * ¿Cuántas cadenas tiene?
+    * ¿Puede identificar su UniProt accession?
+4. En la sección *Protein Feature View* hay un mapeo sitio-específico entre UniProt y el PDB, con algunos adicionales de otras bases de datos. Si hace click en **expand**, podrá acceder a toda la información.
+    * ¿Qué tipo de estructura secundaria adopta esta proteína?
+    * ¿Puede encontrar los sitios de unión del hierro?
+    * ¿Qué aminoácidos están involucrados?
+5. Vuelva a la pestaña *Structure Summary*
+    * ¿Esta estructura tiene unida una molécula de oxígeno?
+6. En la sección *Macromolecules*, en la subsección *Entity groups* encuentre cuantas cadenas de otras entradas en el PDB son 100% idénticas a esta proteína.
+7. Inspeccione la pestaña *Experiment* y responda:
+    * ¿A qué pH fueron realizados los experimentos de cristalización?
 
 ## Visualización de estructuras proteicas con Chimera
 
@@ -93,21 +132,32 @@ Chimera es un programa disponible de manera gratuita, y está disponible para de
 
 Existen un alto número de guías y tutoriales disponibles online que pueden encontrarse en: [https://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/](https://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/).
 
-Antes de empezar, pueden responder:
-* ¿Por qué es importante visualizar estructuras proteicas?
-* ¿Qué información podríamos obtener de ellas?
-* ¿Estas estructuras, son un objeto real o un modelo?
+
+<ul class="block-list has-radius is-primary">
+<li class="is-highlighted is-info has-icon">
+<span class="icon"><i class="fas fa-question"></i></span>
+
+    <span style="font-weight:bold;">Antes de empezar, pueden responder:</span><br>
+    <ul>
+    <li>¿Por qué es importante visualizar estructuras proteicas?</li>
+    <li>¿Qué información podríamos obtener de ellas?</li>
+    <li>¿Estas estructuras, son un objeto real o un modelo?</li>
+    </ul>
+
+</li>
+</ul>
+
 
 ## Chimera - Ejercicios
 ### Ejercicio 1. Familiarizándonos con Chimera
 Chimera es un programa con muchas potencialidades y herramientas de análisis. En la siguiente guía, introduciremos el uso de las funciones más comunes de este programa, en relación al análisis estructura-función de proteínas. 
 
 #### Manos a la obra!
-Localice chimera en tu computadora y ábralo. En la parte superior se encuentra el Menú. Vaya a Favorites y elija Command Line. Aparecerá en la parte inferior la Línea de comandos.
+1. Localice chimera en su computadora y ábralo. En la parte superior se encuentra el **Menú**. Vaya a *Favorites* y elija *Command Line*. Aparecerá en la parte inferior la **Línea de comandos**.
 
-Vaya nuevamente a Favorites y elija Reply Log, se abrirá una ventana. En   el Reply Log aparecerán información, resultados numéricos y errores que nos devuelve Chimera.
+2. Vaya nuevamente a *Favorites* y elija *Reply Log*, se abrirá una ventana. En el **Reply Log** aparecerán información, resultados numéricos y errores que nos devuelve Chimera.
 
-Vaya nuevamente a Favorites y elija Model Panel, se abrirá una ventana. En Model Panel van a ir apareciendo las estructuras que estén abiertas en nuestra sesión.
+3. Vaya nuevamente a *Favorites* y elija *Model Panel*, se abrirá una ventana. En **Model Panel** van a ir apareciendo las estructuras que estén abiertas en nuestra sesión.
 
 Para cargar una estructura en Chimera escribe en la línea de comandos:
 
@@ -116,135 +166,265 @@ open 2aze
 ```
 
 Si ya hay una estructura ya descargada en la computadora se puede abrir usando:
+
+```
 open path/to/file/fileName.extension
-IMPORTANTE. Si en el nombre del archivo o directorio existen espacios debes incluir el nombre completo entre comillas: “path/to/file/file Name.extension”
-El log y el panel de modelos se actualizan y aparecerá información asociada a la estructura cargada.
-Mira el log y responde: ¿Qué proteínas están incluidas en este pdb?
-¿Qué aparece en el panel de modelos?
-Antes de seguir… Familiarizate con el uso del mouse:
-El botón izquierdo del mouse permite rotar la estructura.
-El botón derecho del mouse permite trasladar la estructura.
-La rueda del mouse permite ampliar o reducir la imagen (hacer zoom).
-Ejercicio 2. Conociendo la nomenclatura en Chimera
-Esta es una de las partes más importantes para tener bien en claro ya que nos permitirá hacer todas las selecciones para analizar la estructura. 
-Definiendo modelos: Cada estructura que abrimos en Chimera se carga como un modelo. Los modelos se nombran con el símbolo “#” seguido de un número. Prueba seleccionar el modelo entero escribiendo en la línea de comandos:
-select #0
-Para borrar la selección escribe:
-~select
-IMPORTANTE. La mayoría de los comandos permiten utilizar el símbolo de negación “~” por delante para ocultar lo que se hizo.
-Definiendo cadenas: Para indicar una cadena del modelo se utiliza el símbolo “.” seguido de la letra correspondiente. Prueba seleccionar la cadena A del modelo escribiendo en la línea de comandos:
-select #0:.A
-Si se desea, se puede seleccionar más de una cadena separando por comas cada una de ellas o un rango de cadenas separando los identificadores por guiones.
-select #0:.A,.B
-select #0:.A-C
-Definiendo residuos: Para indicar residuos se utiliza el símbolo “:” seguido del número de residuo correspondiente. Prueba seleccionar el residuo 300
-select :300
-¿Cuántos residuos se seleccionaron? 
-Para seleccionar uno de los dos residuos utiliza el siguiente comando:
-select :300.A
-En base a lo que aprendimos hasta ahora: ¿Cómo sería el comando para seleccionar un rango de residuos? ¿y para seleccionar residuos separados?.
-También es posible indicar los residuos por el código de tres letras de los aminoácidos (Si no lo recordás podés encontrarlo acá). Prueba seleccionar por ejemplo todos los ácidos glutámicos.
-select #0:glu.A
-Definiendo átomos: Para indicar átomos se utiliza el símbolo “@” seguido del nombre del átomo correspondiente dentro de la proteína. Prueba seleccionar los CA.
-select #0:.A@CA
-¿Puedes entender lo que se seleccionó?
-Para ver más claro lo que estamos seleccionando, mostraremos las cadenas laterales de los residuos. Ingresa el siguiente comando y luego selecciona los carbonos beta y colorealos de verde.
-display #0:.A
-select #0:.A@CB
-color green,a sel
-Hay dos cosas que cambiamos:
- “sel” permite aplicar el comando color sobre lo que está seleccionado.
-a : específica que sólo se coloreen los átomos. Prueba qué ocurre si no incluís a
-Definiendo palabras claves: Existen numerosas palabras clave que permiten seleccionar grupos de cosas predefinidas, además de las que presentamos a continuación puedes encontrar más información.
-En relación a:
-Palabra Clave
-Ejemplo:
-Estructura Secundaria
-helix
-strand
-coil
-select #0:.C & helix
-select #0:.C & strand
-select #0:.C & coil
-Extremos
-start
-end
-select #0:start-855.C
-select #0:855-end.C
-Partes de la proteína
-backbone
-sidechain
-select #0:.A@n,ca,c,o & protein
-sel #0:TYR.A & without CA/C1'
-Otros
-solvent
-ions
-ligand
-select solvent
-select ions
-select ligand
+```
 
-Si necesitas ayuda con algún comando, puedes escribir en la línea de comando: help comando. Por ejemplo: help select te abrirá la ayuda para el comando select
-Ejercicio 3. Análisis de la estructura del Receptor Binding Domain (RBD) de Spike del Coronavirus SARS-COV-2 unido a ACE2
-La proteína Spike (S) de coronavirus (UNIPROT ID: P0DTC2, SPIKE_SARS2) corresponde a una proteína de membrana tipo I, de entre 180-200 kDa que presenta 1273 residuos y numerosas glicosilaciones [Figura 1]. Cada monómero se encuentra formado por un extremo N-terminal que constituye la mayoría de la proteína y se encuentra orientado hacia el espacio extracelular, un dominio transmembrana (TM) y un segmento C-terminal intracelular corto (IC). Spike se organiza formando trímeros en la superficie del virus, otorgando la apariencia de corona distintiva para la especie. En el extremo N-terminal, a su vez, se pueden distinguir un péptido señal (residuos 1-13) y dos regiones denominadas S1 (residuos 14-685) y S2 (residuos 686-1273). Estas son las encargadas de mediar la unión y fusión de la membrana viral a la célula hospedera. Adicionalmente, S1 está compuesta por dos secciones; una región N-terminal (NTD) (residuos 14–305) y un dominio llamado RBD (Receptor Binding Domain, residuos 333–527), que es indispensable para que el SARS-CoV-2 pueda unirse a su receptor, la enzima convertidora de angiotensina 2 (ACE2). Dentro del dominio RBD se encuentra el motivo RBM (Receptor-Binding Motif, aminoácidos 438-506) que interacciona de forma directa con ACE2. Por otra parte, S2 se encuentra muy conservada entre todos los coronavirus. Contiene dos regiones, HR1 y HR2, en las que se repiten grupos de siete aminoácidos (heptad repeats) y el péptido de fusión (FP). De esta forma, durante el proceso de infección, S1 reconoce y se une a la enzima ACE2 presente en la membrana de la célula hospedadora. Esta unión trae aparejada la escisión proteolítica de los dominios S1 y S2, conduciendo a la activación del péptido de fusión que conecta la envoltura viral con la membrana plasmática. La reconfiguración de la región existente entre los dominios HR1 y HR2 da lugar a una estructura compuesta por 6 hélices (6-HB) que une ambas membranas, catalizando su fusión y permitiendo la entrada del virus a la célula.
+<ul class="block-list has-radius is-primary">
+<li class="is-highlighted is-info has-icon">
+<span class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></span>
+
+    <span style="font-weight:bold;">IMPORTANTE.</span><br>
+    Si en el nombre del archivo o directorio existen espacios debes incluir el nombre completo entre comillas:<br>
+    "path/to/file/file Name.extension"   
+</li>
+</ul>
+
+El **log** y el panel de modelos se actualizan y aparecerá información asociada a la estructura cargada.
+
+4. Mira el log y responde:
+    * ¿Qué proteínas están incluidas en este pdb?
+    * ¿Qué aparece en el panel de modelos?
+
+#### Antes de seguir… Familiarizate con el uso del mouse:
+* El botón izquierdo del mouse permite rotar la estructura.
+* El botón derecho del mouse permite trasladar la estructura.
+* La rueda del mouse permite ampliar o reducir la imagen (hacer zoom).
+
+### Ejercicio 2. Conociendo la nomenclatura en Chimera
+
+Esta es una de las partes **más importantes** para tener bien en claro ya que nos permitirá hacer todas las selecciones para analizar la estructura.
+
+1. **Definiendo modelos.**
+    Cada estructura que abrimos en Chimera se carga como un **modelo**. Los modelos se nombran con el símbolo `#` seguido de un número. 
+    
+    Prueba seleccionar el modelo entero escribiendo en la línea de comandos:
+
+    ```
+    select #0
+    ```
+
+    Para borrar la selección escribe:
+
+    ```
+    ~select
+    ```
+
+    <ul class="block-list has-radius is-primary">
+    <li class="is-highlighted is-info has-icon">
+    <span class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></span>
+
+        <span style="font-weight:bold;">IMPORTANTE.</span><br>
+        La mayoría de los comandos permiten utilizar el símbolo de negación “~” por delante para ocultar lo que se hizo.
+    </li>
+    </ul>
 
 
+2. **Definiendo cadenas:** Para indicar una **cadena** del modelo se utiliza el símbolo `.` seguido de la letra correspondiente.
 
-Figura 3. Representación topológica de la proteína Spike (monómero). Se encuentra compuesta por diferentes dominios: NTD, dominio N-terminal; SD1, subdominio 1; SD2, subdominio 2; FP, péptido de fusión; HR1, repetición en héptada 1; HR2, repetición en héptada 2; TM, región transmembrana; IC, dominio intracelular. El dominio RBD (Receptor Binding Domain), indispensable para que el SARS-CoV-2 pueda unirse a su receptor en la célula hospedera se muestra en cian, mientras que el motivo RBM (Receptor-Binding Motif) está indicado en rojo.
+    Prueba seleccionar la cadena A del modelo escribiendo en la línea de comandos:
 
+    ```
+    select #0:.A
+    ```
+
+    Otra forma de hacerlo, es:
+
+    ```
+    select :.A
+    ```
+
+    Si hubiera más de un modelo, ese comando seleccionaría TODAS las cadenas nombradas A.
+
+    Si se desea, se puede seleccionar más de una cadena separando por **comas** cada una de ellas o un rango de cadenas separando los identificadores por **guiones**.
+
+    ```
+    select #0:.A,.B
+    select #0:.A-C
+    ```
+
+3. **Definiendo residuos:** Para indicar **residuos** se utiliza el símbolo `:` seguido del número de residuo correspondiente. Prueba seleccionar el residuo 300
+
+    ```
+    select :300
+    ```
+
+    * ¿Cuántos residuos se seleccionaron? 
+
+    Para seleccionar uno de los dos residuos utiliza el siguiente comando:
+
+    ```
+    select :300.A
+    ```
+
+    En base a lo que aprendimos hasta ahora:
+    * ¿Cómo sería el comando para seleccionar un rango de residuos?
+    * ¿y para seleccionar residuos separados?.
+
+    También es posible indicar los residuos por el código de tres letras de los aminoácidos (Si no lo recordás podés encontrarlo [acá](https://es.wikipedia.org/wiki/Nomenclatura_de_amino%C3%A1cidos).
+    
+    Prueba seleccionar por ejemplo todos los ácidos glutámicos.
+
+    ```    
+    select #0:glu.A
+    ```
+
+4. **Definiendo átomos:** Para indicar **átomos** se utiliza el símbolo `@` seguido del nombre del átomo correspondiente dentro de la proteína. Prueba seleccionar los CA (carbonos alfa).
+
+    ```
+    select #0:.A@CA
+    ```
+
+    * ¿Puedes entender lo que se seleccionó?
+
+    Para ver más claro lo que estamos seleccionando, mostraremos las cadenas laterales de los residuos. Ingresa el siguiente comando y luego selecciona los carbonos beta y colorealos de verde.
+
+    ```
+    display #0:.A
+    select #0:.A@CB
+    color green,a sel
+    ```
+
+    Hay dos cosas que cambiamos:
+    * `sel` : permite aplicar el comando `color` sobre lo que está seleccionado.
+    * `a` : específica que sólo se coloreen los átomos. Prueba qué ocurre si no incluís a.
+
+5. **Definiendo palabras claves:** Existen numerosas palabras clave que permiten seleccionar grupos de cosas predefinidas, además de las que presentamos a continuación puedes encontrar más información.
+
+    <div class="table">
+
+    **En relación a:**      | **Palabra Clave**         | **Ejemplo:**              |
+    Estructura Secundaria   | `helix`<br>`strand`<br>`coil`   | `select #0:.C & helix` <br> `select #0:.C & strand` <br> `select #0:.C & coil` |
+    Extremos                | `start`<br>`end`              | `select #0:start-855.C` <br> `select #0:855-end.C` |
+    Partes de la proteína   | backbone: `@n,ca,c,o & protein` <br> sidechain: `without CA/C1'` | `select #0:.A@n,ca,c,o & protein` <br> `sel #0:TYR.A & without CA/C1'`|
+    Otros                   | `solvent`<br> `ions` <br> `ligand` <br> | `select solvent` <br> `select ions` <br> `select ligand` |
+
+    </div>
+
+    Si necesitas ayuda con algún comando, puedes escribir en la línea de comando: `help comando`. Por ejemplo: `help select` te abrirá la ayuda para el comando `select`.
+
+### Ejercicio 3. Análisis de la estructura del Receptor Binding Domain (RBD) de Spike del Coronavirus SARS-COV-2 unido a ACE2
+
+La proteína Spike (S) de coronavirus (UNIPROT ID: P0DTC2, SPIKE_SARS2) corresponde a una proteína de membrana tipo I, de entre 180-200 kDa que presenta 1273 residuos y numerosas glicosilaciones (Figura 3).
+
+Cada monómero se encuentra formado por un extremo N-terminal que constituye la mayoría de la proteína y se encuentra orientado hacia el espacio extracelular, un dominio transmembrana (TM) y un segmento C-terminal intracelular corto (IC). Spike se organiza formando trímeros en la superficie del virus, otorgando la apariencia de corona distintiva para la especie.
+
+En el extremo N-terminal, a su vez, se pueden distinguir un péptido señal (residuos 1-13) y dos regiones denominadas S1 (residuos 14-685) y S2 (residuos 686-1273). Estas son las encargadas de mediar la unión y fusión de la membrana viral a la célula hospedera. 
+
+Adicionalmente, S1 está compuesta por dos secciones; una región N-terminal (NTD) (residuos 14–305) y **un dominio llamado RBD (Receptor Binding Domain, residuos 333–527), que es indispensable para que el SARS-CoV-2 pueda unirse a su receptor, la enzima convertidora de angiotensina 2 (ACE2). Dentro del dominio RBD se encuentra el motivo RBM (Receptor-Binding Motif, aminoácidos 438-506) que interacciona de forma directa con ACE2.**
+
+Por otra parte, S2 se encuentra muy conservada entre todos los coronavirus. Contiene dos regiones, HR1 y HR2, en las que se repiten grupos de siete aminoácidos (heptad repeats) y el péptido de fusión (FP). De esta forma, durante el proceso de infección, S1 reconoce y se une a la enzima ACE2 presente en la membrana de la célula hospedadora. Esta unión trae aparejada la escisión proteolítica de los dominios S1 y S2, conduciendo a la activación del péptido de fusión que conecta la envoltura viral con la membrana plasmática. La reconfiguración de la región existente entre los dominios HR1 y HR2 da lugar a una estructura compuesta por 6 hélices (6-HB) que une ambas membranas, catalizando su fusión y permitiendo la entrada del virus a la célula.
+
+<p style="text-align:center">
+<img src="./img/spike_fig3.png" alt="Spike">
+</p>
+
+<figcaption align = "left">
+
+**Fig 3.** Representación topológica de la proteína Spike (monómero). Se encuentra compuesta por diferentes dominios: NTD, dominio N-terminal; SD1, subdominio 1; SD2, subdominio 2; FP, péptido de fusión; HR1, repetición en héptada 1; HR2, repetición en héptada 2; TM, región transmembrana; IC, dominio intracelular. El dominio RBD (Receptor Binding Domain), indispensable para que el SARS-CoV-2 pueda unirse a su receptor en la célula hospedera se muestra en cian, mientras que el motivo RBM (Receptor-Binding Motif) está indicado en rojo.
+
+</figcaption>
+<br>
+<br>
 
 El objetivo principal de los siguientes ejercicios consiste en introducir la utilización de Chimera en estudios estructurales de complejos proteicos. Utilizando la estructura de RBD-ACE2 como modelo, se emplearán variadas metodologías elementales de visualización, que permitan analizar los diferentes niveles de organización de la estructura de las proteínas. Se focalizará en el reconocimiento de cadenas polipeptídicas y elementos de su entorno. A su vez, se visualizarán distintos tipos de estructura secundaria en relación con la secuencia primaria y se estudiarán interacciones determinantes para el establecimiento de estructura terciaria.
 
-1. Cargando la estructura en Chimera.
-Descargue del Data bank la entrada: 6m0j y guárdela en un lugar de preferencia. Luego, inicie Chimera y abra el archivo “6m0j.pdb”. Este corresponde a una estructura resuelta a 2.45 Å por difracción de rayos X 
+#### 1. Cargando la estructura en Chimera.
 
-File → Open… (Navegue hasta donde guardó la entrada 6m0j)
+* Descargue del Protein Data bank la entrada: 6m0j y guárdela en un lugar de preferencia. 
+* Inicie Chimera y abra el archivo “6m0j.pdb”. Este corresponde a una estructura resuelta a 2.45 Å por difracción de rayos X 
 
-Antes de seguir: ¡asegúrese que sabe cómo rotar, trasladar y hacer zoom sobre la estructura! ¡Anote estos comandos del mouse, los vamos a necesitar!
+**File** → **Open…** (Navegue hasta donde guardó la entrada 6m0j)
 
-2. Reconociendo la estructura
-¿Cuántas cadenas se pueden reconocer?
+* Alternativamente, puede hacerlo con la línea de comandos en Chimera:
 
-Pinte de diferentes colores cada cadena. Para esto, primero debe seleccionar cada cadena por separado:
+    ```
+    open 6m0j
+    ```
 
-Select → Chain 
+    <ul class="block-list has-radius is-primary">
+    <li class="is-highlighted is-info has-icon">
+    <span class="icon"><i class="fa fa-exclamation fa-2x"></i></span>
 
-¿Cuántas aparecen disponibles? ¿Qué pasa en la estructura al elegir alguna?
+        <p>
+        <span style="font-weight:bold;">Antes de seguir:</span><br>¡asegúrese que sabe cómo rotar, trasladar y hacer zoom sobre la estructura! ¡Recuerde comandos del mouse, los vamos a necesitar!
+        </p>
 
-Una vez seleccionada la cadena, asignarle un color. 
+    </li>
+    </ul>
 
-Actions → Color 
 
-Repetir para la otra cadena.
+#### 2. Reconociendo la estructura
 
-Para hacerlo con la línea de comandos sería:
+* ¿Cuántas cadenas se pueden reconocer?
 
-color red #0:.A
-color blue #0:.E
+* Pinte de diferentes colores cada cadena. Para esto, primero debe seleccionar cada cadena por separado:
 
-¿Se distinguen mejor? ¿Cuál podría corresponder a ACE2 y cuál a RBD? (pista, ACE2 es una metaloproteasa con zinc).
+    **Select** → **Chain** 
 
-Select → Residue (buscar entre la lista bajo “all nonstandard”)
+* ¿Cuántas aparecen disponibles? ¿Qué pasa en la estructura al elegir alguna?
 
-o por líneas de comandos:
+* Una vez seleccionada la cadena, asignarle un color. 
 
-select @zn
+    **Actions** → **Color** 
 
-3. Visualizar la secuencia primaria de las cadenas.
+* Repetir para la otra cadena.
 
-Favorites → Sequence y luego Show en la nueva ventana
+* Para hacerlo con la línea de comandos sería:
+
+    ```
+    color red #0:.A
+    color blue #0:.E
+    ```
+
+    o bien
+
+    ```
+    rainbow chain #0
+    ```
+
+* ¿Se distinguen mejor?
+* ¿Cuál podría corresponder a ACE2 y cuál a RBD? (pista, ACE2 es una metaloproteasa con zinc).
+
+    **Select** → **Residue** (buscar entre la lista bajo *all nonstandard*)
+
+    o por líneas de comandos:
+
+    ```
+    select @zn
+    ```
+
+#### 3. Visualizar la secuencia primaria de las cadenas.
+
+* Para visualizar la secuencia de la proteína:
+
+    **Favorites** → **Sequence** y luego **Show** en la nueva ventana
  
-¿Entre qué residuos se extienden las proteínas? Identificar los extremos amino y carboxilo terminales en la estructura marcando los residuos en el panel Sequence con el mouse. ¿Qué pasa con los residuos recuadrados en rojo? ¿Cuáles serían entonces los límites de la construcción utilizada para cristalizar en cada caso, y cuál es la región resuelta en la estructura?
 
-4. Explorar diferentes visualizaciones preestablecidas.
+    o por líneas de comandos:
 
-Presets	→ Interactive 1 (ribbons)
-→ Interactive 2 (all atoms)
-→ Interactive 3 (hydrophobicity surface)… (solo recomendable con recursos gráficos elevados)
+    ```
+    sequence #0
+    ```
 
-¿Para qué podría utilizarse cada visualización?
+* ¿Entre qué residuos se extienden las proteínas?
+* Identificar los extremos amino y carboxilo terminales en la estructura marcando los residuos en el panel **Sequence** con el mouse.
+* ¿Qué pasa con los residuos recuadrados en rojo? ¿Cuáles serían entonces los límites de la construcción utilizada para cristalizar en cada caso, y cuál es la región resuelta en la estructura?
 
-5. Analizar estructuras secundarias.
+#### 4. Explorar diferentes visualizaciones preestablecidas.
+
+* Utilizaremos diferentes formas de visualización:
+
+    **Presets**	→ **Interactive 1 (ribbons)**
+
+    **Presets** → **Interactive 2 (all atoms)**
+
+    **Presets** → **Interactive 3 (hydrophobicity surface)** (solo recomendable con recursos gráficos elevados)
+
+* ¿Para qué podría utilizarse cada visualización?
+
+#### 5. Analizar estructuras secundarias.
 
 Presets → Interactive 1 (ribbons)
 Tools → Depiction → Color Secondary Structure y OK en la nueva ventana
