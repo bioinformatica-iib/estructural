@@ -426,242 +426,379 @@ El objetivo principal de los siguientes ejercicios consiste en introducir la uti
 
 #### 5. Analizar estructuras secundarias.
 
-Presets → Interactive 1 (ribbons)
-Tools → Depiction → Color Secondary Structure y OK en la nueva ventana
+* A continuación observaremos la estructura secundaria.
 
-o Alternativamente por linea de comando:
+    **Presets** → **Interactive 1 (ribbons)**
 
-color red,r helix; color purple,r strand; color gray,r coil
+    **Tools** → **Depiction** → **Color Secondary Structure** y `OK` en la nueva ventana
 
-¿Qué tipo de estructuras secundarias predominan en ACE2? ¿Y en RBD? En las ventanas con las secuencias. ¿A que corresponden las secciones indicadas en amarillo? ¿Y aquellas en verde? Seleccionarlas con el puntero. ¿Se logran distinguir distintos tipos de láminas-β? ¿Cuáles?    
+    o alternativamente por linea de comando:
 
-6. Análisis del entorno.
-Select → Residue → HOH 
+    ```
+    color red,r helix; color purple,r strand; color gray,r coil
+    ```
 
-O bien por línea de comando:
-select :HOH
+* ¿Qué tipo de estructuras secundarias predominan en ACE2? ¿Y en RBD?
+* En las ventanas con las secuencias. ¿A que corresponden las secciones indicadas en amarillo? ¿Y aquellas en verde?
+* Seleccionarlas con el puntero. ¿Se logran distinguir distintos tipos de láminas-β? ¿Cuáles?    
 
-Actions → Atoms/Bonds → sphere (preparamos el estilo de visualización)
-Actions → Atoms/Bonds → show (visualizamos)
+#### 6. Análisis del entorno.
 
-¿A qué corresponden estas moléculas? ¿Por qué están en la estructura?
+* Las proteínas no son las únicas moléculas incluídas en la estructura
 
-Para eliminarlas del modelo se utilizará la línea de comandos.
+    **Select** → **Residue** → **HOH** 
 
-delete :HOH
+    O bien por línea de comando:
+
+    ```
+    select :HOH
+    ```
+
+    **Actions** → **Atoms/Bonds** → **sphere** (preparamos el estilo de visualización)
+
+    **Actions** → **Atoms/Bonds** → **show** (visualizamos)
+
+    o bien por línea de comando
+
+    ```
+    represent spehere sel
+    display sel
+    ```
+
+* ¿A qué corresponden estas moléculas? ¿Por qué están en la estructura?
+
+* Para eliminarlas del modelo se utilizará la línea de comandos.
+
+    ```
+    delete :HOH
+    ```
+
+#### 7. Elementos que estabilizan la estructura secundaria/terciaria. Puentes disulfuro. 
+
+* ¿Qué residuos forman puentes disulfuro? Seleccionarlos.
+
+    **Select** → **Residue** (buscar entre la lista bajo *standard amino acid*)
+
+* O bien por línea de comando:
+
+    ```
+    sel #0:cys
+    ```
+
+* De acuerdo a las selecciones en las ventanas de secuencias. ¿Cuántos residuos tiene cada cadena?
+
+    Para visualizarlos:
  
-7. Elementos que estabilizan la estructura secundaria/terciaria. Puentes disulfuro. 
+    **Actions** → **Atoms/Bonds** → **ball & stick** (preparamos el estilo de visualización)
 
-¿Qué residuos forman puentes disulfuro? Seleccionarlos.
+    **Actions** → **Atoms/Bonds** → **show** (visualizamos)
 
-Select → Residue (buscar entre la lista bajo “standard amino acid”)
+    O bien por la línea de comando:
 
-O bien por línea de comando:
-sel #0:cys
+    ```
+    represent bs sel
+    display sel
+    ```
 
-De acuerdo a las selecciones en las ventanas de secuencias. ¿Cuántos residuos tiene cada cadena?
-Para visualizarlos.
+* ¿Cuántos puentes disulfuro se encuentran en cada cadena?
+* ¿Todas las cisteínas forman puentes disulfuro?
+
+#### 8. Longitud del puente disulfuro
+
+* Elegir un puente disulfuro en la estructura y seleccionar uno de los átomos de azufre con el puntero. Para tal fin mantener presionada la tecla `control`.
+
+* Luego presionando las teclas `control`+`shift` seleccionar con el puntero el segundo átomo de azufre. El objetivo es que solo estén seleccionados ambos S. Esto se lo puede verificar en la **lupa verde** de la parte inferior derecha.
+
+    **Tools** → **Structure Analysis** → **Distances y Create**
+
+* ¿Cuánto mide?
+
+* Para eliminar la selección (deseleccionar):
+
+    **Select** → **Clear selection**
+
+    Para hacerlo por línea de comandos para los residuos 379 y 432 por ejemplo:
+
+    ```
+    distance #0:379.E@SG #0:432.E@SG
+    ```
+
+    Para ocultarla:
+
+    ```
+    ~distance
+    ```
+
+#### 9. Modificaciones postraduccionales.
+
+* Hacer foco en el residuo 343 de la cadena E mediante la línea de comandos:
+
+    ```
+    focus :343.e
+    ```
+
+* Alejar y ajustar para visualizar correctamente.
+    * ¿Qué tiene unido el residuo?
+    * ¿Qué sucede con la visualización al mover la estructura?
+    * Con qué código se identifica a la molécula unida (mantener unos instantes el puntero sobre algún átomo de la molécula).
+    * ¿Qué sugiere el código respecto a su identidad?     
+
+* Seleccionar el residuo utilizando el puntero (manteniendo presionada la tecla `control`).
+* Identificar el residuo seleccionado en la ventana de la secuencia de la cadena E.
+* ¿De qué residuo se trata? ¿Se ajusta a lo esperado?
+
+* Para volver a la visualización estándar. En la línea de comandos: 
+
+    ```
+    focus
+    ```
+
+* ¿Existen otras moléculas similares? 
+
+    **Select** → **Residue** (buscar entre la lista bajo **all nonstandard** el código de la molécula)
+
+    * ¿Cuántas son? (utilizar la **lupa verde** de la parte inferior derecha).
+    * ¿Qué indica la presencia de estas moléculas sobre el sistema empleado para expresar estas proteínas?  
+
+#### 10. Puentes de hidrógeno. 
+
+* En primer lugar, deseleccionar cualquier posible elemento seleccionado previamente. 
+
+    **Select** → **Clear Selection** (importante para que las acciones posteriores tengan efecto global)
+
+    o bien en la linea de comandos:
+
+    ```
+    ~sel
+    ```
+
+* Esconder la visualización **ribbon**
+
+    **Actions** → **Ribbon** → **hide**
+
+    o bien en la linea de comandos:
+
+    ```
+    ~ribbon
+    ```
+
+ * Experimentar con diferentes estilos de la cadena **backbone**.
+
+    **Actions** → **Atoms/Bonds** → **backbone only** → **chain trace/minimal/full**
+
+* Al terminar mantener el estilo **full**, colorear los átomos de acuerdo a su elemento y volver a la representación **ribbon**. De ser necesario volver a colorear por estructura secundaria.  
+
+    **Actions** → **Color** → **by element**
+
+    **Actions** → **Ribbon** → **show**
+
+    **Tools** → **Depiction** → **Color Secondary Structure** y `OK` en la nueva ventana
+
+    o alternativamente por linea de comando:
+
+    ```
+    color red,r helix; color purple,r strand; color gray,r coil
+    ```
+
+#### 11. Buscar puentes de hidrógeno.
+
+* Para encontrar puentes de hidrógeno:
+
+    **Tools** → **Structure Analysis** → **FindHBond** y `OK` en la nueva ventana
+
+    * ¿Qué se observa? ¿En qué estructuras?
+
+* Elegir la α-hélice en la ventana de secuencias de la Cadena A (ACE2) que va del residuo 56 al residuo 82 utilizando el mouse. 
+    
+    alternativamente para seleccionarla en la línea de comandos, tipee:
+
+    ```
+    select :56-82.a; namesel unaAlfa 
+    ```
+
+* Hacer foco sobre la selección. 
+
+    **Actions** → **Focus**
+
+    o en la línea de comandos, tipee:
+
+    ```
+    focus unaAlfa 
+    ```
+
+* Esconder la visualización **ribbon** (pero esta vez solo de la sección seleccionada).
+
+    **Actions** → **Ribbon** → **hide**
+
+    Esto también puede hacerse por línea de comandos:
+
+        alternativamente para seleccionarla en la línea de comandos, tipee:
+
+    ```
+    focus unaAlfa; ~ribbon unaAlfa
+    ```
  
-Actions → Atoms/Bonds → ball & stick (preparamos el estilo de visualización)
-Actions → Atoms/Bonds → show (visualizamos)
+    Si no aparecen los átomos representados como sticks ingresar en la línea de comandos:
 
-represent bs sel
-display sel
+    ```
+    display unaAlfa
+    ```
 
-¿Cuántos puentes disulfuro se encuentran en cada cadena? ¿Todas las cisteínas forman puentes disulfuro?
+    * ¿Entre qué átomos se observan los puentes de hidrógeno?
+    * ¿Cuál actúa como dador y cuál como aceptor?
+    * ¿Cómo es la relación entre la numeración de residuos que forman el puente de hidrógeno? 
 
-Longitud del puente disulfuro: Elegir un puente disulfuro en la estructura y seleccionar uno de los átomos de azufre con el puntero. Para tal fin mantener presionada la tecla “control”.
-Luego presionando las teclas “control+shift” seleccionar con el puntero el segundo átomo de azufre. El objetivo es que solo estén seleccionados ambos S. Esto se lo puede verificar en la “lupa verde” de la parte inferior derecha.
+* Medir la distancia entre los átomos dador y aceptor de manera similar a la empleada para los puentes disulfuro.
 
-Tools → Structure Analysis → Distances y Create 
-¿Cuánto mide?
-
-Para eliminar la selección (deseleccionar):
-Select → Clear selection
-
-Para hacerlo por línea de comandos para los residuos 379 y 432 por ejemplo:
-
-distance #0:379.E@SG #0:432.E@SG
-
-Para ocultarla:
-
-~distance
-
-8. Modificaciones postraduccionales.
-
-Hacer foco en el residuo 343 de la cadena E mediante la línea de comandos:
-
-focus :343.e
-
-Alejar y ajustar para visualizar correctamente. ¿Qué tiene unido el residuo? ¿Qué sucede con la visualización al mover la estructura? Con qué código se identifica a la molécula unida (mantener unos instantes el puntero sobre algún átomo de la molécula). ¿Qué sugiere el código respecto a su identidad?     
-Seleccionar el residuo utilizando el puntero (manteniendo presionada la tecla “control”). Identificar el residuo seleccionado en la ventana de la secuencia de la cadena E. ¿De qué residuo se trata? ¿Se ajusta a lo esperado?
-
-Para volver a la visualización estándar. En la línea de comandos: 
-
-focus
-
-¿Existen otras moléculas similares? 
-
-Select → Residue (buscar entre la lista bajo “all nonstandard” el código de la molécula)
-
-¿Cuántas son? (utilizar la “lupa verde” de la parte inferior derecha). ¿Qué indica la presencia de estas moléculas sobre el sistema empleado para expresar estas proteínas?  
-
-9. Puentes de hidrógeno. 
-
-En primer lugar, deseleccionar cualquier posible elemento seleccionado previamente. 
-
-Select → Clear Selection (importante para que las acciones posteriores tengan efecto global)
-
-o bien en la linea de comandos:
-
-~sel
-
-Esconder la visualización “ribbon” y experimentar con diferentes estilos de la cadena “backbone”.
-
-Actions → Ribbon → hide 
-Actions → Atoms/Bonds → backbone only → chain trace/minimal/full
-
-Al terminar mantener el estilo “full”, colorear los átomos de acuerdo a su elemento y volver a la representación “ribbon”. De ser necesario volver a colorear por estructura secundaria.  
-
-Actions → Color → by element
-Actions → Ribbon → show
-Tools → Depiction → Color Secondary Structure y OK en la nueva ventana
-
-o Alternativamente por linea de comando:
-
-color red,r helix; color purple,r strand; color gray,r coil
-
-Buscar puentes de hidrógeno. 
-
-Tools → Structure Analysis → FindHBond y OK en la nueva ventana
+    * ¿Cuál es su longitud?
 
 
-¿Qué se observa? ¿En qué estructuras?
+* Hasta ahora utilizamos comandos muy simples en Chimera. El comando a utilizar para buscar puentes de hidrógeno hbonds es el siguiente:
 
-Elegir la α-hélice en la ventana de secuencias de la Cadena A (ACE2) que va del residuo 56 al residuo 82 utilizando el mouse. Alternativamente para seleccionarla en la línea de comandos, tipee:
+    ```
+    sel; hbonds selRestrict any reveal false showDist false color yellow lineWidth 2 lineType dashed interSubmodel false interModel true intraMol true intraModel true relax true log true
+    ```
 
-select :56-82.a; namesel unaAlfa 
+    Como pueden ver tiene muchas opciones! A continuación veremos algunas de ellas y sus posibles valores marcando en negrita el valor utilizado o por defecto:
 
-Hacer foco sobre la selección. 
+    `saltOnly`: true \| **false**
 
-Actions → Focus
+    Permite limitar los resultados a puentes salinos (true), es decir puentes de hidrógeno entre grupos funcionales cargados o no limitar (false)
 
-Esconder la visualización “ribbon” (pero esta vez solo de la sección seleccionada).
+    `selRestrict`: **any** \| cross \| both \| atom-spec2
 
-Actions → Ribbon → hide
+    Permite limitar los resultados a:
 
-Esto también puede hacerse por línea de comandos:
+    - `any`.  Puentes de hidrógeno que tengan al menos un átomo en la selección (en este caso, #0)
+    - `cross`. Puentes de hidrógeno que tenga exactamente un átomo en la selección (en este caso, #0)
+    - `both`. Puentes de hidrógeno con ambos átomos en la selección (en este caso, #0)
+    - `atom-spec2`. Puentes de hidrógeno entre la selección  (en este caso, #0) y una segunda selección.
 
-focus unaAlfa; ~ribbon unaAlfa
+    `reveal`: true \| **false**
+
+    Permite mostrar las cadenas laterales de los residuos entre los cuáles hay un puente de hidrógeno.
+
+    `showDist`: true \| **false**
+
+    Imprime una etiqueta con la longitud del puente de hidrógeno.
+
+    Las siguientes opciones permiten restringir la búsque de puentes de hidrógeno:
+
+    `interSubmodel` true \| **false**
+
+    entre submodelos del mismo modelo (en este caso estamos trabajando con un modelo que no tiene submodelos)
+
+    `interModel` **true** \| false
+
+    entre modelos (en este caso tenemos un único modelo)
+
+    `intraModel` **true** \| false
+
+    dentro del modelo
+
+    `intraMol` **true** \| false
+
+    dentro de una misma molécula (o sea, dentro de una misma cadena)
+
+    `intraRes` **true** \| false
+
+    dentro de un mismo residuo
+
+    `relax` **true** \| false
+
+    Permite relajar los criterios para la selección de puentes de hidrógeno
+
+    `color yellow lineWidth 2 lineType dashed`
+
+    Estas son opciones de formato de como se muestran los puentes de hidrógeno.
+
+    `log` **true** \| false
+
+    Imprime en el **reply log** los puentes de hidrógeno encontrados y sus longitudes.
+
+* Corra el comando y observe en el reply log la longitud de los puentes de hidrógeno. ¿Entre qué valores oscilan?
+
+* Volver a la visualización original utilizando el siguiente comando:
+
+    ```
+    ~select; focus; ribbon
+    ```
+
+* Seleccionar una sección de una lámina-β utilizando la siguiente instrucción en la línea de comandos.
+
+    ```
+    select :394-400.e,510-516.e; namesel unaBeta 
+    ```
+
+* Ponerla en primer plano y desactivar la visualización **ribbon**.
+
+    **Actions** → **Focus**
+
+    **Actions** → **Ribbon** → **hide**
+
+    o por línea de comandos:
+
+    ```
+    focus unaBeta; ~ribbon unaBeta; display unaBeta
+    ```
+
+    * ¿En este caso qué se observa?
+    * ¿Cómo es la relación entre la numeración de los residuos?
+    * Medir la distancia entre un par de átomos dador y aceptor. 
  
+#### 12. Gráfico de Ramachandran. 
 
-Si no aparecen los átomos representados como sticks ingresar en la línea de comandos:
-display unaAlfa
-
-
-¿Entre qué átomos se observan los puentes de hidrógeno? ¿Cuál actúa como dador y cuál como aceptor? ¿Cómo es la relación entre la numeración de residuos que forman el puente de hidrógeno? 
-
-Medir la distancia entre los átomos dador y aceptor de manera similar a la empleada para los puentes disulfuro.
-
-¿Cuál es su longitud?
-
-El comando para buscar puentes de hidrógeno hbonds es el siguiente:
-
-sel; hbonds selRestrict any reveal false showDist false color yellow lineWidth 2 lineType dashed interSubmodel false interModel true intraMol true intraModel true relax true log true
-
-como pueden ver tiene muchas opciones! Veamos algunas de ellas:
-
-saltOnly: true | false
-Permite limitar los resultados a puentes salinos (true), es decir puentes de hidrógeno entre grupos funcionales cargados o no limitar (false)
-selRestrict: any | cross | both | atom-spec2
-Permite limitar los resultados a:
-any.  Puentes de hidrógeno que tengan al menos un átomo en la selección (en este caso, #0)
-cross. Puentes de hidrógeno que tenga exactamente un átomo en la selección (en este caso, #0)
-both. Puentes de hidrógeno con ambos átomos en la selección (en este caso, #0)
-atom-spec2. Puentes de hidrógeno entre la selección  (en este caso, #0) y una segunda selección.
-reveal: true | false
-Permite mostrar las cadenas laterales de los residuos entre los cuáles hay un puente de hidrógeno.
-showDist: true | false
-Imprime una etiqueta con la longitud del puente de hidrógeno.
-interSubmodel true | false
-interModel true | false
-intraModel true | false
-intraMol true | false
-intraRes true | false
-Estas son opciones que permite restringir la búsqueda de puentes de hidrógeno entre submodelos del mismo modelo (en este caso estamos trabajando con un modelo que no tiene submodelos), entre modelos (en este caso tenemos un único modelo), dentro del modelo y dentro de un mismo residuo.
-relax true | false
-Permite relajar los criterios para la selección de puentes de hidrógeno
-color yellow lineWidth 2 lineType dashed
-Estas son opciones de formato de como se muestran los puentes de hidrógeno.
-
- log true | false
-Imprime en el reply log los puentes de hidrógeno encontrados y sus longitudes.
-
-Corra el comando y observe en el reply log la longitud de los puentes de hidrógeno. ¿Entre qué valores oscilan?
-
-Volver a la visualización original utilizando el siguiente comando:
-
-~select; focus; ribbon
-
-Seleccionar una sección de una lámina-β utilizando la siguiente instrucción en la línea de comandos.
-
-select :394-400.e,510-516.e; namesel unaBeta 
-
- Ponerla en primer plano y desactivar la visualización “ribbon”.
-
-Actions → Focus
-Actions → Ribbon → hide
-
-o por línea de comandos:
-
-focus unaBeta; ~ribbon unaBeta; display unaBeta
-
-¿En este caso qué se observa? ¿Cómo es la relación entre la numeración de los residuos? Medir la distancia entre un par de átomos dador y aceptor. 
+* Acceder a la ventana de modelos.
  
-10. Gráfico de Ramachandran. 
+    **Favorites** → **Model Panel** 
 
-Acceder a la ventana de modelos.
- 
-Favorites → Model Panel 
+    Asegurarse que la línea correspondiente al modelo `6m0j.pdb` se encuentre seleccionada (resaltada) y que haya tildes bajo las columnas A y S.
+    
+    A continuación, entre las opciones listadas a la derecha buscar **Ramachandran plot…** (es posible que sea necesario extender el tamaño de la ventana Model Panel para que aparezca).
 
-Asegurarse que la línea correspondiente al modelo “6m0j.pdb” se encuentre seleccionada (resaltada) y que haya tildes bajo las columnas A y S. A continuación, entre las opciones listadas a la derecha buscar Ramachandran plot… (es posible que sea necesario extender el tamaño de la ventana Model Panel para que aparezca).
+    Acomodar en la pantalla la ventana de la estructura y del Gráfico de Ramachandran de tal modo que se puedan visualizar simultáneamente.
 
-Acomodar en la pantalla la ventana de la estructura y del Gráfico de Ramachandran de tal modo que se puedan visualizar simultáneamente.
+* Seleccionar las diferentes cadenas.
 
-Seleccionar las diferentes cadenas.
+    **Select** → **Chain** 
 
-Select → Chain 
+    ¿Qué sucede con los puntos en el Gráfico de Ramachandran cuando se selecciona la cadena A o la cadena E?
 
-¿Qué sucede con los puntos en el Gráfico de Ramachandran cuando se selecciona la cadena A o la cadena E?
+* Seleccionar la α-hélice y lámina-β de los puntos anteriores y observe la distribución de los puntos en el Ramachandran para cada caso.
 
-Seleccionar la α-hélice y lámina-β del punto 8.
+    ```
+    sel unaAlfa
+    sel unaBeta 
+    ```
 
-sel unaAlfa
- 
-sel unaBeta 
+    * ¿Cómo es la distribución de puntos en cada caso? ¿Se ajusta a lo esperado? 
 
-¿Cómo es la distribución de puntos en cada caso? ¿Se ajusta a lo esperado? 
-Es posible que algunos puntos seleccionados no logren distinguirse en el gráfico ya que se encuentran debajo de otros puntos. En ese caso maximizar la ventana del Gráfico de Ramachandran.
+    Es posible que algunos puntos seleccionados no logren distinguirse en el gráfico ya que se encuentran debajo de otros puntos. En ese caso maximizar la ventana del Gráfico de Ramachandran.
 
-Con el puntero seleccionar algún punto del Gráfico de Ramachandran. Para facilitar su identificación en la estructura asignarle un color distintivo y hacer foco sobre la selección. 
+* Con el puntero seleccionar algún punto del Gráfico de Ramachandran. Para facilitar su identificación en la estructura asignarle un color distintivo y hacer foco sobre la selección. 
 
-Actions → Color 
+    **Actions** → **Color** 
 
-Actions → Focus
+    **Actions** → **Focus**
 
-¿A qué residuo corresponde?
+    ¿A qué residuo corresponde?
 
-Para volver a la visualización completa de la estructura utilizar el siguiente comando.
+* Para volver a la visualización completa de la estructura utilizar el siguiente comando.
 
-focus
- 
-11. Guarde y cierre la sesión
+    ```
+    focus
+    ```
 
-File → Save Session As…
+#### 13. Fin!
 
-File → Close Session
+* Guarde y cierre la sesión
 
-Otros recursos
+    **File** → **Save Session As…**
+
+    **File** → **Close Session**
+
+
+## Otros recursos
 
 ### PDBe: Quick tour
 [https://www.ebi.ac.uk/training/online/course/pdbe-quick-tour](https://www.ebi.ac.uk/training/online/course/pdbe-quick-tour)
