@@ -44,7 +44,7 @@ details summary > * {
 * Familiarizarse con el uso de la base de datos InterPro
 
 ## Materiales
-* [Descarga](https://drive.google.com/file/d/1NWZrgdZescABRksw890SPZXpaQ4td06T/view?usp=sharing)
+* [Uniprots IDs de p53](https://drive.google.com/file/d/1NWZrgdZescABRksw890SPZXpaQ4td06T/view?usp=sharing)
 
 ## Organización de la guía
 Cada guía consta de una introducción a la herramienta, seguida de los ejercicios a realizar en el TP.
@@ -69,7 +69,7 @@ La mayor base de datos de Uniprot es UniProtKB (UniProt KnowledgeBase) que está
 
 TrEMBL brinda los datos crudos para que los curadores de Swiss-Prot los revisen. Por lo tanto, TrEMBL tiene más entradas que Swiss-Prot, pero carece de la anotación manual de un experto.
 
-### Uniparc y Uniref
+### UniParc y UniRef
 Dentro de UniProt también se encuentra UniParc (the UniProt Archive), una base de datos no-redundante de casi todas las secuencias proteicas disponibles en el mundo. Actualmente, UniParc contiene las secuencias de proteínas de más de 20 bases de datos públicas, como ser:
 
 * EMBL-Bank/DDBJ/GenBank nucleotide sequence databases
@@ -118,7 +118,7 @@ En la parte superior de la página web hay una barra de búsqueda y distintos ac
 
 <figcaption align = "center">
 
-**Fig 3.** Barra de búsqueda de UniProt.
+**Fig 2.** Barra de búsqueda de UniProt.
 
 </figcaption>
 <br>
@@ -133,7 +133,7 @@ Las búsquedas pueden realizarse en la barra de búsqueda en la parte superior d
 
 <figcaption align = "center">
 
-**Fig 4.** Menú desplegable
+**Fig 3.** Menú desplegable
 
 </figcaption>
 <br>
@@ -148,7 +148,7 @@ Los resultados obtenidos además pueden filtrarse por la base de datos, el organ
 
 <figcaption align = "center">
 
-**Fig 5.** Página de resultados de UniProt
+**Fig 4.** Página de resultados de UniProt
 
 </figcaption>
 <br>
@@ -162,7 +162,7 @@ Una vez que se selecciona una entrada haciendo click en el identificador, se abr
 
 <figcaption align = "center">
 
-**Fig 6.** Secciones de Información para una entrada en UniProt
+**Fig 5.** Secciones de Información para una entrada en UniProt
 
 </figcaption>
 <br>
@@ -184,7 +184,7 @@ Una entrada de UniProt puede poseer datos experimentales y predichos. Los datos 
 
 <figcaption>
 
-**Fig 7. Ejemplo de evidencia predicha y experimental en uniprot para la proteína retinoblastoma de humanos (P06400).** Las etiquetas azules que dicen *Sequence analysis* corresponden a la asignación de Desorden (región no estructurada de la proteína) a una región de secuencia en base al análisis de la secuencia. Las etiquetas amarillas que dicen *1 Publication*, indican que esas regiones poseen evidencia experimental en una publicación para la interacción con LIMD1 (región 763 a 928) y con E4F1 para el dominio C de retinoblastoma.
+**Fig 6. Ejemplo de evidencia predicha y experimental en uniprot para la proteína retinoblastoma de humanos (P06400).** Las etiquetas azules que dicen *Sequence analysis* corresponden a la asignación de Desorden (región no estructurada de la proteína) a una región de secuencia en base al análisis de la secuencia. Las etiquetas amarillas que dicen *1 Publication*, indican que esas regiones poseen evidencia experimental en una publicación para la interacción con LIMD1 (región 763 a 928) y con E4F1 para el dominio C de retinoblastoma.
 
 </figcaption>
 <br>
