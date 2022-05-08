@@ -44,7 +44,7 @@ details summary > * {
 * Familiarizarse con el uso de la base de datos InterPro
 
 ## Materiales
-* Descarga (Agregar acá link de descarga para la lista de uniprots IDs de p53).
+* [Descarga](https://drive.google.com/file/d/1NWZrgdZescABRksw890SPZXpaQ4td06T/view?usp=sharing)
 
 ## Organización de la guía
 Cada guía consta de una introducción a la herramienta, seguida de los ejercicios a realizar en el TP.
