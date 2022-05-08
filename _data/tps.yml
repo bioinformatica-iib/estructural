@@ -5,11 +5,11 @@
       description: |- 
         [TP N°1. UniProt](db_uniprot/)
       ratio: is-16by9
-  #   - link: TPs/db_interpro/featured.jpg
-  #     alt: The alt text for the image
-  #     description: |- 
-  #       [TP N°2. InterPro - PFAM - PDB](db_interpro/)
-  #     ratio: is-16by9
+    - link: TPs/chimera/featured.png
+      alt: The alt text for the image
+      description: |- 
+        [TP N°2. Introducción a Chimera](chimera/)
+      ratio: is-16by9
     # - link: TPs/EMBOSS/featured.jpg
     #   alt: The alt text for the image
     #   description: |- 
