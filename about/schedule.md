@@ -57,7 +57,7 @@ hide_footer: True
 |                       |           |           | T1b. Bases de Datos y anotación de proteínas. | L. Chemes |
 |                       | 13 - 17hs | Práctico  | [TP1. Bases de Datos de proteínas](/estructural/TPs/db_uniprot/) | J. Glavina |
 | Martes, 10/05/2022    | 10 - 12.30hs  | Teórica   | T2. Estructura de Proteínas | L. Chemes |
-|                       | 13 - 17hs | Práctico  | TP2. Visualización de Proteínas utilizando Chimera | J. Glavina |
+|                       | 13 - 17hs | Práctico  | [TP2. Visualización de Proteínas utilizando Chimera](/estructural/TPs/chimera/)  | J. Glavina |
 | Miércoles, 11/05/2022	|  9 - 12hs	| Teórica   | T3. Modelado por Homología | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | TP3. Modelado por Homología - Parte I | J. Glavina |
 | Jueves, 12/05/2022    | 9 - 12hs	| Teórica   | Discusión y problemas ||
