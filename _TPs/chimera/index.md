@@ -461,7 +461,7 @@ El objetivo principal de los siguientes ejercicios consiste en introducir la uti
     o bien por línea de comando
 
     ```
-    represent spehere sel
+    represent sphere sel
     display sel
     ```
 
