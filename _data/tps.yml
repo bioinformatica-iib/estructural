@@ -10,11 +10,11 @@
       description: |- 
         [TP N°2. Introducción a Chimera](chimera/)
       ratio: is-16by9
-    # - link: TPs/EMBOSS/featured.jpg
-    #   alt: The alt text for the image
-    #   description: |- 
-    #     [TP N°2. EMBOSS Suite](EMBOSS/)
-    #   ratio: is-16by9
+    - link: TPs/Modelado_Por_Homologia/featured.png
+      alt: The alt text for the image
+      description: |- 
+        [TP N°3. Modelado por homología - Parte I](Modelado_Por_Homologia/)
+      ratio: is-16by9
     # - link: TPs/alineamiento_pares/featured.jpg
     #   alt: The alt text for the image
     #   description: |- 
