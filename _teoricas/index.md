@@ -2,16 +2,16 @@
 layout: page
 title: Teóricas
 hero_height: is-small
+gallery: teoricas
 ---
 
 <!---
 Agregar arriba cuando esté listo
-gallery: teoricas
 --->
 
-{% include notification.html message="This resource is not available yet." %}
 
 <!---
+{% include notification.html message="This resource is not available yet." %}
 Las teóricas o consultas de teóricas van a ser en Google Meet, en este link: 
 
 **Introduccion a la Bioinformatica**  
