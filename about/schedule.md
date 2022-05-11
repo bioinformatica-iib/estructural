@@ -58,7 +58,7 @@ hide_footer: True
 |                       | 13 - 17hs | Práctico  | [TP1. Bases de Datos de proteínas](/estructural/TPs/db_uniprot/) | J. Glavina |
 | Martes, 10/05/2022    | 10 - 12.30hs  | Teórica   | [T2. Estructura de Proteínas](/estructural/teoricas/teorica2/) | L. Chemes |
 |                       | 13 - 17hs | Práctico  | [TP2. Visualización de Proteínas utilizando Chimera](/estructural/TPs/chimera/)  | J. Glavina |
-| Miércoles, 11/05/2022	|  9 - 12hs	| Teórica   | T3. Modelado por Homología | L. Chemes |
+| Miércoles, 11/05/2022	|  9 - 12hs	| Teórica   | [T3. Modelado por Homología](/estructural/teoricas/teorica3/) | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | [TP3. Modelado por Homología - Parte I](/estructural/TPs/Modelado_Por_Homologia/)| J. Glavina |
 | Jueves, 12/05/2022    | 9 - 12hs	| Teórica   | Discusión y problemas ||
 |                       | 13 - 17hs | Práctico  | TP4.Modelado por Homología - Parte II | J. Glavina |
