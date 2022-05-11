@@ -10,11 +10,8 @@ construccion: false
 ---
 
 {% if page.construccion %}
-
 **Pagina en construccion**
-
 {% else %}
-
 <ul class="block-list has-radius is-primary">
    <li class=" is-info has-icon" markdown="span">
       <span class="icon"><i class="fas fa-clipboard"></i></span>
@@ -523,5 +520,4 @@ Existen muchísimos métodos para predecir regiones desordenadas. Puedes probar 
 4. Encuentra regiones de baja complejidad (“low complexity”) ¿Qué aminoácidos son más frecuentes en esta región?
 5. Utiliza el predictor de desorden de tu preferencia.
 6. ¿Qué regiones llamarías desordenadas?
-
 {% endif %}
