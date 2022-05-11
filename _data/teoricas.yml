@@ -10,11 +10,11 @@
       description: |- 
         [Teórica N°1 - Parte B. Bases de Datos](teorica1b/)
       ratio: is-16by9
-    # - link: teoricas/teorica2/featured.png
-    #   alt: The alt text for the image
-    #   description: |- 
-    #     [Teórica N°2. Bases de datos. Ontologías.](teorica2/)
-    #   ratio: is-16by9
+    - link: teoricas/teorica2/featured.png
+      alt: The alt text for the image
+      description: |- 
+        [Teórica N°2. Estructura de Proteínas](teorica2/)
+      ratio: is-16by9
     # - link: teoricas/teorica3/featured.png
     #   alt: The alt text for the image
     #   description: |- 
