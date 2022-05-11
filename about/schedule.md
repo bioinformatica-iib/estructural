@@ -56,7 +56,7 @@ hide_footer: True
 | Lunes, 09/05/2022	    | 9 - 12hs  | Teórica   | [T1a. Introducción al curso](/estructural/teoricas/teorica1a/) | L. Chemes |
 |                       |           |           | [T1b. Bases de Datos y anotación de proteínas](/estructural/teoricas/teorica1a/) | L. Chemes |
 |                       | 13 - 17hs | Práctico  | [TP1. Bases de Datos de proteínas](/estructural/TPs/db_uniprot/) | J. Glavina |
-| Martes, 10/05/2022    | 10 - 12.30hs  | Teórica   | T2. Estructura de Proteínas | L. Chemes |
+| Martes, 10/05/2022    | 10 - 12.30hs  | Teórica   | [T2. Estructura de Proteínas](/estructural/teoricas/teorica2/) | L. Chemes |
 |                       | 13 - 17hs | Práctico  | [TP2. Visualización de Proteínas utilizando Chimera](/estructural/TPs/chimera/)  | J. Glavina |
 | Miércoles, 11/05/2022	|  9 - 12hs	| Teórica   | T3. Modelado por Homología | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | [TP3. Modelado por Homología - Parte I](/estructural/TPs/Modelado_Por_Homologia/)| J. Glavina |
