@@ -215,6 +215,10 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
 
 9. Por ahora investigue el gráfico de pLDDT, al final de la clase haremos una demostración del script en R para graficar estos valores.
 
+    * ¿Qué observa?
+    * ¿Puede identificar las ragiones con un pLDDT mayor a 70?
+    * ¿Puede identificar las ragiones con un pLDDT entre 50 a 70?
+
     ----
     Abra R Studio. Ahora graficaremos los pLDDT por posición para cada uno de los modelos.
 
