@@ -213,9 +213,13 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     * ¿Porqué considera que elegimos 50 como valor mínimo?
     * ¿De qué posición a qué posición consideraría que el modelo es de confianza?
 
-9. Abra R Studio. Ahora graficaremos los pLDDT por posición para cada uno de los modelos.
+9. Por ahora investigue el gráfico de pLDDT, al final de la clase haremos una demostración del script en R para graficar estos valores.
+
+    ----
+    Abra R Studio. Ahora graficaremos los pLDDT por posición para cada uno de los modelos.
 
     ```R
+    install.packages("bio3d")
     library(bio3d)
 
     directorio <- "/directorio/donde/estan/los/modelos"
@@ -265,6 +269,7 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     box()
     dev.off()
     ```
+----
 
 10. Encuentre el archivo corespondiente al gráfico del PAE.
     * ¿Qué interpreta?
