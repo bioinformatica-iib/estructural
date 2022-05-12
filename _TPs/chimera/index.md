@@ -632,8 +632,6 @@ El objetivo principal de los siguientes ejercicios consiste en introducir la uti
 
     Esto también puede hacerse por línea de comandos:
 
-        alternativamente para seleccionarla en la línea de comandos, tipee:
-
     ```
     focus unaAlfa; ~ribbon unaAlfa
     ```
