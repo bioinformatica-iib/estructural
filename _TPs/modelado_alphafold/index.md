@@ -219,7 +219,7 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     library(bio3d)
     library(ggplot2)
 
-    directorio <- "~/Documents/ENSENANZA/2022_BIOINFO_ESTRUCTURAL/TPS_MATERIALES/TP4/E7/E7_MONOMERO_3b510.result/"
+    directorio <- "/directorio/donde/estan/los/modelos"
 
     archivos <- list.files(path = directorio,pattern = "_relaxed_",)
 
