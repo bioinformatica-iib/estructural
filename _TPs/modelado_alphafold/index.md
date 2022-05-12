@@ -217,7 +217,6 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
 
     ```R
     library(bio3d)
-    library(ggplot2)
 
     directorio <- "/directorio/donde/estan/los/modelos"
 
@@ -237,6 +236,9 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
       datos[nuevaColumna] <- mipdb2$atom[mipdb$calpha,"b"]
     }
 
+    fileOUT <- paste(directorio,"E7_Monomero.png",sep="")
+
+    png(filename =fileOUT,width = 20,height = 10,units = "cm",res=150)
     plot.new()
     plot( x = mipdb$atom[mipdb$calpha,"resno"],
           y = mipdb$atom[mipdb$calpha,"b"],
@@ -248,6 +250,7 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
         col = colores[1],
         axes = F)
 
+
     for(i in 2:length(archivos)){
       miarchivo2 <- paste(directorio,archivos[i],sep="")
       mipdb2 <- read.pdb(miarchivo2)
@@ -258,8 +261,9 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
 
     axis(side = 1,at = c(1,seq(5,100,by=5)),lwd = 0,lwd.ticks = 1)
     axis(side = 2,at = seq(5,100,by=5),lwd=0,lwd.ticks=1)
-    legend(x = 60,y = 30,legend = paste(rep("rank",5),1:5,sep="-"),col = colores,lty = 1,ncol = 2)
+    legend(x = 60,y = 40,legend = paste(rep("rank",5),1:5,sep="-"),col = colores,lty = 1,ncol = 2)
     box()
+    dev.off()
     ```
 
 10. Encuentre el archivo corespondiente al gráfico del PAE.
