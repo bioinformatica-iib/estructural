@@ -70,6 +70,12 @@ IntAct es una base de datos pública de interacciones moleculares. Es mantenida 
     </li>
     </ul>
 
+    <p style="text-align:center">
+    <img src="./img/Intact_fig1.png" alt="">
+    </p>
+    <br>
+    <br>
+
 2. El resultado de IntAct es visualizado de dos maneras:
     * Mediante una **red** donde los nodos son proteínas o moléculas, que están conectados por edges que pueden representar distintas cosas como: número de experimentos anotados, nivel de confianza, entre otros.
     * Mediante una **tabla de interacciones** y una **tabla de interactores**, en ambos casos con columnas que pueden ser modificadas según el interés del usuario.
@@ -85,7 +91,7 @@ IntAct es una base de datos pública de interacciones moleculares. Es mantenida 
     * ¿Por qué cree que esto ocurre?
     * ¿Siempre el interactor A y el interactor B provienen de la misma especie? ¿Por qué?
 
-3. Si quisiéramos resultados para un único organismo, en la parte superior de la página de resultados se encuentran los Filtros.
+4. Si quisiéramos resultados para un único organismo, en la parte superior de la página de resultados se encuentran los Filtros.
 
     En el filtro: *Interactor Species* observe las distintas especies que hay. 
 
@@ -93,21 +99,27 @@ IntAct es una base de datos pública de interacciones moleculares. Es mantenida 
 
     Seleccione interacciones que sean entre Rb y otra proteína Humana tildando la especie correspondiente: *Homo sapiens* y luego seleccionando que sea **Intra** especie con el botón *Filter out cross-species interactions*.
 
-4. En el filtro: *Interactor Type* observe los distintos tipos de interactores que hay. Luego seleccione de manera que los interactores sean sólo **proteínas**.
+    <p style="text-align:center">
+    <img src="./img/Intact_fig2.png" alt="">
+    </p>
+    <br>
+    <br>
 
-5. Investigue el filtro *Interaction Detection Method*. 
+5. En el filtro: *Interactor Type* observe los distintos tipos de interactores que hay. Luego seleccione de manera que los interactores sean sólo **proteínas**.
+
+6. Investigue el filtro *Interaction Detection Method*. 
     * ¿Qué tipos de técnicas experimentales hay?
     * ¿Todas las técnicas proveen evidencia de interacción directa entre proteínas?
     * ¿Puede dar algunos ejemplos de cuáles son evidencia directa y cuáles indirecta?
 
-6. Investigue el filtro *Interaction Type*.
+7. Investigue el filtro *Interaction Type*.
     * ¿Qué tipos de interacciones considera IntAct?
     * ¿Cuáles son interacciones directas y cuáles son indirectas?
 
-7. Seleccione distintos tipos de interacciones en *Interaction Type* y observe los distintos tipos de técnicas experimentales en el filtro *Interaction Detection Method*.
+8. Seleccione distintos tipos de interacciones en *Interaction Type* y observe los distintos tipos de técnicas experimentales en el filtro *Interaction Detection Method*.
     * ¿Coincide alguna con los ejemplos de evidencia directa e indirecta que usted seleccionó?
 
-8. IntAct utiliza un método de puntuación para puntuar las interacciones observadas con un índice denominado el **MI score**.
+9. IntAct utiliza un método de puntuación para puntuar las interacciones observadas con un índice denominado el **MI score**.
 
     El MI score es un método de puntuación modificable y heurístico que tiene en consideración tres factores:
     * El método de detección de la interacción: Observada, predicha o inferida?
