@@ -1,17 +1,16 @@
 ---
 layout: page
-title: Teórica N°6
-subtitle: Reconstrucción de filogenias
+title: Teórica N°7
+subtitle: Métodos de predicción basados en datos, M. Learning
 menubar_toc: false
 hero_height: is-small
 construccion: false
 ---
+
 {% if page.construccion %}
 **Pagina en construccion**
 {% else %}
-- Slides [[PDF]](https://drive.google.com/file/d/11jloxEKYKCAYKFyTgtb3ztOVOWXOWiNO/view?usp=sharing)
-- Recording [[MP4]](https://drive.google.com/file/d/18njeGvEddr9mcPBKF69ckBQCaSVipKo5/view?usp=sharing) 
-<!--
-<iframe src="https://drive.google.com/file/d/18njeGvEddr9mcPBKF69ckBQCaSVipKo5/preview" width="800" height="440"></iframe> 
--->
+## PARTE 1 - HMM.
+- Slides [[PDF]](https://drive.google.com/file/d/1ASe7wOv7a92WyA4GnoNgoCE-xE47POaR/view?usp=sharing)
+- Recording [[MP4]](https://drive.google.com/file/d/1LQ06HbIoUmE0qqcrZL2StoSfm31zgJSH/view?usp=sharing)
 {% endif %}

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Teórica N°7
-subtitle: Métodos de predicción basados en datos, M. Learning
+title: Teórica N°8
+subtitle: "Bioinformática Estructural: Desorden"
 menubar_toc: false
 hero_height: is-small
 construccion: false
@@ -10,7 +10,6 @@ construccion: false
 {% if page.construccion %}
 **Pagina en construccion**
 {% else %}
-## PARTE 1 - HMM.
-- Slides [[PDF]](https://drive.google.com/file/d/1ASe7wOv7a92WyA4GnoNgoCE-xE47POaR/view?usp=sharing)
-- Recording [[MP4]](https://drive.google.com/file/d/1LQ06HbIoUmE0qqcrZL2StoSfm31zgJSH/view?usp=sharing)
+- Slides [[PDF]](https://drive.google.com/file/d/1HAaOMj4njY59sJ51pP5EsPMvJPR_GSee/view?usp=sharing)
+- Recording [[MP4]](https://drive.google.com/file/d/1qvSyv6UudeecFgPd7Xbewrqi9JEIfIH9/view?usp=sharing)
 {% endif %}

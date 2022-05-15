@@ -20,6 +20,11 @@
       description: |- 
         [Teórica N°3. Modelado por Homología](teorica3/)
       ratio: is-16by9
+    - link: teoricas/teorica4/featured.png
+      alt: The alt text for the image
+      description: |- 
+        [Teórica N°4. Interacciones proteína-proteína](teorica4/)
+      ratio: is-16by9
     # - link: teoricas/teorica4/featured.png
     #   alt: The alt text for the image
     #   description: |- 
