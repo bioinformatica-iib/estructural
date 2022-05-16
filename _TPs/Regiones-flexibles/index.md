@@ -33,9 +33,9 @@ details summary > * {
 ## PARTE I: Análisis de alineamientos múltiples de secuencia de proteínas
 
 #### Recursos a utilizar:
-* ProViz                [http://slim.icr.ac.uk/proviz/](http://slim.icr.ac.uk/proviz/)
-* JalView:                [https://www.jalview.org/](https://www.jalview.org/)
-* PFAM:                    [https://pfam.xfam.org/](https://pfam.xfam.org/)
+* ProViz: [http://slim.icr.ac.uk/proviz/](http://slim.icr.ac.uk/proviz/)
+* JalView: [https://www.jalview.org/](https://www.jalview.org/)
+* PFAM: [https://pfam.xfam.org/](https://pfam.xfam.org/)
 
 ### Objetivos:
 * Aprender a utilizar Jalview para visualizar un MSA y familiarizarse con el manejo de programas de visualización de alineamientos.
@@ -368,7 +368,6 @@ Recuerda ver en qué directorio estás trabajando y configurarlo para trabajar e
 
    Estudiemos la correlación entre IUPred y el pLDDT:
 
-
    ``` R
    pLDDT_vs_IUPred<-ggplot(p53,aes(x=pLDDT,y=Iupred)) +
    scale_x_continuous(n.breaks = 10,expand = c(0,0.01),limits=c(0,100)) +
@@ -475,6 +474,7 @@ PhaSePro es curada manualmente y abarca únicamente casos verificados de LLPS in
 4. ¿Qué region media LLPS?
 5. Busque en disprot la entrada de la proteína homóloga: `DP00133 - Phosphoprotein`.
 6. ¿Qué información experimental hay disponible para esa región?
+
 
 ## Ejercicios Complementarios
 
