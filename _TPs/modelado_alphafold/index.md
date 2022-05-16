@@ -160,10 +160,18 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
 7. Alinee las estructuras utilizando Matchmaker (si no recuerda, *Tools* → *Structure comparison* → *Matchmaker*)
     * ¿Cuál es el RMSD global?
 
-    Si quieren ver el RMSD por posición sobre la estructura:
+    Si quieren ver el RMSD por posición sobre la estructura
+
+    *Structure Comparison* → *Match align*
+    
+    Seleccione el par de modelos adecuado. *En residue-residue distance cutoff* seleccione el mismo umbral que utilizó en *Matchmaker* para *pruned atoms* (Por defecto es 2)
+    
     Para colorear la estructura por RMSD para eso vaya a: *Tools* → *Depiction* → *Render by Attribute*
+    
     En **attributes** of asegúrese que esté seleccionado residues
+    
     En el **recuadro de Models** asegúrese que estén ambos modelos seleccionados.
+    
     En la pestaña **Render** seleccione **mavRMSDca** y luego haga clic en `Ok`.
 
 8. Cierre el modelo correspondiente al pdb 2b9d. Via terminal tiene que ingresar el comando close seguido del número del modelo, por ejemplo:
