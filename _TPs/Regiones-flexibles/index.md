@@ -214,7 +214,7 @@ La predicción de IDRs a partir de la secuencia de aminoácidos permite un anál
 
 Entre los algoritmos que se basan en composición de secuencia podemos nombrar IUPred (Dosztányi et al., 2005; Mészáros et al., 2018), que aplica un campo de energı́a desarrollado a partir de un gran número de proteínas con estructura determinada obtenidas de PDB. El primer algoritmo en _machine learning_ fue PONDR (Obradovic et al., 2003; Romero et al., 1997), entrenado a partir de un grupo estructuras de proteínas globulares y atributos de secuencia asociados a residuos no resueltos en dichas estructuras, que corresponden a regiones flexibles dentro del cristal. GlobPlot (Linding et al., 2003) fue entrenado estudiando la tendencia de un residuo a adquirir determinada estructura secundaria, hélices α o láminas β.
 
-### Ejercicio 2. Predicción de desorden a partir de la secuencia.
+### Ejercicio 1. Predicción de desorden a partir de la secuencia.
 
 Ingresa en la web de **IUPred2A** [https://iupred2a.elte.hu](https://iupred2a.elte.hu) e ingresa la proteína p53 (puede ingresarse la secuencia de aminoácidos, el **Uniprot ID** - P53_HUMAN o el **accession number** - P04637). 
 
@@ -550,7 +550,7 @@ Una de las aplicaciones principales de la predicción de desorden es encontrar r
 
    Algunas de las características utilizadas son la longitud, el punto isoeléctrico, el gravy index (es el valor de hidrofobicidad del péptido), el desorden estructural predicho, entre otras.
  
-   * Ingrese la mistery protein en crystalpred ¿Como se clasifica la proteína según la capacidad de ser cristalizada?
+   * Ingrese la mistery protein en XtalPred ¿Como se clasifica la proteína según la capacidad de ser cristalizada?
    * Pruebe ingresando sólo el dominio de interés ¿Mejora?
 
 {% endif %}
