@@ -25,6 +25,11 @@
       description: |- 
         [TP N°5. Interacciones proteína-proteína](ppi/)
       ratio: is-16by9
+    - link: TPs/Regiones-flexibles/featured.png
+      alt: The alt text for the image
+      description: |- 
+        [TP N°6. Predicción de desorden y bases de datos](Regiones-flexibles/)
+      ratio: is-16by9
     # - link: TPs/PSI-BLAST/featured.jpg
     #   alt: The alt text for the image
     #   description: |- 
@@ -45,11 +50,7 @@
     #   description: |- 
     #     [TP N°8. Programando en Biología](IntroR/)
     #   ratio: is-16by9
-    # - link: TPs/Regiones-flexibles/featured.png
-    #   alt: The alt text for the image
-    #   description: |- 
-    #     [TP N°9. Predicción de Desorden](Regiones-flexibles/)
-    #   ratio: is-16by9
+    
     # - link: TPs/Motivos_Lineales/featured.png
     #   alt: The alt text for the image
     #   description: |- 
