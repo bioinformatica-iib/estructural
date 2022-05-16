@@ -32,12 +32,12 @@ details summary > * {
 
 ## PARTE I: Análisis de alineamientos múltiples de secuencia de proteínas
 
-#### Recursos a utilizar:
+#### Recursos a utilizar
 * ProViz: [http://slim.icr.ac.uk/proviz/](http://slim.icr.ac.uk/proviz/)
 * JalView: [https://www.jalview.org/](https://www.jalview.org/)
 * PFAM: [https://pfam.xfam.org/](https://pfam.xfam.org/)
 
-### Objetivos:
+### Objetivo
 * Aprender a utilizar Jalview para visualizar un MSA y familiarizarse con el manejo de programas de visualización de alineamientos.
 * Interpretar alineamientos múltiples de secuencias. Identificar regiones de secuencia conservadas y asociarlas a diferentes elementos funcionales de las proteínas. 
 * Identificar regiones ordenadas y desordenadas en alineamientos múltiples de secuencia
