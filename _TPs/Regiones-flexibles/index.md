@@ -414,7 +414,7 @@ Ingresa a la página web de [DisProt](https://disprot.org/) y encuentra la prote
 
 3. ¿Cuál es el rol de las regiones desordenadas?
 
-   * *Expande *Interaction partner* ¿Qué tipo de interacciones están indicadas?¿Qué técnicas se usaron para identificarlas?
+   * Expande *Interaction partner* ¿Qué tipo de interacciones están indicadas?¿Qué técnicas se usaron para identificarlas?
    * Expande *Disorder Function* ¿Qué tipo de funciones están indicadas? ¿Qué técnicas se usaron para identificarlas?
 
 4. Expande *Domains*.
@@ -465,7 +465,7 @@ abra el ensamble en Chimera.
  
 ### Ejercicio 4. Base de datos de proteínas involucradas en liquid-liquid phase separation
  
-[PhaSePro] (https://phasepro.elte.hu/) es una base de datos de proteínas involucradas en liquid-liquid phase separation (LLPS) en células. LLPS es un proceso molecular que forma organelas sin membrana que median funciones celulares cruciales.
+[PhaSePro](https://phasepro.elte.hu/) es una base de datos de proteínas involucradas en liquid-liquid phase separation (LLPS) en células. LLPS es un proceso molecular que forma organelas sin membrana que median funciones celulares cruciales.
 PhaSePro es curada manualmente y abarca únicamente casos verificados de LLPS integrando un amplio rango de información biofísica, funciones biológicas y regulación de estos sistemas moleculares.
 
 1. Ingreese a phase pro
