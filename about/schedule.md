@@ -64,7 +64,7 @@ hide_footer: True
 |                       | 13 - 17hs | Práctico  | [TP4.Modelado por Homología - Parte II](/estructural/TPs/modelado_alphafold/) | J. Glavina |
 | Viernes, 13/05/2022	| 9 - 12hs  | Teórica   | [T4. Interacciones proteína-proteína](/estructural/teoricas/teorica4/) | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | [TP5. Interacciones proteína-proteína](/estructural/TPs/ppi/) | J. Glavina |
-| Lunes, 16/05/2022	    | 9 - 12hs	| Teórica   | T5. Proteínas desordenadas y predicción de desorden | L. Chemes |
+| Lunes, 16/05/2022	    | 9 - 12hs	| Teórica   | [T5. Proteínas desordenadas y predicción de desorden](/estructural/teoricas/teorica5/) | L. Chemes |
 |                       | 13 - 17hs | Práctico  | [TP6. Predicción de desorden y Bases de Datos][/estructural/TPs/Regions-flexibles] | J. Glavina |
 | Martes, 17/05/2022	| 9 - 12hs  | Teórica   | T6. Motivos Lineales: Identificación en secuencia | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | TP7. Motivos Lineales - Parte I | J. Glavina / N.Palopoli |
