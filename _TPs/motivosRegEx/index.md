@@ -34,6 +34,7 @@ details summary > * {
 * WebLogo3: [http://weblogo.threeplusone.com/create.cgi](http://weblogo.threeplusone.com/create.cgi)
 * MEME: [https://meme-suite.org/meme/tools/meme](https://meme-suite.org/meme/tools/meme)
 * SLiMSearch: [http://slim.icr.ac.uk/slimsearch/](http://slim.icr.ac.uk/slimsearch/)
+* SLiMFinder: [http://www.slimsuite.unsw.edu.au/servers/slimfinder.php](http://www.slimsuite.unsw.edu.au/servers/slimfinder.php)
  
 ## Objetivos
 * Familiarizarse con la simbología utilizada en expresiones regulares
@@ -346,10 +347,10 @@ Vaya a la web de [SLiMSearch](http://slim.icr.ac.uk/slimsearch/) e ingrese la ex
  
 La longitud y variabilidad de los motivos lineales hace difícil distinguir patrones que ocurren al azar de aquellos que constituyen verdaderos motivos en proteínas naturales. La herramienta SLiMFinder permite identificar motivos estadísticamente sobrerrepresentados en un conjunto de secuencias relacionadas. A diferencia de MEME, SLiMFinder permite identificar motivos con segmentos de secuencia y longitud variable. Incorpora filtros para concentrar la búsqueda en regiones desordenadas o de mayor conservación relativa, para aumentar así la confiabilidad en la predicción. Los resultados se presentan con un valor de significancia estadística que estima la probabilidad de que el motivo se hubiera encontrado por azar, adaptado al tamaño y composición de las secuencias provistas por el usuario. De esta forma, SLiMFinder otorga un método eficiente y con baja tasa de falsos positivos para descubrir nuevos motivos.
 
-1. Vaya a la web de SLiMFinder (http://www.slimsuite.unsw.edu.au/servers/slimfinder.php) y pegue las secuencias de unión a Rev1 del ejercicio 2 en el campo de la derecha (Alternative fasta input). 
+1. Vaya a la web de [SLiMFinder](http://www.slimsuite.unsw.edu.au/servers/slimfinder.php) y pegue las secuencias de unión a Rev1 del ejercicio 2 en el campo de la derecha (Alternative fasta input). 
  
-2. En la opción Masking Options puede decidir que sólo se consideren motivos predichos en regiones desordenadas (Disorder masking) y/o conservadas evolutivamente (Conservation masking). Sobre la base de lo que conoce de este motivo, ¿qué filtros activaría?
+2. En la opción *Masking Options* puede decidir que sólo se consideren motivos predichos en regiones desordenadas (*Disorder masking*) y/o conservadas evolutivamente (*Conservation masking*). Sobre la base de lo que conoce de este motivo, ¿qué filtros activaría?
 
-3. Revise los resultados. En la pestaña main encontrará los resultados generales de la predicción de motivos, mientras que la pestaña occ detallará en qué proteínas ocurren. ¿Qué motivos se predicen? ¿Coinciden con lo esperado?
+3. Revise los resultados. En la pestaña *main* encontrará los resultados generales de la predicción de motivos, mientras que la pestaña *occ* detallará en qué proteínas ocurren. ¿Qué motivos se predicen? ¿Coinciden con lo esperado?
 
 {% endif %}
