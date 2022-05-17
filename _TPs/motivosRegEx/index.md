@@ -223,8 +223,8 @@ FVKPLEMSHKKSFFDKKRSERKWSHQDTFKCE
  
 5. Analice el logo de secuencia obtenido. 
     * Recuerde, ¿qué indican la altura y el color de cada letra?
-    * ¿Puede identificar posiciones fijas y variables del alineamiento a través del logo de secuencia?
     * ¿Qué posiciones de este logo tienen mayor y menor contenido de información? ¿Se relacionan con las posiciones del motivo?
+    * ¿Puede identificar posiciones definidas y variables del motivo a través del logo de secuencia?
     * ¿Puede relacionar el logo de secuencia con la expresión regular que describe al motivo? 
  
 
