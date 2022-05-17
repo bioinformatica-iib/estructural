@@ -11,9 +11,8 @@ construccion: true
 **Pagina en construccion**
 {% else %}
 
-## PARTE 1 - HMM
-
-- Slides [[PDF]](https://drive.google.com/file/d/1ASe7wOv7a92WyA4GnoNgoCE-xE47POaR/view?usp=sharing)
-- Recording [[MP4]](https://drive.google.com/file/d/1LQ06HbIoUmE0qqcrZL2StoSfm31zgJSH/view?usp=sharing)
+- Slides [[PDF]]()
+- Recording [[Parte I - MP4]](https://drive.google.com/file/d/1HE1ane5o8QEwz1B_du6qz1TQ2gWQ3Wwv/view?usp=sharing)
+- Recording [[Parte II - MP4]](https://drive.google.com/file/d/1tjaQnJhh4Uhj_thkgptjmm6AseSBJSi9/view?usp=sharing)
 
 {% endif %}

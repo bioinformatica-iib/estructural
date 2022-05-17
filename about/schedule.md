@@ -66,11 +66,11 @@ hide_footer: True
 |                       | 13 - 17hs	| Práctico  | [TP5. Interacciones proteína-proteína](/estructural/TPs/ppi/) | J. Glavina |
 | Lunes, 16/05/2022	    | 9 - 12hs	| Teórica   | [T5. Proteínas desordenadas y predicción de desorden](/estructural/teoricas/teorica5/) | L. Chemes |
 |                       | 13 - 17hs | Práctico  | [TP6. Predicción de desorden y Bases de Datos](/estructural/TPs/Regions-flexibles/) | J. Glavina |
-| Martes, 17/05/2022	| 9 - 12hs  | Teórica   | T6. Motivos Lineales: Identificación en secuencia | L. Chemes |
+| Martes, 17/05/2022	| 9 - 12hs  | Teórica   | [T6. Motivos Lineales: Identificación en secuencia](/estructural/teoricas/teorica6) | L. Chemes |
 |                       | 13 - 17hs	| Práctico  | [TP7. Motivos Lineales - Parte I](/estructural/TPs/motivosRegEx/) | J. Glavina / N.Palopoli |
 | Miércoles, 18/05/2022	|	        |           | FERIADO POR CENSO NACIONAL   |   |
-| Jueves, 19/05/2022	| 9 - 12hs	| Teórica   | T7. Motivos Lineales: Validación experimental | L. Chemes/T.Gibson |
-|                       | 13 - 17hs	| Práctico  | TP8. Motivos Lineales - Parte II | L. Chemes/T. Gibson |
+| Jueves, 19/05/2022	| 9 - 12hs	| Teórica   | [T7. Motivos Lineales: Validación experimental](/estructural/teoricas/teorica7) | L. Chemes/T.Gibson |
+|                       | 13 - 17hs	| Práctico  | [TP8. Motivos Lineales - Parte II](/estructural/TPs/Motivos_Lineales/) | L. Chemes/T. Gibson |
 | Viernes, 20/05/2022	| 9 - 12hs	| Teórica   | Consultas teóricas y del trabajo final | L. Chemes |
 |                       | 13 - 17hs	|           | TP9. Trabajo Práctico Integrador   |   |
 | Viernes, 27/05/2022	| 13 - 17hs	|           | Evaluación Final    |   |
