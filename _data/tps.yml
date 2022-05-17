@@ -30,11 +30,11 @@
       description: |- 
         [TP N°6. Predicción de desorden y bases de datos](Regiones-flexibles/)
       ratio: is-16by9
-    # - link: TPs/PSI-BLAST/featured.jpg
-    #   alt: The alt text for the image
-    #   description: |- 
-    #     [TP N°5. Perfiles de Secuencia y PSI-BLAST](PSI-BLAST/)
-    #   ratio: is-16by9
+    - link: TPs/motivosRegEx/featured.png
+      alt: The alt text for the image
+      description: |- 
+        [TP N°7. Motivos Lineales - Parte I](motivosRegEx/)
+      ratio: is-16by9
     # - link: TPs/Filogenia/featured.png
     #   alt: The alt text for the image
     #   description: |- 
