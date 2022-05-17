@@ -1,7 +1,7 @@
 ---
 layout: page
-title: TP N°10
-subtitle: Motivos Lineales en Proteínas
+title: TP N°8
+subtitle: Motivos Lineales - Parte II
 data : True
 menubar_toc: true
 hero_height: is-small

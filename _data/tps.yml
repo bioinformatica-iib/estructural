@@ -35,11 +35,11 @@
       description: |- 
         [TP N°7. Motivos Lineales - Parte I](motivosRegEx/)
       ratio: is-16by9
-    # - link: TPs/Filogenia/featured.png
-    #   alt: The alt text for the image
-    #   description: |- 
-    #     [TP N°6. Filogenias, Árboles filogenéticos y filogenómica](Filogenia/)
-    #   ratio: is-16by9
+    - link: TPs/Motivos_Lineales/featured.png
+      alt: The alt text for the image
+      description: |- 
+        [TP N°8. Motivos Lineales - Parte II](Motivos_Lineales/)
+      ratio: is-16by9
     # - link: TPs/HMM-ANN/featured.jpg
     #   alt: The alt text for the image
     #   description: |- 
