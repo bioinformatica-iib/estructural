@@ -342,6 +342,13 @@ Vaya a la web de [SLiMSearch](http://slim.icr.ac.uk/slimsearch/) e ingrese la ex
     * Evalúe el grado de conservación. ¿Está conservado?
     * ¿Le parece que es un buen candidato para evaluar?
 
+9. Vaya a *Functions*.
+    * ¿Qué funciones están enriquecidas en su lista de proteínas filtradas?
+
+    Según los conocimientos que posee sobre este motivo, elija las funciones correspondientes para filtrar los datos.
+
+    * ¿Cuántos *Hits* y cuántas proteínas obtiene ahora?
+
  
 ### Ejercicio 5. Utilice un conjunto de secuencias relacionadas para identificar motivos de novo 
  
