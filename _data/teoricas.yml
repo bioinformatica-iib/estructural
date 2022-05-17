@@ -25,6 +25,21 @@
       description: |- 
         [Teórica N°4. Interacciones proteína-proteína](teorica4/)
       ratio: is-16by9
+    - link: teoricas/teorica5/featured.png
+      alt: The alt text for the image
+      description: |- 
+        [Teórica N°5. Interacciones proteína-proteína](teorica5/)
+      ratio: is-16by9
+    - link: teoricas/teorica6/featured.png
+      alt: The alt text for the image
+      description: |- 
+        [Teórica N°6. Motivos Lineales: Identificación en secuencia](teorica6/)
+      ratio: is-16by9
+    - link: teoricas/teorica7/featured.png
+      alt: The alt text for the image
+      description: |- 
+        [Teórica N°7. Motivos Lineales: Validación experimental](teorica7/)
+      ratio: is-16by9
     # - link: teoricas/teorica4/featured.png
     #   alt: The alt text for the image
     #   description: |- 

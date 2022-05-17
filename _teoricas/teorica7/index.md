@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Teórica N°8
-subtitle: "Bioinformática Estructural: Desorden"
+title: Teórica N°7
+subtitle: "Motivos Lineales: Validación experimental"
 menubar_toc: false
 hero_height: is-small
-construccion: false
+construccion: true
 ---
 
 {% if page.construccion %}
