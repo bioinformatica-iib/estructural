@@ -349,6 +349,8 @@ Vaya a la web de [SLiMSearch](http://slim.icr.ac.uk/slimsearch/) e ingrese la ex
 
     * ¿Cuántos *Hits* y cuántas proteínas obtiene ahora?
 
+    * Encuentre en la lista de proteínas filtradas la proteína: **Chromosome transmission fidelity protein 18 homolog (CHTF18)** (Q8WVB6). ¿Le sigue pareciendo que es un buen candidato para evaluar?
+
  
 ### Ejercicio 5. Utilice un conjunto de secuencias relacionadas para identificar motivos de novo 
  
