@@ -244,7 +244,7 @@ MEME divide patrones de longitud variable en dos o más motivos separados.
     * *Select the site distribution:*
 
         Esta opción se relaciona con el número de veces que aparece un motivo en la secuencia.
-        * Seleccione: *One Occurrence Per Sequence (oops)* 
+        * Seleccione: *Zero or One Occurrence Per Sequence (zoops)* 
 
     * *Select the number of motifs:*
 
