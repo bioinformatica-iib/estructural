@@ -4,7 +4,7 @@ title: Teórica N°5
 subtitle: Proteínas desordenadas y predicción de desorden
 menubar_toc: false
 hero_height: is-small
-construccion: true
+construccion: false
 ---
 
 {% if page.construccion %}
