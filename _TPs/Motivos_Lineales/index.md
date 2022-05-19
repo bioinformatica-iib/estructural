@@ -28,8 +28,7 @@ details summary > * {
 {% else %}
 
 ## Materiales
-AGREGAR LINK ACÁ
-* [Descargar](https://drive.google.com/file/d/1CftYKxzQh1MX24u0RoTp0X751BW4rKQx/view?usp=sharing)
+* [Descargar](https://drive.google.com/file/d/1cICkOcmlgBJlSMeFpdn1ihbmoWWYVg06/view?usp=sharing)
 
 ## Recursos a utilizar
 * ELM: [http://elm.eu.org](http://elm.eu.org)
