@@ -532,6 +532,10 @@ El genoma ARN positivo se traduce como una poliproteína que luego es clivada en
 
     * ¿Qué puede decir de la predicción en la hélice N-terminal?
 
+## Recordings
+
+- Cierre [[MP4]](https://drive.google.com/file/d/1UiJ63uHfmIrcOE7K7mzEWRgX_c2CfeXv/view?usp=sharing)
+
 ## Otros Recursos
 ### How to interpret AlphaFold2 structures
 [https://www.youtube.com/watch?v=UqeQfRDA8Yk](https://www.youtube.com/watch?v=UqeQfRDA8Yk)

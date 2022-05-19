@@ -346,6 +346,9 @@ El objetivo de este ejercicio consiste en analizar la superficie de interacción
     *File* → *Save Session As…*
     *File* → *Close Session*
 
+## Recordings
+- Cierre [[MP4]](https://drive.google.com/file/d/1QgWc-uD7JdZ2DHDW6e5tnod6JaISA1Vq/view?usp=sharing)
+
 ## Otros recursos
 
 * https://www.ebi.ac.uk/training/online/courses/protein-interactions-and-their-importance/

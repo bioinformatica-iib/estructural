@@ -553,4 +553,9 @@ Una de las aplicaciones principales de la predicción de desorden es encontrar r
    * Ingrese la mistery protein en XtalPred ¿Como se clasifica la proteína según la capacidad de ser cristalizada?
    * Pruebe ingresando sólo el dominio de interés ¿Mejora?
 
+## Recording
+- Intro [[MP4]](https://drive.google.com/file/d/1SCXMGBJI9QRPEmQePW9OfH94bOQwc2Zv/view?usp=sharing)
+- Intermedio con explicación del Script [[MP4]](https://drive.google.com/file/d/1xhMCYVg4V3hUtgJsyTZ_Qj8uFaOcmpLW/view?usp=sharing)
+- Cierre [[MP4]](https://drive.google.com/file/d/1FqVo3Xb8KFivicBl4N3U-kJhhoFNC4cq/view?usp=sharing)
+
 {% endif %}

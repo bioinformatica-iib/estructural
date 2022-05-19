@@ -362,4 +362,9 @@ La longitud y variabilidad de los motivos lineales hace difícil distinguir patr
 
 3. Revise los resultados. En la pestaña *main* encontrará los resultados generales de la predicción de motivos, mientras que la pestaña *occ* detallará en qué proteínas ocurren. ¿Qué motivos se predicen? ¿Coinciden con lo esperado?
 
+## Recording
+- Intro [[MP4]](https://drive.google.com/file/d/1ZP8L1aE1Q3nTTfSurIvlLvQ_pZkhu6-X/view?usp=sharing)
+- Intermedio [[MP4]](https://drive.google.com/file/d/1fBCyn-muAAJrqJenEuIGfRdqdp-0OLlb/view?usp=sharing)
+- Cierre [[MP4]](https://drive.google.com/file/d/19C7UD50jNQf4lM81c1zskR-9IkXFj4kS/view?usp=sharing)
+
 {% endif %}
