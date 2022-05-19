@@ -795,6 +795,11 @@ El objetivo principal de los siguientes ejercicios consiste en introducir la uti
 
     **File** → **Close Session**
 
+## Recordings
+
+- Intro [[MP4]](https://drive.google.com/file/d/1lSRF4kvq89ynsW9HqRPQfxpEWE6ysaXv/view?usp=sharing)
+- Cierre [[MP4]](https://drive.google.com/file/d/1xo1crJN62jvDVkTsFzl1aMuWtt-xLFaX/view?usp=sharing)
+
 
 ## Otros recursos
 

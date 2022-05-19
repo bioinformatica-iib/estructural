@@ -517,6 +517,10 @@ GALLPGGAVQPTGMHWYSRFLYRLAEELLG
 6. ¿Tiene un péptido señal esta proteína?
 7. ¿Cómo podría saber a simple vista que esta proteína tiene actividad peptidasa?
 
+## Recording
+
+- Intro [[MP4]](https://drive.google.com/file/d/1acaQeH4rOgykSAYHHWFxPOiGlAjZRt51/view?usp=sharing)
+- Cierre [[MP4]](https://drive.google.com/file/d/1IzH0QhEYaKXTlArELncfTPlmrj-I6DLS/view?usp=sharing)
 
 ## Recursos adicionales
 ### UniProt: Exploring protein sequence and functional information
