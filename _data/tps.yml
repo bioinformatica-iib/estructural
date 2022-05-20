@@ -40,11 +40,11 @@
       description: |- 
         [TP N°8. Motivos Lineales - Parte II](Motivos_Lineales/)
       ratio: is-16by9
-    # - link: TPs/HMM-ANN/featured.jpg
-    #   alt: The alt text for the image
-    #   description: |- 
-    #     [TP N°7. HMM y Redes Neuronales](HMM-ANN/)
-    #   ratio: is-16by9
+    - link: TPs/integrador/featured.png
+      alt: The alt text for the image
+      description: |- 
+        [TP N°9. Ejercicios integradores](integrador/)
+      ratio: is-16by9
     # - link: TPs/IntroR/featured.jpg
     #   alt: The alt text for the image
     #   description: |- 

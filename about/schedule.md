@@ -72,7 +72,7 @@ hide_footer: True
 | Jueves, 19/05/2022	| 9 - 12hs	| Teórica   | [T7. Motivos Lineales: Validación experimental](/estructural/teoricas/teorica7) | L. Chemes/T.Gibson |
 |                       | 13 - 17hs	| Práctico  | [TP8. Motivos Lineales - Parte II](/estructural/TPs/Motivos_Lineales/) | L. Chemes/T. Gibson |
 | Viernes, 20/05/2022	| 9 - 12hs	| Teórica   | Consultas teóricas y del trabajo final | L. Chemes |
-|                       | 13 - 17hs	|           | TP9. Trabajo Práctico Integrador   |   |
+|                       | 13 - 17hs	|           | [TP9. Trabajo Práctico Integrador](/estructural/TPs/integrador/)   |   |
 | Viernes, 27/05/2022	| 13 - 17hs	|           | Evaluación Final    |   |
 
 
