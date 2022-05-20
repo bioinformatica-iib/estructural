@@ -139,7 +139,7 @@ La familia viral Adenoviridae (adenovirus) son virus ADNdc desnudos. Los adenovi
 ## Ejercicio Integrador 4. Usando JalView con la proteína CagA aislada de la cepa Helicobacter patogénica
 Las proteínas efectoras CagA son secretadas por la cepa patogénica de Helicobacter ingresando directamente al citoplasma de la célula huésped, en parte utilizando un motivo funcional llamado motivo EPIYA. Estas proteínas modulan el citoesqueleto de actina y el estado general de la célula.
 
-### PARTE I
+### Parte I
 1. Cargue el alineamiento de las proteínas CagA.(CagA_aligned.fasta).
 2. Busque el motivo EPIYA utilizando la expresión regular del motivo: `EP[IL]Y[TAG]`
     * ¿Las secuencias de CagA: tienen un motivo EPIYA o más de uno?
