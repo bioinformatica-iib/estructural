@@ -94,7 +94,7 @@ La proteína E7 del papilomavirus comparte similitudes funcionales con la prote�
 La interacción de la proteína E7 con Rb es responsable de la inducción de la síntesis de ADN y proliferación celular. La inmortalización y transformación de la célula infectada inducida por E7 es consecuencia de la interacción de E7 con Rb y numerosos blancos proteicos involucrados en crecimiento celular, transformación, transcripción, apoptosis y síntesis de ADN.
 
 ### Ejercicio 1. Modelado de un Monómero de E7
-1. Ingrese al ColabFold que implementa MMseq2 Aquí .
+1. Ingrese al ColabFold que implementa MMseq2 [Aquí](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb) .
 
     <ul class="block-list has-radius is-primary">
     <li class="is-highlighted is-info">
@@ -532,9 +532,12 @@ El genoma ARN positivo se traduce como una poliproteína que luego es clivada en
 
     * ¿Qué puede decir de la predicción en la hélice N-terminal?
 
+<!--
 ## Recordings
 
 - Cierre [[MP4]](https://drive.google.com/file/d/1UiJ63uHfmIrcOE7K7mzEWRgX_c2CfeXv/view?usp=sharing)
+
+-->
 
 ## Otros Recursos
 ### How to interpret AlphaFold2 structures
