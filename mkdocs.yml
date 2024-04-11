@@ -7,8 +7,8 @@ site_url: https://bioinformatica-iib.github.io/estructural/
 
 # repository
 # --- si el sitio está alojado en un repo, describirlo acá 
-repo_name: 'estructural'
-repo_url: https://github.com/bioinformatica-iib/estructural
+# repo_name: 'estructural'
+# repo_url: https://github.com/bioinformatica-iib/estructural
 
 # theme 
 # --- customizar apariencia editando palette 
