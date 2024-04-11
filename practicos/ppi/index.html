@@ -1,0 +1,973 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Sitio Web del Curso de Bioinformática Estructural">
+      
+      
+      
+        <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/ppi/">
+      
+      
+      
+      <link rel="icon" href="../../img/logo-unsam-negro.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>TP N°5 - Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Cabin";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="skyblue" data-md-color-accent="skyblue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#recursos-online" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" class="md-header__button md-logo" aria-label="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" data-md-component="logo">
+      
+  <img src="../../img/logo-unsam-negro.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TP N°5
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="skyblue" data-md-color-accent="skyblue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="skyblue" data-md-color-accent="skyblue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bioinformatica-iib/estructural" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    estructural
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Inicio
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../acerca/" class="md-tabs__link">
+      Acerca de
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../contenidos/" class="md-tabs__link">
+      Contenidos
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../cronograma/" class="md-tabs__link">
+      Cronograma
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../docentes/" class="md-tabs__link">
+      Docentes
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../teoricas/inicio/" class="md-tabs__link">
+        Teoricas
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../inicio/" class="md-tabs__link">
+        Practicos
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" class="md-nav__button md-logo" aria-label="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" data-md-component="logo">
+      
+  <img src="../../img/logo-unsam-negro.png" alt="logo">
+
+    </a>
+    Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bioinformatica-iib/estructural" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    estructural
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acerca/" class="md-nav__link">
+        Acerca de
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contenidos/" class="md-nav__link">
+        Contenidos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cronograma/" class="md-nav__link">
+        Cronograma
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docentes/" class="md-nav__link">
+        Docentes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Teoricas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Teoricas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teoricas/inicio/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Practicos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Practicos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inicio/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>TP N°5</h1>
+
+<html><head><style>
+details > summary:first-of-type {
+   display: list-item;
+}
+details summary { 
+  cursor: pointer;
+}
+
+details summary > * {
+  display: inline;
+}
+
+</style>
+
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head><body><p _="%" else="else">{% if page.construccion %}
+<strong>Pagina en construccion</strong></p>
+<h2 id="recursos-online">Recursos Online</h2>
+<ul>
+<li>Intact: <a href="https://www.ebi.ac.uk/intact/home">https://www.ebi.ac.uk/intact/home</a></li>
+<li>STRING: <a href="https://string-db.org/">https://string-db.org/</a></li>
+<li>KEGG. <a href="https://www.kegg.jp/kegg/pathway.html">https://www.kegg.jp/kegg/pathway.html</a></li>
+</ul>
+<h2 id="objetivos">Objetivos</h2>
+<ul>
+<li>Familiarizarse con el uso de la base de datos de interacciones proteína-proteína</li>
+<li>Entender los distintos tipos de evidencia experimental, o no experimental, que se puede tener para el estudio de interacciones proteína-proteína</li>
+<li>Entender los distintos tipos de interacciones proteína-proteína que se pueden detectar experimentalmente</li>
+</ul>
+<h2 id="introduccion">Introducción</h2>
+<p>Las interacciones proteína-proteína son esenciales en casi todos los procesos celulares, por lo tanto es uno de los campos más estudiados ya que su entendimiento es crucial para comprender la fisiología celular en estados normales o anormales (como enfermedades) y para el desarrollo de drogas. Además, el conocimiento de las distintas interacciones permitiría identificar posibles roles funcionales para proteínas aún no caracterizadas.</p>
+<p>Las interacciones proteína-proteína son contactos físicos que ocurren entre determinadas proteínas. Estos contactos son específicos, ocurren entre regiones de interacción de las proteínas, definen una función específica y pueden ser transiente o estables.</p>
+<p>Una interacción estable define un complejo proteico, mientras que una interacción transiente es una interacción breve que puede llevar a un cambio mayor y son la parte dinámica del interactoma celular.</p>
+<p>Las interacciones proteína-proteína forman redes de interacción. El conjunto de redes de interacción dentro de una célula define el interactoma celular en un contexto biológico determinado.</p>
+<p>Los datos relacionados con interacciones proteína-proteína aumentó muchísimo en la última década debido al desarrollo de técnicas high-throughput para detectar interacciones proteína-proteína (espectroscopía de masa, el ensayo de doble híbrido en levaduras, phage display) permitiendo determinar interactomas cada vez más completos y complejos. Sin embargo, esta información es aún incompleta y ruidosa ya que todos los métodos de detección proteína-proteína tienen sus limitaciones en relación al contexto fisiológico de la interacción.</p>
+<p>Existen numerosas bases de datos de interacciones proteína-proteína.</p>
+<p>Se pueden clasificar entre tipos principales:
+* <strong>Bases de datos primarias:</strong> Colectan información experimental exclusivamente. Por ejemplo: IntAct, MINT y MatrixDB.
+* <strong>Bases de datos secundarias o meta-bases de datos:</strong> Integran datos anotados (o curados) de bases de datos primarias en una base de datos. Por ejemplo, APID y PINA.
+* <strong>Bases de datos predictivas:</strong> Combinan los datos experimentales de las bases de datos primarias con predicciones computacionales. Por ejemplo, STRING y UniHI.</p>
+<h2 id="intact">IntAct</h2>
+<p>IntAct es una base de datos pública de interacciones moleculares. Es mantenida por un grupo de curadores y desarrolladores en el European Bioinformatics Institute (EMBL-EBI, Hinxton, UK) y es la base de datos más abarcativa de interacciones moleculares. Los datos de interacciones moleculares son curados a partir de la literatura. Si bien la mayoría de las interacciones almacenadas en IntAct son interacciones proteína-proteína, existen otras interacciones que involucran pequeños compuestos químicos o ácidos nucleicos. IntAct además es miembro del consorcio internacional de intercambio molecular (International Molecular Exchange Consortium, IMEx). El objetivo de este consorcio es unificar el esfuerzo de curación de los datos experimentales de interacciones moleculares.</p>
+<h2 id="intact-ejercicios">IntAct - Ejercicios</h2>
+<h3 id="ejercicio-1-interacciones-de-la-proteina-retinoblastoma-rb">Ejercicio 1. Interacciones de la Proteína Retinoblastoma (Rb)</h3>
+<ol>
+<li>
+<p>Busque en Intact la proteína retinoblastoma (Rb) humana usando su accession number (P06400).</p>
+<p></p><ul class="block-list has-radius is-primary">
+<li class="is-highlighted is-info has-icon">
+<span class="icon"><i class="fas fa-lightbulb"></i></span>
+En esta base de datos no se puede utilizar el nombre de la entrada UniProt.
+</li>
+</ul>
+<p></p><p style="text-align:center">
+<a class="glightbox" href="./img/Intact_fig1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/Intact_fig1.png" alt=""></a>
+</p>
+<br>
+<br>
+</li>
+<li>
+<p>El resultado de IntAct es visualizado de dos maneras:</p>
+<ul>
+<li>Mediante una <strong>red</strong> donde los nodos son proteínas o moléculas, que están conectados por edges que pueden representar distintas cosas como: número de experimentos anotados, nivel de confianza, entre otros.</li>
+<li>Mediante una <strong>tabla de interacciones</strong> y una <strong>tabla de interactores</strong>, en ambos casos con columnas que pueden ser modificadas según el interés del usuario.</li>
+</ul>
+<p>En la parte superior de la tabla se puede observar el número total de interacciones que existen para Rb y el número total de interactores que existen para Rb.</p>
+<ul>
+<li>¿Cuántas interacciones hay?</li>
+<li>¿Cuántos interactores hay?</li>
+</ul>
+</li>
+<li>
+<p>En la parte superior de la tabla de interacciones haga click en <em>Column Toggle</em> y tilde <em>Species A</em> y <em>Species B</em>. Esto hará que aparezcan las columnas que indican el organismo del cual provienen los interactores A y B.
+    Mostrando de a 25 entradas en la tabla de interacciones, observe en la página 1 y en la página 13 de los resultados:</p>
+<ul>
+<li>¿Aparece más de un organismo?</li>
+<li>¿Por qué cree que esto ocurre?</li>
+<li>¿Siempre el interactor A y el interactor B provienen de la misma especie? ¿Por qué?</li>
+</ul>
+</li>
+<li>
+<p>Si quisiéramos resultados para un único organismo, en la parte superior de la página de resultados se encuentran los Filtros.</p>
+<p>En el filtro: <em>Interactor Species</em> observe las distintas especies que hay. </p>
+<ul>
+<li>¿Hay muchos patógenos que interactúen con Rb?</li>
+</ul>
+<p>Seleccione interacciones que sean entre Rb y otra proteína Humana tildando la especie correspondiente: <em>Homo sapiens</em> y luego seleccionando que sea <strong>Intra</strong> especie con el botón <em>Filter out cross-species interactions</em>.</p>
+<p></p><p style="text-align:center">
+<a class="glightbox" href="./img/Intact_fig2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/Intact_fig2.png" alt=""></a>
+</p>
+<br>
+<br>
+</li>
+<li>
+<p>En el filtro: <em>Interactor Type</em> observe los distintos tipos de interactores que hay. Luego seleccione de manera que los interactores sean sólo <strong>proteínas</strong>.</p>
+</li>
+<li>
+<p>Investigue el filtro <em>Interaction Detection Method</em>. </p>
+<ul>
+<li>¿Qué tipos de técnicas experimentales hay?</li>
+<li>¿Todas las técnicas proveen evidencia de interacción directa entre proteínas?</li>
+<li>¿Puede dar algunos ejemplos de cuáles son evidencia directa y cuáles indirecta?</li>
+</ul>
+</li>
+<li>
+<p>Investigue el filtro <em>Interaction Type</em>.</p>
+<ul>
+<li>¿Qué tipos de interacciones considera IntAct?</li>
+<li>¿Cuáles son interacciones directas y cuáles son indirectas?</li>
+</ul>
+</li>
+<li>
+<p>Seleccione distintos tipos de interacciones en <em>Interaction Type</em> y observe los distintos tipos de técnicas experimentales en el filtro <em>Interaction Detection Method</em>.</p>
+<ul>
+<li>¿Coincide alguna con los ejemplos de evidencia directa e indirecta que usted seleccionó?</li>
+</ul>
+</li>
+<li>
+<p>IntAct utiliza un método de puntuación para puntuar las interacciones observadas con un índice denominado el <strong>MI score</strong>.</p>
+<p>El MI score es un método de puntuación modificable y heurístico que tiene en consideración tres factores:
+* El método de detección de la interacción: Observada, predicha o inferida?
+* El tipo de interacción: Direct interaction, physical association, co-localization etc
+* El número de publicaciones que reportan una interacción específica.</p>
+<p>En definitiva, el MI score provee un sistema de puntuación que representa el grado de confianza de una interacción en particular evaluando el grado de anotación/curación de la interacción en una base de datos. A mayor evidencia experimental que apoya la interacción, mayor es la puntuación.</p>
+<p>La evidencia derivada de algoritmos predictivos o métodos de text-mining contribuye menos al score final. La combinación de métodos experimentales de baja puntuación (por ejemplo, colocalización) con evidencia no experimental da una mayor puntuación que cada uno por separado.</p>
+<ul>
+<li>A la derecha de la red de interacción está la leyenda. ¿Qué representan los edges sólidos?</li>
+<li>A la izquierda de la red de interacción, destildá la opción <em>Expand</em>. ¿Qué representa ahora el color de los edges? ¿y el ancho?</li>
+</ul>
+<p>Utiliza el filtro MI Score y encuentra los interactores con el mayor score.
+* ¿Cuántos interactores hay?
+* ¿Cuántas interacciones hay?
+* ¿Qué tipo de evidencia experimental poseen?
+* ¿Cuánta evidencia posee cada interactor?</p>
+</li>
+</ol>
+<h2 id="string">STRING</h2>
+<p>La base de datos STRING contiene datos de interacciones proteína-proteína conocidos y predichos. Los datos derivan de experimentos high-throughput, datos de co-expresión, literatura y contexto genómico. Abarca más de 5 millones de proteínas de más de 1100 organismos. </p>
+<h2 id="string-ejercicios">STRING - Ejercicios</h2>
+<h3 id="ejercicio-1-interacciones-de-la-proteina-retinoblastoma-rb_1">Ejercicio 1. Interacciones de la Proteína Retinoblastoma (Rb)</h3>
+<ol>
+<li>
+<p>En STRING se puede realizar una búsqueda por el o los nombres de la proteína, o el identificador, múltiples proteínas, múltiples secuencias, organismos o familias de proteínas.</p>
+<p>Haga click en protein name e ingrese “retinoblastoma”</p>
+<ul>
+<li>Observe el resultado. ¿Por qué hay más de un resultado? ¿Cuál es el que deseamos?</li>
+</ul>
+<p>En el campo <em>protein name</em> también puede ingresar el accession number: P06400.</p>
+<p>El número de interactores que devuelve la red puede cambiarse en la pestaña <em>Settings</em>, por defecto está elegido 10. Por lo cual devuelve los 10 interactores con mejor puntuación en STRING. La red también puede expandirse utilizando los botones <em>more/less</em> para obtener una segunda capa de interacción con proteínas que conectan con la primera capa aunque no necesariamente con Rb.</p>
+<ul>
+<li>Presione <em>More</em>, ¿observa algún interactor que no interactúe con Rb?</li>
+</ul>
+</li>
+<li>
+<p>Presione en <em>Less</em>, y haga click en E2F4 y observe la información disponible. Haga click en el edge que conecta E2F4 y RB1:</p>
+<ul>
+<li>¿De dónde proviene la mayor evidencia de interacción entre estas dos proteínas?</li>
+</ul>
+</li>
+<li>
+<p>Vaya a <em>Legend</em> y responda:</p>
+<ul>
+<li>¿Todas las interacciones entre las proteínas de esta red tienen evidencia experimental asociada?</li>
+</ul>
+</li>
+<li>
+<p>¿Se encuentran los interactores con mayor score detectados en IntAct?</p>
+</li>
+<li>
+<p>Vaya a <em>Analysis</em>. Vaya a la sección <em>KEGG Pathways</em> y asegúrese que esté ordenada por <em>strength</em>. Luego, haga click en <strong>Rb1</strong> y luego seleccione <em>Highlight enriched terms in the analysis table</em>. Observe que en la tabla se resaltan los términos enriquecidos en cada base de datos relacionados con Rb.</p>
+<ul>
+<li>¿A qué corresponden las primeras 10 líneas de KEGG?</li>
+</ul>
+</li>
+<li>
+<p>Elija los dos interactores detectados en Intact y haga lo mismo.</p>
+<ul>
+<li>¿Cuáles son los KEGG pathways comunes a las tres proteínas?</li>
+</ul>
+</li>
+<li>
+<p>En la sección KEGG pathways haga click en el identificador que corresponde a Cell Cycle.</p>
+<ul>
+<li>¿Puede encontrar a Rb?</li>
+<li>¿Encuentra a los interactores con mayor evidencia?</li>
+<li>¿Puede nombrar al menos una enzima que fosforile a Rb y otra que la desfosforile?</li>
+</ul>
+</li>
+</ol>
+<h2 id="ejercicios">Ejercicios</h2>
+<h3 id="ejercicio-1-interacciones-de-la-proteina-spike-de-sars-cov2">Ejercicio 1. Interacciones de la Proteína Spike de SARS-COV2</h3>
+<ol>
+<li>Busque en IntAct las interacciónes que existen de la proteína Spike de SARS-COV2 (P0DTC2) con humanos (recuerde usar los filtros para ver interacciones sólo con humanos)
+    A la derecha de la red tilde la opción de agrupar por Species. ¿Cuántas proteínas Spike observa en la red? Coloque el puntero sobre el nodo y encuentro los identificadores<ul>
+<li>¿Son los mismos?
+Haga clic en la que el identificador es: P0DTC2-PRO_0000449647, verá que la tabla en la parte inferior sólo muestra las interacciones relacionadas con esta proteína. Siga el link a Uniprot:</li>
+<li>¿A qué corresponde?
+Haga click en la que el identificador es: P59594. En la tabla haga click en el ícono que se encuentra en la primera columna. Se abrirá una nueva ventana con detalles de la interacción, que están detallados en la parte inferior.</li>
+<li>¿Por qué cree que se obtuvo esta proteína?</li>
+</ul>
+</li>
+<li>¿Qué tipo de evidencia hay para las interacciones identificadas?</li>
+<li>Destilde la opción <em>Expand</em>.<ul>
+<li>¿Cuales son las proteínas con más evidencia?</li>
+<li>¿Poseen evidencia estructural?</li>
+<li>¿Qué técnicas se utilizaron?</li>
+</ul>
+</li>
+</ol>
+<h3 id="ejercicio-2-analisis-de-interaccion-rbd-ace2-reconocimiento-de-superficie-de-contacto">Ejercicio 2. Análisis de interacción RBD-ACE2: Reconocimiento de superficie de Contacto</h3>
+<p>El objetivo de este ejercicio consiste en analizar la superficie de interacción entre RBD y ACE2. Se focalizará en la identificación de los residuos involucrados y en la determinación de la naturaleza de las interacciones. En particular se intentará establecer si existe algún contacto estrecho que estabilice la región RBM.</p>
+<ol>
+<li>
+<p>Abrir Chimera y abrir el archivo “6m0j.pdb” utilizando el atajo que se encuentra a la derecha de la ventana.</p>
+</li>
+<li>
+<p>Esconder todos los átomos y colorear la visualización “ribbon” de acuerdo a su estructura secundaria.</p>
+<p><em>Actions</em> → <em>Atoms/Bonds</em> → <em>hide</em></p>
+<p><em>Tools</em> → <em>Depiction</em> → <em>Color Secondary Structure</em> y <code>OK</code></p>
+</li>
+<li>
+<p>Recorrer la región de RBD que pudiera estar involucrada en la interacción con ACE2. La región RBM comprende los residuos Asn 437 y Tyr 508 de RBD. Marque esta región en el panel de secuencia.</p>
+<ul>
+<li>¿Qué tipos de estructura secundaria se encuentran en esta región de Spike?</li>
+<li>¿Cuál es la más abundante?</li>
+<li>¿Y en ACE2 cual es la estructura secundaria probablemente involucrada en la interacción? </li>
+</ul>
+</li>
+<li>
+<p>Se seleccionarán las regiones de ACE2 y RBD involucradas en la interacción. Para tal fin se utilizará la línea de comandos y a las selecciones se les asignarán los nombres “enACE2” y “enRBD” respectivamente.</p>
+<div class="highlight"><pre><span></span><code>select :19-46.a,75-84.a,324-331.a,352-359.a,388-393.a
+namesel enACE2
+select :403-423.e,437-508.e; namesel enRBD
+</code></pre></div>
+<p>Para acceder con mayor facilidad, se fijará la ventana de selecciones con nombre. De esta manera el menú queda en una ventana accesoria permitiendo acceder fácilmente a las selecciones previamente nombradas.</p>
+<p><em>Select</em> → <em>Named Selections</em> (buscar la línea de puntos por arriba de “enACE2”)</p>
+<ul>
+<li>¿Qué ocurre al presionar el nombre de las selecciones en esta nueva ventana?</li>
+</ul>
+</li>
+<li>
+<p>Colorear ambas regiones de modo que se puedan diferenciar de forma sencilla. </p>
+</li>
+<li>
+<p>Utilizar la ventana de selecciones previamente fijada para seleccionar la región “enACE2” y luego asignarle un color distintivo (evitando los colores “rojo”, “azul” y “amarillo”). </p>
+<p><em>Actions</em> → <em>Color</em></p>
+<p>Recuerde que también puede hacerlo por línea de comandos:</p>
+<div class="highlight"><pre><span></span><code>color green,a,r enACE2
+</code></pre></div>
+<p>De esta forma se habrán coloreado tanto la representación <strong>ribbon</strong> (por eso la <code>r</code>), como los átomos (por eso la <code>a</code>) de cada residuo en la selección. Esto último dificulta distinguir los diferentes elementos químicos. Por lo tanto, adicionalmente se utilizará la coloración <strong>by heteroatom</strong>.</p>
+<p><em>Actions</em> → <em>Color</em> → <em>by heteroatom</em></p>
+<p>Recuerde que también puede hacerlo por línea de comandos:</p>
+<div class="highlight"><pre><span></span><code>color byhetero enACE2
+</code></pre></div>
+<p>Repetir la operación seleccionando en la ventana de selecciones “enRBD”.</p>
+<p><em>Actions</em> → <em>Color</em> (elegir un color)
+<em>Actions</em> → <em>Color</em> → <em>by heteroatom</em> (para poder distinguir mejor los elementos químicos)</p>
+<p>Por línea de comandos:</p>
+<div class="highlight"><pre><span></span><code>color pink,a,r enRBD
+color byhetero enRBD
+</code></pre></div>
+</li>
+<li>
+<p>Como primer abordaje para la identificación de contactos entre ambas cadenas, se seleccionarán con la línea de comandos aquellos residuos de ACE2 que tengan al menos un átomo a una distancia menor de 4 Å de un residuo de RBD. Estos residuos se denominarán “resACE2”. </p>
+<div class="highlight"><pre><span></span><code>select :.e zr &lt; 4 &amp; :.a; namesel resACE2
+</code></pre></div>
+<ul>
+<li>¿Qué aparece ahora en la ventana de selecciones nombradas? ¿Utilizando la “lupa verde”, cuántos residuos involucra esta selección?   </li>
+</ul>
+</li>
+<li>
+<p>De manera similar se procede con los residuos de RBD, y a esta selección se la llamará “resRBD”.</p>
+<div class="highlight"><pre><span></span><code>select resACE2 zr &lt; 4 &amp; :.e; namesel resRBD
+</code></pre></div>
+<ul>
+<li>¿Cuántos residuos abarca esta selección? En las ventanas de secuencias explorar qué residuos se resaltan al tocar las selecciones “enACE2”, “resACE2”, “enRBD” y “resRBD”.</li>
+</ul>
+</li>
+<li>
+<p>Visualizar las cadenas laterales de los residuos en “resACE2” y “resRBD” utilizando la ventana de selecciones (asegurarse que se encuentren seleccionados). </p>
+<p><em>Actions</em> → <em>Atoms/Bonds</em> → <em>show</em></p>
+<p>Por línea de comandos:</p>
+<div class="highlight"><pre><span></span><code>display resACE2
+display resRBD
+</code></pre></div>
+<p>Experimentar diferentes representaciones para los átomos de las cadenas laterales seleccionadas.</p>
+<p><em>Actions</em> → <em>Atoms/Bonds</em> → <em>stick/ball stick/sphere/wire</em></p>
+<div class="highlight"><pre><span></span><code>represent stick
+represent bs
+represent sphere
+represent wire
+</code></pre></div>
+</li>
+<li>
+<p>A continuación, se hará foco en analizar algunas interacciones establecidas entre los residuos de RBD y los correspondientes de ACE2 utilizando la línea de comandos. Para las cuatro interacciones descriptas abajo, analice y responda:</p>
+<ul>
+<li>¿De qué tipo de interacción se trata? <strong>I-</strong> interacción hidrofóbica, <strong>II-</strong> puente de hidrógeno, <strong>III-</strong> puente salino. </li>
+<li>¿Los contactos se dan entre residuos de cadena principal o lateral? </li>
+<li>Determine para cada caso la distancia de contacto.</li>
+</ul>
+<p>Para responder este punto, haga cada una de las cuatro selecciones indicadas a continuación, observe las interacciones y realice las mediciones como hizo previamente. Pista: si sospecha que hay un puente de hidrógeno puede buscarlo utilizando los comandos usados previamente de la siguiente manera:</p>
+<p>Luego de seleccionar el par de residuos correspondiente:</p>
+<p><em>Tools</em> → <em>Structure Analysis</em> → <em>FindHBond</em></p>
+<p>En la ventana puede tildarse la opción: <em>Only find H-bonds</em> y seleccionar <em>with both ends selected</em>.</p>
+<p>Luego presione <code>OK</code>.</p>
+<p><strong>Gln 493 (RBD); Glu 35(ACE2)</strong></p>
+<div class="highlight"><pre><span></span><code>~select; ~display; select :493.e, 35.a; namesel Q493-E35; display Q493-E35; focus Q493-E35; represent stick
+</code></pre></div>
+<p><strong>Lys 417 (RBD); Asp 30 (ACE2)</strong>
+</p><div class="highlight"><pre><span></span><code>~select; ~display; select :417.e, 30.a; namesel K417-D30; display K417-D30; focus K417-D30; represent stick
+</code></pre></div>
+<p><strong>Tyr 449 (RBD); Gln 42 (ACE2)</strong>
+</p><div class="highlight"><pre><span></span><code>~select; ~display; select :449.e, 42.a; namesel Y449-Q42; display Y449-Q42; focus Y449-Q42; represent stick
+</code></pre></div>
+<p><strong>Phe 486 (RBD); Leu 79, Met 82, Tyr 83 (ACE2)</strong>
+</p><div class="highlight"><pre><span></span><code>~select; ~display; select :486.e, 79.a, 82-83.a; namesel F486-L79-M82-Y83; display F486-L79-M82-Y83; focus F486-L79-M82-Y83; represent stick
+</code></pre></div>
+<p>Para Volver a la visualización completa de “resACE2” y “resRBD”. </p>
+<div class="highlight"><pre><span></span><code>~select; ~display; display resACE2 | resRBD; focus resACE2 | resRBD; represent stick
+</code></pre></div>
+</li>
+<li>
+<p>Salvar y cerrar sesión.</p>
+<p><em>File</em> → <em>Save Session As…</em>
+<em>File</em> → <em>Close Session</em></p>
+</li>
+</ol>
+<h2 id="recordings">Recordings</h2>
+<ul>
+<li>Cierre <a href="https://drive.google.com/file/d/1QgWc-uD7JdZ2DHDW6e5tnod6JaISA1Vq/view?usp=sharing">[MP4]</a></li>
+</ul>
+<h2 id="otros-recursos">Otros recursos</h2>
+<ul>
+<li>
+<p>https://www.ebi.ac.uk/training/online/courses/protein-interactions-and-their-importance/</p>
+</li>
+<li>
+<p>https://www.ebi.ac.uk/training/online/courses/network-analysis-of-protein-interaction-data-an-introduction/</p>
+</li>
+<li>
+<p>https://www.ebi.ac.uk/training/online/courses/intact-quick-tour/submitting-data-to-intact/</p>
+</li>
+<li>
+<p>https://biochem.slu.edu/bchm628/handouts/2013/PPI_Tutorial_2011.pdf</p>
+</li>
+<li>
+<p>https://www.ebi.ac.uk/intact/documentation/user-guide</p>
+</li>
+</ul>
+<p>{% endif %}</p><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body></html>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Area Bioinformatica UNSAM
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

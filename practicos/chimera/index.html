@@ -1,0 +1,1290 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Sitio Web del Curso de Bioinformática Estructural">
+      
+      
+      
+        <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/chimera/">
+      
+      
+      
+      <link rel="icon" href="../../img/logo-unsam-negro.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>TP N°2 - Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Cabin";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="skyblue" data-md-color-accent="skyblue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#recursos-online" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" class="md-header__button md-logo" aria-label="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" data-md-component="logo">
+      
+  <img src="../../img/logo-unsam-negro.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TP N°2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="skyblue" data-md-color-accent="skyblue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="skyblue" data-md-color-accent="skyblue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bioinformatica-iib/estructural" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    estructural
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Inicio
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../acerca/" class="md-tabs__link">
+      Acerca de
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../contenidos/" class="md-tabs__link">
+      Contenidos
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../cronograma/" class="md-tabs__link">
+      Cronograma
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../docentes/" class="md-tabs__link">
+      Docentes
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../teoricas/inicio/" class="md-tabs__link">
+        Teoricas
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../inicio/" class="md-tabs__link">
+        Practicos
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" class="md-nav__button md-logo" aria-label="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" data-md-component="logo">
+      
+  <img src="../../img/logo-unsam-negro.png" alt="logo">
+
+    </a>
+    Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bioinformatica-iib/estructural" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    estructural
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acerca/" class="md-nav__link">
+        Acerca de
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contenidos/" class="md-nav__link">
+        Contenidos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cronograma/" class="md-nav__link">
+        Cronograma
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docentes/" class="md-nav__link">
+        Docentes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Teoricas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Teoricas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teoricas/inicio/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Practicos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Practicos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inicio/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>TP N°2</h1>
+
+<html><head><style>
+details > summary:first-of-type {
+   display: list-item;
+}
+details summary { 
+  cursor: pointer;
+}
+
+details summary > * {
+  display: inline;
+}
+
+/* ol { list-style-type: upper-alpha; } */
+</style>
+
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head><body><p>{% if page.construccion %}</p>
+<p><strong>Pagina en construccion</strong></p>
+<p>{% else %}</p>
+<h2 id="recursos-online">Recursos Online</h2>
+<ul>
+<li>PDB: <a href="https://www.rcsb.com">https://www.rcsb.com</a></li>
+</ul>
+<h2 id="objetivos">Objetivos</h2>
+<ul>
+<li>Familiarizarse con el uso de la base de datos de estructuras de proteínas</li>
+<li>Aprender a visualizar estructuras 3D de proteínas o complejos proteicos, incluyendo diferentes niveles de análisis</li>
+<li>Identificar diferentes tipos de unión molecular tales como puentes de hidrógeno o interacciones mediadas por carga y entender el rol de los mismos.</li>
+<li>Identificar interacciones hidrofóbicas y entender el rol de las mismas.</li>
+<li>Aprender a superponer estructuras relacionadas y analizar los resultados.</li>
+</ul>
+<h2 id="bases-de-datos-estructurales">Bases de Datos Estructurales.</h2>
+<p>¿Dónde se almacenan todas las estructuras? ¿Cómo accedemos a ellas? La base de datos de proteínas (Protein Data Bank, PDB) almacena actualmente más de 150000 estructuras. Puedes acceder a ella aquí: <a href="http://www.rcsb.org/">http://www.rcsb.org/</a>. Existe también una versión europea de esta base de datos (European Protein Data Bank, PDBe). Puedes acceder a ella desde aquí: <a href="https://www.ebi.ac.uk/pdbe/">https://www.ebi.ac.uk/pdbe/</a>.</p>
+<p>Las estructuras poseen un identificador de 4 caracteres alfanuméricos. Por ejemplo: 1GUX es el identificador, o PDB ID, de la proteína retinoblastoma unida a un péptido de la proteína E7 de Papillomavirus.</p>
+<p>La búsqueda de estructuras puede realizarse utilizando palabras claves, por ejemplo, la palabra clave retinoblastoma devuelve un total de 316 estructuras, o por otras características como nombre de alguno de los autores que participó en el estudio de esa estructura, por ejemplo, “Rubin, S.M.” devuelve un total de 35 estructuras. Pueden explorar la base de datos RCSB PDB para familiarizarse con ella.</p>
+<p>El repositorio PDB es mantenido por tres sitios independientes:
+* <a href="http://www.rcsb.org">RCSB</a> PDB en estados unidos.
+* <a href="http://www.ebi.ac.uk/pdbe">PDBe</a> en Europa.
+* <a href="https://pdbj.org/">PDBj</a> en Japón.</p>
+<p>Si bien los datos principales y recursos son compartidos, cada sitio provee un conjunto exclusivo de servicios para que los usuarios puedan inspeccionar los datos.</p>
+<h3 id="el-archivo-pdb-como-estan-codificadas-las-estructuras">El archivo PDB. ¿Cómo están codificadas las estructuras?</h3>
+<p>Las estructuras tridimensionales de las proteínas pueden generarse por diferentes métodos (cristalografía de rayos X o X-Ray, resonancia magnética nuclear o RMN, criomicroscopía electrónica o CryoEM) y están codificadas en archivos pdb. Un archivo pdb está compuesto por múltiples líneas de registros, cada uno identificado por una etiqueta determinada incluidos dentro de distintas secciones. En la Figura 1 se muestra un fragmento de la sección de coordenadas que describe la estructura de la proteína dando las coordenadas “x”, “y” y “z” (azul claro) de cada uno de los átomos identificados.</p>
+<p style="text-align:center">
+<a class="glightbox" href="./img/archivo_pdb_fig1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/archivo_pdb_fig1.png" alt="Archivo PDB"></a>
+</p>
+
+<figcaption align="center">
+
+**Fig 1.** Archivo PDB.
+
+</figcaption>
+<p><br>
+<br></p>
+<p>En cada línea, además, se identifica si es un átomo (rojo) perteneciente a un aminoácido o nucleótido, o heteroátomo (azul oscuro), la numeración (verde oscuro), el nombre del átomo (naranja), el nombre del residuo en el que está incluido el átomo (violeta), la cadena a la que pertenece (negro), el número del residuo al que pertenece (verde claro). Este archivo puede incluir más columnas para cada átomo con datos relacionados con la movilidad del átomo (el factor de temperatura o B-factor), el sı́mbolo que representa al átomo y la carga del mismo (señaladas con “...” en la figura). El encabezado o header del archivo PDB puede tener muchísima información no relacionada directamente con la conformación tridimensional de la proteína, sino con cómo se hizo el experimento, las publicaciones relacionadas y otros. La descripción del resto del contenido de las secciones del archivo pdb puede obtenerse en la sección documentación de <a href="http://www.wwpdb.org/">http://www.wwpdb.org/</a>. Recientemente, se desarrolló un nuevo formato de archivo, MMCIF, que puede codificar estructuras de complejos macromoleculares mucho más grandes. Sin embargo, no todos los programas utilizados para visualizar estructuras soportan este formato.</p>
+<h3 id="que-significa-la-resolucion-de-una-estructura">¿Qué significa la resolución de una estructura?</h3>
+<p>Otra característica de las estructuras es la resolución con la cuál se obtuvieron. Hay una muy buena explicación en <a href="https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/resolution">pdb-101</a> que traigo aquí.</p>
+<p>La resolución es una medida de la calidad de los datos que se recolectaron del cristal. Si el cristal es perfecto, es decir que todas las proteínas están estructuralmente alineadas de manera idéntica, entonces el patrón de difracción generado mostrará detalles muy finos. Por otro lado, si las proteínas en el cristal no alinean estructuralmente debido a movimientos o flexibilidad local, el patrón de difracción no brindará mucha información. Estructuras de alta resolución, con valores de 1 Å o similar, están altamente ordenadas y es fácil ver cada átomo en un mapa de densidad electrónica. Estructuras de baja resolución, con valores de 3 Å o mayores, muestran los contornos de la cadena proteica y la estructura atómica debe inferirse. En general, la localización de los átomos en estructuras que tienen un valor de resolución pequeño es de mayor confianza.</p>
+<p style="text-align:center">
+<a class="glightbox" href="./img/resolucion_fig2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/resolucion_fig2.png" alt="Archivo PDB"></a>
+</p>
+
+<figcaption align="center">
+
+**Fig 2.** Resolución en una estructura.
+
+</figcaption>
+<p><br>
+<br></p>
+<p>En la Figura 2 se muestra el mapa de densidad electrónica de distintas estructuras (las regiones de alta densidad electrónica se muestran en azul y amarillo) dentro de un rango de resoluciones. Las tres primeras muestran la tirosina 103 de la mioglobina (con palitos verdes se muestra el modelo atómico), los pdbs correspondientes son 1a6m (resolución de 1.0 Å), 106m (resolución de 2.0 Å) y 108m (resolución de 2.7 Å). El último ejemplo muestra la tirosina 130 de la cadena B de la hemoglobina del pdb 1s0h (resolución de 3.0 Å).</p>
+<p>En la estructura de resolución de 1.0 Å se pueden ver la alta densidad electrónica en cada uno de los carbonos del anillo de la tirosina. A medida que aumenta ese valor, la densidad electrónica se va reduciendo (disminuye el contorno amarillo).
+Si bien los archivos PDB pueden inspeccionarse con un editor de texto cualquiera (para revisar el encabezado por ejemplo), normalmente es mejor utilizar un programa de visualización particular que mostrará la estructura en un sistema virtual de coordenadas tridimensionales. De esta manera, el usuario podrá hacer zoom, rotar y trasladar la estructura. Cambiar la representación, mostrar las uniones y calcular las distancias, encontrar características estructurales de interés, etc. Estas herramientas pueden accederse online y están disponibles en los sitios de PDB, pero existen programas más poderosos y versátiles que se pueden descargar (como UCSF Chimera o Pymol).</p>
+<p>Los archivos PDB normalmente tienen un modelo para cada molécula. Sin embargo, una entrada PDB puede tener uno o múltiples modelos de la misma molécula. Por ejemplo, debido a características de la técnica, las estructuras resueltas por NMR usualmente tienen 20 modelos alternativos en el mismo archivo.  </p>
+<p>Muchas entradas PDB poseen missing residues. Estas son porciones que no fueron observadas durante la determinación experimental de la estructura posiblemente debido a un aumento en la flexibilidad de esa región. La amplitud de estas regiones puede variar desde pequeños loops dentro de dominios globulares hasta largos segmentos desordenados. </p>
+<p>La secuencia de la proteína en un PDB no necesariamente se corresponde al 100% con la de la entrada UniProt, debido a decisiones del experimentalista o dificultades técnicas. Siempre hay que revisar.</p>
+<h2 id="pdb-ejercicios">PDB - Ejercicios</h2>
+<h3 id="ejercicio-1-familiarizandonos-con-el-pdb">Ejercicio 1. Familiarizándonos con el PDB.</h3>
+<p>La proteína oxy-mioglobina de organismo Physeter catodon posee una estructura cuyo PDB ID es 1A6M.
+1. Busque la estructura en el PDB. Si quiere, puede descargar el archivo PDB utilizando los botones en la parte superior derecha. 
+2. Inspecciona la sección <em>Structure Summary</em>. 
+    * ¿Cuándo se publicó la estructura en la PDB?
+    * ¿Es una estructura de buena calidad?
+3. En la sección <em>Macromolecules</em>, encontrará la mención a la proteína Mioglobina.
+    * ¿Cuántas cadenas tiene?
+    * ¿Puede identificar su UniProt accession?
+4. En la sección <em>Protein Feature View</em> hay un mapeo sitio-específico entre UniProt y el PDB, con algunos adicionales de otras bases de datos. Si hace click en <strong>expand</strong>, podrá acceder a toda la información.
+    * ¿Qué tipo de estructura secundaria adopta esta proteína?
+    * ¿Puede encontrar los sitios de unión del hierro?
+    * ¿Qué aminoácidos están involucrados?
+5. Vuelva a la pestaña <em>Structure Summary</em>
+    * ¿Esta estructura tiene unida una molécula de oxígeno?
+6. En la sección <em>Macromolecules</em>, en la subsección <em>Entity groups</em> encuentre cuantas cadenas de otras entradas en el PDB son 100% idénticas a esta proteína.
+7. Inspeccione la pestaña <em>Experiment</em> y responda:
+    * ¿A qué pH fueron realizados los experimentos de cristalización?</p>
+<h2 id="visualizacion-de-estructuras-proteicas-con-chimera">Visualización de estructuras proteicas con Chimera</h2>
+<h3 id="introduccion">Introducción</h3>
+<h4 id="chimera-software-de-visualizacion-de-estructuras">Chimera, software de visualización de estructuras.</h4>
+<p>Para poder visualizar estructuras macromoleculares tales como proteínas globulares y ácidos nucleicos, se usará el software UCSF Chimera. Existen otros softwares similares pero Chimera tiene la ventaja de ser mantenido actualmente por sus desarrolladores.
+Chimera es un programa disponible de manera gratuita, y está disponible para descargar e instalar en tu propia computadora en <a href="https://www.cgl.ucsf.edu/chimera/download.html">https://www.cgl.ucsf.edu/chimera/download.html</a>.</p>
+<p>Existen un alto número de guías y tutoriales disponibles online que pueden encontrarse en: <a href="https://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/">https://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/</a>.</p>
+<ul class="block-list has-radius is-primary">
+<li class="is-highlighted is-info has-icon">
+<span class="icon"><i class="fas fa-question"></i></span>
+
+    <span style="font-weight:bold;">Antes de empezar, pueden responder:</span><br>
+    <ul>
+    <li>¿Por qué es importante visualizar estructuras proteicas?</li>
+    <li>¿Qué información podríamos obtener de ellas?</li>
+    <li>¿Estas estructuras, son un objeto real o un modelo?</li>
+    </ul>
+
+</li>
+</ul>
+
+<h2 id="chimera-ejercicios">Chimera - Ejercicios</h2>
+<h3 id="ejercicio-1-familiarizandonos-con-chimera">Ejercicio 1. Familiarizándonos con Chimera</h3>
+<p>Chimera es un programa con muchas potencialidades y herramientas de análisis. En la siguiente guía, introduciremos el uso de las funciones más comunes de este programa, en relación al análisis estructura-función de proteínas. </p>
+<h4 id="manos-a-la-obra">Manos a la obra!</h4>
+<ol>
+<li>
+<p>Localice chimera en su computadora y ábralo. En la parte superior se encuentra el <strong>Menú</strong>. Vaya a <em>Favorites</em> y elija <em>Command Line</em>. Aparecerá en la parte inferior la <strong>Línea de comandos</strong>.</p>
+</li>
+<li>
+<p>Vaya nuevamente a <em>Favorites</em> y elija <em>Reply Log</em>, se abrirá una ventana. En el <strong>Reply Log</strong> aparecerán información, resultados numéricos y errores que nos devuelve Chimera.</p>
+</li>
+<li>
+<p>Vaya nuevamente a <em>Favorites</em> y elija <em>Model Panel</em>, se abrirá una ventana. En <strong>Model Panel</strong> van a ir apareciendo las estructuras que estén abiertas en nuestra sesión.</p>
+</li>
+</ol>
+<p>Para cargar una estructura en Chimera escribe en la línea de comandos:</p>
+<div class="highlight"><pre><span></span><code>open 2aze
+</code></pre></div>
+<p>Si ya hay una estructura ya descargada en la computadora se puede abrir usando:</p>
+<div class="highlight"><pre><span></span><code>open path/to/file/fileName.extension
+</code></pre></div>
+<ul class="block-list has-radius is-primary">
+<li class="is-highlighted is-info has-icon">
+<span class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></span>
+
+    <span style="font-weight:bold;">IMPORTANTE.</span><br>
+    Si en el nombre del archivo o directorio existen espacios debes incluir el nombre completo entre comillas:<br>
+    "path/to/file/file Name.extension"   
+</li>
+</ul>
+
+<p>El <strong>log</strong> y el panel de modelos se actualizan y aparecerá información asociada a la estructura cargada.</p>
+<ol>
+<li>Mira el log y responde:<ul>
+<li>¿Qué proteínas están incluidas en este pdb?</li>
+<li>¿Qué aparece en el panel de modelos?</li>
+</ul>
+</li>
+</ol>
+<h4 id="antes-de-seguir-familiarizate-con-el-uso-del-mouse">Antes de seguir… Familiarizate con el uso del mouse:</h4>
+<ul>
+<li>El botón izquierdo del mouse permite rotar la estructura.</li>
+<li>El botón derecho del mouse permite trasladar la estructura.</li>
+<li>La rueda del mouse permite ampliar o reducir la imagen (hacer zoom).</li>
+</ul>
+<h3 id="ejercicio-2-conociendo-la-nomenclatura-en-chimera">Ejercicio 2. Conociendo la nomenclatura en Chimera</h3>
+<p>Esta es una de las partes <strong>más importantes</strong> para tener bien en claro ya que nos permitirá hacer todas las selecciones para analizar la estructura.</p>
+<ol>
+<li>
+<p><strong>Definiendo modelos.</strong>
+    Cada estructura que abrimos en Chimera se carga como un <strong>modelo</strong>. Los modelos se nombran con el símbolo <code>#</code> seguido de un número. </p>
+<p>Prueba seleccionar el modelo entero escribiendo en la línea de comandos:</p>
+<div class="highlight"><pre><span></span><code>select #0
+</code></pre></div>
+<p>Para borrar la selección escribe:</p>
+<div class="highlight"><pre><span></span><code>~select
+</code></pre></div>
+<p></p><ul class="block-list has-radius is-primary">
+<li class="is-highlighted is-info has-icon">
+<span class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></span>
+<pre><code>&lt;span style="font-weight:bold;"&gt;IMPORTANTE.&lt;/span&gt;&lt;br&gt;
+La mayoría de los comandos permiten utilizar el símbolo de negación “~” por delante para ocultar lo que se hizo.
+</code></pre>
+<p></p></li>
+</ul>
+</li>
+<li>
+<p><strong>Definiendo cadenas:</strong> Para indicar una <strong>cadena</strong> del modelo se utiliza el símbolo <code>.</code> seguido de la letra correspondiente.</p>
+<p>Prueba seleccionar la cadena A del modelo escribiendo en la línea de comandos:</p>
+<div class="highlight"><pre><span></span><code>select #0:.A
+</code></pre></div>
+<p>Otra forma de hacerlo, es:</p>
+<div class="highlight"><pre><span></span><code>select :.A
+</code></pre></div>
+<p>Si hubiera más de un modelo, ese comando seleccionaría TODAS las cadenas nombradas A.</p>
+<p>Si se desea, se puede seleccionar más de una cadena separando por <strong>comas</strong> cada una de ellas o un rango de cadenas separando los identificadores por <strong>guiones</strong>.</p>
+<div class="highlight"><pre><span></span><code>select #0:.A,.B
+select #0:.A-C
+</code></pre></div>
+</li>
+<li>
+<p><strong>Definiendo residuos:</strong> Para indicar <strong>residuos</strong> se utiliza el símbolo <code>:</code> seguido del número de residuo correspondiente. Prueba seleccionar el residuo 300</p>
+<div class="highlight"><pre><span></span><code>select :300
+</code></pre></div>
+<ul>
+<li>¿Cuántos residuos se seleccionaron? </li>
+</ul>
+<p>Para seleccionar uno de los dos residuos utiliza el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code>select :300.A
+</code></pre></div>
+<p>En base a lo que aprendimos hasta ahora:
+* ¿Cómo sería el comando para seleccionar un rango de residuos?
+* ¿y para seleccionar residuos separados?.</p>
+<p>También es posible indicar los residuos por el código de tres letras de los aminoácidos (Si no lo recordás podés encontrarlo <a href="https://es.wikipedia.org/wiki/Nomenclatura_de_amino%C3%A1cidos">acá</a>.</p>
+<p>Prueba seleccionar por ejemplo todos los ácidos glutámicos.</p>
+<div class="highlight"><pre><span></span><code>select #0:glu.A
+</code></pre></div>
+</li>
+<li>
+<p><strong>Definiendo átomos:</strong> Para indicar <strong>átomos</strong> se utiliza el símbolo <code>@</code> seguido del nombre del átomo correspondiente dentro de la proteína. Prueba seleccionar los CA (carbonos alfa).</p>
+<div class="highlight"><pre><span></span><code>select #0:.A@CA
+</code></pre></div>
+<ul>
+<li>¿Puedes entender lo que se seleccionó?</li>
+</ul>
+<p>Para ver más claro lo que estamos seleccionando, mostraremos las cadenas laterales de los residuos. Ingresa el siguiente comando y luego selecciona los carbonos beta y colorealos de verde.</p>
+<div class="highlight"><pre><span></span><code>display #0:.A
+select #0:.A@CB
+color green,a sel
+</code></pre></div>
+<p>Hay dos cosas que cambiamos:
+* <code>sel</code> : permite aplicar el comando <code>color</code> sobre lo que está seleccionado.
+* <code>a</code> : específica que sólo se coloreen los átomos. Prueba qué ocurre si no incluís a.</p>
+</li>
+<li>
+<p><strong>Definiendo palabras claves:</strong> Existen numerosas palabras clave que permiten seleccionar grupos de cosas predefinidas, además de las que presentamos a continuación puedes encontrar más información.</p>
+<div class="table">
+<p><strong>En relación a:</strong>      | <strong>Palabra Clave</strong>         | <strong>Ejemplo:</strong>              |
+Estructura Secundaria   | <code>helix</code><br><code>strand</code><br><code>coil</code>   | <code>select #0:.C &amp; helix</code> <br> <code>select #0:.C &amp; strand</code> <br> <code>select #0:.C &amp; coil</code> |
+Extremos                | <code>start</code><br><code>end</code>              | <code>select #0:start-855.C</code> <br> <code>select #0:855-end.C</code> |
+Partes de la proteína   | backbone: <code>@n,ca,c,o &amp; protein</code> <br> sidechain: <code>without CA/C1'</code> | <code>select #0:.A@n,ca,c,o &amp; protein</code> <br> <code>sel #0:TYR.A &amp; without CA/C1'</code>|
+Otros                   | <code>solvent</code><br> <code>ions</code> <br> <code>ligand</code> <br> | <code>select solvent</code> <br> <code>select ions</code> <br> <code>select ligand</code> |</p>
+</div>
+<p>Si necesitas ayuda con algún comando, puedes escribir en la línea de comando: <code>help comando</code>. Por ejemplo: <code>help select</code> te abrirá la ayuda para el comando <code>select</code>.</p>
+</li>
+</ol>
+<h3 id="ejercicio-3-analisis-de-la-estructura-del-receptor-binding-domain-rbd-de-spike-del-coronavirus-sars-cov-2-unido-a-ace2">Ejercicio 3. Análisis de la estructura del Receptor Binding Domain (RBD) de Spike del Coronavirus SARS-COV-2 unido a ACE2</h3>
+<p>La proteína Spike (S) de coronavirus (UNIPROT ID: P0DTC2, SPIKE_SARS2) corresponde a una proteína de membrana tipo I, de entre 180-200 kDa que presenta 1273 residuos y numerosas glicosilaciones (Figura 3).</p>
+<p>Cada monómero se encuentra formado por un extremo N-terminal que constituye la mayoría de la proteína y se encuentra orientado hacia el espacio extracelular, un dominio transmembrana (TM) y un segmento C-terminal intracelular corto (IC). Spike se organiza formando trímeros en la superficie del virus, otorgando la apariencia de corona distintiva para la especie.</p>
+<p>En el extremo N-terminal, a su vez, se pueden distinguir un péptido señal (residuos 1-13) y dos regiones denominadas S1 (residuos 14-685) y S2 (residuos 686-1273). Estas son las encargadas de mediar la unión y fusión de la membrana viral a la célula hospedera. </p>
+<p>Adicionalmente, S1 está compuesta por dos secciones; una región N-terminal (NTD) (residuos 14–305) y <strong>un dominio llamado RBD (Receptor Binding Domain, residuos 333–527), que es indispensable para que el SARS-CoV-2 pueda unirse a su receptor, la enzima convertidora de angiotensina 2 (ACE2). Dentro del dominio RBD se encuentra el motivo RBM (Receptor-Binding Motif, aminoácidos 438-506) que interacciona de forma directa con ACE2.</strong></p>
+<p>Por otra parte, S2 se encuentra muy conservada entre todos los coronavirus. Contiene dos regiones, HR1 y HR2, en las que se repiten grupos de siete aminoácidos (heptad repeats) y el péptido de fusión (FP). De esta forma, durante el proceso de infección, S1 reconoce y se une a la enzima ACE2 presente en la membrana de la célula hospedadora. Esta unión trae aparejada la escisión proteolítica de los dominios S1 y S2, conduciendo a la activación del péptido de fusión que conecta la envoltura viral con la membrana plasmática. La reconfiguración de la región existente entre los dominios HR1 y HR2 da lugar a una estructura compuesta por 6 hélices (6-HB) que une ambas membranas, catalizando su fusión y permitiendo la entrada del virus a la célula.</p>
+<p style="text-align:center">
+<a class="glightbox" href="./img/spike_fig3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/spike_fig3.png" alt="Spike"></a>
+</p>
+
+<figcaption align="left">
+
+**Fig 3.** Representación topológica de la proteína Spike (monómero). Se encuentra compuesta por diferentes dominios: NTD, dominio N-terminal; SD1, subdominio 1; SD2, subdominio 2; FP, péptido de fusión; HR1, repetición en héptada 1; HR2, repetición en héptada 2; TM, región transmembrana; IC, dominio intracelular. El dominio RBD (Receptor Binding Domain), indispensable para que el SARS-CoV-2 pueda unirse a su receptor en la célula hospedera se muestra en cian, mientras que el motivo RBM (Receptor-Binding Motif) está indicado en rojo.
+
+</figcaption>
+<p><br>
+<br></p>
+<p>El objetivo principal de los siguientes ejercicios consiste en introducir la utilización de Chimera en estudios estructurales de complejos proteicos. Utilizando la estructura de RBD-ACE2 como modelo, se emplearán variadas metodologías elementales de visualización, que permitan analizar los diferentes niveles de organización de la estructura de las proteínas. Se focalizará en el reconocimiento de cadenas polipeptídicas y elementos de su entorno. A su vez, se visualizarán distintos tipos de estructura secundaria en relación con la secuencia primaria y se estudiarán interacciones determinantes para el establecimiento de estructura terciaria.</p>
+<h4 id="1-cargando-la-estructura-en-chimera">1. Cargando la estructura en Chimera.</h4>
+<ul>
+<li>Descargue del Protein Data bank la entrada: 6m0j y guárdela en un lugar de preferencia. </li>
+<li>Inicie Chimera y abra el archivo “6m0j.pdb”. Este corresponde a una estructura resuelta a 2.45 Å por difracción de rayos X </li>
+</ul>
+<p><strong>File</strong> → <strong>Open…</strong> (Navegue hasta donde guardó la entrada 6m0j)</p>
+<ul>
+<li>
+<p>Alternativamente, puede hacerlo con la línea de comandos en Chimera:</p>
+<div class="highlight"><pre><span></span><code>open 6m0j
+</code></pre></div>
+<p></p><ul class="block-list has-radius is-primary">
+<li class="is-highlighted is-info has-icon">
+<span class="icon"><i class="fa fa-exclamation fa-2x"></i></span>
+<pre><code>&lt;p&gt;
+&lt;span style="font-weight:bold;"&gt;Antes de seguir:&lt;/span&gt;&lt;br&gt;¡asegúrese que sabe cómo rotar, trasladar y hacer zoom sobre la estructura! ¡Recuerde comandos del mouse, los vamos a necesitar!
+&lt;/p&gt;
+</code></pre>
+<p></p></li>
+</ul>
+</li>
+</ul>
+<h4 id="2-reconociendo-la-estructura">2. Reconociendo la estructura</h4>
+<ul>
+<li>
+<p>¿Cuántas cadenas se pueden reconocer?</p>
+</li>
+<li>
+<p>Pinte de diferentes colores cada cadena. Para esto, primero debe seleccionar cada cadena por separado:</p>
+<p><strong>Select</strong> → <strong>Chain</strong> </p>
+</li>
+<li>
+<p>¿Cuántas aparecen disponibles? ¿Qué pasa en la estructura al elegir alguna?</p>
+</li>
+<li>
+<p>Una vez seleccionada la cadena, asignarle un color. </p>
+<p><strong>Actions</strong> → <strong>Color</strong> </p>
+</li>
+<li>
+<p>Repetir para la otra cadena.</p>
+</li>
+<li>
+<p>Para hacerlo con la línea de comandos sería:</p>
+<div class="highlight"><pre><span></span><code>color red #0:.A
+color blue #0:.E
+</code></pre></div>
+<p>o bien</p>
+<div class="highlight"><pre><span></span><code>rainbow chain #0
+</code></pre></div>
+</li>
+<li>
+<p>¿Se distinguen mejor?</p>
+</li>
+<li>
+<p>¿Cuál podría corresponder a ACE2 y cuál a RBD? (pista, ACE2 es una metaloproteasa con zinc).</p>
+<p><strong>Select</strong> → <strong>Residue</strong> (buscar entre la lista bajo <em>all nonstandard</em>)</p>
+<p>o por líneas de comandos:</p>
+<div class="highlight"><pre><span></span><code>select @zn
+</code></pre></div>
+</li>
+</ul>
+<h4 id="3-visualizar-la-secuencia-primaria-de-las-cadenas">3. Visualizar la secuencia primaria de las cadenas.</h4>
+<ul>
+<li>
+<p>Para visualizar la secuencia de la proteína:</p>
+<p><strong>Favorites</strong> → <strong>Sequence</strong> y luego <strong>Show</strong> en la nueva ventana</p>
+<p>o por líneas de comandos:</p>
+<div class="highlight"><pre><span></span><code>sequence #0
+</code></pre></div>
+</li>
+<li>
+<p>¿Entre qué residuos se extienden las proteínas?</p>
+</li>
+<li>Identificar los extremos amino y carboxilo terminales en la estructura marcando los residuos en el panel <strong>Sequence</strong> con el mouse.</li>
+<li>¿Qué pasa con los residuos recuadrados en rojo? ¿Cuáles serían entonces los límites de la construcción utilizada para cristalizar en cada caso, y cuál es la región resuelta en la estructura?</li>
+</ul>
+<h4 id="4-explorar-diferentes-visualizaciones-preestablecidas">4. Explorar diferentes visualizaciones preestablecidas.</h4>
+<ul>
+<li>
+<p>Utilizaremos diferentes formas de visualización:</p>
+<p><strong>Presets</strong> → <strong>Interactive 1 (ribbons)</strong></p>
+<p><strong>Presets</strong> → <strong>Interactive 2 (all atoms)</strong></p>
+<p><strong>Presets</strong> → <strong>Interactive 3 (hydrophobicity surface)</strong> (solo recomendable con recursos gráficos elevados)</p>
+</li>
+<li>
+<p>¿Para qué podría utilizarse cada visualización?</p>
+</li>
+</ul>
+<h4 id="5-analizar-estructuras-secundarias">5. Analizar estructuras secundarias.</h4>
+<ul>
+<li>
+<p>A continuación observaremos la estructura secundaria.</p>
+<p><strong>Presets</strong> → <strong>Interactive 1 (ribbons)</strong></p>
+<p><strong>Tools</strong> → <strong>Depiction</strong> → <strong>Color Secondary Structure</strong> y <code>OK</code> en la nueva ventana</p>
+<p>o alternativamente por linea de comando:</p>
+<div class="highlight"><pre><span></span><code>color red,r helix; color purple,r strand; color gray,r coil
+</code></pre></div>
+</li>
+<li>
+<p>¿Qué tipo de estructuras secundarias predominan en ACE2? ¿Y en RBD?</p>
+</li>
+<li>En las ventanas con las secuencias. ¿A que corresponden las secciones indicadas en amarillo? ¿Y aquellas en verde?</li>
+<li>Seleccionarlas con el puntero. ¿Se logran distinguir distintos tipos de láminas-β? ¿Cuáles?    </li>
+</ul>
+<h4 id="6-analisis-del-entorno">6. Análisis del entorno.</h4>
+<ul>
+<li>
+<p>Las proteínas no son las únicas moléculas incluídas en la estructura</p>
+<p><strong>Select</strong> → <strong>Residue</strong> → <strong>HOH</strong> </p>
+<p>O bien por línea de comando:</p>
+<div class="highlight"><pre><span></span><code>select :HOH
+</code></pre></div>
+<p><strong>Actions</strong> → <strong>Atoms/Bonds</strong> → <strong>sphere</strong> (preparamos el estilo de visualización)</p>
+<p><strong>Actions</strong> → <strong>Atoms/Bonds</strong> → <strong>show</strong> (visualizamos)</p>
+<p>o bien por línea de comando</p>
+<div class="highlight"><pre><span></span><code>represent sphere sel
+display sel
+</code></pre></div>
+</li>
+<li>
+<p>¿A qué corresponden estas moléculas? ¿Por qué están en la estructura?</p>
+</li>
+<li>
+<p>Para eliminarlas del modelo se utilizará la línea de comandos.</p>
+<div class="highlight"><pre><span></span><code>delete :HOH
+</code></pre></div>
+</li>
+</ul>
+<h4 id="7-elementos-que-estabilizan-la-estructura-secundariaterciaria-puentes-disulfuro">7. Elementos que estabilizan la estructura secundaria/terciaria. Puentes disulfuro.</h4>
+<ul>
+<li>
+<p>¿Qué residuos forman puentes disulfuro? Seleccionarlos.</p>
+<p><strong>Select</strong> → <strong>Residue</strong> (buscar entre la lista bajo <em>standard amino acid</em>)</p>
+</li>
+<li>
+<p>O bien por línea de comando:</p>
+<div class="highlight"><pre><span></span><code>sel #0:cys
+</code></pre></div>
+</li>
+<li>
+<p>De acuerdo a las selecciones en las ventanas de secuencias. ¿Cuántos residuos tiene cada cadena?</p>
+<p>Para visualizarlos:</p>
+<p><strong>Actions</strong> → <strong>Atoms/Bonds</strong> → <strong>ball &amp; stick</strong> (preparamos el estilo de visualización)</p>
+<p><strong>Actions</strong> → <strong>Atoms/Bonds</strong> → <strong>show</strong> (visualizamos)</p>
+<p>O bien por la línea de comando:</p>
+<div class="highlight"><pre><span></span><code>represent bs sel
+display sel
+</code></pre></div>
+</li>
+<li>
+<p>¿Cuántos puentes disulfuro se encuentran en cada cadena?</p>
+</li>
+<li>¿Todas las cisteínas forman puentes disulfuro?</li>
+</ul>
+<h4 id="8-longitud-del-puente-disulfuro">8. Longitud del puente disulfuro</h4>
+<ul>
+<li>
+<p>Elegir un puente disulfuro en la estructura y seleccionar uno de los átomos de azufre con el puntero. Para tal fin mantener presionada la tecla <code>control</code>.</p>
+</li>
+<li>
+<p>Luego presionando las teclas <code>control</code>+<code>shift</code> seleccionar con el puntero el segundo átomo de azufre. El objetivo es que solo estén seleccionados ambos S. Esto se lo puede verificar en la <strong>lupa verde</strong> de la parte inferior derecha.</p>
+<p><strong>Tools</strong> → <strong>Structure Analysis</strong> → <strong>Distances y Create</strong></p>
+</li>
+<li>
+<p>¿Cuánto mide?</p>
+</li>
+<li>
+<p>Para eliminar la selección (deseleccionar):</p>
+<p><strong>Select</strong> → <strong>Clear selection</strong></p>
+<p>Para hacerlo por línea de comandos para los residuos 379 y 432 por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>distance #0:379.E@SG #0:432.E@SG
+</code></pre></div>
+<p>Para ocultarla:</p>
+<div class="highlight"><pre><span></span><code>~distance
+</code></pre></div>
+</li>
+</ul>
+<h4 id="9-modificaciones-postraduccionales">9. Modificaciones postraduccionales.</h4>
+<ul>
+<li>
+<p>Hacer foco en el residuo 343 de la cadena E mediante la línea de comandos:</p>
+<div class="highlight"><pre><span></span><code>focus :343.e
+</code></pre></div>
+</li>
+<li>
+<p>Alejar y ajustar para visualizar correctamente.</p>
+<ul>
+<li>¿Qué tiene unido el residuo?</li>
+<li>¿Qué sucede con la visualización al mover la estructura?</li>
+<li>Con qué código se identifica a la molécula unida (mantener unos instantes el puntero sobre algún átomo de la molécula).</li>
+<li>¿Qué sugiere el código respecto a su identidad?     </li>
+</ul>
+</li>
+<li>
+<p>Seleccionar el residuo utilizando el puntero (manteniendo presionada la tecla <code>control</code>).</p>
+</li>
+<li>Identificar el residuo seleccionado en la ventana de la secuencia de la cadena E.</li>
+<li>
+<p>¿De qué residuo se trata? ¿Se ajusta a lo esperado?</p>
+</li>
+<li>
+<p>Para volver a la visualización estándar. En la línea de comandos: </p>
+<div class="highlight"><pre><span></span><code>focus
+</code></pre></div>
+</li>
+<li>
+<p>¿Existen otras moléculas similares? </p>
+<p><strong>Select</strong> → <strong>Residue</strong> (buscar entre la lista bajo <strong>all nonstandard</strong> el código de la molécula)</p>
+<ul>
+<li>¿Cuántas son? (utilizar la <strong>lupa verde</strong> de la parte inferior derecha).</li>
+<li>¿Qué indica la presencia de estas moléculas sobre el sistema empleado para expresar estas proteínas?  </li>
+</ul>
+</li>
+</ul>
+<h4 id="10-puentes-de-hidrogeno">10. Puentes de hidrógeno.</h4>
+<ul>
+<li>
+<p>En primer lugar, deseleccionar cualquier posible elemento seleccionado previamente. </p>
+<p><strong>Select</strong> → <strong>Clear Selection</strong> (importante para que las acciones posteriores tengan efecto global)</p>
+<p>o bien en la linea de comandos:</p>
+<div class="highlight"><pre><span></span><code>~sel
+</code></pre></div>
+</li>
+<li>
+<p>Esconder la visualización <strong>ribbon</strong></p>
+<p><strong>Actions</strong> → <strong>Ribbon</strong> → <strong>hide</strong></p>
+<p>o bien en la linea de comandos:</p>
+<div class="highlight"><pre><span></span><code>~ribbon
+</code></pre></div>
+</li>
+<li>
+<p>Experimentar con diferentes estilos de la cadena <strong>backbone</strong>.</p>
+<p><strong>Actions</strong> → <strong>Atoms/Bonds</strong> → <strong>backbone only</strong> → <strong>chain trace/minimal/full</strong></p>
+</li>
+<li>
+<p>Al terminar mantener el estilo <strong>full</strong>, colorear los átomos de acuerdo a su elemento y volver a la representación <strong>ribbon</strong>. De ser necesario volver a colorear por estructura secundaria.  </p>
+<p><strong>Actions</strong> → <strong>Color</strong> → <strong>by element</strong></p>
+<p><strong>Actions</strong> → <strong>Ribbon</strong> → <strong>show</strong></p>
+<p><strong>Tools</strong> → <strong>Depiction</strong> → <strong>Color Secondary Structure</strong> y <code>OK</code> en la nueva ventana</p>
+<p>o alternativamente por linea de comando:</p>
+<div class="highlight"><pre><span></span><code>color red,r helix; color purple,r strand; color gray,r coil
+</code></pre></div>
+</li>
+</ul>
+<h4 id="11-buscar-puentes-de-hidrogeno">11. Buscar puentes de hidrógeno.</h4>
+<ul>
+<li>
+<p>Para encontrar puentes de hidrógeno:</p>
+<p><strong>Tools</strong> → <strong>Structure Analysis</strong> → <strong>FindHBond</strong> y <code>OK</code> en la nueva ventana</p>
+<ul>
+<li>¿Qué se observa? ¿En qué estructuras?</li>
+</ul>
+</li>
+<li>
+<p>Elegir la α-hélice en la ventana de secuencias de la Cadena A (ACE2) que va del residuo 56 al residuo 82 utilizando el mouse. </p>
+<p>alternativamente para seleccionarla en la línea de comandos, tipee:</p>
+<div class="highlight"><pre><span></span><code>select :56-82.a; namesel unaAlfa 
+</code></pre></div>
+</li>
+<li>
+<p>Hacer foco sobre la selección. </p>
+<p><strong>Actions</strong> → <strong>Focus</strong></p>
+<p>o en la línea de comandos, tipee:</p>
+<div class="highlight"><pre><span></span><code>focus unaAlfa 
+</code></pre></div>
+</li>
+<li>
+<p>Esconder la visualización <strong>ribbon</strong> (pero esta vez solo de la sección seleccionada).</p>
+<p><strong>Actions</strong> → <strong>Ribbon</strong> → <strong>hide</strong></p>
+<p>Esto también puede hacerse por línea de comandos:</p>
+<div class="highlight"><pre><span></span><code>focus unaAlfa; ~ribbon unaAlfa
+</code></pre></div>
+<p>Si no aparecen los átomos representados como sticks ingresar en la línea de comandos:</p>
+<div class="highlight"><pre><span></span><code>display unaAlfa
+</code></pre></div>
+<ul>
+<li>¿Entre qué átomos se observan los puentes de hidrógeno?</li>
+<li>¿Cuál actúa como dador y cuál como aceptor?</li>
+<li>¿Cómo es la relación entre la numeración de residuos que forman el puente de hidrógeno? </li>
+</ul>
+</li>
+<li>
+<p>Medir la distancia entre los átomos dador y aceptor de manera similar a la empleada para los puentes disulfuro.</p>
+<ul>
+<li>¿Cuál es su longitud?</li>
+</ul>
+</li>
+<li>
+<p>Hasta ahora utilizamos comandos muy simples en Chimera. El comando a utilizar para buscar puentes de hidrógeno hbonds es el siguiente:</p>
+<div class="highlight"><pre><span></span><code>sel; hbonds selRestrict any reveal false showDist false color yellow lineWidth 2 lineType dashed interSubmodel false interModel true intraMol true intraModel true relax true log true
+</code></pre></div>
+<p>Como pueden ver tiene muchas opciones! A continuación veremos algunas de ellas y sus posibles valores marcando en negrita el valor utilizado o por defecto:</p>
+<p><code>saltOnly</code>: true | <strong>false</strong></p>
+<p>Permite limitar los resultados a puentes salinos (true), es decir puentes de hidrógeno entre grupos funcionales cargados o no limitar (false)</p>
+<p><code>selRestrict</code>: <strong>any</strong> | cross | both | atom-spec2</p>
+<p>Permite limitar los resultados a:</p>
+<ul>
+<li><code>any</code>.  Puentes de hidrógeno que tengan al menos un átomo en la selección (en este caso, #0)</li>
+<li><code>cross</code>. Puentes de hidrógeno que tenga exactamente un átomo en la selección (en este caso, #0)</li>
+<li><code>both</code>. Puentes de hidrógeno con ambos átomos en la selección (en este caso, #0)</li>
+<li><code>atom-spec2</code>. Puentes de hidrógeno entre la selección  (en este caso, #0) y una segunda selección.</li>
+</ul>
+<p><code>reveal</code>: true | <strong>false</strong></p>
+<p>Permite mostrar las cadenas laterales de los residuos entre los cuáles hay un puente de hidrógeno.</p>
+<p><code>showDist</code>: true | <strong>false</strong></p>
+<p>Imprime una etiqueta con la longitud del puente de hidrógeno.</p>
+<p>Las siguientes opciones permiten restringir la búsque de puentes de hidrógeno:</p>
+<p><code>interSubmodel</code> true | <strong>false</strong></p>
+<p>entre submodelos del mismo modelo (en este caso estamos trabajando con un modelo que no tiene submodelos)</p>
+<p><code>interModel</code> <strong>true</strong> | false</p>
+<p>entre modelos (en este caso tenemos un único modelo)</p>
+<p><code>intraModel</code> <strong>true</strong> | false</p>
+<p>dentro del modelo</p>
+<p><code>intraMol</code> <strong>true</strong> | false</p>
+<p>dentro de una misma molécula (o sea, dentro de una misma cadena)</p>
+<p><code>intraRes</code> <strong>true</strong> | false</p>
+<p>dentro de un mismo residuo</p>
+<p><code>relax</code> <strong>true</strong> | false</p>
+<p>Permite relajar los criterios para la selección de puentes de hidrógeno</p>
+<p><code>color yellow lineWidth 2 lineType dashed</code></p>
+<p>Estas son opciones de formato de como se muestran los puentes de hidrógeno.</p>
+<p><code>log</code> <strong>true</strong> | false</p>
+<p>Imprime en el <strong>reply log</strong> los puentes de hidrógeno encontrados y sus longitudes.</p>
+</li>
+<li>
+<p>Corra el comando y observe en el reply log la longitud de los puentes de hidrógeno. ¿Entre qué valores oscilan?</p>
+</li>
+<li>
+<p>Volver a la visualización original utilizando el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code>~select; focus; ribbon
+</code></pre></div>
+</li>
+<li>
+<p>Seleccionar una sección de una lámina-β utilizando la siguiente instrucción en la línea de comandos.</p>
+<div class="highlight"><pre><span></span><code>select :394-400.e,510-516.e; namesel unaBeta 
+</code></pre></div>
+</li>
+<li>
+<p>Ponerla en primer plano y desactivar la visualización <strong>ribbon</strong>.</p>
+<p><strong>Actions</strong> → <strong>Focus</strong></p>
+<p><strong>Actions</strong> → <strong>Ribbon</strong> → <strong>hide</strong></p>
+<p>o por línea de comandos:</p>
+<div class="highlight"><pre><span></span><code>focus unaBeta; ~ribbon unaBeta; display unaBeta
+</code></pre></div>
+<ul>
+<li>¿En este caso qué se observa?</li>
+<li>¿Cómo es la relación entre la numeración de los residuos?</li>
+<li>Medir la distancia entre un par de átomos dador y aceptor. </li>
+</ul>
+</li>
+</ul>
+<h4 id="12-grafico-de-ramachandran">12. Gráfico de Ramachandran.</h4>
+<ul>
+<li>
+<p>Acceder a la ventana de modelos.</p>
+<p><strong>Favorites</strong> → <strong>Model Panel</strong> </p>
+<p>Asegurarse que la línea correspondiente al modelo <code>6m0j.pdb</code> se encuentre seleccionada (resaltada) y que haya tildes bajo las columnas A y S.</p>
+<p>A continuación, entre las opciones listadas a la derecha buscar <strong>Ramachandran plot…</strong> (es posible que sea necesario extender el tamaño de la ventana Model Panel para que aparezca).</p>
+<p>Acomodar en la pantalla la ventana de la estructura y del Gráfico de Ramachandran de tal modo que se puedan visualizar simultáneamente.</p>
+</li>
+<li>
+<p>Seleccionar las diferentes cadenas.</p>
+<p><strong>Select</strong> → <strong>Chain</strong> </p>
+<p>¿Qué sucede con los puntos en el Gráfico de Ramachandran cuando se selecciona la cadena A o la cadena E?</p>
+</li>
+<li>
+<p>Seleccionar la α-hélice y lámina-β de los puntos anteriores y observe la distribución de los puntos en el Ramachandran para cada caso.</p>
+<div class="highlight"><pre><span></span><code>sel unaAlfa
+sel unaBeta 
+</code></pre></div>
+<ul>
+<li>¿Cómo es la distribución de puntos en cada caso? ¿Se ajusta a lo esperado? </li>
+</ul>
+<p>Es posible que algunos puntos seleccionados no logren distinguirse en el gráfico ya que se encuentran debajo de otros puntos. En ese caso maximizar la ventana del Gráfico de Ramachandran.</p>
+</li>
+<li>
+<p>Con el puntero seleccionar algún punto del Gráfico de Ramachandran. Para facilitar su identificación en la estructura asignarle un color distintivo y hacer foco sobre la selección. </p>
+<p><strong>Actions</strong> → <strong>Color</strong> </p>
+<p><strong>Actions</strong> → <strong>Focus</strong></p>
+<p>¿A qué residuo corresponde?</p>
+</li>
+<li>
+<p>Para volver a la visualización completa de la estructura utilizar el siguiente comando.</p>
+<div class="highlight"><pre><span></span><code>focus
+</code></pre></div>
+</li>
+</ul>
+<h4 id="13-fin">13. Fin!</h4>
+<ul>
+<li>
+<p>Guarde y cierre la sesión</p>
+<p><strong>File</strong> → <strong>Save Session As…</strong></p>
+<p><strong>File</strong> → <strong>Close Session</strong></p>
+</li>
+</ul>
+<h2 id="recordings">Recordings</h2>
+<ul>
+<li>Intro <a href="https://drive.google.com/file/d/1lSRF4kvq89ynsW9HqRPQfxpEWE6ysaXv/view?usp=sharing">[MP4]</a></li>
+<li>Cierre <a href="https://drive.google.com/file/d/1xo1crJN62jvDVkTsFzl1aMuWtt-xLFaX/view?usp=sharing">[MP4]</a></li>
+</ul>
+<h2 id="otros-recursos">Otros recursos</h2>
+<h3 id="pdbe-quick-tour">PDBe: Quick tour</h3>
+<p><a href="https://www.ebi.ac.uk/training/online/course/pdbe-quick-tour">https://www.ebi.ac.uk/training/online/course/pdbe-quick-tour</a></p>
+<h3 id="pdbe-exploring-a-protein-data-bank-pdb-entry">PDBe: Exploring a Protein Data Bank (PDB) entry</h3>
+<p><a href="https://www.ebi.ac.uk/training/online/course/pdbe-exploring-protein-data-bank-pdb-entry">https://www.ebi.ac.uk/training/online/course/pdbe-exploring-protein-data-bank-pdb-entry</a></p>
+<h3 id="pdbe-searching-the-protein-data-bank">PDBe: Searching the Protein Data Bank</h3>
+<p><a href="https://www.ebi.ac.uk/training/online/course/pdbe-searching-protein-data-bank">https://www.ebi.ac.uk/training/online/course/pdbe-searching-protein-data-bank</a></p>
+<h3 id="pdbe-searching-for-biological-macromolecular-structures">PDBe: Searching for biological macromolecular structures</h3>
+<p><a href="https://www.ebi.ac.uk/training/online/course/pdbe-searching-biological-macromolecular-structure">https://www.ebi.ac.uk/training/online/course/pdbe-searching-biological-macromolecular-structure</a></p>
+<p>{% endif %}</p><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body></html>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Area Bioinformatica UNSAM
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,850 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Sitio Web del Curso de Bioinformática Estructural">
+      
+      
+      
+        <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/Modelado_Por_Homologia/">
+      
+      
+      
+      <link rel="icon" href="../../img/logo-unsam-negro.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>TP N°3 - Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Cabin";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="skyblue" data-md-color-accent="skyblue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#recursos-online" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" class="md-header__button md-logo" aria-label="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" data-md-component="logo">
+      
+  <img src="../../img/logo-unsam-negro.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TP N°3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="skyblue" data-md-color-accent="skyblue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="skyblue" data-md-color-accent="skyblue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bioinformatica-iib/estructural" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    estructural
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Inicio
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../acerca/" class="md-tabs__link">
+      Acerca de
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../contenidos/" class="md-tabs__link">
+      Contenidos
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../cronograma/" class="md-tabs__link">
+      Cronograma
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../docentes/" class="md-tabs__link">
+      Docentes
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../teoricas/inicio/" class="md-tabs__link">
+        Teoricas
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../inicio/" class="md-tabs__link">
+        Practicos
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" class="md-nav__button md-logo" aria-label="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" data-md-component="logo">
+      
+  <img src="../../img/logo-unsam-negro.png" alt="logo">
+
+    </a>
+    Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bioinformatica-iib/estructural" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    estructural
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acerca/" class="md-nav__link">
+        Acerca de
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contenidos/" class="md-nav__link">
+        Contenidos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cronograma/" class="md-nav__link">
+        Cronograma
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docentes/" class="md-nav__link">
+        Docentes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Teoricas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Teoricas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teoricas/inicio/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Practicos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Practicos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inicio/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>TP N°3</h1>
+
+<div><p>{% if page.construccion %}</p>
+<p><strong>Pagina en construccion</strong></p>
+<p>{% else %}</p>
+<h2 id="recursos-online">Recursos Online</h2>
+<ul>
+<li>HHPred: <a href="https://toolkit.tuebingen.mpg.de/tools/hhpred">https://toolkit.tuebingen.mpg.de/tools/hhpred</a></li>
+<li>UCLA-DOE LAB: <a href="https://saves.mbi.ucla.edu/">https://saves.mbi.ucla.edu/</a></li>
+</ul>
+<h2 id="materiales">Materiales</h2>
+<ul>
+<li><a href="https://drive.google.com/file/d/1XjpchOpDP5wdxmrLQlW3B6li8j-ceRKK/view?usp=sharing">Descargar</a></li>
+</ul>
+<h2 id="objetivos">Objetivos</h2>
+<ul>
+<li>Familiarizarse con las técnicas de modelado por homología</li>
+<li>Analizar la calidad de los modelos obtenidos</li>
+</ul>
+<h2 id="ejercicio-1-modelado-mistery-protein">Ejercicio 1. Modelado mistery protein.</h2>
+<p>Luego de dos años y numerosos intentos fallidos, usted logra determinar por resonancia magnética nuclear una región de una proteína misteriosa y deposita la estructura en la base de datos de proteínas PDB (PDB: 1F46).</p>
+<p>Años después ocurre una pandemia de una enfermedad respiratoria causada por <em>Actinobacillus pleuropneumoniae</em> que está causando un rápido aumento en la mortalidad de la población porcina, trayendo terribles consecuencias en la actividad económica mundial. Una vez que se logró aislar la cepa responsable, se cree que una proteína que comparte casi el 25 % de identidad con su proteína misteriosa es un posible blanco para el diseño de una droga. Sin embargo, se desconoce la estructura de la misma. Como usted es el único experto en esa proteína en el mundo, la Asociación del Centro Médico Epidemiológico (ACME) se pone en contacto con usted en busca de una solución. Para solucionar el problema, Ud. decide primero intentar un modelado por homología de la nueva proteína.</p>
+<ol>
+<li>
+<p>Ingrese la secuencia de la proteína misteriosa patogénica en <a href="https://toolkit.tuebingen.mpg.de/tools/hhpred">HHPred</a></p>
+<div class="highlight"><pre><span></span><code>&gt;Pathogenic<span class="w"> </span>Mistery<span class="w"> </span>Protein
+MELHILFFILAGLLIAVLISFSLWSARREKSRIFSNTFSTRPPSTPINNIVSDVPPSLNPQSYAQT
+TGQHGETEADNPVQIQQEVESSLREIKINLPGQDSAAYQSKVEETPIYSGQPVLPVQPQYQTQVQY
+QTQPQHIEPAFTQAPQSPIAEATSVLEQSVEELERQAAQGDVDIYSDASVRVELAKNSMQADSVAE
+QKPVAENNMLTLYVVAPEGQQFRGDYVVQSLEALGFQYGEYQIFHRHQHMGNSASPVIFSVANMMQ
+PGIFDLTKIEHFSTVGLVLFMHLPSEGNDVVNFKLLLKTTENLAQALGGFVLNEHREIFDENSRQS
+YLARVS
+</code></pre></div>
+</li>
+<li>
+<p>Haga click en <strong>Submit</strong> en la parte inferior de la página y seleccione el hit que le parezca más conveniente:</p>
+<ul>
+<li>¿por qué es el más conveniente?</li>
+<li>¿Que e-value tiene?</li>
+<li>¿que porcentaje de identidad posee con su proteína misteriosa (en la pate inferior está el alineamiento)?</li>
+</ul>
+<p>Luego seleccione en la parte superior <strong>Model using selection</strong>. </p>
+<ul>
+<li>¿Qué se muestra en la nueva ventana? (Mueva la barra inferior para ver que hay en la ventana).</li>
+</ul>
+</li>
+<li>
+<p>Haga click en <strong>Forward to Modeller</strong> y luego en <strong>Submit</strong>.</p>
+<p>De ser necesario ingrese la siguiente key: <strong>MODELIRANJE</strong> en el recuadro que dice <strong>Modeller key</strong> y luego haga click en Submit.</p>
+<ul>
+<li>¿Qué aparece en la nueva ventana?</li>
+</ul>
+</li>
+<li>
+<p>Descargue el archivo PDB (<strong>Download PDB File</strong>)</p>
+</li>
+<li>
+<p>La herramienta <strong>Verify3D</strong> permite determinar la compatibilidad de un modelo 3D de una proteína con su secuencia aminoacídica en base a cuál es el ambiente en el cual se encuentra cada residuo y la compatibilidad con la estructura secundaria en la que se encuentra.  </p>
+<p>Vaya a la web de <a href="https://saves.mbi.ucla.edu/">UCLA-DOE LAB</a>, suba el archivo PDB obtenido en el paso anterior y clickee en <strong>Run programs</strong>.</p>
+<ul>
+<li>Seleccione <strong>Verify3D</strong> y espere por los resultados.</li>
+</ul>
+<p>El gráfico reporta la calidad del modelo por posición y en él se observan tres regiones:  </p>
+<p></p><ol type="i">
+<li>Posiciones con <strong>score menor a cero</strong> están <strong>mal</strong> modeladas,</li>
+<li>Posiciones con <strong>score entre cero y 0.2</strong> están <strong>pobremente</strong> modeladas,</li>
+<li>Posiciones con <strong>score mayor a 0.2</strong> están modeladas con <strong>buena calidad</strong>.</li>
+</ol>
+<p><strong>Verify 3D</strong> asigna como aceptado a un modelo con más del 80% de las posiciones posiciones con un score promedio en el área <strong>bien modelada</strong>.</p>
+<p>Observe el resultado obtenido (Si tarda haga click en el botón <em>Check status</em>) y responda:  </p>
+<ul>
+<li>¿Cuál es el porcentaje de residuos con un score promedio en el <strong>área de bien modelados</strong>?</li>
+<li>¿Qué región está <strong>pobremente modelada</strong> según <strong>Verify 3D</strong>?</li>
+</ul>
+</li>
+<li>
+<p>La herramienta <strong>Procheck</strong> permite analizar la calidad de la geometría de los residuos en una estructura proteica dada en comparación a parámetros estereoquímicos derivados de estructuras tridimensionales de alta resolución ya conocidas.</p>
+<p>En la parte superior de la página de los resultados de <strong>Verify 3D</strong> vaya a <strong>Control Panel</strong></p>
+<p>Seleccione <strong>Procheck</strong> y espere por los resultados.</p>
+<ul>
+<li>
+<p>Investigue el <strong>Ramachandran Plot</strong>. Reconozca las regiones a los distintos elementos de estructura secundaria y responda:</p>
+<ul>
+<li>¿Cuántas estructuras se utilizaron para construir este Ramachandran?</li>
+<li>¿Qué residuos no están en el área esperada?</li>
+<li>¿Qué criterio se utiliza para considerar que el modelo es de buena calidad?</li>
+<li>¿Qué porcentaje de residuos en la estructura modelada se encuentran en las regiones más favorecidas?</li>
+</ul>
+</li>
+<li>
+<p>Investigue los gráficos de ramchandran para todos los residuos en <strong>All Ramachandrans</strong> debe elegir el pdf.</p>
+<ul>
+<li>¿Cuántas estructuras se utilizaron para construir este Ramachandran?</li>
+<li>¿Qué residuos no están en el área esperada?</li>
+</ul>
+</li>
+<li>
+<p>Investigue los gráficos de las longitudes de enlace en la cadena principal (M/c bond lengths) y los ángulos de unión de la cadena principal (M/c bond angles).  </p>
+<ul>
+<li>¿Existen aminoácidos que se alejen significativamente de los resultados esperados?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>En base a los resultados obtenidos por <strong>Verify 3D</strong> y <strong>ProCheck</strong> responda: ¿Es bueno el modelo? ¿Por qué?</p>
+</li>
+<li>
+<p>Abra chimera y busque el modelo que determinó usted años atrás:</p>
+<p><em>File</em> → <em>Fetch by ID</em> → 1F46</p>
+<p>(¿Recuerda cómo hacerlo por la línea de comandos?)</p>
+<p>Si no funciona, el pdb se encuentra en su carpeta de datos y puede utilizar:</p>
+<p><em>File → Open</em></p>
+</li>
+<li>
+<p>Luego, cargue en la misma ventana de Chimera la estructura de la proteína misteriosa patogénica</p>
+<p><em>File → Open</em></p>
+</li>
+<li>
+<p>Para tener una noción de cuán similar es la estructura de dos proteínas, podemos realizar un <strong>Alineamiento Estructural</strong>, que consiste en superponer las estructuras de ambas proteínas en el espacio intentando alinear sus cadenas aminoacídicas. Alinear estructuras en chimera es muy fácil, sólo requiere un comando.  </p>
+<p>Vaya a <em>Tools → Structure Comparison → MatchMaker</em></p>
+<p>Se abrirá una nueva ventana.</p>
+<ul>
+<li>
+<p>En <em>Reference structure</em> (el panel de la izquierda) puede seleccionar una de las estructuras de referencia. Esta estructura es la que se mantendrá fija. (<strong>Ej. 1F46</strong>)  </p>
+</li>
+<li>
+<p>En <em>Structure(s) to match</em> (el panel de la derecha) seleccione la estructura que será superpuesta y alineada con la que se eligió como referencia. (Ej. el modelo)</p>
+</li>
+<li>
+<p>En <em>Matching</em> asegurése que <em>Iterate by pruning long atom pairs untilo no pair exceeds</em> está clickeado.</p>
+</li>
+<li>
+<p>Piense, ¿Porqué está utilizando el PDB:1F46?</p>
+</li>
+<li>
+<p>Observe el resultado del alineamiento: ¿Son parecidas las estructuras? ¿En donde se observan las mayores diferencias?</p>
+</li>
+</ul>
+<p>Vaya a <em>Favorites → Reply Log</em></p>
+<ul>
+<li>¿Cuál es el RMSD global reportado?</li>
+</ul>
+</li>
+<li>
+<p>Para ver cómo se corresponde el grado de similitud estructural con el grado de similitud en secuencia podemos realizar un alineamiento de ambas secuencias guiado por el alineamiento estructural. Para esto, vaya a:</p>
+<p><em>Tools → Structure comparison → “Match-&gt;Align”</em></p>
+<p><strong>Ahora, observando la estructura y el alineamiento responda:</strong>  </p>
+<p><strong>I.</strong> ¿Qué son las regiones marcadas en rosa en el alineamiento?  </p>
+<p><strong>II.</strong> ¿Este alineamiento, identifica regiones que no alinean estructuralmente? ¿A qué se debe?</p>
+<p><strong>III.</strong> En la parte superior de la ventana del alineamiento de secuencia vaya a <strong>Headers</strong> y seleccione RMSD:<em>ca</em></p>
+<ul>
+<li>¿Qué regiones poseen mayor RMSD? ¿A qué elementos estructurales corresponden? Para responder esto, seleccione estas regiones con el mouse en el alineamiento y visualícelas en la estructura alineada.</li>
+</ul>
+</li>
+<li>
+<p>Para cuantificar el alineamiento de secuencia obtenido, podemos calcular el % de identidad de secuencia. Para ello, en la ventana del alineamiento de secuencias vaya a:</p>
+<p><em>Info → Percent identity</em>.</p>
+<p>Seleccione una estructura en <em>Compare</em> y la otra estructura en <em>with</em>. En <em>Divide by</em> seleccione <em>longer sequence length</em>. Presiona en Ok.  </p>
+<ul>
+<li>
+<p>¿Qué valor de identidad de secuencia obtiene? ¿Porque cree que difiere del reportado anteriormente?</p>
+</li>
+<li>
+<p>En la parte superior de la ventana del alineamiento de secuencia vaya a Headers y seleccione <em>Conservation</em> ¿Las sustituciones observadas en las secuencias son conservativas?  </p>
+</li>
+<li>
+<p>En base a los resultados obtenidos. ¿Intentaría obtener experimentalmente la estructura de la nueva proteína, o confiaría en el modelo?  </p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="ejercicio-2-modelado-por-homologia-de-una-proteina-de-rana">Ejercicio 2. Modelado por homología de una proteína de Rana.</h2>
+<p>Usted es un famoso ecólogo que desde siempre sintió un especial interés por las ranas. Durante un viaje de campaña se encontró con unas ranas muy inusuales que poseían una fascinante coloración azul. Luego de años de investigación y muchos subsidios invertidos, su becario descubrió que esta coloración se debe a la existencia de una proteína en la linfa de las ranas que es capaz de conjugar biliverdina. Luego de aislar la proteína, obtiene su secuencia:</p>
+<div class="highlight"><pre><span></span><code>&gt;Hypsiboas_punctatus_BP
+MRVLLILGVVVLSTLAFAHHEEGHHDDEDLKDDHDPFLPEDHKKALFVYQKPALNNINFA
+FKMYRQLARDHPTENIVISPVSISSALALLSLGAKGHTHSQIVERLGYNTSEIPEQQIHE
+SFHKQLDVVDDKDRDLEFEHGNALFTCKEHKIHQTFLDDAKKFYHSEVIPTDFKNTEEAK
+NQINSYVEKSTHGKITNILDSVDQDAMIALINFIYLRANWQHPFDEKLTKEGDFHVDKDT
+TVKVPFMRRRGIYKMAYTDDIIMVTIPYNGSVEMFLAMTKMGKLSELEQNLNRERSLKWR
+EIMQYQLIDLSLPKLSVSGILNLKETLSKLGIVDVFSNHADLSGITDESHLKVSKAIHKA
+MMSFDEHGTEAAPATAAEADPLMLPPHFKFDYPFIFRVQDLKTKNPLLVGRIANPQK
+</code></pre></div>
+<p>Utilizando la secuencia, el becario busca en las bases de datos y descubre que su proteína es homóloga a una superfamilia de proteínas conocidas como <em>serpinas</em> compartiendo un 43% de identidad de secuencia con la proteína de humanos.  </p>
+<p>Para entender las diferencias con la proteína de humanos, estuvo muy interesado en obtener la estructura tridimensional de la proteína de rana. Sin embargo, todos los intentos de cristalización fallaron rotundamente. Su subsidio se está terminando rápidamente pero afortunadamente, un becario muy interesado en bioinformática y el modelado por homología lo salva de su desesperación.  </p>
+<p>Utilizando la herramienta <strong>HHPred</strong> el becario encontró que el mejor template era: 3NE4, Chain A, correspondiente al inhibidor de tripsina humano (Alpha-1-antitrypsin, P01009). Utilizando herramientas de modelado desarrolla un modelo 3D y le asegura que el modelo es de muy buena calidad.  </p>
+<p>Desconfiando de los resultados de su becario, Ud. decide analizar la calidad del modelo obtenido. Para esto utiliza todas las herramientas que conoce:</p>
+<ol>
+<li>
+<p>Utilice el modelo creado por su becario (<code>Hypsiboas_punctatus_BP.pdb</code>) que se encuentra en los materiales. Utilice las herramientas aprendidas en el punto anterior (<a href="https://saves.mbi.ucla.edu/">Verify3D</a>) e investigue los resultados obtenidos.</p>
+<ul>
+<li>¿Le parece que su becario estaba en lo cierto, o equivocado?  </li>
+</ul>
+</li>
+<li>
+<p>Para explicar las diferencias obtenidas analizaremos las estructuras como se indica en los puntos siguientes usando <strong>Chimera</strong> </p>
+</li>
+<li>
+<p>Utilizando el modelo generado y el PDB (3NE4) utilizado como molde realice un alineamiento estructural en Chimera (<em>Tools → Structure Comparison → MatchMaker</em>).</p>
+<ul>
+<li>¿Cuál es el RMSD global?</li>
+<li>¿Qué diferencias observa en las estructuras alineadas?</li>
+<li>¿Tiene relación con lo obtenido por <strong>Verify3D</strong>?</li>
+</ul>
+</li>
+<li>
+<p>En Chimera observe el alineamiento de secuencia (<em>Tools → Structure Comparison Match -&gt; Align</em>).</p>
+<ul>
+<li>¿En qué regiones hay mayor número de Gaps?</li>
+<li>Observe el RMSD por posición utilizando el RMSD:ca. ¿En qué regiones se observan las mayores diferencias? ¿A qué estructura corresponde? ¿Por qué cree que ocurre esto?</li>
+</ul>
+</li>
+<li>
+<p>El algoritmo IUPred será estudiado en mayor profundidad en las próximas clases, por lo tanto, responda brevemete.</p>
+<p>IUPred es un predictor de desorden. El score de IUPred varía entre 0 y 1. Un umbral muy utilizado es 0.5. Un score de IUPred mayor a 0.5 se considera una región predicha desordenada o flexible y un score de IUPred menor a 0.5 se considera una región predicha globular u ordenada.</p>
+<p>En el gráfico, el eje x son las posiciones de la secuencia y en el eje y el <em>score</em> de IUPred que va de 0 a 1.</p>
+<p>Ingrese la secuencia de la rana en <a href="https://iupred2a.elte.hu/plot">IUPRed2A</a>. </p>
+<ul>
+<li>¿Qué relación encuentra con lo obtenido por Verify3D? </li>
+</ul>
+</li>
+<li>
+<p>En base a los resultados de su análisis, responda:</p>
+<ul>
+<li>¿Pudo explicar todas las regiones de menor calidad reportadas por <strong>Verify3D</strong>?</li>
+</ul>
+</li>
+<li>
+<p>Ud. Se sacó un nuevo subsidio donde tiene plata para seguir haciendo estudios estructurales de esta proteína: </p>
+<ul>
+<li>¿le daría alguna indicación a su nuevo becario, para que tenga más suerte al intentar cristalizarla?</li>
+</ul>
+</li>
+</ol>
+<h2 id="recording">Recording</h2>
+<ul>
+<li>Cierre <a href="https://drive.google.com/file/d/1fMgCHZ6GOf2xIRfWuzjGiwC4q4V8lnVB/view?usp=sharing">[MP4]</a></li>
+</ul>
+<p>{% endif %}</p></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Area Bioinformatica UNSAM
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

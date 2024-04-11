@@ -1,0 +1,1317 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Sitio Web del Curso de Bioinformática Estructural">
+      
+      
+      
+        <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/Motivos_Lineales/">
+      
+      
+      
+      <link rel="icon" href="../../img/logo-unsam-negro.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>TP N°8 - Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Cabin";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="skyblue" data-md-color-accent="skyblue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#materiales" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" class="md-header__button md-logo" aria-label="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" data-md-component="logo">
+      
+  <img src="../../img/logo-unsam-negro.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TP N°8
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="skyblue" data-md-color-accent="skyblue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="skyblue" data-md-color-accent="skyblue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bioinformatica-iib/estructural" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    estructural
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Inicio
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../acerca/" class="md-tabs__link">
+      Acerca de
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../contenidos/" class="md-tabs__link">
+      Contenidos
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../cronograma/" class="md-tabs__link">
+      Cronograma
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../docentes/" class="md-tabs__link">
+      Docentes
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../teoricas/inicio/" class="md-tabs__link">
+        Teoricas
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../inicio/" class="md-tabs__link">
+        Practicos
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" class="md-nav__button md-logo" aria-label="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" data-md-component="logo">
+      
+  <img src="../../img/logo-unsam-negro.png" alt="logo">
+
+    </a>
+    Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bioinformatica-iib/estructural" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    estructural
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acerca/" class="md-nav__link">
+        Acerca de
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contenidos/" class="md-nav__link">
+        Contenidos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cronograma/" class="md-nav__link">
+        Cronograma
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docentes/" class="md-nav__link">
+        Docentes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Teoricas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Teoricas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teoricas/inicio/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Practicos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Practicos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inicio/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>TP N°8</h1>
+
+<html><head><style>
+details > summary:first-of-type {
+   display: list-item;
+}
+details summary { 
+  cursor: pointer;
+}
+
+details summary > * {
+  display: inline;
+}
+</style>
+
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head><body><p>{% if page.construccion %}</p>
+<p><strong>Pagina en construccion</strong></p>
+<p>{% else %}</p>
+<h2 id="materiales">Materiales</h2>
+<ul>
+<li><a href="https://drive.google.com/file/d/1cICkOcmlgBJlSMeFpdn1ihbmoWWYVg06/view?usp=sharing">Descargar</a></li>
+</ul>
+<h2 id="recursos-a-utilizar">Recursos a utilizar</h2>
+<ul>
+<li>ELM: <a href="http://elm.eu.org">http://elm.eu.org</a></li>
+<li>Consurf: <a href="https://consurf.tau.ac.il/">https://consurf.tau.ac.il/</a></li>
+<li>Colab: <a href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/beta/AlphaFold2_advanced.ipynb">AlphaFold2-advanced</a></li>
+</ul>
+<h2 id="objetivos">Objetivos:</h2>
+<ul>
+<li>Familiarizarse con la simbología utilizada en expresiones regulares, poder interpretar una expresión regular.</li>
+<li>Utilizar la simbología para poder realizar búsquedas basadas en texto</li>
+<li>Familiarizarse con la base de datos ELM.</li>
+</ul>
+<h2 id="ejercicios">Ejercicios</h2>
+<h3 id="ejercicio-1-identificacion-de-motivos-cortos-de-interaccion-en-p53-en-un-alineamiento-propio">Ejercicio 1. Identificación de motivos cortos de interacción en p53 en un alineamiento propio.</h3>
+<p>La región amino terminal de p53 posee un motivo de unión a la E3 ligasa MDM2, el cual está caracterizado por una secuencia conservada que puede representarse por la expresión regular: <code>F[^P]{3}W[^P]{2,3}[VIL]</code>.</p>
+<ol>
+<li>Busque las ocurrencias de esta expresión regular en las secuencias de p53.</li>
+</ol>
+<p>Para ello, abra en Jalview el alineamiento de p53 con el cuál estuvo trabajando en las clases anteriores. Jalview permite la búsqueda de motivos por expresiones regulares. Para hacerlo, utilice la función:</p>
+<p><em>Select → Find</em></p>
+<p>En la ventana tipee la expresión regular.</p>
+<ul class="block-list has-radius is-primary">
+   <li class="is-outlined is-danger">
+   <p>
+   Si este procedimiento falla, y tiene ventanas con otras secuencias o alineamientos abiertas, ciérrelas. Si aún así falla, asegúrese de no tener ninguna secuencica seleccionada <span style="font-style:italic;">Select → Deselect All</span>.
+   Si aún así falla, identifique el motivo utilizando el filtro de conservación.
+   </p>
+   </li>
+   </ul>
+
+<ul>
+<li>¿Todas las secuencias de p53 tienen el motivo de interacción con MDM2?</li>
+<li>¿Todos los motivos MDM2 tienen la misma longitud de secuencia?</li>
+<li>¿Qué nivel de identidad de secuencia observa en esta región? ¿A qué puede deberse?</li>
+</ul>
+<p>Si pudo encontrar, en la ventana donde ingresó la secuencia regular, con el botón <em>New Feature</em> puede crear una <em>feature</em>.</p>
+<p>Se abrirá una ventana:
+   * En <em>Name</em> deje la expresión regular que figura.
+   * En <em>Group</em> y <em>Description</em> escriba MDM2. 
+   * Elija el color deseado.</p>
+<p>De esta manera, si desea buscar más de un motivo podrá marcarlos de distintos colores en el alineamiento, también podrá exportar los datos y volverlos a cargar en el alineamiento.</p>
+<p>Si desea cambiar los colores:</p>
+<p><em>View → Sequence features settings</em></p>
+<p>Ahí encontrará todas las features creadas.</p>
+<p>Para exportar las features:</p>
+<p><em>File → Export Features</em></p>
+<p>El círculo al lado de <em>Jalview</em> debe estar tildado y elija <em>to textbox</em>.</p>
+<p>Se abrirá una nueva ventana donde se indica para cada secuencia el inicio y final de la feature
+   * ¿Puede encontrarlos?
+   * ¿Es el mismo para todas las secuencias?.</p>
+<p>En esa ventana vaya a:</p>
+<p><em>File → Save</em></p>
+<p>Y guarde el archivo donde desee.</p>
+<p>Si en futuras ocasiones desea usar estas <em>features</em> con estas secuencias, debe abrir en Jalview el alineamiento utilizando, luego ir a <em>File → Load features/annotations</em>.</p>
+<h3 id="ejercicio-2-base-de-datos-de-motivos-lineales-en-eucariotas-elmdb">Ejercicio 2. Base de datos de motivos lineales en Eucariotas (ELMdb)</h3>
+<p>La base de datos ELM (<em>Eukaryotic Linear Motifs</em>) es una base de datos que se enfoca principalmente en la anotación y detección de motivos lineales (SLiMs). Para ello cuenta con un repositorio de motivos manualmente anotados, por lo cual está altamente curada, y también cuenta con una herramienta de predicción de motivos. Esta predicción de motivos se realiza mediante una búsqueda de patrones de secuencia basada en texto utilizando expresiones regulares (en particular, todas las expresiones regulares definidas dentro de la base de datos).</p>
+<ol>
+<li>Busque en <a href="http://elm.eu.org/">ELMdb</a> en la pestaña Prediction la proteína PGC-1-alpha utilizando el accession number o uniprot ID (Q9UBK2 - PRGC1_HUMAN). Esta es una de las proteínas de la lista que usamos en el ejercicio donde construimos la expresión regular <code>L[^P][^P]LL</code> del motivo NRBox en otro trabajo práctico.</li>
+</ol>
+<p>Para cada motivo encontrado, se indica con símbolos (descriptos en la parte superior de la página) si la instancia del motivo es predicha o fue identificada experimentalmente (anotadas o “True Positives”). Responda:</p>
+<ul>
+<li>¿Encuentra el motivo NRBox entre los True positives?</li>
+<li>¿Cuántas instancias True Positive existen para esta proteína?</li>
+<li>
+<p>¿Cómo es la estructura de la proteína donde se encuentran estos motivos?</p>
+</li>
+<li>
+<p>Pegue y copie la siguiente secuencia en ELM y utilice los parámetros que se indican a continuación.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>&gt;seq
+MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDI  
+EQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQ  
+KTYQGSYGFRLGFLHSGTAKSVTCTYSPALNKMFCQLAKTCPVQLWVDST  
+PPPGTRVRAMAIYKQSQHMTEVVRRCPHHERCSDSDGLAPPQHLIRVEGN  
+LRVEYLDDRNTFRHSVVVPYEPPEVGSDCTTIHYNYMCNSSCMGGMNRRP  
+ILTIITLEDSSGNLLGRNSFEVRVCACPGRDRRTEEENLRKKGEPHHELP  
+PGSTKRALPNNTSSSPQPKKKPLDGEYFTLQIRGRERFEMFRELNEALEL  
+KDAQAGKEPGGSRAHSSHLKSKKGQSTSRHKKLMFKTEGPDSD
+</code></pre></div>
+<p>Modifique los valores de los distintos parámetros de la siguiente manera:</p>
+<blockquote>
+<ul>
+<li><strong>Cell Compartment:</strong> Not specified</li>
+<li><strong>Motif Probability Cutoff:</strong> 100</li>
+<li><strong>Taxonomic context:</strong> (leave blank) </li>
+</ul>
+</blockquote>
+<ul>
+<li>¿Cuántas instancias predichas de motivos se encuentran? Para verlo investigue la tabla llamada <em>Filtering Summary</em>.</li>
+<li>¿Cuántas son retenidas luego del filtro?</li>
+<li>¿Qué se puede decir sobre la estructura de la proteína? ¿Se observa algún dominio?</li>
+<li>¿Se observan regiones desordenadas?</li>
+<li>
+<p>¿Los predictores estructurales y filtros (SMART, GlobPlot, IUPRED, Secondary Structure) coinciden sobre qué regiones son estructuradas/desordenadas?</p>
+</li>
+<li>
+<p>Por si no se dió cuenta, la proteína utilizada en el ejercicio anterior es p53 de humanos.</p>
+</li>
+</ul>
+<p>Abra en una nueva pestaña la página de <a href="http://elm.eu.org/">ELMdb</a>.<br>
+   Vaya de nuevo a la pestaña de predicción.<br>
+   Limpie el formulario con el botón Reset Form.<br>
+   Ingrese el Uniprot ID de la proteína (P53_human).</p>
+<ul>
+<li>¿Qué compartimentos celulares se le asignaron? ¿Tienen sentido?</li>
+</ul>
+<p>Realice la predicción y conteste:
+   * ¿Cuántas instancias de motivos se encuentran ahora?
+   * ¿Cuántas instancias de motivos son retenidas luego del filtro?
+   * ¿A qué se debe esta diferencia con el punto anterior?</p>
+<p>Investigue el motivo <code>CLV_PCSK_FUR_1</code> en la predicción realizada sólo con la secuencia (la del punto 1).
+   * ¿Por qué cree que fue filtrado?</p>
+<p>Observe las distintas instancias predichas:
+   * ¿Cuántas instancias anotadas como <em>true positive</em> posee esta proteína?
+   * Compare la ubicación de dichas instancias con la información estructural proveniente de IUPred. ¿Qué observa?
+   * ¿Cuántas instancias de la clase <code>MOD_CK1_1</code> se encontraron? ¿Cuál es la diferencia entre estas instancias?
+   * ¿Cuántos degrons anotados hay en p53? ¿Cuál es la función de estos motivos?
+   * ¿Existe algún sitio anotado CDK en p53?
+   * ¿Existe algún sitio anotado <code>DOC_CYCLIN_RXL_1</code>? ¿Qué relación funcional existe entre este sitio y el sitio CDK?</p>
+<p>Abra una nueva pestaña y vaya de nuevo a la pestaña de predicción en <a href="http://elm.eu.org/">ELMdb</a>.<br>
+   Limpie el formulario con el botón Reset Form.<br>
+   Ingrese el UniProt ID (P53_HUMAN) y modifique el parámetro:  </p>
+<blockquote>
+<p><strong>Motif Probability Cutoff:</strong> 0.01 (Recuerde que en el punto anterior este parámetro era de 100)</p>
+</blockquote>
+<ul>
+<li>¿Cuántas instancias predichas de motivos se encuentran ahora?</li>
+<li>¿Cuántas instancias de motivos son retenidas luego del filtro?</li>
+<li>¿Por qué cree que es útil usar la localización celular, el contexto taxonómico y el umbral de probabilidad del motivo?</li>
+</ul>
+<p>Busque la proteína P53_MOUSE en <a href="http://elm.eu.org/">ELMdb</a>.
+   * ¿Qué compartimentos celulares y que contexto taxonómico se asignaron?
+   * ¿Existen instancias anotadas?
+   * ¿Existen instancias asignadas por homología? ¿A qué organismo pertenecen?</p>
+<h3 id="ejercicio-3-identificando-interacciones-entre-motivos-lineales-y-proteinas-globulares">Ejercicio 3. Identificando interacciones entre motivos lineales y proteínas globulares</h3>
+<p>La proteína Retinoblastoma participa en la regulación del ciclo celular. Rb está conformada por tres módulos. El dominio N, el dominio pocket y el dominio C.</p>
+<p>El dominio pocket está conformado por dos sub-dominios A y B. Este dominio interactúa con numerosas proteínas celulares, incluyendo los factores de transcripción E2F, HDAC y otras proteínas reguladoras del ciclo celular como también proteínas virales.</p>
+<p>Hasta la fecha, se identificaron dos dominios que interactúan con el dominio pocket. El motivo LxCxE que se une al sub-dominio B y el motivo LxxLFD que se une en un bolsillo conservado entre los subdominios A y B. El motivo LxCxE se encuentra en kinasas, histonas desacetilasas entre otras. El motivo LxxLFD se encuentra en el dominio de transactivación de los factores de transcripción E2F.</p>
+<p>Numerosas proteínas virales interactúan con Rb, vía estos motivos de manera tal que desregulan la interacción de Rb con E2F y otros reguladores del ciclo celular forzando la progresión del ciclo celular.</p>
+<p>El core del motivo LxCxE es: consiste en 3 posiciones fijas que median la interacción con Rb: L, C, y E.</p>
+<ol>
+<li>
+<p>Abra en Chimera el PDB: 1GUX.</p>
+</li>
+<li>
+<p>Identifique qué proteínas forman parte del complejo.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sel #0:.A #0:.B; namesel Rb_1gux
+sel #0:.E;namesel LxCxE
+</code></pre></div>
+<ul>
+<li>Elimine las aguas y oculte los residuos que se ven</li>
+</ul>
+<div class="highlight"><pre><span></span><code>delete :HOH
+~display
+</code></pre></div>
+<ul>
+<li>Por último, visualice el motivo:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>ribbon LxCxE
+ribscale licorice LxCxE
+display LxCxE
+color byhet,a LxCxE
+</code></pre></div>
+<ul>
+<li>
+<p>¿Puede identificar las posiciones core del motivo?</p>
+</li>
+<li>
+<p>Identifique si existe formación de puentes de hidrógeno entre el péptido que contiene el motivo y Rb.</p>
+</li>
+</ul>
+<ul class="block-list has-radius is-primary">
+   <li class="is-outlined is-info has-icon">
+   <span class="icon"><i class="fas fa-lightbulb fa-2x"></i></span>
+   <p>
+   <span style="font-weight:bold;">Recuerde !!!</span>
+   <br>
+   Debe tener el motivo seleccionado (sel LxCxE)
+   <br>
+   <br>
+   En FindHBonds debe seleccionar <span style="font-style:italic;">Only Find H-bonds</span> with at least one end selected.
+   Seleccione <span style="font-style:italic;">if endpoint atom hidden, show endpoint residue</span>
+   </p>
+   </li>
+   </ul>
+
+<ul>
+<li>¿Qué puentes de hidrógeno puede observar? ¿Se dan entre residuos de la cadena principal del péptido/dominio, o entre residuos de la cadena lateral?</li>
+<li>
+<p>¿Cuáles de estos tipos de puentes de hidrógeno diría que contribuyen a la afinidad del motivo y cuáles a la especificidad?</p>
+</li>
+<li>
+<p>Seleccione los residuos de Rb que interactúan con los residuos del core del motivo. </p>
+</li>
+<li>
+<p>Pensar: ¿Cómo haría esto? ¿Cómo se define una interacción o contacto? (Pista... comando <code>zr</code>)</p>
+</li>
+<li>
+<p>¿Qué carácter químico tienen los residuos identificados?</p>
+</li>
+<li>
+<p>Detecta visualmente otras interacciones que puedan contribuir a la estabilidad o afinidad de este complejo?</p>
+</li>
+</ul>
+<p>El core del motivo LxxLFD que se encuentra en los factores de transcripcion E2F consiste en 4 posiciones fijas que median la interacción con Rb: L, L, F y D.</p>
+<ol>
+<li>
+<p>Abra en chimera el PDB: 1N4M</p>
+</li>
+<li>
+<p>Alinee contra la proteína 1GUX</p>
+</li>
+<li>
+<p>Para facilitar el trabajo, eliminaremos la cadena que no alineó con 1GUX y el ligando asociado:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code> delete #1:.B #1:.D #1:.E
+</code></pre></div>
+<ul>
+<li>¿Qué observa en la nueva estructura? ¿De qué complejo se trata?</li>
+</ul>
+<div class="highlight"><pre><span></span><code>sel #1:.A; namesel Rb_1n4m
+sel #1:.C;namesel E2F
+</code></pre></div>
+<p>Elimine las aguas, y visualice el motivo:</p>
+<div class="highlight"><pre><span></span><code>delete :HOH
+ribbon E2F
+ribscale licorice E2F
+display E2F
+color byhet,a E2F
+</code></pre></div>
+<ol>
+<li>
+<p>Identifique los residuos “core” del motivo (que en esta proteína es IxxLFD).</p>
+</li>
+<li>
+<p>Identifique si existe formación de puentes de hidrógeno entre el péptido que contiene este segundo motivo y Rb</p>
+</li>
+</ol>
+<ul class="block-list has-radius is-primary">
+   <li class="is-outlined is-info has-icon">
+   <span class="icon"><i class="fas fa-lightbulb fa-2x"></i></span>
+   <p>
+   <span style="font-weight:bold;">Recuerde !!!</span>
+   <br>
+   Debe tener el motivo seleccionado (sel E2F)
+   <br>
+   <br>
+   En FindHBonds debe seleccionar <span style="font-style:italic;">Only Find H-bonds</span> with at least one end selected.
+   Seleccione <span style="font-style:italic;">if endpoint atom hidden, show endpoint residue</span>
+   </p>
+   </li>
+   </ul>
+
+<ul class="block-list has-radius is-primary">
+   <li class="is-outlined is-danger has-icon">
+   <span class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></span>
+   <p>
+   <span style="font-weight:bold;">IMPORTANTE !!!</span>
+   <br>
+   Tiene más de un modelo abierto en su sesión de chimera, asegúrese que en <span style="font-style:italic;font-weight:bold;">Find these bonds</span> esté seleccionado <span style="font-style:italic;font-weight:bold;">Intra-model</span> 
+   </p>
+   </li>
+   </ul>
+
+<ol>
+<li>
+<p>Seleccione los residuos de Rb que interactúan con dichas posiciones.</p>
+</li>
+<li>
+<p>¿Qué carácter químico tienen estos residuos?</p>
+</li>
+</ol>
+<p>No cierre la sesión ya que seguiremos analizando este complejo en el siguiente ejercicio.</p>
+<h3 id="ejercicio-4-analizando-superficies-de-interaccion-entre-motivos-lineales-y-proteinas-globulares">Ejercicio 4. Analizando superficies de interacción entre motivos lineales y proteínas globulares</h3>
+<h4 id="1-analisis-de-superficies-hidrofobicas">1. Análisis de superficies hidrofóbicas.</h4>
+<p>Represente la superficie de Rb y coloréela por hidrofobicidad.</p>
+<p>A partir de ahora nos manejaremos con la superficie de 1gux, por lo que oculte Rb_1n4m:</p>
+<div class="highlight"><pre><span></span><code>~ribbon Rb_1n4m
+</code></pre></div>
+<p>Enmarque la región de la cual queremos renderizar la superficie:</p>
+<div class="highlight"><pre><span></span><code>sel Rb_1gux; surfcat RbSurf sel; surface RbSurf
+rangecolor kdHydrophobicity,s -4.5 dodger blue 0 white 4.5 orange red Rb_1gux
+</code></pre></div>
+<ul>
+<li>¿Observa bolsillos hidrofóbicos en la región de interacción de los motivos?</li>
+<li>
+<p>¿Qué residuos del “core” de cada motivo se encuentran en ellos?</p>
+</li>
+<li>
+<p>Grabe la sesión de Chimera: <em>File → Save Session</em></p>
+</li>
+<li>Elija el nombre: RbHydro</li>
+</ul>
+<h4 id="2-analisis-de-superficies-electrostaticas">2. Análisis de superficies electrostáticas</h4>
+<p>En este punto, analizaremos la complementariedad de cargas:</p>
+<p><em>Tools</em> → <em>Surface/Binding Analysis</em> → <em>Coulombic Surface Coloring</em></p>
+<p>Se abrirá una ventana, seleccione la superficie correspondiente (RbSurf) y haga click en <em>Apply</em>.</p>
+<ul>
+<li>
+<p>¿Qué tipo de residuos cargados observa en la cercanía del cleft de unión al motivo? ¿Postivos o negativos?</p>
+</li>
+<li>
+<p>Grabe la sesión de Chimera: <em>File → Save Session</em></p>
+</li>
+<li>Elija el nombre: RbElectrostatica</li>
+</ul>
+<p>El dominio Rb tiene un PI (punto isoeléctrico) de 8.9.
+* ¿Qué le dice esto sobre el carácter químico de Rb?</p>
+<ul>
+<li>Investigue los residuos con carga positiva en el entorno del motivo LxCxE</li>
+</ul>
+<div class="highlight"><pre><span></span><code>color white Rb_1gux
+sel #0:arg.A,lys.A,arg.B,lys.B; namesel resPositivos
+</code></pre></div>
+<p>En model panel deseleccione la columna de la s en la superficie (que no esté tildada)</p>
+<div class="highlight"><pre><span></span><code>color blue,a,s resPositivos
+display resPositivos
+color orange LxCxE
+color byhet,a LxCxE
+</code></pre></div>
+<ul>
+<li>
+<p>¿Que argininas y lisinas están en el entorno del motivo LxCxE? En model panel seleccione la columna de la s en la superficie (que esté tildada), y observe las regiones con carga positiva en el entorno del motivo LxCxE</p>
+</li>
+<li>
+<p>Grabe la sesión de Chimera: File → Save Session</p>
+</li>
+<li>Elija el nombre: RbSuperficiePositiva</li>
+</ul>
+<p>Considerando que en la proteína E7, el logo de secuencia es el siguiente. </p>
+<p style="text-align:center">
+<a class="glightbox" href="./images/e7_logo.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/e7_logo.png" alt=""></a>
+</p>
+<p><br></p>
+<ul>
+<li>¿Guarda alguna relación lo observado en los puntos anteriores con el logo del péptido LxCxE de E7?</li>
+</ul>
+<h4 id="3-analisis-de-conservacion-en-superficie">3. Análisis de conservación en superficie.</h4>
+<p>Consurf permite estimar la conservación evolutiva de las posiciones en una molécula de proteína/ADN/ARN según las relaciones filogenéticas entre secuencias homólogas. El grado de conservación de una posición depende de la importancia estructural y funcional. Así, evaluar la conservación entre los miembros de la misma familia, puede revelar la importancia de cada posición para la estructura o función.</p>
+<hr>
+<details>
+<summary> <h6> Si quiere saber cómo se generaron los materiales que utilizaremos puede hacer click acá </h6> </summary>
+
+Preparando los datos:
+
+Sin cerrar la sesión de chimera anterior. 
+Abra una nueva sesión.
+Cargue el pdb 1gux y elimine la cadena E y las aguas
+
+delete :.E; delete :HOH
+
+Ahora renombraremos las cadenas A y B para que pasen a ser una única cadena A utilizando el siguiente comando:
+
+changechains B A :645-785.B
+
+IMPORTANTE: Si usted planea realizar esto en otras estructuras, proceda con precaución ya que generará conflictos si hay dos residuos con la misma numeración, probablemente Chimera arroje un Warning si esto sucede y no lo dejará avanzar.
+Grabe el pdb: File → Save PDB con el nombre: PocketDomain.pdb
+
+Abra el visualizador de secuencia:
+Tools → Sequence
+
+Grabe la secuencia en formato fasta con el nombre: PocketDomain.fasta
+
+File → Save As…
+
+Vaya a ProViz, busque la proteína Rb utilizando el accession number: P06400, elija la primera.
+En alineamiento elija Metazoa, pida que muestre todas las secuencias. Luego, pida que muestra las secuencias con gaps.
+
+A la izquierda, en la pestaña de Options, vaya a la sección Download → Export all to fasta.
+
+Guarde el alineamiento como Rb_Metazoa.fasta
+
+Abra el alineamiento en Jalview, vaya a:
+
+File → Add sequences → From File y abra: PocketDomain.fasta
+
+Seleccione la secuencia y muevala utilizando las flechas hacia la parte superior del alineamiento.
+
+Alinee manualmente la secuencia con P06400.
+
+Recuerde: debe deseleccionar todo: (Select → deselect all), con F2 activa el cursor para editar, y con la barra espaciadora agrega gaps, aseguree que este completo con gaps hasta el final.
+
+Elimine P06400 (Seleccione la secuencia y vaya a Edit → delete)
+
+Guarde el alineamiento como Rb_Metazoa_1gux.fasta
+</details>
+<hr>
+
+<ol>
+<li>Vaya al servidor de <a href="https://consurf.tau.ac.il/">Consurf</a> y complete los parámetros según lo siguiente:</li>
+</ol>
+<blockquote>
+<ul>
+<li><strong>Analyze Nucleotides or Amino Acids?</strong> Amino acids</li>
+<li><strong>Is there a known protein structure?</strong> YES</li>
+<li>Suba el pdb: PocketDomain.pdb y haga click en <em>next</em></li>
+<li><strong>Do you have a Multiple Sequence Alignment (MSA) to upload? (If not, ConSurf will make an MSA for you.)</strong> YES</li>
+<li>Suba el alineamiento: Rb_Metazoa_1gux.fasta
+<strong>And indicate the Query Sequence Name</strong> Busque 1GUX y haga click en <em>Update selection</em></li>
+<li><strong>Do you have a Tree file to upload?</strong> NO
+Deje los parámetros por defecto
+Ingrese el nombre del trabajo: Rb_Metazoa_1gux
+Ingrese su email
+y haga click en <em>submit</em></li>
+</ul>
+</blockquote>
+<ol>
+<li>Descargue los resultados de Consurf haciendo click en <em>Download all ConSurf outputs in a click!</em></li>
+<li>En la sesión de chimera que tiene con los motivos, abra el pdb que se encuentra entre los archivos descargados de consurf que se llama: <code>PocketDomain_pdb_ATOMS_section_With_ConSurf.pdb</code></li>
+<li>Deseleccione la superficie en model panel (recuerde que debe destildar la S)</li>
+<li>Asegúrese que este modelo está alineado con su estructura y que se abrió como el modelo <code>#2</code>.</li>
+</ol>
+<ul class="block-list has-radius is-primary">
+   <li class="is-outlined is-danger has-icon">
+   <span class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></span>
+   <p>
+   <span style="font-weight:bold;">IMPORTANTE !!!</span>
+   <br>
+   Si el modelo se cargó con otro número, consulte a sus docentes.
+   </p>
+   </li>
+   </ul>
+
+<ol>
+<li>Ahora vamos a colorear utilizando los mismos colores que usa consurf utilizando el script que se encuentra en los materiales descargados, para eso:</li>
+</ol>
+<p><em>File → Open</em></p>
+<p>En <em>File Type</em> seleccione <em>Chimera commands [.com,.cmd]</em></p>
+<ol>
+<li>Muestre la surperficie</li>
+</ol>
+<div class="highlight"><pre><span></span><code>surface #2
+</code></pre></div>
+<ul>
+<li>¿Puede observar parches de conservación en la superficie?</li>
+<li>
+<p>¿Se correlacionan con los sitios de unión de los motivos?</p>
+</li>
+<li>
+<p>Grabe la sesión y cierre Chimera.</p>
+</li>
+</ul>
+<h3 id="ejercicio-5-modelado-de-un-motivo-unido-a-un-dominio-globular-en-alphafold2">Ejercicio 5. Modelado de un motivo unido a un dominio globular en Alphafold2</h3>
+<p>Uno de los blancos celulares de Rb es la Histone desacetilasa 1 (HDAC) que posee el motivo LxCxE. Sin embargo la afinidad de HDAC1 por Rb, es mucho menor (20µM) en comparación a la afinidad del motivo de la proteína E7 (5nM).</p>
+<p>Una estructura tridimensional permite entender desde el aspecto molecular las diferencias en las interacciones que podrían llevar a diferencias en afinidades. Sin embargo, hasta la fecha, no se posee una estructura del complejo Rb-HDAC1.</p>
+<ol>
+<li>Modele el complejo utilizando el colab: <a href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/beta/AlphaFold2_advanced.ipynb">AlphaFold2_advanced</a>. Los resultados se encuentran en la carpeta de materiales, pero si quiere realizarzo siga las instrucciones, si no, vaya al punto 2.</li>
+</ol>
+<p>Este colab, a diferencia del utilizado en la clase de modelado, permite identificar puntos de corte intracatenarios y permite modelar hetero-complejos.</p>
+<p>Para tardar menos en el modelado vamos a realizar algunas modificaciones.</p>
+<p>En lugar de ingresar la secuencia completa de Rb, vamos a ingresar únicamente la correspondiente al dominio Rb, </p>
+<p>Dado que en 1GUX hay residuos no modelados, no los incluiremos en este análisis utilizando la <code>/</code> para indicar los puntos de corte intracatenarios.</p>
+<p>Al final, indicaremos con el <code>:</code> el incio de la cadena correspondiente al motivo HDAC (<code>DKRIACEEEFSD</code>).</p>
+<p>Obteniendo finalmente:</p>
+<div class="highlight"><pre><span></span><code>NTIQQLMMILNSASDQPSENLISYFNNCTVNPKESILKRVKDIGYIFKEKFAKAVGQGCVEIGSQRYKLGVRLYYRVMESMLKSE/NFSKLLNDNIFHMSLLACALEVVMATY/SFPWILNVLNLKAFDFYKVIESFIKAEGNLTREMIKHLERCEHRIMESLAWLSDSPLFDLIKQSK/TSLSLFYKKVYRLAYLRLNTLCERLLSEHPELEHIIWTLFQHTLQNEYELMRDRHLDQIMMCSMYGICKVKNIDLKFKIIVTAYKDLPHAVQETFKRVLIKEEEYDSIIVFYNSVFMQRLKTNILQYASTRPPTLSPIPHI:DKRIACEEEFSD
+</code></pre></div>
+<p>Además, este colab permite seleccionar el número de modelos a analizar. Dada la duración de la corrida, seleccionaremos un único modelo.</p>
+<blockquote>
+<ul>
+<li>En la sección <em>Run AlphaFold</em> en <em>num_moldes</em> elija 1.</li>
+<li>En la seccion <em>Refine structures with Amber-Relax (optional)</em>, en <em>num_relax</em> elija All.</li>
+</ul>
+</blockquote>
+<p>Luego, corra todo con <code>ctrl+F9</code> o vaya a <em>Runtime → Runall</em></p>
+<ol>
+<li>Abra el modelo obtenido por AlphaFold2 en chimera.</li>
+<li>Abra el pdb 1GUX</li>
+<li>Alinee ambos complejos representados en ribbon.</li>
+<li>Oculte las posiciones que se observan (~display)</li>
+<li>Represente ambos motivos en licorice (ribscale licorice) (recuerde seleccionar el motivo correspondiente antes!) y muestre las cadenas laterales coloreando por heteroatomos.</li>
+</ol>
+<p></p><div class="highlight"><pre><span></span><code>sel #0:.E, namesel E7
+sel #1:.E, namesel HDAC
+ribscale licorice E7
+ribscale licorice HDAC
+delete :HOH
+delete element.H
+display E7
+display HDAC
+</code></pre></div>
+   * ¿Qué encuentran conservado, y qué diferente?
+   * ¿Por qué podría tener más baja afinidad HDAC1 que E7?
+   * Observa la posición hidrofóbica luego del core del motivo: LxCxE para E7 y para HDAC. 
+   * ¿Observa variabilidad en la posición hidrofóbica?
+   * Busque en ELM el motivo LxCxE: <code>LIG_Rb_LxCxE_1</code>. La expresión regular observará que es mucho más compleja que LxCxE ¿Observa la variabilidad de la posición hidrofóbica en la regex?
+<h2 id="ejercicios-adicionales">Ejercicios Adicionales</h2>
+<h3 id="ejercicio-adicional-1-motivos-lineales-en-proteinas-virales">Ejercicio Adicional 1. Motivos lineales en proteínas virales</h3>
+<p>La familia viral Adenoviridae (adenovirus) son virus ADNdc desnudos. Los adenovirus que infectan a humanos son responsables de muchas enfermedades respiratorias y de numerosos casos de gastroenteritis en niños. El único género de adenovirus que posee la proteína E1A es el género Mastadenovirus que infecta a mamíferos. Hasta la fecha, no existe ningún homólogo reportado en los restantes géneros de esta familia viral. La proteína E1A posee un rol importante en la replicación del genoma viral ya que desregula el ciclo celular induciendo la división celular. Esta estimulación de la progresión de la fase G1 a la fase S, permite que el virus use la maquinaria celular de replicación del ADN para replicar su propio genoma. Una vez expresada la proteína E1A su localización en la célula infectada es nuclear y minoritariamente citosólica.</p>
+<ol>
+<li>Busque en <a href="http://elm.eu.org">ELMdb</a> en la pestaña Prediction la proteína E1A del virus Human adenovirus 5 (E1A_ADE05). </li>
+</ol>
+<p>Utilice los siguientes parámetros:</p>
+<blockquote>
+<ul>
+<li><strong>Cell Compartment:</strong> Not specified</li>
+<li><strong>Motif Probability Cutoff:</strong> 100</li>
+<li><strong>Taxonomic context:</strong> (leave blank)</li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p>¿Cuántas clases y cuántas instancias de motivos encuentras?</p>
+</li>
+<li>
+<p>En base a los conocimientos que poseemos de E1A_ADE05 modifique los parámetros Cell Compartment (se puede seleccionar más de un compartimento celular utilizando la tecla ctrl) y taxonomic context.</p>
+</li>
+<li>
+<p>¿Cómo cambia el número de motivos encontrados?</p>
+</li>
+<li>¿Qué otros filtros observa que está utilizando ELM? ¿Por qué se le ocurre que se eligen automáticamente esos filtros?</li>
+<li>
+<p>¿Qué se puede decir de la estructura de la proteína E1A? ¿Se observa algún dominio? ¿Se observan regiones desordenadas?</p>
+</li>
+<li>
+<p>En cada una de las clases de motivos encontrados, se indica con distintos símbolos (descriptos en la parte superior de la página) si la instancia del motivo es predicha o fue identificada experimentalmente (instancias anotadas o True Positives). </p>
+</li>
+<li>
+<p>¿Cuantas instancias anotadas existen?</p>
+</li>
+<li>
+<p>E1A tiene dos motivos de interacción con la proteína Retinoblastoma, un regulador del ciclo celular (motivo AB_groove y motivo LxCxE). Explore la clase <code>LIG_Rb_LxCxE_1</code>, para esto haga click sobre el nombre de la misma, en la lista de la izquierda. Se abrirá la página correspondiente a esa clase donde se listan todas las instancias reportadas en la literatura que están anotadas en ELM.</p>
+</li>
+<li>
+<p>¿En qué tipos de proteínas se encuentra el motivo LxCxE?</p>
+</li>
+<li>
+<p>Existen dos tipos de instancias.
+   <em>True Positives (TP):</em> Son instancias identificadas por la expresión regular y que la evidencia experimental muestra que es funcional.
+   <em>False Positives (FP):</em> Son instancias identificadas por la expresión regular, que la evidencia experimental sugieren que son funcionales, pero cuando fue evaluada se cree que no es realmente funcional.</p>
+</li>
+<li>
+<p>¿Se te ocurre algún ejemplo donde esto pueda ocurrir?</p>
+</li>
+<li>
+<p>Busque en ELM E1A_ADECR.</p>
+</li>
+<li>¿Cuál es el contexto taxonómico?</li>
+<li>
+<p>¿Cuántas instancias anotadas hay? ¿Se encuentran los motivos anotados de E1A_ADE05? ¿A qué puede deberse?</p>
+</li>
+<li>
+<p>La proteína Retinoblastoma (Rb) controla la transición en el ciclo celular de la fase G1 a la fase S mediante la interacción con factores de transcripción de la familia E2F.</p>
+</li>
+<li>Vaya a ProViz (http://proviz.ucd.ie/) y busque la proteína E2F1_HUMAN (Q01094).</li>
+<li>¿Puede identificar el motivo de interacción con Rb? (Pista: Hay una línea a la izquierda que se llama ELM).</li>
+<li>El motivo ¿Está en un contexto estructural desordenado? ¿Se encuentra conservado? ¿Es el mismo motivo usado por la proteína E1A para interactuar con Rb?</li>
+<li>¿Qué otros motivos identifica? ¿Algunos de estos motivos están involucrados en el ciclo celular?</li>
+</ul>
+<h3 id="ejercicio-adicional-2-motivos-lineales-en-la-proteina-caga-de-helicobacter-pylori">Ejercicio Adicional 2. Motivos lineales en la Proteína CagA de Helicobacter pylori.</h3>
+<p>La infección por <em>H. pylori</em> puede causar gastritis, úlcera péptica o cáncer de estómago. Hay una mayor probabilidad de desarrollar cáncer estomacal si la infección es producida por una cepa del Este asiático (como F32) en comparación a una cepa del Oeste (como NCTC 11637). Estas cepas difieren en el número y contexto de secuencia de los motivos EPIYA (Higashi, H., et al., 2002; Jones, K.R., et al., 2009).</p>
+<ol>
+<li>Copie y pegue en ELM las secuencias la proteína CagA de una cepa del Oeste y una cepa del Este asiático, especificando Cytosol como compartimento celular, Homo sapiens como contexto taxonómico y un umbral de corte de la probabilidad del motivo de 0.001.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>&gt; NCTC11637_CagA
+MTNETIDQQPQTEAAFNPQQFINNLQVAFLKVDNAVASYDPDQKPIVDKNDRDN  
+RQAFDGISQLREEYSNKAIKNPTKKNQYFSDFINKSNDLINKDNLIDIGSSIKS  
+FQKFGTQRYRIFTSWVSHQNDPSKINTRSIRNFMENIIQPPIPDDKEKAEFLKS  
+AKQSFAGIIIGNQIRTDQKFMGVFDEFLKERQEAEKNGEPTGGDWLDIFLSFVF  
+NKEQSSDVKEAINQEPVPHVQPDIATTTTHIQGLPPESRDLLDERGNFSKFTLG  
+DMEMLDVEGVADIDPNYKFNQLLIHNNALSSVLMGSHNGIEPEKVSLLYAGNGG  
+FGAKHDWNATVGYKNQQGDNVATLINVHMKNGSGLVIAGGEKGINNPSFCLYKE  
+DQLTGSQRALSQEEIRNKIDFMEFLAQNNAKLDNLSEKEKEKFQNEIEDFQKDS  
+KAYLDALGNDRIAFVSKKDPKHSALITEFGKGDLSYTLKDYGKKADRALDREKN  
+VTLQGNLKHDSVMFVNYSNFKYTNASKSPDKGVGVTNGVSHLDAGFSKVAVFNL  
+PDLNNLAITSFVRRNLENKLVTEGLSLQEANKLIKDFLSSNKELVGKALNFNKA  
+VADAKNTGNYDEVKKAQKDLEKSLRKREHLEKEVEKKLESKSGNKNKMEAKAQA  
+NSQKDKIFALINKEANRDARAIAYSQNLKGIKRELSDKLEKINKDLKDFSKSFD  
+EFKNGKNKDFSKAEETLKALKGSVKDLGINPEWISKVENLNAALNEFKNGKNKD  
+FSKVTQAKSDLENSVKDVIVNQKITDKVDNLNQAVSMAKATGDFSRVEQALADL  
+KNFSKEQLAQQTQKNESFNVGKKSEIYQSVKNGVNGTLVGNGLSGIEATALAKN  
+FSDIKKELNEKFKNFNNNNNNGLENEPIYAKVNKKKTGQVASPEEPIYAQVAKK  
+VNAKIDRLNQAASGLGGVGQAGFPLKRHDKVDDLSKVGRSVSPEPIYATIDDLG  
+GPFPLKRHDKVDDLSKVGRSVSPEPIYATIDDLGGPFPLKRHDKVDDLSKVGRS  
+VSPEPIYATIDDLGGPFPLKRHDKVDDLSKVGLSRNQELAQKIDNLSQAVSEAK  
+AGFFSNLEQTIDKLKDSTKYNSVNLWVESAKKVPASLSAKLDNYATNSHTRINS  
+NIQNGAINEKATGMLTQKNPEWLKLVNDKIVAHNVGSVPLSEYDKIGFNQKNMK  
+DYSDSFKFSTKLNNAVKDVKSSFTQFLANAFSTGYYSLARENAEHGIKNVNTKG  
+GFQKS
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&gt; F32_CagA
+MTNETIDQTTTPDQTGFVPQRFINNLQVAFIKVDNAVASFDPDQKPIVDKNDKD  
+NRQAYEKISQLREEYANKAIKNPAKKNQYFSDFINKSNDLINKDNLIAVDSSVE  
+SFRKFGDQRYQIFTSWVSLQKDPSKINTQQIRNFMENVIKPPISDDKEKAEFLR  
+SAKQSFAGIIIGNQIRSDEKFMGVFDESLKARQEAEKNAEPAGGDWLDIFLSFV  
+FNKKQSSDLKETLNQEPRPDFEQNLATTTTDIQGLPPEARDLLDERGNFFKFTL  
+GDVEMLDVEGVADKDPNYKFNQLLIHNNALSSMLMGSHSNIEPEKVSLLYGDNG  
+GPEARHDWNATVGYKNQQGNNVATLINAHLNNGSGLIIAGNEDGIKNPSFYLYK  
+EDQLTGLKQALSQEEIQNKVDFMEFLAQNNAKLDNLSEKEKEKFQTEIENFQKD  
+RKAYLDALGNDHIAFVSKKDPKHLALVTEFGNGELSYTLKDYGKKQDKALDGET  
+KTTLQGSLKYDGVMFVNYSNFKYTNASKSPNKGLGTTNGVSHLEANFSKVAVFN  
+LPNLNNLAITNYIRRDLEDKLWAKGLSPQEANKLIKDFLNSNKEMVGKVSNFNK  
+AVAEAKNTGNYDEVKKAQKDLEKSLRKREHLEKEVAKKLESRNDNKNRMEAKAQ  
+ANSQKDKIFALISQEASKEARVATFDPYLKGVRSELSDKLENINKNLKDFGKSF  
+DELKSGKNNDFSKAEETLKALKDSVKDLGINPEWISKIENLNAALNDFKNGKNK  
+DFSKVTQAKSDLENSIKDVIINQKITDKVDNLNQAVSEIKLTGDFSKVEQALAE  
+LKNLSLDLGKNSDLQKSVKNGVNGTLVSNGLSKTEATTLTKNFSDIRKELNEKL  
+FGNSNNNNNGLKNNTEPIYAQVNKKKTGQATSPEEPIYAQVAKKVSAKIDQLNE  
+ATSAINRKIDRINKIASAGKGVGGFSGAGRSASPEPIYATIDFDEANQAGFPLR  
+RSAAVNDLSKVGLSREQELTRRIGDLSQAVSEAKTGHFGNLEQKIDELKDSTKK  
+NALKLWVESAKQVPTSLQAKLDNYATNSHTRINSNVQSGTINEKATGMLTQKNP  
+EWLKLVNDKIVAHNVGSAPLSAYDKIGFNQKNMKDYSDSFKFSTKLNNAVKDIK  
+SSFVQFLTNTFSTGSYSLMKANVEHGVKNTNTKGGFQKS
+</code></pre></div>
+<ul>
+<li>¿Cuáles son las diferencias en las predicciones del motivo EPIYA?</li>
+<li>¿Existen diferencias en la asignación por homología?</li>
+</ul>
+<h3 id="ejercicio-adicional-3-usando-jalview-con-la-proteina-tir-aislada-de-e-coli-patogenica">Ejercicio Adicional 3. Usando JalView con la proteína TIR aislada de E. coli patogénica</h3>
+<p>Las proteínas TIR son secretadas por la cepa patogénica de E. coli y se asocian a ciertas células de mamíferos, proyectando sus extremos N- y C-terminal a través de la membrana plasmática hacia la parte interior de la célula huésped tomando el control de la regulación celular local, por ejemplo induciendo junto con otras proteínas la formación de un pedestal de actina esencial para el ciclo patogénico de esta bacteria. La porción central de la proteína TIR permanece en el compartimiento extracelular y se asocia a la bacteria. Existen numerosas secuencias de TIR obtenidas de diferentes aislamientos de E. coli patogénica almacenadas en la base de datos UNIPROT.</p>
+<ol>
+<li>Cargue el alineamiento de proteínas TIR que se encuentra en la carpeta MSA del TP de la materia (tir_aligned.fasta) en la ventana de JalView.</li>
+<li>La expresión regular del motivo de unión a Ciclina es: <code>[RK].L.{0,1}[FLMP]</code></li>
+</ol>
+<p>La expresión regular del motivo de fosforilación por CDK (quinasa dependiente de ciclina) es: <code>[ST]P.{0,2}[RK]</code></p>
+<p>La fosforilación de proteínas durante el ciclo celular es realizada por complejos Ciclina-CDK, y requiere la presencia de ambos motivos en la proteína a ser fosforilada.</p>
+<p>Utilice las expresiones regulares para encontrar estos motivos en las secuencias. Para poder resaltarlas, en la ventana donde ingresó la expresión regular cliquee en New Feature. Ahí puede crear un grupo y seleccionar un color para el mismo.</p>
+<ul>
+<li>¿Todas las secuencias tienen ambos motivos?</li>
+<li>¿Los distintos ejemplos de motivos están alineados o se encuentran en lugares diferentes de la secuencia?</li>
+<li>
+<p>Algunos motivos están yuxtapuestos ¿considera que pueden ser los dos funcionales al mismo tiempo?</p>
+</li>
+<li>
+<p>Existe evidencia que el ciclo celular puede ser interrumpido por la cepa patogénica de E. coli (PMID: 11598051).</p>
+</li>
+</ul>
+<p>El dominio SH2 une un motivo que posee una tirosina fosforilada. Busque el motivo SH2 utilizando la expresión regular del motivo SH2: <code>Y..[IVLM]</code></p>
+<ul>
+<li>¿Todas las secuencias tienen motivos SH2?</li>
+<li>¿En base a tu respuesta anterior, espera que las proteínas TIR sean o no fosforiladas por tirosin quinasas dentro de la célula?</li>
+</ul>
+<h3 id="ejercicio-adicional-4-usando-jalview-con-la-proteina-caga-aislada-de-la-cepa-helicobacter-patogenica">Ejercicio Adicional 4. Usando JalView con la proteína CagA aislada de la cepa Helicobacter patogénica</h3>
+<p>Las proteínas efectoras CagA son secretadas por la cepa patogénica de Helicobacter ingresando directamente al citoplasma de la célula huésped, en parte utilizando un motivo funcional llamado motivo EPIYA. Estas proteínas modulan el citoesqueleto de actina y el estado general de la célula.</p>
+<ol>
+<li>Cargue el alineamiento de las proteínas CagA.(CagA_aligned.fasta).</li>
+<li>Busque el motivo EPIYA utilizando la expresión regular del motivo: <code>EP[IL]Y[TAG]</code></li>
+<li>¿Las secuencias de CagA: tienen un motivo EPIYA o más de uno?</li>
+<li>¿Todas las secuencias tienen el mismo número?</li>
+<li>¿Cuál es el mayor número de motivos EPIYA en una proteína?</li>
+<li>¿Algún motivo EPIYA se superpone con algún motivo SH2?</li>
+<li>¿Cree que las proteínas CagA son fosforiladas por tirosin-quinasas?</li>
+</ol>
+<h3 id="ejercicio-adicional-5-familiarizandose-con-la-base-de-datos-elm">Ejercicio Adicional 5. Familiarizándose con la base de datos ELM.</h3>
+<ol>
+<li>Realice la búsqueda de la secuencia de la proteína Paxillina (P49023) en ELM, utilizando los parámetros por defecto. Compare los resultados con una búsqueda de la misma secuencia pero modificando el parámetro cellular compartment plasma membrane.</li>
+<li>Busque la proteína SRC_MOUSE (P05480) en ELM.</li>
+<li>¿Existen instancias anotadas?</li>
+<li>Si no, ¿cuál es la instancia anotada más cercana que se puede encontrar?. Investigue de dónde proviene esta información.</li>
+<li>Busque en ELM la proteína MDM4_HUMAN y encuentre el motivo de unión a USP (DOC_USP7_MATH_1).</li>
+<li>¿Cuántas instancias del motivo se encuentran en esta secuencia?</li>
+<li>Busque en ELM la proteína AMPH_HUMAN y encuentre la clase <code>LIG_Clathr_ClatBox_1</code>.</li>
+<li>¿Cuál es la relevancia biológica de cada una de estas instancias?</li>
+<li>
+<p>¿La anotación de la relevancia biológica coincide con la estructura globular?</p>
+</li>
+<li>
+<p>Busque todas las instancias anotadas para Homo sapiens que contienen el término cilium (pista: Usa http://elm.eu.org/elms/browse_instances.html).</p>
+</li>
+<li>¿Cuántas instancias hay?</li>
+<li>
+<p>¿Qué evidencia experimental está anotada y cuán confiable es esta evidencia?</p>
+</li>
+<li>
+<p>Busque todas las instancias anotadas que contienen el término ”retinoblastoma” (Pista: usa http://elm.eu.org/elms/browse_instances.html).</p>
+</li>
+<li>Compare el número de instancias humanas con el número de instancias virales.</li>
+<li>¿Por qué hay tantas proteínas virales que interactúan con retinoblastoma? (Pista: La respuesta está en el abstract de la clase del motivo <code>LIG_Rb_LxCxE_1</code>)</li>
+</ol>
+<p>{% endif %}</p><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body></html>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Area Bioinformatica UNSAM
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,979 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Sitio Web del Curso de Bioinformática Estructural">
+      
+      
+      
+        <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/motivosRegEx/">
+      
+      
+      
+      <link rel="icon" href="../../img/logo-unsam-negro.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>TP N°7 - Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Cabin";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="skyblue" data-md-color-accent="skyblue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#recursos-a-utilizar" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" class="md-header__button md-logo" aria-label="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" data-md-component="logo">
+      
+  <img src="../../img/logo-unsam-negro.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TP N°7
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="skyblue" data-md-color-accent="skyblue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="skyblue" data-md-color-accent="skyblue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bioinformatica-iib/estructural" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    estructural
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Inicio
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../acerca/" class="md-tabs__link">
+      Acerca de
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../contenidos/" class="md-tabs__link">
+      Contenidos
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../cronograma/" class="md-tabs__link">
+      Cronograma
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../docentes/" class="md-tabs__link">
+      Docentes
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../teoricas/inicio/" class="md-tabs__link">
+        Teoricas
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../inicio/" class="md-tabs__link">
+        Practicos
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" class="md-nav__button md-logo" aria-label="Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas" data-md-component="logo">
+      
+  <img src="../../img/logo-unsam-negro.png" alt="logo">
+
+    </a>
+    Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bioinformatica-iib/estructural" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    estructural
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acerca/" class="md-nav__link">
+        Acerca de
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contenidos/" class="md-nav__link">
+        Contenidos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cronograma/" class="md-nav__link">
+        Cronograma
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docentes/" class="md-nav__link">
+        Docentes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Teoricas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Teoricas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teoricas/inicio/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Practicos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Practicos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inicio/" class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>TP N°7</h1>
+
+<html><head><style>
+details > summary:first-of-type {
+   display: list-item;
+}
+details summary { 
+  cursor: pointer;
+}
+
+details summary > * {
+  display: inline;
+}
+
+/* ol { list-style-type: upper-alpha; } */
+</style>
+
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head><body><p>{% if page.construccion %}</p>
+<p><strong>Pagina en construccion</strong></p>
+<p>{% else %}</p>
+<h2 id="recursos-a-utilizar">Recursos a utilizar</h2>
+<ul>
+<li>Regex101: <a href="https://regex101.com">https://regex101.com</a></li>
+<li>WebLogo3: <a href="http://weblogo.threeplusone.com/create.cgi">http://weblogo.threeplusone.com/create.cgi</a></li>
+<li>MEME: <a href="https://meme-suite.org/meme/tools/meme">https://meme-suite.org/meme/tools/meme</a></li>
+<li>SLiMSearch: <a href="http://slim.icr.ac.uk/slimsearch/">http://slim.icr.ac.uk/slimsearch/</a></li>
+<li>SLiMFinder: <a href="http://www.slimsuite.unsw.edu.au/servers/slimfinder.php">http://www.slimsuite.unsw.edu.au/servers/slimfinder.php</a></li>
+</ul>
+<h2 id="objetivos">Objetivos</h2>
+<ul>
+<li>Familiarizarse con la simbología utilizada en expresiones regulares</li>
+<li>Utilizar la simbología para poder realizar búsquedas basadas en texto</li>
+<li>Familiarizarse con la creación e interpretación de logos de secuencia.</li>
+<li>Familiarizarse con el análisis de enriquecimiento de motivos en un set de secuencias</li>
+<li>Identificar candidatos a nuevos motivos.</li>
+</ul>
+<h2 id="introduccion">Introducción</h2>
+<p>La simbología comúnmente utilizada en expresiones regulares es:</p>
+<div class="table">
+
+| Sı́mbolo | Definición  |
+|:-------:|:-----------:|
+| `.`   | Cualquier aminoácido es permitido |
+| `[XY]` | Solo los aminoácidos X e Y son permitidos |
+| `[^XY]` | Los aminoácidos X e Y están prohibidos | 
+| `{min,max}` | Número mı́nimo y máximo de veces que se puede repetir una posición |
+| `^X` | El aminoácido X se encuentra en el extremo N-terminal | 
+| `X$` | El aminoácido X se encuentra en el extremo C-terminal |
+| `A|B` | Se encuentra, o bien el aminoácido A, o bien el aminoácido B |
+| `(AB)|(CD)` | Se encuentran, o bien, la secuencia de aminoácidos AB, o bien, la secuencia de aminoácidos CD |
+
+Las expresiones regulares admiten otros símbolos especiales con funciones más avanzadas.
+
+Estos símbolos nos permiten definir patrones que son observados en proteínas naturales para luego identificarlos en otras proteínas y ser puestos a prueba experimentalmente.
+
+Esta forma de escribir las expresiones regulares es una convención. Es muy utilizada para la búsqueda de motivos y también en lenguajes de programación, como por ejemplo Python. Existen otras, así que debemos conocer la sintaxis correcta de la aplicación o sistema que estemos usando.
+
+## Ejercicios
+### Ejercicio 1. Familiarizándonos con las expresiones regulares
+Los receptores nucleares interactúan con diversas proteínas mediantes un motivo lineal llamado NRBox (Nuclear Receptor Box) (Heery,1997). Existen numerosas estructuras de péptidos unidos a diferentes receptores nucleares (PDBs: 3CS8, 2GPO, 1GWQ, 1RJK, 1M2Z) que permitieron estudiar y entender algunas características de la interacción.
+
+La evidencia experimental recolectada de la literatura indica que:
+* El motivo NRBox forma una hélice alfa
+* Existen tres leucinas cuyas cadenas laterales se encuentran en una misma cara de la hélice e interactúan con un bolsillo hidrofóbico en la superficie del receptor nuclear (Figura 1).
+
+<p style="text-align:center">
+<a class="glightbox" href="./img/NRBox.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/NRBox.png" alt="" style="max-width:70%"></a>
+</p>
+
+<figcaption align="left">
+
+**Figura 1.** Fragmento de la proteína PGC-1 alfa unido al receptor nuclear PPAR-gamma. Se muestra en naranja el backbone de la proteína representado en Cartoon y en azul las tres leucinas que median la interacción representadas en Sticks (PDB:3CS8) y que integran el motivo NRBox.
+
+</figcaption>
+<br>
+<br>
+
+Los siguientes fragmentos de secuencia de distintas proteínas incluyen regiones que interactúan con diversos receptores nucleares y cuya interacción se verificó de manera experimental por distintos métodos.
+
+<div class="highlight"><pre><span></span><code>&gt;sp|Q15648|MED1_HUMAN|644-650
+SMAGNTKNHPMLMNLLKDNPAQDFSTL
+&gt;sp|O43593|HAIR_HUMAN|565-571
+AKHLLSGLGDRLCRLLRREREALAWAQ
+&gt;sp|Q16881-4|TRXR1_HUMAN|46-52
+GPTLKAYQEGRLQKLLKMNGPEDLPKS
+&gt;sp|P48552|NRIP1_HUMAN|500-506
+DVHQDSIVLTYLEGLLMHQAAGGSGTA
+&gt;sp|Q9UQ80|PA2G4_HUMAN|353-359
+YKSEMEVQDAELKALLQSSASRKTQKK 
+&gt;sp|Q90ZL7|Q90ZL7_DANRE|69-75
+VQHADGEKSNVLRKLLKRANSYEDAVM
+&gt;sp|Q9UBK2|PRGC1_HUMAN|143-149
+PPPQEAEEPSLLKKLLLAPANTQLSYN 
+&gt;sp|Q9JL19|NCOA6_MOUSE|1494-1500
+MSPAMREAPTSLSQLLDNSGAPNVTIK
+&gt;sp|Q15596|NCOA2_HUMAN|689-695
+HGTSLKEKHKILHRLLQDSSSPVDLAK
+&gt;sp|Q92793|CBP_HUMAN|69-75
+LVPDAASKHKQLSELLRGGSGSSINPG
+</code></pre></div>
+
+1. Copie y pegue las secuencias en el recuadro Test String en [regex101](https://regex101.com). 
+
+    Escribiendo en el campo Regular Expression, intente definir una expresión regular que permita identificar el motivo que media la interacción de estas proteínas con los receptores nucleares y que cumpla con la evidencia experimental observada.
+
+    <ul class="block-list has-radius is-primary">
+    <li class="is-outlined is-info">
+    <span style="font-weight:bold;">Regex101</span> no es una herramienta que se use comúnmente. Simplemente es un recurso educativo para entender expresiones regulares.
+    </li>
+    </ul>
+
+2. Considerando que el motivo se encuentra en una hélice, 
+    * ¿Modificaría la expresión regular que obtuvo?
+    * ¿Cuál sería la utilidad de definir una expresión regular más específica?
+
+### Ejercicio 2. Un poquito más de expresiones regulares
+La reparación del ADN durante la replicación ocurre por un proceso llamado Translesion synthesis (TLS). En este proceso, una polimerasa TLS, inserta un nucleótido en la lesión del ADN y luego, una polimerasa de la familia B extiende el templado. La acción coordinada de estas polimerasas se logra por la interacción de proteínas de andamiaje como PCNA (Proliferating Cell Nuclear Antigen) y la polimerasa TLS Rev1.
+
+Existen estructuras cristalográficas de distintos péptidos unidos a Rev1 (PDBs: 2N1G, 2LSK, 2LSJ, 4FJO, 2LSI y 4GK5) que permiten entender algunas características de la interacción.
+
+La evidencia experimental recolectada de la literatura indica:
+* La interacción está mediada principalmente por dos residuos consecutivos de fenilalanina (Ohashi,2009).
+* Las fenilaninas interactúan con un bolsillo hidrofóbico en la superficie de Rev1 (Pozhidaeva, 2012; Zhao,2017).
+* Las fenilalaninas se encuentran en el primer giro de una hélice α.
+* Se requieren al menos 4 residuos posteriores a las fenilalaninas que formen parte de una hélice (Ohashi, 2009)
+* El resto de la región de interacción se pliega formando hélices α de longitud variable (Pustovalova, 2016)
+* Se observan uno o dos residuos cargados positivamente en la 2da y/o 3ra posición luego de las fenilalaninas, que median interacciones electrostáticas con una superficie acídica de Rev1. La posición de estos residuos es variable: también pueden estar inmediatamente después de las fenilalaninas.
+
+<p style="text-align:center">
+<a class="glightbox" href="./img/Rev1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/Rev1.png" alt="" style="max-width:70%"></a>
+</p>
+
+<figcaption align="left">
+
+**Figura 2.** Fragmento de la proteína Rev1 unido al motivo RIR de la polimerasa η (pol eta) humana. Se muestra en naranja el backbone del segmento de polimerasa η representado en Cartoon y en azul las dos fenilalaninas conservadas que median la interacción representadas en Sticks (PDB: 2LSK) y que conforman el motivo RIR.
+
+</figcaption>
+<br>
+<br>
+
+Los siguientes fragmentos de secuencia corresponden a regiones de distintas proteínas que participan en la reparación del ADN y que se unen a la proteína Rev1. La interacción se verificó de manera experimental por distintos métodos.
+
+<div class="highlight"><pre><span></span><code>&gt;sp|Q03834|MSH6_YEAST|31-38
+SQKKMKQSSLLSFFSKQVPSGTPSKKVQ
+&gt;sp|Q04049|POLH_YEAST|625-632
+KKQVTSSKNILSFFTRKK
+&gt;sp|Q60596|XRCC1_MOUSE|191-200
+DDSANSLKPGALFFSRINKTSSASTSDPAG
+&gt;sp|Q9H040|SPRTN_HUMAN|418-428
+RPRLEDKTVFDNFFIKKEQIKSSGNDPKYST
+&gt;sp|Q15054|DPOD3_HUMAN|236-245
+NKAPGKGNMMSNFFGKAAMNKFKVNLDSEQ
+&gt;sp|Q9UNA4|POLI_HUMAN|569-579
+SCPLHASRGVLSFFSKKQMQDIPINPRDHLS
+&gt;sp|Q9Y253|POLH_HUMAN|481-490
+TATKKATTSLESFFQKAAERQKVKEASLSS 
+&gt;sp|Q9Y253|POLH_HUMAN_2|529-539
+PFQTSQSTGTEPFFKQKSLLLKQKQLNNSSV
+&gt;sp|Q9QUG2|POLK_MOUSE|564-575
+LAKPLEMSHKKSFFDKKRSERISNCQDTSRCK
+&gt;sp|Q9UBT6|POLK_HUMAN|565-576
+FVKPLEMSHKKSFFDKKRSERKWSHQDTFKCE
+</code></pre></div>
+
+1. Copie y pegue las secuencias en el recuadro Test String en regex101 (https://regex101.com).
+    Escribiendo en el campo Regular Expression, intente definir una expresión regular que permita identificar el motivo que media la interacción de estas proteínas con Rev1 y que cumpla con la evidencia experimental observada.
+
+2. Copie y pegue las secuencias en un archivo de texto plano. 
+
+3. Abra el archivo en Jalview y realice un alineamiento con Clustal. Explore el alineamiento. ¿Quedaron alineadas las posiciones invariables del motivo?
+
+4. Suba el alineamiento obtenido en la página web de [weblogo](http://weblogo.threeplusone.com/) para construir un logo de secuencia. 
+
+    <ul class="block-list has-radius is-primary">
+    <li class="is-outlined is-info">
+    Un <span style="font-weight:bold;">logo de secuencia</span> consiste en un gráfico que muestra un apilamiento de símbolos (las letras que denominan a cada aminoácido o nucleótido) por cada posición del alineamiento. La altura total es proporcional a la conservación de la secuencia en dicha posición; la altura de cada símbolo indica la frecuencia relativa de cada símbolo en esa posición. De esta forma, un logo provee una descripción más precisa de la conservación secuencial que una secuencia consenso, y provee una medida del contenido de información de cada posición. 
+    </li>
+    </ul>
+
+    No trabajaremos en profundidad el contenido de información, pero podemos conocer su forma matemática.
+
+    El contenido de información (IC) de una posición L del alineamiento es la diferencia entre la incerteza esperada (H previa, corresponde a todos los estados posibles) y la incerteza observada en la posición del alineamiento (H posterior, todos los estados observados), según surge de su definición:
+
+    <a class="glightbox" href="https://latex.codecogs.com/svg.latex?%5CLarge&amp;space;IC_%7B(L)%7D=H_%7Bprevio%7D-H_%7Bposterior%7D" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://latex.codecogs.com/svg.latex?%5CLarge&amp;space;IC_%7B(L)%7D=H_%7Bprevio%7D-H_%7Bposterior%7D" title="\Large IC_{(L)}=H_{previo}-H_{posterior}"></a>
+
+    donde para proteínas:
+
+    <a class="glightbox" href="https://latex.codecogs.com/svg.latex?%5CLarge&amp;space;H_%7Bprevio%7D=log_%7B2%7D20%20=%204.32%5C%20bits" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://latex.codecogs.com/svg.latex?%5CLarge&amp;space;H_%7Bprevio%7D=log_%7B2%7D20%20=%204.32%5C%20bits" title="\Large H_{previo}=log_{2}20 = 4.32 bits"></a>
+    <br>
+    <a class="glightbox" href="https://latex.codecogs.com/svg.latex?%5CLarge&amp;space;H_%7Bposterior%7D=-%5Csum_%7Bi=1%7D%5E%7BM%7D%5C%20f(a,L)%5C%20log_%7B2%7Df(a,L)" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://latex.codecogs.com/svg.latex?%5CLarge&amp;space;H_%7Bposterior%7D=-%5Csum_%7Bi=1%7D%5E%7BM%7D%5C%20f(a,L)%5C%20log_%7B2%7Df(a,L)" title="\Large H_{posterior}=-\sum_{i=1}^{M}\ f(a,L)\ log_{2}f(a,L)"></a>
+
+    Para secuencias nucleotídicas La incerteza previa tiene un valor máximo de 2 bits (log<sub>2</sub> 4) correspondiente al caso en que todos los símbolos (o nucleótidos) sean igualmente probables. 
+
+    Por lo tanto, el contenido de información de una posición del alineamiento será máximo cuando todos los símbolos de dicha posición sean iguales (y por lo tanto, se verifique que U posterior = 0).
+
+    De esta manera, el contenido de información está directamente relacionado con el **grado de conservación**.
+
+    Puede utilizar las siguientes opciones (o probar las variantes que crea convenientes) al construir el logo:
+    * *Output Format.* PNG High Resolution
+    * *Sequence type:* Protein
+    * *Scale stack widths:* No tiene que estar tildado
+    * *Composition:* No adjustment for composition
+    * *Error bars:* No tiene que estar tildado
+    * *Show Sequence Ends labels:* No tiene que estar tildado
+    * *Version fineprint:* No tiene que estar tildado
+    * *X-axis Label:* Position
+    * *Y-axis Label:* Information Content
+    * *Y-axis scale:* 4.5
+    * *Y-axis tic spacing:* 0.5
+    * *Color scheme:* Chemistry (AA)
+
+5. Analice el logo de secuencia obtenido. 
+    * Recuerde, ¿qué indican la altura y el color de cada letra?
+    * ¿Qué posiciones de este logo tienen mayor y menor contenido de información? ¿Se relacionan con las posiciones del motivo?
+    * ¿Puede identificar posiciones definidas y variables del motivo a través del logo de secuencia?
+    * ¿Puede relacionar el logo de secuencia con la expresión regular que describe al motivo? 
+
+
+### Ejercicio 3. Identificando sobre-representación de motivos en un conjunto de secuencias
+
+El algoritmo MEME (*Multiple EM for Motif Elicitation*) permite la identificación de motivos novedosos y sin gaps, es decir, identifica patrones de longitud fija y recurrentes en un conjunto de secuencias, sin necesidad de tener información previa sobre el motivo, y sin necesidad de alinear los motivos! 
+
+MEME se utiliza mucho para motivos lineales en proteínas y también para identificar sitios funcionales a nivel genómico, como sitios de unión al ADN de factores de transcripción o maquinaria transcripcional, por ejemplo los TATA box y otros elementos vinculados.
+
+MEME divide patrones de longitud variable en dos o más motivos separados. 
+
+1. Ingrese las secuencias del ejercicio anterior sin alinear en MEME, en la sección: **Input the primary sequences**. (Puede subir un archivo con las secuencias, o seleccionar la opción Type in sequences en el menú desplegable para habilitar un cuadro de texto donde pegarlas).
+
+    Puede utilizar las siguientes opciones (o puede probar las variantes que crea convenientes):
+
+    * *Select the site distribution:*
+
+        Esta opción se relaciona con el número de veces que aparece un motivo en la secuencia.
+        * Seleccione: *Zero or One Occurrence Per Sequence (zoops)* 
+
+    * *Select the number of motifs:*
+
+        Esta opción se relaciona con el número de motivos que MEME va a buscar.
+        * Ingrese: 10.
+
+    En las opciones **avanzadas**:
+
+    * *What should be used as the background model?*
+
+        Esta opción se relaciona con la distribución esperada de aminoácidos o nucleótidos que debe usar MEME.
+
+        Por default, (0-order) MEME calcula una distribución background a partir de las secuencias primarias ingresadas por el usuario.
+
+        * Seleccione: *0-order model of sequences*
+
+    * *How wide can motifs be?*
+
+        Esta opción se refiere a la longitud mínima y máxima del motivo. 
+
+        Ingrese:
+
+        * *Minimum width:* 4
+        * *Maximum width:* 12
+
+        * ¿Por qué cree que elegimos estos parámetros?
+
+    * *How many sites must each motif have?*
+
+        Ingrese:
+
+        * *Minimum sites:*  2
+        * *Maximum sites:*  10
+
+        * ¿Con qué se relaciona este parámetro?
+
+2. Repita la búsqueda pero ahora, en las opciones avanzadas, habilite una opción más. 
+
+    * *Should MEME shuffle the sequences?* Esta opción reescribe las secuencias en orden aleatorio.
+
+    Seleccione: *Shuffle the sequences*
+
+    * Observe el resultado obtenido. ¿Recupera MEME el logo de secuencia esperado?
+    * Compare los resultados con los de la búsqueda anterior. ¿Cómo podría explicar las diferencias observadas?
+
+### Ejercicio 4. Utilizando una expresión regular obtenida de instancias experimentales para identificar motivos nuevos
+
+La expresión regular del motivo de unión a Rev1 está definida en la base de datos ELM (que veremos más adelante) como: `FF[^P]{0,2}[KR]{1,2}[^P]{0,4}`
+
+* ¿Usted llegó a algo similar? 
+
+    <ul class="block-list has-radius is-primary">
+    <li class="is-outlined is-danger">
+    Si no entiende esta expresión regular, o no llegó a algo parecido ¡consulte a sus docentes!
+    </li>
+    </ul>
+
+SLiMSearch es una herramienta que, utilizando expresiones regulares, permite buscar la presencia de motivos conocidos en las proteínas almacenadas en UniProt y priorizarlos según datos adicionales. Por ejemplo, SLiMSearch informa las características de la arquitectura de regiones y dominios de la secuencia portadora del motivo, sus variantes secuenciales y modificaciones postraduccionales, su estructura (en caso de ser conocida), medidas de conservación evolutiva y accesibilidad de los motivos, y el enriquecimiento del posible motivo en funciones conocidas.
+
+Vaya a la web de [SLiMSearch](http://slim.icr.ac.uk/slimsearch/) e ingrese la expresión regular del motivo indicada en este ejercicio. En el campo *Choose species* puede elegir sobre qué proteoma buscar; por default se buscará en *Homo sapiens*.
+
+1. ¿Cuántos motivos (hits) y cuántas proteínas obtuvo?
+2. Explore la lista de proteínas. ¿Encuentra algunas de las proteínas o sus homólogos que estaban en sus secuencias originales? ¿Qué significa si las encontró?
+3. En la parte superior de la tabla haga click en *expand*.
+
+    Las últimas columnas que están resumidas van a mostrar más información.
+    * ¿Cuáles de estos campos le parecen más interesantes para intentar reconocer verdaderos motivos?
+
+4. Busque en [UniProt](https://www.uniprot.org/) a Rev1 (Q9UBZ9). ¿Cuál es la localización celular de Rev1?
+
+5. Explore la lista de proteínas y observe las coloreadas en amarillo. Tienen un *Warning*. Al pie de la tabla se indica lo que significa cada tono de amarillo.
+    * ¿A qué se debe el warning de la **ProInterleukina 16, IL16**? ¿Por qué cree que es útil?
+    * Observe la **DNA polymerase delta subunit 3 (POLD3)**.
+        * ¿Se corresponde con la región de la POLD3 en su conjunto de secuencias?
+        * ¿Porqué tiene un warning? (una pista: Observe la columna Domain y coloque el mouse sobre el nombre del dominio para ver sus límites).
+
+6. Busque en la lista la proteína **Kinesin-like protein KIF26A (KIF26A)**, y averigüe su localización.
+    * ¿Tiene sentido tener esta proteína como candidata para evaluar su interacción con Rev1?
+
+7. SLiMSearch permite utilizar filtros para mejorar la búsqueda.
+
+    Para eso vaya a la pestaña *Filters*.
+
+    Haga click en *Localisation*.
+
+    Luego, en la tabla busque los términos relacionados al núcleo (nuclear part, nucleus, etc serían los 6 primeros que salen de escribir “nucl” en la búsqueda) y selecciónelos para realizar un *Filter In* (es decir, quedarse con las instancias que poseen dicha localización).
+
+8. Encuentre en la lista de proteínas filtradas la proteína: **Chromosome transmission fidelity protein 18 homolog (CHTF18)** (Q8WVB6).
+
+    Búsquela en ProViz.
+
+    Ubique la región donde se encuentra el posible motivo sugerido por SLiMSearch.
+
+    * Evalúe el contexto estructural. ¿Es favorable?
+    * Evalúe el grado de conservación. ¿Está conservado?
+    * ¿Le parece que es un buen candidato para evaluar?
+
+9. Vaya a *Functions*.
+    * ¿Qué funciones están enriquecidas en su lista de proteínas filtradas?
+
+    Según los conocimientos que posee sobre este motivo, elija las funciones correspondientes para filtrar los datos.
+
+    * ¿Cuántos *Hits* y cuántas proteínas obtiene ahora?
+
+    * Encuentre en la lista de proteínas filtradas la proteína: **Chromosome transmission fidelity protein 18 homolog (CHTF18)** (Q8WVB6). ¿Le sigue pareciendo que es un buen candidato para evaluar?
+
+
+### Ejercicio 5. Utilice un conjunto de secuencias relacionadas para identificar motivos de novo 
+
+La longitud y variabilidad de los motivos lineales hace difícil distinguir patrones que ocurren al azar de aquellos que constituyen verdaderos motivos en proteínas naturales. La herramienta SLiMFinder permite identificar motivos estadísticamente sobrerrepresentados en un conjunto de secuencias relacionadas. A diferencia de MEME, SLiMFinder permite identificar motivos con segmentos de secuencia y longitud variable. Incorpora filtros para concentrar la búsqueda en regiones desordenadas o de mayor conservación relativa, para aumentar así la confiabilidad en la predicción. Los resultados se presentan con un valor de significancia estadística que estima la probabilidad de que el motivo se hubiera encontrado por azar, adaptado al tamaño y composición de las secuencias provistas por el usuario. De esta forma, SLiMFinder otorga un método eficiente y con baja tasa de falsos positivos para descubrir nuevos motivos.
+
+1. Vaya a la web de [SLiMFinder](http://www.slimsuite.unsw.edu.au/servers/slimfinder.php) y pegue las secuencias de unión a Rev1 del ejercicio 2 en el campo de la derecha (Alternative fasta input). 
+
+2. En la opción *Masking Options* puede decidir que sólo se consideren motivos predichos en regiones desordenadas (*Disorder masking*) y/o conservadas evolutivamente (*Conservation masking*). Sobre la base de lo que conoce de este motivo, ¿qué filtros activaría?
+
+3. Revise los resultados. En la pestaña *main* encontrará los resultados generales de la predicción de motivos, mientras que la pestaña *occ* detallará en qué proteínas ocurren. ¿Qué motivos se predicen? ¿Coinciden con lo esperado?
+
+## Recording
+- Intro [[MP4]](https://drive.google.com/file/d/1ZP8L1aE1Q3nTTfSurIvlLvQ_pZkhu6-X/view?usp=sharing)
+- Intermedio [[MP4]](https://drive.google.com/file/d/1fBCyn-muAAJrqJenEuIGfRdqdp-0OLlb/view?usp=sharing)
+- Cierre [[MP4]](https://drive.google.com/file/d/19C7UD50jNQf4lM81c1zskR-9IkXFj4kS/view?usp=sharing)
+
+{% endif %}</div><script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body></html>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Area Bioinformatica UNSAM
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
