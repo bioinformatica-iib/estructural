@@ -1,22 +1,25 @@
 # site
 # --- editar y ajustar de acuerdo al curso 
-site_name: Nombre del Curso
-site_description: "Sitio Web del Curso"
-site_author: "Nombre Apellido"
+site_name: Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
+site_description: "Sitio Web del Curso de Bioinformática Estructural"
+# site_author: "Nombre Apellido"
 site_url: https://bioinformatica-iib.github.io/estructural/
 
 # repository
 # --- si el sitio está alojado en un repo, describirlo acá 
-repo_name: 'cursos-unsam-mkdocs-template'
-repo_url: https://github.com/trypanosomatics/cursos-unsam-mkdocs-template
+repo_name: 'estructural'
+repo_url: https://github.com/bioinformatica-iib/estructural
 
 # theme 
 # --- customizar apariencia editando palette 
 # --- consultar https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
 theme:
-  logo: 'img/favicon.png'  # este logo es el que aparece al lado del nombre del curso
-  favicon: img/favicon.png # este logo es el que aparece en la pestaña del chrome
+  logo: 'img/logo-unsam-negro.png'  # este logo es el que aparece al lado del nombre del curso
+  favicon: img/logo-unsam-negro.png # este logo es el que aparece en la pestaña del chrome
   name: material
+  font:
+    text: Cabin
+    code: Roboto Mono
   language: es 
   features:
     - search.suggest
@@ -33,14 +36,14 @@ theme:
     
   palette: 
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: skyblue
+      accent: skyblue
       toggle:
         icon: material/toggle-switch 
         name: Cambiar a modo oscuro
     - scheme: slate 
-      primary: indigo
-      accent: indigo
+      primary: skyblue
+      accent: skyblue
       toggle: 
         icon: material/toggle-switch-off-outline
         name: Cambiar a modo claro
@@ -50,6 +53,17 @@ plugins:
   - search
   - mkdocs-video 
   - awesome-pages
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: "100%"
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
 
   #- git-revision-date
   #- tags:
@@ -79,6 +93,8 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
 
 
 # extra
@@ -101,6 +117,12 @@ markdown_extensions:
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js # Esto permite que las tablas se puedan ordenar según la columna. Lo que no vi es como hacerlo selectivo para cada tabla.
   - javascripts/tablesort.js
+  - javascripts/mathjax.js # Esto es para formulas matematicas
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
 
 # Esto organiza lo que es la navegación. El nivel más alto (Inicio, Acerca de, etc) va a ser una pestaña en la barra de navegación
 # No hay dropdowns pero aparece en una navigation bar al costado que se puede o no integrar con la tabla de contenidos (comentando o descomentando toc.integrate en theme --> features -toc.integrate). 
@@ -112,18 +134,18 @@ nav:
     - Docentes: 'docentes.md'
     - Teoricas:
         - teoricas/inicio.md
-        - Teórica 1: teoricas/1-Teorica-Uno/index.md
-        - Teórica 2: teoricas/2-Teorica-Dos/index.md
-        - Teórica 3: teoricas/3-Teorica-Tres/index.md
-        - Resumen: teoricas/resumen.md
+    #    - Teórica 1: teoricas/1-Teorica-Uno/index.md
+    #    - Teórica 2: teoricas/2-Teorica-Dos/index.md
+    #    - Teórica 3: teoricas/3-Teorica-Tres/index.md
+    #    - Resumen: teoricas/resumen.md
     - Practicos: 
         - 'practicos/inicio.md'
-        - TP1: 'practicos/1-Trabajo-Practico-Uno/index.md'
-        - TP2: 'practicos/2-Trabajo-Practico-Dos/index.md'
-        - TP3: 'practicos/3-Trabajo-Practico-Tres/index.md'
-        - Resumen: 'practicos/resumen.md'
-    - Instructivos: instructivos.md
+    #    - TP1: 'practicos/1-Trabajo-Practico-Uno/index.md'
+    #    - TP2: 'practicos/2-Trabajo-Practico-Dos/index.md'
+    #    - TP3: 'practicos/3-Trabajo-Practico-Tres/index.md'
+    #    - Resumen: 'practicos/resumen.md'
+    #- Instructivos: instructivos.md
 
 # copyright
 # --- editar y ajustar de acuerdo al curso
-copyright: Copyright &copy; 2022 Area Bioinformatica UNSAM  
+copyright: Copyright &copy; 2024 Area Bioinformatica UNSAM  
