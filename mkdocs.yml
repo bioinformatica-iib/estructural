@@ -2,7 +2,7 @@
 # --- editar y ajustar de acuerdo al curso 
 site_name: Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
 site_description: "Sitio Web del Curso de Bioinformática Estructural"
-# site_author: "Nombre Apellido"
+#site_author: "Nombre Apellido"
 site_url: https://bioinformatica-iib.github.io/estructural/
 
 # repository
@@ -17,7 +17,7 @@ theme:
   logo: 'img/logo-unsam-negro.png'  # este logo es el que aparece al lado del nombre del curso
   favicon: img/logo-unsam-negro.png # este logo es el que aparece en la pestaña del chrome
   name: material
-  font:
+  font: 
     text: Cabin
     code: Roboto Mono
   language: es 
@@ -28,7 +28,7 @@ theme:
     - header.autohide
     - navigation.tracking
     - navigation.tabs
- #   - navigation.sections
+#    - navigation.sections
 #    - navigation.tabs.sticky # --> hace que la navigation bar baje cuando se escrolea.
 #    - navigation.indexes # Si se saca, cada section del index se puede ampliar INCOMPATIBLE CON toc.integrate y creo que con navigation tracking
     - toc.integrate # Integra la table of contents a la navigation
@@ -36,14 +36,14 @@ theme:
     
   palette: 
     - scheme: default
-      primary: skyblue
-      accent: skyblue
+      primary: blue
+      accent: blue
       toggle:
         icon: material/toggle-switch 
         name: Cambiar a modo oscuro
     - scheme: slate 
-      primary: skyblue
-      accent: skyblue
+      primary: blue
+      accent: blue
       toggle: 
         icon: material/toggle-switch-off-outline
         name: Cambiar a modo claro
@@ -96,7 +96,6 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
-
 # extra
 # --- editar los URLs, agregar los links especificos a cada cuenta, canal, etc. 
 # --- reordenar los bloques de iconos + links de acuerdo al gusto
@@ -132,13 +131,13 @@ nav:
     - Contenidos: 'contenidos.md'
     - Cronograma: 'cronograma.md'
     - Docentes: 'docentes.md'
-    - Teoricas:
+    - Teóricas:
         - teoricas/inicio.md
     #    - Teórica 1: teoricas/1-Teorica-Uno/index.md
     #    - Teórica 2: teoricas/2-Teorica-Dos/index.md
     #    - Teórica 3: teoricas/3-Teorica-Tres/index.md
     #    - Resumen: teoricas/resumen.md
-    - Practicos: 
+    - Prácticos: 
         - 'practicos/inicio.md'
     #    - TP1: 'practicos/1-Trabajo-Practico-Uno/index.md'
     #    - TP2: 'practicos/2-Trabajo-Practico-Dos/index.md'
@@ -148,4 +147,4 @@ nav:
 
 # copyright
 # --- editar y ajustar de acuerdo al curso
-copyright: Copyright &copy; 2024 Area Bioinformatica UNSAM  
+copyright: Copyright &copy; 2024 Area Bioinformática UNSAM  
