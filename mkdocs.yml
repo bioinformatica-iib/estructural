@@ -3,7 +3,7 @@
 site_name: Nombre del Curso
 site_description: "Sitio Web del Curso"
 site_author: "Nombre Apellido"
-#site_url: https://curso.unsam.edu.ar
+site_url: https://bioinformatica-iib.github.io/estructural/
 
 # repository
 # --- si el sitio está alojado en un repo, describirlo acá 
