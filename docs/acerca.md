@@ -33,7 +33,7 @@ El curso no requiere formación bioinformática previa o conocimientos previos d
 * **Alumnos de Doctorado UNSAM:** Sin costo.
 * **Estudiantes y profesionales de otras Universidades Públicas Nacionales:** $40000 (con posibilidad de beca total o parcial)
 * **Alumnos de Universidades Privadas:** $80000
-* **Alumnos / Docentes / Profesionales Internacionales:** USD $120
+* **Industria / Alumnos / Docentes / Profesionales Internacionales:** USD $120
 
 El pago se realiza por transferencia bancaria. Una vez inscriptos se enviará la información correspondiente.
 
