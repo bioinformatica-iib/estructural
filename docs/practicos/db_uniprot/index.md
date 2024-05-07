@@ -1,34 +1,6 @@
----
-layout: page
-title: TP N°1
-subtitle: Bases de Datos de proteínas
-data : false
-menubar_toc: true
-hero_height: is-small
-toc_title: CONTENIDOS
-construccion: false
----
+![Uniprot](img/feature.png){ width="250", align="left" }
 
-<style>
-details > summary:first-of-type {
-   display: list-item;
-}
-details summary { 
-  cursor: pointer;
-}
-
-details summary > * {
-  display: inline;
-}
-
-/* ol { list-style-type: upper-alpha; } */
-</style>
-
-{% if page.construccion %}
-
-**Pagina en construccion**
-
-{% else %}
+# **TP 1**. Introducción a bases de Datos { markdown data-toc-label = 'TP 1' }
 
 ## Recursos Online
 
@@ -44,16 +16,17 @@ details summary > * {
 * Familiarizarse con el uso de la base de datos InterPro
 
 ## Materiales
-* [Uniprots IDs de p53](https://drive.google.com/file/d/1NWZrgdZescABRksw890SPZXpaQ4td06T/view?usp=sharing)
+
+[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1NWZrgdZescABRksw890SPZXpaQ4td06T/view?usp=sharing){ .md-button .md-button--primary }
 
 ## Organización de la guía
-Cada guía consta de una introducción a la herramienta, seguida de los ejercicios a realizar en el TP.
+Cada guía consta de una introducción a la herramienta, seguida de los ejercicios a realizar en el trabajo práctico.
 
 ## UniProt
 UniProt es la colección más abarcativa y actualizada de secuencias de proteínas, las cuales se encuentran anotadas a múltiples niveles. Esta base de datos debería ser el primer paso para cualquier investigador/a que esté buscando la información disponible para una proteína, ya que es tan abarcativa que evita el esfuerzo de integrar los datos de múltiples fuentes.
 
 ### UniProtKb. The UniProt KnowledgeBase.
-La mayor base de datos de Uniprot es UniProtKB (UniProt KnowledgeBase) que está dividida en dos secciones: TrEMBL y Swiss-Prot.
+La mayor base de datos de Uniprot es UniProtKB (UniProt **K**nowledge**B**ase) que está dividida en dos secciones: TrEMBL y Swiss-Prot.
 
 * **TrEMBL** es una recolección de proteínas anotadas automáticamente que en su mayoría, aunque no de manera exclusiva, fueron obtenidas a partir de la traducción de secuencias nucleotídicas codificantes (CoDing Sequences, CDS) disponibles en GenBank.
 
@@ -73,60 +46,69 @@ TrEMBL brinda los datos crudos para que los curadores de Swiss-Prot los revisen.
 Dentro de UniProt también se encuentra UniParc (the UniProt Archive), una base de datos no-redundante de casi todas las secuencias proteicas disponibles en el mundo. Actualmente, UniParc contiene las secuencias de proteínas de más de 20 bases de datos públicas, como ser:
 
 * EMBL-Bank/DDBJ/GenBank nucleotide sequence databases
+
 * Ensembl
+
 * EnsemblGenomes
+
 * Protein Data Bank (PDB)
+
 * RefSeq
+
 * Saccharomyces Genome database (SGD)
+
 * TAIR Arabidopsis thaliana Information Resource
+
 * UniProtKB/Swiss-Prot, UniProtKB/Swiss-Prot protein isoforms, UniProtKB/TrEMBL
 
 UniRef (the UniProt Reference Clusters) son colecciones de secuencias de proteínas de UniProtKB (inluyendo isoformas) y de una selección de UniParc para obtener una cobertura completa del espacio de secuencia agrupadas (o clusterizadas), según un umbral de similitud de secuencia específico, por ejemplo
 
 * **UniRef100:** Contiene secuencias y sub-fragmentos de secuencia de cualquier organismo que son idénticos. Contiene todas las secuencias de UniProtKB y algunas secuencias seleccionadas de UniParc.
+
 * **UniRef90:** Se construye agrupando las secuencias de UniRef100  y sub-fragmentos de secuencia de más de 11 residuos. de manera que cada grupo está compuesto por secuencias que poseen por lo menos un 90% de identidad y 80% de superposición con la secuencia de mayor longitud del grupo (la secuencia seed).
+
 * **UniRef50:** Se construye agrupando las secuencias seed de UniRef90 que comparten un 50% de identidad y 80% de superposición con la secuencia de mayor longitud del grupo.
 
 El identificador de la secuencias se construye como: UniRef100_P99999, o UniRef90_P99999, o UniRef50_P99999.
 
+
 ### Página web de UniProt
 
-El sitio web de UniProt permite navegar los distintos conjuntos de datos desde el homepage (Fig 1. Arriba) y a través de los links al pie de la página (Fig 1. Abajo).
+El sitio web de UniProt permite navegar los distintos conjuntos de datos desde el homepage, herramientas de análisis y a través de los links al pie de la página (Figura 1).
 
 <p style="text-align:center">
-<img src="./img/uniprot_homepage.png" alt="UniProt Homepage" style="max-width:70%">
-<img src="./img/uniprot_footer.png" alt="UniProt Footer" style="max-width:70%">
+<img src="./img/uniprot_home_1.png" alt="UniProt-1" style="max-width:60%">
+<img src="./img/uniprot_home_2.png" alt="UniProt-2" style="max-width:60%">
+<img src="./img/uniprot_home_3.png" alt="UniProt-3" style="max-width:60%">
+<figcaption> Figura 1. Homepage de UniProt. </figcaption>
 </p>
 
-<figcaption align = "center">
-
-**Fig 1.** Homepage de UniProt.
-
-</figcaption>
-<br>
-<br>
 
 En la parte superior de la página web hay una barra de búsqueda y distintos accesos directos:
+
 * **BLAST**, para realizar búsquedas por similitud en toda la base de datos UniProtKB.
+
 * **Align**, para realizar alineamientos de pares con el algoritmo Clustal Omega.
-* **Retrieve/ID mapping**, permite buscar una lista de identificadores de proteínas y obtener las entradas de UniProt individuales. También permite convertir los identificadores a sus equivalentes en bases de datos externas como GenBank, PDB, entre otras.
+
+* **Peptide search/ID mapping**, permite buscar una lista de identificadores de proteínas y obtener las entradas de UniProt individuales. También permite convertir los identificadores a sus equivalentes en bases de datos externas como GenBank, PDB, entre otras.
 
 
 <p style="text-align:center">
-<img src="./img/uniprot_top.png" alt="Barra de búsqueda de UniProt" style="max-width:70%">
+<img src="./img/uniprot_top.png" alt="Barra de búsqueda de UniProt">
+<figcaption> Figura 2. Barra de búsqueda de UniProt. </figcaption>
 </p>
 
-<figcaption align = "center">
-
-**Fig 2.** Barra de búsqueda de UniProt.
-
-</figcaption>
-<br>
-<br>
 
 ### Realizando búsquedas en UniProt
+
 Las búsquedas pueden realizarse en la barra de búsqueda en la parte superior de la página. Contiene un menú desplegable que permite seleccionar la base de datos y la opción de búsqueda avanzada (Advanced) que permite refinar la búsqueda.
 
+!!! Info
+    UniProt es actualizada constantemente. Los últimos conjuntos de datos pueden recolectarse en la sección *UniProt data* en el homepage en el link: *Download latest release*.
+
+    ¿Puedes encontrar en qué fecha se realizó el release actual?
+
+<!--
 <p style="text-align:center">
 <img src="./img/uniprot_dropdown_menu.png" alt="Menú UniProt" style="max-width:70%">
 </p>
@@ -138,69 +120,65 @@ Las búsquedas pueden realizarse en la barra de búsqueda en la parte superior d
 </figcaption>
 <br>
 <br>
+-->
 
-La búsqueda en UniProtKB conduce a una página de resultados donde se muestra en formato tabla determinada información de las secuencias obtenidas como resultado de la búsqueda. Los distintos campos de la tabla pueden editarse utilizando el botón *Column*, cuyo ícono es un lápiz en la parte superior.
+La búsqueda en UniProtKB conduce a una página de resultados donde se muestra en formato tabla determinada información de las secuencias obtenidas como resultado de la búsqueda. Los distintos campos de la tabla pueden editarse utilizando el botón *Customize columns*, cuyo ícono es un lápiz en la parte superior.
+
 Los resultados obtenidos además pueden filtrarse por la base de datos, el organismo, utilizando las opciones en *Filter* by a la izquierda de la página. También hay una sección *View* by que permite agrupar los resultados por taxonomía, pathway u otros criterios.
 
 <p style="text-align:center">
-<img src="./img/uniprot_results.png" alt="Results in UniProt" style="max-width:70%">
+<img src="./img/uniprot_results.png" alt="Results in UniProt">
+<figcaption> Figura 3. Página de resultados de UniProt. Tabla de resultados utilizando la palabra "retinoblastoma". </figcaption>
 </p>
 
-<figcaption align = "center">
 
-**Fig 4.** Página de resultados de UniProt
+Una vez que se selecciona una entrada haciendo click en el identificador, se abre la página correspondiente a dicha entrada.
 
-</figcaption>
-<br>
-<br>
+Por debajo del nombre de la *Entry*, se muestra una barra con pestañas que permiten cambiar entre la información de la *Entry*, publicaciones, links a sitios externos y el *Feature viewer*.
 
-Una vez que se selecciona una entrada haciendo click en el identificador, se abre la página correspondiente a dicha entrada. A la izquierda, se muestran todas las secciones con información para la proteína seleccionada.
+La visualización *Feature viewer* es una alternativa muy útil que permite visualizar todas las anotaciones a lo largo de la secuencia de la proteína.
+
+<p style="text-align:center">
+<img src="./img/uniprot_entry_sections2.png" alt="Entry Sections2">
+<figcaption> Figura 5. Menú de visualización e información de la entrada</figcaption>
+</p>
+
+A la izquierda, se muestra una barra de navegación que lista todas las secciones con información para la proteína seleccionada.
 
 <p style="text-align:center">
 <img src="./img/uniprot_entry_sections.png" alt="Entry Sections" style="max-width:25%">
+<figcaption> Figura 6. Secciones de Información para una entrada en UniProt </figcaption>
 </p>
 
-<figcaption align = "center">
-
-**Fig 5.** Secciones de Información para una entrada en UniProt
-
-</figcaption>
-<br>
-<br>
-
-En la sección *Display*, se muestran distintas formas de visualización de la información existente para la entrada. La visualización *Feature viewer* es una alternativa muy útil que permite visualizar todas las anotaciones a lo largo de la secuencia de la proteína.
 
 ### Entradas Uniprot
 Cada entrada en UniProt posee dos identificadores únicos.
 
 * El **Accession number** es una secuencia de 6 a 10 caracteres alfanuméricos (ej. P04637) que se mantiene a lo largo de las actualizaciones y que debería ser usada en todas las publicaciones.
+
 * El **Entry name** es un identificador más fácil de leer que en general se selecciona de manera tal que refleje las propiedades biológicas, como el nombre de la proteína o el organismo (ej. P53_HUMAN). Este identificador puede llegar a cambiar si se obtuviera nueva información sobre la entrada o secuencias relacionadas.
 
-Una entrada de UniProt puede poseer datos experimentales y predichos. Los datos anotados manualmente, tomados de experimentos publicados, transferidos de experimentos en proteínas similares o importados desde otras bases de datos están coloreados en amarillo/dorado. Los datos que son generados por anotación automática están coloreados en azul.
+Una entrada de UniProt puede poseer datos experimentales y predichos. Los datos anotados manualmente, tomados de experimentos publicados, transferidos de experimentos en proteínas similares o importados desde otras bases de datos están indicados con un listón amarillo/dorado en la etiqueta. Los datos que son generados por anotación automática están anotados como *Automatic Annotation*.
 
 <p style="text-align:center">
-<img src="./img/uniprot_annotated_experimental.png" alt="Entry Sections" style="max-width:70%">
+<img src="./img/uniprot_annotated_experimental.png" alt="Entry Sections">
+<figcaption> Figura 7. Ejemplo de evidencia predicha y experimental en uniprot para la proteína retinoblastoma de humanos (P06400).<br>
+Muchas de las etiquetas que dicen <b>Automatic Annotation</b> corresponden a la asignación de <b>Desorden</b> (región no estructurada de la proteína) a una región de secuencia en base al análisis bioinformático de la secuencia.<br>
+Las etiquetas con un listón amarillo que dicen <b>1 Publication</b>, indican que esas regiones poseen evidencia experimental en una publicación para la interacción con LIMD1 (región 763 a 928) y con E4F1 para el dominio C de retinoblastoma. </figcaption>
 </p>
 
-<figcaption>
-
-**Fig 6. Ejemplo de evidencia predicha y experimental en uniprot para la proteína retinoblastoma de humanos (P06400).** Las etiquetas azules que dicen *Sequence analysis* corresponden a la asignación de Desorden (región no estructurada de la proteína) a una región de secuencia en base al análisis de la secuencia. Las etiquetas amarillas que dicen *1 Publication*, indican que esas regiones poseen evidencia experimental en una publicación para la interacción con LIMD1 (región 763 a 928) y con E4F1 para el dominio C de retinoblastoma.
-
-</figcaption>
-<br>
-<br>
-Las anotaciones de una entrada UniProt están ranqueadas por un sistema de 5 estrellas. El puntaje de cada entrada se calcula en base a la presencia o el número del tipo de anotaciones. Un mayor número de estrellas refleja una entrada con más anotaciones; sin embargo, este sistema no refleja la correctitud de las anotaciones.
-
-UniProt es actualizada cada cuatro semanas. Los últimos conjuntos de datos pueden recolectarse en la sección *UniProt data* en el homepage en el link: *Download latest release*.
+Las entradas de UniProt están ranqueadas por un sistema de 5 puntos (*Annotation score*). El puntaje de cada entrada se calcula en base al número y puntaje de sus anotaciones. Una anotación con evidencia experimental tiene mayor puntaje que una anotación equivalente predicha o inferida. Un mayor número de puntaje refleja una entrada con más anotaciones; sin embargo, este sistema no refleja la correctitud de las anotaciones.
 
 ## Uniprot - Ejercicios
+
 ### Ejercicio 1. Proteína CDC7
 1. Busca en UniProt la proteína *CDC7*.
-2. ¿Cuál es el nombre de la proteína?
-3. ¿Cuántas entradas existen en distintos organismos y cuántas en humanos?
-4. ¿Por qué la proteína Q8NEY8 está entre los resultados? ¿y por qué está B1AMW7?
-5. ¿Cuántas entradas son el producto del gen llamado cdc7? (Pista: utilice las herramientas de filtrado que se encuentran a la izquierda).
-6. ¿Cuántas de las entradas que corresponden a humanas tienen un alto número de anotaciones?
+2. ¿Cuál es el nombre de la proteína? ¿Cuál es su longitud en humanos?
+3. ¿Cuántas entradas existen en organismos populares y cuántas en humanos?
+4. Encuentra la proteína Q8NEY8 entre los resultados. ¿Por qué te parece que está entre los resultados?
+5. Recorre la tabla hasta que aparezca la proteína B1AMW7. ¿Cuál es su longitud? ¿Por qué está B1AMW7?
+5. ¿Cuántas de las entradas corresponden a entradas anotadas manualmente (Swiss-Prot) y cuántas no (TrEmBl)?
+6. ¿Cuántas de las entradas que corresponden a humanas tienen el mayor score? ¿Que puntuación tienen la mayoría de las entradas? ¿Por qué cree que ocurre esto?
 
 ### Ejercicio 2. Demetilasa Lisin-específica 3B.
 1. La Demetilasa Lisin-específica 3B (KDM3B) existe tanto en humanos (Q7LBC6) como en ratones (Q6ZPY7). Su función es bien conocida y en cada organismo dicha función fue anotada a partir de distintas fuentes. ¿Puede identificar estás fuentes?
