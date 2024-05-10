@@ -1,11 +1,10 @@
 ![Uniprot](img/feature.png){ width="250", align="left" }
-
 # **TP 1**. Introducción a bases de Datos { markdown data-toc-label = 'TP 1' }
 
 ## Recursos Online
 
 * UniProt: [https://www.uniprot.org/](https://www.uniprot.org/)
-* Pfam: [https://Pfam.xfam.org/](https://Pfam.xfam.org/)
+* Pfam: [https://Pfam.xfam.org/](https://Pfam.xfam.org/) [Legacy Version]
 * TMHMM: [https://services.healthtech.dtu.dk/service.php?TMHMM-2.0](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0)
 * InterPro: [https://www.ebi.ac.uk/interpro/](https://www.ebi.ac.uk/interpro/)
 
@@ -30,12 +29,9 @@ La mayor base de datos de Uniprot es UniProtKB (UniProt **K**nowledge**B**ase) q
 
 * **TrEMBL** es una recolección de proteínas anotadas automáticamente que en su mayoría, aunque no de manera exclusiva, fueron obtenidas a partir de la traducción de secuencias nucleotídicas codificantes (CoDing Sequences, CDS) disponibles en GenBank.
 
-<ul class="block-list has-radius is-primary">
-   <li class="is-highlighted is-info has-icon">
-      <span class="icon"><i class="fas fa-lightbulb"></i></span>
-    <p> Una <span style="font-weight:bold;">secuencia codificante (CDS)</span> es una región de ADN o ARN cuya secuencia determina la secuencia de aminoácidos en una proteína. No se debe confundir con un marco abierto de lectura (Open Reading Frame, ORF) que es una región continua de codones de ADN que empiezan con un codón de inicio y termina con un codón stop. Todos los CDS son ORFs pero no todos los ORFs son CDS, por ejemplo, los ORFs incluye a los intrones.</p>
-   </li>
-</ul>
+!!! Info
+
+    Una *secuencia codificante (CDS)* es una región de ADN o ARN cuya secuencia determina la secuencia de aminoácidos en una proteína. No se debe confundir con un marco abierto de lectura (Open Reading Frame, ORF) que es una región continua de codones de ADN que empiezan con un codón de inicio y termina con un codón stop. Todos los CDS son ORFs pero no todos los ORFs son CDS, por ejemplo, los ORFs incluye a los intrones.
 
 
 * **Swiss-Prot** es una base de datos de proteínas que fueron revisadas y anotadas manualmente por un curador/a experto/a. Por lo tanto, Swiss-Prot contiene la información de más alta calidad para secuencias de proteínas.
@@ -181,9 +177,11 @@ Las entradas de UniProt están ranqueadas por un sistema de 5 puntos (*Annotatio
 6. ¿Cuántas de las entradas que corresponden a humanas tienen el mayor score? ¿Que puntuación tienen la mayoría de las entradas? ¿Por qué cree que ocurre esto?
 
 ### Ejercicio 2. Demetilasa Lisin-específica 3B.
-1. La Demetilasa Lisin-específica 3B (KDM3B) existe tanto en humanos (Q7LBC6) como en ratones (Q6ZPY7). Su función es bien conocida y en cada organismo dicha función fue anotada a partir de distintas fuentes. ¿Puede identificar estás fuentes?
+1. La Demetilasa Lisin-específica 3B (KDM3B) existe tanto en humanos (Q7LBC6) como en ratones (Q6ZPY7). Su función es bien conocida y en cada organismo dicha función fue anotada a partir de distintas fuentes.
 
-    Vaya a la entrada UniProt para la demetilasa Lisin-específica 3B humana. Inspeccione las distintas características anotadas disponibles (los campos pueden encontrarse en el menú de la izquierda) y conteste:
+    * ¿Puede identificar estás fuentes?
+
+Vaya a la entrada UniProt para la demetilasa Lisin-específica 3B humana. Inspeccione las distintas características anotadas disponibles (los campos pueden encontrarse en el menú de la izquierda) y conteste:
 
 2. ¿Cuál es el nombre de la entrada?
 3. ¿A qué base de datos de UniProtKB pertenece?
@@ -193,131 +191,183 @@ Las entradas de UniProt están ranqueadas por un sistema de 5 puntos (*Annotatio
 7. ¿Existe alguna estructura conocida para esta proteína? Si las hay, ¿Son estructuras obtenidas experimentalmente o predichas? ¿abarcan toda la secuencia?
 8. ¿Cuántas isoformas están anotadas para esta proteína? Si las hay, ¿Cómo difieren de la secuencia canónica?
 
-    <ul class="block-list has-radius is-primary">
-    <li class="is-highlighted is-info has-icon">
-    <span class="icon"><i class="fas fa-lightbulb"></i></span>
-        <p>Una <span style="font-weight:bold;">isoforma</span> de una proteína o variante proteica, es una proteína que pertenece a un conjunto de proteínas muy similares que se originan a partir de un único gen o familia de genes y son el resultado de diferencias genéticas. Si bien la mayoría lleva a cabo las mismas o similares funciones biológicas, algunas isoformas tienen funciones específicas y únicas. Las isoformas pueden formarse por splicing alternativo, variaciones en el uso del promotor u otras modificaciones post-transcripcionales.
-        <br>
-        Cada entrada UniProtKB/swiss-Prot contiene todas las secuencias curadas producto de un gen. Para cada entrada se elige una <span style="font-weight:bold;">secuencia canónica</span> (o representativa) que cumple con ciertos criterios de manera que permita la descripción de la mayoría de los dominios, motivos, modificaciones post-traduccionales que ocurren en las distintas variantes. Algunos de los criterios son: funcionalidad, expresión, conservación en secuencias ortólogas. En falta de información se elige la secuencia más extensa.
-        </p>
-    </li>
-    </ul>
+    !!! info
+
+        Una **isoforma** de una proteína o variante proteica, es una proteína que pertenece a un conjunto de proteínas muy similares que se originan a partir de un único gen o familia de genes y son el resultado de diferencias genéticas. Si bien la mayoría lleva a cabo las mismas o similares funciones biológicas, algunas isoformas tienen funciones específicas y únicas. Las isoformas pueden formarse por splicing alternativo, variaciones en el uso del promotor u otras modificaciones post-transcripcionales.
+        
+        Cada entrada UniProtKB/swiss-Prot contiene todas las secuencias curadas producto de un gen.
+        
+        Para cada entrada se elige una **secuencia canónica** (o representativa) que cumple con ciertos criterios de manera que permita la descripción de la mayoría de los dominios, motivos, modificaciones post-traduccionales que ocurren en las distintas variantes. Algunos de los criterios son: funcionalidad, expresión, conservación en secuencias ortólogas. Si la información es escasa, entonces se elige la secuencia más extensa.
+
 
 9. ¿Puedes encontrar la fecha de creación de esta entrada y cuál es la fecha de su última modificación? ¿Cuántas veces fue modificada? ¿Cuándo fue incorporada a SwissProt?
-10. ¿Qué información hay disponible para la posición 773 en la página principal de la entrada? Inspecciona en el *Feature viewer* la misma posición.
 
-    <ul class="block-list has-radius is-primary">
-    <li class="is-outlined is-info">
-        En la parte superior gris puede enfocarse en la región deseada y también se puede hacer zoom con la ruedita del mouse.
-    </li>
-    </ul>
+    ??? idea "Pista"
+
+        Explora la pestaña *History*
+
+10. ¿Qué información hay disponible para la posición 773 en la sección *PTM/Processing*? Inspecciona en el *Feature viewer* la misma posición.
+
+    !!! Info
+
+        En la parte superior gris puede enfocarse en la región deseada achicando el rango desde los extremos hacia el centro. También se puede hacer zoom con la ruedita del mouse.
+
 
 ### Ejercicio 3. Proteína GHSR.
+
 La entrada de UniProt Q9UBU3 corresponde a la proteína GHSR, una hormona reguladora del apetito. Esta hormona se expresa como una pre-proteína que es clivada de modo post-traduccional para dar las proteínas maduras Grelina y Obestatina. 
-1. Intenta localizar la posición de estas proteínas maduras en la secuencia completa de la pre-proteína (*Pista*: el *feature viewer* puede ser muy útil). 
+
+1. Intenta localizar la posición de estas proteínas maduras en la secuencia completa de la pre-proteína
+
+    ??? Idea "Pista"
+    
+        El *feature viewer* puede ser muy útil. Expande *Molecule processing*.
+ 
 2. ¿Hay isoformas de alguna de las dos proteínas maduras?
 3. ¿Cuántas proteínas comparten una identidad del 90% con la secuencia completa de la proteína?
 
+
 ### Ejercicio 4. Demetilasa Lisin-específica 5C (KDM5C).
+
 La demetilasa Lisin-específica 5C (P41229) es otra histona demetilasa cuyo blanco específico es la lisina 4 de la histona H3.
-1. ¿Puede localizar la Kcat y el Km de esta reacción para esta entrada uniprot?
 
+1. ¿Puede localizar la *K~cat~* y el *K~m~* de esta reacción para esta entrada uniprot?
 
-    <ul class="block-list has-radius is-primary">
-    <li class="is-highlighted is-info has-icon">
-    <span class="icon"><i class="fas fa-lightbulb"></i></span>
-        <p>La <span style="font-weight:bold;">Kcat</span> es el número de recambio, para una enzima se define como el número máximo de moléculas de sustrato que puede convertir en producto por unidad de tiempo.
-        <br>
-        La <span style="font-weight:bold;">Km</span> (constante de Michaelis-Menten) es la concentración de sustrato a la cual la velocidad de reacción de una enzima es la mitad de la velocidad máxima (50% de saturación de la enzima). 
-        </p>
-    </li>
-    </ul>
+    !!! Info
+    
+        La ***K~cat~*** es el número de recambio. Para una enzima se define como el número máximo de moléculas de sustrato que puede convertir en producto por unidad de tiempo.
+        
+        La ***K~m~*** (constante de Michaelis-Menten) es la concentración de sustrato a la cual la velocidad de reacción de una enzima es la mitad de la velocidad máxima (50% de saturación de la enzima). 
 
-2. ¿Puede descargar la secuencia de la isoforma en formato Fasta?
+2. ¿Puede descargar la secuencia de la isoforma en formato **Fasta**?
 
-    <ul class="block-list has-radius is-primary">
-    <li class="is-highlighted is-info has-icon">
-    <span class="icon"><i class="fas fa-lightbulb"></i></span>
-        <p>
-        <span style="font-weight:bold;">Formato FASTA:</span> Comienza con el símbolo '>' (mayor que) con una breve descripción de la secuencia, esta sección se conoce como encabezado o *header* y es seguida por la secuencia escrita en el código de una letra en la siguiente línea. 
-        <br>
-        Los archivos <span style="font-weight:bold;">Multi Fasta</span> tienen muchas de estas combinaciones, una luego de la otra y con una línea en blanco opcional entre cada secuencia.
-        </p>
-    </li>
-    </ul>
+    ??? info "¿Qué es el formato fasta?"
+
+        **Formato FASTA:** Comienza con el símbolo '>' (mayor que) con una breve descripción de la secuencia, esta sección se conoce como encabezado o *header* y es seguida por la secuencia escrita en el código de una letra en la siguiente línea. 
+        
+        Los archivos **Multi Fasta** tienen muchas de estas combinaciones, una luego de la otra y con una línea en blanco opcional entre cada secuencia.
 
 3. Las entradas UniProt tienen una sección específica llamada *Family & Domains*. Esta sección describe la identidad, posición y longitud de los dominios que fueron anotados en la proteína.
-    <ol type="a">
-    <li>¿Cuántos dominios puede encontrar definidos para la KDM5C?</li>
-    <li>¿De donde proviene la información relacionada a la presencia de Dominios?</li>
-    <li>¿Existen otras regiones relevantes para esta proteína?</li>
-    <li>¿Hay referencias cruzadas para esas regiones con otras bases de datos?</li>
-    </ol>
+    
+    1. ¿Cuántos dominios puede encontrar definidos para la KDM5C?
+    2. ¿De donde proviene la información relacionada a la presencia de Dominios?
+    3. ¿Existen otras regiones relevantes para esta proteína?
+    4. ¿Hay referencias cruzadas para esas regiones con otras bases de datos?
+    
 
-# Ejercicio 5 - Proteína p53. Descarga de Múltiples Secuencias
+### Ejercicio 5 - Proteína p53. Descarga de Múltiples Secuencias
 En algunos de los próximos trabajos prácticos estaremos trabajando con una proteína que se llama p53. Por eso, busquen y guarden la información que encuentren en este ejercicio: va a ser útil más adelante!
 
 1. Busca la proteína p53 de humanos en Uniprot y recolecta la siguiente información:
-    <ol type="a">
-    <li>Nombre de la proteína</li>
-    <li>Función de la proteína</li>
-    <li>¿Está involucrada en alguna enfermedad?</li>
-    <li>¿Qué tipo de modificaciones post-traduccionales sufre?</li>
-    <li>p53 interactúa con muchas proteínas. ¿Con qué otro tipo de molécula interactúa?</li>
-    <li>¿Cuál es la longitud de la proteína?</li>
-    <li>¿Qué región abarca la estructura obtenida por AlphaFold? ¿Y las obtenidas experimentalmente?</li>
-    <li>¿Qué región está involucrada en la oligomerización de p53?</li>
-    <li>Observe la sección motivos, ¿Qué elementos conocidos encuentra? ¿Qué longitud poseen?</li>
-    </ol>
+    
+    1. Nombre de la proteína
+    1. Función de la proteína
+    1. ¿Está involucrada en alguna enfermedad?
+    1. ¿Qué tipo de modificaciones post-traduccionales sufre?
+    1. p53 interactúa con muchas proteínas. ¿Con qué otro tipo de molécula interactúa?
+    1. ¿Cuál es la longitud de la proteína?
+    1. ¿Qué región abarca la estructura obtenida por AlphaFold? ¿Y las obtenidas experimentalmente?
+    1. ¿Qué región está involucrada en la oligomerización de p53?
+    1. Observe la sección motivos, ¿Qué elementos conocidos encuentra? ¿Qué longitud poseen?
 
-2. La sección *Retrieve ID/mapping*, permite mapear los distintos identificadores entre las distintas bases de datos así como también realizar una búsqueda utilizando múltiples identificadores. Cargue el archivo con los uniprots ID que descargó de materiales o copie y pegue su contenido. En *Select options* asegúrese que en *from* esté elegido **UniProtKB AC/ID** y en *To* esté elegido **UniprotKB**. Haga click en *Submit*.
 
-Uniprot debería devolverle como resultado una tabla con 34 entradas.
-* Si usted lo desea puede agregar columnas que sean de su interés y descarga la tabla utilizando el botón de *Download* y seleccionando el formato *Tab-separated* y elija *Uncompressed*. Esta tabla puede luego abrirla con su programa de Hojas de Cálculo favorito.
-* Descargue las secuencias Canónicas en formato `FASTA (Uncompressed)` que serán usadas más adelante en la materia.
+2. La sección *Retrieve ID/mapping*, permite mapear los distintos identificadores entre las distintas bases de datos así como también realizar una búsqueda utilizando múltiples identificadores.
+
+    Cargue el archivo con los uniprots ID que descargó de materiales o copie y pegue su contenido.
+    
+    En *Select options* asegúrese que en *from* esté elegido **UniProtKB AC/ID** y en *To* esté elegido **UniprotKB**. Haga click en *Submit*.
+
+    Uniprot debería devolverle como resultado una tabla con 34 entradas.
+
+    * Si usted lo desea puede agregar columnas que sean de su interés y descarga la tabla utilizando el botón de *Download* y seleccionando el formato *Tab-separated* y elija *Uncompressed*. Esta tabla puede luego abrirla con su programa de Hojas de Cálculo favorito.
+    * Descargue las secuencias Canónicas en formato `FASTA (Uncompressed)` que serán usadas más adelante en la materia.
 
 ## Pfam
+
 Pfam es un recurso muy útil para identificar regiones funcionales conservadas en proteínas. Permite encontrar regiones de similitud entre una secuencia *query* y una base de datos de familias de proteínas anotadas con el objetivo de incrementar el conocimiento de la arquitectura, función y relaciones de la proteína de interés (la secuencia *query*).
 
 Una entrada Pfam se construye a partir de un alineamiento de secuencia múltiple de un conjunto de secuencias curadas que se sabe que pertenecen a una familia. Este es conocido como el alineamiento **semilla** (*seed*) y es utilizado para entrenar un *profile Hidden Markov Model* (o perfil de HMM) que brinda una representación extendida de la familia contemplando inserciones y deleciones. Este modelo probabilístico refleja la variabilidad de secuencia en cada posición de la familia y es utilizado para una búsqueda exhaustiva en una base de datos (como UniProtKB) de todas las secuencias homólogas. Las secuencias recolectadas que muestran una similitud significativa con el perfil de HMM son alineadas a este modelo obteniendo como resultado un alineamiento más completo de la familia.
 
-<ul class="block-list has-radius is-primary">
-<li class="is-highlighted is-info has-icon">
-<span class="icon"><i class="fas fa-question"></i></span>
-    Antes de seguir leyendo, piense y discuta, ¿Cuál es la definición de un Dominio?       
-</li>
-</ul>
+!!! question "Pregunta"
 
-Si bien algunas regiones en Pfam se llaman comúnmente Dominios, las entradas de Pfam no representan necesariamente una región de secuencia que se pliega en una estructura terciaria discreta, sino más bien, representan unidades conservadas evolutivamente. Una **Familia (Family)** Pfam representa un conjunto de secuencias relacionadas por un HMM. Las familias grandes y divergentes pueden compartir una gran similitud de secuencia, estructura o función con los miembros de otras familias. Dada la dificultad de representar estas **superfamilias** por un único alineamiento o perfil HMM, Pfam provee un nivel superior de agrupamiento de las familias en **Clanes (clans)**.
+    Antes de seguir leyendo, piense y discuta, ¿Cuál es la definición de un Dominio?       
+
+
+Si bien algunas regiones en Pfam se llaman comúnmente Dominios, las entradas de Pfam no representan necesariamente una región de secuencia que se pliega en una estructura terciaria discreta, sino más bien, representan unidades conservadas evolutivamente.
+
+Una **Familia (Family)** Pfam representa un conjunto de secuencias relacionadas por un HMM. Las familias grandes y divergentes pueden compartir una gran similitud de secuencia, estructura o función con los miembros de otras familias. Dada la dificultad de representar estas **superfamilias** por un único alineamiento o perfil HMM, Pfam provee un nivel superior de agrupamiento de las familias en **Clanes (clans)**.
 
 Cada residuo de cada secuencia dada sólo puede pertenecer a una familia Pfam.
+
 Los perfiles de HMM son construidos con el paquete HMMER3 (disponible en [http://hmmer.org](http://hmmer.org)). Al igual que BLAST, HMMER3 utiliza e-values. El e-value devuelto por Pfam refleja la significancia del hit.
 
-<ul class="block-list has-radius is-primary">
-<li class="is-highlighted is-info has-icon">
-<span class="icon"><i class="fas fa-lightbulb"></i></span>
-<p>
-<span style="font-weight:bold;">e-value (expectation values):</span> El e-value es el número de *hits* que uno espera que tengan una puntuación igual o mejor que ese valor por azar solo. Un buen e-value es mucho menor a 1. Un valor de 1 es lo que uno esperaría por azar. Los e-values dependen del tamaño de la base de datos donde se realiza la búsqueda.
-</p>
-</li>
-</ul>
+!!! Info
+
+    **e-value (expectation values):** El e-value es el número de *hits* que uno espera que tengan una puntuación igual o mejor que ese valor por azar solo. Un buen e-value es mucho menor a 1. Un valor de 1 es lo que uno esperaría por azar. Los e-values dependen del tamaño de la base de datos donde se realiza la búsqueda.
 
 Pfam utiliza un segundo sistema de puntuación (*bit score*) para el mantenimiento de los modelos que es independiente del tamaño de la base de datos donde se realiza la búsqueda.
 
-<ul class="block-list has-radius is-primary">
-<li class="is-highlighted is-info has-icon">
-<span class="icon"><i class="fas fa-lightbulb"></i></span>
-<p>
-<span style="font-weight:bold;">Bit-score:</span> Un bit-score de 0 significa que el likelihood del *hit* encontrado por el modelo es igual al likelihood por azar. Un bit-score de 1 significa que el likelihood del hit es el doble que el likelihood por azar, un bit-score de 2 significa que el likelihood del hit es el cuádruple que el likelihood por azar, un bit-score de 20 significa que el likelihood del hit es 2^20 veces el likelihood por azar.
-</p>
-</li>
-</ul>
+!!! Info
+
+    **Bit-score:**
+
+    * Un *bit-score* de 0 significa que el likelihood del *hit* encontrado por el modelo es igual al likelihood por azar.
+    * Un *bit-score* de 1 significa que el likelihood del hit es el doble que el likelihood por azar.
+    * Un *bit-score* de 2 significa que el likelihood del hit es el cuádruple que el likelihood por azar.
+    * Un *bit-score* de 20 significa que el likelihood del hit es 2^20^ veces el likelihood por azar.
+
 
 Cuando una familia proteica es construida, se establece un umbral en el bit-score para la recolección (bit score gathering, GA) de manera manual para cada familia. Este puntaje (GA) determina el menor puntaje que una secuencia debe obtener en la búsqueda con el perfil de HMM para ser incluida en el alineamiento completo.
 Tanto los alineamientos semilla, como los alineamientos completos y el perfil de HMM están disponibles en Pfam para su descarga.
-Realizando búsquedas en Pfam
-Las búsquedas en Pfam pueden realizarse utilizando la secuencia de interés, el número de accession UniProt, el nombre de la entrada UniProt, el identificador Pfam para una familia o usando *keywords* relacionadas.
 
+En el año 2022, la base de datos Pfam fue incorporada a la base de datos InterPro. La base de datos original de Pfam puede todavía navegarse en la versión Legacy: [https://Pfam.xfam.org/](https://Pfam.xfam.org/). Pero los datos desde este servidor ya no tendrán actualizaciones.
+
+En InterPro, [https://www.ebi.ac.uk/interpro/](https://www.ebi.ac.uk/interpro/), se pueden realizar muchas de las búsquedas que se realizaban en la página original de Pfam.
+
+## InterPro
+La base de datos InterPro es un compendio de bases de datos que incluye a Pfam entre otras bases de datos para la clasificación de proteínas. InterPro también predice **características funcionales** distintivas o **functional  signatures** de las proteínas por asignación a familias, reconocimiento de dominios y otros sitios relevantes. Sin embargo, InterPro es una meta-base de datos, ya que unifica las características de las proteínas tomando la información a partir de múltiples bases de datos independientes en un recurso único para una clasificación integradora de la secuencia.
+
+En InterPro, una **protein signature** es un modelo computacional que refleja el patrón de conservación de aminoácidos sitio-específico en un alineamiento. Puede tener la forma de un patrón de secuencia, un perfil que describe un motivo de secuencia determinado o un sofisticado perfil de HMM, que contempla las inserciones y deleciones en las familias de proteínas. Los modelos iniciales se usan para búsquedas iterativas en distintas bases de datos como UniProtKB para recolectar homólogos remotos y aumentar el número de secuencias distantes que representa el modelo. La **protein signature** final es un modelo predictivo muy descriptivo que puede ser utilizado para el análisis de secuencias.
+
+Dentro de las muchas bases de datos que usa InterPro están:
+
+* Pfam.
+* SMART: base de datos de arquitecturas de dominios de proteínas.
+* Superfamily: una base de datos basada en perfiles de HMM de anotaciones funcionales y estructurales en proteínas.
+* CATH/Gene3D: una base de datos de superfamilias de dominios con una estructura conocida y su predicción en genomas completos.
+* MobiDB: un recurso central para la anotación de desorden intrínseco en secuencias UniProt.
+
+Dado que las distintas bases de datos probablemente posean información redundante, un equipo de curadores de InterPro chequean manualmente y fusionan las *signatures* que se refieren a la misma familia, dominio o sitio en una entrada única de InterPro. Por lo tanto, cada **protein signature** posee un único código de acceso InterPro junto al código correspondiente de las bases de datos individuales.
+
+Lo más importante de InterPro es la integración de múltiples fuentes de información, cada una con sus fortalezas y no en la cantidad de información que se extrae de ellas. Esto convierte a InterPro en una fuerte herramienta de diagnóstico. Sin embargo, una vez que se encuentran las *signatures* de interés, en general se aconseja ir a las bases de datos correspondientes para mayor información.
+
+Una entrada InterPro puede ser de distintos tipos:
+
+* Un Dominio (**domain**) en InterPro son unidades discretas con secuencia, estructura o función distintiva que se puede encontrar en diferentes contextos biológicos.
+
+* Los miembros de una familia (**family**) de proteínas, además de compartir un origen evolutivo común, poseen secuencias, estructura sy/o funciones similares.
+* Las entradas de una superfamilia de homólogos (**homologous superfamily**) abarca proteínas con un ancestro común que normalmente poseen baja conservación de secuencia pero una similitud estructural notable.
+* Las repeticiones (**repeats**), identifican secuencias cortas que se encuentran múltiples veces dentro de una proteína.
+* Un sitio (**site**), es una secuencia corta, pero con uno o más residuos conservados que poseen una función definida.
+    * Sitio activo (**active site**), es una secuencia corta que contiene uno o más residuos conservados que permiten que la proteína se una a un ligando y lleve a cabo una actividad catalítica.
+    * Sitio de unión (**binding site**), es una secuencia corta que contiene uno o más residuos conservados que forman un sitio de interacción de la proteína.
+    * Sitios de modificación post-traduccionales (**PTMs, Post-translational modification sites**), una secuencia corta que contiene uno o más residuos conservados que son modificados post-traduccionalmente.
+    * Sitio conservado (**conserved site**), una secuencia corta que posee uno o más residuos conservados.
+* Los **unintegrated** son *signatures* de bases de datos que no están integradas en InterPro. Estas *signatures* pueden no haber sido curadas aún o no cumplir con los estándares de InterPro para su integración. Sin embargo, pueden brindar información importante de una proteína de interés.
+
+### Realizando búsquedas relacionadas a Pfam en InterPro
+
+Para realizar una búsqueda se puede utilizar el código de acceso de InterPro, que está formado por IPR más un número, o un identificador de UniProtKB o un identificador de cualquier otra base de datos miembro de InterPro. Así como también se puede utilizar la secuencia de la proteína, o keywords relacionadas con la función o actividad de una proteína.
+
+<p style="text-align:center">
+<img src="./img/Interpro_homepage.png" alt="Homepage de InterPro" style="max-width:70%">
+<figcaption> Figura 8. Página principal de InterPro. </figcaption>
+</p>
+
+En esta sección nos vamos a enfocar principalmente en los datos relacionados a Pfam. Los identificadores Pfam tienen la forma `PF99999`.
+
+<!--
+Las búsquedas en Pfam pueden realizarse utilizando la secuencia de interés, el número de accession UniProt, el nombre de la entrada UniProt, el identificador Pfam para una familia o usando *keywords* relacionadas.
 
 <p style="text-align:center">
 <img src="./img/Pfam_homepage.png" alt="Homepage de Pfam" style="max-width:70%">
@@ -330,21 +380,26 @@ Las búsquedas en Pfam pueden realizarse utilizando la secuencia de interés, el
 </figcaption>
 <br>
 <br>
-
 La mayoría de los datos de Pfam son tomados de UniProt y mucha de la información está conectada a distintas entradas de Wikipedia cuando está disponible.
+--> 
 
 ## Pfam - Ejercicios
 
-### Ejercicio 1. Explorando Pfam usando la entrada PF00571
-Busque en Pfam la entrada utilizando el identificador de Pfam: PF00571.
-1. ¿Pertenece a una proteína, un dominio, una familia o un clan?.
-2. ¿Cuántas secuencias están conectadas con esta entrada?
-3. En el menú de la izquierda, en la sección *Summary*, ¿puedes encontrar los nombres de las tres proteínas que poseen este dominio?
-4. En el menú de la izquierda, *Domain organisation* lista las arquitecturas de dominios (arreglos específicos de ciertos dominios) donde se encuentra esta familia. ¿Cuántas proteínas poseen la arquitectura CBSx2? 
-5. Observe la representación gráfica y coloreada de los dominios anotados. Apoyando el puntero del mouse sobre ellos puede obtener una descripción más extensa. ¿Puede encontrar una región desordenada en esta arquitectura? <br> 
-    Discuta: ¿Llamaría a esta región desordenada un dominio?
-6. Otra arquitectura abundante es ‘IMPDH, CBS x 2’. ¿Que indican los puntos pequeños de colores? ¿De dónde se obtuvo esta información?
-7. En esta misma sección, *Domain organisation*, al final de página encontrará las arquitecturas minoritarias. Haciendo click en Show puede ver las secuencias que poseen esta arquitectura. ¿Son parecidas? ¿Por qué algunos bloques de colores muestran bordes recortados?
+### Ejercicio 1. Entendiendo Pfam usando la entrada PF00571
+
+Busque en InterPro la entrada Pfam utilizando el identificador de Pfam: `PF00571`.
+
+1. ¿Pertenece a una proteína, un dominio, una familia o un clan?
+3. En en la descripción, ¿puedes encontrar el nombre de alguna proteína que posee este dominio?
+2. En el menú de la izquierda ¿Cuántas secuencias están conectadas con esta entrada?
+4. En el menú de la izquierda, *Domain Architectures* lista las arquitecturas de dominios (arreglos específicos de ciertos dominios) donde se encuentra esta familia. ¿Cuántas proteínas poseen la arquitectura CBSx2? 
+    <!--
+    5. Observe la representación gráfica y coloreada de los dominios anotados. Apoyando el puntero del mouse sobre ellos puede obtener una descripción más extensa. ¿Puede encontrar una región desordenada en esta arquitectura? <br> 
+        Discuta: ¿Llamaría a esta región desordenada un dominio?
+    6. Otra arquitectura abundante es ‘IMPDH, CBS x 2’. ¿Que indican los puntos pequeños de colores? ¿De dónde se obtuvo esta información?
+    -->
+7. En esta misma sección, ¿cuántas arquitecturas de dominio existen?
+7. Muestre los resutados de a 100 y vaya hasta el final haciendo click en *Next* (o lo más cercano al final que pueda) donde encontrará las arquitecturas minoritarias. Haciendo click en Show puede ver las secuencias que poseen esta arquitectura. ¿Son parecidas? ¿Por qué algunos bloques de colores muestran bordes recortados?
 8. En la sección *Alignments* puede encontrar los distintos formatos de los alineamientos pre-calculados. Descargue el alineamiento semilla (seed) en formato FASTA, con las secuencias ordenadas alfabéticamente y que los gaps se muestran como guiones.
 9. El logo del perfil HMM es un resumen gráfico del perfil que provee una vista rápida de sus propiedades. Para cada posición en el eje-x, el valor del eje-y indica conservación. ¿Cuál es la posición más conservada en este logo?
 10. Pfam brinda información evolutiva de las proteínas que pertenecen a la familia. Se puede obtener un árbol filogenético de la familia en la sección *Trees*. ¿Con qué alineamiento se construye este árbol filogenético?
@@ -412,51 +467,9 @@ La interfaz de TMHMM Server 2.0 es simple. Se usa la caja de búsqueda en la pá
 6. ¿Cuántos pasos transmembrana tienen las Rodopsinas? En base a las herramientas aprendidas en este trabajo práctico ¿Se le ocurre donde puede encontrar esta información? (Pista: Tiene el Accession number de esta proteína!).
 
 
-## InterPro - (Adicional)
-La base de datos InterPro es una extensión de Pfam y otras bases de datos para la clasificación de proteínas. InterPro también predice **características funcionales** distintivas o **functional  signatures** de las proteínas por asignación a familias, reconocimiento de dominios y otros sitios relevantes. Sin embargo, InterPro es una meta-base de datos, ya que unifica las características de las proteínas tomando la información a partir de múltiples bases de datos independientes en un recurso único para una clasificación integradora de la secuencia.
-
-En InterPro, una **protein signature** es un modelo computacional que refleja el patrón de conservación de aminoácidos sitio-específico en un alineamiento. Puede tener la forma de un patrón de secuencia, un perfil que describe un motivo de secuencia determinado o un sofisticado perfil de HMM, que contempla las inserciones y deleciones en las familias de proteínas. Los modelos iniciales se usan para búsquedas iterativas en distintas bases de datos como UniProtKB para recolectar homólogos remotos y aumentar el número de secuencias distantes que representa el modelo. La **protein signature** final es un modelo predictivo muy descriptivo que puede ser utilizado para el análisis de secuencias.
-
-Dentro de las muchas bases de datos que usa InterPro están:
-* Pfam.
-* SMART: base de datos de arquitecturas de dominios de proteínas.
-* Superfamily: una base de datos basada en perfiles de HMM de anotaciones funcionales y estructurales en proteínas.
-* CATH/Gene3D: una base de datos de superfamilias de dominios con una estructura conocida y su predicción en genomas completos.
-* MobiDB: un recurso central para la anotación de desorden intrínseco en secuencias UniProt.
-
-Dado que las distintas bases de datos probablemente posean información redundante, un equipo de curadores de InterPro chequean manualmente y fusionan las *signatures* que se refieren a la misma familia, dominio o sitio en una entrada única de InterPro. Por lo tanto, cada **protein signature** posee un único código de acceso InterPro junto al código correspondiente de las bases de datos individuales.
-
-Lo más importante de InterPro es la integración de múltiples fuentes de información, cada una con sus fortalezas y no en la cantidad de información que se extrae de ellas. Esto convierte a InterPro en una fuerte herramienta de diagnóstico. Sin embargo, una vez que se encuentran las *signatures* de interés, en general se aconseja ir a las bases de datos correspondientes para mayor información.
-
-Una entrada InterPro puede ser de distintos tipos:
-* Un Dominio (**domain**) en InterPro son unidades discretas con secuencia, estructura o función distintiva que se puede encontrar en diferentes contextos biológicos.
-* Los miembros de una familia (**family**) de proteínas, además de compartir un origen evolutivo común, poseen secuencias, estructura sy/o funciones similares.
-* Las entradas de una superfamilia de homólogos (**homologous superfamily**) abarca proteínas con un ancestro común que normalmente poseen baja conservación de secuencia pero una similitud estructural notable.
-* Las repeticiones (**repeats**), identifican secuencias cortas que se encuentran múltiples veces dentro de una proteína.
-* Un sitio (**site**), es una secuencia corta, pero con uno o más residuos conservados que poseen una función definida.
-    * Sitio activo (**active site**), es una secuencia corta que contiene uno o más residuos conservados que permiten que la proteína se una a un ligando y lleve a cabo una actividad catalítica.
-    * Sitio de unión (**binding site**), es una secuencia corta que contiene uno o más residuos conservados que forman un sitio de interacción de la proteína.
-    * Sitios de modificación post-traduccionales (**PTMs, Post-translational modification sites**), una secuencia corta que contiene uno o más residuos conservados que son modificados post-traduccionalmente.
-    * Sitio conservado (**conserved site**), una secuencia corta que posee uno o más residuos conservados.
-* Los **unintegrated** son *signatures* de bases de datos que no están integradas en InterPro. Estas *signatures* pueden no haber sido curadas aún o no cumplir con los estándares de InterPro para su integración. Sin embargo, pueden brindar información importante de una proteína de interés.
-
-### Realizando búsquedas en InterPro
-Para realizar una búsqueda se puede utilizar el código de acceso de InterPro, que está formado por IPR más un número, o un identificador de UniProtKB o un identificador de cualquier otra base de datos miembro de interpro. Así como también se puede utilizar la secuencia de la proteína, o keywords relacionadas con la función o actividad de una proteína.
-
-<p style="text-align:center">
-<img src="./img/Interpro_homepage.png" alt="Homepage de InterPro" style="max-width:70%">
-</p>
-
-<figcaption align = "center">
-
-**Fig 8.** Página principal de InterPro.
-
-</figcaption>
-<br>
-<br>
 
 
-## Interpro - Ejercicios
+## Interpro - Ejercicios (Adicionales)
 ### Ejercicio 1. Dominios CBS.
 Realice una búsqueda en InterPro con el identificador de Pfam PF00571.
 1. ¿En qué entrada de InterPro está integrada?
