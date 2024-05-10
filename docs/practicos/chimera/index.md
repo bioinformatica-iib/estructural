@@ -1,39 +1,9 @@
----
-layout: page
-title: TP N°2
-subtitle: Introducción a Chimera
-data : false
-menubar_toc: true
-hero_height: is-small
-toc_title: CONTENIDOS
-construccion: false
----
-
-<style>
-details > summary:first-of-type {
-   display: list-item;
-}
-details summary { 
-  cursor: pointer;
-}
-
-details summary > * {
-  display: inline;
-}
-
-/* ol { list-style-type: upper-alpha; } */
-</style>
-
-{% if page.construccion %}
-
-**Pagina en construccion**
-
-{% else %}
 
 ## Recursos Online
 * PDB: [https://www.rcsb.com](https://www.rcsb.com)
 
 ## Objetivos
+
 * Familiarizarse con el uso de la base de datos de estructuras de proteínas
 * Aprender a visualizar estructuras 3D de proteínas o complejos proteicos, incluyendo diferentes niveles de análisis
 * Identificar diferentes tipos de unión molecular tales como puentes de hidrógeno o interacciones mediadas por carga y entender el rol de los mismos.
@@ -41,13 +11,17 @@ details summary > * {
 * Aprender a superponer estructuras relacionadas y analizar los resultados.
 
 ## Bases de Datos Estructurales.
-¿Dónde se almacenan todas las estructuras? ¿Cómo accedemos a ellas? La base de datos de proteínas (Protein Data Bank, PDB) almacena actualmente más de 150000 estructuras. Puedes acceder a ella aquí: [http://www.rcsb.org/](http://www.rcsb.org/). Existe también una versión europea de esta base de datos (European Protein Data Bank, PDBe). Puedes acceder a ella desde aquí: [https://www.ebi.ac.uk/pdbe/](https://www.ebi.ac.uk/pdbe/).
+
+¿Dónde se almacenan todas las estructuras? ¿Cómo accedemos a ellas?
+
+La base de datos de proteínas (Protein Data Bank, PDB) almacena actualmente más de 150000 estructuras. Puedes acceder a ella aquí: [http://www.rcsb.org/](http://www.rcsb.org/). Existe también una versión europea de esta base de datos (European Protein Data Bank, PDBe). Puedes acceder a ella desde aquí: [https://www.ebi.ac.uk/pdbe/](https://www.ebi.ac.uk/pdbe/).
 
 Las estructuras poseen un identificador de 4 caracteres alfanuméricos. Por ejemplo: 1GUX es el identificador, o PDB ID, de la proteína retinoblastoma unida a un péptido de la proteína E7 de Papillomavirus.
 
-La búsqueda de estructuras puede realizarse utilizando palabras claves, por ejemplo, la palabra clave retinoblastoma devuelve un total de 316 estructuras, o por otras características como nombre de alguno de los autores que participó en el estudio de esa estructura, por ejemplo, “Rubin, S.M.” devuelve un total de 35 estructuras. Pueden explorar la base de datos RCSB PDB para familiarizarse con ella.
+La búsqueda de estructuras puede realizarse utilizando palabras claves, por ejemplo, la palabra clave **retinoblastoma** devuelve un total de 236 estructuras, o por otras características como nombre de alguno de los autores que participó en el estudio de esa estructura, por ejemplo, “Rubin, S.M.” devuelve un total de 41 estructuras. Pueden explorar la base de datos RCSB PDB para familiarizarse con ella.
 
 El repositorio PDB es mantenido por tres sitios independientes:
+
 * [RCSB](http://www.rcsb.org) PDB en estados unidos.
 * [PDBe](http://www.ebi.ac.uk/pdbe) en Europa.
 * [PDBj](https://pdbj.org/) en Japón.
@@ -59,17 +33,9 @@ Si bien los datos principales y recursos son compartidos, cada sitio provee un c
 Las estructuras tridimensionales de las proteínas pueden generarse por diferentes métodos (cristalografía de rayos X o X-Ray, resonancia magnética nuclear o RMN, criomicroscopía electrónica o CryoEM) y están codificadas en archivos pdb. Un archivo pdb está compuesto por múltiples líneas de registros, cada uno identificado por una etiqueta determinada incluidos dentro de distintas secciones. En la Figura 1 se muestra un fragmento de la sección de coordenadas que describe la estructura de la proteína dando las coordenadas “x”, “y” y “z” (azul claro) de cada uno de los átomos identificados.
 
 <p style="text-align:center">
-<img src="./img/archivo_pdb_fig1.png" alt="Archivo PDB">
+<img src="./img/archivo_pdb_fig1.png" alt="Archivo PDB" style="max-width:70%">
+<<figcaption style="text-align:left;max-width:70%"> Figura 1. Archivo PDB. </figcaption>
 </p>
-
-<figcaption align = "center">
-
-**Fig 1.** Archivo PDB.
-
-</figcaption>
-<br>
-<br>
-
 
 En cada línea, además, se identifica si es un átomo (rojo) perteneciente a un aminoácido o nucleótido, o heteroátomo (azul oscuro), la numeración (verde oscuro), el nombre del átomo (naranja), el nombre del residuo en el que está incluido el átomo (violeta), la cadena a la que pertenece (negro), el número del residuo al que pertenece (verde claro). Este archivo puede incluir más columnas para cada átomo con datos relacionados con la movilidad del átomo (el factor de temperatura o B-factor), el sı́mbolo que representa al átomo y la carga del mismo (señaladas con “...” en la figura). El encabezado o header del archivo PDB puede tener muchísima información no relacionada directamente con la conformación tridimensional de la proteína, sino con cómo se hizo el experimento, las publicaciones relacionadas y otros. La descripción del resto del contenido de las secciones del archivo pdb puede obtenerse en la sección documentación de [http://www.wwpdb.org/](http://www.wwpdb.org/). Recientemente, se desarrolló un nuevo formato de archivo, MMCIF, que puede codificar estructuras de complejos macromoleculares mucho más grandes. Sin embargo, no todos los programas utilizados para visualizar estructuras soportan este formato.
 
@@ -79,18 +45,13 @@ Otra característica de las estructuras es la resolución con la cuál se obtuvi
 La resolución es una medida de la calidad de los datos que se recolectaron del cristal. Si el cristal es perfecto, es decir que todas las proteínas están estructuralmente alineadas de manera idéntica, entonces el patrón de difracción generado mostrará detalles muy finos. Por otro lado, si las proteínas en el cristal no alinean estructuralmente debido a movimientos o flexibilidad local, el patrón de difracción no brindará mucha información. Estructuras de alta resolución, con valores de 1 Å o similar, están altamente ordenadas y es fácil ver cada átomo en un mapa de densidad electrónica. Estructuras de baja resolución, con valores de 3 Å o mayores, muestran los contornos de la cadena proteica y la estructura atómica debe inferirse. En general, la localización de los átomos en estructuras que tienen un valor de resolución pequeño es de mayor confianza.
 
 <p style="text-align:center">
-<img src="./img/resolucion_fig2.png" alt="Archivo PDB">
+<img src="./img/resolucion_fig2.png" alt="Archivo PDB" style="max-width:70%">
+<<figcaption style="text-align:left;max-width:70%"> Figura 2. Resolución en una estructura.</figcaption>
 </p>
 
-<figcaption align = "center">
+En la Figura 2 se muestra el mapa de densidad electrónica de distintas estructuras (las regiones de alta densidad electrónica se muestran en azul y amarillo) dentro de un rango de resoluciones.
 
-**Fig 2.** Resolución en una estructura.
-
-</figcaption>
-<br>
-<br>
-
-En la Figura 2 se muestra el mapa de densidad electrónica de distintas estructuras (las regiones de alta densidad electrónica se muestran en azul y amarillo) dentro de un rango de resoluciones. Las tres primeras muestran la tirosina 103 de la mioglobina (con palitos verdes se muestra el modelo atómico), los pdbs correspondientes son 1a6m (resolución de 1.0 Å), 106m (resolución de 2.0 Å) y 108m (resolución de 2.7 Å). El último ejemplo muestra la tirosina 130 de la cadena B de la hemoglobina del pdb 1s0h (resolución de 3.0 Å).
+Las tres primeras muestran la tirosina 103 de la mioglobina (con palitos verdes se muestra el *modelo atómico*), los pdbs correspondientes son 1a6m (resolución de 1.0 Å), 106m (resolución de 2.0 Å) y 108m (resolución de 2.7 Å). El último ejemplo muestra la tirosina 130 de la cadena B de la hemoglobina del pdb 1s0h (resolución de 3.0 Å).
 
 En la estructura de resolución de 1.0 Å se pueden ver la alta densidad electrónica en cada uno de los carbonos del anillo de la tirosina. A medida que aumenta ese valor, la densidad electrónica se va reduciendo (disminuye el contorno amarillo).
 Si bien los archivos PDB pueden inspeccionarse con un editor de texto cualquiera (para revisar el encabezado por ejemplo), normalmente es mejor utilizar un programa de visualización particular que mostrará la estructura en un sistema virtual de coordenadas tridimensionales. De esta manera, el usuario podrá hacer zoom, rotar y trasladar la estructura. Cambiar la representación, mostrar las uniones y calcular las distancias, encontrar características estructurales de interés, etc. Estas herramientas pueden accederse online y están disponibles en los sitios de PDB, pero existen programas más poderosos y versátiles que se pueden descargar (como UCSF Chimera o Pymol).
@@ -101,12 +62,14 @@ Muchas entradas PDB poseen missing residues. Estas son porciones que no fueron o
 
 La secuencia de la proteína en un PDB no necesariamente se corresponde al 100% con la de la entrada UniProt, debido a decisiones del experimentalista o dificultades técnicas. Siempre hay que revisar.
 
+
 ## PDB - Ejercicios
 
 ### Ejercicio 1. Familiarizándonos con el PDB.
 
 La proteína oxy-mioglobina de organismo Physeter catodon posee una estructura cuyo PDB ID es 1A6M.
-1. Busque la estructura en el PDB. Si quiere, puede descargar el archivo PDB utilizando los botones en la parte superior derecha. 
+
+1. Busque la estructura en el PDB (Si quiere aunque no es necesario, puede descargar el archivo PDB utilizando los botones en la parte superior derecha *Download Files*).
 2. Inspecciona la sección *Structure Summary*. 
     * ¿Cuándo se publicó la estructura en la PDB?
     * ¿Es una estructura de buena calidad?
@@ -125,34 +88,27 @@ La proteína oxy-mioglobina de organismo Physeter catodon posee una estructura c
 
 ## Visualización de estructuras proteicas con Chimera
 
-### Introducción
-#### Chimera, software de visualización de estructuras.
 Para poder visualizar estructuras macromoleculares tales como proteínas globulares y ácidos nucleicos, se usará el software UCSF Chimera. Existen otros softwares similares pero Chimera tiene la ventaja de ser mantenido actualmente por sus desarrolladores.
 Chimera es un programa disponible de manera gratuita, y está disponible para descargar e instalar en tu propia computadora en [https://www.cgl.ucsf.edu/chimera/download.html](https://www.cgl.ucsf.edu/chimera/download.html).
 
 Existen un alto número de guías y tutoriales disponibles online que pueden encontrarse en: [https://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/](https://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/).
 
+!!! Question "Para pensar..."
 
-<ul class="block-list has-radius is-primary">
-<li class="is-highlighted is-info has-icon">
-<span class="icon"><i class="fas fa-question"></i></span>
+    **Antes de empezar, pueden responder:**
 
-    <span style="font-weight:bold;">Antes de empezar, pueden responder:</span><br>
-    <ul>
-    <li>¿Por qué es importante visualizar estructuras proteicas?</li>
-    <li>¿Qué información podríamos obtener de ellas?</li>
-    <li>¿Estas estructuras, son un objeto real o un modelo?</li>
-    </ul>
-
-</li>
-</ul>
+    * ¿Por qué es importante visualizar estructuras proteicas?
+    * ¿Qué información podríamos obtener de ellas?
+    * ¿Estas estructuras, son un objeto real o un modelo?
 
 
 ## Chimera - Ejercicios
+
 ### Ejercicio 1. Familiarizándonos con Chimera
 Chimera es un programa con muchas potencialidades y herramientas de análisis. En la siguiente guía, introduciremos el uso de las funciones más comunes de este programa, en relación al análisis estructura-función de proteínas. 
 
-#### Manos a la obra!
+#### Manos a la obra!  
+
 1. Localice chimera en su computadora y ábralo. En la parte superior se encuentra el **Menú**. Vaya a *Favorites* y elija *Command Line*. Aparecerá en la parte inferior la **Línea de comandos**.
 
 2. Vaya nuevamente a *Favorites* y elija *Reply Log*, se abrirá una ventana. En el **Reply Log** aparecerán información, resultados numéricos y errores que nos devuelve Chimera.
@@ -171,15 +127,11 @@ Si ya hay una estructura ya descargada en la computadora se puede abrir usando:
 open path/to/file/fileName.extension
 ```
 
-<ul class="block-list has-radius is-primary">
-<li class="is-highlighted is-info has-icon">
-<span class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></span>
+!!! warning "IMPORTANTE"
 
-    <span style="font-weight:bold;">IMPORTANTE.</span><br>
-    Si en el nombre del archivo o directorio existen espacios debes incluir el nombre completo entre comillas:<br>
-    "path/to/file/file Name.extension"   
-</li>
-</ul>
+    Si en el nombre del archivo o directorio existen espacios debes incluir el nombre completo entre comillas:
+
+    `path/to/file/file Name.extension`
 
 El **log** y el panel de modelos se actualizan y aparecerá información asociada a la estructura cargada.
 
@@ -197,6 +149,7 @@ El **log** y el panel de modelos se actualizan y aparecerá información asociad
 Esta es una de las partes **más importantes** para tener bien en claro ya que nos permitirá hacer todas las selecciones para analizar la estructura.
 
 1. **Definiendo modelos.**
+
     Cada estructura que abrimos en Chimera se carga como un **modelo**. Los modelos se nombran con el símbolo `#` seguido de un número. 
     
     Prueba seleccionar el modelo entero escribiendo en la línea de comandos:
@@ -211,17 +164,14 @@ Esta es una de las partes **más importantes** para tener bien en claro ya que n
     ~select
     ```
 
-    <ul class="block-list has-radius is-primary">
-    <li class="is-highlighted is-info has-icon">
-    <span class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></span>
+    !!! Info
 
-        <span style="font-weight:bold;">IMPORTANTE.</span><br>
         La mayoría de los comandos permiten utilizar el símbolo de negación “~” por delante para ocultar lo que se hizo.
-    </li>
-    </ul>
 
 
-2. **Definiendo cadenas:** Para indicar una **cadena** del modelo se utiliza el símbolo `.` seguido de la letra correspondiente.
+2. **Definiendo cadenas:**
+
+    Para indicar una **cadena** del modelo se utiliza el símbolo `.` seguido de la letra correspondiente.
 
     Prueba seleccionar la cadena A del modelo escribiendo en la línea de comandos:
 
@@ -244,7 +194,9 @@ Esta es una de las partes **más importantes** para tener bien en claro ya que n
     select #0:.A-C
     ```
 
-3. **Definiendo residuos:** Para indicar **residuos** se utiliza el símbolo `:` seguido del número de residuo correspondiente. Prueba seleccionar el residuo 300
+3. **Definiendo residuos:**
+
+    Para indicar **residuos** se utiliza el símbolo `:` seguido del número de residuo correspondiente. Prueba seleccionar el residuo 300
 
     ```
     select :300
@@ -259,10 +211,11 @@ Esta es una de las partes **más importantes** para tener bien en claro ya que n
     ```
 
     En base a lo que aprendimos hasta ahora:
+
     * ¿Cómo sería el comando para seleccionar un rango de residuos?
     * ¿y para seleccionar residuos separados?.
 
-    También es posible indicar los residuos por el código de tres letras de los aminoácidos (Si no lo recordás podés encontrarlo [acá](https://es.wikipedia.org/wiki/Nomenclatura_de_amino%C3%A1cidos).
+    También es posible indicar los residuos por el código de tres letras de los aminoácidos (Si no lo recordás podés encontrarlo [acá](https://es.wikipedia.org/wiki/Nomenclatura_de_amino%C3%A1cidos)).
     
     Prueba seleccionar por ejemplo todos los ácidos glutámicos.
 
@@ -270,7 +223,9 @@ Esta es una de las partes **más importantes** para tener bien en claro ya que n
     select #0:glu.A
     ```
 
-4. **Definiendo átomos:** Para indicar **átomos** se utiliza el símbolo `@` seguido del nombre del átomo correspondiente dentro de la proteína. Prueba seleccionar los CA (carbonos alfa).
+4. **Definiendo átomos:**
+
+    Para indicar **átomos** se utiliza el símbolo `@` seguido del nombre del átomo correspondiente dentro de la proteína. Prueba seleccionar los CA (carbonos alfa).
 
     ```
     select #0:.A@CA
@@ -287,26 +242,27 @@ Esta es una de las partes **más importantes** para tener bien en claro ya que n
     ```
 
     Hay dos cosas que cambiamos:
+
     * `sel` : permite aplicar el comando `color` sobre lo que está seleccionado.
     * `a` : específica que sólo se coloreen los átomos. Prueba qué ocurre si no incluís a.
 
-5. **Definiendo palabras claves:** Existen numerosas palabras clave que permiten seleccionar grupos de cosas predefinidas, además de las que presentamos a continuación puedes encontrar más información.
+5. **Definiendo palabras claves:**
 
-    <div class="table">
+    Existen numerosas palabras clave que permiten seleccionar grupos de cosas predefinidas, además de las que presentamos a continuación puedes encontrar más información.
 
-    **En relación a:**      | **Palabra Clave**         | **Ejemplo:**              |
-    Estructura Secundaria   | `helix`<br>`strand`<br>`coil`   | `select #0:.C & helix` <br> `select #0:.C & strand` <br> `select #0:.C & coil` |
-    Extremos                | `start`<br>`end`              | `select #0:start-855.C` <br> `select #0:855-end.C` |
-    Partes de la proteína   | backbone: `@n,ca,c,o & protein` <br> sidechain: `without CA/C1'` | `select #0:.A@n,ca,c,o & protein` <br> `sel #0:TYR.A & without CA/C1'`|
-    Otros                   | `solvent`<br> `ions` <br> `ligand` <br> | `select solvent` <br> `select ions` <br> `select ligand` |
+    |**En relación a:** { data-sort-method='none' }  |   **Palabra Clave**   { data-sort-method='none' } |  **Ejemplo**   { data-sort-method='none' } |   
+    |:-------:|:-----------:|:-----------:|
+    | Estructura Secundaria   | `helix`<br>`strand`<br>`coil`   | `select #0:.C & helix` <br> `select #0:.C & strand` <br> `select #0:.C & coil` |
+    | Extremos                | `start`<br>`end`              | `select #0:start-855.C` <br> `select #0:855-end.C` |
+    | Partes de la proteína   | backbone: `@n,ca,c,o & protein` <br> sidechain: `without CA/C1'` | `select #0:.A@n,ca,c,o & protein` <br> `sel #0:TYR.A & without CA/C1'`|
+    | Otros                   | `solvent`<br> `ions` <br> `ligand` <br> | `select solvent` <br> `select ions` <br> `select ligand` |
 
-    </div>
-
+    
     Si necesitas ayuda con algún comando, puedes escribir en la línea de comando: `help comando`. Por ejemplo: `help select` te abrirá la ayuda para el comando `select`.
 
 ### Ejercicio 3. Análisis de la estructura del Receptor Binding Domain (RBD) de Spike del Coronavirus SARS-COV-2 unido a ACE2
 
-La proteína Spike (S) de coronavirus (UNIPROT ID: P0DTC2, SPIKE_SARS2) corresponde a una proteína de membrana tipo I, de entre 180-200 kDa que presenta 1273 residuos y numerosas glicosilaciones (Figura 3).
+La proteína Spike (S) de coronavirus (UniProt ID: P0DTC2, SPIKE_SARS2) corresponde a una proteína de membrana tipo I, de entre 180-200 kDa que presenta 1273 residuos y numerosas glicosilaciones (Figura 3).
 
 Cada monómero se encuentra formado por un extremo N-terminal que constituye la mayoría de la proteína y se encuentra orientado hacia el espacio extracelular, un dominio transmembrana (TM) y un segmento C-terminal intracelular corto (IC). Spike se organiza formando trímeros en la superficie del virus, otorgando la apariencia de corona distintiva para la especie.
 
@@ -317,25 +273,21 @@ Adicionalmente, S1 está compuesta por dos secciones; una región N-terminal (NT
 Por otra parte, S2 se encuentra muy conservada entre todos los coronavirus. Contiene dos regiones, HR1 y HR2, en las que se repiten grupos de siete aminoácidos (heptad repeats) y el péptido de fusión (FP). De esta forma, durante el proceso de infección, S1 reconoce y se une a la enzima ACE2 presente en la membrana de la célula hospedadora. Esta unión trae aparejada la escisión proteolítica de los dominios S1 y S2, conduciendo a la activación del péptido de fusión que conecta la envoltura viral con la membrana plasmática. La reconfiguración de la región existente entre los dominios HR1 y HR2 da lugar a una estructura compuesta por 6 hélices (6-HB) que une ambas membranas, catalizando su fusión y permitiendo la entrada del virus a la célula.
 
 <p style="text-align:center">
-<img src="./img/spike_fig3.png" alt="Spike">
+<img src="./img/spike_fig3.png" alt="Spike" style="max-width:80%">
 </p>
-
-<figcaption align = "left">
-
-**Fig 3.** Representación topológica de la proteína Spike (monómero). Se encuentra compuesta por diferentes dominios: NTD, dominio N-terminal; SD1, subdominio 1; SD2, subdominio 2; FP, péptido de fusión; HR1, repetición en héptada 1; HR2, repetición en héptada 2; TM, región transmembrana; IC, dominio intracelular. El dominio RBD (Receptor Binding Domain), indispensable para que el SARS-CoV-2 pueda unirse a su receptor en la célula hospedera se muestra en cian, mientras que el motivo RBM (Receptor-Binding Motif) está indicado en rojo.
-
+<figcaption style="text-align:left;max-width:80%">
+Figura 3. Representación topológica de la proteína Spike (monómero). Se encuentra compuesta por diferentes dominios: NTD, dominio N-terminal; SD1, subdominio 1; SD2, subdominio 2; FP, péptido de fusión; HR1, repetición en héptada 1; HR2, repetición en héptada 2; TM, región transmembrana; IC, dominio intracelular. El dominio RBD (Receptor Binding Domain), indispensable para que el SARS-CoV-2 pueda unirse a su receptor en la célula hospedera se muestra en cian, mientras que el motivo RBM (Receptor-Binding Motif) está indicado en rojo.
 </figcaption>
-<br>
-<br>
+
 
 El objetivo principal de los siguientes ejercicios consiste en introducir la utilización de Chimera en estudios estructurales de complejos proteicos. Utilizando la estructura de RBD-ACE2 como modelo, se emplearán variadas metodologías elementales de visualización, que permitan analizar los diferentes niveles de organización de la estructura de las proteínas. Se focalizará en el reconocimiento de cadenas polipeptídicas y elementos de su entorno. A su vez, se visualizarán distintos tipos de estructura secundaria en relación con la secuencia primaria y se estudiarán interacciones determinantes para el establecimiento de estructura terciaria.
 
 #### 1. Cargando la estructura en Chimera.
 
 * Descargue del Protein Data bank la entrada: 6m0j y guárdela en un lugar de preferencia. 
-* Inicie Chimera y abra el archivo “6m0j.pdb”. Este corresponde a una estructura resuelta a 2.45 Å por difracción de rayos X 
+* Inicie Chimera y abra el archivo “6m0j.pdb”. Este corresponde a una estructura resuelta a 2.45 Å por difracción de rayos X:
 
-**File** → **Open…** (Navegue hasta donde guardó la entrada 6m0j)
+    **File** → **Open…** (Navegue hasta donde guardó la entrada 6m0j)
 
 * Alternativamente, puede hacerlo con la línea de comandos en Chimera:
 
@@ -343,16 +295,11 @@ El objetivo principal de los siguientes ejercicios consiste en introducir la uti
     open 6m0j
     ```
 
-    <ul class="block-list has-radius is-primary">
-    <li class="is-highlighted is-info has-icon">
-    <span class="icon"><i class="fa fa-exclamation fa-2x"></i></span>
+    !!! warning "Antes de seguir"
+    
+        ¡ Asegúrese que sabe cómo rotar, trasladar y hacer zoom sobre la estructura !
 
-        <p>
-        <span style="font-weight:bold;">Antes de seguir:</span><br>¡asegúrese que sabe cómo rotar, trasladar y hacer zoom sobre la estructura! ¡Recuerde comandos del mouse, los vamos a necesitar!
-        </p>
-
-    </li>
-    </ul>
+        ¡ Recuerde comandos del mouse, los vamos a necesitar !
 
 
 #### 2. Reconociendo la estructura
@@ -659,60 +606,63 @@ El objetivo principal de los siguientes ejercicios consiste en introducir la uti
 
     Como pueden ver tiene muchas opciones! A continuación veremos algunas de ellas y sus posibles valores marcando en negrita el valor utilizado o por defecto:
 
-    `saltOnly`: true \| **false**
+    * `saltOnly`: true \| **false**
 
-    Permite limitar los resultados a puentes salinos (true), es decir puentes de hidrógeno entre grupos funcionales cargados o no limitar (false)
+        Permite limitar los resultados a puentes salinos (true), es decir puentes de hidrógeno entre grupos funcionales cargados o no limitar (false)
 
-    `selRestrict`: **any** \| cross \| both \| atom-spec2
+    * `selRestrict`: **any** \| cross \| both \| atom-spec2
 
-    Permite limitar los resultados a:
+        Permite limitar los resultados a:
 
-    - `any`.  Puentes de hidrógeno que tengan al menos un átomo en la selección (en este caso, #0)
-    - `cross`. Puentes de hidrógeno que tenga exactamente un átomo en la selección (en este caso, #0)
-    - `both`. Puentes de hidrógeno con ambos átomos en la selección (en este caso, #0)
-    - `atom-spec2`. Puentes de hidrógeno entre la selección  (en este caso, #0) y una segunda selección.
+        - `any`.  Puentes de hidrógeno que tengan al menos un átomo en la selección (en este caso, #0)
+        - `cross`. Puentes de hidrógeno que tenga exactamente un átomo en la selección (en este caso, #0)
+        - `both`. Puentes de hidrógeno con ambos átomos en la selección (en este caso, #0)
+        - `atom-spec2`. Puentes de hidrógeno entre la selección  (en este caso, #0) y una segunda selección.
 
-    `reveal`: true \| **false**
+    * `reveal`: true \| **false**
 
-    Permite mostrar las cadenas laterales de los residuos entre los cuáles hay un puente de hidrógeno.
+        Permite mostrar las cadenas laterales de los residuos entre los cuáles hay un puente de hidrógeno.
 
-    `showDist`: true \| **false**
+    * `showDist`: true \| **false**
 
-    Imprime una etiqueta con la longitud del puente de hidrógeno.
+        Imprime una etiqueta con la longitud del puente de hidrógeno.
 
-    Las siguientes opciones permiten restringir la búsque de puentes de hidrógeno:
+    
+    Las siguientes opciones permiten restringir la búsqueda de puentes de hidrógeno:
 
-    `interSubmodel` true \| **false**
+    * `interSubmodel` true \| **false**
 
-    entre submodelos del mismo modelo (en este caso estamos trabajando con un modelo que no tiene submodelos)
+        entre submodelos del mismo modelo (en este caso estamos trabajando con un modelo que no tiene submodelos)
 
-    `interModel` **true** \| false
+    * `interModel` **true** \| false
 
-    entre modelos (en este caso tenemos un único modelo)
+        entre modelos (en este caso tenemos un único modelo)
 
-    `intraModel` **true** \| false
+    * `intraModel` **true** \| false
 
-    dentro del modelo
+        dentro del modelo
 
-    `intraMol` **true** \| false
+    * `intraMol` **true** \| false
 
-    dentro de una misma molécula (o sea, dentro de una misma cadena)
+        dentro de una misma molécula (o sea, dentro de una misma cadena)
 
-    `intraRes` **true** \| false
+    * `intraRes` **true** \| false
 
-    dentro de un mismo residuo
+        dentro de un mismo residuo
 
-    `relax` **true** \| false
+    * `relax` **true** \| false
 
-    Permite relajar los criterios para la selección de puentes de hidrógeno
+        Permite relajar los criterios para la selección de puentes de hidrógeno
 
-    `color yellow lineWidth 2 lineType dashed`
+    Otras opciones son:
 
-    Estas son opciones de formato de como se muestran los puentes de hidrógeno.
+    * `color yellow lineWidth 2 lineType dashed`
 
-    `log` **true** \| false
+        Estas son opciones de formato de como se muestran los puentes de hidrógeno.
 
-    Imprime en el **reply log** los puentes de hidrógeno encontrados y sus longitudes.
+    * `log` **true** \| false
+
+        Imprime en el **reply log** los puentes de hidrógeno encontrados y sus longitudes.
 
 * Corra el comando y observe en el reply log la longitud de los puentes de hidrógeno. ¿Entre qué valores oscilan?
 
@@ -795,11 +745,12 @@ El objetivo principal de los siguientes ejercicios consiste en introducir la uti
 
     **File** → **Close Session**
 
+<!---
 ## Recordings
 
 - Intro [[MP4]](https://drive.google.com/file/d/1lSRF4kvq89ynsW9HqRPQfxpEWE6ysaXv/view?usp=sharing)
 - Cierre [[MP4]](https://drive.google.com/file/d/1xo1crJN62jvDVkTsFzl1aMuWtt-xLFaX/view?usp=sharing)
-
+-->
 
 ## Otros recursos
 
@@ -811,6 +762,3 @@ El objetivo principal de los siguientes ejercicios consiste en introducir la uti
 [https://www.ebi.ac.uk/training/online/course/pdbe-searching-protein-data-bank](https://www.ebi.ac.uk/training/online/course/pdbe-searching-protein-data-bank)
 ### PDBe: Searching for biological macromolecular structures
 [https://www.ebi.ac.uk/training/online/course/pdbe-searching-biological-macromolecular-structure](https://www.ebi.ac.uk/training/online/course/pdbe-searching-biological-macromolecular-structure)
-
-
-{% endif %}

@@ -12,7 +12,7 @@ tags:
 -->
 :fontawesome-solid-check-double: Puede estar sujeto a modificaciones.
 
-|**Fecha** { data-sort-method='none' }  |   **Horario**   { data-sort-method='none' } |  **Tipo**   { data-sort-method='none' } |   **Tema**  { data-sort-method='none' }  |   **Docente** |
+|**Fecha** { data-sort-method='none' }  |   **Horario**   { data-sort-method='none' } |  **Tipo**   { data-sort-method='none' } |   **Tema**  { data-sort-method='none' }  |   **Docente** { data-sort-method='none' } |
 |:-------:|:-----------:|:-----------:|:-----------|:-----------|
 | Lunes, 13/05/2024	    | 9 - 12hs      | Teórica       | T1a. Introducción al curso                                                        | L. Chemes |
 |                       |               |               | T1b. Bases de Datos y anotación de proteínas                                      | L. Chemes |

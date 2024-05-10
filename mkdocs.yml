@@ -79,6 +79,7 @@ markdown_extensions:
   - md_in_html
   - toc:
       title: Contenidos
+      toc_depth: 3
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.caret
@@ -140,7 +141,7 @@ nav:
     - Prácticos: 
         - 'practicos/inicio.md'
         - TP1 - Bases de Datos: 'practicos/db_uniprot/index.md'
-    #    - TP2: 'practicos/2-Trabajo-Practico-Dos/index.md'
+        - TP2 - Chimera: 'practicos/chimera/index.md'
     #    - TP3: 'practicos/3-Trabajo-Practico-Tres/index.md'
     #    - Resumen: 'practicos/resumen.md'
     #- Instructivos: instructivos.md
