@@ -76,8 +76,8 @@ El sitio web de UniProt permite navegar los distintos conjuntos de datos desde e
 <img src="./img/uniprot_home_1.png" alt="UniProt-1" style="max-width:60%">
 <img src="./img/uniprot_home_2.png" alt="UniProt-2" style="max-width:60%">
 <img src="./img/uniprot_home_3.png" alt="UniProt-3" style="max-width:60%">
-<figcaption> Figura 1. Homepage de UniProt. </figcaption>
 </p>
+<figcaption style="text-align:center;max-width:60%"> Figura 1. Homepage de UniProt. </figcaption>
 
 
 En la parte superior de la página web hay una barra de búsqueda y distintos accesos directos:
@@ -91,7 +91,7 @@ En la parte superior de la página web hay una barra de búsqueda y distintos ac
 
 <p style="text-align:center">
 <img src="./img/uniprot_top.png" alt="Barra de búsqueda de UniProt">
-<figcaption> Figura 2. Barra de búsqueda de UniProt. </figcaption>
+<figcaption style="text-align:center;max-width:60%"> Figura 2. Barra de búsqueda de UniProt. </figcaption>
 </p>
 
 
@@ -124,7 +124,7 @@ Los resultados obtenidos además pueden filtrarse por la base de datos, el organ
 
 <p style="text-align:center">
 <img src="./img/uniprot_results.png" alt="Results in UniProt">
-<figcaption> Figura 3. Página de resultados de UniProt. Tabla de resultados utilizando la palabra "retinoblastoma". </figcaption>
+<figcaption style="text-align:center;max-width:70%"> Figura 3. Página de resultados de UniProt. Tabla de resultados utilizando la palabra "retinoblastoma". </figcaption>
 </p>
 
 
@@ -136,14 +136,14 @@ La visualización *Feature viewer* es una alternativa muy útil que permite visu
 
 <p style="text-align:center">
 <img src="./img/uniprot_entry_sections2.png" alt="Entry Sections2">
-<figcaption> Figura 5. Menú de visualización e información de la entrada</figcaption>
+<figcaption style="text-align:center;max-width:70%"> Figura 5. Menú de visualización e información de la entrada</figcaption>
 </p>
 
 A la izquierda, se muestra una barra de navegación que lista todas las secciones con información para la proteína seleccionada.
 
 <p style="text-align:center">
-<img src="./img/uniprot_entry_sections.png" alt="Entry Sections" style="max-width:25%">
-<figcaption> Figura 6. Secciones de Información para una entrada en UniProt </figcaption>
+<img src="./img/uniprot_entry_sections.png" alt="Entry Sections" style="max-width:20%">
+<figcaption style="text-align:center;max-width:60%"> Figura 6. Secciones de Información para una entrada en UniProt </figcaption>
 </p>
 
 
@@ -158,7 +158,7 @@ Una entrada de UniProt puede poseer datos experimentales y predichos. Los datos 
 
 <p style="text-align:center">
 <img src="./img/uniprot_annotated_experimental.png" alt="Entry Sections">
-<figcaption> Figura 7. Ejemplo de evidencia predicha y experimental en uniprot para la proteína retinoblastoma de humanos (P06400).<br>
+<figcaption style="text-align:left;max-width:95%"> Figura 7. Ejemplo de evidencia predicha y experimental en uniprot para la proteína retinoblastoma de humanos (P06400).<br>
 Muchas de las etiquetas que dicen <b>Automatic Annotation</b> corresponden a la asignación de <b>Desorden</b> (región no estructurada de la proteína) a una región de secuencia en base al análisis bioinformático de la secuencia.<br>
 Las etiquetas con un listón amarillo que dicen <b>1 Publication</b>, indican que esas regiones poseen evidencia experimental en una publicación para la interacción con LIMD1 (región 763 a 928) y con E4F1 para el dominio C de retinoblastoma. </figcaption>
 </p>
@@ -171,13 +171,13 @@ Las entradas de UniProt están ranqueadas por un sistema de 5 puntos (*Annotatio
 1. Busca en UniProt la proteína *CDC7*.
 2. ¿Cuál es el nombre de la proteína? ¿Cuál es su longitud en humanos?
 3. ¿Cuántas entradas existen en organismos populares y cuántas en humanos?
-4. Encuentra la proteína Q8NEY8 entre los resultados. ¿Por qué te parece que está entre los resultados?
-5. Recorre la tabla hasta que aparezca la proteína B1AMW7. ¿Cuál es su longitud? ¿Por qué está B1AMW7?
+4. Encuentra la proteína `Q8NEY8` entre los resultados. ¿Por qué te parece que está entre los resultados?
+5. Recorre la tabla hasta que aparezca la proteína `B1AMW7`. ¿Cuál es su longitud? ¿Por qué está `B1AMW7`?
 5. ¿Cuántas de las entradas corresponden a entradas anotadas manualmente (Swiss-Prot) y cuántas no (TrEmBl)?
 6. ¿Cuántas de las entradas que corresponden a humanas tienen el mayor score? ¿Que puntuación tienen la mayoría de las entradas? ¿Por qué cree que ocurre esto?
 
 ### Ejercicio 2. Demetilasa Lisin-específica 3B.
-1. La Demetilasa Lisin-específica 3B (KDM3B) existe tanto en humanos (Q7LBC6) como en ratones (Q6ZPY7). Su función es bien conocida y en cada organismo dicha función fue anotada a partir de distintas fuentes.
+1. La Demetilasa Lisin-específica 3B (KDM3B) existe tanto en humanos (`Q7LBC6`) como en ratones (`Q6ZPY7`). Su función es bien conocida y en cada organismo dicha función fue anotada a partir de distintas fuentes.
 
     * ¿Puede identificar estás fuentes?
 
@@ -229,7 +229,7 @@ La entrada de UniProt Q9UBU3 corresponde a la proteína GHSR, una hormona regula
 
 ### Ejercicio 4. Demetilasa Lisin-específica 5C (KDM5C).
 
-La demetilasa Lisin-específica 5C (P41229) es otra histona demetilasa cuyo blanco específico es la lisina 4 de la histona H3.
+La demetilasa Lisin-específica 5C (`P41229`) es otra histona demetilasa cuyo blanco específico es la lisina 4 de la histona H3.
 
 1. ¿Puede localizar la *K~cat~* y el *K~m~* de esta reacción para esta entrada uniprot?
 
@@ -247,12 +247,12 @@ La demetilasa Lisin-específica 5C (P41229) es otra histona demetilasa cuyo blan
         
         Los archivos **Multi Fasta** tienen muchas de estas combinaciones, una luego de la otra y con una línea en blanco opcional entre cada secuencia.
 
-3. Las entradas UniProt tienen una sección específica llamada *Family & Domains*. Esta sección describe la identidad, posición y longitud de los dominios que fueron anotados en la proteína.
+3. Las entradas UniProt tienen una sección específica llamada *Family & Domains*. Esta sección describe la identidad, posición y longitud de los dominios que fueron anotados en la proteína. En *Type* filtre por las distintas categorías para responder:
     
     1. ¿Cuántos dominios puede encontrar definidos para la KDM5C?
     2. ¿De donde proviene la información relacionada a la presencia de Dominios?
     3. ¿Existen otras regiones relevantes para esta proteína?
-    4. ¿Hay referencias cruzadas para esas regiones con otras bases de datos?
+    4. Siga explorando la sección, ¿Hay referencias cruzadas para esas regiones con otras bases de datos?
     
 
 ### Ejercicio 5 - Proteína p53. Descarga de Múltiples Secuencias
@@ -295,7 +295,7 @@ Una entrada Pfam se construye a partir de un alineamiento de secuencia múltiple
 
 Si bien algunas regiones en Pfam se llaman comúnmente Dominios, las entradas de Pfam no representan necesariamente una región de secuencia que se pliega en una estructura terciaria discreta, sino más bien, representan unidades conservadas evolutivamente.
 
-Una **Familia (Family)** Pfam representa un conjunto de secuencias relacionadas por un HMM. Las familias grandes y divergentes pueden compartir una gran similitud de secuencia, estructura o función con los miembros de otras familias. Dada la dificultad de representar estas **superfamilias** por un único alineamiento o perfil HMM, Pfam provee un nivel superior de agrupamiento de las familias en **Clanes (clans)**.
+Una **Familia (Family)** Pfam representa un conjunto de secuencias relacionadas por un HMM. Las familias grandes y divergentes pueden compartir una gran similitud de secuencia, estructura o función con los miembros de otras familias. Dada la dificultad de representar estas **superfamilias** por un único alineamiento o perfil HMM, Pfam provee un nivel superior de agrupamiento de las familias relacionadas evolutivamente en **Clanes (clans)**.
 
 Cada residuo de cada secuencia dada sólo puede pertenecer a una familia Pfam.
 
@@ -318,9 +318,10 @@ Pfam utiliza un segundo sistema de puntuación (*bit score*) para el mantenimien
 
 
 Cuando una familia proteica es construida, se establece un umbral en el bit-score para la recolección (bit score gathering, GA) de manera manual para cada familia. Este puntaje (GA) determina el menor puntaje que una secuencia debe obtener en la búsqueda con el perfil de HMM para ser incluida en el alineamiento completo.
+
 Tanto los alineamientos semilla, como los alineamientos completos y el perfil de HMM están disponibles en Pfam para su descarga.
 
-En el año 2022, la base de datos Pfam fue incorporada a la base de datos InterPro. La base de datos original de Pfam puede todavía navegarse en la versión Legacy: [https://Pfam.xfam.org/](https://Pfam.xfam.org/). Pero los datos desde este servidor ya no tendrán actualizaciones.
+En el año 2022, la base de datos Pfam fue incorporada a la base de datos InterPro. La base de datos original de Pfam puede todavía accederse parcialmente en la versión Legacy: [https://Pfam.xfam.org/](https://Pfam.xfam.org/). Pero los datos desde este servidor ya no tendrán actualizaciones y la mayoría de las cosas redirigen a InterPro.
 
 En InterPro, [https://www.ebi.ac.uk/interpro/](https://www.ebi.ac.uk/interpro/), se pueden realizar muchas de las búsquedas que se realizaban en la página original de Pfam.
 
@@ -390,52 +391,62 @@ La mayoría de los datos de Pfam son tomados de UniProt y mucha de la informaci�
 Busque en InterPro la entrada Pfam utilizando el identificador de Pfam: `PF00571`.
 
 1. ¿Pertenece a una proteína, un dominio, una familia o un clan?
-3. En en la descripción, ¿puedes encontrar el nombre de alguna proteína que posee este dominio?
+3. En la página principal de la entrada, ¿puedes encontrar el nombre de tres proteínas que poseen este dominio?
 2. En el menú de la izquierda ¿Cuántas secuencias están conectadas con esta entrada?
-4. En el menú de la izquierda, *Domain Architectures* lista las arquitecturas de dominios (arreglos específicos de ciertos dominios) donde se encuentra esta familia. ¿Cuántas proteínas poseen la arquitectura CBSx2? 
-    <!--
-    5. Observe la representación gráfica y coloreada de los dominios anotados. Apoyando el puntero del mouse sobre ellos puede obtener una descripción más extensa. ¿Puede encontrar una región desordenada en esta arquitectura? <br> 
-        Discuta: ¿Llamaría a esta región desordenada un dominio?
-    6. Otra arquitectura abundante es ‘IMPDH, CBS x 2’. ¿Que indican los puntos pequeños de colores? ¿De dónde se obtuvo esta información?
-    -->
-7. En esta misma sección, ¿cuántas arquitecturas de dominio existen?
-7. Muestre los resutados de a 100 y vaya hasta el final haciendo click en *Next* (o lo más cercano al final que pueda) donde encontrará las arquitecturas minoritarias. Haciendo click en Show puede ver las secuencias que poseen esta arquitectura. ¿Son parecidas? ¿Por qué algunos bloques de colores muestran bordes recortados?
-8. En la sección *Alignments* puede encontrar los distintos formatos de los alineamientos pre-calculados. Descargue el alineamiento semilla (seed) en formato FASTA, con las secuencias ordenadas alfabéticamente y que los gaps se muestran como guiones.
-9. El logo del perfil HMM es un resumen gráfico del perfil que provee una vista rápida de sus propiedades. Para cada posición en el eje-x, el valor del eje-y indica conservación. ¿Cuál es la posición más conservada en este logo?
-10. Pfam brinda información evolutiva de las proteínas que pertenecen a la familia. Se puede obtener un árbol filogenético de la familia en la sección *Trees*. ¿Con qué alineamiento se construye este árbol filogenético?
-11. Con la opción Species se puede analizar la distribución de esta familia proteica en las distintas especies. ¿En qué reino esta proteína es más abundante? ¿Cuántas especies eucariotas poseen esta proteína?
+4. En el menú de la izquierda, *Domain Architectures* lista las arquitecturas de dominios (arreglos específicos de ciertos dominios) donde se encuentra esta familia. ¿cuántas arquitecturas de dominio existen?
+5. ¿Cuántas proteínas poseen la arquitectura CBSx2? ¿Cual es la proteína representante? ¿A qué organismo pertenece?
+6. Otra arquitectura abundante es ‘IMPDH, CBS x 2’. En base a su conocimiento de dominios Pfam, ¿Observa algo contradictorio?
+7. Vaya a la representación gráfica de la proteína representante. Observe la detección de los dominios Pfam ‘IMPDH, CBS x 2’ ¿Sigue habiendo una contradicción? ¿Por qué cree que algunos bloques muestran bordes recortados?
+7. Muestre los resutados de a 100 y vaya hasta el final haciendo click en *Next* (o lo más cercano al final que pueda) donde encontrará las arquitecturas minoritarias. ¿Son parecidas a las anteriores? ¿El tamaño de los dominios CBS es similar?
+8. En la sección *Alignment* del menú de la izquierda puede encontrar los distintos formatos de los alineamientos pre-calculados.
+
+    En este caso, está disponible el alineamiento semilla (seed) con el que se construye el HMM.
+    
+    * ¿Con cuántas secuencias se construyó el alineamiento?
+    * En *Colors* tiene distintas opciones para visualizar el alineamiento, coloree por clustal2 ¿A que residuos corresponden los distintos colores?
+   
+    Si quiere, puede descargar en formato FASTA el alineamiento semilla.
+
+9. El logo del perfil HMM es un resumen gráfico del perfil que provee una vista rápida de sus propiedades. Está disponible en la sección *Signature* del menú de la izquierda. Para cada posición en el eje-x, el valor del eje-y indica conservación. ¿Cuál es la posición más conservada en este logo?
+
+10. Pfam brinda información evolutiva de las proteínas que pertenecen a la familia CBS. Se puede obtener un árbol filogenético de la familia en la sección *Taxonomy*. Visualice los datos como árbol y responda ¿En qué linaje, Eukaryota, Archaea o Bacteria, tiene el mayor nro de representantes con este dominio?
+
+11. Visualice los resultados como *Surnburst* para poder ver la distribución de esta familia en las distintas especies. ¿En qué reino esta familia es más abundante? ¿Cuántas especies de este reino poseen esta proteína?
+
+14. La sección *Structures* conecta las regiones de las entradas UniProt donde se encontró el dominio CBS con los identificadores de la base de datos de estructuras conocidas PDB (Protein Data Bank) y siguiendo el identificador PDB se pueden explorar las estructuras terciarias en la base de datos del PDB. En esta sección, ¿Cuántas estructuras hay disponibles?
+
+13. Volviendo a la sección *Domain Architectures*, encuentre el Pfam ID para la familia IMPDH y vaya al sitio para esta entrada.
+    * ¿Cuál es la actividad de este dominio?
+    * ¿Puede determinar el plegamiento estructural de esta familia a partir del nombre del clan al que pertenece?.
+<!--
 12. La sección *Interactions* lista las interacciones para dominios en esta familia. Utilizando el link More puede encontrar más información sobre el origen de estos datos. ¿Fueron determinados experimentalmente o están basados en predicciones computacionales?
-13. También en la sección *Interactions*, utilice el link para la familia IMPDH. ¿Cuál es la actividad de este dominio? ¿Puede determinar el plegamiento estructural de esta familia a partir del nombre del clan al que pertenece? (Note que la sección *Clan* se encuentra activa para esta entrada).
-14. La sección *Structures* conecta las regiones de las entradas UniProt donde se encontró el dominio CBS con los identificadores de la base de datos de estructuras conocidas PDB (Protein Data Bank). Siguiendo el identificador PDB se pueden explorar las estructuras terciarias en la base de datos del PDB. ¿Cuántas estructuras diferentes encuentra para los primeros 60 residuos del dominio?
+-->
 
 ### Ejercicio 2. Proteína KDM5C
-Si recuerda de los ejercicios de UniProt, la proteína KDM5C (demetilasa lisin-específica 5C) tenía al menos tres dominios reportados: JmjN, ARID y JmjC. Busque en Pfam esta proteína utilizando el nombre de la entrada (KDM5C_HUMAN). Observe que el menú de la izquierda es distinto al de la familia Pfam.
-1. En la sección *Summary* ¿puede encontrar otros dominios o regiones interesantes?
-2. ¿A qué se une el dominio ARID de esta proteína? ¿Puede encontrar el identificador PDB?
-3. ¿Aparecen los zinc-fingers como dominios en Pfam? ¿Estaban también anotados como dominios en UniProt?
+Si recuerda de los ejercicios de UniProt, la proteína KDM5C (demetilasa lisin-específica 5C) tenía al menos tres dominios reportados: JmjN, ARID y JmjC. Busque en InterPro esta proteína utilizando el nombre de la entrada (KDM5C_HUMAN). Observe que el menú de la izquierda es distinto al de la familia Pfam.
+
+1. En la sección *Overview* ¿puede encontrar otros dominios o regiones interesantes?
+2. ¿A qué se une el dominio ARID de esta proteína? ¿Puede encontrar el identificador PDB de la estructura de este dominio en la proteína KDM5C?
+3. ¿Aparecen los zinc-fingers como dominios en Pfam? ¿Estaban también anotados como *dominios* en UniProt?
 
 ### Ejercicio 3. Proteína p53
 1. Busque la proteína p53 en Pfam.
-    <ol type="a">
-    <li>¿Qué dominios encuentra?</li>
-    <li>¿Algunos de los dominios estaban identificados en la sección *Family & Domains* en Uniprot como dominios?</li>
-    <li>¿Qué función tiene cada uno de los dominios?</li>
-    <li>¿Que estado de oligomerización considera que tiene p53? ¿Esto lo observó en la predicción estructural de AlphaFold?</li>
-    <li>¿Qué regiones clasifica como desordenadas Pfam? ¿Son las mismas identificadas en la sección *Family & domains* como desordenadas?</li>
-    <ul class="block-list has-radius is-primary">
-    <li class="is-highlighted is-info has-icon">
-    <span class="icon"><i class="fas fa-lightbulb"></i></span>
-        <p>
+    1. ¿Qué dominios encuentra?
+    1. ¿Algunos de los dominios estaban identificados en la sección *Family & Domains* en Uniprot como dominios?
+    1. ¿Qué función tiene cada uno de los dominios?
+    1. ¿Que estado de oligomerización considera que tiene p53? ¿Esto lo observó en la predicción estructural de AlphaFold?
+    1. ¿Qué regiones clasifica como desordenadas Pfam? ¿Son las mismas identificadas en la sección *Family & domains* como desordenadas?
+    
+    !!! info 
+    
         Desorden y low complexity son dos conceptos que serán vistos en mayor profundidad más adelante en el curso.
-        <br>
-        Una <span style="font-weight:bold;">región desordenada</span> se diferencia de una región globular porque carece de una estructura que se mantenga en el tiempo.
-        <br>
-        <span style="font-weight:bold;">Low complexity regions</span> son regiones que poseen baja complejidad de secuencia y están enriquecidas en algún aminoácido o dímeros de aminoácidos.
-        </p>
-    </li>
-    </ul>
-    <li>¿Qué regiones clasifica como low complexity?</li>
-    </ol>
+    
+        Una **región desordenada** se diferencia de una región globular porque carece de una estructura que se mantenga en el tiempo.
+        
+        **Low complexity regions** son regiones que poseen baja complejidad de secuencia y están enriquecidas en algún aminoácido o dímeros de aminoácidos.
+
+        ¿Qué regiones clasifica como low complexity?
+
 
 ## TMHMM
 TMHMM es un servidor dedicado a la predicción de hélices transmembranas en proteínas. Si bien se desarrolló hace ya dos décadas, es constantemente actualizado y aún es una buena referencia.
