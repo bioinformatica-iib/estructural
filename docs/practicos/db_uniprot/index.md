@@ -183,7 +183,7 @@ Las entradas de UniProt están ranqueadas por un sistema de 5 puntos (*Annotatio
 
     * ¿Puede identificar estás fuentes?
 
-Vaya a la entrada UniProt para la demetilasa Lisin-específica 3B humana. Inspeccione las distintas características anotadas disponibles (los campos pueden encontrarse en el menú de la izquierda) y conteste:
+    Vaya a la entrada UniProt para la demetilasa Lisin-específica 3B humana. Inspeccione las distintas características anotadas disponibles (los campos pueden encontrarse en el menú de la izquierda) y conteste:
 
 2. ¿Cuál es el nombre de la entrada?
 3. ¿A qué base de datos de UniProtKB pertenece?
