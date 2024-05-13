@@ -34,7 +34,9 @@ La mayor base de datos de Uniprot es UniProtKB (UniProt **K**nowledge**B**ase) q
     Una *secuencia codificante (CDS)* es una región de ADN o ARN cuya secuencia determina la secuencia de aminoácidos en una proteína. No se debe confundir con un marco abierto de lectura (Open Reading Frame, ORF) que es una región continua de codones de ADN que empiezan con un codón de inicio y termina con un codón stop. Todos los CDS son ORFs pero no todos los ORFs son CDS, por ejemplo, los ORFs incluye a los intrones.
 
 
-* **Swiss-Prot** es una base de datos de proteínas que fueron revisadas y anotadas manualmente por un curador/a experto/a. Por lo tanto, Swiss-Prot contiene la información de más alta calidad para secuencias de proteínas.
+* **Swiss-Prot** es una base de datos de proteínas que fueron revisadas y anotadas manualmente por un curador/a experto/a.
+
+Por lo tanto, Swiss-Prot contiene la información de más alta calidad para secuencias de proteínas.
 
 TrEMBL brinda los datos crudos para que los curadores de Swiss-Prot los revisen. Por lo tanto, TrEMBL tiene más entradas que Swiss-Prot, pero carece de la anotación manual de un experto.
 
@@ -435,17 +437,15 @@ Si recuerda de los ejercicios de UniProt, la proteína KDM5C (demetilasa lisin-e
     1. ¿Algunos de los dominios estaban identificados en la sección *Family & Domains* en Uniprot como dominios?
     1. ¿Qué función tiene cada uno de los dominios?
     1. ¿Que estado de oligomerización considera que tiene p53? ¿Esto lo observó en la predicción estructural de AlphaFold?
-    1. ¿Qué regiones clasifica como desordenadas Pfam? ¿Son las mismas identificadas en la sección *Family & domains* como desordenadas?
+    1. ¿Puede observar las regiones desordenadas en la predicción estructural de AlphaFold? ¿Son las mismas identificadas en la sección *Family & domains* como desordenadas?
     
     !!! info 
     
-        Desorden y low complexity son dos conceptos que serán vistos en mayor profundidad más adelante en el curso.
+        Desorden y **low complexity** son dos conceptos que serán vistos en mayor profundidad más adelante en el curso.
     
         Una **región desordenada** se diferencia de una región globular porque carece de una estructura que se mantenga en el tiempo.
         
         **Low complexity regions** son regiones que poseen baja complejidad de secuencia y están enriquecidas en algún aminoácido o dímeros de aminoácidos.
-
-        ¿Qué regiones clasifica como low complexity?
 
 
 ## TMHMM
@@ -457,77 +457,103 @@ A partir de la secuencia, TMHMM devuelve un conjunto de estadísticas y una list
 
 Un plot de probabilidades posteriores permite la identificación de los segmentos transmembrana que se encuentran en el modelo final y otros segmentos predichos débilmente que no fueron considerados. El HMM calcula la probabilidad total de que un residuo sea parte de una hélice, un loop interno o externo y luego combina estas evaluaciones en el modelo final.
 
+
 ## TMHMM - Ejercicios
+
 ### Ejercicio 1. Bacteriorodopsina.
-La interfaz de TMHMM Server 2.0 es simple. Se usa la caja de búsqueda en la página principal para correr la predicción a partir de una secuencia.
+La interfaz de [TMHMM Server 2.0](https://services.healthtech.dtu.dk/services/TMHMM-2.0/) es simple. Se usa la caja de búsqueda en la página principal para correr la predicción a partir de una secuencia.
 1. Ingrese la secuencia de la proteína bacteriorodopsina que se encuentra a continuación para realizar la búsqueda en TMHMM. Use el formato de salida por defecto (‘Extensive, with graphics’) para obtener resultados más descriptivos.
 
-    ```
+
     >sp|P02945|BACR_HALSA Bacteriorhodopsin OS=Halobacterium salinarum
     MLELLPTAVEGVSQAQITGRPEWIWLALGTALMGLGTLYFLVKGMGVSDPDAKKFYAITT
     LVPAIAFTMYLSMLLGYGLTMVPFGGEQNPIYWARYADWLFTTPLLLLDLALLVDADQGT
     ILALVGADGIMIGTGLVGALTKVYSYRFVWWAISTAAMLYILYVLFFGFTSKAESMRPEV
     ASTFKVLRNVTVVLWSAYPVVWLIGSEGAGIVPLNIETLLFMVLDVSAKVGFGLILLRSR
     AIFGEAEAPEPSAGDGAAATSD
-    ```
+
 
 2. Inspeccione los resultados de la búsqueda. ¿Cuántas hélices transmembrana encontró?
 3. Entre los estadísticos encontrará *Exp number of AAs in TMHs*. Este es el número esperado de aminoácidos en hélices transmembrana según este HMM como método de predicción. Cuando este número es mayor que 18, la proteína es probablemente una proteína transmembrana. ¿Es la bacteriorodopsina una proteína transmembrana?
-4. Otro estadístico es *Exp number, first 60 AAs*. Este valor es el mismo que el anterior pero limitado a los primeros 60 aminoácidos. Si este estadístico no posee un valor bajo, es decir de unos pocos residuos, entonces puede llegar a ocurrir que una hélice transmembrana predicha en la región N-terminal sea en realidad un péptido señal. Se pueden utilizar otras herramientas dedicadas a la predicción de péptidos señal, como [SignalP](https://services.healthtech.dtu.dk/service.php?SignalP-5.0). sabiendo que Halobacterium es una Archea, ¿SignalP predice el N-terminal como un péptido señal?
+4. Otro estadístico es *Exp number, first 60 AAs*. Este valor es el mismo que el anterior pero limitado a los primeros 60 aminoácidos. Si este estadístico no posee un valor bajo, es decir de unos pocos residuos, entonces puede llegar a ocurrir que una hélice transmembrana predicha en la región N-terminal sea en realidad un péptido señal.
+
+    Se pueden utilizar otras herramientas dedicadas a la predicción de péptidos señal, como [SignalP](https://services.healthtech.dtu.dk/service.php?SignalP-5.0). sabiendo que Halobacterium es una Archea, ¿SignalP predice el N-terminal como un péptido señal?
+
 5. En el gráfico, los bloques rojos corresponden a hélices transmembrana, las líneas azules indican regiones en el interior y los segmentos violetas corresponden a regiones en el exterior. Observando el gráfico, ¿puede haber otra hélice transmembrana que el modelo esté descartando?
 6. ¿Cuántos pasos transmembrana tienen las Rodopsinas? En base a las herramientas aprendidas en este trabajo práctico ¿Se le ocurre donde puede encontrar esta información? (Pista: Tiene el Accession number de esta proteína!).
 
 
+## Interpro - Ejercicios Adicionales
 
-
-## Interpro - Ejercicios (Adicionales)
 ### Ejercicio 1. Dominios CBS.
+
 Realice una búsqueda en InterPro con el identificador de Pfam PF00571.
-1. ¿En qué entrada de InterPro está integrada?
+
+1. ¿En qué **entrada de InterPro** está integrada?
 2. ¿Corresponde a una proteína, un dominio u otra cosa?
 3. ¿Corresponde a la misma entidad que Pfam? ¿Estas entidades son similares o al menos tienen algo en común?
 4. ¿Qué *signatures* de otras bases de datos fueron fusionados con Pfam para crear la entrada de InterPro?
 5. ¿Cuántas proteínas corresponden a esta entrada? ¿Cuántas arquitecturas de dominio? ¿Cuántas proteínas tienen dos ocurrencias repetidas de esta entrada seguida por un dominio transporter-associated (IPR005170)?
 
 ### Ejercicio 2. Proteína KDM5C.
-Busque en InterPro la entrada correspondiente a la demetilasa lisin-específica 5C (UniProtKB  entry P41229). Hacia la izquierda pueden expandirse las *signatures* que definen los distintos tipos de entradas de InterPro, mientras que en la sección central se observan las predicciones de las *signatures* para la proteína de interés.
+Busque en InterPro la entrada correspondiente a la demetilasa lisin-específica 5C (UniProtKB entry P41229). Hacia la izquierda pueden expandirse/colapsarse las *signatures* que definen los distintos tipos de entradas de InterPro, mientras que en la sección central se observan las predicciones de las *signatures* para la proteína de interés.
+
 1. ¿Qué *signatures* son reconocidas en esta proteína?
-2. Las *signatures* son mapeadas en la secuencia query en los resultados principales. Observe la sección *Homologous superfamilies*. ¿Cuál es la arquitectura de esta superfamily?
-3. La signature más cercana al C-terminal en esta superfamily es un zinc finger. ¿Qué *signatures* de InterPro describen esta región? ¿Qué tipo de *signatures* son? ¿De donde proviene la información que utilizó InterPro para esta asignación? A la izquierda puede observar los identificadores que las *signatures* provenientes de las distintas bases de datos.
+2. Las *signatures* son mapeadas en la secuencia query en los resultados principales. Observe la sección *Homologous superfamily*. ¿Cuál es la arquitectura de esta superfamily?
+
+    !!! Info "Tipos de entradas en InterPro"
+
+        Las entradas de InterPro existen para:
+
+        * **Protein Family:** Grupo de proteínas que comparten un origen evolutivo que se refleja en funciones relacionadas, homología de secuencia y similitud estructural.
+        * **Domain:** Una unidad distintiva funcional, estructural o de secuencia que se encuentra frecuentemente asociada a otros tipos de dominios.
+        * **Site:** Secuencia corta con uno o más residuos conservados incluyendo: sitios activos, de unión, conservados y sitios de modificaciones post-traduccionales.
+        * **Repeats:** Secuencia corta ( < 50 a aminoácidos) que típicamente se repite varias veces dentro de una proteína.
+        * **Homologous Superfamily:** Grupo de proteínas que comparten un origen evolutivo que se refleja en la similitud estructural, aún cuando la similitud de secuencia es baja. Este tipo de entrada contiene *signatures* de las bases de datos CATH-Gene3D y SUPERFAMILY exclusivamente.
+
+3. La *signature* más cercana al C-terminal en esta superfamily es un zinc finger.
+
+    * ¿Qué *signatures* de InterPro describen esta región? ¿Qué tipo de *signatures* son?
+    * ¿De donde proviene la información que utilizó InterPro para esta asignación?
+    * A la derecha puede observar los identificadores que las *signatures* provenientes de las distintas bases de datos.
+
 4. Entre las *signatures* identificadas está la entrada de dominio IPR001606. ¿Qué bases de datos fueron procesadas para crear esta entrada? ¿Estas mapean todas a la misma región exacta de la proteína de interés? Si la respuesta es no, ¿por qué cree que es así?
 5. ¿Puede identificar regiones intrínsecamente desordenadas en esta proteína? (‘mobidb’ es la fuente en este caso para la anotación de estas regiones).
 6. ¿Cuántas proteínas similares a P41229 existen aproximadamente?
 
-### Ejercicio 3.
+### Ejercicio 3. Búsqueda a partir de secuencia.
+
 Busque en la base de datos de InterPro la entrada que describe la proteína en la siguiente secuencia FASTA:
 
-```
->squirrel_seq | example from EBI Train Online
-MALPARLVPLCCLALLALPAQSCGPGRGPVGRRRYVRKQLVPLLYKQFVPSVPERTLGAS
-GPAEGRVARGSERFRDLVPNYNPDIIFKDEENSGADRLMTERCKERVNALAIAVMNMWPG
-VRLRVTEGWDEDGHHAQDSLHYEGRALDITTSDRDRNKYGLLARLAVEAGFDWVYYESRN
-HVHVSVKAGTVGGGCFRETEAAQLWGDARGLRELHRAWVLAADAAGRVVPTPVLLFLDRD
-LQRRASFVAVETERPPRKLLLTPWHLVFAARGPAPAPGDFAPVFARRLRAGDSVLAPGGD
-ALRPARVARVAREEAVGVFAPLTAHGTLLVNDVLASCYAVLESHQWAHRAFAPLRLLHAL
-GALLPGGAVQPTGMHWYSRFLYRLAEELLG
-```
+    >squirrel_seq | example from EBI Train Online
+    MALPARLVPLCCLALLALPAQSCGPGRGPVGRRRYVRKQLVPLLYKQFVPSVPERTLGAS
+    GPAEGRVARGSERFRDLVPNYNPDIIFKDEENSGADRLMTERCKERVNALAIAVMNMWPG
+    VRLRVTEGWDEDGHHAQDSLHYEGRALDITTSDRDRNKYGLLARLAVEAGFDWVYYESRN
+    HVHVSVKAGTVGGGCFRETEAAQLWGDARGLRELHRAWVLAADAAGRVVPTPVLLFLDRD
+    LQRRASFVAVETERPPRKLLLTPWHLVFAARGPAPAPGDFAPVFARRLRAGDSVLAPGGD
+    ALRPARVARVAREEAVGVFAPLTAHGTLLVNDVLASCYAVLESHQWAHRAFAPLRLLHAL
+    GALLPGGAVQPTGMHWYSRFLYRLAEELLG
+
 1. ¿Pertenece a alguna family?
 2. ¿Puede encontrar el nombre de la entrada de la base de datos PRINTS utilizada para construir esta family signature de InterPro?
 3. ¿Cuál es la diferencia entre las InterPro *signatures* IPR001767 y IPR003587?
 4. Considerando las dos *signatures* del punto anterior y IPR000320, ¿puede describir la arquitectura de esta proteína? ¿Cómo difiere de la arquitectura presentada en la sección *Homologous superfamilies*?
-5. ¿Cuál es el rol biológico de esta proteína? (*Pista*: clickee en el nombre de la familia de la proteína).
+5. ¿Cuál es el rol biológico de esta proteína?
+
+    ??? Hint "Pista"
+    
+        Clickee en el nombre de la familia de la proteína.
+
 6. ¿Tiene un péptido señal esta proteína?
 7. ¿Cómo podría saber a simple vista que esta proteína tiene actividad peptidasa?
 
-## Recording
-
-- Intro [[MP4]](https://drive.google.com/file/d/1acaQeH4rOgykSAYHHWFxPOiGlAjZRt51/view?usp=sharing)
-- Cierre [[MP4]](https://drive.google.com/file/d/1IzH0QhEYaKXTlArELncfTPlmrj-I6DLS/view?usp=sharing)
 
 ## Recursos adicionales
+
 ### UniProt: Exploring protein sequence and functional information
 
 [https://www.ebi.ac.uk/training/online/course/uniprot-exploring-protein-sequence-and-functional](https://www.ebi.ac.uk/training/online/course/uniprot-exploring-protein-sequence-and-functional)
+
 ### Pfam: Quick tour
 
 [https://www.ebi.ac.uk/training/online/course/Pfam-quick-tour](https://www.ebi.ac.uk/training/online/course/Pfam-quick-tour)
@@ -543,6 +569,3 @@ GALLPGGAVQPTGMHWYSRFLYRLAEELLG
 
 ### Protein classification: An introduction to EMBL-EBI resources
 [https://www.ebi.ac.uk/training/online/course/protein-classification-introduction-embl-ebi-resou](https://www.ebi.ac.uk/training/online/course/protein-classification-introduction-embl-ebi-resou)
-
-
-{% endif %}
