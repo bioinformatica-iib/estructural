@@ -1,19 +1,5 @@
----
-layout: page
-title: TP N°3
-subtitle: Modelado por Homología - Parte I
-data : True
-menubar_toc: true
-hero_height: is-small
-toc_title: CONTENIDOS
-construccion: false
----
 
-{% if page.construccion %}
-
-**Pagina en construccion**
-
-{% else %}
+# **TP 3**. Modelado por Homología - Parte I  { markdown data-toc-label = 'TP 3' }
 
 ## Recursos Online
 
@@ -22,7 +8,7 @@ construccion: false
 
 ## Materiales
 
-* [Descargar](https://drive.google.com/file/d/1XjpchOpDP5wdxmrLQlW3B6li8j-ceRKK/view?usp=sharing)
+[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1XjpchOpDP5wdxmrLQlW3B6li8j-ceRKK/view?usp=sharing){ .md-button .md-button--primary }
 
 ## Objetivos
 
@@ -30,13 +16,14 @@ construccion: false
 * Analizar la calidad de los modelos obtenidos
 
 ## Ejercicio 1. Modelado mistery protein.
+
 Luego de dos años y numerosos intentos fallidos, usted logra determinar por resonancia magnética nuclear una región de una proteína misteriosa y deposita la estructura en la base de datos de proteínas PDB (PDB: 1F46).
 
 Años después ocurre una pandemia de una enfermedad respiratoria causada por *Actinobacillus pleuropneumoniae* que está causando un rápido aumento en la mortalidad de la población porcina, trayendo terribles consecuencias en la actividad económica mundial. Una vez que se logró aislar la cepa responsable, se cree que una proteína que comparte casi el 25 % de identidad con su proteína misteriosa es un posible blanco para el diseño de una droga. Sin embargo, se desconoce la estructura de la misma. Como usted es el único experto en esa proteína en el mundo, la Asociación del Centro Médico Epidemiológico (ACME) se pone en contacto con usted en busca de una solución. Para solucionar el problema, Ud. decide primero intentar un modelado por homología de la nueva proteína.
 
 1. Ingrese la secuencia de la proteína misteriosa patogénica en [HHPred](https://toolkit.tuebingen.mpg.de/tools/hhpred)
 
-    ```Bash
+    ```
     >Pathogenic Mistery Protein
     MELHILFFILAGLLIAVLISFSLWSARREKSRIFSNTFSTRPPSTPINNIVSDVPPSLNPQSYAQT
     TGQHGETEADNPVQIQQEVESSLREIKINLPGQDSAAYQSKVEETPIYSGQPVLPVQPQYQTQVQY
@@ -58,7 +45,9 @@ Años después ocurre una pandemia de una enfermedad respiratoria causada por *A
 
 3. Haga click en **Forward to Modeller** y luego en **Submit**.
 
-    De ser necesario ingrese la siguiente key: **MODELIRANJE** en el recuadro que dice **Modeller key** y luego haga click en Submit.
+    !!! warning "Atencion"
+    
+        De ser necesario ingrese la siguiente key: **MODELIRANJE** en el recuadro que dice **Modeller key** y luego haga click en Submit.
 
     * ¿Qué aparece en la nueva ventana?
 
@@ -72,11 +61,11 @@ Años después ocurre una pandemia de una enfermedad respiratoria causada por *A
 
     El gráfico reporta la calidad del modelo por posición y en él se observan tres regiones:  
 
-    <ol type="i">
-    <li>Posiciones con <strong>score menor a cero</strong> están <strong>mal</strong> modeladas,</li>
-    <li>Posiciones con <strong>score entre cero y 0.2</strong> están <strong>pobremente</strong> modeladas,</li>
-    <li>Posiciones con <strong>score mayor a 0.2</strong> están modeladas con <strong>buena calidad</strong>.</li>
-    </ol>
+    !!! Info
+
+        * Posiciones con **score menor a cero** están **mal** modeladas,
+        * Posiciones con **score entre cero y 0.2** están **pobremente** modeladas,
+        * Posiciones con **score mayor a 0.2** están modeladas con **buena calidad**.
 
     **Verify 3D** asigna como aceptado a un modelo con más del 80% de las posiciones posiciones con un score promedio en el área **bien modelada**.
 
@@ -222,8 +211,3 @@ Desconfiando de los resultados de su becario, Ud. decide analizar la calidad del
 7. Ud. Se sacó un nuevo subsidio donde tiene plata para seguir haciendo estudios estructurales de esta proteína: 
 
     * ¿le daría alguna indicación a su nuevo becario, para que tenga más suerte al intentar cristalizarla?
-
-## Recording
-- Cierre [[MP4]](https://drive.google.com/file/d/1fMgCHZ6GOf2xIRfWuzjGiwC4q4V8lnVB/view?usp=sharing)
-
-{% endif %}
