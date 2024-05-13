@@ -16,7 +16,7 @@ tags:
 |:-------:|:-----------:|:-----------:|:-----------|:-----------|
 | Lunes, 13/05/2024	    | 9 - 12hs      | Teórica       | T1a. Introducción al curso                                                        | L. Chemes |
 |                       |               |               | T1b. Bases de Datos y anotación de proteínas                                      | L. Chemes |
-|                       | 13 - 17hs     | Práctico      | TP1. Bases de Datos de proteínas                                                  | J. Glavina |
+|                       | 13 - 17hs     | Práctico      | [TP1. Bases de Datos de proteínas](/estructural/practicos/db_uniprot/)                                                  | J. Glavina |
 | Martes, 14/05/2024    | 10 - 12.30hs  | Teórica       | T2. Estructura de Proteínas                                                       | L. Chemes |
 |                       | 13 - 15.30hs  | Práctico      | TP2. Visualización de Proteínas utilizando Chimera                                | J. Glavina |
 | Miércoles, 15/05/2024	|  9 - 12hs	    | Teórica       | T3. Modelado por Homología                                                        | L. Chemes |
