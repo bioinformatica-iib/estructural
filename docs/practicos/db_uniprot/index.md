@@ -1,4 +1,7 @@
+<!--
 ![Uniprot](img/feature.png){ width="250", align="left" }
+-->
+
 # **TP 1**. Introducción a bases de Datos { markdown data-toc-label = 'TP 1' }
 
 ## Recursos Online
