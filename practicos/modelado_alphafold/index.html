@@ -12,22 +12,29 @@
       
         <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/modelado_alphafold/">
       
+      
+      
+      
       <link rel="icon" href="../../img/logo-unsam-negro.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
     
     
       
-        <title>TP N°4 - Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas</title>
+        <title>TP 4. Modelado por Homología - Parte II - Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
-        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
+      
+
+
     
+    
+      
     
     
       
@@ -41,10 +48,11 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
@@ -69,16 +77,13 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
   
     
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
         
-        <a href="#recursos-online" class="md-skip">
+        <a href="#tp-4-modelado-por-homologia-parte-ii" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -98,6 +103,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
+      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -110,38 +116,46 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TP N°4
+              TP 4. Modelado por Homología - Parte II
             
           </span>
         </div>
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
-            </label>
-          
-        
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-            </label>
-          
-        
-      </form>
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
       <label class="md-header__button md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
@@ -150,16 +164,20 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -173,7 +191,7 @@
           <div class="md-search-result__meta">
             Inicializando búsqueda
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -192,80 +210,21 @@
           
             
 <nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
+  <div class="md-grid">
     <ul class="md-tabs__list">
       
         
   
   
-
-
-  <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
-      Inicio
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../../acerca/" class="md-tabs__link">
-      Acerca de
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../../contenidos/" class="md-tabs__link">
-      Contenidos
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../../cronograma/" class="md-tabs__link">
-      Cronograma
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../../docentes/" class="md-tabs__link">
-      Docentes
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  
-  
   
     <li class="md-tabs__item">
-      <a href="../../teoricas/inicio/" class="md-tabs__link">
-        Teóricas
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
       </a>
     </li>
   
@@ -274,16 +233,104 @@
         
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../../acerca/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
 
+      </a>
+    </li>
+  
 
+      
+        
   
   
   
     <li class="md-tabs__item">
-      <a href="../inicio/" class="md-tabs__link">
-        Prácticos
+      <a href="../../contenidos/" class="md-tabs__link">
+        
+  
+    
+  
+  Contenidos
+
       </a>
     </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cronograma/" class="md-tabs__link">
+        
+  
+    
+  
+  Cronograma
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../docentes/" class="md-tabs__link">
+        
+  
+    
+  
+  Docentes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../teoricas/inicio/" class="md-tabs__link">
+          
+  
+  Teóricas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../inicio/" class="md-tabs__link">
+          
+  
+  Prácticos
+
+        </a>
+      </li>
+    
   
 
       
@@ -302,6 +349,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 
   
 
@@ -322,14 +370,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Inicio
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
       </a>
     </li>
   
@@ -337,14 +390,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../acerca/" class="md-nav__link">
-        Acerca de
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+  </span>
+  
+
       </a>
     </li>
   
@@ -352,14 +410,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../contenidos/" class="md-nav__link">
-        Contenidos
+        
+  
+  <span class="md-ellipsis">
+    Contenidos
+  </span>
+  
+
       </a>
     </li>
   
@@ -367,14 +430,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../cronograma/" class="md-nav__link">
-        Cronograma
+        
+  
+  <span class="md-ellipsis">
+    Cronograma
+  </span>
+  
+
       </a>
     </li>
   
@@ -382,14 +450,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../docentes/" class="md-nav__link">
-        Docentes
+        
+  
+  <span class="md-ellipsis">
+    Docentes
+  </span>
+  
+
       </a>
     </li>
   
@@ -397,152 +470,237 @@
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+      
+      
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6">
-          Teóricas
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Teóricas" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          Teóricas
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
           
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Teóricas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Teóricas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/inicio/" class="md-nav__link">
-        Inicio
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica1a/" class="md-nav__link">
-        Teórica 1a
+        
+  
+  <span class="md-ellipsis">
+    Teórica 1a
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica1b/" class="md-nav__link">
-        Teórica 1b
+        
+  
+  <span class="md-ellipsis">
+    Teórica 1b
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teoricas/teorica2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teórica 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+      
+      
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7">
-          Prácticos
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Prácticos" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Prácticos
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
           
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prácticos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Prácticos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../inicio/" class="md-nav__link">
-        Inicio
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../db_uniprot/" class="md-nav__link">
-        TP1 - Bases de Datos
+        
+  
+  <span class="md-ellipsis">
+    TP1 - Bases de Datos
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../chimera/" class="md-nav__link">
-        TP2 - Chimera
+        
+  
+  <span class="md-ellipsis">
+    TP2 - Chimera
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -555,32 +713,14 @@
             
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
-  <h1>TP N°4</h1>
-
-<style>
-details > summary:first-of-type {
-   display: list-item;
-}
-details summary { 
-  cursor: pointer;
-}
-
-details summary > * {
-  display: inline;
-}
-
-/* ol { list-style-type: upper-alpha; } */
-</style>
-
-<p>{% if page.construccion %}</p>
-<p><strong>Pagina en construccion</strong></p>
-<p>{% else %}</p>
+<div><h1 id="tp-4-modelado-por-homologia-parte-ii" markdown="markdown"><strong>TP 4</strong>. Modelado por Homología - Parte II</h1>
 <h2 id="recursos-online">Recursos Online</h2>
 <ul>
 <li>ColabFold For AlphaFold2 using MMseqs2: <a href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb">Aquí</a></li>
@@ -595,37 +735,25 @@ details summary > * {
 <p>En los últimos años, hubo un crecimiento continuo en el número de estructuras de proteínas determinadas experimentalmente depositadas en el PDB (actualmente ~170.000). Esto, junto con la explosión de la secuenciación (millones de secuencias) y el desarrollo de técnicas de deep learning benefició el desarrollo de algoritmos de predicción de estructura tridimensional de proteínas. Hasta el 2021, los algoritmos de predicción de estructura tridimensional de proteínas se basan en dos aspectos complementarios: las interacciones físicas (o contactos) o la historia evolutiva de la proteína. Sin embargo, y a pesar de los avances, la mayoría de los algoritmos de predicción no son muy precisos si se carece de un homólogo cercano con una estructura tridimensional resuelta experimentalmente.
 A partir de la secuencia primaria de una proteína (Fig 1), AlphaFold2 utiliza una red neuronal para la predicción estructural de alta precisión (en la mayoría de los casos), la cual aumenta con el uso de estructuras homólogas. AlphaFold2 puede incluso predecir con alta precisión las cadenas laterales si el backbone es preciso.</p>
 <p style="text-align:center">
-<a class="glightbox" href="./img/alphafold_fig1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/alphafold_fig1.png" alt=""></a>
+<a class="glightbox" href="./img/alphafold_fig1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/alphafold_fig1.png" alt="" style="max-width:70%"></a>
 </p>
+<figcaption style="text-align:center;max-width:70%"> Figura 1. Algoritmo de predicción de estructuras AlphaFold2. </figcaption>
 
-<figcaption align = "left">
-
-**Fig 1.** Algoritmo de predicción de estructuras AlphaFold2.
-
-</figcaption>
-<p><br>
-<br></p>
 <h3 id="arquitectura">Arquitectura</h3>
 <p>AlphaFold2 utiliza una arquitectura de red que utiliza como inputs el alineamiento de secuencias (MSAs) y una representación de todos los pares de residuos de la secuencia. Mediante un algoritmo iterativo que se basa en la arquitectura Evoformer, se procesan los inputs y en conjunto con un módulo estructural se genera una representación tridimensional de la proteína query. </p>
 <h3 id="metricas-de-confianza">Métricas de confianza</h3>
-<p>AlphaFold2 incorpora métricas de confianza de la predicción. La principal métrica de confianza es el test <strong>pLDDT</strong> (predicted local-distance difference test) el cual es un predictor confiable del test de diferencias en las distancias Cα (IDDT-Cα) y evalúa principalmente la correctitud del modelo a nivel local (estimando el error en distancias de un Cα con Cα vecinos en un rango de 15Å). La segunda métrica se denomina <strong>PAE</strong> (por Predicted Aligned error) y compara el error en la predicción de pares de residuos, esto es el error sobre el residuo y cuando las estructuras real y predicha son alineadas sobre el residuo x. Esta medida permite la identificación global de unidades de plegamiento (dominios) y permite predecir si dos dominios guardan relaciones espaciales definidas, o si tienen variabilidad (por ejemplo, si están conectadas por un linker flexible.</p>
+<p>AlphaFold2 incorpora métricas de confianza de la predicción. La principal métrica de confianza es el test <strong>pLDDT</strong> (predicted local-distance difference test) el cual es un predictor confiable del test de diferencias en las distancias Cα (IDDT-Cα) y evalúa principalmente la correctitud del modelo a nivel local (estimando el error en distancias de un Cα con Cα vecinos en un rango de 15Å). La segunda métrica se denomina <strong>PAE</strong> (por Predicted Aligned error) y compara el error en la predicción de pares de residuos, esto es el error sobre el residuo y cuando las estructuras real y predicha son alineadas sobre el residuo x. Esta medida permite la identificación global de unidades de plegamiento (dominios) y permite predecir si dos dominios guardan relaciones espaciales definidas, o si tienen variabilidad (por ejemplo, si están conectadas por un linker flexible).</p>
 <p style="text-align:center">
-<a class="glightbox" href="./img/pae-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/pae-3.png" alt="" style="max-width:70%"></a>
-<a class="glightbox" href="./img/pae-8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/pae-8.png" alt="" style="max-width:70%"></a>
+<a class="glightbox" href="./img/pae-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/pae-3.png" alt="" style="max-width:60%"></a>
+<a class="glightbox" href="./img/pae-8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/pae-8.png" alt="" style="max-width:60%"></a>
 </p>
+<figcaption style="text-align:center;max-width:60%"> Figura 2. Arriba. Se pueden observar dos dominios globulares, pero se desconoce la disposición espacial relativa entre ellos. Abajo. Se puede observar que además de identificar los dominios globulares, se predien correctamente pares de residuos interdominios. </figcaption>
 
-<figcaption align = "left">
-
-**Fig 2.** *Arriba.* Se pueden observar dos dominios globulares, pero se desconoce la disposición espacial relativa entre ellos. *Abajo.* Se puede observar que además de identificar los dominios globulares, se predien correctamente pares de residuos interdominios.
-
-</figcaption>
-<p><br>
-<br></p>
 <h3 id="costo-computacional">Costo computacional</h3>
-<p>AlphaFold2 consume muchísimos recursos. Por lo tanto, muchas proteínas de organismos modelos están siendo modeladas y puestas a disposición de la comunidad científica en una base de datos: https://alphafold.ebi.ac.uk/, como ya pudo observar en UniProt.</p>
+<p>AlphaFold2 consume muchísimos recursos. Por lo tanto, muchas proteínas de organismos modelos están siendo modeladas y puestas a disposición de la comunidad científica en una base de datos: <a href="https://alphafold.ebi.ac.uk/">https://alphafold.ebi.ac.uk/</a>, como ya pudo observar en UniProt.</p>
 <p>Afortunadamente, la comunidad científica rápidamente desarrolló distintas “colabs” o “notebooks” que permiten correr AlphaFold2 en una máquina remota. La única “desventaja” es que se debe contar con una cuenta de mail de gmail, en las versión gratuita de colab, debido al espacio en disco y capacidad de cómputo que se adjudica, sólo se pueden correr proteínas o complejos con menos de 1000 residuos, <strong>cada cuenta de gmail puede usar un colab a la vez</strong>.</p>
 <p>Otra desventaja, es que no se pueden modificar muchos parámetros del modelado al usar un colab, en comparación con correr la simulación desde un script en una computadora o server propio. Sin embargo, los parámetros usados en el ColabFold de AlphaFold2 son los que fueron más ampliamente validados durante el desarrollo del método.</p>
-<p>Existen distintos colabs que implementan AlphaFold2. En este curso utilizaremos uno en particular. (Todas las versiones están disponibles en el github: https://github.com/sokrypton/ColabFold)</p>
+<p>Existen distintos colabs que implementan AlphaFold2. En este curso utilizaremos uno en particular. (Todas las versiones están disponibles en el <a href="https://github.com/sokrypton/ColabFold">github</a>)</p>
 <h2 id="alphafold2-ejercicios">AlphaFold2 - Ejercicios</h2>
 <p>Realizaremos ejercicios con dos proteínas. E7 del papilomavirus y la proteína de Cápside de flavivirus.</p>
 <p>Los papilomavirus (PVs) son virus desnudos icosaédricos y poseen un genoma ADN doble cadena circular entre 5-8 Kb. Sus hospedadores incluyen una amplia variedad de vertebrados desde peces, reptiles, aves y mamíferos. Los PV infectan el epitelio mucoso y queratinizado y producen lesiones denominadas condilomas o papilomas y verrugas respectivamente y en humanos algunos PVs están asociados al cáncer cervical uterino, de la formación de tumores en el tracto urogenital y en las vı́as aéreas superiores.
@@ -635,11 +763,10 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
 <ol>
 <li>
 <p>Ingrese al ColabFold que implementa MMseq2 <a href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb">Aquí</a> .</p>
-<p><ul class="block-list has-radius is-primary">
-<li class="is-highlighted is-info">
-Si quiere que los cambios que realice sean guardados deberá agregar la notebook a su drive. Pero esto no es necesario.
-</li>
-</ul></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Si quiere que los cambios que realice sean guardados deberá agregar la notebook a su drive. Pero esto no es necesario.</p>
+</div>
 </li>
 <li>
 <p>En la parte superior, haga click en <em>Runtime</em> → <em>Change Runtime</em> y asegúrese que <strong>GPU</strong> esté seleccionado.</p>
@@ -654,11 +781,10 @@ MHGDTPTLHEYMLDLQPETTDLYCYEQLNDSSEEEDEIDGPAGQAEPDRAHYNIVTFCCKCDSTLRLCVQSTHVDIRTLE
 <li>En el campo jobname ingrese: E7_MONOMERO.</li>
 <li>
 <p>Asegúrese que use amber esté tildado.</p>
-<p><ul class="block-list has-radius is-primary">
-<li class="is-highlighted is-info">
-Amber permite mejorar la geometría de la unión peptídica y posición de rotámeros luego de la relajación de la estructura. Si bien no mejora la predicción, remueve violaciones estereoquímicas.
-</li>
-</ul></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Amber permite mejorar la geometría de la unión peptídica y posición de rotámeros luego de la relajación de la estructura. Si bien no mejora la predicción, remueve violaciones estereoquímicas.</p>
+</div>
 </li>
 <li>
 <p>En template mode elija pdb70 ¿Qué le parece que es este campo?</p>
@@ -668,13 +794,10 @@ Amber permite mejorar la geometría de la unión peptídica y posición de rotá
 </li>
 <li>
 <p>Como por defecto este ColabFold crea 5 modelos hay que esperar (unos 20 minutos).</p>
-<p><ul class="block-list has-radius is-primary">
-<li class="is-highlighted is-danger has-icon">
-<span class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></span>
-<span style="font-weight:bold;">IMPORTANTE.</span><br>
-No cierre la ventana y tampoco cierre la laptop porque la corrida entonces se detiene (no pasa nada si entra en suspensión).
-</li>
-</ul></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>IMPORTANTE: No cierre la ventana y tampoco cierre la laptop porque la corrida entonces se detiene (no pasa nada si entra en suspensión).</p>
+</div>
 </li>
 </ul>
 <p>Al finalizar la corrida, los resultados serán descargados automáticamente como un archivo zip. Si esto no llegara a suceder, puede acceder al mismo haciendo click en el icono con forma de carpeta que se encuentra a la izquierda.</p>
@@ -773,58 +896,58 @@ No cierre la ventana y tampoco cierre la laptop porque la corrida entonces se de
 <li>¿Puede identificar las ragiones con un pLDDT mayor a 70?</li>
 <li>¿Puede identificar las ragiones con un pLDDT entre 50 a 70?</li>
 </ul>
-<hr />
+<hr>
 <p>Abra R Studio. Ahora graficaremos los pLDDT por posición para cada uno de los modelos.</p>
-<h2 id="installpackagesbio3d-librarybio3d-directorio-directoriodondeestanlosmodelos-archivos-listfilespath-directoriopattern-_relaxed_-miarchivo-pastedirectorioarchivos1sep-mipdb-readpdbmiarchivo-datos-dataframeresidue-mipdbatommipdbcalpharesno-rank_1-mipdbatommipdbcalphab-fori-in-2lengtharchivos-miarchivo2-pastedirectorioarchivos1sep-mipdb2-readpdbmiarchivo2-nuevacolumna-pasterankisep_-datosnuevacolumna-mipdb2atommipdbcalphab-fileout-pastedirectorioe7_monomeropngsep-pngfilename-fileoutwidth-20height-10units-cmres150-plotnew-plot-x-mipdbatommipdbcalpharesno-y-mipdbatommipdbcalphab-type-l-xlab-e7-residue-ylabpredicted-lddt-xlimc0100-ylimc0101-col-colores1-axes-f-fori-in-2lengtharchivos-miarchivo2-pastedirectorioarchivosisep-mipdb2-readpdbmiarchivo2-linesx-mipdb2atommipdb2calpharesno-y-mipdb2atommipdb2calphab-colcoloresi-axisside-1at-c1seq5100by5lwd-0lwdticks-1-axisside-2at-seq5100by5lwd0lwdticks1-legendx-60y-40legend-pastereprank515sep-col-coloreslty-1ncol-2-box-devoff"><div class="highlight"><pre><span></span><code><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;bio3d&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nf">install.packages</span><span class="p">(</span><span class="s">"bio3d"</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">bio3d</span><span class="p">)</span>
 
-<span class="n">directorio</span> <span class="o">&lt;-</span> <span class="s">&quot;/directorio/donde/estan/los/modelos&quot;</span>
+<span class="n">directorio</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"/directorio/donde/estan/los/modelos"</span>
 
-<span class="n">archivos</span> <span class="o">&lt;-</span> <span class="nf">list.files</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="n">directorio</span><span class="p">,</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;_relaxed_&quot;</span><span class="p">,)</span>
+<span class="n">archivos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">directorio</span><span class="p">,</span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"_relaxed_"</span><span class="p">,)</span>
 
-<span class="n">miarchivo</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span><span class="n">archivos</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="n">mipdb</span> <span class="o">&lt;-</span> <span class="nf">read.pdb</span><span class="p">(</span><span class="n">miarchivo</span><span class="p">)</span>
+<span class="n">miarchivo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span><span class="n">archivos</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="n">sep</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
+<span class="n">mipdb</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.pdb</span><span class="p">(</span><span class="n">miarchivo</span><span class="p">)</span>
 
-<span class="n">datos</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">Residue</span> <span class="o">=</span> <span class="n">mipdb</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;resno&quot;</span><span class="p">],</span>
-                    <span class="n">Rank_1</span> <span class="o">=</span> <span class="n">mipdb</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">]</span>
-                    <span class="p">)</span>
+<span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">Residue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mipdb</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">"resno"</span><span class="p">],</span>
+<span class="w">                    </span><span class="n">Rank_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mipdb</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">"b"</span><span class="p">]</span>
+<span class="w">                    </span><span class="p">)</span>
 
-<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">2</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">archivos</span><span class="p">)){</span>
-  <span class="n">miarchivo2</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span><span class="n">archivos</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
-  <span class="n">mipdb2</span> <span class="o">&lt;-</span> <span class="nf">read.pdb</span><span class="p">(</span><span class="n">miarchivo2</span><span class="p">)</span>
-  <span class="n">nuevaColumna</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&quot;Rank&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;_&quot;</span><span class="p">)</span>
-  <span class="n">datos</span><span class="p">[</span><span class="n">nuevaColumna</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="n">mipdb2</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">]</span>
+<span class="nf">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">archivos</span><span class="p">)){</span>
+<span class="w">  </span><span class="n">miarchivo2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span><span class="n">archivos</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="n">sep</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
+<span class="w">  </span><span class="n">mipdb2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.pdb</span><span class="p">(</span><span class="n">miarchivo2</span><span class="p">)</span>
+<span class="w">  </span><span class="n">nuevaColumna</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="s">"Rank"</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">"_"</span><span class="p">)</span>
+<span class="w">  </span><span class="n">datos</span><span class="p">[</span><span class="n">nuevaColumna</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mipdb2</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">"b"</span><span class="p">]</span>
 <span class="p">}</span>
 
-<span class="n">fileOUT</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span><span class="s">&quot;E7_Monomero.png&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+<span class="n">fileOUT</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span><span class="s">"E7_Monomero.png"</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
 
-<span class="nf">png</span><span class="p">(</span><span class="n">filename</span> <span class="o">=</span><span class="n">fileOUT</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">20</span><span class="p">,</span><span class="n">height</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">units</span> <span class="o">=</span> <span class="s">&quot;cm&quot;</span><span class="p">,</span><span class="n">res</span><span class="o">=</span><span class="m">150</span><span class="p">)</span>
+<span class="nf">png</span><span class="p">(</span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="n">fileOUT</span><span class="p">,</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="n">units</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"cm"</span><span class="p">,</span><span class="n">res</span><span class="o">=</span><span class="m">150</span><span class="p">)</span>
 <span class="nf">plot.new</span><span class="p">()</span>
-<span class="nf">plot</span><span class="p">(</span> <span class="n">x</span> <span class="o">=</span> <span class="n">mipdb</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;resno&quot;</span><span class="p">],</span>
-      <span class="n">y</span> <span class="o">=</span> <span class="n">mipdb</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">],</span>
-    <span class="n">type</span> <span class="o">=</span> <span class="s">&quot;l&quot;</span><span class="p">,</span>
-    <span class="n">xlab</span> <span class="o">=</span> <span class="s">&quot;E7 Residue&quot;</span><span class="p">,</span>
-    <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Predicted lDDT&quot;</span><span class="p">,</span>
-    <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">),</span>
-    <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">101</span><span class="p">),</span>
-    <span class="n">col</span> <span class="o">=</span> <span class="n">colores</span><span class="p">[</span><span class="m">1</span><span class="p">],</span>
-    <span class="n">axes</span> <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mipdb</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">"resno"</span><span class="p">],</span>
+<span class="w">      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mipdb</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">"b"</span><span class="p">],</span>
+<span class="w">    </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"l"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"E7 Residue"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ylab</span><span class="o">=</span><span class="s">"Predicted lDDT"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">),</span>
+<span class="w">    </span><span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">101</span><span class="p">),</span>
+<span class="w">    </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colores</span><span class="p">[</span><span class="m">1</span><span class="p">],</span>
+<span class="w">    </span><span class="n">axes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">F</span><span class="p">)</span>
 
 
-<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">2</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">archivos</span><span class="p">)){</span>
-  <span class="n">miarchivo2</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span><span class="n">archivos</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
-  <span class="n">mipdb2</span> <span class="o">&lt;-</span> <span class="nf">read.pdb</span><span class="p">(</span><span class="n">miarchivo2</span><span class="p">)</span>
-  <span class="nf">lines</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">mipdb2</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb2</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;resno&quot;</span><span class="p">],</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">mipdb2</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb2</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">],</span>
-        <span class="n">col</span><span class="o">=</span><span class="n">colores</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="nf">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">archivos</span><span class="p">)){</span>
+<span class="w">  </span><span class="n">miarchivo2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span><span class="n">archivos</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">sep</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
+<span class="w">  </span><span class="n">mipdb2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.pdb</span><span class="p">(</span><span class="n">miarchivo2</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">lines</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mipdb2</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb2</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">"resno"</span><span class="p">],</span>
+<span class="w">        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mipdb2</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb2</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">"b"</span><span class="p">],</span>
+<span class="w">        </span><span class="n">col</span><span class="o">=</span><span class="n">colores</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 <span class="p">}</span>
 
-<span class="nf">axis</span><span class="p">(</span><span class="n">side</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span><span class="n">at</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="nf">seq</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="m">5</span><span class="p">)),</span><span class="n">lwd</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span><span class="n">lwd.ticks</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
-<span class="nf">axis</span><span class="p">(</span><span class="n">side</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span><span class="n">at</span> <span class="o">=</span> <span class="nf">seq</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="m">5</span><span class="p">),</span><span class="n">lwd</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="n">lwd.ticks</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
-<span class="nf">legend</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="m">60</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="m">40</span><span class="p">,</span><span class="n">legend</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="s">&quot;rank&quot;</span><span class="p">,</span><span class="m">5</span><span class="p">),</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;-&quot;</span><span class="p">),</span><span class="n">col</span> <span class="o">=</span> <span class="n">colores</span><span class="p">,</span><span class="n">lty</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span><span class="n">ncol</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span>
+<span class="nf">axis</span><span class="p">(</span><span class="n">side</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="n">at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="nf">seq</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="m">5</span><span class="p">)),</span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="n">lwd.ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+<span class="nf">axis</span><span class="p">(</span><span class="n">side</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="n">at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">seq</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="m">5</span><span class="p">),</span><span class="n">lwd</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="n">lwd.ticks</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+<span class="nf">legend</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">60</span><span class="p">,</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="n">legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="s">"rank"</span><span class="p">,</span><span class="m">5</span><span class="p">),</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">"-"</span><span class="p">),</span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colores</span><span class="p">,</span><span class="n">lty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
 <span class="nf">box</span><span class="p">()</span>
-<span class="nf">dev.off</span><span class="p">()</span>
-</code></pre></div></h2>
+<span class="nf">dev.off</span><span class="p">()</span><span class="w">  </span>
+</code></pre></div>
 </li>
 <li>
 <p>Encuentre el archivo corespondiente al gráfico del PAE.</p>
@@ -844,7 +967,7 @@ No cierre la ventana y tampoco cierre la laptop porque la corrida entonces se de
 <p>Guarde la sesión y cierre chimera.</p>
 </li>
 </ol>
-<h2 id="ejercicio-2-modelado-de-un-dimero-de-e7">Ejercicio 2. Modelado de un dímero de E7</h2>
+<h3 id="ejercicio-2-modelado-de-un-dimero-de-e7">Ejercicio 2. Modelado de un dímero de E7</h3>
 <ol>
 <li>
 <p>En la parte superior, haga click en <strong>Runtime</strong> → <strong>Disconnect</strong> and delete Runtime</p>
@@ -981,14 +1104,14 @@ MNNQRKKARNTPFNMLKRERNRVSTVQQLTKRFSLGMLQGRGPLKLFMALVAFLRFLTIPPTAGILKRWGTIKKSKAINV
 </li>
 <li>
 <p>Quédese con un único modelo.
-    <div class="highlight"><pre><span></span><code>close #0.2-21
-</code></pre></div></p>
+    </p><div class="highlight"><pre><span></span><code>close #0.2-21
+</code></pre></div>
 </li>
 <li>
 <p>Coloree las cadenas:</p>
-<p><div class="highlight"><pre><span></span><code>rainbow chain
+<p></p><div class="highlight"><pre><span></span><code>rainbow chain
 </code></pre></div>
-* ¿Cuántas cadenas hay?</p>
+* ¿Cuántas cadenas hay?
 </li>
 <li>
 <p>Para trabajar más fácil vamos a quedarnos con una única cadena. Pero primero vamos a ver que las cadenas son muy similares entre sí. Para esto debemos hacer que cada cadena sea un modelo utilizando el siguiente comando:</p>
@@ -1027,9 +1150,9 @@ color purple,a Cterminal
 </li>
 <li>
 <p>Coloree las cadenas:</p>
-<p><div class="highlight"><pre><span></span><code>rainbow chain #1
+<p></p><div class="highlight"><pre><span></span><code>rainbow chain #1
 </code></pre></div>
-* ¿Puede encontrar los dímeros?</p>
+* ¿Puede encontrar los dímeros?
 </li>
 <li>
 <p>Para trabajar más fácil vamos a quedarnos nuevamente con una única cadena de 1SFK. </p>
@@ -1041,9 +1164,9 @@ color purple,a Cterminal
 </li>
 <li>
 <p>Coloree por hélices.</p>
-<p><div class="highlight"><pre><span></span><code>rainbow helix
+<p></p><div class="highlight"><pre><span></span><code>rainbow helix
 </code></pre></div>
-* ¿Puede observar la correspondencia con la proteína de la cápside de Dengue?</p>
+* ¿Puede observar la correspondencia con la proteína de la cápside de Dengue?
 </li>
 <li>
 <p>Alinee las dos estructuras.</p>
@@ -1080,29 +1203,42 @@ color purple,a Cterminal
 </ul>
 </li>
 </ol>
-<!--
-## Recordings
-
-- Cierre [[MP4]](https://drive.google.com/file/d/1UiJ63uHfmIrcOE7K7mzEWRgX_c2CfeXv/view?usp=sharing)
-
--->
-
 <h2 id="otros-recursos">Otros Recursos</h2>
-<h3 id="how-to-interpret-alphafold2-structures">How to interpret AlphaFold2 structures</h3>
-<p><a href="https://www.youtube.com/watch?v=UqeQfRDA8Yk">https://www.youtube.com/watch?v=UqeQfRDA8Yk</a></p>
-<h3 id="alphafold-protein-structure-database">AlphaFold Protein structure database</h3>
-<p><a href="https://alphafold.ebi.ac.uk/">https://alphafold.ebi.ac.uk/</a></p>
-<p>{% endif %}</p>
+<ul>
+<li>
+<p>How to interpret AlphaFold2 structures
+<a href="https://www.youtube.com/watch?v=UqeQfRDA8Yk">https://www.youtube.com/watch?v=UqeQfRDA8Yk</a></p>
+</li>
+<li>
+<p>AlphaFold Protein structure database
+<a href="https://alphafold.ebi.ac.uk/">https://alphafold.ebi.ac.uk/</a></p>
+</li>
+</ul></div>
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Volver al principio
-          </a>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
         
       </main>
       
@@ -1132,10 +1268,12 @@ color purple,a Cterminal
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
