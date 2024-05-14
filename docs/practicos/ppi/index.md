@@ -1,31 +1,4 @@
----
-layout: page
-title: TP N°5
-subtitle: Interacciones proteína-proteína
-data : false
-menubar_toc: true
-hero_height: is-small
-toc_title: CONTENIDOS
-construccion: false
----
-
-<style>
-details > summary:first-of-type {
-   display: list-item;
-}
-details summary { 
-  cursor: pointer;
-}
-
-details summary > * {
-  display: inline;
-}
-
-</style>
-
-{% if page.construccion %}
-**Pagina en construccion**
-{% else %}
+# **TP 5.** Interacciones proteína-proteína
 
 ## Recursos Online
 * Intact: [https://www.ebi.ac.uk/intact/home](https://www.ebi.ac.uk/intact/home)
@@ -50,7 +23,8 @@ Los datos relacionados con interacciones proteína-proteína aumentó muchísimo
 
 Existen numerosas bases de datos de interacciones proteína-proteína.
 
-Se pueden clasificar entre tipos principales:
+Se pueden clasificar entre tres tipos principales:
+
 * **Bases de datos primarias:** Colectan información experimental exclusivamente. Por ejemplo: IntAct, MINT y MatrixDB.
 * **Bases de datos secundarias o meta-bases de datos:** Integran datos anotados (o curados) de bases de datos primarias en una base de datos. Por ejemplo, APID y PINA.
 * **Bases de datos predictivas:** Combinan los datos experimentales de las bases de datos primarias con predicciones computacionales. Por ejemplo, STRING y UniHI.
@@ -63,24 +37,16 @@ IntAct es una base de datos pública de interacciones moleculares. Es mantenida 
 ### Ejercicio 1. Interacciones de la Proteína Retinoblastoma (Rb)
 1. Busque en Intact la proteína retinoblastoma (Rb) humana usando su accession number (P06400).
 
-    <ul class="block-list has-radius is-primary">
-    <li class="is-highlighted is-info has-icon">
-    <span class="icon"><i class="fas fa-lightbulb"></i></span>
-    En esta base de datos no se puede utilizar el nombre de la entrada UniProt.
-    </li>
-    </ul>
-
-    <p style="text-align:center">
-    <img src="./img/Intact_fig1.png" alt="">
-    </p>
-    <br>
-    <br>
+    !!! Warning
+    
+        En esta base de datos no se puede utilizar el nombre de la entrada UniProt.
 
 2. El resultado de IntAct es visualizado de dos maneras:
+
     * Mediante una **red** donde los nodos son proteínas o moléculas, que están conectados por edges que pueden representar distintas cosas como: número de experimentos anotados, nivel de confianza, entre otros.
     * Mediante una **tabla de interacciones** y una **tabla de interactores**, en ambos casos con columnas que pueden ser modificadas según el interés del usuario.
 
-    En la parte superior de la tabla se puede observar el número total de interacciones que existen para Rb y el número total de interactores que existen para Rb.
+    En la parte superior de la tabla, hay dos pestañas que permiten cambiar entre Interacciones e Interactores. También, se puede observar el número total de interacciones que existen para Rb y el número total de interactores que existen para Rb.
 
     * ¿Cuántas interacciones hay?
     * ¿Cuántos interactores hay?
@@ -100,10 +66,8 @@ IntAct es una base de datos pública de interacciones moleculares. Es mantenida 
     Seleccione interacciones que sean entre Rb y otra proteína Humana tildando la especie correspondiente: *Homo sapiens* y luego seleccionando que sea **Intra** especie con el botón *Filter out cross-species interactions*.
 
     <p style="text-align:center">
-    <img src="./img/Intact_fig2.png" alt="">
+    <img src="./img/Intact_fig2.png" alt="" style="max-width:80%">
     </p>
-    <br>
-    <br>
 
 5. En el filtro: *Interactor Type* observe los distintos tipos de interactores que hay. Luego seleccione de manera que los interactores sean sólo **proteínas**.
 
@@ -121,19 +85,25 @@ IntAct es una base de datos pública de interacciones moleculares. Es mantenida 
 
 9. IntAct utiliza un método de puntuación para puntuar las interacciones observadas con un índice denominado el **MI score**.
 
-    El MI score es un método de puntuación modificable y heurístico que tiene en consideración tres factores:
-    * El método de detección de la interacción: Observada, predicha o inferida?
-    * El tipo de interacción: Direct interaction, physical association, co-localization etc
-    * El número de publicaciones que reportan una interacción específica.
+    !!! Info
 
-    En definitiva, el MI score provee un sistema de puntuación que representa el grado de confianza de una interacción en particular evaluando el grado de anotación/curación de la interacción en una base de datos. A mayor evidencia experimental que apoya la interacción, mayor es la puntuación.
+        El MI score es un método de puntuación modificable y heurístico que tiene en consideración tres factores:
 
-    La evidencia derivada de algoritmos predictivos o métodos de text-mining contribuye menos al score final. La combinación de métodos experimentales de baja puntuación (por ejemplo, colocalización) con evidencia no experimental da una mayor puntuación que cada uno por separado.
+        * El método de detección de la interacción: Observada, predicha o inferida.
+        * El tipo de interacción: Direct interaction, physical association, co-localization etc
+        * El número de publicaciones que reportan una interacción específica.
+
+        En definitiva, el MI score provee un sistema de puntuación que representa el grado de confianza de una interacción en particular evaluando el grado de anotación/curación de la interacción en una base de datos. A mayor evidencia experimental que apoya la interacción, mayor es la puntuación.
+
+        * La evidencia derivada de algoritmos predictivos o métodos de text-mining contribuye menos al score final.
+        
+        * La combinación de métodos experimentales de baja puntuación (por ejemplo, colocalización) con evidencia no experimental da una mayor puntuación que cada uno por separado.
 
     * A la derecha de la red de interacción está la leyenda. ¿Qué representan los edges sólidos?
     * A la izquierda de la red de interacción, destildá la opción *Expand*. ¿Qué representa ahora el color de los edges? ¿y el ancho?
 
     Utiliza el filtro MI Score y encuentra los interactores con el mayor score.
+
     * ¿Cuántos interactores hay?
     * ¿Cuántas interacciones hay?
     * ¿Qué tipo de evidencia experimental poseen?
@@ -149,7 +119,7 @@ La base de datos STRING contiene datos de interacciones proteína-proteína cono
 
 1. En STRING se puede realizar una búsqueda por el o los nombres de la proteína, o el identificador, múltiples proteínas, múltiples secuencias, organismos o familias de proteínas.
 
-    Haga click en protein name e ingrese “retinoblastoma”
+    Haga click en Search y en protein name e ingrese “retinoblastoma”
 
     * Observe el resultado. ¿Por qué hay más de un resultado? ¿Cuál es el que deseamos?
 
@@ -360,5 +330,3 @@ El objetivo de este ejercicio consiste en analizar la superficie de interacción
 * https://biochem.slu.edu/bchm628/handouts/2013/PPI_Tutorial_2011.pdf
 
 * https://www.ebi.ac.uk/intact/documentation/user-guide
-
-{% endif %}

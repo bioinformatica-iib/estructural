@@ -64,8 +64,8 @@ Años después ocurre una pandemia de una enfermedad respiratoria causada por *A
     !!! Info
 
         * Posiciones con **score menor a cero** están **mal** modeladas,
-        * Posiciones con **score entre cero y 0.2** están **pobremente** modeladas,
-        * Posiciones con **score mayor a 0.2** están modeladas con **buena calidad**.
+        * Posiciones con **score entre cero y 0.1** están **pobremente** modeladas,
+        * Posiciones con **score mayor a 0.1** están modeladas con **buena calidad**.
 
     **Verify 3D** asigna como aceptado a un modelo con más del 80% de las posiciones posiciones con un score promedio en el área **bien modelada**.
 
@@ -158,7 +158,7 @@ Años después ocurre una pandemia de una enfermedad respiratoria causada por *A
 ## Ejercicio 2. Modelado por homología de una proteína de Rana.
 Usted es un famoso ecólogo que desde siempre sintió un especial interés por las ranas. Durante un viaje de campaña se encontró con unas ranas muy inusuales que poseían una fascinante coloración azul. Luego de años de investigación y muchos subsidios invertidos, su becario descubrió que esta coloración se debe a la existencia de una proteína en la linfa de las ranas que es capaz de conjugar biliverdina. Luego de aislar la proteína, obtiene su secuencia:
 
-```Bash
+```
 >Hypsiboas_punctatus_BP
 MRVLLILGVVVLSTLAFAHHEEGHHDDEDLKDDHDPFLPEDHKKALFVYQKPALNNINFA
 FKMYRQLARDHPTENIVISPVSISSALALLSLGAKGHTHSQIVERLGYNTSEIPEQQIHE

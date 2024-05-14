@@ -601,14 +601,10 @@ El objetivo principal de los siguientes ejercicios consiste en introducir la uti
 * Hasta ahora utilizamos comandos muy simples en Chimera. El comando a utilizar para buscar puentes de hidrógeno hbonds es el siguiente:
 
     ```
-    sel; hbonds selRestrict any reveal false showDist false color yellow lineWidth 2 lineType dashed interSubmodel false interModel true intraMol true intraModel true relax true log true
+    hbonds selRestrict any reveal false showDist false color yellow lineWidth 2 lineType dashed interSubmodel false interModel true intraMol true intraModel true relax true log true
     ```
 
     Como pueden ver tiene muchas opciones! A continuación veremos algunas de ellas y sus posibles valores marcando en negrita el valor utilizado o por defecto:
-
-    * `saltOnly`: true \| **false**
-
-        Permite limitar los resultados a puentes salinos (true), es decir puentes de hidrógeno entre grupos funcionales cargados o no limitar (false)
 
     * `selRestrict`: **any** \| cross \| both \| atom-spec2
 
