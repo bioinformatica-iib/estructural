@@ -1,33 +1,4 @@
----
-layout: page
-title: TP N°4
-subtitle: Modelado por Homología - Parte II
-data : false
-menubar_toc: true
-hero_height: is-small
-toc_title: CONTENIDOS
-construccion: false
----
-<style>
-details > summary:first-of-type {
-   display: list-item;
-}
-details summary { 
-  cursor: pointer;
-}
-
-details summary > * {
-  display: inline;
-}
-
-/* ol { list-style-type: upper-alpha; } */
-</style>
-
-{% if page.construccion %}
-
-**Pagina en construccion**
-
-{% else %}
+# **TP 4**. Modelado por Homología - Parte II { markdown data-toc-label = 'TP 4'}
 
 ## Recursos Online
 
@@ -45,45 +16,30 @@ En los últimos años, hubo un crecimiento continuo en el número de estructuras
 A partir de la secuencia primaria de una proteína (Fig 1), AlphaFold2 utiliza una red neuronal para la predicción estructural de alta precisión (en la mayoría de los casos), la cual aumenta con el uso de estructuras homólogas. AlphaFold2 puede incluso predecir con alta precisión las cadenas laterales si el backbone es preciso.
 
 <p style="text-align:center">
-<img src="./img/alphafold_fig1.png" alt="">
+<img src="./img/alphafold_fig1.png" alt="" style="max-width:70%">
 </p>
-
-<figcaption align = "left">
-
-**Fig 1.** Algoritmo de predicción de estructuras AlphaFold2.
-
-</figcaption>
-<br>
-<br>
-
+<figcaption style="text-align:center;max-width:70%"> Figura 1. Algoritmo de predicción de estructuras AlphaFold2. </figcaption>
 
 ### Arquitectura
 AlphaFold2 utiliza una arquitectura de red que utiliza como inputs el alineamiento de secuencias (MSAs) y una representación de todos los pares de residuos de la secuencia. Mediante un algoritmo iterativo que se basa en la arquitectura Evoformer, se procesan los inputs y en conjunto con un módulo estructural se genera una representación tridimensional de la proteína query. 
 
 ### Métricas de confianza
-AlphaFold2 incorpora métricas de confianza de la predicción. La principal métrica de confianza es el test **pLDDT** (predicted local-distance difference test) el cual es un predictor confiable del test de diferencias en las distancias Cα (IDDT-Cα) y evalúa principalmente la correctitud del modelo a nivel local (estimando el error en distancias de un Cα con Cα vecinos en un rango de 15Å). La segunda métrica se denomina **PAE** (por Predicted Aligned error) y compara el error en la predicción de pares de residuos, esto es el error sobre el residuo y cuando las estructuras real y predicha son alineadas sobre el residuo x. Esta medida permite la identificación global de unidades de plegamiento (dominios) y permite predecir si dos dominios guardan relaciones espaciales definidas, o si tienen variabilidad (por ejemplo, si están conectadas por un linker flexible.
+AlphaFold2 incorpora métricas de confianza de la predicción. La principal métrica de confianza es el test **pLDDT** (predicted local-distance difference test) el cual es un predictor confiable del test de diferencias en las distancias Cα (IDDT-Cα) y evalúa principalmente la correctitud del modelo a nivel local (estimando el error en distancias de un Cα con Cα vecinos en un rango de 15Å). La segunda métrica se denomina **PAE** (por Predicted Aligned error) y compara el error en la predicción de pares de residuos, esto es el error sobre el residuo y cuando las estructuras real y predicha son alineadas sobre el residuo x. Esta medida permite la identificación global de unidades de plegamiento (dominios) y permite predecir si dos dominios guardan relaciones espaciales definidas, o si tienen variabilidad (por ejemplo, si están conectadas por un linker flexible).
 
 <p style="text-align:center">
-<img src="./img/pae-3.png" alt="" style="max-width:70%">
-<img src="./img/pae-8.png" alt="" style="max-width:70%">
+<img src="./img/pae-3.png" alt="" style="max-width:60%">
+<img src="./img/pae-8.png" alt="" style="max-width:60%">
 </p>
-
-<figcaption align = "left">
-
-**Fig 2.** *Arriba.* Se pueden observar dos dominios globulares, pero se desconoce la disposición espacial relativa entre ellos. *Abajo.* Se puede observar que además de identificar los dominios globulares, se predien correctamente pares de residuos interdominios.
-
-</figcaption>
-<br>
-<br>
+<figcaption style="text-align:center;max-width:60%"> Figura 2. Arriba. Se pueden observar dos dominios globulares, pero se desconoce la disposición espacial relativa entre ellos. Abajo. Se puede observar que además de identificar los dominios globulares, se predien correctamente pares de residuos interdominios. </figcaption>
 
 ### Costo computacional
-AlphaFold2 consume muchísimos recursos. Por lo tanto, muchas proteínas de organismos modelos están siendo modeladas y puestas a disposición de la comunidad científica en una base de datos: https://alphafold.ebi.ac.uk/, como ya pudo observar en UniProt.
+AlphaFold2 consume muchísimos recursos. Por lo tanto, muchas proteínas de organismos modelos están siendo modeladas y puestas a disposición de la comunidad científica en una base de datos: [https://alphafold.ebi.ac.uk/](https://alphafold.ebi.ac.uk/), como ya pudo observar en UniProt.
 
 Afortunadamente, la comunidad científica rápidamente desarrolló distintas “colabs” o “notebooks” que permiten correr AlphaFold2 en una máquina remota. La única “desventaja” es que se debe contar con una cuenta de mail de gmail, en las versión gratuita de colab, debido al espacio en disco y capacidad de cómputo que se adjudica, sólo se pueden correr proteínas o complejos con menos de 1000 residuos, **cada cuenta de gmail puede usar un colab a la vez**.
 
 Otra desventaja, es que no se pueden modificar muchos parámetros del modelado al usar un colab, en comparación con correr la simulación desde un script en una computadora o server propio. Sin embargo, los parámetros usados en el ColabFold de AlphaFold2 son los que fueron más ampliamente validados durante el desarrollo del método.
 
-Existen distintos colabs que implementan AlphaFold2. En este curso utilizaremos uno en particular. (Todas las versiones están disponibles en el github: https://github.com/sokrypton/ColabFold)
+Existen distintos colabs que implementan AlphaFold2. En este curso utilizaremos uno en particular. (Todas las versiones están disponibles en el [github](https://github.com/sokrypton/ColabFold))
 
 
 ## AlphaFold2 - Ejercicios
@@ -96,11 +52,8 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
 ### Ejercicio 1. Modelado de un Monómero de E7
 1. Ingrese al ColabFold que implementa MMseq2 [Aquí](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb) .
 
-    <ul class="block-list has-radius is-primary">
-    <li class="is-highlighted is-info">
-    Si quiere que los cambios que realice sean guardados deberá agregar la notebook a su drive. Pero esto no es necesario.
-    </li>
-    </ul>
+    !!! info 
+        Si quiere que los cambios que realice sean guardados deberá agregar la notebook a su drive. Pero esto no es necesario.
 
 2. En la parte superior, haga click en *Runtime* → *Change Runtime* y asegúrese que **GPU** esté seleccionado.
 
@@ -116,11 +69,8 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     * En el campo jobname ingrese: E7_MONOMERO.
     * Asegúrese que use amber esté tildado.
 
-        <ul class="block-list has-radius is-primary">
-        <li class="is-highlighted is-info">
-        Amber permite mejorar la geometría de la unión peptídica y posición de rotámeros luego de la relajación de la estructura. Si bien no mejora la predicción, remueve violaciones estereoquímicas.
-        </li>
-        </ul>
+        !!! info
+            Amber permite mejorar la geometría de la unión peptídica y posición de rotámeros luego de la relajación de la estructura. Si bien no mejora la predicción, remueve violaciones estereoquímicas.
 
     * En template mode elija pdb70 ¿Qué le parece que es este campo?
 
@@ -128,13 +78,9 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
 
     * Como por defecto este ColabFold crea 5 modelos hay que esperar (unos 20 minutos).
 
-        <ul class="block-list has-radius is-primary">
-        <li class="is-highlighted is-danger has-icon">
-        <span class="icon"><i class="fa fa-exclamation-triangle fa-2x"></i></span>
-        <span style="font-weight:bold;">IMPORTANTE.</span><br>
-        No cierre la ventana y tampoco cierre la laptop porque la corrida entonces se detiene (no pasa nada si entra en suspensión).
-        </li>
-        </ul>
+        !!! warning
+
+            IMPORTANTE: No cierre la ventana y tampoco cierre la laptop porque la corrida entonces se detiene (no pasa nada si entra en suspensión).
 
     Al finalizar la corrida, los resultados serán descargados automáticamente como un archivo zip. Si esto no llegara a suceder, puede acceder al mismo haciendo click en el icono con forma de carpeta que se encuentra a la izquierda.
 
@@ -157,7 +103,7 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     * ¿Estaba esta estructura entre los templados?
     * ¿Por qué método fue determinada?
     * ¿A qué proteína corresponde? ¿De qué organismo?
-7. Alinee las estructuras utilizando Matchmaker (si no recuerda, *Tools* → *Structure comparison* → *Matchmaker*)
+8. Alinee las estructuras utilizando Matchmaker (si no recuerda, *Tools* → *Structure comparison* → *Matchmaker*)
     * ¿Cuál es el RMSD global?
 
     Si quieren ver el RMSD por posición sobre la estructura
@@ -174,7 +120,7 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     
     En la pestaña **Render** seleccione **mavRMSDca** y luego haga clic en `Ok`.
 
-8. Cierre el modelo correspondiente al pdb 2b9d. Via terminal tiene que ingresar el comando close seguido del número del modelo, por ejemplo:
+9. Cierre el modelo correspondiente al pdb 2b9d. Via terminal tiene que ingresar el comando close seguido del número del modelo, por ejemplo:
 
     ```
     close #0
@@ -184,14 +130,14 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
 
     O bien, en el **model panel**, seleccione el modelo correspondiente y haga clic en close.
 
-9. Ahora abra los 4 modelos restantes, para eso, *File* → *Open…* y con el mouse seleccione los modelos manteniendo la tecla ctrl presionada.
+10. Ahora abra los 4 modelos restantes, para eso, *File* → *Open…* y con el mouse seleccione los modelos manteniendo la tecla ctrl presionada.
 
-10. Alinee los 5 modelos,
+11. Alinee los 5 modelos,
     * ¿cuál es el RMSD global?
-11. Utilice **Match Align** para ver el alineamiento.
+12. Utilice **Match Align** para ver el alineamiento.
     * ¿Qué observa?
     * ¿Porque si las secuencias son todas iguales no aparece el n-terminal alineado?
-10. Los valores de pLDDT están almacenados en la columna del pdb que corresponde a los b-factors. Coloree los modelos según este atributo ingresando en la command line:
+13. Los valores de pLDDT están almacenados en la columna del pdb que corresponde a los b-factors. Coloree los modelos según este atributo ingresando en la command line:
 
     ```
     rangecolor bfactor 0 orange red 50 white 100 dodger blue
@@ -221,16 +167,16 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     * ¿Porqué considera que elegimos 50 como valor mínimo?
     * ¿De qué posición a qué posición consideraría que el modelo es de confianza?
 
-9. Por ahora investigue el gráfico de pLDDT, al final de la clase haremos una demostración del script en R para graficar estos valores.
+14. Por ahora investigue el gráfico de pLDDT, al final de la clase haremos una demostración del script en R para graficar estos valores.
 
     * ¿Qué observa?
     * ¿Puede identificar las ragiones con un pLDDT mayor a 70?
     * ¿Puede identificar las ragiones con un pLDDT entre 50 a 70?
 
-    ----
+    ---
     Abra R Studio. Ahora graficaremos los pLDDT por posición para cada uno de los modelos.
 
-    ```R
+    ``` R
     install.packages("bio3d")
     library(bio3d)
 
@@ -279,21 +225,21 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     axis(side = 2,at = seq(5,100,by=5),lwd=0,lwd.ticks=1)
     legend(x = 60,y = 40,legend = paste(rep("rank",5),1:5,sep="-"),col = colores,lty = 1,ncol = 2)
     box()
-    dev.off()
+    dev.off()  
     ```
-----
 
-10. Encuentre el archivo corespondiente al gráfico del PAE.
+
+15. Encuentre el archivo corespondiente al gráfico del PAE.
     * ¿Qué interpreta?
 
-10. En base a los resultados obtenidos, 
+16. En base a los resultados obtenidos, 
     * ¿Qué puede decir de la estructura de la proteína?
     * ¿Cuántos dominios posee? ¿ordenados o desordenados?
     * ¿Puede decir aproximadamente los límites?
 
-10. Guarde la sesión y cierre chimera.
+17. Guarde la sesión y cierre chimera.
 
-## Ejercicio 2. Modelado de un dímero de E7
+### Ejercicio 2. Modelado de un dímero de E7
 
 1. En la parte superior, haga click en **Runtime** → **Disconnect** and delete Runtime
 
@@ -532,18 +478,10 @@ El genoma ARN positivo se traduce como una poliproteína que luego es clivada en
 
     * ¿Qué puede decir de la predicción en la hélice N-terminal?
 
-<!--
-## Recordings
-
-- Cierre [[MP4]](https://drive.google.com/file/d/1UiJ63uHfmIrcOE7K7mzEWRgX_c2CfeXv/view?usp=sharing)
-
--->
-
 ## Otros Recursos
-### How to interpret AlphaFold2 structures
+
+* How to interpret AlphaFold2 structures
 [https://www.youtube.com/watch?v=UqeQfRDA8Yk](https://www.youtube.com/watch?v=UqeQfRDA8Yk)
 
-### AlphaFold Protein structure database
+* AlphaFold Protein structure database
 [https://alphafold.ebi.ac.uk/](https://alphafold.ebi.ac.uk/)
-
-{% endif %}
