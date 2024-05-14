@@ -17,4 +17,4 @@ La página se actualizará en breve
 ## Parte II
 - Slides [[Parte2 - PDF]](https://drive.google.com/file/d/1HgH28hnrJMM_3S5SN7MuJmUcbMDI7IHM/view?usp=sharing)
 - Recording [[Parte 2 - MP4]](https://youtu.be/9Q8H77Z2MJs)
--->
+
