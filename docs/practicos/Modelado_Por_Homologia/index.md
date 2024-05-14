@@ -121,6 +121,12 @@ Años después ocurre una pandemia de una enfermedad respiratoria causada por *A
 
     * En *Matching* asegurése que *Iterate by pruning long atom pairs untilo no pair exceeds* está clickeado.
 
+    O bien, ingrese en la command line:
+
+    ```
+    mm #0 #1
+    ```
+
     * Piense, ¿Porqué está utilizando el PDB:1F46?
 
     * Observe el resultado del alineamiento: ¿Son parecidas las estructuras? ¿En donde se observan las mayores diferencias?
@@ -183,7 +189,7 @@ Desconfiando de los resultados de su becario, Ud. decide analizar la calidad del
 
 2. Para explicar las diferencias obtenidas analizaremos las estructuras como se indica en los puntos siguientes usando **Chimera** 
 
-3. Utilizando el modelo generado y el PDB (3NE4) utilizado como molde realice un alineamiento estructural en Chimera (*Tools → Structure Comparison → MatchMaker*).
+3. Utilizando el modelo generado y el PDB (3NE4) utilizado como molde realice un alineamiento estructural en Chimera (*Tools → Structure Comparison → MatchMaker* o bien en la terminal `mm #0 #1`).
 
     * ¿Cuál es el RMSD global?
     * ¿Qué diferencias observa en las estructuras alineadas?

@@ -12,7 +12,7 @@ Para este ejercicio es necesario poseer una cuenta de gmail para poder acceder a
 * Familiarizarse con el uso del predictor AlphaFold2 y criterios que permiten evaluar los resultados obtenidos, los alcances y las limitaciones de las predicciones obtenidas.
 
 ## AlphaFold2 (AF2)
-En los últimos años, hubo un crecimiento continuo en el número de estructuras de proteínas determinadas experimentalmente depositadas en el PDB (actualmente ~170.000). Esto, junto con la explosión de la secuenciación (millones de secuencias) y el desarrollo de técnicas de deep learning benefició el desarrollo de algoritmos de predicción de estructura tridimensional de proteínas. Hasta el 2021, los algoritmos de predicción de estructura tridimensional de proteínas se basan en dos aspectos complementarios: las interacciones físicas (o contactos) o la historia evolutiva de la proteína. Sin embargo, y a pesar de los avances, la mayoría de los algoritmos de predicción no son muy precisos si se carece de un homólogo cercano con una estructura tridimensional resuelta experimentalmente.
+En los últimos años, hubo un crecimiento continuo en el número de estructuras de proteínas determinadas experimentalmente depositadas en el PDB (actualmente ~220.000). Esto, junto con la explosión de la secuenciación (millones de secuencias) y el desarrollo de técnicas de deep learning benefició el desarrollo de algoritmos de predicción de estructura tridimensional de proteínas. Hasta el 2021, los algoritmos de predicción de estructura tridimensional de proteínas se basan en dos aspectos complementarios: las interacciones físicas (o contactos) o la historia evolutiva de la proteína. Sin embargo, y a pesar de los avances, la mayoría de los algoritmos de predicción no son muy precisos si se carece de un homólogo cercano con una estructura tridimensional resuelta experimentalmente.
 A partir de la secuencia primaria de una proteína (Fig 1), AlphaFold2 utiliza una red neuronal para la predicción estructural de alta precisión (en la mayoría de los casos), la cual aumenta con el uso de estructuras homólogas. AlphaFold2 puede incluso predecir con alta precisión las cadenas laterales si el backbone es preciso.
 
 <p style="text-align:center">
@@ -55,7 +55,7 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     !!! info 
         Si quiere que los cambios que realice sean guardados deberá agregar la notebook a su drive. Pero esto no es necesario.
 
-2. En la parte superior, haga click en *Runtime* → *Change Runtime* y asegúrese que **GPU** esté seleccionado.
+2. En la parte superior, haga click en *Runtime* → *Change Runtime* y asegúrese que **T4 GPU** esté seleccionado.
 
 3. **Preparando la corrida.**
 
@@ -78,9 +78,9 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
 
     * Como por defecto este ColabFold crea 5 modelos hay que esperar (unos 20 minutos).
 
-        !!! warning
+        !!! warning "Importante"
 
-            IMPORTANTE: No cierre la ventana y tampoco cierre la laptop porque la corrida entonces se detiene (no pasa nada si entra en suspensión).
+            No cierre la ventana y tampoco cierre la laptop porque la corrida entonces se detiene (no pasa nada si entra en suspensión).
 
     Al finalizar la corrida, los resultados serán descargados automáticamente como un archivo zip. Si esto no llegara a suceder, puede acceder al mismo haciendo click en el icono con forma de carpeta que se encuentra a la izquierda.
 
