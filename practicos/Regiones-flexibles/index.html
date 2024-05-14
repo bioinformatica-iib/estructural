@@ -12,11 +12,8 @@
       
         <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/Regiones-flexibles/">
       
-      
-      
-      
       <link rel="icon" href="../../img/logo-unsam-negro.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
     
     
       
@@ -24,17 +21,14 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
       
       
-
-
     
-    
-      
     
     
       
@@ -48,23 +42,24 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-    
    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -76,6 +71,9 @@
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
   
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -103,7 +101,6 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -123,39 +120,31 @@
       </div>
     </div>
     
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
       <label class="md-header__button md-icon" for="__search">
-        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
@@ -164,20 +153,16 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
-          
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -191,7 +176,7 @@
           <div class="md-search-result__meta">
             Inicializando búsqueda
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
+          <ol class="md-search-result__list"></ol>
         </div>
       </div>
     </div>
@@ -210,21 +195,80 @@
           
             
 <nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
-  <div class="md-grid">
+  <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Inicio
+    </a>
+  </li>
+
+      
         
   
-    
   
-  Inicio
 
+
+  <li class="md-tabs__item">
+    <a href="../../acerca/" class="md-tabs__link">
+      Acerca de
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../contenidos/" class="md-tabs__link">
+      Contenidos
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../cronograma/" class="md-tabs__link">
+      Cronograma
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../docentes/" class="md-tabs__link">
+      Docentes
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../teoricas/inicio/" class="md-tabs__link">
+        Teóricas
       </a>
     </li>
   
@@ -233,104 +277,16 @@
         
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../../acerca/" class="md-tabs__link">
-        
-  
-    
-  
-  Acerca de
 
-      </a>
-    </li>
-  
 
-      
-        
   
   
   
     <li class="md-tabs__item">
-      <a href="../../contenidos/" class="md-tabs__link">
-        
-  
-    
-  
-  Contenidos
-
+      <a href="../inicio/" class="md-tabs__link">
+        Prácticos
       </a>
     </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../cronograma/" class="md-tabs__link">
-        
-  
-    
-  
-  Cronograma
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../docentes/" class="md-tabs__link">
-        
-  
-    
-  
-  Docentes
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../teoricas/inicio/" class="md-tabs__link">
-          
-  
-  Teóricas
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../inicio/" class="md-tabs__link">
-          
-  
-  Prácticos
-
-        </a>
-      </li>
-    
   
 
       
@@ -349,7 +305,6 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-
 
   
 
@@ -370,19 +325,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inicio
-  </span>
-  
-
+        Inicio
       </a>
     </li>
   
@@ -390,19 +340,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../../acerca/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Acerca de
-  </span>
-  
-
+        Acerca de
       </a>
     </li>
   
@@ -410,19 +355,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../../contenidos/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Contenidos
-  </span>
-  
-
+        Contenidos
       </a>
     </li>
   
@@ -430,19 +370,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../../cronograma/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Cronograma
-  </span>
-  
-
+        Cronograma
       </a>
     </li>
   
@@ -450,19 +385,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../../docentes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Docentes
-  </span>
-  
-
+        Docentes
       </a>
     </li>
   
@@ -470,237 +400,194 @@
     
       
       
-  
-  
-  
-  
-    
-    
-    
       
-      
-    
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Teóricas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teóricas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Teóricas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Teóricas
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Teóricas
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/inicio/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inicio
-  </span>
-  
-
+        Inicio
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica1a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Teórica 1a
-  </span>
-  
-
+        Teórica 1a
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica1b/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Teórica 1b
-  </span>
-  
-
+        Teórica 1b
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Teórica 2
-  </span>
-  
-
+        Teórica 2
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
     
       
       
-  
-  
-  
-  
-    
-    
-    
       
-      
-    
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Prácticos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Prácticos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Prácticos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Prácticos
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Prácticos
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../inicio/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inicio
-  </span>
-  
-
+        Inicio
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../db_uniprot/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TP1 - Bases de Datos
-  </span>
-  
-
+        TP1 - Bases de Datos
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../chimera/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TP2 - Chimera
-  </span>
-  
-
+        TP2 - Chimera
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Modelado_Por_Homologia/" class="md-nav__link">
+        TP3 - Modelado por homología
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelado_alphafold/" class="md-nav__link">
+        TP4 - Modelado Parte II
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -713,16 +600,15 @@
             
             
           
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
                 
-                  
 
 
   <h1>TP N°6</h1>
 
-<html><head><style>
+<style>
 details > summary:first-of-type {
    display: list-item;
 }
@@ -736,16 +622,7 @@ details summary > * {
 
 </style>
 
- <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head><body><p _="%" else="else">{% if page.construccion %}
+<p _="%" else="else">{% if page.construccion %}
 <strong>Pagina en construccion</strong></p>
 <h2 id="materiales">Materiales</h2>
 <p><a href="https://drive.google.com/file/d/1hAEaOGRobxBHe-1_oh5A4ZAscxM5s_Ti/view?usp=sharing">Descargar</a></p>
@@ -889,18 +766,18 @@ details summary > * {
    <a class="glightbox" href="./images/fig1_BLOSUM62.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/fig1_BLOSUM62.jpg" alt="" style="max-width:70%"></a>
    </p>
 
-<figcaption align="center">
+<figcaption align = "center">
 
    **Fig 1.** Matrix BLOSUM62.
 
    </figcaption>
 <p><br>
    <br></p>
-<p>En base a este alineamiento analice las regiones desordenadas y ordenadas ya reconocidas en p53. Compare sus observaciones en este alineamiento con el alineamiento visualizado en ProViz en el <strong>Ejercicio 1</strong>.<br>
-      * ¿Puede distinguir las mismas regiones?<br>
-      * ¿Ve diferencias en la composición de secuencia en cada región?<br>
-      * ¿Se observan diferencias en el grado de conservación?<br>
-      * ¿Las especies a las que corresponde cada secuencia son las mismas en los alineamientos? ¿Cuál posee organismos más distantes?<br>
+<p>En base a este alineamiento analice las regiones desordenadas y ordenadas ya reconocidas en p53. Compare sus observaciones en este alineamiento con el alineamiento visualizado en ProViz en el <strong>Ejercicio 1</strong>.<br />
+      * ¿Puede distinguir las mismas regiones?<br />
+      * ¿Ve diferencias en la composición de secuencia en cada región?<br />
+      * ¿Se observan diferencias en el grado de conservación?<br />
+      * ¿Las especies a las que corresponde cada secuencia son las mismas en los alineamientos? ¿Cuál posee organismos más distantes?<br />
       * Discuta qué ventajas considera que tiene trabajar con un alineamiento propio respecto de trabajar con el alineamiento de ProViz?</p>
 <h2 id="parte-ii-prediccion-de-desorden">PARTE II: Predicción de Desorden</h2>
 <h4 id="recursos-a-utilizar_1">Recursos a utilizar:</h4>
@@ -958,34 +835,34 @@ details summary > * {
 <ol>
 <li><strong>¡A cargar los datos!</strong> Para esto se utiliza la función <code>read.csv()</code>. Vamos a modificar algunos argumentos para que lea correctamente el archivo. Si querés saber qué es cada argumento siempre se puede revisar el uso de las funciones con <code>help(read.csv)</code></li>
 </ol>
-<p></p><div class="highlight"><pre><span></span><code><span class="n">p53</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">"/directorio_correspondiente/P53_HUMAN.iupred"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="bp">F</span><span class="w"> </span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">"\t"</span><span class="p">,</span><span class="w"> </span><span class="n">col.names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">"Posición"</span><span class="p">,</span><span class="s">"Aminoácido"</span><span class="p">,</span><span class="s">"Iupred"</span><span class="p">,</span><span class="s">"Anchor"</span><span class="p">),</span><span class="w">  </span><span class="n">comment.char</span><span class="o">=</span><span class="s">"#"</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><span class="n">p53</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&quot;/directorio_correspondiente/P53_HUMAN.iupred&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">F</span> <span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;\t&quot;</span><span class="p">,</span> <span class="n">col.names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Posición&quot;</span><span class="p">,</span><span class="s">&quot;Aminoácido&quot;</span><span class="p">,</span><span class="s">&quot;Iupred&quot;</span><span class="p">,</span><span class="s">&quot;Anchor&quot;</span><span class="p">),</span>  <span class="n">comment.char</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">)</span>
 </code></pre></div>
-   Asegurate que los datos se cargaron correctamente, esperamos un dataframe con 4 columnas.
+   Asegurate que los datos se cargaron correctamente, esperamos un dataframe con 4 columnas.</p>
 <ol>
 <li>Ahora quisiéramos clasificar las posiciones en pase a la predicción realizada por IUPred como <em>Orden</em> y <em>Desorden</em>. 
    Primero crearemos una columna en el dataframe:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="n">umbral</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0.5</span>
-<span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span>
-<span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">[</span><span class="n">p53</span><span class="o">$</span><span class="n">Iupred</span><span class="o">&gt;=</span><span class="n">umbral</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"Desorden"</span>
-<span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">[</span><span class="n">p53</span><span class="o">$</span><span class="n">Iupred</span><span class="o">&lt;</span><span class="n">umbral</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"Orden"</span>
+<div class="highlight"><pre><span></span><code><span class="n">umbral</span> <span class="o">&lt;-</span> <span class="m">0.5</span>
+<span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span> <span class="o">&lt;-</span> <span class="kc">NA</span>
+<span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">[</span><span class="n">p53</span><span class="o">$</span><span class="n">Iupred</span><span class="o">&gt;=</span><span class="n">umbral</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="s">&quot;Desorden&quot;</span>
+<span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">[</span><span class="n">p53</span><span class="o">$</span><span class="n">Iupred</span><span class="o">&lt;</span><span class="n">umbral</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="s">&quot;Orden&quot;</span>
 </code></pre></div>
 <p>Para obtener un gráfico similar al que brinda el servidor de IUPred, utilizaremos la librería <code>ggplot2</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
 
-<span class="n">plot_p53</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">p53</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Posición</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Iupred</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.01</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="n">limits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_line</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">"navyblue"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">Prediccion</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">"dotted"</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="n">plot_p53</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">p53</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Posición</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Iupred</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">20</span><span class="p">,</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.01</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">geom_line</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;navyblue&quot;</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">Prediccion</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span> <span class="o">+</span>
 <span class="nf">theme_linedraw</span><span class="p">()</span>
 </code></pre></div>
 <p>Debería obtener un gráfico como el siguiente:</p>
-<p><a class="glightbox" href="images/IUPred.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="images/IUPred.png"></a></p>
+<p><a class="glightbox" href="images/IUPred.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="images/IUPred.png" /></a></p>
 <p>Ahora, quisiéramos evaluar el porcentaje de residuos predichos ordenados y desordenados. Por suerte, R tiene una función que “cuenta” por nosotros:</p>
-<div class="highlight"><pre><span></span><code><span class="n">cuentaTotal</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">)</span>
-<span class="n">porcentaje</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">100</span><span class="o">*</span><span class="n">cuentaTotal</span><span class="o">/</span><span class="nf">length</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Posición</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">cuentaTotal</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">)</span>
+<span class="n">porcentaje</span> <span class="o">&lt;-</span> <span class="m">100</span><span class="o">*</span><span class="n">cuentaTotal</span><span class="o">/</span><span class="nf">length</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Posición</span><span class="p">)</span>
 </code></pre></div>
 <ol>
 <li>
@@ -996,25 +873,25 @@ details summary > * {
 </li>
 </ol>
 <p>Vamos a graficar el porcentaje de cada aminoácido predicho como ordenado o desordenado en la secuencia de p53</p>
-<div class="highlight"><pre><span></span><code><span class="n">aminoacidos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Aminoácido</span><span class="p">,</span><span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">aminoacidos</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Aminoácido</span><span class="p">,</span><span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">)</span>
 </code></pre></div>
 <ul>
 <li>¿Qué hizo la función <code>table</code> en este caso?</li>
 </ul>
 <p>Para calcular el porcentaje de aminoácidos:</p>
-<div class="highlight"><pre><span></span><code><span class="n">aminoacidos_porcentaje</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">100</span><span class="o">*</span><span class="n">aminoacidos</span><span class="o">/</span><span class="nf">length</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Posición</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">aminoacidos_porcentaje</span> <span class="o">&lt;-</span> <span class="m">100</span><span class="o">*</span><span class="n">aminoacidos</span><span class="o">/</span><span class="nf">length</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Posición</span><span class="p">)</span>
 </code></pre></div>
 <p>Ahora vamos a convertir la tabla en un dataframe para graficar con <code>ggplot2</code>:</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="n">aminoacidos_df</span><span class="o">&lt;-</span><span class="nf">as.data.frame</span><span class="p">(</span><span class="n">aminoacidos_porcentaje</span><span class="p">)</span>
-<span class="nf">colnames</span><span class="p">(</span><span class="n">aminoacidos_df</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"Aminoacidos"</span><span class="p">,</span><span class="s">"Prediccion"</span><span class="p">,</span><span class="s">"Porcentaje"</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><span class="n">aminoacidos_df</span><span class="o">&lt;-</span><span class="nf">as.data.frame</span><span class="p">(</span><span class="n">aminoacidos_porcentaje</span><span class="p">)</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">aminoacidos_df</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Aminoacidos&quot;</span><span class="p">,</span><span class="s">&quot;Prediccion&quot;</span><span class="p">,</span><span class="s">&quot;Porcentaje&quot;</span><span class="p">)</span>
 
-<span class="n">plot_aa</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">aminoacidos_df</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Aminoacidos</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Porcentaje</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="n">Prediccion</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">      </span><span class="nf">geom_col</span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"dodge"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">      </span><span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="n">limits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">10</span><span class="p">),</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">      </span><span class="nf">theme_bw</span><span class="p">()</span>
+<span class="n">plot_aa</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">aminoacidos_df</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Aminoacidos</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Porcentaje</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="n">Prediccion</span><span class="p">))</span> <span class="o">+</span>
+      <span class="nf">geom_col</span><span class="p">(</span><span class="n">position</span> <span class="o">=</span> <span class="s">&quot;dodge&quot;</span><span class="p">)</span> <span class="o">+</span>
+      <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">10</span><span class="p">),</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span> <span class="o">+</span>
+      <span class="nf">theme_bw</span><span class="p">()</span>
 </code></pre></div>
-   Deberías obtener un gráfico como el siguiente:
-<p><a class="glightbox" href="images/Aminoacidos.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Aminoacidos.png"></a></p>
+   Deberías obtener un gráfico como el siguiente:</p>
+<p><a class="glightbox" href="images/Aminoacidos.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Aminoacidos.png" /></a></p>
 <ul>
 <li>
 <p>¿Qué aminoácidos son los más abundantes en las regiones desordenadas? ¿La abundancia de los aminoácidos coincide con lo esperado?</p>
@@ -1026,25 +903,25 @@ details summary > * {
 <div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">bio3d</span><span class="p">)</span>
 </code></pre></div>
 <p>Leemos el archivo:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pdbP53</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.pdb</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/directorioQueCorresponda/AF-P04637-F1-model_v2.pdb"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">pdbP53</span> <span class="o">&lt;-</span> <span class="nf">read.pdb</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s">&quot;/directorioQueCorresponda/AF-P04637-F1-model_v2.pdb&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Guardamos en el dataframe de p53 los datos que me intersan.</p>
 <p>El pLDDT está guardado en el campo de b-factors del pdb, y necesitamos un único valor por residuo. Por lo tanto, elegimos que sea el correspondiente a los carbonos α y lo guardamos en una columna que se llama pLDDT</p>
-<div class="highlight"><pre><span></span><code><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pdbP53</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">pdbP53</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">"b"</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span> <span class="o">&lt;-</span> <span class="n">pdbP53</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">pdbP53</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">]</span>
 </code></pre></div>
 <p>Luego, clasificamos las posiciones según el valor de pLDDT</p>
-<div class="highlight"><pre><span></span><code><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT_Prediccion</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"&gt;80"</span>
-<span class="n">p53</span><span class="o">$</span><span class="n">pLDDT_Prediccion</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="o">&lt;=</span><span class="m">50</span><span class="p">)]</span><span class="o">&lt;-</span><span class="s">"&lt;=50"</span>
-<span class="n">p53</span><span class="o">$</span><span class="n">pLDDT_Prediccion</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="o">&gt;</span><span class="m">50</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="o">&lt;=</span><span class="m">80</span><span class="p">)]</span><span class="o">&lt;-</span><span class="s">"&gt;50 &amp; &lt;= 80"</span>
+<div class="highlight"><pre><span></span><code><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT_Prediccion</span> <span class="o">&lt;-</span> <span class="s">&quot;&gt;80&quot;</span>
+<span class="n">p53</span><span class="o">$</span><span class="n">pLDDT_Prediccion</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="o">&lt;=</span><span class="m">50</span><span class="p">)]</span><span class="o">&lt;-</span><span class="s">&quot;&lt;=50&quot;</span>
+<span class="n">p53</span><span class="o">$</span><span class="n">pLDDT_Prediccion</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="o">&gt;</span><span class="m">50</span> <span class="o">&amp;</span> <span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="o">&lt;=</span><span class="m">80</span><span class="p">)]</span><span class="o">&lt;-</span><span class="s">&quot;&gt;50 &amp; &lt;= 80&quot;</span>
 </code></pre></div>
 <p>Hago el gráfico de IUPred y pLDDT por posición:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pLDDT_con_Iupred</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">p53</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Posición</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Iupred</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.01</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="n">limits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_line</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">"navyblue"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_line</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p53</span><span class="p">,</span><span class="n">mapping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Posición</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">pLDDT</span><span class="o">/</span><span class="m">100</span><span class="p">),</span><span class="n">col</span><span class="o">=</span><span class="s">"red"</span><span class="p">)</span><span class="o">+</span>
-<span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">"dotted"</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">theme_linedraw</span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><span class="n">pLDDT_con_Iupred</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">p53</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Posición</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Iupred</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">20</span><span class="p">,</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.01</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">geom_line</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;navyblue&quot;</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">geom_line</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">p53</span><span class="p">,</span><span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Posición</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">pLDDT</span><span class="o">/</span><span class="m">100</span><span class="p">),</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">theme_linedraw</span><span class="p">()</span> 
 <span class="n">pLDDT_con_Iupred</span>
 </code></pre></div>
 <p>Observe el gráfico y responda:
@@ -1053,12 +930,12 @@ details summary > * {
       * ¿Por qué cree que se utiliza pLDDT/100 en el gráfico?
       * ¿Que puede decir de la relación entre la predicción de desorden y los valores de pLDDT?</p>
 <p>Estudiemos la correlación entre IUPred y el pLDDT:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pLDDT_vs_IUPred</span><span class="o">&lt;-</span><span class="nf">ggplot</span><span class="p">(</span><span class="n">p53</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">pLDDT</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Iupred</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">),</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="n">limits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="n">pLDDT_Prediccion</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">"dotted"</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">"dotted"</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<div class="highlight"><pre><span></span><code><span class="n">pLDDT_vs_IUPred</span><span class="o">&lt;-</span><span class="nf">ggplot</span><span class="p">(</span><span class="n">p53</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">pLDDT</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Iupred</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">),</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="n">pLDDT_Prediccion</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span> <span class="o">=</span> <span class="m">50</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span> <span class="o">+</span>
 <span class="nf">theme_linedraw</span><span class="p">()</span>
 <span class="n">pLDDT_vs_IUPred</span>
 </code></pre></div>
@@ -1263,37 +1140,18 @@ LDDQRRMMTPQKLREYQDIIREVKDANA
 <li>Intermedio con explicación del Script <a href="https://drive.google.com/file/d/1xhMCYVg4V3hUtgJsyTZ_Qj8uFaOcmpLW/view?usp=sharing">[MP4]</a></li>
 <li>Cierre <a href="https://drive.google.com/file/d/1FqVo3Xb8KFivicBl4N3U-kJhhoFNC4cq/view?usp=sharing">[MP4]</a></li>
 </ul>
-<p>{% endif %}</p><script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body></html>
+<p>{% endif %}</p>
 
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+              
+            </article>
+            
+          </div>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-  Volver al principio
-</button>
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </a>
         
       </main>
       
@@ -1323,12 +1181,10 @@ document$.subscribe(() => { lightbox.reload() });
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
-    
-    
-      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a877e258.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
@@ -1341,5 +1197,5 @@ document$.subscribe(() => { lightbox.reload() });
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
