@@ -20,8 +20,8 @@ tags:
 | Martes, 14/05/2024    | 10 - 12.30hs  | Teórica       | [T2. Estructura de Proteínas](/estructural/teoricas/teorica2/)                                                       | L. Chemes |
 |                       | 13 - 15.30hs  | Práctico      | [TP2. Visualización de Proteínas utilizando Chimera](/estructural/practicos/chimera/)                                | J. Glavina |
 | Miércoles, 15/05/2024	|  9 - 12hs	    | Teórica       | T3. Modelado por Homología                                                        | L. Chemes |
-|                       | 13 - 15.30hs	| Práctico      | TP3. Modelado por Homología - Parte I                                             | J. Glavina |
-| Jueves, 16/05/2024    | 9 - 13hs	    | Práctico      | TP4.Modelado por Homología - Parte II                                            | J. Glavina |
+|                       | 13 - 15.30hs	| Práctico      | [TP3. Modelado por Homología - Parte I](/estructural/practicos/Modelado_Por_Homologia/)                                             | J. Glavina |
+| Jueves, 16/05/2024    | 9 - 13hs	    | Práctico      | [TP4.Modelado por Homología - Parte II](/estructural/practicos/modelado_alphafold/)                                            | J. Glavina |
 |                       | 14 - 17hs     | Teórica       | T4. Interacciones proteína-proteína                  | L.Chemes |
 | Viernes, 17/05/2024	  | 9 - 12hs      | Teórica       | Discusión y problemas                               | J. Glavina |
 |                       | 13 - 17hs	    | Práctico      | TP5. Interacciones proteína-proteína                   | J. Glavina |
