@@ -206,7 +206,7 @@ Desconfiando de los resultados de su becario, Ud. decide analizar la calidad del
 
     En el gráfico, el eje x son las posiciones de la secuencia y en el eje y el *score* de IUPred que va de 0 a 1.
 
-    Ingrese la secuencia de la rana en [IUPRed2A](https://iupred2a.elte.hu/plot). 
+    Ingrese la secuencia de la rana en [IUPRED (actualizada)](https://iupred2a.elte.hu/)
 
     * ¿Qué relación encuentra con lo obtenido por Verify3D? 
 
