@@ -130,10 +130,10 @@ La base de datos STRING contiene datos de interacciones proteína-proteína cono
     * Presione *More*, ¿observa algún interactor que no interactúe con Rb?
 
 2. Presione en *Less*, y haga click en E2F4 y observe la información disponible. Haga click en el edge que conecta E2F4 y RB1:
-    * ¿De dónde proviene la mayor evidencia de interacción entre estas dos proteínas?
+    * De los siete tipos de origen de evidencia ¿De dónde proviene la evidencia de interacción entre estas dos proteínas?
 
 3. Vaya a *Legend* y responda:
-    * ¿Todas las interacciones entre las proteínas de esta red tienen evidencia experimental asociada?
+    * ¿Todas las interacciones entre las proteínas de esta red tienen evidencia **experimental** asociada?
 
 4. ¿Se encuentran los interactores con mayor score detectados en IntAct?
 

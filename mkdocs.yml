@@ -137,7 +137,11 @@ nav:
         - Teórica 1a: teoricas/teorica1a/index.md
         - Teórica 1b: teoricas/teorica1b/index.md
         - Teórica 2: teoricas/teorica2/index.md
-    #    - Teórica 3: teoricas/3-Teorica-Tres/index.md
+    #    - Teórica 3: teoricas/teorica3/index.md
+    #    - Teórica 4: teoricas/teorica4/index.md
+    #    - Teórica 5: teoricas/teorica5/index.md
+    #    - Teórica 6: teoricas/teorica6/index.md
+
     #    - Resumen: teoricas/resumen.md
     - Prácticos: 
         - 'practicos/inicio.md'
@@ -145,7 +149,7 @@ nav:
         - TP2 - Chimera: 'practicos/chimera/index.md'
         - TP3 - Modelado por homología: 'practicos/Modelado_Por_Homologia/index.md'
         - TP4 - Modelado Parte II: 'practicos/modelado_alphafold/index.md'
-        - TP5 - Interacciones Proteína-Proteína: 'practicos/ppi/index.md'
+        # - TP5 - Interacciones Proteína-Proteína: 'practicos/ppi/index.md'
         # - TP3 - Modelado por homología: 'practicos/Modelado_Por_Homologia/index.md'
         # - TP4 - Modelado Parte II: 'practicos/modelado_alphafold/index.md'
     #    - Resumen: 'practicos/resumen.md'
