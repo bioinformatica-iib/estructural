@@ -102,7 +102,7 @@ IntAct es una base de datos pública de interacciones moleculares. Es mantenida 
     * A la derecha de la red de interacción está la leyenda. ¿Qué representan los edges sólidos?
     * A la izquierda de la red de interacción, destildá la opción *Expand*. ¿Qué representa ahora el color de los edges? ¿y el ancho?
 
-    Utiliza el filtro MI Score y encuentra los interactores con el mayor score.
+    Utiliza el filtro MI Score que se encuentra en la parte superior y encuentra los interactores con el mayor score.
 
     * ¿Cuántos interactores hay?
     * ¿Cuántas interacciones hay?
@@ -129,6 +129,20 @@ La base de datos STRING contiene datos de interacciones proteína-proteína cono
 
     * Presione *More*, ¿observa algún interactor que no interactúe con Rb?
 
+    ??? info "Nota en score de STRING"
+
+        Puede haber uno o más scores en STRING para cada interacción proteína-proteína.
+
+        Estos scores no se relacionan con la fuerza o especificidad de la interacción. Son indicadores de confianza de STRING. Es decir, dada la evidencia disponible, cuán probable es que esa interacción sea verdadera.
+
+        Un score de 0.5 indicaría que una de cada dos interacciones es errónea, o sea, sería un falso positivo.
+
+        Para la mayoría de los tipos de evidencia hay dos scores:
+
+        * **normal score**
+
+        * **transferred score:** Este score se calcula a partir de datos que no provienen del organismo de interés si no de otro organismo y luego es *transferido* vía homología.
+
 2. Presione en *Less*, y haga click en E2F4 y observe la información disponible. Haga click en el edge que conecta E2F4 y RB1:
     * De los siete tipos de origen de evidencia ¿De dónde proviene la evidencia de interacción entre estas dos proteínas?
 
@@ -137,13 +151,26 @@ La base de datos STRING contiene datos de interacciones proteína-proteína cono
 
 4. ¿Se encuentran los interactores con mayor score detectados en IntAct?
 
-5. Vaya a *Analysis*. Vaya a la sección *KEGG Pathways* y asegúrese que esté ordenada por *strength*. Luego, haga click en **Rb1** y luego seleccione *Highlight enriched terms in the analysis table*. Observe que en la tabla se resaltan los términos enriquecidos en cada base de datos relacionados con Rb.
+5. Vaya a *Analysis*. Luego, Vaya a la sección *KEGG Pathways* de la tabla y asegúrese que esté ordenada por *strength*. Luego, haga click en el nodo **Rb1** de la red de interacción y luego seleccione *Show this node's terms in the analysis table*. Observe que en la tabla se resaltan los términos enriquecidos en cada base de datos relacionados con Rb.
     * ¿A qué corresponden las primeras 10 líneas de KEGG?
 
-6. Elija los dos interactores detectados en Intact y haga lo mismo.
+    ??? info "KEGG PATHWAY"
+
+        *KEGG (Kyoto Encyclopedia of Genes and Genomes)* es una colección de bases de datos. 
+
+        * KEGG Pathway es una de las base de datos de KEGG que almacena mapas de rutas para las funciones celulares y de organismos.
+
+        * El *strength* (como dice en *explain columns* en la parte superior de la primera tabla) es claculado como Log~10~(observado / esperado).
+        
+        Esta medida describe cuan grande es el efecto de enriquecimiento. Es la relación entre:
+        
+            1. El número de proteínas en la red que están anotadas con un término.
+            2. El número de proteínas que se espera que están anotadas con ese término en una red *random* con el mismo tamaño.
+
+6. Elija los dos interactores de mayor score detectados en Intact y haga lo mismo.
     * ¿Cuáles son los KEGG pathways comunes a las tres proteínas?
 
-7. En la sección KEGG pathways haga click en el identificador que corresponde a Cell Cycle.
+7. En la sección KEGG pathways haga click en el **identificador** que corresponde a Cell Cycle.
     * ¿Puede encontrar a Rb?
     * ¿Encuentra a los interactores con mayor evidencia?
     * ¿Puede nombrar al menos una enzima que fosforile a Rb y otra que la desfosforile?
@@ -316,8 +343,10 @@ El objetivo de este ejercicio consiste en analizar la superficie de interacción
     *File* → *Save Session As…*
     *File* → *Close Session*
 
+<!---
 ## Recordings
 - Cierre [[MP4]](https://drive.google.com/file/d/1QgWc-uD7JdZ2DHDW6e5tnod6JaISA1Vq/view?usp=sharing)
+-->
 
 ## Otros recursos
 
