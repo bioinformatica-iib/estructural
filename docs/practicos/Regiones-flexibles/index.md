@@ -1,43 +1,20 @@
----
-layout: page
-title: TP N°6
-subtitle: Predicción de desorden y bases de datos
-data : True
-menubar_toc: true
-hero_height: is-small
-toc_title: CONTENIDOS
-construccion: false
----
-<style>
-details > summary:first-of-type {
-   display: list-item;
-}
-details summary { 
-  cursor: pointer;
-}
-
-details summary > * {
-  display: inline;
-}
-
-</style>
-
-{% if page.construccion %}
-**Pagina en construccion**
-{% else %}
+# **TP 6**. Predicción de desorden y bases de datos {markdown data-toc-label 'TP 6'}
 
 ## Materiales
 
-[Descargar](https://drive.google.com/file/d/1hAEaOGRobxBHe-1_oh5A4ZAscxM5s_Ti/view?usp=sharing)
+[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1hAEaOGRobxBHe-1_oh5A4ZAscxM5s_Ti/view?usp=sharing)
 
-## PARTE I: Análisis de alineamientos múltiples de secuencia de proteínas
+## Parte I: Análisis de alineamientos múltiples de secuencia de proteínas
 
-#### Recursos a utilizar
+### Recursos a utilizar
+
 * ProViz: [http://slim.icr.ac.uk/proviz/](http://slim.icr.ac.uk/proviz/)
 * JalView: [https://www.jalview.org/](https://www.jalview.org/)
-* PFAM: [https://pfam.xfam.org/](https://pfam.xfam.org/)
+* PFAM: [https://pfam.xfam.org/](https://pfam.xfam.org/) [Legacy Version]
+* InterPro: [https://www.ebi.ac.uk/interpro/](https://www.ebi.ac.uk/interpro/)
 
-### Objetivo
+### Objetivos
+
 * Aprender a utilizar Jalview para visualizar un MSA y familiarizarse con el manejo de programas de visualización de alineamientos.
 * Interpretar alineamientos múltiples de secuencias. Identificar regiones de secuencia conservadas y asociarlas a diferentes elementos funcionales de las proteínas. 
 * Identificar regiones ordenadas y desordenadas en alineamientos múltiples de secuencia
@@ -50,18 +27,9 @@ details summary > * {
 
 Selecciona la proteína que se llama: [Cellular tumor antigen p53 (TP53) Homo sapiens (Human)](http://slim.icr.ac.uk/proviz/proviz.php?uniprot_acc=P04637). Es la primera de la lista.
 
-<ul class="block-list has-radius is-primary">
-   <li class="is-highlighted is-danger has-icon">
-   <span class="icon"><i class="fas fa-exclamation-triangle fa-2x"></i></span>
-   <span style="font-weight:bold;">IMPORTANTE<br></span>
-   <p>
-   <br>
-   Para responder las preguntas debajo, asegúrate de que en el panel superior de la página, en <span style="font-weight:bold;">alignments</span>, esté seleccionada la opción <span style="font-weight:bold;">QFO</span>. Puedes investigar qué pasa si cambian a otras opciones, como <span style="font-style:italic;">mammalian</span> o <span style="font-style:italic;">vertebrates</span>. 
-   <br>
-   En <span style="font-weight:bold;">Options</span> a la izquierda haz click en <span style="font-style:italic;">Show/hide gaps</span>. Aparecen más posiciones con gaps en el alineamiento que antes estaban ocultas.    
-   </p>
-   </li>
-</ul>
+!!! Importante
+      Para responder las preguntas debajo, asegúrate de que en el panel superior de la página, en **alignments**, esté seleccionada la opción **QFO**. Puedes investigar qué pasa si cambian a otras opciones, como *mammalian* o *vertebrates*. 
+      En **Options** a la izquierda haz click en *Show/hide gaps*. Aparecen más posiciones con gaps en el alineamiento que antes estaban ocultas.    
 
 1. ¿Qué regiones parecen estar mejor alineadas (indicar aproximadamente de qué posición a qué posición de la primera secuencia)?
 
@@ -136,13 +104,11 @@ También es posible disminuir la intensidad de los colores según el grado de co
    * ¿Cuál es la base del esquema de color “ClustalX” provisto por Jalview? *Nota:* Google provee respuestas pero... pueden ir directamente al [esquema de colores de ClustalX](http://www.jalview.org/help/html/colourSchemes/clustal.html)  
    * ¿Cuántos colores existen?  
    * ¿Qué propiedades fisicoquímicas representa cada grupo de color?  
-   * La cisteína cumple un rol estructural importante en algunas proteínas (¿cual?). ¿Qué observa respecto de la coloración de la cisteína? ¿Es siempre igual? ¿A qué se debe el cambio en la representación?  
+   * La cisteína cumple un rol estructural importante en algunas proteínas (¿cual?). ¿Qué observa respecto de la coloración de la cisteína? ¿Es siempre igual? ¿A qué se debe el cambio en la representación?
 
-   <ul class="block-list has-radius is-primary">
-      <li class="is-info is-outlined">
-      En ProViz estaba siempre coloreada del mismo color, pero en el esquema de colores de ClustalX no lo está.
-      </li>
-   </ul>
+!!! Info
+
+      En Proviz estaba siempre coloreada del mismo color, pero en el esquema de colores de ClustalX no lo está.  
 
    * ¿En qué situaciones los residuos no están coloreados?  
    * Hay residuos que siempre están coloreados? ¿Cuáles son y a qué cree que se debe?
@@ -163,39 +129,31 @@ También es posible disminuir la intensidad de los colores según el grado de co
    * ¿Qué tipos de patrones observa?  
    * ¿Qué relación guardan estos patrones con las matrices PAM y BLOSUM utilizadas para construir alineamientos de proteínas?
 
-   <ul class="block-list has-radius is-primary">
-   <li class="is-info is-outlined" markdown="span">
+!!! Info
 
-   Una matriz *BLOSUM (BLOcks SUbstitution Matrix)* es una matriz de sustitución para los 210 pares de aminoácidos. La construcción de las matrices BLOSUM se realizó con bloques conservados de proteínas (es decir, sin gaps) en alineamientos de proteínas que comparten como máximo un cierto porcentaje de identidad. A partir de estos alineamientos, se calcula la frecuencia de las sustituciones observadas para cada par de aminoácidos y se calcula el logaritmo de la probabilidad de que dos aminoácidos aparezcan en esa posición por azar. Una matrix blosum construida con secuencias que comparten como máximo el 50% de identidad se llama BLOSUM-50). Las matrices BLOSUM se utilizan para puntuar alineamientos de proteínas. Una BLOSUM 80 se usa para proteínas menos divergentes y BLOSUM 45 por ejemplo para proteínas más divergentes.
-   <br>
-   Las matrices *PAM (point accepted mutation)* a diferencia de las BLOSUM, se calcularon a partir de la observación de mutaciones en 71 familias de proteínas relacionadas a lo largo del árbol filogenético. Las proteínas incluídas tenían al menos 85% de identidad, y por lo tanto, se asume que cualquier mismatch es el resultado de un evento único de mutación (y no una acumulación de mutaciones en esa posición a lo largo del tiempo). La puntuación de cada par de aminoácidos en la matriz está relacionada con la distancia evolutiva. Así, una PAM120 se utiliza para proteínas menos divergentes y una PAM250 para proteínas más divergentes.
+      Una matriz *BLOSUM (BLOcks SUbstitution Matrix)* es una matriz de sustitución para los 210 pares de aminoácidos. La construcción de las matrices BLOSUM se realizó con bloques conservados de proteínas (es decir, sin gaps) en alineamientos de proteínas que comparten como máximo un cierto porcentaje de identidad. A partir de estos alineamientos, se calcula la frecuencia de las sustituciones observadas para cada par de aminoácidos y se calcula el logaritmo de la probabilidad de que dos aminoácidos aparezcan en esa posición por azar. Una matrix blosum construida con secuencias que comparten como máximo el 50% de identidad se llama BLOSUM-50). Las matrices BLOSUM se utilizan para puntuar alineamientos de proteínas. Una BLOSUM 80 se usa para proteínas menos divergentes y BLOSUM 45 por ejemplo para proteínas más divergentes.
 
-   </li>
-   </ul>
+      Las matrices *PAM (point accepted mutation)* a diferencia de las BLOSUM, se calcularon a partir de la observación de mutaciones en 71 familias de proteínas relacionadas a lo largo del árbol filogenético. Las proteínas incluídas tenían al menos 85% de identidad, y por lo tanto, se asume que cualquier mismatch es el resultado de un evento único de mutación (y no una acumulación de mutaciones en esa posición a lo largo del tiempo). La puntuación de cada par de aminoácidos en la matriz está relacionada con la distancia evolutiva. Así, una PAM120 se utiliza para proteínas menos divergentes y una PAM250 para proteínas más divergentes.
 
-   <p style="text-align:center">
-   <img src="./images/fig1_BLOSUM62.jpg" alt="" style="max-width:70%">
-   </p>
+<p style="text-align:center">
+<img src="./images/fig1_BLOSUM62.jpg" alt="" style="max-width:70%">
+</p>
+<figcaption style="text-align:center;max-width:70%">
+Figura 1. Matrix BLOSUM62.</figcaption>
 
-   <figcaption align = "center">
+En base a este alineamiento analice las regiones desordenadas y ordenadas ya reconocidas en p53. Compare sus observaciones en este alineamiento con el alineamiento visualizado en ProViz en el **Ejercicio 1**.
 
-   **Fig 1.** Matrix BLOSUM62.
-
-   </figcaption>
-   <br>
-   <br>
-
-   En base a este alineamiento analice las regiones desordenadas y ordenadas ya reconocidas en p53. Compare sus observaciones en este alineamiento con el alineamiento visualizado en ProViz en el **Ejercicio 1**.  
-      * ¿Puede distinguir las mismas regiones?  
-      * ¿Ve diferencias en la composición de secuencia en cada región?  
-      * ¿Se observan diferencias en el grado de conservación?  
-      * ¿Las especies a las que corresponde cada secuencia son las mismas en los alineamientos? ¿Cuál posee organismos más distantes?  
-      * Discuta qué ventajas considera que tiene trabajar con un alineamiento propio respecto de trabajar con el alineamiento de ProViz?
+   * ¿Puede distinguir las mismas regiones?
+   * ¿Ve diferencias en la composición de secuencia en cada región?
+   * ¿Se observan diferencias en el grado de conservación?
+   * ¿Las especies a las que corresponde cada secuencia son las mismas en los alineamientos? ¿Cuál posee organismos más distantes?
+   * Discuta qué ventajas considera que tiene trabajar con un alineamiento propio respecto de trabajar con el alineamiento de ProViz?
 
 
-## PARTE II: Predicción de Desorden
+## Parte II: Predicción de Desorden
 
-#### Recursos a utilizar:
+### Recursos a utilizar:
+
 * IUPred2A            [https://iupred2a.elte.hu/plot](https://iupred2a.elte.hu/plot)
 
 ### Objetivos.
@@ -204,6 +162,7 @@ También es posible disminuir la intensidad de los colores según el grado de co
 * Entender las técnicas experimentales que permiten la identificación de regiones desordenadas
 
 ### Métodos de predicción de desorden
+
 Uno de los mayores desafíos en el campo de las proteínas es la predicción de la estructura tridimensional a partir de la estructura primaria incluyendo aquellas proteínas que son total o parcialmente desordenadas. Mientras que las proteínas globulares adquieren una única estructura nativa, las proteínas intrínsecamente desordenadas (IDPs) son un conjunto de estructuras tridimensionales. También pueden existir regiones desordenadas conectando dos dominios globulares, como los *loops*; o incluso regiones más largas, que abarcan más de 30 residuos de longitud, que reciben el nombre de IDRs (del inglés *intrinsically disordered proteins*).
 
 La predicción de IDRs a partir de la secuencia de aminoácidos permite un análisis rápido y abarcativo de distintas proteínas permitiendo establecer hipótesis sobre la presencia de desorden en las proteínas (Dunker et al., 2008; van der Lee et al., 2014). La importancia que adquirieron las IDRs/IDPs en los últimos años llevó al desarrollo de numerosos métodos de predicción, pero en general se basan en tres estrategias de predicción de desorden: 
@@ -226,11 +185,9 @@ El algoritmo IUPred considera que un residuo es:
 
 2. Descargue los datos en formato `texto` y guarde el archivo como `P53_HUMAN.iupred`.
 
-   <ul class="block-list has-radius is-primary">
-   <li class="is-info is-outlined" markdown="span">
-   Nota: Imaginemos que queremos correr la predicción de desorden para cientos de proteínas, o que queremos contar el porcentaje de aminoácidos que se encuentran en regiones desordenadas ¿Le parece que el visualizador online sería una herramienta útil para hacerlo? ¡Claro que no! Por suerte, el algoritmo IUPred puede también correrse de manera local y además es rápido. Para esto necesita tener instalado Python3 en su computadora.
-   </li>
-   </ul>
+!!! info "Nota"
+
+      Imaginemos que queremos correr la predicción de desorden para cientos de proteínas, o que queremos contar el porcentaje de aminoácidos que se encuentran en regiones desordenadas ¿Le parece que el visualizador online sería una herramienta útil para hacerlo? ¡Claro que no! Por suerte, el algoritmo IUPred puede también correrse de manera local y además es rápido. Para esto necesita tener instalado Python3 en su computadora.
 
 3. Explora el archivo descargado y responde.
 
@@ -381,6 +338,8 @@ Recuerda ver en qué directorio estás trabajando y configurarlo para trabajar e
 
 ## Parte III: Bases de Datos
 
+### Recursos a utilizar:
+
 * DisProt: [https://www.disprot.org](https://www.disprot.org)
 * MobiDB: [http://mobidb.bio.unipd.it/](http://mobidb.bio.unipd.it/)
 * PED: [https://proteinensemble.org/](https://proteinensemble.org/)
@@ -398,9 +357,13 @@ La base de datos [DisProt](https://disprot.org/) es una colección de evidencia 
 **Cada una de las entradas en la base de datos posee un identificador único**.
 
 La ontología de desorden está organizada en cuatro categorías diferentes:
+
 * Estado estructural (*Structural State*): Orden o Desorden (*Order or Disorder*)
+
 * Transición estructural (*Structural Transition*): Transiciones que pueden ocurrir entre diferentes estados estructurales (*Disorder to order*)
+
 * Par de Interacción (*Interaction Partner*): La entidad que interactúa (proteína, ión, moléculas pequeñas)
+
 * Función de desorden (*Disorder Function*): La función de una región incluyendo términos específicos a desorden.
 
 **Ejercicio:**
@@ -417,11 +380,9 @@ Ingresa a la página web de [DisProt](https://disprot.org/) y encuentra la prote
    * Expande *Interaction partner* ¿Qué tipo de interacciones están indicadas?¿Qué técnicas se usaron para identificarlas?
    * Expande *Disorder Function* ¿Qué tipo de funciones están indicadas? ¿Qué técnicas se usaron para identificarlas?
 
-4. Expande *Domains*.
+4. Observa la línea que corresponde a InterPro.
 
-   Sabiendo que los dominios **PFAM** son asignados a partir de un perfil de HMMs creado de un alineamiento de proteínas representativas y que **Gene3D** contiene anotaciones de dominios estructurados.
-   
-   * ¿Se observa algún dominio conservado que **NO** adquiera una estructura globular?
+   * Compare la información de dominios con el estado estructural. ¿Se observa algún dominio InterPro que se superponga con una región desordenada?
 
 5. ¿La evidencia experimental recolectada coincide con las predicciones realizadas por IUPred y lo observado en ProViz?
 
@@ -443,32 +404,31 @@ La base de datos MobiDB centraliza diferentes recursos que facilitan la anotaci�
 
     * ¿Qué regiones tienen una estructura? 
 
-    Observa la entrada 5AOM_A. Ahora ve a la página web del [Protein Data Bank](www.rscb.org) y busca el PDB 5AOM, o puedes ir directamente desde [aquí](https://www.rcsb.org/structure/5AOM). En la web de la base de datos de PDB ve a la sección *Macromolecules*. Mira la sección correspondiente a la cadena A (UNMODELED A). ¿Puedes decir cómo se determinó que estas regiones eran desordenadas?
+    * Observa la entrada 5AOM_A. Ahora ve a la página web del [Protein Data Bank](www.rscb.org) y busca el PDB 5AOM, o puedes ir directamente desde [aquí](https://www.rcsb.org/structure/5AOM). En la web de la base de datos de PDB ve a la sección *Macromolecules*. Mira la sección correspondiente a la cadena A (UNMODELED A). ¿Puedes decir cómo se determinó que estas regiones eran desordenadas?
 
 ### Ejercicio 3. Base de datos de Ensambles Estructurales
 
 El primer lanzamiento de la base de datos [PED](https://proteinensemble.org/) fue en el año 2013. PED recolecta la información estructural de los ensambles de IDPs y proteÍnas desnaturalizadas determinadas por RMN o SAXS. La última versión cuenta con 195 entradas con 275 ensambles con más de 263562 estructuras proteicas correspondiente a un total de 102 proteínas (Febrero 2022).
+
+1. Busque en la base de datos PED la proteína E1A (P03255). Ingrese a la entrada que no posee a Rb. Baje un ensamble y abra el ensamble en Chimera.
+      * ¿Cuantos modelos tiene?
+
+2. Seleccione una region de residuos:
+      ```
+      select :90-60
+      ```
+3. Intente utilizar el matchmaker para alinear esa región (Further restrict matching to current selection debe estar tildado)
  
-1. Busque en la base de datos PED la proteína E1A (P03255). Ingrese a la entrada que no posee a Rb. Baje un ensamble y
-abra el ensamble en Chimera.
-   * ¿Cuantos modelos tiene?
+      * ¿Pudo alinear las proteínas?
 
-   * Seleccione una region de residuos:
-	
-   ```
-   select :90-96
-   ```
-
-	* Intente utilizar el matchmaker para alinear esa región. (Further restrict matching to current selection debe estar tildado)
-   * ¿pudo alinear las proteínas?
-   * Las regiones que poseen estructura secundaria, ¿Pertenecen a la misma región siempre?
+      * Las regiones que poseen estructura secundaria,  ¿Pertenecen a la misma región siempre?
  
 ### Ejercicio 4. Base de datos de proteínas involucradas en liquid-liquid phase separation
  
 [PhaSePro](https://phasepro.elte.hu/) es una base de datos de proteínas involucradas en liquid-liquid phase separation (LLPS) en células. LLPS es un proceso molecular que forma organelas sin membrana que median funciones celulares cruciales.
 PhaSePro es curada manualmente y abarca únicamente casos verificados de LLPS integrando un amplio rango de información biofísica, funciones biológicas y regulación de estos sistemas moleculares.
 
-1. Ingreese a phase pro
+1. Ingrese a phase pro
 2. Investigue las distintas organellas. ¿Reconoce alguna?
 3. Busque la entrada: P35974
 4. ¿Qué region media LLPS?
@@ -482,20 +442,21 @@ PhaSePro es curada manualmente y abarca únicamente casos verificados de LLPS in
 El servidor PlaToLoCo ([PLAtform of TOols for LOw COmplexity](https://platoloco.aei.polsl.pl/#!/query)) permite la predicción de regiones de baja complejidad de secuencia (*low complexity regions*, LCR) utilizando distintos algoritmos:
 
 * **SEG:** Fue el primer algoritmo desarrollado para detectar LCRs. Calcula un vector de complejidad cuantificando el número de aminoácidos de cada tipo dentro de una ventana de longitud L. Para cada vector, se calcula la complejidad composicional y la probabilidad de ocurrencia y se clasifican los segmentos como de baja o alta complejidad según un valor umbral para la entropía de secuencia.
+Hay 3 configuraciones para SEG:
 
-   Hay 3 configuraciones para SEG:
-
-   * Relaxed (default): Es el parámetro más relajado de manera que se obtenga la mayor cantidad de LCRs.
-   * Intermediate: Está optimizado para detectar más largas y más repetitivas LCRs en eucariotas.
-   * Strict: Asegura que las regiones identificadas correspondan fuertemente con regiones que presenten un bias composicional.
+    * Relaxed (default): Es el parámetro más relajado de manera que se obtenga la mayor cantidad de LCRs.
+   
+    * Intermediate: Está optimizado para detectar más largas y más repetitivas LCRs en eucariotas.
+   
+    * Strict: Asegura que las regiones identificadas correspondan fuertemente con regiones que presenten un bias composicional.
  
 * **CAST:** Detecta regiones composicionalmente biased (compositionally biased regions, CBRs). Utiliza una base de datos de 20 secuencias homopoliméricas contra las cuales compara la secuencia query. Detectando así CBRs que se superponen con distintos tipos de residuos dentro de la misma secuencia.
  
 * **fLPS:** Anota CBRs detectando desvíos en la composición de aminoácidos únicos o múltiples. Para cada secuencia fLPS busca subsecuencias de residuo único y de baja probabilidad (LPSs), y luego iterativamente busca por desvíos de residuos múltiples. La configuración default y strict difieren en el tamaño de la ventana mínimo y máximo y el umbral de probabilidad. fLPS strict está mejor ajustado a la detección de CBRs
  
 * **SIMPLE:** Este algoritmo provee dos tipos de información:
-   * Identidad del motivo de aminoácidos
-   * Frecuencia de Información del motivo encontrado, definida como la frecuencia con la cual un motivo dado es detectado como repeticiones (sobre un umbral) dentro de una secuencia dada.
+    * Identidad del motivo de aminoácidos
+    * Frecuencia de Información del motivo encontrado, definida como la frecuencia con la cual un motivo dado es detectado como repeticiones (sobre un umbral) dentro de una secuencia dada.
  
 * **GBSC:** Identifica y agrupa regiones repetitivas. Busca repeticiones de un aminoácido (homorepeats) o de unos pocos aminoácidos (STRs -  short tandem repeats).
 
@@ -514,13 +475,15 @@ Donde *p<sub>i</sub>* es la fracción de residuos del tipo de aminoácido *i*, y
 * **Amino acid frequencies:** Frecuencias de aminoácidos de la secuencia de interés comparados con distintas bases de datos.
  
 Ingrese la proteína p53 en Platoloco. Identifique las distintas regiones identificadas como low-complexity regiones,
+
 * ¿Son las mismas identificadas por PFAM?
+
 * ¿ Qué composición observa en el alineamiento de p53 de estás regiones?
 
 ### Ejercicio 2. Selección de regiones para determinar la estructura de una proteína.
 Una de las aplicaciones principales de la predicción de desorden es encontrar regiones que son más adecuadas para determinar la estructura tridimensional de una proteína por cristalografía de rayos X.
 
-1. ¿Por qué cree que predecir las regiones desordenadas puede ayudar a seleccionar el dominio para cristalizar?
+* ¿Por qué cree que predecir las regiones desordenadas puede ayudar a seleccionar el dominio para cristalizar?
 
    Dada la siguiente proteína misteriosa:
 
@@ -538,24 +501,17 @@ Una de las aplicaciones principales de la predicción de desorden es encontrar r
 
 3. Para ver si la selección fue la correcta, haz un blast de la secuencia en la página web [https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi).
 
-   Pegue la secuencia en el box *Enter Query Sequence*. Chequear que el box *align two or more sequences* no esté seleccionado.
+      * Pegue la secuencia en el box *Enter Query Sequence*. Chequear que el box *align two or more sequences* no esté seleccionado.
 
-   En la sección **Choose Search Set**, selecciona la **database Protein Data Bank proteins (pdb)**.
+      * En la sección **Choose Search Set**, selecciona la **database Protein Data Bank proteins (pdb)**.
 
-   Explora los resultados. ¿Elegimos correctamente?
+      * Explora los resultados. ¿Elegimos correctamente?
 
-3. En los materiales se encuentra el modelo AlphaFold para esta proteína. Carguelo en Chimera. ¿Coincide con lo elegido?
+4. En los materiales se encuentra el modelo AlphaFold para esta proteína. Carguelo en Chimera. ¿Coincide con lo elegido?
 
-4. [XtalPred](https://xtalpred.godziklab.org/XtalPred-cgi/xtal.pl) compara las características bioquímicas y biofísicas de una proteína con las distribuciones de probabilidad de cristalización calculadas a partir de la base de datos TargetDB. A partir de estos datos, realiza una predicción de cristalización combinando las probabilidades de cristalización individuales de ocho características proteicas en una puntuación de cristalización. En base a esta puntuación, se clasifica a la proteína de interés en una de cinco clases de cristalización. Cada clase representa diferentes tasas de éxito de cristalización en TargetDB.
+5. [XtalPred](https://xtalpred.godziklab.org/XtalPred-cgi/xtal.pl) compara las características bioquímicas y biofísicas de una proteína con las distribuciones de probabilidad de cristalización calculadas a partir de la base de datos TargetDB. A partir de estos datos, realiza una predicción de cristalización combinando las probabilidades de cristalización individuales de ocho características proteicas en una puntuación de cristalización. En base a esta puntuación, se clasifica a la proteína de interés en una de cinco clases de cristalización. Cada clase representa diferentes tasas de éxito de cristalización en TargetDB.
 
-   Algunas de las características utilizadas son la longitud, el punto isoeléctrico, el gravy index (es el valor de hidrofobicidad del péptido), el desorden estructural predicho, entre otras.
- 
-   * Ingrese la mistery protein en XtalPred ¿Como se clasifica la proteína según la capacidad de ser cristalizada?
-   * Pruebe ingresando sólo el dominio de interés ¿Mejora?
-
-## Recording
-- Intro [[MP4]](https://drive.google.com/file/d/1SCXMGBJI9QRPEmQePW9OfH94bOQwc2Zv/view?usp=sharing)
-- Intermedio con explicación del Script [[MP4]](https://drive.google.com/file/d/1xhMCYVg4V3hUtgJsyTZ_Qj8uFaOcmpLW/view?usp=sharing)
-- Cierre [[MP4]](https://drive.google.com/file/d/1FqVo3Xb8KFivicBl4N3U-kJhhoFNC4cq/view?usp=sharing)
-
-{% endif %}
+      Algunas de las características utilizadas son la longitud, el punto isoeléctrico, el gravy index (es el valor de hidrofobicidad del péptido), el desorden estructural predicho, entre otras.
+   
+      * Ingrese la mistery protein en XtalPred ¿Como se clasifica la proteína según la capacidad de ser cristalizada?
+      * Pruebe ingresando sólo el dominio de interés ¿Mejora?
