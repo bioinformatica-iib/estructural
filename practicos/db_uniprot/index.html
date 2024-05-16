@@ -12,8 +12,15 @@
       
         <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/db_uniprot/">
       
+      
+        <link rel="prev" href="../inicio/">
+      
+      
+        <link rel="next" href="../chimera/">
+      
+      
       <link rel="icon" href="../../img/logo-unsam-negro.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
     
     
       
@@ -21,13 +28,17 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
-        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
+      
+
+
     
+    
+      
     
     
       
@@ -41,10 +52,11 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
@@ -68,9 +80,6 @@
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -98,6 +107,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
+      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -117,31 +127,39 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
-            </label>
-          
-        
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-            </label>
-          
-        
-      </form>
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
       <label class="md-header__button md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
@@ -150,16 +168,20 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -173,7 +195,7 @@
           <div class="md-search-result__meta">
             Inicializando búsqueda
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -192,82 +214,109 @@
           
             
 <nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
+  <div class="md-grid">
     <ul class="md-tabs__list">
       
         
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
 
-
-  <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
-      Inicio
-    </a>
-  </li>
+      </a>
+    </li>
+  
 
       
         
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../../acerca/" class="md-tabs__link">
-      Acerca de
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../../contenidos/" class="md-tabs__link">
-      Contenidos
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../../cronograma/" class="md-tabs__link">
-      Cronograma
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../../docentes/" class="md-tabs__link">
-      Docentes
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
   
   
   
     <li class="md-tabs__item">
-      <a href="../../teoricas/inicio/" class="md-tabs__link">
-        Teóricas
+      <a href="../../acerca/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
+
       </a>
     </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contenidos/" class="md-tabs__link">
+        
+  
+    
+  
+  Contenidos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cronograma/" class="md-tabs__link">
+        
+  
+    
+  
+  Cronograma
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../docentes/" class="md-tabs__link">
+        
+  
+    
+  
+  Docentes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../teoricas/inicio/" class="md-tabs__link">
+          
+  
+  Teóricas
+
+        </a>
+      </li>
+    
   
 
       
@@ -276,16 +325,18 @@
   
     
   
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../inicio/" class="md-tabs__link">
+          
+  
+  Prácticos
 
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../inicio/" class="md-tabs__link md-tabs__link--active">
-        Prácticos
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -304,6 +355,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 
   
 
@@ -324,14 +376,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Inicio
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
       </a>
     </li>
   
@@ -339,14 +396,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../acerca/" class="md-nav__link">
-        Acerca de
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+  </span>
+  
+
       </a>
     </li>
   
@@ -354,14 +416,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../contenidos/" class="md-nav__link">
-        Contenidos
+        
+  
+  <span class="md-ellipsis">
+    Contenidos
+  </span>
+  
+
       </a>
     </li>
   
@@ -369,14 +436,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../cronograma/" class="md-nav__link">
-        Cronograma
+        
+  
+  <span class="md-ellipsis">
+    Cronograma
+  </span>
+  
+
       </a>
     </li>
   
@@ -384,14 +456,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../docentes/" class="md-nav__link">
-        Docentes
+        
+  
+  <span class="md-ellipsis">
+    Docentes
+  </span>
+  
+
       </a>
     </li>
   
@@ -399,160 +476,232 @@
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+      
+      
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6">
-          Teóricas
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Teóricas" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          Teóricas
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
           
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Teóricas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Teóricas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/inicio/" class="md-nav__link">
-        Inicio
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica1a/" class="md-nav__link">
-        Teórica 1a
+        
+  
+  <span class="md-ellipsis">
+    Teórica 1a
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica1b/" class="md-nav__link">
-        Teórica 1b
+        
+  
+  <span class="md-ellipsis">
+    Teórica 1b
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica2/" class="md-nav__link">
-        Teórica 2
+        
+  
+  <span class="md-ellipsis">
+    Teórica 2
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
     
   
   
+  
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      
+        
+        
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7">
-          Prácticos
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Prácticos" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Prácticos
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
           
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Prácticos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Prácticos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../inicio/" class="md-nav__link">
-        Inicio
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          TP1 - Bases de Datos
+          
+  
+  <span class="md-ellipsis">
+    TP1 - Bases de Datos
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        TP1 - Bases de Datos
+        
+  
+  <span class="md-ellipsis">
+    TP1 - Bases de Datos
+  </span>
+  
+
       </a>
       
         
@@ -574,35 +723,45 @@
       
         <li class="md-nav__item">
   <a href="#recursos-online" class="md-nav__link">
-    Recursos Online
+    <span class="md-ellipsis">
+      Recursos Online
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#objetivos" class="md-nav__link">
-    Objetivos
+    <span class="md-ellipsis">
+      Objetivos
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#materiales" class="md-nav__link">
-    Materiales
+    <span class="md-ellipsis">
+      Materiales
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#organizacion-de-la-guia" class="md-nav__link">
-    Organización de la guía
+    <span class="md-ellipsis">
+      Organización de la guía
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#uniprot" class="md-nav__link">
-    UniProt
+    <span class="md-ellipsis">
+      UniProt
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="UniProt">
@@ -610,35 +769,45 @@
         
           <li class="md-nav__item">
   <a href="#uniprotkb-the-uniprot-knowledgebase" class="md-nav__link">
-    UniProtKb. The UniProt KnowledgeBase.
+    <span class="md-ellipsis">
+      UniProtKb. The UniProt KnowledgeBase.
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#uniparc-y-uniref" class="md-nav__link">
-    UniParc y UniRef
+    <span class="md-ellipsis">
+      UniParc y UniRef
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#pagina-web-de-uniprot" class="md-nav__link">
-    Página web de UniProt
+    <span class="md-ellipsis">
+      Página web de UniProt
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#realizando-busquedas-en-uniprot" class="md-nav__link">
-    Realizando búsquedas en UniProt
+    <span class="md-ellipsis">
+      Realizando búsquedas en UniProt
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#entradas-uniprot" class="md-nav__link">
-    Entradas Uniprot
+    <span class="md-ellipsis">
+      Entradas Uniprot
+    </span>
   </a>
   
 </li>
@@ -650,7 +819,9 @@
       
         <li class="md-nav__item">
   <a href="#uniprot-ejercicios" class="md-nav__link">
-    Uniprot - Ejercicios
+    <span class="md-ellipsis">
+      Uniprot - Ejercicios
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Uniprot - Ejercicios">
@@ -658,35 +829,45 @@
         
           <li class="md-nav__item">
   <a href="#ejercicio-1-proteina-cdc7" class="md-nav__link">
-    Ejercicio 1. Proteína CDC7
+    <span class="md-ellipsis">
+      Ejercicio 1. Proteína CDC7
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#ejercicio-2-demetilasa-lisin-especifica-3b" class="md-nav__link">
-    Ejercicio 2. Demetilasa Lisin-específica 3B.
+    <span class="md-ellipsis">
+      Ejercicio 2. Demetilasa Lisin-específica 3B.
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#ejercicio-3-proteina-ghsr" class="md-nav__link">
-    Ejercicio 3. Proteína GHSR.
+    <span class="md-ellipsis">
+      Ejercicio 3. Proteína GHSR.
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#ejercicio-4-demetilasa-lisin-especifica-5c-kdm5c" class="md-nav__link">
-    Ejercicio 4. Demetilasa Lisin-específica 5C (KDM5C).
+    <span class="md-ellipsis">
+      Ejercicio 4. Demetilasa Lisin-específica 5C (KDM5C).
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#ejercicio-5-proteina-p53-descarga-de-multiples-secuencias" class="md-nav__link">
-    Ejercicio 5 - Proteína p53. Descarga de Múltiples Secuencias
+    <span class="md-ellipsis">
+      Ejercicio 5 - Proteína p53. Descarga de Múltiples Secuencias
+    </span>
   </a>
   
 </li>
@@ -698,14 +879,18 @@
       
         <li class="md-nav__item">
   <a href="#pfam" class="md-nav__link">
-    Pfam
+    <span class="md-ellipsis">
+      Pfam
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#interpro" class="md-nav__link">
-    InterPro
+    <span class="md-ellipsis">
+      InterPro
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="InterPro">
@@ -713,7 +898,9 @@
         
           <li class="md-nav__item">
   <a href="#realizando-busquedas-relacionadas-a-pfam-en-interpro" class="md-nav__link">
-    Realizando búsquedas relacionadas a Pfam en InterPro
+    <span class="md-ellipsis">
+      Realizando búsquedas relacionadas a Pfam en InterPro
+    </span>
   </a>
   
 </li>
@@ -725,7 +912,9 @@
       
         <li class="md-nav__item">
   <a href="#pfam-ejercicios" class="md-nav__link">
-    Pfam - Ejercicios
+    <span class="md-ellipsis">
+      Pfam - Ejercicios
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Pfam - Ejercicios">
@@ -733,21 +922,27 @@
         
           <li class="md-nav__item">
   <a href="#ejercicio-1-entendiendo-pfam-usando-la-entrada-pf00571" class="md-nav__link">
-    Ejercicio 1. Entendiendo Pfam usando la entrada PF00571
+    <span class="md-ellipsis">
+      Ejercicio 1. Entendiendo Pfam usando la entrada PF00571
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#ejercicio-2-proteina-kdm5c" class="md-nav__link">
-    Ejercicio 2. Proteína KDM5C
+    <span class="md-ellipsis">
+      Ejercicio 2. Proteína KDM5C
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#ejercicio-3-proteina-p53" class="md-nav__link">
-    Ejercicio 3. Proteína p53
+    <span class="md-ellipsis">
+      Ejercicio 3. Proteína p53
+    </span>
   </a>
   
 </li>
@@ -759,14 +954,18 @@
       
         <li class="md-nav__item">
   <a href="#tmhmm" class="md-nav__link">
-    TMHMM
+    <span class="md-ellipsis">
+      TMHMM
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#tmhmm-ejercicios" class="md-nav__link">
-    TMHMM - Ejercicios
+    <span class="md-ellipsis">
+      TMHMM - Ejercicios
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="TMHMM - Ejercicios">
@@ -774,7 +973,9 @@
         
           <li class="md-nav__item">
   <a href="#ejercicio-1-bacteriorodopsina" class="md-nav__link">
-    Ejercicio 1. Bacteriorodopsina.
+    <span class="md-ellipsis">
+      Ejercicio 1. Bacteriorodopsina.
+    </span>
   </a>
   
 </li>
@@ -786,7 +987,9 @@
       
         <li class="md-nav__item">
   <a href="#interpro-ejercicios-adicionales" class="md-nav__link">
-    Interpro - Ejercicios Adicionales
+    <span class="md-ellipsis">
+      Interpro - Ejercicios Adicionales
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Interpro - Ejercicios Adicionales">
@@ -794,21 +997,27 @@
         
           <li class="md-nav__item">
   <a href="#ejercicio-1-dominios-cbs" class="md-nav__link">
-    Ejercicio 1. Dominios CBS.
+    <span class="md-ellipsis">
+      Ejercicio 1. Dominios CBS.
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#ejercicio-2-proteina-kdm5c_1" class="md-nav__link">
-    Ejercicio 2. Proteína KDM5C.
+    <span class="md-ellipsis">
+      Ejercicio 2. Proteína KDM5C.
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#ejercicio-3-busqueda-a-partir-de-secuencia" class="md-nav__link">
-    Ejercicio 3. Búsqueda a partir de secuencia.
+    <span class="md-ellipsis">
+      Ejercicio 3. Búsqueda a partir de secuencia.
+    </span>
   </a>
   
 </li>
@@ -820,7 +1029,9 @@
       
         <li class="md-nav__item">
   <a href="#recursos-adicionales" class="md-nav__link">
-    Recursos adicionales
+    <span class="md-ellipsis">
+      Recursos adicionales
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Recursos adicionales">
@@ -828,42 +1039,54 @@
         
           <li class="md-nav__item">
   <a href="#uniprot-exploring-protein-sequence-and-functional-information" class="md-nav__link">
-    UniProt: Exploring protein sequence and functional information
+    <span class="md-ellipsis">
+      UniProt: Exploring protein sequence and functional information
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#pfam-quick-tour" class="md-nav__link">
-    Pfam: Quick tour
+    <span class="md-ellipsis">
+      Pfam: Quick tour
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#interpro-quick-tour" class="md-nav__link">
-    InterPro: Quick tour
+    <span class="md-ellipsis">
+      InterPro: Quick tour
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#interpro-functional-and-structural-analysis-of-protein-sequences" class="md-nav__link">
-    InterPro: Functional and structural analysis of protein sequences
+    <span class="md-ellipsis">
+      InterPro: Functional and structural analysis of protein sequences
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#interpro-faqs" class="md-nav__link">
-    InterPro FAQS
+    <span class="md-ellipsis">
+      InterPro FAQS
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#protein-classification-an-introduction-to-embl-ebi-resources" class="md-nav__link">
-    Protein classification: An introduction to EMBL-EBI resources
+    <span class="md-ellipsis">
+      Protein classification: An introduction to EMBL-EBI resources
+    </span>
   </a>
   
 </li>
@@ -880,52 +1103,74 @@
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../chimera/" class="md-nav__link">
-        TP2 - Chimera
+        
+  
+  <span class="md-ellipsis">
+    TP2 - Chimera
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../Modelado_Por_Homologia/" class="md-nav__link">
-        TP3 - Modelado por homología
+        
+  
+  <span class="md-ellipsis">
+    TP3 - Modelado por homología
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../modelado_alphafold/" class="md-nav__link">
-        TP4 - Modelado Parte II
+        
+  
+  <span class="md-ellipsis">
+    TP4 - Modelado Parte II
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -938,17 +1183,14 @@
             
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
-<!--
-![Uniprot](img/feature.png){ width="250", align="left" }
--->
-
-<h1 id="tp-1-introduccion-a-bases-de-datos" markdown="markdown"><strong>TP 1</strong>. Introducción a bases de Datos</h1>
+<div><h1 id="tp-1-introduccion-a-bases-de-datos" markdown="markdown"><strong>TP 1</strong>. Introducción a bases de Datos</h1>
 <h2 id="recursos-online">Recursos Online</h2>
 <ul>
 <li>UniProt: <a href="https://www.uniprot.org/">https://www.uniprot.org/</a></li>
@@ -964,7 +1206,7 @@
 <li>Familiarizarse con el uso de la base de datos InterPro</li>
 </ul>
 <h2 id="materiales">Materiales</h2>
-<p><a class="md-button md-button--primary" href="https://drive.google.com/file/d/1NWZrgdZescABRksw890SPZXpaQ4td06T/view?usp=sharing"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M480 352H346.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96c0-17.7-14.3-32-32-32zm-48 104c-13.2 0-24-10.8-24-24s10.8-24 24-24 24 10.8 24 24-10.8 24-24 24zm-198.6-81.4c6.2 6.3 14.4 9.4 22.6 9.4s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32-17.7 0-32 14.33-32 32v242.8l-73.4-73.4c-12.49-12.5-32.75-12.5-45.25 0-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z"/></svg></span> Materiales</a></p>
+<p><a class="md-button md-button--primary" href="https://drive.google.com/file/d/1NWZrgdZescABRksw890SPZXpaQ4td06T/view?usp=sharing"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></span> Materiales</a></p>
 <h2 id="organizacion-de-la-guia">Organización de la guía</h2>
 <p>Cada guía consta de una introducción a la herramienta, seguida de los ejercicios a realizar en el trabajo práctico.</p>
 <h2 id="uniprot">UniProt</h2>
@@ -1503,56 +1745,36 @@ GALLPGGAVQPTGMHWYSRFLYRLAEELLG
 <h3 id="interpro-faqs">InterPro FAQS</h3>
 <p><a href="https://www.ebi.ac.uk/interpro/faqs.html">https://www.ebi.ac.uk/interpro/faqs.html</a></p>
 <h3 id="protein-classification-an-introduction-to-embl-ebi-resources">Protein classification: An introduction to EMBL-EBI resources</h3>
-<p><a href="https://www.ebi.ac.uk/training/online/course/protein-classification-introduction-embl-ebi-resou">https://www.ebi.ac.uk/training/online/course/protein-classification-introduction-embl-ebi-resou</a></p>
+<p><a href="https://www.ebi.ac.uk/training/online/course/protein-classification-introduction-embl-ebi-resou">https://www.ebi.ac.uk/training/online/course/protein-classification-introduction-embl-ebi-resou</a></p></div>
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Volver al principio
-          </a>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
         
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Pie">
-      
-        
-        <a href="../inicio/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Inicio" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Anterior
-              </span>
-              Inicio
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../chimera/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: TP2 - Chimera" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Siguiente
-              </span>
-              TP2 - Chimera
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1578,10 +1800,12 @@ GALLPGGAVQPTGMHWYSRFLYRLAEELLG
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
