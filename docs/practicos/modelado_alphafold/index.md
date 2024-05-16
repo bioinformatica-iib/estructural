@@ -148,14 +148,14 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     Ahora cambie los valores para que el programa elija estos valores automaticamente:
 
     ```
-    rangecolor bfactor 0 orange red 50 white 100 dodger blue
+    rangecolor bfactor min orange red mid white max dodger blue
     ```
 
     En el reply log se reportan los valores minimo, medio y máximo encontrados en la columna de b-factors.
 
     *  ¿Cuáles son el mínimo y el máximo?
     
-    Ahora cambie el valor intermedio (antes puesto automáticamente) a 80 y el máximo en 100:
+    Ahora cambie el valor intermedio (antes puesto automáticamente) a 80 y el máximo a 100:
 
     ```
     rangecolor bfactor min orange red 80 white 100 dodger blue
