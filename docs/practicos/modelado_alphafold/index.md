@@ -67,12 +67,12 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     ```
 
     * En el campo jobname ingrese: E7_MONOMERO.
-    * Asegúrese que use amber esté tildado.
+    * Asegúrese que use num_relax esté en **1**.
 
         !!! info
-            Amber permite mejorar la geometría de la unión peptídica y posición de rotámeros luego de la relajación de la estructura. Si bien no mejora la predicción, remueve violaciones estereoquímicas.
+            Num_relax es el número de modelos que se van a relajar usando **Amber**. Amber permite mejorar la geometría de la unión peptídica y posición de rotámeros luego de la relajación de la estructura. Si bien no mejora la predicción, remueve violaciones estereoquímicas.
 
-    * En template mode elija pdb70 ¿Qué le parece que es este campo?
+    * En template mode elija pdb100 ¿Qué le parece que es este campo?
 
     * Vaya a  *Runtime* →  *Run all*, o presione `Ctrl`+`F9`
 
@@ -253,9 +253,9 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     ```
 
     * En el campo jobname ingrese E7_DIMERO.
-    * Asegúrese que use amber esté tildado.
+    * Asegúrese que use Num_relax esté en 1.
 
-    * En template mode elija none
+    * En template mode elija pdb100
 
     * Vaya a *Runtime* → *Run all*, o presione `Ctrl`+`F9`
 
