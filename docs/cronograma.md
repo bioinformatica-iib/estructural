@@ -24,7 +24,7 @@ tags:
 | Jueves, 16/05/2024    | 9 - 13hs	    | Práctico      | [TP4.Modelado por Homología - Parte II](/estructural/practicos/modelado_alphafold/)                                            | J. Glavina |
 |                       | 14 - 17hs     | Teórica       | T4. Interacciones proteína-proteína                  | L.Chemes |
 | Viernes, 17/05/2024	  | 9 - 12hs      | Teórica       | Discusión y problemas                               | J. Glavina |
-|                       | 13 - 17hs	    | Práctico      | TP5. Interacciones proteína-proteína                   | J. Glavina |
+|                       | 13 - 17hs	    | Práctico      | [TP5. Interacciones proteína-proteína](/estructural/practicos/ppi/)                   | J. Glavina |
 | Lunes, 20/05/2024	    | 9 - 12hs	    | Teórica       | T5. Proteínas desordenadas y predicción de desorden    | L. Chemes |
 |                       | 13 - 17hs     | Práctico      | TP6. Predicción de desorden y Bases de Datos           | J. Glavina |
 | Martes, 21/05/2024	| 9 - 12hs      | Teórica       | T6. Motivos Lineales: Identificación en secuencia      | L. Chemes |
