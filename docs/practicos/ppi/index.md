@@ -64,7 +64,7 @@ IntAct es una base de datos pública de interacciones moleculares. Es mantenida 
 
     * ¿Hay muchos patógenos que interactúen con Rb?
 
-    Seleccione interacciones que sean entre Rb y otra proteína Humana tildando la especie correspondiente: *Homo sapiens* y luego seleccionando que sea **Intra** especie con el botón *Filter out cross-species interactions*.
+    Seleccione interacciones que sean entre Rb y otra proteína Humana tildando la especie correspondiente: *Homo sapiens* y luego seleccionando que #sea **Intra** especie con el botón *Filter out cross-species interactions*.
 
     <p style="text-align:center">
     <img src="./img/Intact_fig2.png" alt="" style="max-width:80%">
@@ -152,7 +152,7 @@ La base de datos STRING contiene datos de interacciones proteína-proteína cono
 
 4. ¿Se encuentran los interactores con mayor score detectados en IntAct?
 
-5. Vaya a *Analysis*. Luego, Vaya a la sección *KEGG Pathways* de la tabla y asegúrese que esté ordenada por *strength*. Luego, haga click en el nodo **Rb1** de la red de interacción y luego seleccione *Show this node's terms in the analysis table*. Observe que en la tabla se resaltan los términos enriquecidos en cada base de datos relacionados con Rb.
+5. Vaya a *Analysis*. Luego, Vaya a la sección *KEGG Pathways* de la tabla y asegúrese que esté ordenada por *strength* de mayor a menor. Luego, haga click en el nodo **Rb1** de la red de interacción y luego seleccione *Show this node's terms in the analysis table*. Observe que en la tabla se resaltan los términos enriquecidos en cada base de datos relacionados con Rb.
     * ¿A qué corresponden las primeras 10 líneas de KEGG?
 
     ??? info "KEGG PATHWAY"
@@ -181,15 +181,26 @@ La base de datos STRING contiene datos de interacciones proteína-proteína cono
 
 ### Ejercicio 1. Interacciones de la Proteína Spike de SARS-COV2
 
-1. Busque en IntAct las interacciónes que existen de la proteína Spike de SARS-COV2 (P0DTC2) con humanos (recuerde usar los filtros para ver interacciones sólo con humanos)
-    A la derecha de la red tilde la opción de agrupar por Species. ¿Cuántas proteínas Spike observa en la red? Coloque el puntero sobre el nodo y encuentro los identificadores
+1. Busque en IntAct las interacciónes que existen de la proteína Spike de SARS-COV2 (P0DTC2) con humanos (recuerde usar los filtros para ver interacciones sólo con humanos). 
+
+    A la izquierda de la red tilde la opción de agrupar por Species. 
+    
+    * ¿Cuántas proteínas Spike observa en la red? 
+    
+    Coloque el puntero sobre el nodo y encuentre los identificadores.
+    
     * ¿Son los mismos?
-    Haga clic en la que el identificador es: P0DTC2-PRO_0000449647, verá que la tabla en la parte inferior sólo muestra las interacciones relacionadas con esta proteína. Siga el link a Uniprot:
+
+2. Haga clic en la que el identificador es: P0DTC2-PRO_0000449647, verá que la tabla en la parte inferior sólo muestra las interacciones relacionadas con esta proteína. Siga el link a Uniprot:
+
     * ¿A qué corresponde?
-    Haga click en la que el identificador es: P59594. En la tabla haga click en el ícono que se encuentra en la primera columna. Se abrirá una nueva ventana con detalles de la interacción, que están detallados en la parte inferior.
+
+3. Haga click en la que el identificador es: P59594. En la tabla haga click en el ícono que se encuentra en la primera columna. Se abrirá una nueva ventana con detalles de la interacción, que están detallados en la parte inferior.
+
     * ¿Por qué cree que se obtuvo esta proteína?
-2. ¿Qué tipo de evidencia hay para las interacciones identificadas?
-3. Destilde la opción *Expand*.
+
+4. ¿Qué tipo de evidencia hay para las interacciones identificadas?
+5. Destilde la opción *Expand*.
     * ¿Cuales son las proteínas con más evidencia?
     * ¿Poseen evidencia estructural?
     * ¿Qué técnicas se utilizaron?
