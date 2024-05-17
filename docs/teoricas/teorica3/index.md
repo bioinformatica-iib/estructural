@@ -9,8 +9,6 @@ construccion: false
 
 - Slides [[PDF]](https://drive.google.com/file/d/17AS1dJHTmPfJEgiG5pTmnqOWePfGCbEy/view?usp=drive_link)
 
-<!-- 
-- Recording [[Parte 1 - MP4]](https://drive.google.com/file/d/1kiBFUxsHmOadF3GZo6hW34lmHxSLf51x/view?usp=sharing)
-- Recording [[Parte 2 - MP4]](https://drive.google.com/file/d/1MmDQ_PIva_xyEJpQDOTWKB-HG7LyDBve/view?usp=sharing)
--->
+- Recording [[Parte 1 - MP4]](https://youtu.be/LhlCvaUJBU0)
+- Recording [[Parte 2 - MP4]](https://youtu.be/m05WinzKKYk)
 
