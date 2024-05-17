@@ -67,12 +67,12 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     ```
 
     * En el campo jobname ingrese: E7_MONOMERO.
-    * Asegúrese que use amber esté tildado.
+    * Asegúrese que use num_relax esté en **1**.
 
         !!! info
-            Amber permite mejorar la geometría de la unión peptídica y posición de rotámeros luego de la relajación de la estructura. Si bien no mejora la predicción, remueve violaciones estereoquímicas.
+            Num_relax es el número de modelos que se van a relajar usando **Amber**. Amber permite mejorar la geometría de la unión peptídica y posición de rotámeros luego de la relajación de la estructura. Si bien no mejora la predicción, remueve violaciones estereoquímicas.
 
-    * En template mode elija pdb70 ¿Qué le parece que es este campo?
+    * En template mode elija pdb100 ¿Qué le parece que es este campo?
 
     * Vaya a  *Runtime* →  *Run all*, o presione `Ctrl`+`F9`
 
@@ -98,7 +98,7 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     * `*_relaxed_*_model_*.pdb` Son los 5 modelos generados.
     * `*_relaxed_*_model_*.json` Son el PAE y pLDDT de cada modelo que se pueden utilizar para graficar.
 
-6. Abra Chimera y cargue uno de los modelos relajados (si no recuerda *File* → *Open …*).
+6. Abra Chimera y cargue el modelo relajado (si no recuerda *File* → *Open …*).
 7. Abra el pdb: 2b9d.
     * ¿Estaba esta estructura entre los templados?
     * ¿Por qué método fue determinada?
@@ -112,7 +112,7 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     
     Seleccione el par de modelos adecuado. *En residue-residue distance cutoff* seleccione el mismo umbral que utilizó en *Matchmaker* para *pruned atoms* (Por defecto es 2)
     
-    Para colorear la estructura por RMSD para eso vaya a: *Tools* → *Depiction* → *Render by Attribute*
+    Para colorear la estructura por RMSD (después de haber hecho *Match align*) vaya a: *Tools* → *Depiction* → *Render by Attribute*
     
     En **attributes** of asegúrese que esté seleccionado residues
     
@@ -130,7 +130,7 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
 
     O bien, en el **model panel**, seleccione el modelo correspondiente y haga clic en close.
 
-10. Ahora abra los 4 modelos restantes, para eso, *File* → *Open…* y con el mouse seleccione los modelos manteniendo la tecla ctrl presionada.
+10. Ahora abra los 4 modelos no relajados restantes (rankeados del 002 al 005), para eso, *File* → *Open…* y con el mouse seleccione los modelos manteniendo la tecla ctrl presionada.
 
 11. Alinee los 5 modelos,
     * ¿cuál es el RMSD global?
@@ -145,11 +145,17 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
 
     * ¿Qué observa?
 
+    Ahora cambie los valores para que el programa elija estos valores automaticamente:
+
+    ```
+    rangecolor bfactor min orange red mid white max dodger blue
+    ```
+
     En el reply log se reportan los valores minimo, medio y máximo encontrados en la columna de b-factors.
 
-    *  ¿Cuálles son el mínimo y el máximo?
+    *  ¿Cuáles son el mínimo y el máximo?
     
-    Ahora cambie el valor mínimo a min (se elige el valor mínimo) y el valor intermedio que antes era 50, a 80:
+    Ahora cambie el valor intermedio (antes puesto automáticamente) a 80 y el máximo a 100:
 
     ```
     rangecolor bfactor min orange red 80 white 100 dodger blue
@@ -253,9 +259,9 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     ```
 
     * En el campo jobname ingrese E7_DIMERO.
-    * Asegúrese que use amber esté tildado.
+    * Asegúrese que use Num_relax esté en 1.
 
-    * En template mode elija none
+    * En template mode elija pdb100
 
     * Vaya a *Runtime* → *Run all*, o presione `Ctrl`+`F9`
 
@@ -316,10 +322,10 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     * ¿Cuál de los 4 gráficos muestra los valores correspondientes para los pares de residuos de la cadena A, cual para la cadena B y cual para los pares de residuos de de las cadenas A y B?
     * ¿Cuáles son los límites el dominio globular, aproximadamente?
 
-9. Elija el modelo mejor mejor ranqueado y alineelo utilizando Matchmaker contra la estructura de 2f8b.
+9. Elija el modelo relajado y alineelo utilizando Matchmaker contra la estructura de 2f8b.
     * ¿Cuál es el RMSD global?
 
-10. Abra en chimera los 5 modelos relajados que se generaron. Luego, alinee utilizando matchmaker y seleccionaremos las cisteínas que coordinan la unión al zinc.
+10. Abra en chimera los 4 modelos no relajados (no considerar el que ya abrieron como relajado) que se generaron. Luego, alinee utilizando matchmaker y seleccionaremos las cisteínas que coordinan la unión al zinc.
 
     ```
     sel #1-5:58,61,91,94; display sel; color blue,a sel; color byhet sel; ~sel
@@ -333,6 +339,7 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     ```
 
     Observe de cerca la ubicación de las cisteínas y responda.
+
     * ¿Considera que la predicción del sitio de unión de zinc es buena aún cuando no se incluye el ión en el modelado?
 
 8. Coloree las cadenas de los modelos predichos según los valores de pLDDT.:
@@ -344,8 +351,11 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     * ¿Qué observa?
 
     En base a todas las características observadas: pLDDT, PAE, coordinación de zinc,
+
     * ¿Pudo AF2 predecir el estado de oligomerización?
+
     * ¿Pudo AF2 predecir la coordinación del zinc?
+    
     * ¿Qué opina del modelo?
 
 9. Guarde la sesión y cierre chimera.
@@ -379,6 +389,7 @@ El genoma ARN positivo se traduce como una poliproteína que luego es clivada en
     ```
     rainbow chain
     ```
+    
     * ¿Cuántas cadenas hay?
 
 6. Para trabajar más fácil vamos a quedarnos con una única cadena. Pero primero vamos a ver que las cadenas son muy similares entre sí. Para esto debemos hacer que cada cadena sea un modelo utilizando el siguiente comando:
@@ -424,6 +435,7 @@ El genoma ARN positivo se traduce como una poliproteína que luego es clivada en
     ```
     rainbow chain #1
     ```
+    
     * ¿Puede encontrar los dímeros?
 
 9. Para trabajar más fácil vamos a quedarnos nuevamente con una única cadena de 1SFK. 
@@ -443,6 +455,7 @@ El genoma ARN positivo se traduce como una poliproteína que luego es clivada en
     ```
     rainbow helix
     ```
+    
     * ¿Puede observar la correspondencia con la proteína de la cápside de Dengue?
 
 11. Alinee las dos estructuras.
