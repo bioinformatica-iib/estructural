@@ -177,7 +177,7 @@ En base a este alineamiento analice las regiones desordenadas y ordenadas ya rec
 
 ### Recursos a utilizar:
 
-* IUPred2A            [https://iupred2a.elte.hu/plot](https://iupred2a.elte.hu/plot)
+* IUPred2A            [https://iupred2a.elte.hu](https://iupred2a.elte.hu)
 
 ### Objetivos.
 
