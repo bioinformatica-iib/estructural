@@ -456,7 +456,7 @@ La base de datos MobiDB centraliza diferentes recursos que facilitan la anotaci�
       * ¿Cuáles regiones son predichas como desordenadas por la mayoría de los métodos?
       * ¿Qué métodos predicen más desorden y cuáles menos? ¿Hay mucha variación?
 
-3. Ahora observa la línea que dice **Missing residues consensus**, donde se indica el consenso en base a la evidencia estructural. Ubique el mouse sobre las distintas regiones y responda: ¿Qué significan los distintos colores de las regiones marcados en el consenso?
+3. Ahora observa la línea que dice **Missing residues (strict)**, donde se indica el consenso en base a la evidencia estructural. Ubique el mouse sobre las distintas regiones y responda: ¿Qué significan los distintos colores de las regiones marcados en el consenso?
 
 4. Exploremos la evidencia proveniente de la estructura cristalográfica. Para ello despliega la sección *Missing residues (strict)*.
 
