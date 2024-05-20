@@ -1,37 +1,8 @@
----
-layout: page
-title: TP N°7
-subtitle: Motivos Lineales - Parte I
-data : false
-menubar_toc: true
-hero_height: is-small
-toc_title: CONTENIDOS
-construccion: false
----
-<style>
-details > summary:first-of-type {
-   display: list-item;
-}
-details summary { 
-  cursor: pointer;
-}
-
-details summary > * {
-  display: inline;
-}
-
-/* ol { list-style-type: upper-alpha; } */
-</style>
-
-{% if page.construccion %}
-
-**Pagina en construccion**
-
-{% else %}
+# **TP 7**. Motivos Lineales - Parte I { markdown data-toc-label = 'TP 7'}
 
 ## Recursos a utilizar
 * Regex101: [https://regex101.com](https://regex101.com)
-* WebLogo3: [http://weblogo.threeplusone.com/create.cgi](http://weblogo.threeplusone.com/create.cgi)
+* WebLogo: [https://weblogo.threeplusone.com/create.cgi]https://weblogo.threeplusone.com/create.cgi)
 * MEME: [https://meme-suite.org/meme/tools/meme](https://meme-suite.org/meme/tools/meme)
 * SLiMSearch: [http://slim.icr.ac.uk/slimsearch/](http://slim.icr.ac.uk/slimsearch/)
 * SLiMFinder: [http://www.slimsuite.unsw.edu.au/servers/slimfinder.php](http://www.slimsuite.unsw.edu.au/servers/slimfinder.php)
@@ -46,8 +17,6 @@ details summary > * {
 ## Introducción
 La simbología comúnmente utilizada en expresiones regulares es:
 
-
-<div class="table">
 
 | Sı́mbolo | Definición  |
 |:-------:|:-----------:|
@@ -71,6 +40,7 @@ Esta forma de escribir las expresiones regulares es una convención. Es muy util
 Los receptores nucleares interactúan con diversas proteínas mediantes un motivo lineal llamado NRBox (Nuclear Receptor Box) (Heery,1997). Existen numerosas estructuras de péptidos unidos a diferentes receptores nucleares (PDBs: 3CS8, 2GPO, 1GWQ, 1RJK, 1M2Z) que permitieron estudiar y entender algunas características de la interacción.
 
 La evidencia experimental recolectada de la literatura indica que:
+
 * El motivo NRBox forma una hélice alfa
 * Existen tres leucinas cuyas cadenas laterales se encuentran en una misma cara de la hélice e interactúan con un bolsillo hidrofóbico en la superficie del receptor nuclear (Figura 1).
 
@@ -78,13 +48,9 @@ La evidencia experimental recolectada de la literatura indica que:
 <img src="./img/NRBox.png" alt="" style="max-width:70%">
 </p>
 
-<figcaption align = "left">
-
-**Figura 1.** Fragmento de la proteína PGC-1 alfa unido al receptor nuclear PPAR-gamma. Se muestra en naranja el backbone de la proteína representado en Cartoon y en azul las tres leucinas que median la interacción representadas en Sticks (PDB:3CS8) y que integran el motivo NRBox.
-
+<figcaption style ="text-align:left;max-width:70%">
+Figura 1. Fragmento de la proteína PGC-1 alfa unido al receptor nuclear PPAR-gamma. Se muestra en naranja el backbone de la proteína representado en Cartoon y en azul las tres leucinas que median la interacción representadas en Sticks (PDB:3CS8) y que integran el motivo NRBox.
 </figcaption>
-<br>
-<br>
 
 Los siguientes fragmentos de secuencia de distintas proteínas incluyen regiones que interactúan con diversos receptores nucleares y cuya interacción se verificó de manera experimental por distintos métodos.
 
@@ -115,13 +81,12 @@ LVPDAASKHKQLSELLRGGSGSSINPG
 
     Escribiendo en el campo Regular Expression, intente definir una expresión regular que permita identificar el motivo que media la interacción de estas proteínas con los receptores nucleares y que cumpla con la evidencia experimental observada.
 
-    <ul class="block-list has-radius is-primary">
-    <li class="is-outlined is-info">
-    <span style="font-weight:bold;">Regex101</span> no es una herramienta que se use comúnmente. Simplemente es un recurso educativo para entender expresiones regulares.
-    </li>
-    </ul>
-
+    !!! danger "Regex101"
+    
+            **Regex101** no es una herramienta que se use comúnmente. Simplemente es un recurso educativo para entender expresiones regulares.
+    
 2. Considerando que el motivo se encuentra en una hélice, 
+
     * ¿Modificaría la expresión regular que obtuvo?
     * ¿Cuál sería la utilidad de definir una expresión regular más específica?
  
@@ -131,6 +96,7 @@ La reparación del ADN durante la replicación ocurre por un proceso llamado Tra
 Existen estructuras cristalográficas de distintos péptidos unidos a Rev1 (PDBs: 2N1G, 2LSK, 2LSJ, 4FJO, 2LSI y 4GK5) que permiten entender algunas características de la interacción.
 
 La evidencia experimental recolectada de la literatura indica:
+
 * La interacción está mediada principalmente por dos residuos consecutivos de fenilalanina (Ohashi,2009).
 * Las fenilaninas interactúan con un bolsillo hidrofóbico en la superficie de Rev1 (Pozhidaeva, 2012; Zhao,2017).
 * Las fenilalaninas se encuentran en el primer giro de una hélice α.
@@ -142,13 +108,9 @@ La evidencia experimental recolectada de la literatura indica:
 <img src="./img/Rev1.png" alt="" style="max-width:70%">
 </p>
 
-<figcaption align = "left">
-
-**Figura 2.** Fragmento de la proteína Rev1 unido al motivo RIR de la polimerasa η (pol eta) humana. Se muestra en naranja el backbone del segmento de polimerasa η representado en Cartoon y en azul las dos fenilalaninas conservadas que median la interacción representadas en Sticks (PDB: 2LSK) y que conforman el motivo RIR.
-
+<figcaption style = "text-align:left;max-width:70%">
+Figura 2. Fragmento de la proteína Rev1 unido al motivo RIR de la polimerasa η (pol eta) humana. Se muestra en naranja el backbone del segmento de polimerasa η representado en Cartoon y en azul las dos fenilalaninas conservadas que median la interacción representadas en Sticks (PDB: 2LSK) y que conforman el motivo RIR.
 </figcaption>
-<br>
-<br>
 
 Los siguientes fragmentos de secuencia corresponden a regiones de distintas proteínas que participan en la reparación del ADN y que se unen a la proteína Rev1. La interacción se verificó de manera experimental por distintos métodos.
 
@@ -182,25 +144,29 @@ FVKPLEMSHKKSFFDKKRSERKWSHQDTFKCE
 
 3. Abra el archivo en Jalview y realice un alineamiento con Clustal. Explore el alineamiento. ¿Quedaron alineadas las posiciones invariables del motivo?
 
-4. Suba el alineamiento obtenido en la página web de [weblogo](http://weblogo.threeplusone.com/) para construir un logo de secuencia. 
+4. Suba el alineamiento obtenido en la página web de [weblogo](https://weblogo.threeplusone.com/create.cgi) para construir un logo de secuencia. 
 
-    <ul class="block-list has-radius is-primary">
-    <li class="is-outlined is-info">
-    Un <span style="font-weight:bold;">logo de secuencia</span> consiste en un gráfico que muestra un apilamiento de símbolos (las letras que denominan a cada aminoácido o nucleótido) por cada posición del alineamiento. La altura total es proporcional a la conservación de la secuencia en dicha posición; la altura de cada símbolo indica la frecuencia relativa de cada símbolo en esa posición. De esta forma, un logo provee una descripción más precisa de la conservación secuencial que una secuencia consenso, y provee una medida del contenido de información de cada posición. 
-    </li>
-    </ul>
+    !!! info "Logos de Secuencia"
+
+        Un **logo de secuencia** consiste en un gráfico que muestra un apilamiento de símbolos (las letras que denominan a cada aminoácido o nucleótido) por cada posición del alineamiento. La altura total es proporcional a la conservación de la secuencia en dicha posición; la altura de cada símbolo indica la frecuencia relativa de cada símbolo en esa posición. De esta forma, un logo provee una descripción más precisa de la conservación secuencial que una secuencia consenso, y provee una medida del contenido de información de cada posición. 
  
     No trabajaremos en profundidad el contenido de información, pero podemos conocer su forma matemática.
     
     El contenido de información (IC) de una posición L del alineamiento es la diferencia entre la incerteza esperada (H previa, corresponde a todos los estados posibles) y la incerteza observada en la posición del alineamiento (H posterior, todos los estados observados), según surge de su definición:
     
-    <img src="https://latex.codecogs.com/svg.latex?\Large&space;IC_{(L)}=H_{previo}-H_{posterior}" title="\Large IC_{(L)}=H_{previo}-H_{posterior}" />
+    <p style="text-align:center">
+    <img src="https://latex.codecogs.com/svg.latex?\Large&space;IC_{(L)}=H_{previo}-H_{posterior}" title="\Large IC_{(L)}=H_{previo}-H_{posterior}">
+    </p>
 
     donde para proteínas:
 
-    <img src="https://latex.codecogs.com/svg.latex?\Large&space;H_{previo}=log_{2}20 = 4.32\ bits" title="\Large H_{previo}=log_{2}20 = 4.32 bits" />
-    <br>
-    <img src="https://latex.codecogs.com/svg.latex?\Large&space;H_{posterior}=-\sum_{i=1}^{M}\ f(a,L)\ log_{2}f(a,L)" title="\Large H_{posterior}=-\sum_{i=1}^{M}\ f(a,L)\ log_{2}f(a,L)" />
+    <p style="text-align:center">
+    <img src="https://latex.codecogs.com/svg.latex?\Large&space;H_{previo}=log_{2}20 = 4.32\ bits" title="\Large H_{previo}=log_{2}20 = 4.32 bits">
+    </p>
+
+    <p style="text-align:center">
+    <img src="https://latex.codecogs.com/svg.latex?\Large&space;H_{posterior}=-\sum_{i=1}^{M}\ f(a,L)\ log_{2}f(a,L)" title="\Large H_{posterior}=-\sum_{i=1}^{M}\ f(a,L)\ log_{2}f(a,L)">
+    </p>
  
     Para secuencias nucleotídicas La incerteza previa tiene un valor máximo de 2 bits (log<sub>2</sub> 4) correspondiente al caso en que todos los símbolos (o nucleótidos) sean igualmente probables. 
  
@@ -209,6 +175,7 @@ FVKPLEMSHKKSFFDKKRSERKWSHQDTFKCE
     De esta manera, el contenido de información está directamente relacionado con el **grado de conservación**.
  
     Puede utilizar las siguientes opciones (o probar las variantes que crea convenientes) al construir el logo:
+    
     * *Output Format.* PNG High Resolution
     * *Sequence type:* Protein
     * *Scale stack widths:* No tiene que estar tildado
@@ -237,13 +204,14 @@ MEME se utiliza mucho para motivos lineales en proteínas y también para identi
  
 MEME divide patrones de longitud variable en dos o más motivos separados. 
  
-1. Ingrese las secuencias del ejercicio anterior sin alinear en MEME, en la sección: **Input the primary sequences**. (Puede subir un archivo con las secuencias, o seleccionar la opción Type in sequences en el menú desplegable para habilitar un cuadro de texto donde pegarlas).
+1. Ingrese las secuencias del ejercicio anterior sin alinear en MEME, en la sección: **Input the primary sequences**. (Puede subir un archivo con las secuencias, o seleccionar la opción **Type in sequences** en el menú desplegable para habilitar un cuadro de texto donde pegarlas).
 
     Puede utilizar las siguientes opciones (o puede probar las variantes que crea convenientes):
 
     * *Select the site distribution:*
 
         Esta opción se relaciona con el número de veces que aparece un motivo en la secuencia.
+
         * Seleccione: *Zero or One Occurrence Per Sequence (zoops)* 
 
     * *Select the number of motifs:*
@@ -296,32 +264,37 @@ La expresión regular del motivo de unión a Rev1 está definida en la base de d
 
 * ¿Usted llegó a algo similar? 
 
-    <ul class="block-list has-radius is-primary">
-    <li class="is-outlined is-danger">
-    Si no entiende esta expresión regular, o no llegó a algo parecido ¡consulte a sus docentes!
-    </li>
-    </ul>
+    !!! Danger "Atencion!"
+
+        Si no entiende esta expresión regular, o no llegó a algo parecido ¡consulte a sus docentes!
 
 SLiMSearch es una herramienta que, utilizando expresiones regulares, permite buscar la presencia de motivos conocidos en las proteínas almacenadas en UniProt y priorizarlos según datos adicionales. Por ejemplo, SLiMSearch informa las características de la arquitectura de regiones y dominios de la secuencia portadora del motivo, sus variantes secuenciales y modificaciones postraduccionales, su estructura (en caso de ser conocida), medidas de conservación evolutiva y accesibilidad de los motivos, y el enriquecimiento del posible motivo en funciones conocidas.
+
+* **Antes de Empezar con SLiMSearch:** Busque en [UniProt](https://www.uniprot.org/) a Rev1 (Q9UBZ9). ¿Cuál es la localización celular de Rev1?
  
 Vaya a la web de [SLiMSearch](http://slim.icr.ac.uk/slimsearch/) e ingrese la expresión regular del motivo indicada en este ejercicio. En el campo *Choose species* puede elegir sobre qué proteoma buscar; por default se buscará en *Homo sapiens*.
  
 1. ¿Cuántos motivos (hits) y cuántas proteínas obtuvo?
+
 2. Explore la lista de proteínas. ¿Encuentra algunas de las proteínas o sus homólogos que estaban en sus secuencias originales? ¿Qué significa si las encontró?
+
 3. En la parte superior de la tabla haga click en *expand*.
 
     Las últimas columnas que están resumidas van a mostrar más información.
+
     * ¿Cuáles de estos campos le parecen más interesantes para intentar reconocer verdaderos motivos?
 
-4. Busque en [UniProt](https://www.uniprot.org/) a Rev1 (Q9UBZ9). ¿Cuál es la localización celular de Rev1?
+4. Ordene la tabla por el score de conservación (a menor score, mayor conservación) en *Mammalia*.
 
 5. Explore la lista de proteínas y observe las coloreadas en amarillo. Tienen un *Warning*. Al pie de la tabla se indica lo que significa cada tono de amarillo.
-    * ¿A qué se debe el warning de la **ProInterleukina 16, IL16**? ¿Por qué cree que es útil?
-    * Observe la **DNA polymerase delta subunit 3 (POLD3)**.
-        * ¿Se corresponde con la región de la POLD3 en su conjunto de secuencias?
-        * ¿Porqué tiene un warning? (una pista: Observe la columna Domain y coloque el mouse sobre el nombre del dominio para ver sus límites).
 
-6. Busque en la lista la proteína **Kinesin-like protein KIF26A (KIF26A)**, y averigüe su localización.
+    * ¿A qué se debe el warning de la **BTB/POZ domain-containing protein KCTD8**? ¿Por qué cree que es útil?
+    * Observe la **DNA polymerase delta subunit 3 (POLD3)**.
+        * ¿Cuántas veces aparece en la hoja 1?
+        * ¿Se corresponde con la región de la POLD3 en su conjunto de secuencias?
+
+6. Busque en la lista la proteína **Kinesin-like protein KIF11 (KIF11)**, y averigüe su localización.
+
     * ¿Tiene sentido tener esta proteína como candidata para evaluar su interacción con Rev1?
 
 7. SLiMSearch permite utilizar filtros para mejorar la búsqueda.
@@ -330,19 +303,22 @@ Vaya a la web de [SLiMSearch](http://slim.icr.ac.uk/slimsearch/) e ingrese la ex
     
     Haga click en *Localisation*.
     
-    Luego, en la tabla busque los términos relacionados al núcleo (nuclear part, nucleus, etc serían los 6 primeros que salen de escribir “nucl” en la búsqueda) y selecciónelos para realizar un *Filter In* (es decir, quedarse con las instancias que poseen dicha localización).
+    Luego, en la tabla busque los términos relacionados al núcleo (nuclear part, nucleus, etc serían aproximadamente doce términos que están primeros y últimos al escribir “nucl” en la búsqueda) y selecciónelos para realizar un *Filter In* (es decir, quedarse con las instancias que poseen dicha localización, asegúrese que Nucleus y nucleus estén seleccionados).
 
-8. Encuentre en la lista de proteínas filtradas la proteína: **Chromosome transmission fidelity protein 18 homolog (CHTF18)** (Q8WVB6).
+    Luego, haga click en **Add** y vaya a la pestaña de **Instances** en la parte superior de la página.
 
-    Búsquela en ProViz.
+8. Encuentre en la lista de proteínas filtradas la proteína: **Chromosome transmission fidelity protein 18 homolog (CHTF18)** (Q8WVB6). Puede ordenar alfabéticamente para encontrarla más fácil.
+
+    * Búsquela en ProViz.
     
-    Ubique la región donde se encuentra el posible motivo sugerido por SLiMSearch.
+    * Ubique la región donde se encuentra el posible motivo sugerido por SLiMSearch.
 
     * Evalúe el contexto estructural. ¿Es favorable?
     * Evalúe el grado de conservación. ¿Está conservado?
     * ¿Le parece que es un buen candidato para evaluar?
 
 9. Vaya a *Functions*.
+
     * ¿Qué funciones están enriquecidas en su lista de proteínas filtradas?
 
     Según los conocimientos que posee sobre este motivo, elija las funciones correspondientes para filtrar los datos.
@@ -361,10 +337,3 @@ La longitud y variabilidad de los motivos lineales hace difícil distinguir patr
 2. En la opción *Masking Options* puede decidir que sólo se consideren motivos predichos en regiones desordenadas (*Disorder masking*) y/o conservadas evolutivamente (*Conservation masking*). Sobre la base de lo que conoce de este motivo, ¿qué filtros activaría?
 
 3. Revise los resultados. En la pestaña *main* encontrará los resultados generales de la predicción de motivos, mientras que la pestaña *occ* detallará en qué proteínas ocurren. ¿Qué motivos se predicen? ¿Coinciden con lo esperado?
-
-## Recording
-- Intro [[MP4]](https://drive.google.com/file/d/1ZP8L1aE1Q3nTTfSurIvlLvQ_pZkhu6-X/view?usp=sharing)
-- Intermedio [[MP4]](https://drive.google.com/file/d/1fBCyn-muAAJrqJenEuIGfRdqdp-0OLlb/view?usp=sharing)
-- Cierre [[MP4]](https://drive.google.com/file/d/19C7UD50jNQf4lM81c1zskR-9IkXFj4kS/view?usp=sharing)
-
-{% endif %}
