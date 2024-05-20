@@ -979,55 +979,70 @@ MHGDTPTLHEYMLDLQPETTDLYCYEQLNDSSEEEDEIDGPAGQAEPDRAHYNIVTFCCKCDSTLRLCVQSTHVDIRTLE
 </ul>
 <hr />
 <p>Abra R Studio. Ahora graficaremos los pLDDT por posición para cada uno de los modelos.</p>
-<div class="highlight"><pre><span></span><code><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;bio3d&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># SCRIPT CORREGIDO</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;bio3d&quot;</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">bio3d</span><span class="p">)</span>
 
 <span class="n">directorio</span> <span class="o">&lt;-</span> <span class="s">&quot;/directorio/donde/estan/los/modelos&quot;</span>
 
-<span class="n">archivos</span> <span class="o">&lt;-</span> <span class="nf">list.files</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="n">directorio</span><span class="p">,</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;_relaxed_&quot;</span><span class="p">,)</span>
+<span class="n">archivos</span> <span class="o">&lt;-</span> <span class="nf">list.files</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="n">directorio</span><span class="p">,</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;_unrelaxed_&quot;</span><span class="p">,)</span>
 
+<span class="c1"># Creo la ruta completa para mi archivo 1</span>
 <span class="n">miarchivo</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span><span class="n">archivos</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="n">mipdb</span> <span class="o">&lt;-</span> <span class="nf">read.pdb</span><span class="p">(</span><span class="n">miarchivo</span><span class="p">)</span>
 
+<span class="c1"># Leo el pdb usando la función read.pdb de la libraría bio3d</span>
+<span class="n">mipdb</span> <span class="o">&lt;-</span> <span class="nf">read.pdb</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="n">miarchivo</span><span class="p">)</span>
+
+<span class="c1"># Creo una tabla con los datos de interés: el nro de residuo y el valor de plddt almacenado en el campo de b-factors y correspondiendo únicamente a los carbonos alpha.</span>
 <span class="n">datos</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">Residue</span> <span class="o">=</span> <span class="n">mipdb</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;resno&quot;</span><span class="p">],</span>
-                    <span class="n">Rank_1</span> <span class="o">=</span> <span class="n">mipdb</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">]</span>
-                    <span class="p">)</span>
+                    <span class="n">Rank_1</span> <span class="o">=</span> <span class="n">mipdb</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">])</span>
 
-<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">2</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">archivos</span><span class="p">)){</span>
-  <span class="n">miarchivo2</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span><span class="n">archivos</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
-  <span class="n">mipdb2</span> <span class="o">&lt;-</span> <span class="nf">read.pdb</span><span class="p">(</span><span class="n">miarchivo2</span><span class="p">)</span>
-  <span class="n">nuevaColumna</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&quot;Rank&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;_&quot;</span><span class="p">)</span>
-  <span class="n">datos</span><span class="p">[</span><span class="n">nuevaColumna</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="n">mipdb2</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">]</span>
+<span class="c1"># uso un ciclo for para iterar sobre mi vector donde están guardados los nombres de los archivos y los guardo en distintas columnas de mi tabla datos.</span>
+<span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">2</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">archivos</span><span class="p">)){</span>
+    <span class="n">miarchivo2</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span><span class="n">archivos</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">mipdb2</span> <span class="o">&lt;-</span> <span class="nf">read.pdb</span><span class="p">(</span><span class="n">miarchivo2</span><span class="p">)</span>
+    <span class="n">nuevaColumna</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&quot;Rank&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;_&quot;</span><span class="p">)</span>
+    <span class="n">datos</span><span class="p">[</span><span class="n">nuevaColumna</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="n">mipdb2</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb2</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 
+<span class="c1"># creo un vector de colores para utilizar en el plot</span>
+<span class="n">colores</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="s">&quot;blue&quot;</span><span class="p">,</span><span class="s">&quot;purple&quot;</span><span class="p">,</span><span class="s">&quot;green&quot;</span><span class="p">,</span><span class="s">&quot;orange&quot;</span><span class="p">)</span>
+
+<span class="c1"># creo el nombre del archivo que va a guardar mi plot.</span>
 <span class="n">fileOUT</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span><span class="s">&quot;E7_Monomero.png&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
 
-<span class="nf">png</span><span class="p">(</span><span class="n">filename</span> <span class="o">=</span><span class="n">fileOUT</span><span class="p">,</span><span class="n">width</span> <span class="o">=</span> <span class="m">20</span><span class="p">,</span><span class="n">height</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">units</span> <span class="o">=</span> <span class="s">&quot;cm&quot;</span><span class="p">,</span><span class="n">res</span><span class="o">=</span><span class="m">150</span><span class="p">)</span>
+<span class="c1"># creo el dispositivo png</span>
+<span class="nf">png</span><span class="p">(</span><span class="n">filename</span> <span class="o">=</span> <span class="n">fileOUT</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="m">20</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="m">10</span><span class="p">,</span><span class="n">units</span> <span class="o">=</span> <span class="s">&quot;cm&quot;</span><span class="p">,</span><span class="n">res</span><span class="o">=</span><span class="m">150</span><span class="p">)</span>
+<span class="c1"># empiezo un plot</span>
 <span class="nf">plot.new</span><span class="p">()</span>
-<span class="nf">plot</span><span class="p">(</span> <span class="n">x</span> <span class="o">=</span> <span class="n">mipdb</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;resno&quot;</span><span class="p">],</span>
-      <span class="n">y</span> <span class="o">=</span> <span class="n">mipdb</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">],</span>
+<span class="c1"># ploteo los valores del modelo 1</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">datos</span><span class="o">$</span><span class="n">Residue</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">datos</span><span class="o">$</span><span class="n">Rank_1</span><span class="p">,</span>
     <span class="n">type</span> <span class="o">=</span> <span class="s">&quot;l&quot;</span><span class="p">,</span>
     <span class="n">xlab</span> <span class="o">=</span> <span class="s">&quot;E7 Residue&quot;</span><span class="p">,</span>
-    <span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Predicted lDDT&quot;</span><span class="p">,</span>
-    <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">),</span>
-    <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">101</span><span class="p">),</span>
+    <span class="n">ylab</span> <span class="o">=</span> <span class="s">&quot;pLDDT&quot;</span><span class="p">,</span>
+    <span class="n">xlim</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">),</span>
+    <span class="n">ylim</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">101</span><span class="p">),</span>
     <span class="n">col</span> <span class="o">=</span> <span class="n">colores</span><span class="p">[</span><span class="m">1</span><span class="p">],</span>
-    <span class="n">axes</span> <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+    <span class="n">xaxt</span><span class="o">=</span><span class="s">&#39;n&#39;</span><span class="p">,</span><span class="n">yaxt</span><span class="o">=</span><span class="s">&#39;n&#39;</span><span class="p">)</span>
 
+<span class="c1"># modifico los ejes x (1) e y (2)</span>
+<span class="nf">axis</span><span class="p">(</span><span class="n">side</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">at</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="nf">seq</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="m">5</span><span class="p">)),</span><span class="n">lwd</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="n">lwd.ticks</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+<span class="nf">axis</span><span class="p">(</span><span class="n">side</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">at</span> <span class="o">=</span> <span class="nf">seq</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="m">5</span><span class="p">),</span><span class="n">lwd</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="n">lwd.ticks</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
 
-<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">2</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">archivos</span><span class="p">)){</span>
-  <span class="n">miarchivo2</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span><span class="n">archivos</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
-  <span class="n">mipdb2</span> <span class="o">&lt;-</span> <span class="nf">read.pdb</span><span class="p">(</span><span class="n">miarchivo2</span><span class="p">)</span>
-  <span class="nf">lines</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">mipdb2</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb2</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;resno&quot;</span><span class="p">],</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">mipdb2</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">mipdb2</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">],</span>
-        <span class="n">col</span><span class="o">=</span><span class="n">colores</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-<span class="p">}</span>
+<span class="c1"># ploteo los valores de los otros modelos que están guardados en las columnas: 3,4,5,6</span>
+<span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">3</span><span class="o">:</span><span class="nf">ncol</span><span class="p">(</span><span class="n">datos</span><span class="p">)){</span>
+    <span class="nf">lines</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">datos</span><span class="o">$</span><span class="n">Residue</span><span class="p">,</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="n">datos</span><span class="p">[,</span><span class="n">i</span><span class="p">],</span>
+            <span class="n">col</span> <span class="o">=</span> <span class="n">colores</span><span class="p">[</span><span class="n">i</span><span class="m">-1</span><span class="p">])</span>
+    <span class="p">}</span>
 
-<span class="nf">axis</span><span class="p">(</span><span class="n">side</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span><span class="n">at</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="nf">seq</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="m">5</span><span class="p">)),</span><span class="n">lwd</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span><span class="n">lwd.ticks</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
-<span class="nf">axis</span><span class="p">(</span><span class="n">side</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span><span class="n">at</span> <span class="o">=</span> <span class="nf">seq</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="m">5</span><span class="p">),</span><span class="n">lwd</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="n">lwd.ticks</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+<span class="c1"># creo la leyenda del plot</span>
 <span class="nf">legend</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="m">60</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="m">40</span><span class="p">,</span><span class="n">legend</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="s">&quot;rank&quot;</span><span class="p">,</span><span class="m">5</span><span class="p">),</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;-&quot;</span><span class="p">),</span><span class="n">col</span> <span class="o">=</span> <span class="n">colores</span><span class="p">,</span><span class="n">lty</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span><span class="n">ncol</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span>
-<span class="nf">box</span><span class="p">()</span>
-<span class="nf">dev.off</span><span class="p">()</span>  
+
+<span class="nf">box</span><span class="p">(</span><span class="n">lwd</span><span class="o">=</span><span class="m">3</span><span class="p">)</span> <span class="c1"># creo un box en el plot</span>
+
+<span class="nf">dev.off</span><span class="p">()</span> <span class="c1"># cierro el dispositivo png</span>
 </code></pre></div>
 </li>
 <li>
