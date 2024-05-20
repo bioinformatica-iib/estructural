@@ -183,57 +183,71 @@ La interacción de la proteína E7 con Rb es responsable de la inducción de la 
     Abra R Studio. Ahora graficaremos los pLDDT por posición para cada uno de los modelos.
 
     ``` R
+    # SCRIPT CORREGIDO
     install.packages("bio3d")
     library(bio3d)
 
     directorio <- "/directorio/donde/estan/los/modelos"
 
-    archivos <- list.files(path = directorio,pattern = "_relaxed_",)
+    archivos <- list.files(path = directorio,pattern = "_unrelaxed_",)
 
+    # Creo la ruta completa para mi archivo 1
     miarchivo <- paste(directorio,archivos[1],sep="")
-    mipdb <- read.pdb(miarchivo)
 
+    # Leo el pdb usando la función read.pdb de la libraría bio3d
+    mipdb <- read.pdb(file = miarchivo)
+
+    # Creo una tabla con los datos de interés: el nro de residuo y el valor de plddt almacenado en el campo de b-factors y correspondiendo únicamente a los carbonos alpha.
     datos <- data.frame(Residue = mipdb$atom[mipdb$calpha,"resno"],
-                        Rank_1 = mipdb$atom[mipdb$calpha,"b"]
-                        )
+                        Rank_1 = mipdb$atom[mipdb$calpha,"b"])
 
-    for(i in 2:length(archivos)){
-      miarchivo2 <- paste(directorio,archivos[1],sep="")
-      mipdb2 <- read.pdb(miarchivo2)
-      nuevaColumna <- paste("Rank",i,sep="_")
-      datos[nuevaColumna] <- mipdb2$atom[mipdb$calpha,"b"]
+    # uso un ciclo for para iterar sobre mi vector donde están guardados los nombres de los archivos y los guardo en distintas columnas de mi tabla datos.
+    for (i in 2:length(archivos)){
+        miarchivo2 <- paste(directorio,archivos[i],sep="")
+        mipdb2 <- read.pdb(miarchivo2)
+        nuevaColumna <- paste("Rank",i,sep="_")
+        datos[nuevaColumna] <- mipdb2$atom[mipdb2$calpha,"b"]
     }
 
+    # creo un vector de colores para utilizar en el plot
+    colores <- c("red","blue","purple","green","orange")
+    
+    # creo el nombre del archivo que va a guardar mi plot.
     fileOUT <- paste(directorio,"E7_Monomero.png",sep="")
 
-    png(filename =fileOUT,width = 20,height = 10,units = "cm",res=150)
+    # creo el dispositivo png
+    png(filename = fileOUT, width=20,height=10,units = "cm",res=150)
+    # empiezo un plot
     plot.new()
-    plot( x = mipdb$atom[mipdb$calpha,"resno"],
-          y = mipdb$atom[mipdb$calpha,"b"],
+    # ploteo los valores del modelo 1
+    plot(x = datos$Residue,
+        y = datos$Rank_1,
         type = "l",
         xlab = "E7 Residue",
-        ylab="Predicted lDDT",
-        xlim=c(0,100),
-        ylim=c(0,101),
+        ylab = "pLDDT",
+        xlim = c(0,100),
+        ylim = c(0,101),
         col = colores[1],
-        axes = F)
+        xaxt='n',yaxt='n')
 
+    # modifico los ejes x (1) e y (2)
+    axis(side = 1, at = c(1,seq(5,100,by=5)),lwd=0,lwd.ticks = 1)
+    axis(side = 2, at = seq(5,100,by=5),lwd=0,lwd.ticks = 1)
 
-    for(i in 2:length(archivos)){
-      miarchivo2 <- paste(directorio,archivos[i],sep="")
-      mipdb2 <- read.pdb(miarchivo2)
-      lines(x = mipdb2$atom[mipdb2$calpha,"resno"],
-            y = mipdb2$atom[mipdb2$calpha,"b"],
-            col=colores[i])
-    }
+    # ploteo los valores de los otros modelos que están guardados en las columnas: 3,4,5,6
+    for (i in 3:ncol(datos)){
+        lines(x = datos$Residue,
+                y = datos[,i],
+                col = colores[i-1])
+        }
 
-    axis(side = 1,at = c(1,seq(5,100,by=5)),lwd = 0,lwd.ticks = 1)
-    axis(side = 2,at = seq(5,100,by=5),lwd=0,lwd.ticks=1)
+    # creo la leyenda del plot
     legend(x = 60,y = 40,legend = paste(rep("rank",5),1:5,sep="-"),col = colores,lty = 1,ncol = 2)
-    box()
-    dev.off()  
-    ```
 
+    box(lwd=3) # creo un box en el plot
+
+    dev.off() # cierro el dispositivo png
+    ```
 
 15. Encuentre el archivo corespondiente al gráfico del PAE.
     * ¿Qué interpreta?
