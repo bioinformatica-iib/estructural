@@ -12,29 +12,23 @@
       
         <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/Regiones-flexibles/">
       
-      
-      
-      
       <link rel="icon" href="../../img/logo-unsam-negro.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
     
     
       
-        <title>TP 6. Predicción de desorden y bases de datos - Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas</title>
+        <title>TP6 - Predicción de desorden y Bases de Datos - Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
       
       
-
-
     
-    
-      
     
     
       
@@ -48,23 +42,24 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-    
    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -76,6 +71,9 @@
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
   
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -103,7 +101,6 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -116,46 +113,38 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TP 6. Predicción de desorden y bases de datos
+              TP6 - Predicción de desorden y Bases de Datos
             
           </span>
         </div>
       </div>
     </div>
     
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
       <label class="md-header__button md-icon" for="__search">
-        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
@@ -164,20 +153,16 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
-          
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -191,7 +176,7 @@
           <div class="md-search-result__meta">
             Inicializando búsqueda
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
+          <ol class="md-search-result__list"></ol>
         </div>
       </div>
     </div>
@@ -210,21 +195,80 @@
           
             
 <nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
-  <div class="md-grid">
+  <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Inicio
+    </a>
+  </li>
+
+      
         
   
-    
   
-  Inicio
 
+
+  <li class="md-tabs__item">
+    <a href="../../acerca/" class="md-tabs__link">
+      Acerca de
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../contenidos/" class="md-tabs__link">
+      Contenidos
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../cronograma/" class="md-tabs__link">
+      Cronograma
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../docentes/" class="md-tabs__link">
+      Docentes
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../teoricas/inicio/" class="md-tabs__link">
+        Teóricas
       </a>
     </li>
   
@@ -233,104 +277,18 @@
         
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../../acerca/" class="md-tabs__link">
-        
-  
     
   
-  Acerca de
 
-      </a>
-    </li>
-  
 
-      
-        
   
   
   
     <li class="md-tabs__item">
-      <a href="../../contenidos/" class="md-tabs__link">
-        
-  
-    
-  
-  Contenidos
-
+      <a href="../inicio/" class="md-tabs__link md-tabs__link--active">
+        Prácticos
       </a>
     </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../cronograma/" class="md-tabs__link">
-        
-  
-    
-  
-  Cronograma
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../docentes/" class="md-tabs__link">
-        
-  
-    
-  
-  Docentes
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../teoricas/inicio/" class="md-tabs__link">
-          
-  
-  Teóricas
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../inicio/" class="md-tabs__link">
-          
-  
-  Prácticos
-
-        </a>
-      </li>
-    
   
 
       
@@ -349,7 +307,6 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-
 
   
 
@@ -370,19 +327,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inicio
-  </span>
-  
-
+        Inicio
       </a>
     </li>
   
@@ -390,19 +342,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../../acerca/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Acerca de
-  </span>
-  
-
+        Acerca de
       </a>
     </li>
   
@@ -410,19 +357,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../../contenidos/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Contenidos
-  </span>
-  
-
+        Contenidos
       </a>
     </li>
   
@@ -430,19 +372,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../../cronograma/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Cronograma
-  </span>
-  
-
+        Cronograma
       </a>
     </li>
   
@@ -450,19 +387,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../../docentes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Docentes
-  </span>
-  
-
+        Docentes
       </a>
     </li>
   
@@ -470,342 +402,473 @@
     
       
       
-  
-  
-  
-  
-    
-    
-    
       
-      
-    
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Teóricas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teóricas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Teóricas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Teóricas
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Teóricas
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/inicio/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inicio
-  </span>
-  
-
+        Inicio
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica1a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Teórica 1a
-  </span>
-  
-
+        Teórica 1a
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica1b/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Teórica 1b
-  </span>
-  
-
+        Teórica 1b
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Teórica 2
-  </span>
-  
-
+        Teórica 2
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica3/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Teórica 3
-  </span>
-  
-
+        Teórica 3
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Teórica 4
-  </span>
-  
-
+        Teórica 4
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
     
       
       
-  
-  
-  
-  
-    
-    
-    
       
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Prácticos
-  </span>
-  
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Prácticos
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Prácticos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Prácticos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Prácticos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../inicio/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inicio
-  </span>
-  
-
+        Inicio
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../db_uniprot/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TP1 - Bases de Datos
-  </span>
-  
-
+        TP1 - Bases de Datos
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../chimera/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TP2 - Chimera
-  </span>
-  
-
+        TP2 - Chimera
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../Modelado_Por_Homologia/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TP3 - Modelado por homología
-  </span>
-  
-
+        TP3 - Modelado por homología
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../modelado_alphafold/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TP4 - Modelado Parte II
-  </span>
-  
-
+        TP4 - Modelado Parte II
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../ppi/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TP5 - Interacciones Proteína-Proteína
-  </span>
-  
-
+        TP5 - Interacciones Proteína-Proteína
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
       
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          TP6 - Predicción de desorden y Bases de Datos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        TP6 - Predicción de desorden y Bases de Datos
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#materiales" class="md-nav__link">
+    Materiales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-i-analisis-de-alineamientos-multiples-de-secuencia-de-proteinas" class="md-nav__link">
+    Parte I: Análisis de alineamientos múltiples de secuencia de proteínas
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte I: Análisis de alineamientos múltiples de secuencia de proteínas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursos-a-utilizar" class="md-nav__link">
+    Recursos a utilizar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    Objetivos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1-visualizacion-de-alineamientos-en-proviz" class="md-nav__link">
+    Ejercicio 1. Visualización de Alineamientos en ProViz.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jalview-software-de-visualizacion-de-alineamientos" class="md-nav__link">
+    JalView, software de visualización de alineamientos.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2-usando-jalview-para-analizar-un-msa-de-p53" class="md-nav__link">
+    Ejercicio 2. Usando JalView para analizar un MSA de p53
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3-analisis-de-distintas-propiedades-del-msa-utilizando-el-menu-colour" class="md-nav__link">
+    Ejercicio 3. Análisis de distintas propiedades del MSA utilizando el menú COLOUR.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-ii-prediccion-de-desorden" class="md-nav__link">
+    Parte II: Predicción de Desorden
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte II: Predicción de Desorden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursos-a-utilizar_1" class="md-nav__link">
+    Recursos a utilizar:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivos_1" class="md-nav__link">
+    Objetivos.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-de-prediccion-de-desorden" class="md-nav__link">
+    Métodos de predicción de desorden
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1-prediccion-de-desorden-a-partir-de-la-secuencia" class="md-nav__link">
+    Ejercicio 1. Predicción de desorden a partir de la secuencia.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-iii-bases-de-datos" class="md-nav__link">
+    Parte III: Bases de Datos
+  </a>
+  
+    <nav class="md-nav" aria-label="Parte III: Bases de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursos-a-utilizar_2" class="md-nav__link">
+    Recursos a utilizar:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1-base-de-datos-disprot" class="md-nav__link">
+    Ejercicio 1. Base de datos DisProt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1-conociendo-la-base-de-datos-disprot-usando-p53" class="md-nav__link">
+    Ejercicio 1. Conociendo la base de datos Disprot usando p53.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2-base-de-datos-mobidb" class="md-nav__link">
+    Ejercicio 2. Base de datos MobiDB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3-base-de-datos-de-ensambles-estructurales" class="md-nav__link">
+    Ejercicio 3. Base de datos de Ensambles Estructurales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-4-base-de-datos-de-proteinas-involucradas-en-liquid-liquid-phase-separation" class="md-nav__link">
+    Ejercicio 4. Base de datos de proteínas involucradas en liquid-liquid phase separation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-complementarios" class="md-nav__link">
+    Ejercicios Complementarios
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios Complementarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1-prediccion-de-regiones-de-baja-complejidad-de-secuencia" class="md-nav__link">
+    Ejercicio 1. Predicción de regiones de baja complejidad de secuencia.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2-seleccion-de-regiones-para-determinar-la-estructura-de-una-proteina" class="md-nav__link">
+    Ejercicio 2. Selección de regiones para determinar la estructura de una proteína.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -818,16 +881,15 @@
             
             
           
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
                 
-                  
 
 
-<div><h1 _tp="'TP" id="tp-6-prediccion-de-desorden-y-bases-de-datos" markdown="markdown"><strong>TP 6</strong>. Predicción de desorden y bases de datos</h1>
+<h1 6_="6'" _TP="'TP" id="tp-6-prediccion-de-desorden-y-bases-de-datos" markdown="markdown"><strong>TP 6</strong>. Predicción de desorden y bases de datos</h1>
 <h2 id="materiales">Materiales</h2>
-<p><a href="https://drive.google.com/file/d/1hAEaOGRobxBHe-1_oh5A4ZAscxM5s_Ti/view?usp=sharing"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></span> Materiales</a></p>
+<p><a class="md-button md-button--primary" href="https://drive.google.com/file/d/1hAEaOGRobxBHe-1_oh5A4ZAscxM5s_Ti/view?usp=sharing"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M480 352H346.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96c0-17.7-14.3-32-32-32zm-48 104c-13.2 0-24-10.8-24-24s10.8-24 24-24 24 10.8 24 24-10.8 24-24 24zm-198.6-81.4c6.2 6.3 14.4 9.4 22.6 9.4s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32-17.7 0-32 14.33-32 32v242.8l-73.4-73.4c-12.49-12.5-32.75-12.5-45.25 0-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z"/></svg></span> Materiales</a></p>
 <h2 id="parte-i-analisis-de-alineamientos-multiples-de-secuencia-de-proteinas">Parte I: Análisis de alineamientos múltiples de secuencia de proteínas</h2>
 <h3 id="recursos-a-utilizar">Recursos a utilizar</h3>
 <ul>
@@ -844,13 +906,17 @@
 <li>Visualizar y analizar los patrones de sustitución aminoacídica encontrados en proteínas modulares. Correlacionar con sus conocimientos sobre matrices de sustitución </li>
 </ul>
 <h3 id="ejercicio-1-visualizacion-de-alineamientos-en-proviz">Ejercicio 1. Visualización de Alineamientos en ProViz.</h3>
-<p><strong>Antes de empezar, piensen: ¿Porqué es importante visualizar un MSA? ¿Qué información podemos obtener de los MSA?</strong></p>
-<p><strong>ProViz</strong> es una herramienta que permite visualizar alineamientos y estructura de dominios de una proteína online. Ingresa a la web de <strong>ProViz</strong> <a href="http://slim.icr.ac.uk/proviz/">http://slim.icr.ac.uk/proviz/</a>, y busca la proteína p53 ingresando su Accession Number en la ventana “search” (Accession Number: P04637):</p>
+<div class="admonition idea">
+<p class="admonition-title">Antes de empezar</p>
+<p>¿Porqué es importante visualizar un MSA? ¿Qué información podemos obtener de los MSA?</p>
+</div>
+<p><strong>ProViz</strong> es una herramienta que permite visualizar alineamientos y estructura de dominios de una proteína online.</p>
+<p>Ingresa a la web de <strong>ProViz</strong> <a href="http://slim.icr.ac.uk/proviz/">http://slim.icr.ac.uk/proviz/</a>, y busca la proteína p53 ingresando su Accession Number en la ventana “search” (Accession Number: P04637):</p>
 <p>Selecciona la proteína que se llama: <a href="http://slim.icr.ac.uk/proviz/proviz.php?uniprot_acc=P04637">Cellular tumor antigen p53 (TP53) Homo sapiens (Human)</a>. Es la primera de la lista.</p>
 <div class="admonition importante">
 <p class="admonition-title">Importante</p>
-<p>Para responder las preguntas debajo, asegúrate de que en el panel superior de la página, en <strong>alignments</strong>, esté seleccionada la opción <strong>QFO</strong>. Puedes investigar qué pasa si cambian a otras opciones, como <em>mammalian</em> o <em>vertebrates</em>. 
-  En <strong>Options</strong> a la izquierda haz click en <em>Show/hide gaps</em>. Aparecen más posiciones con gaps en el alineamiento que antes estaban ocultas.    </p>
+<p>Para responder las preguntas debajo, asegúrate de que en el panel superior de la página, en <strong>alignments</strong>, esté seleccionada la opción <strong>QFO</strong>. Puedes investigar qué pasa si cambian a otras opciones, como <em>mammalian</em> o <em>vertebrates</em>.</p>
+<p>En <strong>Options</strong> a la izquierda haz click en <em>Show/hide gaps</em>. Aparecen más posiciones con gaps en el alineamiento que antes estaban ocultas.    </p>
 </div>
 <ol>
 <li>
@@ -869,7 +935,7 @@
 <p>Observe las distintas regiones en la parte inferior del alineamiento. ProViz reúne la información de numerosas bases de datos y permite visualizarlas conectadas a un alineamiento.</p>
 </li>
 </ol>
-<p>Recuerde la información recolectada de UniProt y PFAM en los trabajos prácticos anterior. Encuentre esta información en ProViz (Si no recuerda donde la dejó: utilizando el código UNIPROT (P04637), busque la proteína p53 humana (P53_HUMAN) en la base de datos PFAM <a href="https://pfam.xfam.org/">https://pfam.xfam.org/</a></p>
+<p>Recuerde la información recolectada de UniProt y PFAM en los trabajos prácticos anterior. Encuentre esta información en ProViz (Si no recuerda donde la dejó: utilizando el código UNIPROT (P04637), busque la proteína p53 humana (P53_HUMAN) en la base de datos PFAM (Vaya a <a href="https://www.ebi.ac.uk/interpro/search/sequence/">Interpro</a>).</p>
 <ul>
 <li>¿Qué observa en el alineamiento en las regiones que abarcan los dominios PFAM respecto de la conservación?</li>
 <li>¿En qué regiones de la secuencia se encuentran estos dominios? Anotar de qué residuo a qué residuo abarca cada dominio, para usar más adelante (O recupérelo del trabajo práctico anterior).</li>
@@ -881,36 +947,51 @@
 <p>Los desarrolladores de JalView crearon numerosos videos de entrenamiento disponibles en el <a href="https://www.youtube.com/channel/UCIjpnvZB770yz7ftbrJ0tfw">Canal de YouTube de JalView</a></p>
 <h3 id="ejercicio-2-usando-jalview-para-analizar-un-msa-de-p53">Ejercicio 2. Usando JalView para analizar un MSA de p53</h3>
 <ol>
-<li>Abre Jalview y cargue el conjunto de secuencias de p53 que descargó en trabajos prácticos anteriores.</li>
-</ol>
+<li>
+<p>Abre Jalview y cargue el conjunto de secuencias de p53 que descargó en trabajos prácticos anteriores.</p>
 <p><em>File</em> → <em>Input Alignment</em> →  <em>From File</em></p>
-<ol>
-<li>Para realizar el alineamiento utilizaremos el programa Clustal, al cual accederemos de manera remota desde JalView de la siguiente manera:</li>
-</ol>
+</li>
+<li>
+<p>Para realizar el alineamiento utilizaremos el programa Clustal, al cual accederemos de manera remota desde JalView de la siguiente manera:</p>
 <p><em>Web Service</em> → <em>Alignment</em> →  <em>Clustal</em> → <em>With defaults</em></p>
 <p>Si no llegara a funcionar, pues Internet, Virtualidad, la vida... Tienen las secuencias ya alineadas en el archivo <code>p53_aligned.fasta</code></p>
-<ol>
-<li>Inspecciona el alineamiento visualmente y reconoce algunas características de las secuencias. Si no se muestran todos los residuos y algunos aparecen como <code>.</code> ve a:</li>
-</ol>
+</li>
+<li>
+<p>Inspecciona el alineamiento visualmente y reconoce algunas características de las secuencias. Si no se muestran todos los residuos y algunos aparecen como <code>.</code> ve a:</p>
 <p><em>Format</em> → <em>Show Non-Conserved</em></p>
 <ul>
 <li>Algunas secuencias son más cortas que otras ¿por qué crees que es esto?</li>
-<li>¿Todas las secuencias comienzan con el aminoácido metionina? A qué corresponden las secuencias que no?  </li>
+<li>¿Todas las secuencias comienzan con el aminoácido metionina? ¿A qué corresponden las secuencias que no?  </li>
 <li>¿Si quieren construir un alineamiento de alta calidad, preservarían o descartarían estas secuencias?  </li>
-<li>Remuevan las secuencias que <strong>no</strong> corresponden a proteínas completas. Para ello seleccionar las secuencias haciendo click sobre el nombre de la misma en el panel izquierdo, la secuencia se marcará con una caja roja punteada. Remover la secuencia seleccionada utilizando la tecla <em>Backspace</em> o <em>Del</em>.</li>
-<li>¿Existen regiones del alineamiento que no estén alineadas correctamente?</li>
-</ul>
+<li>
+<p>Remuevan las secuencias que <strong>no</strong> corresponden a proteínas completas.</p>
+<p>Para ello seleccionar las secuencias haciendo click sobre el nombre de la misma en el panel izquierdo, la secuencia se marcará con una caja roja punteada. Remover la secuencia seleccionada utilizando la tecla <em>Backspace</em> o <em>Del</em>.</p>
+</li>
+<li>
+<p>¿Existen regiones del alineamiento que no estén alineadas correctamente?</p>
 <p>Para editar el alineamiento, primero asegurate de realizar:</p>
 <p><em>Select</em> → <em>Deselect All</em></p>
 <p><strong>Eliminar gaps:</strong> Seleccione con el mouse el gap o arrastrando sobre el grupo de gaps que desea eliminar y presione “Backspace” o “Del”</p>
 <p><strong>Agregar gaps:</strong> Presione F2. En primera posición del alineamiento en la primera secuencia aparecerá un cursor de color negro. Colóquelo en la posición donde desee ingresar un gap y presione la barra espaciadora.</p>
+</li>
+</ul>
+</li>
+</ol>
 <h3 id="ejercicio-3-analisis-de-distintas-propiedades-del-msa-utilizando-el-menu-colour">Ejercicio 3. Análisis de distintas propiedades del MSA utilizando el menú COLOUR.</h3>
-<p>Este menú permite colorear el alineamiento con diferentes paletas de colores que permiten visualizar determinadas características fisicoquímicas o relacionadas con la conservación o identidad de secuencia que facilitan el análisis de la información contenida en el MSA.</p>
-<p>Por ejemplo: <em>Percentage identity</em> colorea los residuos según el porcentaje de identidad en la columna. <em>Hydrophobicity</em> colorea los residuos según el grado de hidrofobicidad.</p>
+<p>El menú <em>Colour</em> permite colorear el alineamiento con diferentes paletas de colores que permiten visualizar determinadas características fisicoquímicas o relacionadas con la conservación o identidad de secuencia que facilitan el análisis de la información contenida en el MSA.</p>
+<p>Por ejemplo: </p>
+<ul>
+<li>
+<p><em>Percentage identity</em> colorea los residuos según el porcentaje de identidad en la columna.</p>
+</li>
+<li>
+<p><em>Hydrophobicity</em> colorea los residuos según el grado de hidrofobicidad.</p>
+</li>
+</ul>
 <p>También es posible disminuir la intensidad de los colores según el grado de conservación (<em>By conservation</em>) o filtrar los colores según el porcentaje de identidad (<em>Above identity threshold</em>) a partir de un umbral deseado.</p>
 <ol>
-<li>Seleccione para colorear el alineamiento desde el menú la opción:</li>
-</ol>
+<li>
+<p>Seleccione para colorear el alineamiento desde el menú la opción:</p>
 <p><em>Colour</em> → <em>Clustalx</em></p>
 <p>Este esquema es muy comúnmente utilizado para la visualización de MSAs y permite representar información importante contenida en los patrones de sustitución de un MSA.</p>
 <p>Observando el alineamiento intente identificar:</p>
@@ -920,19 +1001,19 @@
 <li>¿Qué propiedades fisicoquímicas representa cada grupo de color?  </li>
 <li>La cisteína cumple un rol estructural importante en algunas proteínas (¿cual?). ¿Qué observa respecto de la coloración de la cisteína? ¿Es siempre igual? ¿A qué se debe el cambio en la representación?</li>
 </ul>
+</li>
+</ol>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>En Proviz estaba siempre coloreada del mismo color, pero en el esquema de colores de ClustalX no lo está.  </p>
-</div>
+<p class="admonition-title">Atención</p>
+<p>En Proviz la cisteína estaba siempre coloreada del mismo color, pero en el esquema de colores de ClustalX no lo está.  </p>
 <ul>
 <li>¿En qué situaciones los residuos no están coloreados?  </li>
-<li>
-<p>Hay residuos que siempre están coloreados? ¿Cuáles son y a qué cree que se debe?</p>
-</li>
+<li>Hay residuos que siempre están coloreados? ¿Cuáles son y a qué cree que se debe?</li>
+</ul>
+</div>
+<ol start="2">
 <li>
 <p>Manteniendo el esquema de color Clustal, es posible filtrar regiones de acuerdo al % identidad en el alineamiento múltiple. Para ello, aplique el filtro de identidad yendo a:</p>
-</li>
-</ul>
 <p><em>Colour</em> → <em>Above identity threshold</em></p>
 <p>Se abrirá una ventana en la cual podrá seleccionar el % identidad del filtro en escala de 0 a 100%. Explore los cambios en todo el alineamiento al variar la escala de 0 a 100%.</p>
 <p>Utilizando el filtro, respondan:</p>
@@ -945,9 +1026,12 @@
 <li>¿Qué tipos de patrones observa?  </li>
 <li>¿Qué relación guardan estos patrones con las matrices PAM y BLOSUM utilizadas para construir alineamientos de proteínas?</li>
 </ul>
+</li>
+</ol>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Una matriz <em>BLOSUM (BLOcks SUbstitution Matrix)</em> es una matriz de sustitución para los 210 pares de aminoácidos. La construcción de las matrices BLOSUM se realizó con bloques conservados de proteínas (es decir, sin gaps) en alineamientos de proteínas que comparten como máximo un cierto porcentaje de identidad. A partir de estos alineamientos, se calcula la frecuencia de las sustituciones observadas para cada par de aminoácidos y se calcula el logaritmo de la probabilidad de que dos aminoácidos aparezcan en esa posición por azar. Una matrix blosum construida con secuencias que comparten como máximo el 50% de identidad se llama BLOSUM-50). Las matrices BLOSUM se utilizan para puntuar alineamientos de proteínas. Una BLOSUM 80 se usa para proteínas menos divergentes y BLOSUM 45 por ejemplo para proteínas más divergentes.</p>
+<p>Una matriz <em>BLOSUM (BLOcks SUbstitution Matrix)</em> es una matriz de sustitución para los 210 pares de aminoácidos.</p>
+<p>La construcción de las matrices BLOSUM se realizó con bloques conservados de proteínas (es decir, sin gaps) en alineamientos de proteínas que comparten como máximo un cierto porcentaje de identidad. A partir de estos alineamientos, se calcula la frecuencia de las sustituciones observadas para cada par de aminoácidos y se calcula el logaritmo de la probabilidad de que dos aminoácidos aparezcan en esa posición por azar. Una matrix blosum construida con secuencias que comparten como máximo el 50% de identidad se llama BLOSUM-50). Las matrices BLOSUM se utilizan para puntuar alineamientos de proteínas. Una BLOSUM 80 se usa para proteínas menos divergentes y BLOSUM 45 por ejemplo para proteínas más divergentes.</p>
 <p>Las matrices <em>PAM (point accepted mutation)</em> a diferencia de las BLOSUM, se calcularon a partir de la observación de mutaciones en 71 familias de proteínas relacionadas a lo largo del árbol filogenético. Las proteínas incluídas tenían al menos 85% de identidad, y por lo tanto, se asume que cualquier mismatch es el resultado de un evento único de mutación (y no una acumulación de mutaciones en esa posición a lo largo del tiempo). La puntuación de cada par de aminoácidos en la matriz está relacionada con la distancia evolutiva. Así, una PAM120 se utiliza para proteínas menos divergentes y una PAM250 para proteínas más divergentes.</p>
 </div>
 <p style="text-align:center">
@@ -984,10 +1068,13 @@ Figura 1. Matrix BLOSUM62.</figcaption>
 </ol>
 <p>Entre los algoritmos que se basan en composición de secuencia podemos nombrar IUPred (Dosztányi et al., 2005; Mészáros et al., 2018), que aplica un campo de energı́a desarrollado a partir de un gran número de proteínas con estructura determinada obtenidas de PDB. El primer algoritmo en <em>machine learning</em> fue PONDR (Obradovic et al., 2003; Romero et al., 1997), entrenado a partir de un grupo estructuras de proteínas globulares y atributos de secuencia asociados a residuos no resueltos en dichas estructuras, que corresponden a regiones flexibles dentro del cristal. GlobPlot (Linding et al., 2003) fue entrenado estudiando la tendencia de un residuo a adquirir determinada estructura secundaria, hélices α o láminas β.</p>
 <h3 id="ejercicio-1-prediccion-de-desorden-a-partir-de-la-secuencia">Ejercicio 1. Predicción de desorden a partir de la secuencia.</h3>
-<p>Ingresa en la web de <strong>IUPred2A</strong> <a href="https://iupred2a.elte.hu">https://iupred2a.elte.hu</a> e ingresa la proteína p53 (puede ingresarse la secuencia de aminoácidos, el <strong>Uniprot ID</strong> - P53_HUMAN o el <strong>accession number</strong> - P04637). </p>
-<p>El algoritmo IUPred considera que un residuo es:
-* <strong>Desordenado</strong> cuando el valor de IUPred es mayor o igual a 0.5
-* <strong>Ordenado</strong> cuando es menor a 0.5</p>
+<p>Ingresa en la web de <strong>IUPred2A</strong>: <a href="https://iupred2a.elte.hu">https://iupred2a.elte.hu</a></p>
+<p>Ingresa la proteína p53 (puede ingresarse la secuencia de aminoácidos, el <strong>Uniprot ID</strong> - P53_HUMAN o el <strong>accession number</strong> - P04637). </p>
+<p>El algoritmo IUPred considera que un residuo es:</p>
+<ul>
+<li><strong>Desordenado</strong> cuando el valor de IUPred es mayor o igual a 0.5</li>
+<li><strong>Ordenado</strong> cuando es menor a 0.5</li>
+</ul>
 <ol>
 <li>
 <p>Anota las posiciones iniciales y finales de las regiones predichas como desordenadas. ¿Se correlacionan las regiones predichas como ordenadas o desordenadas con las diferencias observadas en el ejercicio anterior?</p>
@@ -998,130 +1085,138 @@ Figura 1. Matrix BLOSUM62.</figcaption>
 </ol>
 <div class="admonition info">
 <p class="admonition-title">Nota</p>
-<p>Imaginemos que queremos correr la predicción de desorden para cientos de proteínas, o que queremos contar el porcentaje de aminoácidos que se encuentran en regiones desordenadas ¿Le parece que el visualizador online sería una herramienta útil para hacerlo? ¡Claro que no! Por suerte, el algoritmo IUPred puede también correrse de manera local y además es rápido. Para esto necesita tener instalado Python3 en su computadora.</p>
+<p>Imaginemos que queremos correr la predicción de desorden para cientos de proteínas, o que queremos contar el porcentaje de aminoácidos que se encuentran en regiones desordenadas:</p>
+<ul>
+<li>¿Le parece que el visualizador online sería una herramienta útil para hacerlo? ¡Claro que no!</li>
+</ul>
+<p>Por suerte, el algoritmo IUPred puede también correrse de manera local y además es rápido. Para esto necesita tener instalado Python3 en su computadora.</p>
 </div>
-<ol>
-<li>
-<p>Explora el archivo descargado y responde.</p>
-</li>
+<ol start="3">
+<li>Explora el archivo descargado y responde.</li>
+</ol>
+<ul>
 <li>
 <p>¿Cómo es el formato de los datos?</p>
 </li>
 <li>
 <p>¿Las columnas tienen nombre? ¿Serán interpretadas correctamente por R?</p>
 </li>
+</ul>
+<ol start="4">
 <li>
-<p><strong>Crea un script en R.</strong> Para esto, abre RStudio y elije New --&gt; RScript.</p>
-</li>
-</ol>
+<p><strong>Crea un script en R.</strong></p>
+<p>Para esto, abre RStudio y elije New --&gt; RScript.</p>
 <p>Recuerda ver en qué directorio estás trabajando y configurarlo para trabajar en el directorio deseado, por si no lo recuerdas las funciones eran: <code>getwd()</code> y <code>setwd()</code>.</p>
-<ol>
-<li><strong>¡A cargar los datos!</strong> Para esto se utiliza la función <code>read.csv()</code>. Vamos a modificar algunos argumentos para que lea correctamente el archivo. Si querés saber qué es cada argumento siempre se puede revisar el uso de las funciones con <code>help(read.csv)</code></li>
-</ol>
-<p></p><div class="highlight"><pre><span></span><code><span class="n">p53</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">"/directorio_correspondiente/P53_HUMAN.iupred"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="bp">F</span><span class="w"> </span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">"\t"</span><span class="p">,</span><span class="w"> </span><span class="n">col.names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">"Posición"</span><span class="p">,</span><span class="s">"Aminoácido"</span><span class="p">,</span><span class="s">"Iupred"</span><span class="p">,</span><span class="s">"Anchor"</span><span class="p">),</span><span class="w">  </span><span class="n">comment.char</span><span class="o">=</span><span class="s">"#"</span><span class="p">)</span>
+</li>
+<li>
+<p><strong>¡A cargar los datos!</strong> Para esto se utiliza la función <code>read.csv()</code>. Vamos a modificar algunos argumentos para que lea correctamente el archivo. Si querés saber qué es cada argumento siempre se puede revisar el uso de las funciones con <code>help(read.csv)</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">p53</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&quot;/directorio_correspondiente/P53_HUMAN.iupred&quot;</span><span class="p">,</span>
+               <span class="n">header</span><span class="o">=</span><span class="bp">F</span> <span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;\t&quot;</span><span class="p">,</span> <span class="n">col.names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Posición&quot;</span><span class="p">,</span><span class="s">&quot;Aminoácido&quot;</span><span class="p">,</span><span class="s">&quot;Iupred&quot;</span><span class="p">,</span><span class="s">&quot;Anchor&quot;</span><span class="p">),</span>
+               <span class="n">comment.char</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">)</span>
 </code></pre></div>
-   Asegurate que los datos se cargaron correctamente, esperamos un dataframe con 4 columnas.
-<ol>
-<li>Ahora quisiéramos clasificar las posiciones en pase a la predicción realizada por IUPred como <em>Orden</em> y <em>Desorden</em>. 
-   Primero crearemos una columna en el dataframe:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="n">umbral</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0.5</span>
-<span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span>
-<span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">[</span><span class="n">p53</span><span class="o">$</span><span class="n">Iupred</span><span class="o">&gt;=</span><span class="n">umbral</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"Desorden"</span>
-<span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">[</span><span class="n">p53</span><span class="o">$</span><span class="n">Iupred</span><span class="o">&lt;</span><span class="n">umbral</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"Orden"</span>
+<p>Asegurate que los datos se cargaron correctamente, esperamos un dataframe con 4 columnas.</p>
+</li>
+<li>
+<p>Ahora quisiéramos clasificar las posiciones en pase a la predicción realizada por IUPred como <em>Orden</em> y <em>Desorden</em>.</p>
+<p>Primero crearemos una columna en el dataframe:</p>
+<div class="highlight"><pre><span></span><code><span class="n">umbral</span> <span class="o">&lt;-</span> <span class="m">0.5</span>
+<span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span> <span class="o">&lt;-</span> <span class="kc">NA</span>
+<span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">[</span><span class="n">p53</span><span class="o">$</span><span class="n">Iupred</span><span class="o">&gt;=</span><span class="n">umbral</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="s">&quot;Desorden&quot;</span>
+<span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">[</span><span class="n">p53</span><span class="o">$</span><span class="n">Iupred</span><span class="o">&lt;</span><span class="n">umbral</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="s">&quot;Orden&quot;</span>
 </code></pre></div>
-<p>Para obtener un gráfico similar al que brinda el servidor de IUPred, utilizaremos la librería <code>ggplot2</code>:</p>
+<p>Para obtener un gráfico similar al que brinda el servidor de IUPred, utilizaremos la librería <code>ggplot2</code>.
+  Si no la instalaron aún recuerden que se puede instalar usando el comando: <code>install.packages('ggplot2')</code></p>
 <div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
 
-<span class="n">plot_p53</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">p53</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Posición</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Iupred</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.01</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="n">limits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_line</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">"navyblue"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">Prediccion</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">"dotted"</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="n">plot_p53</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">p53</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Posición</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Iupred</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">20</span><span class="p">,</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.01</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">geom_line</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;navyblue&quot;</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">Prediccion</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span> <span class="o">+</span>
 <span class="nf">theme_linedraw</span><span class="p">()</span>
 </code></pre></div>
 <p>Debería obtener un gráfico como el siguiente:</p>
-<p><a class="glightbox" href="images/IUPred.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="images/IUPred.png"></a></p>
+<p><a class="glightbox" href="images/IUPred.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="images/IUPred.png" /></a></p>
 <p>Ahora, quisiéramos evaluar el porcentaje de residuos predichos ordenados y desordenados. Por suerte, R tiene una función que “cuenta” por nosotros:</p>
-<div class="highlight"><pre><span></span><code><span class="n">cuentaTotal</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">)</span>
-<span class="n">porcentaje</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">100</span><span class="o">*</span><span class="n">cuentaTotal</span><span class="o">/</span><span class="nf">length</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Posición</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">cuentaTotal</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">)</span>
+<span class="n">porcentaje</span> <span class="o">&lt;-</span> <span class="m">100</span><span class="o">*</span><span class="n">cuentaTotal</span><span class="o">/</span><span class="nf">length</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Posición</span><span class="p">)</span>
 </code></pre></div>
-<ol>
+</li>
 <li>
 <p>En base a los valores obtenidos, ¿diría que la proteína p53 es altamente desordenada?</p>
 </li>
 <li>
 <p>Por último, analizaremos la composición de aminoácidos de p53. Pero antes: ¿Qué residuos espera ver enriquecidos en las regiones desordenadas y cuales en las ordenadas? ¿Por qué?</p>
-</li>
-</ol>
 <p>Vamos a graficar el porcentaje de cada aminoácido predicho como ordenado o desordenado en la secuencia de p53</p>
-<div class="highlight"><pre><span></span><code><span class="n">aminoacidos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Aminoácido</span><span class="p">,</span><span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">aminoacidos</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Aminoácido</span><span class="p">,</span><span class="n">p53</span><span class="o">$</span><span class="n">Prediccion</span><span class="p">)</span>
 </code></pre></div>
 <ul>
 <li>¿Qué hizo la función <code>table</code> en este caso?</li>
 </ul>
 <p>Para calcular el porcentaje de aminoácidos:</p>
-<div class="highlight"><pre><span></span><code><span class="n">aminoacidos_porcentaje</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">100</span><span class="o">*</span><span class="n">aminoacidos</span><span class="o">/</span><span class="nf">length</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Posición</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">aminoacidos_porcentaje</span> <span class="o">&lt;-</span> <span class="m">100</span><span class="o">*</span><span class="n">aminoacidos</span><span class="o">/</span><span class="nf">length</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">Posición</span><span class="p">)</span>
 </code></pre></div>
 <p>Ahora vamos a convertir la tabla en un dataframe para graficar con <code>ggplot2</code>:</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="n">aminoacidos_df</span><span class="o">&lt;-</span><span class="nf">as.data.frame</span><span class="p">(</span><span class="n">aminoacidos_porcentaje</span><span class="p">)</span>
-<span class="nf">colnames</span><span class="p">(</span><span class="n">aminoacidos_df</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"Aminoacidos"</span><span class="p">,</span><span class="s">"Prediccion"</span><span class="p">,</span><span class="s">"Porcentaje"</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><span class="n">aminoacidos_df</span><span class="o">&lt;-</span><span class="nf">as.data.frame</span><span class="p">(</span><span class="n">aminoacidos_porcentaje</span><span class="p">)</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">aminoacidos_df</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Aminoacidos&quot;</span><span class="p">,</span><span class="s">&quot;Prediccion&quot;</span><span class="p">,</span><span class="s">&quot;Porcentaje&quot;</span><span class="p">)</span>
 
-<span class="n">plot_aa</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">aminoacidos_df</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Aminoacidos</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Porcentaje</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="n">Prediccion</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">      </span><span class="nf">geom_col</span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"dodge"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">      </span><span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="n">limits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">10</span><span class="p">),</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">      </span><span class="nf">theme_bw</span><span class="p">()</span>
+<span class="n">plot_aa</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">aminoacidos_df</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Aminoacidos</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Porcentaje</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="n">Prediccion</span><span class="p">))</span> <span class="o">+</span>
+      <span class="nf">geom_col</span><span class="p">(</span><span class="n">position</span> <span class="o">=</span> <span class="s">&quot;dodge&quot;</span><span class="p">)</span> <span class="o">+</span>
+      <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">10</span><span class="p">),</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span> <span class="o">+</span>
+      <span class="nf">theme_bw</span><span class="p">()</span>
 </code></pre></div>
-   Deberías obtener un gráfico como el siguiente:
-<p><a class="glightbox" href="images/Aminoacidos.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Aminoacidos.png"></a></p>
+  Deberías obtener un gráfico como el siguiente:</p>
+<p><a class="glightbox" href="images/Aminoacidos.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="images/Aminoacidos.png" /></a></p>
 <ul>
-<li>
-<p>¿Qué aminoácidos son los más abundantes en las regiones desordenadas? ¿La abundancia de los aminoácidos coincide con lo esperado?</p>
+<li>¿Qué aminoácidos son los más abundantes en las regiones desordenadas? ¿La abundancia de los aminoácidos coincide con lo esperado?</li>
+</ul>
 </li>
 <li>
 <p>Ahora vamos a ver si se observa o no correlación con los valores de pLDDT. Para esto vamos a cargar la librería <code>bio3d</code> que nos permite leer archivos en formato <code>pdb</code>.</p>
-</li>
-</ul>
 <div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">bio3d</span><span class="p">)</span>
 </code></pre></div>
 <p>Leemos el archivo:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pdbP53</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.pdb</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/directorioQueCorresponda/AF-P04637-F1-model_v2.pdb"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">pdbP53</span> <span class="o">&lt;-</span> <span class="nf">read.pdb</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s">&quot;/directorioQueCorresponda/AF-P04637-F1-model_v2.pdb&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Guardamos en el dataframe de p53 los datos que me intersan.</p>
 <p>El pLDDT está guardado en el campo de b-factors del pdb, y necesitamos un único valor por residuo. Por lo tanto, elegimos que sea el correspondiente a los carbonos α y lo guardamos en una columna que se llama pLDDT</p>
-<div class="highlight"><pre><span></span><code><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pdbP53</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">pdbP53</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">"b"</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span> <span class="o">&lt;-</span> <span class="n">pdbP53</span><span class="o">$</span><span class="n">atom</span><span class="p">[</span><span class="n">pdbP53</span><span class="o">$</span><span class="n">calpha</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">]</span>
 </code></pre></div>
 <p>Luego, clasificamos las posiciones según el valor de pLDDT</p>
-<div class="highlight"><pre><span></span><code><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT_Prediccion</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">"&gt;80"</span>
-<span class="n">p53</span><span class="o">$</span><span class="n">pLDDT_Prediccion</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="o">&lt;=</span><span class="m">50</span><span class="p">)]</span><span class="o">&lt;-</span><span class="s">"&lt;=50"</span>
-<span class="n">p53</span><span class="o">$</span><span class="n">pLDDT_Prediccion</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="o">&gt;</span><span class="m">50</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="o">&lt;=</span><span class="m">80</span><span class="p">)]</span><span class="o">&lt;-</span><span class="s">"&gt;50 &amp; &lt;= 80"</span>
+<div class="highlight"><pre><span></span><code><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT_Prediccion</span> <span class="o">&lt;-</span> <span class="s">&quot;&gt;80&quot;</span>
+<span class="n">p53</span><span class="o">$</span><span class="n">pLDDT_Prediccion</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="o">&lt;=</span><span class="m">50</span><span class="p">)]</span><span class="o">&lt;-</span><span class="s">&quot;&lt;=50&quot;</span>
+<span class="n">p53</span><span class="o">$</span><span class="n">pLDDT_Prediccion</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="o">&gt;</span><span class="m">50</span> <span class="o">&amp;</span> <span class="n">p53</span><span class="o">$</span><span class="n">pLDDT</span><span class="o">&lt;=</span><span class="m">80</span><span class="p">)]</span><span class="o">&lt;-</span><span class="s">&quot;&gt;50 &amp; &lt;= 80&quot;</span>
 </code></pre></div>
 <p>Hago el gráfico de IUPred y pLDDT por posición:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pLDDT_con_Iupred</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">p53</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Posición</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Iupred</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.01</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="n">limits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_line</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">"navyblue"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_line</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p53</span><span class="p">,</span><span class="n">mapping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Posición</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">pLDDT</span><span class="o">/</span><span class="m">100</span><span class="p">),</span><span class="n">col</span><span class="o">=</span><span class="s">"red"</span><span class="p">)</span><span class="o">+</span>
-<span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">"dotted"</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">theme_linedraw</span><span class="p">()</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><span class="n">pLDDT_con_Iupred</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">p53</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Posición</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Iupred</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">20</span><span class="p">,</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.01</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">geom_line</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">&quot;navyblue&quot;</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">geom_line</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">p53</span><span class="p">,</span><span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Posición</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">pLDDT</span><span class="o">/</span><span class="m">100</span><span class="p">),</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">theme_linedraw</span><span class="p">()</span> 
 <span class="n">pLDDT_con_Iupred</span>
 </code></pre></div>
-<p>Observe el gráfico y responda:
-      * ¿Qué es la línea azul?
-      * ¿Qué es la línea roja?
-      * ¿Por qué cree que se utiliza pLDDT/100 en el gráfico?
-      * ¿Que puede decir de la relación entre la predicción de desorden y los valores de pLDDT?</p>
+<p>Observe el gráfico y responda:</p>
+<ul>
+<li>¿Qué es la línea azul?</li>
+<li>¿Qué es la línea roja?</li>
+<li>¿Por qué cree que se utiliza pLDDT/100 en el gráfico?</li>
+<li>¿Que puede decir de la relación entre la predicción de desorden y los valores de pLDDT?</li>
+</ul>
 <p>Estudiemos la correlación entre IUPred y el pLDDT:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pLDDT_vs_IUPred</span><span class="o">&lt;-</span><span class="nf">ggplot</span><span class="p">(</span><span class="n">p53</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">pLDDT</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Iupred</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">),</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="n">limits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">expand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="n">pLDDT_Prediccion</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">"dotted"</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">"dotted"</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<div class="highlight"><pre><span></span><code><span class="n">pLDDT_vs_IUPred</span><span class="o">&lt;-</span><span class="nf">ggplot</span><span class="p">(</span><span class="n">p53</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">pLDDT</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">Iupred</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">),</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">100</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">n.breaks</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.01</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="n">pLDDT_Prediccion</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span> <span class="o">=</span> <span class="m">50</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="s">&quot;dotted&quot;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span> <span class="o">+</span>
 <span class="nf">theme_linedraw</span><span class="p">()</span>
 <span class="n">pLDDT_vs_IUPred</span>
 </code></pre></div>
+</li>
+</ol>
 <h2 id="parte-iii-bases-de-datos">Parte III: Bases de Datos</h2>
 <h3 id="recursos-a-utilizar_2">Recursos a utilizar:</h3>
 <ul>
@@ -1139,7 +1234,7 @@ Figura 1. Matrix BLOSUM62.</figcaption>
 <li>un término de anotación que corresponde a la Ontología de desorden.</li>
 </ul>
 <p><strong>Cada una de las entradas en la base de datos posee un identificador único</strong>.</p>
-<p>La ontología de desorden está organizada en cuatro categorías diferentes:</p>
+<p>La ontología de desorden está organizada en tres categorías diferentes:</p>
 <ul>
 <li>
 <p>Estado estructural (<em>Structural State</em>): Orden o Desorden (<em>Order or Disorder</em>)</p>
@@ -1148,14 +1243,11 @@ Figura 1. Matrix BLOSUM62.</figcaption>
 <p>Transición estructural (<em>Structural Transition</em>): Transiciones que pueden ocurrir entre diferentes estados estructurales (<em>Disorder to order</em>)</p>
 </li>
 <li>
-<p>Par de Interacción (<em>Interaction Partner</em>): La entidad que interactúa (proteína, ión, moléculas pequeñas)</p>
-</li>
-<li>
 <p>Función de desorden (<em>Disorder Function</em>): La función de una región incluyendo términos específicos a desorden.</p>
 </li>
 </ul>
-<p><strong>Ejercicio:</strong>
-La proteína p53 es una proteína supresora de tumores, es decir que su mutación favorece el crecimiento tumoral. p53 es uno de los genes más mutados en el cáncer humano, y actúa como un factor de transcripción que se expresa en todos los tejidos. Cumple un rol principal en el ciclo celular y es el regulador principal de la apoptosis. Es esencial para inducir la respuesta celular ante el daño al ADN, deteniendo el ciclo celular cuando las células no pueden reparar el ADN dañado por agentes genotóxicos. Si falla p53 podrían facilitar la formación de tumores celulares y en consecuencia producir cáncer. Alrededor de un 50% de los tumores humanos identificados poseen mutaciones en la proteína p53. Esta proteína, por su importancia para la salud humana, es una de las proteínas más estudiadas en cuanto a su estructura y función.</p>
+<h3 id="ejercicio-1-conociendo-la-base-de-datos-disprot-usando-p53">Ejercicio 1. Conociendo la base de datos Disprot usando p53.</h3>
+<p>La proteína p53 es una proteína supresora de tumores, es decir que su mutación favorece el crecimiento tumoral. p53 es uno de los genes más mutados en el cáncer humano, y actúa como un factor de transcripción que se expresa en todos los tejidos. Cumple un rol principal en el ciclo celular y es el regulador principal de la apoptosis. Es esencial para inducir la respuesta celular ante el daño al ADN, deteniendo el ciclo celular cuando las células no pueden reparar el ADN dañado por agentes genotóxicos. Si falla p53 podrían facilitar la formación de tumores celulares y en consecuencia producir cáncer. Alrededor de un 50% de los tumores humanos identificados poseen mutaciones en la proteína p53. Esta proteína, por su importancia para la salud humana, es una de las proteínas más estudiadas en cuanto a su estructura y función.</p>
 <p>Ingresa a la página web de <a href="https://disprot.org/">DisProt</a> y encuentra la proteína p53 (P04637). La búsqueda puede realizarse utilizando el Accession Number o por palabras claves. El identificador de DisProt que deberían encontrar es DP00086.</p>
 <ol>
 <li>
@@ -1166,18 +1258,20 @@ La proteína p53 es una proteína supresora de tumores, es decir que su mutació
 </li>
 <li>
 <p>¿Cuál es el rol de las regiones desordenadas?</p>
-</li>
+<ul>
 <li>
-<p>Expande <em>Interaction partner</em> ¿Qué tipo de interacciones están indicadas?¿Qué técnicas se usaron para identificarlas?</p>
+<p>Expande <em>Molecular function</em> ¿Qué tipo de información encuentra? ¿Qué técnicas se usaron para obtener esta información?</p>
 </li>
 <li>
 <p>Expande <em>Disorder Function</em> ¿Qué tipo de funciones están indicadas? ¿Qué técnicas se usaron para identificarlas?</p>
 </li>
-<li>
-<p>Observa la línea que corresponde a InterPro.</p>
+</ul>
 </li>
 <li>
-<p>Compare la información de dominios con el estado estructural. ¿Se observa algún dominio InterPro que se superponga con una región desordenada?</p>
+<p>Observa la línea que corresponde a InterPro.</p>
+<ul>
+<li>Compare la información de dominios con el estado estructural. ¿Se observa algún dominio InterPro que se superponga con una región desordenada?</li>
+</ul>
 </li>
 <li>
 <p>¿La evidencia experimental recolectada coincide con las predicciones realizadas por IUPred y lo observado en ProViz?</p>
@@ -1187,22 +1281,34 @@ La proteína p53 es una proteína supresora de tumores, es decir que su mutació
 <p>La base de datos MobiDB centraliza diferentes recursos que facilitan la anotación de proteínas desordenadas y de su función. MobiDB abarca distintos aspectos del desorden, desde regiones que carecen una estructura tridimensional definida anotadas o predichas como desordenadas hasta regiones que interactúan con otras proteínas, ADN o ARN preservando una estructura desordenada. Los datos provienen de bases de datos externas con datos manualmente curados, de datos experimentales como estructuras tridimensionales de las proteínas o predicciones.</p>
 <ol>
 <li>
-<p>Ingresa a la web de MobiDB: <a href="http://mobidb.bio.unipd.it">(http://mobidb.bio.unipd.it)</a> y busca la proteína p53 (P04637).</p>
+<p>Ingresa a la web de MobiDB: <a href="http://mobidb.bio.unipd.it">http://mobidb.bio.unipd.it</a></p>
+<p>Busca la proteína p53 (P04637).</p>
 </li>
 <li>
-<p>Ingresa a <strong>Advanced</strong>. En la primera línea se indica la secuencia. A la izquierda aparece una lista de métodos que aportan distinta información de desorden. Observa la línea <strong>Disorder consensus</strong>. Si haces click en la <code>P</code> verás que se pliega o despliega una lista de predictores de desorden y sus predicciones. En la primera línea, al lado de <strong>Disorder consensus</strong>, se encuentra el consenso de la predicción de desorden.</p>
+<p>En la parte superior, sobre la estructura hay tres pestañas:</p>
+<ul>
+<li>Overview</li>
+<li>Disorder</li>
+<li>Binding</li>
+</ul>
+<p>Ingresa a <strong>Disorder</strong>.</p>
+<p>En la primera línea se indica la secuencia. </p>
+<p>A la izquierda aparece una lista de métodos que aportan distinta información de desorden.</p>
+<p>Observa la línea <strong>Disorder</strong>. Este es el consenso de desorden.</p>
+<p>Si haces click en la la felchita verás que se pliega o despliega una lista de métodos para distinguir desorden.</p>
 </li>
 <li>
-<p>¿Cuáles regiones son predichas como desordenadas por la mayoría de los métodos?</p>
-</li>
-<li>
-<p>¿Qué métodos predicen más desorden y cuáles menos? ¿Hay mucha variación?</p>
+<p>Expande MobiDB-Lite y luego expande <strong>Prediction (majority)</strong>. Se expande una lista de predictores de desorden.</p>
+<ul>
+<li>¿Cuáles regiones son predichas como desordenadas por la mayoría de los métodos?</li>
+<li>¿Qué métodos predicen más desorden y cuáles menos? ¿Hay mucha variación?</li>
+</ul>
 </li>
 <li>
 <p>Ahora observa la línea que dice <strong>Missing residues consensus</strong>, donde se indica el consenso en base a la evidencia estructural. Ubique el mouse sobre las distintas regiones y responda: ¿Qué significan los distintos colores de las regiones marcados en el consenso?</p>
 </li>
 <li>
-<p>Exploremos la evidencia proveniente de la estructura cristalográfica. Para ello despliega la sección <em>Missing residues consensus</em> haciendo click en la <code>D</code> al lado de <strong>Missing residues consensus</strong>.</p>
+<p>Exploremos la evidencia proveniente de la estructura cristalográfica. Para ello despliega la sección <em>Missing residues (strict)</em>.</p>
 <ul>
 <li>
 <p>¿Qué regiones tienen una estructura? </p>
@@ -1214,21 +1320,21 @@ La proteína p53 es una proteína supresora de tumores, es decir que su mutació
 </li>
 </ol>
 <h3 id="ejercicio-3-base-de-datos-de-ensambles-estructurales">Ejercicio 3. Base de datos de Ensambles Estructurales</h3>
-<p>El primer lanzamiento de la base de datos <a href="https://proteinensemble.org/">PED</a> fue en el año 2013. PED recolecta la información estructural de los ensambles de IDPs y proteÍnas desnaturalizadas determinadas por RMN o SAXS. La última versión cuenta con 195 entradas con 275 ensambles con más de 263562 estructuras proteicas correspondiente a un total de 102 proteínas (Febrero 2022).</p>
+<p>El primer lanzamiento de la base de datos <a href="https://proteinensemble.org/">PED</a> fue en el año 2013. PED recolecta la información estructural de los ensambles de IDPs y proteÍnas desnaturalizadas determinadas por RMN o SAXS. La última versión cuenta con 481 entradas con 560 ensambles con más de 325000 estructuras proteicas correspondiente a un total de 305 proteínas (Mayo 2024).</p>
 <ol>
 <li>
-<p>Busque en la base de datos PED la proteína E1A (P03255). Ingrese a la entrada que no posee a Rb. Baje un ensamble y abra el ensamble en Chimera.</p>
+<p>Busque en la base de datos PED la proteína E1A (P03255). Ingrese a la entrada que <strong>no posee a Rb (P06400)</strong>. Baje un ensamble y abra el ensamble en Chimera.</p>
 <ul>
 <li>¿Cuantos modelos tiene?</li>
 </ul>
 </li>
 <li>
-<p>Seleccione una region de residuos:
-      </p><div class="highlight"><pre><span></span><code>select :90-60
+<p>Seleccione una region de residuos:</p>
+<div class="highlight"><pre><span></span><code>select :90-60
 </code></pre></div>
 </li>
 <li>
-<p>Intente utilizar el matchmaker para alinear esa región (Further restrict matching to current selection debe estar tildado)</p>
+<p>Intente utilizar el matchmaker para alinear esa región (<em>Further restrict matching to current selection</em> debe estar tildado)</p>
 <ul>
 <li>
 <p>¿Pudo alinear las proteínas?</p>
@@ -1240,11 +1346,11 @@ La proteína p53 es una proteína supresora de tumores, es decir que su mutació
 </li>
 </ol>
 <h3 id="ejercicio-4-base-de-datos-de-proteinas-involucradas-en-liquid-liquid-phase-separation">Ejercicio 4. Base de datos de proteínas involucradas en liquid-liquid phase separation</h3>
-<p><a href="https://phasepro.elte.hu/">PhaSePro</a> es una base de datos de proteínas involucradas en liquid-liquid phase separation (LLPS) en células. LLPS es un proceso molecular que forma organelas sin membrana que median funciones celulares cruciales.
-PhaSePro es curada manualmente y abarca únicamente casos verificados de LLPS integrando un amplio rango de información biofísica, funciones biológicas y regulación de estos sistemas moleculares.</p>
+<p><a href="https://phasepro.elte.hu/">PhaSePro</a> es una base de datos de proteínas involucradas en liquid-liquid phase separation (LLPS) en células. LLPS es un proceso molecular que forma organelas sin membrana que median funciones celulares cruciales.</p>
+<p>PhaSePro es curada manualmente y abarca únicamente casos verificados de LLPS integrando un amplio rango de información biofísica, funciones biológicas y regulación de estos sistemas moleculares.</p>
 <ol>
-<li>Ingrese a phase pro</li>
-<li>Investigue las distintas organellas. ¿Reconoce alguna?</li>
+<li>Ingrese a PhaSePro</li>
+<li>Entre a Browse/Search e investigue las distintas organellas. ¿Reconoce alguna?</li>
 <li>Busque la entrada: P35974</li>
 <li>¿Qué region media LLPS?</li>
 <li>Busque en disprot la entrada de la proteína homóloga: <code>DP00133 - Phosphoprotein</code>.</li>
@@ -1352,36 +1458,43 @@ LDDQRRMMTPQKLREYQDIIREVKDANA
 <li>Pruebe ingresando sólo el dominio de interés ¿Mejora?</li>
 </ul>
 </li>
-</ol></div>
+</ol>
 
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+              
+            </article>
+            
+          </div>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-  Volver al principio
-</button>
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </a>
         
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pie" >
+      
+        
+        <a href="../ppi/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: TP5 - Interacciones Proteína-Proteína" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              TP5 - Interacciones Proteína-Proteína
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1407,12 +1520,10 @@ LDDQRRMMTPQKLREYQDIIREVKDANA
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
-    
-    
-      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a877e258.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
@@ -1425,7 +1536,5 @@ LDDQRRMMTPQKLREYQDIIREVKDANA
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

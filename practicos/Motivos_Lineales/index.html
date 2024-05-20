@@ -12,11 +12,8 @@
       
         <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/Motivos_Lineales/">
       
-      
-      
-      
       <link rel="icon" href="../../img/logo-unsam-negro.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
     
     
       
@@ -24,17 +21,14 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4a0965b7.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
       
       
-
-
     
-    
-      
     
     
       
@@ -48,23 +42,24 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-    
    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -76,6 +71,9 @@
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
   
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -103,7 +101,6 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -123,39 +120,31 @@
       </div>
     </div>
     
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
       <label class="md-header__button md-icon" for="__search">
-        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
@@ -164,20 +153,16 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
-          
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -191,7 +176,7 @@
           <div class="md-search-result__meta">
             Inicializando búsqueda
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
+          <ol class="md-search-result__list"></ol>
         </div>
       </div>
     </div>
@@ -210,21 +195,80 @@
           
             
 <nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
-  <div class="md-grid">
+  <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Inicio
+    </a>
+  </li>
+
+      
         
   
-    
   
-  Inicio
 
+
+  <li class="md-tabs__item">
+    <a href="../../acerca/" class="md-tabs__link">
+      Acerca de
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../contenidos/" class="md-tabs__link">
+      Contenidos
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../cronograma/" class="md-tabs__link">
+      Cronograma
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../docentes/" class="md-tabs__link">
+      Docentes
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../teoricas/inicio/" class="md-tabs__link">
+        Teóricas
       </a>
     </li>
   
@@ -233,104 +277,16 @@
         
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../../acerca/" class="md-tabs__link">
-        
-  
-    
-  
-  Acerca de
 
-      </a>
-    </li>
-  
 
-      
-        
   
   
   
     <li class="md-tabs__item">
-      <a href="../../contenidos/" class="md-tabs__link">
-        
-  
-    
-  
-  Contenidos
-
+      <a href="../inicio/" class="md-tabs__link">
+        Prácticos
       </a>
     </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../cronograma/" class="md-tabs__link">
-        
-  
-    
-  
-  Cronograma
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../docentes/" class="md-tabs__link">
-        
-  
-    
-  
-  Docentes
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../teoricas/inicio/" class="md-tabs__link">
-          
-  
-  Teóricas
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../inicio/" class="md-tabs__link">
-          
-  
-  Prácticos
-
-        </a>
-      </li>
-    
   
 
       
@@ -349,7 +305,6 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-
 
   
 
@@ -370,19 +325,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inicio
-  </span>
-  
-
+        Inicio
       </a>
     </li>
   
@@ -390,19 +340,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../../acerca/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Acerca de
-  </span>
-  
-
+        Acerca de
       </a>
     </li>
   
@@ -410,19 +355,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../../contenidos/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Contenidos
-  </span>
-  
-
+        Contenidos
       </a>
     </li>
   
@@ -430,19 +370,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../../cronograma/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Cronograma
-  </span>
-  
-
+        Cronograma
       </a>
     </li>
   
@@ -450,19 +385,14 @@
     
       
       
-  
+      
+
   
   
   
     <li class="md-nav__item">
       <a href="../../docentes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Docentes
-  </span>
-  
-
+        Docentes
       </a>
     </li>
   
@@ -470,342 +400,250 @@
     
       
       
-  
-  
-  
-  
-    
-    
-    
       
-      
-    
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Teóricas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teóricas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Teóricas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Teóricas
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Teóricas
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/inicio/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inicio
-  </span>
-  
-
+        Inicio
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica1a/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Teórica 1a
-  </span>
-  
-
+        Teórica 1a
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica1b/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Teórica 1b
-  </span>
-  
-
+        Teórica 1b
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Teórica 2
-  </span>
-  
-
+        Teórica 2
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica3/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Teórica 3
-  </span>
-  
-
+        Teórica 3
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../../teoricas/teorica4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Teórica 4
-  </span>
-  
-
+        Teórica 4
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+        </ul>
+      </nav>
     </li>
   
 
     
       
       
-  
-  
-  
-  
-    
-    
-    
       
-      
-    
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Prácticos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Prácticos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Prácticos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Prácticos
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Prácticos
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../inicio/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inicio
-  </span>
-  
-
+        Inicio
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../db_uniprot/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TP1 - Bases de Datos
-  </span>
-  
-
+        TP1 - Bases de Datos
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../chimera/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TP2 - Chimera
-  </span>
-  
-
+        TP2 - Chimera
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../Modelado_Por_Homologia/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TP3 - Modelado por homología
-  </span>
-  
-
+        TP3 - Modelado por homología
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../modelado_alphafold/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TP4 - Modelado Parte II
-  </span>
-  
-
+        TP4 - Modelado Parte II
       </a>
     </li>
   
 
-              
+            
+          
             
               
-                
-  
   
   
   
     <li class="md-nav__item">
       <a href="../ppi/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TP5 - Interacciones Proteína-Proteína
-  </span>
-  
-
+        TP5 - Interacciones Proteína-Proteína
       </a>
     </li>
   
 
-              
             
-          </ul>
-        </nav>
-      
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Regiones-flexibles/" class="md-nav__link">
+        TP6 - Predicción de desorden y Bases de Datos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -818,16 +656,15 @@
             
             
           
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
                 
-                  
 
 
   <h1>TP N°8</h1>
 
-<html><head><style>
+<style>
 details > summary:first-of-type {
    display: list-item;
 }
@@ -840,16 +677,7 @@ details summary > * {
 }
 </style>
 
- <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head><body><p>{% if page.construccion %}</p>
+<p>{% if page.construccion %}</p>
 <p><strong>Pagina en construccion</strong></p>
 <p>{% else %}</p>
 <h2 id="materiales">Materiales</h2>
@@ -919,13 +747,11 @@ details summary > * {
 <ul>
 <li>¿Encuentra el motivo NRBox entre los True positives?</li>
 <li>¿Cuántas instancias True Positive existen para esta proteína?</li>
-<li>
-<p>¿Cómo es la estructura de la proteína donde se encuentran estos motivos?</p>
-</li>
-<li>
-<p>Pegue y copie la siguiente secuencia en ELM y utilice los parámetros que se indican a continuación.</p>
-</li>
+<li>¿Cómo es la estructura de la proteína donde se encuentran estos motivos?</li>
 </ul>
+<ol start="2">
+<li>Pegue y copie la siguiente secuencia en ELM y utilice los parámetros que se indican a continuación.</li>
+</ol>
 <div class="highlight"><pre><span></span><code>&gt;seq
 MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDI  
 EQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQ  
@@ -949,16 +775,14 @@ KDAQAGKEPGGSRAHSSHLKSKKGQSTSRHKKLMFKTEGPDSD
 <li>¿Cuántas son retenidas luego del filtro?</li>
 <li>¿Qué se puede decir sobre la estructura de la proteína? ¿Se observa algún dominio?</li>
 <li>¿Se observan regiones desordenadas?</li>
-<li>
-<p>¿Los predictores estructurales y filtros (SMART, GlobPlot, IUPRED, Secondary Structure) coinciden sobre qué regiones son estructuradas/desordenadas?</p>
-</li>
-<li>
-<p>Por si no se dió cuenta, la proteína utilizada en el ejercicio anterior es p53 de humanos.</p>
-</li>
+<li>¿Los predictores estructurales y filtros (SMART, GlobPlot, IUPRED, Secondary Structure) coinciden sobre qué regiones son estructuradas/desordenadas?</li>
 </ul>
-<p>Abra en una nueva pestaña la página de <a href="http://elm.eu.org/">ELMdb</a>.<br>
-   Vaya de nuevo a la pestaña de predicción.<br>
-   Limpie el formulario con el botón Reset Form.<br>
+<ol start="3">
+<li>Por si no se dió cuenta, la proteína utilizada en el ejercicio anterior es p53 de humanos.</li>
+</ol>
+<p>Abra en una nueva pestaña la página de <a href="http://elm.eu.org/">ELMdb</a>.<br />
+   Vaya de nuevo a la pestaña de predicción.<br />
+   Limpie el formulario con el botón Reset Form.<br />
    Ingrese el Uniprot ID de la proteína (P53_human).</p>
 <ul>
 <li>¿Qué compartimentos celulares se le asignaron? ¿Tienen sentido?</li>
@@ -976,8 +800,8 @@ KDAQAGKEPGGSRAHSSHLKSKKGQSTSRHKKLMFKTEGPDSD
    * ¿Cuántos degrons anotados hay en p53? ¿Cuál es la función de estos motivos?
    * ¿Existe algún sitio anotado CDK en p53?
    * ¿Existe algún sitio anotado <code>DOC_CYCLIN_RXL_1</code>? ¿Qué relación funcional existe entre este sitio y el sitio CDK?</p>
-<p>Abra una nueva pestaña y vaya de nuevo a la pestaña de predicción en <a href="http://elm.eu.org/">ELMdb</a>.<br>
-   Limpie el formulario con el botón Reset Form.<br>
+<p>Abra una nueva pestaña y vaya de nuevo a la pestaña de predicción en <a href="http://elm.eu.org/">ELMdb</a>.<br />
+   Limpie el formulario con el botón Reset Form.<br />
    Ingrese el UniProt ID (P53_HUMAN) y modifique el parámetro:  </p>
 <blockquote>
 <p><strong>Motif Probability Cutoff:</strong> 0.01 (Recuerde que en el punto anterior este parámetro era de 100)</p>
@@ -998,13 +822,11 @@ KDAQAGKEPGGSRAHSSHLKSKKGQSTSRHKKLMFKTEGPDSD
 <p>Numerosas proteínas virales interactúan con Rb, vía estos motivos de manera tal que desregulan la interacción de Rb con E2F y otros reguladores del ciclo celular forzando la progresión del ciclo celular.</p>
 <p>El core del motivo LxCxE es: consiste en 3 posiciones fijas que median la interacción con Rb: L, C, y E.</p>
 <ol>
-<li>
-<p>Abra en Chimera el PDB: 1GUX.</p>
-</li>
-<li>
-<p>Identifique qué proteínas forman parte del complejo.</p>
-</li>
+<li>Abra en Chimera el PDB: 1GUX.</li>
 </ol>
+<ul>
+<li>Identifique qué proteínas forman parte del complejo.</li>
+</ul>
 <div class="highlight"><pre><span></span><code>sel #0:.A #0:.B; namesel Rb_1gux
 sel #0:.E;namesel LxCxE
 </code></pre></div>
@@ -1023,13 +845,11 @@ display LxCxE
 color byhet,a LxCxE
 </code></pre></div>
 <ul>
-<li>
-<p>¿Puede identificar las posiciones core del motivo?</p>
-</li>
-<li>
-<p>Identifique si existe formación de puentes de hidrógeno entre el péptido que contiene el motivo y Rb.</p>
-</li>
+<li>¿Puede identificar las posiciones core del motivo?</li>
 </ul>
+<ol start="2">
+<li>Identifique si existe formación de puentes de hidrógeno entre el péptido que contiene el motivo y Rb.</li>
+</ol>
 <ul class="block-list has-radius is-primary">
    <li class="is-outlined is-info has-icon">
    <span class="icon"><i class="fas fa-lightbulb fa-2x"></i></span>
@@ -1047,15 +867,13 @@ color byhet,a LxCxE
 
 <ul>
 <li>¿Qué puentes de hidrógeno puede observar? ¿Se dan entre residuos de la cadena principal del péptido/dominio, o entre residuos de la cadena lateral?</li>
-<li>
-<p>¿Cuáles de estos tipos de puentes de hidrógeno diría que contribuyen a la afinidad del motivo y cuáles a la especificidad?</p>
-</li>
-<li>
-<p>Seleccione los residuos de Rb que interactúan con los residuos del core del motivo. </p>
-</li>
-<li>
-<p>Pensar: ¿Cómo haría esto? ¿Cómo se define una interacción o contacto? (Pista... comando <code>zr</code>)</p>
-</li>
+<li>¿Cuáles de estos tipos de puentes de hidrógeno diría que contribuyen a la afinidad del motivo y cuáles a la especificidad?</li>
+</ul>
+<ol start="3">
+<li>Seleccione los residuos de Rb que interactúan con los residuos del core del motivo. </li>
+</ol>
+<ul>
+<li>Pensar: ¿Cómo haría esto? ¿Cómo se define una interacción o contacto? (Pista... comando <code>zr</code>)</li>
 <li>
 <p>¿Qué carácter químico tienen los residuos identificados?</p>
 </li>
@@ -1064,7 +882,7 @@ color byhet,a LxCxE
 </li>
 </ul>
 <p>El core del motivo LxxLFD que se encuentra en los factores de transcripcion E2F consiste en 4 posiciones fijas que median la interacción con Rb: L, L, F y D.</p>
-<ol>
+<ol start="4">
 <li>
 <p>Abra en chimera el PDB: 1N4M</p>
 </li>
@@ -1090,7 +908,7 @@ ribscale licorice E2F
 display E2F
 color byhet,a E2F
 </code></pre></div>
-<ol>
+<ol start="7">
 <li>
 <p>Identifique los residuos “core” del motivo (que en esta proteína es IxxLFD).</p>
 </li>
@@ -1124,14 +942,12 @@ color byhet,a E2F
    </li>
    </ul>
 
-<ol>
-<li>
-<p>Seleccione los residuos de Rb que interactúan con dichas posiciones.</p>
-</li>
-<li>
-<p>¿Qué carácter químico tienen estos residuos?</p>
-</li>
+<ol start="9">
+<li>Seleccione los residuos de Rb que interactúan con dichas posiciones.</li>
 </ol>
+<ul>
+<li>¿Qué carácter químico tienen estos residuos?</li>
+</ul>
 <p>No cierre la sesión ya que seguiremos analizando este complejo en el siguiente ejercicio.</p>
 <h3 id="ejercicio-4-analizando-superficies-de-interaccion-entre-motivos-lineales-y-proteinas-globulares">Ejercicio 4. Analizando superficies de interacción entre motivos lineales y proteínas globulares</h3>
 <h4 id="1-analisis-de-superficies-hidrofobicas">1. Análisis de superficies hidrofóbicas.</h4>
@@ -1266,7 +1082,7 @@ Ingrese su email
 y haga click en <em>submit</em></li>
 </ul>
 </blockquote>
-<ol>
+<ol start="2">
 <li>Descargue los resultados de Consurf haciendo click en <em>Download all ConSurf outputs in a click!</em></li>
 <li>En la sesión de chimera que tiene con los motivos, abra el pdb que se encuentra entre los archivos descargados de consurf que se llama: <code>PocketDomain_pdb_ATOMS_section_With_ConSurf.pdb</code></li>
 <li>Deseleccione la superficie en model panel (recuerde que debe destildar la S)</li>
@@ -1283,12 +1099,12 @@ y haga click en <em>submit</em></li>
    </li>
    </ul>
 
-<ol>
+<ol start="6">
 <li>Ahora vamos a colorear utilizando los mismos colores que usa consurf utilizando el script que se encuentra en los materiales descargados, para eso:</li>
 </ol>
 <p><em>File → Open</em></p>
 <p>En <em>File Type</em> seleccione <em>Chimera commands [.com,.cmd]</em></p>
-<ol>
+<ol start="7">
 <li>Muestre la surperficie</li>
 </ol>
 <div class="highlight"><pre><span></span><code>surface #2
@@ -1324,14 +1140,14 @@ y haga click en <em>submit</em></li>
 </ul>
 </blockquote>
 <p>Luego, corra todo con <code>ctrl+F9</code> o vaya a <em>Runtime → Runall</em></p>
-<ol>
+<ol start="2">
 <li>Abra el modelo obtenido por AlphaFold2 en chimera.</li>
 <li>Abra el pdb 1GUX</li>
 <li>Alinee ambos complejos representados en ribbon.</li>
 <li>Oculte las posiciones que se observan (~display)</li>
 <li>Represente ambos motivos en licorice (ribscale licorice) (recuerde seleccionar el motivo correspondiente antes!) y muestre las cadenas laterales coloreando por heteroatomos.</li>
 </ol>
-<p></p><div class="highlight"><pre><span></span><code>sel #0:.E, namesel E7
+<p><div class="highlight"><pre><span></span><code>sel #0:.E, namesel E7
 sel #1:.E, namesel HDAC
 ribscale licorice E7
 ribscale licorice HDAC
@@ -1344,7 +1160,7 @@ display HDAC
    * ¿Por qué podría tener más baja afinidad HDAC1 que E7?
    * Observa la posición hidrofóbica luego del core del motivo: LxCxE para E7 y para HDAC. 
    * ¿Observa variabilidad en la posición hidrofóbica?
-   * Busque en ELM el motivo LxCxE: <code>LIG_Rb_LxCxE_1</code>. La expresión regular observará que es mucho más compleja que LxCxE ¿Observa la variabilidad de la posición hidrofóbica en la regex?
+   * Busque en ELM el motivo LxCxE: <code>LIG_Rb_LxCxE_1</code>. La expresión regular observará que es mucho más compleja que LxCxE ¿Observa la variabilidad de la posición hidrofóbica en la regex?</p>
 <h2 id="ejercicios-adicionales">Ejercicios Adicionales</h2>
 <h3 id="ejercicio-adicional-1-motivos-lineales-en-proteinas-virales">Ejercicio Adicional 1. Motivos lineales en proteínas virales</h3>
 <p>La familia viral Adenoviridae (adenovirus) son virus ADNdc desnudos. Los adenovirus que infectan a humanos son responsables de muchas enfermedades respiratorias y de numerosos casos de gastroenteritis en niños. El único género de adenovirus que posee la proteína E1A es el género Mastadenovirus que infecta a mamíferos. Hasta la fecha, no existe ningún homólogo reportado en los restantes géneros de esta familia viral. La proteína E1A posee un rol importante en la replicación del genoma viral ya que desregula el ciclo celular induciendo la división celular. Esta estimulación de la progresión de la fase G1 a la fase S, permite que el virus use la maquinaria celular de replicación del ADN para replicar su propio genoma. Una vez expresada la proteína E1A su localización en la célula infectada es nuclear y minoritariamente citosólica.</p>
@@ -1360,54 +1176,50 @@ display HDAC
 </ul>
 </blockquote>
 <ul>
-<li>
-<p>¿Cuántas clases y cuántas instancias de motivos encuentras?</p>
-</li>
-<li>
-<p>En base a los conocimientos que poseemos de E1A_ADE05 modifique los parámetros Cell Compartment (se puede seleccionar más de un compartimento celular utilizando la tecla ctrl) y taxonomic context.</p>
-</li>
-<li>
-<p>¿Cómo cambia el número de motivos encontrados?</p>
-</li>
+<li>¿Cuántas clases y cuántas instancias de motivos encuentras?</li>
+</ul>
+<ol start="2">
+<li>En base a los conocimientos que poseemos de E1A_ADE05 modifique los parámetros Cell Compartment (se puede seleccionar más de un compartimento celular utilizando la tecla ctrl) y taxonomic context.</li>
+</ol>
+<ul>
+<li>¿Cómo cambia el número de motivos encontrados?</li>
 <li>¿Qué otros filtros observa que está utilizando ELM? ¿Por qué se le ocurre que se eligen automáticamente esos filtros?</li>
+<li>¿Qué se puede decir de la estructura de la proteína E1A? ¿Se observa algún dominio? ¿Se observan regiones desordenadas?</li>
+</ul>
+<ol start="3">
+<li>En cada una de las clases de motivos encontrados, se indica con distintos símbolos (descriptos en la parte superior de la página) si la instancia del motivo es predicha o fue identificada experimentalmente (instancias anotadas o True Positives). </li>
+</ol>
+<ul>
+<li>¿Cuantas instancias anotadas existen?</li>
+</ul>
+<ol start="4">
 <li>
-<p>¿Qué se puede decir de la estructura de la proteína E1A? ¿Se observa algún dominio? ¿Se observan regiones desordenadas?</p>
-</li>
-<li>
-<p>En cada una de las clases de motivos encontrados, se indica con distintos símbolos (descriptos en la parte superior de la página) si la instancia del motivo es predicha o fue identificada experimentalmente (instancias anotadas o True Positives). </p>
-</li>
-<li>
-<p>¿Cuantas instancias anotadas existen?</p>
-</li>
-<li>
-<p>E1A tiene dos motivos de interacción con la proteína Retinoblastoma, un regulador del ciclo celular (motivo AB_groove y motivo LxCxE). Explore la clase <code>LIG_Rb_LxCxE_1</code>, para esto haga click sobre el nombre de la misma, en la lista de la izquierda. Se abrirá la página correspondiente a esa clase donde se listan todas las instancias reportadas en la literatura que están anotadas en ELM.</p>
-</li>
-<li>
-<p>¿En qué tipos de proteínas se encuentra el motivo LxCxE?</p>
+<p>E1A tiene dos motivos de interacción con la proteína Retinoblastoma, un regulador del ciclo celular (motivo AB_groove y motivo LxCxE). Explore la clase <code>LIG_Rb_LxCxE_1</code>, para esto haga click sobre el nombre de la misma, en la lista de la izquierda. Se abrirá la página correspondiente a esa clase donde se listan todas las instancias reportadas en la literatura que están anotadas en ELM.
+   * ¿En qué tipos de proteínas se encuentra el motivo LxCxE?</p>
 </li>
 <li>
 <p>Existen dos tipos de instancias.
    <em>True Positives (TP):</em> Son instancias identificadas por la expresión regular y que la evidencia experimental muestra que es funcional.
    <em>False Positives (FP):</em> Son instancias identificadas por la expresión regular, que la evidencia experimental sugieren que son funcionales, pero cuando fue evaluada se cree que no es realmente funcional.</p>
 </li>
-<li>
-<p>¿Se te ocurre algún ejemplo donde esto pueda ocurrir?</p>
-</li>
-<li>
-<p>Busque en ELM E1A_ADECR.</p>
-</li>
-<li>¿Cuál es el contexto taxonómico?</li>
-<li>
-<p>¿Cuántas instancias anotadas hay? ¿Se encuentran los motivos anotados de E1A_ADE05? ¿A qué puede deberse?</p>
-</li>
-<li>
-<p>La proteína Retinoblastoma (Rb) controla la transición en el ciclo celular de la fase G1 a la fase S mediante la interacción con factores de transcripción de la familia E2F.</p>
-</li>
-<li>Vaya a ProViz (http://proviz.ucd.ie/) y busque la proteína E2F1_HUMAN (Q01094).</li>
-<li>¿Puede identificar el motivo de interacción con Rb? (Pista: Hay una línea a la izquierda que se llama ELM).</li>
-<li>El motivo ¿Está en un contexto estructural desordenado? ¿Se encuentra conservado? ¿Es el mismo motivo usado por la proteína E1A para interactuar con Rb?</li>
-<li>¿Qué otros motivos identifica? ¿Algunos de estos motivos están involucrados en el ciclo celular?</li>
+</ol>
+<ul>
+<li>¿Se te ocurre algún ejemplo donde esto pueda ocurrir?</li>
 </ul>
+<ol start="6">
+<li>
+<p>Busque en ELM E1A_ADECR.
+   * ¿Cuál es el contexto taxonómico?
+   * ¿Cuántas instancias anotadas hay? ¿Se encuentran los motivos anotados de E1A_ADE05? ¿A qué puede deberse?</p>
+</li>
+<li>
+<p>La proteína Retinoblastoma (Rb) controla la transición en el ciclo celular de la fase G1 a la fase S mediante la interacción con factores de transcripción de la familia E2F.
+   * Vaya a ProViz (http://proviz.ucd.ie/) y busque la proteína E2F1_HUMAN (Q01094).
+   * ¿Puede identificar el motivo de interacción con Rb? (Pista: Hay una línea a la izquierda que se llama ELM).
+   * El motivo ¿Está en un contexto estructural desordenado? ¿Se encuentra conservado? ¿Es el mismo motivo usado por la proteína E1A para interactuar con Rb?
+   * ¿Qué otros motivos identifica? ¿Algunos de estos motivos están involucrados en el ciclo celular?</p>
+</li>
+</ol>
 <h3 id="ejercicio-adicional-2-motivos-lineales-en-la-proteina-caga-de-helicobacter-pylori">Ejercicio Adicional 2. Motivos lineales en la Proteína CagA de Helicobacter pylori.</h3>
 <p>La infección por <em>H. pylori</em> puede causar gastritis, úlcera péptica o cáncer de estómago. Hay una mayor probabilidad de desarrollar cáncer estomacal si la infección es producida por una cepa del Este asiático (como F32) en comparación a una cepa del Oeste (como NCTC 11637). Estas cepas difieren en el número y contexto de secuencia de los motivos EPIYA (Higashi, H., et al., 2002; Jones, K.R., et al., 2009).</p>
 <ol>
@@ -1479,13 +1291,11 @@ SSFVQFLTNTFSTGSYSLMKANVEHGVKNTNTKGGFQKS
 <ul>
 <li>¿Todas las secuencias tienen ambos motivos?</li>
 <li>¿Los distintos ejemplos de motivos están alineados o se encuentran en lugares diferentes de la secuencia?</li>
-<li>
-<p>Algunos motivos están yuxtapuestos ¿considera que pueden ser los dos funcionales al mismo tiempo?</p>
-</li>
-<li>
-<p>Existe evidencia que el ciclo celular puede ser interrumpido por la cepa patogénica de E. coli (PMID: 11598051).</p>
-</li>
+<li>Algunos motivos están yuxtapuestos ¿considera que pueden ser los dos funcionales al mismo tiempo?</li>
 </ul>
+<ol start="3">
+<li>Existe evidencia que el ciclo celular puede ser interrumpido por la cepa patogénica de E. coli (PMID: 11598051).</li>
+</ol>
 <p>El dominio SH2 une un motivo que posee una tirosina fosforilada. Busque el motivo SH2 utilizando la expresión regular del motivo SH2: <code>Y..[IVLM]</code></p>
 <ul>
 <li>¿Todas las secuencias tienen motivos SH2?</li>
@@ -1495,70 +1305,49 @@ SSFVQFLTNTFSTGSYSLMKANVEHGVKNTNTKGGFQKS
 <p>Las proteínas efectoras CagA son secretadas por la cepa patogénica de Helicobacter ingresando directamente al citoplasma de la célula huésped, en parte utilizando un motivo funcional llamado motivo EPIYA. Estas proteínas modulan el citoesqueleto de actina y el estado general de la célula.</p>
 <ol>
 <li>Cargue el alineamiento de las proteínas CagA.(CagA_aligned.fasta).</li>
-<li>Busque el motivo EPIYA utilizando la expresión regular del motivo: <code>EP[IL]Y[TAG]</code></li>
-<li>¿Las secuencias de CagA: tienen un motivo EPIYA o más de uno?</li>
-<li>¿Todas las secuencias tienen el mismo número?</li>
-<li>¿Cuál es el mayor número de motivos EPIYA en una proteína?</li>
-<li>¿Algún motivo EPIYA se superpone con algún motivo SH2?</li>
-<li>¿Cree que las proteínas CagA son fosforiladas por tirosin-quinasas?</li>
+<li>Busque el motivo EPIYA utilizando la expresión regular del motivo: <code>EP[IL]Y[TAG]</code>
+   * ¿Las secuencias de CagA: tienen un motivo EPIYA o más de uno?
+   * ¿Todas las secuencias tienen el mismo número?
+   * ¿Cuál es el mayor número de motivos EPIYA en una proteína?
+   * ¿Algún motivo EPIYA se superpone con algún motivo SH2?
+   * ¿Cree que las proteínas CagA son fosforiladas por tirosin-quinasas?</li>
 </ol>
 <h3 id="ejercicio-adicional-5-familiarizandose-con-la-base-de-datos-elm">Ejercicio Adicional 5. Familiarizándose con la base de datos ELM.</h3>
 <ol>
 <li>Realice la búsqueda de la secuencia de la proteína Paxillina (P49023) en ELM, utilizando los parámetros por defecto. Compare los resultados con una búsqueda de la misma secuencia pero modificando el parámetro cellular compartment plasma membrane.</li>
-<li>Busque la proteína SRC_MOUSE (P05480) en ELM.</li>
-<li>¿Existen instancias anotadas?</li>
-<li>Si no, ¿cuál es la instancia anotada más cercana que se puede encontrar?. Investigue de dónde proviene esta información.</li>
-<li>Busque en ELM la proteína MDM4_HUMAN y encuentre el motivo de unión a USP (DOC_USP7_MATH_1).</li>
-<li>¿Cuántas instancias del motivo se encuentran en esta secuencia?</li>
-<li>Busque en ELM la proteína AMPH_HUMAN y encuentre la clase <code>LIG_Clathr_ClatBox_1</code>.</li>
-<li>¿Cuál es la relevancia biológica de cada una de estas instancias?</li>
+<li>Busque la proteína SRC_MOUSE (P05480) en ELM.
+   * ¿Existen instancias anotadas?
+   * Si no, ¿cuál es la instancia anotada más cercana que se puede encontrar?. Investigue de dónde proviene esta información.</li>
+<li>Busque en ELM la proteína MDM4_HUMAN y encuentre el motivo de unión a USP (DOC_USP7_MATH_1).
+   * ¿Cuántas instancias del motivo se encuentran en esta secuencia?</li>
 <li>
-<p>¿La anotación de la relevancia biológica coincide con la estructura globular?</p>
+<p>Busque en ELM la proteína AMPH_HUMAN y encuentre la clase <code>LIG_Clathr_ClatBox_1</code>.
+   * ¿Cuál es la relevancia biológica de cada una de estas instancias?
+   * ¿La anotación de la relevancia biológica coincide con la estructura globular?</p>
 </li>
 <li>
-<p>Busque todas las instancias anotadas para Homo sapiens que contienen el término cilium (pista: Usa http://elm.eu.org/elms/browse_instances.html).</p>
-</li>
-<li>¿Cuántas instancias hay?</li>
-<li>
-<p>¿Qué evidencia experimental está anotada y cuán confiable es esta evidencia?</p>
+<p>Busque todas las instancias anotadas para Homo sapiens que contienen el término cilium (pista: Usa http://elm.eu.org/elms/browse_instances.html).
+   * ¿Cuántas instancias hay?
+   * ¿Qué evidencia experimental está anotada y cuán confiable es esta evidencia?</p>
 </li>
 <li>
-<p>Busque todas las instancias anotadas que contienen el término ”retinoblastoma” (Pista: usa http://elm.eu.org/elms/browse_instances.html).</p>
+<p>Busque todas las instancias anotadas que contienen el término ”retinoblastoma” (Pista: usa http://elm.eu.org/elms/browse_instances.html).
+   * Compare el número de instancias humanas con el número de instancias virales.
+   * ¿Por qué hay tantas proteínas virales que interactúan con retinoblastoma? (Pista: La respuesta está en el abstract de la clase del motivo <code>LIG_Rb_LxCxE_1</code>)</p>
 </li>
-<li>Compare el número de instancias humanas con el número de instancias virales.</li>
-<li>¿Por qué hay tantas proteínas virales que interactúan con retinoblastoma? (Pista: La respuesta está en el abstract de la clase del motivo <code>LIG_Rb_LxCxE_1</code>)</li>
 </ol>
-<p>{% endif %}</p><script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body></html>
+<p>{% endif %}</p>
 
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+              
+            </article>
+            
+          </div>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-  Volver al principio
-</button>
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Volver al principio
+          </a>
         
       </main>
       
@@ -1588,12 +1377,10 @@ document$.subscribe(() => { lightbox.reload() });
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
-    
-    
-      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a877e258.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
@@ -1606,5 +1393,5 @@ document$.subscribe(() => { lightbox.reload() });
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
