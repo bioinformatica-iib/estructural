@@ -269,27 +269,31 @@ La expresión regular del motivo de unión a Rev1 está definida en la base de d
         Si no entiende esta expresión regular, o no llegó a algo parecido ¡consulte a sus docentes!
 
 SLiMSearch es una herramienta que, utilizando expresiones regulares, permite buscar la presencia de motivos conocidos en las proteínas almacenadas en UniProt y priorizarlos según datos adicionales. Por ejemplo, SLiMSearch informa las características de la arquitectura de regiones y dominios de la secuencia portadora del motivo, sus variantes secuenciales y modificaciones postraduccionales, su estructura (en caso de ser conocida), medidas de conservación evolutiva y accesibilidad de los motivos, y el enriquecimiento del posible motivo en funciones conocidas.
+
+* **Antes de Empezar con SLiMSearch:** Busque en [UniProt](https://www.uniprot.org/) a Rev1 (Q9UBZ9). ¿Cuál es la localización celular de Rev1?
  
 Vaya a la web de [SLiMSearch](http://slim.icr.ac.uk/slimsearch/) e ingrese la expresión regular del motivo indicada en este ejercicio. En el campo *Choose species* puede elegir sobre qué proteoma buscar; por default se buscará en *Homo sapiens*.
  
 1. ¿Cuántos motivos (hits) y cuántas proteínas obtuvo?
+
 2. Explore la lista de proteínas. ¿Encuentra algunas de las proteínas o sus homólogos que estaban en sus secuencias originales? ¿Qué significa si las encontró?
+
 3. En la parte superior de la tabla haga click en *expand*.
 
     Las últimas columnas que están resumidas van a mostrar más información.
 
     * ¿Cuáles de estos campos le parecen más interesantes para intentar reconocer verdaderos motivos?
 
-4. Busque en [UniProt](https://www.uniprot.org/) a Rev1 (Q9UBZ9). ¿Cuál es la localización celular de Rev1?
+4. Ordene la tabla por el score de conservación (a menor score, mayor conservación) en *Mammalia*.
 
 5. Explore la lista de proteínas y observe las coloreadas en amarillo. Tienen un *Warning*. Al pie de la tabla se indica lo que significa cada tono de amarillo.
 
-    * ¿A qué se debe el warning de la **ProInterleukina 16, IL16**? ¿Por qué cree que es útil?
+    * ¿A qué se debe el warning de la **BTB/POZ domain-containing protein KCTD8**? ¿Por qué cree que es útil?
     * Observe la **DNA polymerase delta subunit 3 (POLD3)**.
+        * ¿Cuántas veces aparece en la hoja 1?
         * ¿Se corresponde con la región de la POLD3 en su conjunto de secuencias?
-        * ¿Porqué tiene un warning? (una pista: Observe la columna Domain y coloque el mouse sobre el nombre del dominio para ver sus límites).
 
-6. Busque en la lista la proteína **Kinesin-like protein KIF26A (KIF26A)**, y averigüe su localización.
+6. Busque en la lista la proteína **Kinesin-like protein KIF11 (KIF11)**, y averigüe su localización.
 
     * ¿Tiene sentido tener esta proteína como candidata para evaluar su interacción con Rev1?
 
@@ -299,19 +303,22 @@ Vaya a la web de [SLiMSearch](http://slim.icr.ac.uk/slimsearch/) e ingrese la ex
     
     Haga click en *Localisation*.
     
-    Luego, en la tabla busque los términos relacionados al núcleo (nuclear part, nucleus, etc serían los 6 primeros que salen de escribir “nucl” en la búsqueda) y selecciónelos para realizar un *Filter In* (es decir, quedarse con las instancias que poseen dicha localización).
+    Luego, en la tabla busque los términos relacionados al núcleo (nuclear part, nucleus, etc serían aproximadamente doce términos que están primeros y últimos al escribir “nucl” en la búsqueda) y selecciónelos para realizar un *Filter In* (es decir, quedarse con las instancias que poseen dicha localización, asegúrese que Nucleus y nucleus estén seleccionados).
 
-8. Encuentre en la lista de proteínas filtradas la proteína: **Chromosome transmission fidelity protein 18 homolog (CHTF18)** (Q8WVB6).
+    Luego, haga click en **Add** y vaya a la pestaña de **Instances** en la parte superior de la página.
 
-    Búsquela en ProViz.
+8. Encuentre en la lista de proteínas filtradas la proteína: **Chromosome transmission fidelity protein 18 homolog (CHTF18)** (Q8WVB6). Puede ordenar alfabéticamente para encontrarla más fácil.
+
+    * Búsquela en ProViz.
     
-    Ubique la región donde se encuentra el posible motivo sugerido por SLiMSearch.
+    * Ubique la región donde se encuentra el posible motivo sugerido por SLiMSearch.
 
     * Evalúe el contexto estructural. ¿Es favorable?
     * Evalúe el grado de conservación. ¿Está conservado?
     * ¿Le parece que es un buen candidato para evaluar?
 
 9. Vaya a *Functions*.
+
     * ¿Qué funciones están enriquecidas en su lista de proteínas filtradas?
 
     Según los conocimientos que posee sobre este motivo, elija las funciones correspondientes para filtrar los datos.
