@@ -25,7 +25,7 @@ tags:
 |                       | 14 - 17hs     | Teórica       | [T4. Interacciones proteína-proteína](/estructural/teoricas/teorica4/)                  | L.Chemes |
 | Viernes, 17/05/2024	  | 9 - 12hs      | Teórica       | Discusión y problemas                               | J. Glavina |
 |                       | 13 - 17hs	    | Práctico      | [TP5. Interacciones proteína-proteína](/estructural/practicos/ppi/)                   | J. Glavina |
-| Lunes, 20/05/2024	    | 9 - 12hs	    | Teórica       | T5. Proteínas desordenadas y predicción de desorden    | L. Chemes |
+| Lunes, 20/05/2024	    | 9 - 12hs	    | Teórica       | [T5. Proteínas desordenadas y predicción de desorden](/estructural/teoricas/teorica5/)       | L. Chemes |
 |                       | 13 - 17hs     | Práctico      | TP6. Predicción de desorden y Bases de Datos           | J. Glavina |
 | Martes, 21/05/2024	| 9 - 12hs      | Teórica       | T6. Motivos Lineales: Identificación en secuencia      | L. Chemes |
 |                       | 13 - 15.30hs	| Práctico      | TP7. Motivos Lineales - Parte I                        | J. Glavina |

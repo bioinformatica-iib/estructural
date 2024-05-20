@@ -6,7 +6,7 @@ menubar_toc: false
 hero_height: is-small
 construccion: true
 ---
-
+<!--
 {% if page.construccion %}
 **Pagina en construccion**
 {% else %}
@@ -15,9 +15,9 @@ construccion: true
 - Recording [[Parte I - MP4]](https://drive.google.com/file/d/1FK78uCa-bAgJnk8a27pWXZtj818W0qdX/view?usp=sharing)
 
 #### Motivos Lineales en Patógenos
-<!--
 - Slides [[PDF]]()
--->
 - Recording [[Parte II - MP4]](https://drive.google.com/file/d/1jc1pZCBaK4GwfYkiEkQD_yF90Qol1izs/view?usp=sharing)
 
 {% endif %}
+
+-->
