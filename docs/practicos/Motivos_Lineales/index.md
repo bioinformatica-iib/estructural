@@ -1,34 +1,9 @@
----
-layout: page
-title: TP N°8
-subtitle: Motivos Lineales - Parte II
-data : True
-menubar_toc: true
-hero_height: is-small
-toc_title: CONTENIDOS
-construccion: false
----
-<style>
-details > summary:first-of-type {
-   display: list-item;
-}
-details summary { 
-  cursor: pointer;
-}
-
-details summary > * {
-  display: inline;
-}
-</style>
-
-{% if page.construccion %}
-
-**Pagina en construccion**
-
-{% else %}
+# **TP 8**. Motivos Lineales - Parte II { markdown data-toc-label = 'TP 8'}
 
 ## Materiales
-* [Descargar](https://drive.google.com/file/d/1cICkOcmlgBJlSMeFpdn1ihbmoWWYVg06/view?usp=sharing)
+
+[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1cICkOcmlgBJlSMeFpdn1ihbmoWWYVg06/view?usp=sharing){ .md-button .md-button--primary }
+
 
 ## Recursos a utilizar
 * ELM: [http://elm.eu.org](http://elm.eu.org)

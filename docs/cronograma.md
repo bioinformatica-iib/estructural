@@ -28,10 +28,11 @@ tags:
 | Lunes, 20/05/2024	    | 9 - 12hs	    | Teórica       | T5. Proteínas desordenadas y predicción de desorden    | L. Chemes |
 |                       | 13 - 17hs     | Práctico      | [TP6. Predicción de desorden y Bases de Datos](/estructural/practicos/Regiones-flexibles/)           | J. Glavina |
 | Martes, 21/05/2024	| 9 - 12hs      | Teórica       | T6. Motivos Lineales: Identificación en secuencia      | L. Chemes |
-|                       | 13 - 15.30hs	| Práctico      | TP7. Motivos Lineales - Parte I                        | J. Glavina |
+|                       | 13 - 15.30hs	| Práctico      | [TP7. Motivos Lineales - Parte I](/estructural/practicos/motivosRegEx/)                        | J. Glavina |
 | Miércoles, 22/05/2024	| 9 - 12hs	    | Teórica       | T7. Motivos Lineales: Validación experimental          | L. Chemes/T.Gibson |
 |                       | 13 - 15.30hs	| Práctico      | TP8. Motivos Lineales - Parte II                       | J. Glavina |
 | Jueves, 23/05/2024	| 9 - 12hs	    | Teórica       | Consultas teóricas y del trabajo final                 | L. Chemes |
 |                       | 13 - 17hs	    |               | TP8. Motivos Lineales - Parte II (continuacion)        | J. Glavina   |
 | Viernes, 24/05/2024	| 13 - 17hs	    |               | TP9. Trabajo Práctico Integrador  | J. Glavina  |
-| Viernes, 31/05/2024	| A definir	    |               | Evaluación Final    |   |
+| Lunes, 03/06/2024	| A definir	    |               | Evaluación Final    |   |
+| Martes, 04/06/2024	| A definir	    |               | Evaluación Final    |   |
