@@ -77,6 +77,7 @@ markdown_extensions:
   - attr_list
   - def_list
   - md_in_html
+  - sane_lists
   - toc:
       title: Contenidos
       toc_depth: 3
@@ -150,7 +151,7 @@ nav:
         - TP3 - Modelado por homología: 'practicos/Modelado_Por_Homologia/index.md'
         - TP4 - Modelado Parte II: 'practicos/modelado_alphafold/index.md'
         - TP5 - Interacciones Proteína-Proteína: 'practicos/ppi/index.md'
-        # - TP6 - TP6. Predicción de desorden y Bases de Datos: 'practicos/Regiones-flexibles/index.md'
+        - TP6 - Predicción de desorden y Bases de Datos: 'practicos/Regiones-flexibles/index.md'
         # - TP7 - TP7. Motivos Lineales - Parte I: 'practicos/motivosRegex/index.md'
         # - TP8 - TP8. Motivos Lineales - Parte II: 'practicos/Motivos_Lineales/index.md'
         # - TP9 - TP9. Trabajo Práctico Integrador: 'practicos/integrador/index.md'
