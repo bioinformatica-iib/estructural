@@ -494,7 +494,7 @@ El genoma ARN positivo se traduce como una poliproteína que luego es clivada en
 13. Coloree la estructura por pLDDT
 
     ```
-    rangecolor bfactor 50 orange red 50 white 100 dodger blue #2-6
+    rangecolor bfactor 50 orange red 80 white 100 dodger blue #2-6
     ```
 
     Y oculte los modelos de DENV2
