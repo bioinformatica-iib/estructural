@@ -476,7 +476,7 @@ El primer lanzamiento de la base de datos [PED](https://proteinensemble.org/) fu
 2. Seleccione una region de residuos:
 
       ```
-      select :90-60
+      select :60-90
       ```
 
 3. Intente utilizar el matchmaker para alinear esa región (*Further restrict matching to current selection* debe estar tildado)
