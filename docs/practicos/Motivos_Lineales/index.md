@@ -30,7 +30,8 @@ La región amino terminal de p53 posee un motivo de unión a la E3 ligasa MDM2, 
    
 !!! Info "Dato útil"
 
-      Si este procedimiento falla, y tiene ventanas con otras secuencias o alineamientos abiertas, ciérrelas. Si aún así falla, asegúrese de no tener ninguna secuencica seleccionada <span style="font-style:italic;"> Select → Deselect All</span>.
+      Si este procedimiento falla, y tiene ventanas con otras secuencias o alineamientos abiertas, ciérrelas. Si aún así falla, asegúrese de no tener ninguna secuencica seleccionada *Select → Deselect All*.
+
       Si aún así falla, identifique el motivo utilizando el filtro de conservación.
 
    * ¿Todas las secuencias de p53 tienen el motivo de interacción con MDM2?
@@ -71,11 +72,16 @@ La región amino terminal de p53 posee un motivo de unión a la E3 ligasa MDM2, 
       Y guarde el archivo donde desee.
 
       Si en futuras ocasiones desea usar estas *features* con estas secuencias, debe abrir en Jalview el alineamiento utilizando, luego ir a *File → Load features/annotations*.
+      
 
 ### Ejercicio 2. Base de datos de motivos lineales en Eucariotas (ELMdb)
 La base de datos ELM (*Eukaryotic Linear Motifs*) es una base de datos que se enfoca principalmente en la anotación y detección de motivos lineales (SLiMs). Para ello cuenta con un repositorio de motivos manualmente anotados, por lo cual está altamente curada, y también cuenta con una herramienta de predicción de motivos. Esta predicción de motivos se realiza mediante una búsqueda de patrones de secuencia basada en texto utilizando expresiones regulares (en particular, todas las expresiones regulares definidas dentro de la base de datos).
 
-1. Busque en [ELMdb](http://elm.eu.org/) en la pestaña Prediction la proteína PGC-1-alpha utilizando el accession number o uniprot ID (Q9UBK2 - PRGC1_HUMAN). Esta es una de las proteínas de la lista que usamos en el ejercicio donde construimos la expresión regular `L[^P][^P]LL` del motivo NRBox en otro trabajo práctico.
+1. Busque en [ELMdb](http://elm.eu.org/) en la pestaña Prediction la proteína PGC-1-alpha utilizando el accession number o uniprot ID (Q9UBK2 - PRGC1_HUMAN). Esta es una de las proteínas de la lista que usamos en el ejercicio donde construimos la expresión regular:
+
+      `L[^P][^P]LL`
+
+      del motivo NRBox en otro trabajo práctico.
 
       Para cada motivo encontrado, se indica con símbolos (descriptos en la parte superior de la página) si la instancia del motivo es predicha o fue identificada experimentalmente (anotadas o “True Positives”). Responda:
 
@@ -118,13 +124,13 @@ La base de datos ELM (*Eukaryotic Linear Motifs*) es una base de datos que se en
       * Ingrese el Uniprot ID de la proteína (P53_human).
       * ¿Qué compartimentos celulares se le asignaron? ¿Tienen sentido?
 
-      Realice la predicción y conteste:
+4. Realice la predicción y conteste:
       
       * ¿Cuántas instancias de motivos se encuentran ahora?
       * ¿Cuántas instancias de motivos son retenidas luego del filtro?
       * ¿A qué se debe esta diferencia con el punto anterior?
 
-      Investigue el motivo `CLV_PCSK_FUR_1` en la predicción realizada sólo con la secuencia (la del punto 1).
+5. Investigue el motivo `CLV_PCSK_FUR_1` en la predicción realizada sólo con la secuencia (la del punto 1).
 
       * ¿Por qué cree que fue filtrado?
 
@@ -137,9 +143,11 @@ La base de datos ELM (*Eukaryotic Linear Motifs*) es una base de datos que se en
       * ¿Existe algún sitio anotado CDK en p53?
       * ¿Existe algún sitio anotado `DOC_CYCLIN_RXL_1`? ¿Qué relación funcional existe entre este sitio y el sitio CDK?
 
-      Abra una nueva pestaña y vaya de nuevo a la pestaña de predicción en [ELMdb](http://elm.eu.org/).  
-      Limpie el formulario con el botón Reset Form.  
-      Ingrese el UniProt ID (P53_HUMAN) y modifique el parámetro:  
+6. Abra una nueva pestaña y vaya de nuevo a la pestaña de predicción en [ELMdb](http://elm.eu.org/).  
+   
+      * Limpie el formulario con el botón Reset Form.  
+      
+      * Ingrese el UniProt ID (P53_HUMAN) y modifique el parámetro:  
 
       > **Motif Probability Cutoff:** 0.01 (Recuerde que en el punto anterior este parámetro era de 100)
 
@@ -147,11 +155,12 @@ La base de datos ELM (*Eukaryotic Linear Motifs*) es una base de datos que se en
       * ¿Cuántas instancias de motivos son retenidas luego del filtro?
       * ¿Por qué cree que es útil usar la localización celular, el contexto taxonómico y el umbral de probabilidad del motivo?
 
-      Busque la proteína P53_MOUSE en [ELMdb](http://elm.eu.org/).
+7. Busque la proteína P53_MOUSE en [ELMdb](http://elm.eu.org/).
 
       * ¿Qué compartimentos celulares y que contexto taxonómico se asignaron?
       * ¿Existen instancias anotadas?
       * ¿Existen instancias asignadas por homología? ¿A qué organismo pertenecen?
+
 
 ### Ejercicio 3. Identificando interacciones entre motivos lineales y proteínas globulares
 
@@ -197,7 +206,9 @@ El core del motivo LxCxE es: consiste en 3 posiciones fijas que median la intera
 !!! Info "Importante"
       Debe tener el motivo seleccionado (sel LxCxE)
 
+
    En FindHBonds debe seleccionar *Only Find H-bonds* with at least one end selected.
+   
    Seleccione *if endpoint atom hidden, show endpoint residue*
 
    * ¿Qué puentes de hidrógeno puede observar? ¿Se dan entre residuos de la cadena principal del péptido/dominio, o entre residuos de la cadena lateral?
