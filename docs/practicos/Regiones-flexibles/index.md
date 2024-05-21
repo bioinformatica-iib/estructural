@@ -462,7 +462,7 @@ La base de datos MobiDB centraliza diferentes recursos que facilitan la anotaci�
 
       * ¿Qué regiones tienen una estructura? 
 
-      * Observa la entrada 5AOM_A. Ahora ve a la página web del [Protein Data Bank](www.rscb.org) y busca el PDB 5AOM, o puedes ir directamente desde [aquí](https://www.rcsb.org/structure/5AOM). En la web de la base de datos de PDB ve a la sección *Macromolecules*. Mira la sección correspondiente a la cadena A (UNMODELED A). ¿Puedes decir cómo se determinó que estas regiones eran desordenadas?
+      * Observa la entrada 5AOM_A. Ahora ve a la página web del [Protein Data Bank](https://www.rscb.org) y busca el PDB 5AOM, o puedes ir directamente desde [aquí](https://www.rcsb.org/structure/5AOM). En la web de la base de datos de PDB ve a la sección *Macromolecules*. Mira la sección correspondiente a la cadena A (UNMODELED A). ¿Puedes decir cómo se determinó que estas regiones eran desordenadas?
 
 
 ### Ejercicio 3. Base de datos de Ensambles Estructurales

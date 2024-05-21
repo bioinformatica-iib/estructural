@@ -2,7 +2,7 @@
 
 ## Recursos a utilizar
 * Regex101: [https://regex101.com](https://regex101.com)
-* WebLogo: [https://weblogo.threeplusone.com/create.cgi]https://weblogo.threeplusone.com/create.cgi)
+* WebLogo: [https://weblogo.threeplusone.com/create.cgi](https://weblogo.threeplusone.com/create.cgi)
 * MEME: [https://meme-suite.org/meme/tools/meme](https://meme-suite.org/meme/tools/meme)
 * SLiMSearch: [http://slim.icr.ac.uk/slimsearch/](http://slim.icr.ac.uk/slimsearch/)
 * SLiMFinder: [http://www.slimsuite.unsw.edu.au/servers/slimfinder.php](http://www.slimsuite.unsw.edu.au/servers/slimfinder.php)
