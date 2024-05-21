@@ -7,7 +7,7 @@ hero_height: is-small
 construccion: true
 ---
 
-bla 
+Aún no disponible
 <!--
 {% if page.construccion %}
 **Pagina en construccion**
