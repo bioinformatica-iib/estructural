@@ -245,7 +245,7 @@ MEME divide patrones de longitud variable en dos o más motivos separados.
         Ingrese:
 
         * *Minimum sites:*  2
-        * *Maximum sites:*  10
+        * *Maximum sites:*  40
 
         * ¿Con qué se relaciona este parámetro?
 

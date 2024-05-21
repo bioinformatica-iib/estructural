@@ -2,13 +2,13 @@
 
 ## Materiales
 
-[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1cICkOcmlgBJlSMeFpdn1ihbmoWWYVg06/view?usp=sharing){ .md-button .md-button--primary }
+[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/183tjsg7_2MUikJhcCHido7Ttflh2E2Be/view?usp=sharing){ .md-button .md-button--primary }
 
 
 ## Recursos a utilizar
 * ELM: [http://elm.eu.org](http://elm.eu.org)
 * Consurf: [https://consurf.tau.ac.il/](https://consurf.tau.ac.il/)
-* Colab: [AlphaFold2-advanced](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/beta/AlphaFold2_advanced.ipynb)
+* Colab: [AlphaFold2](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb#scrollTo=kOblAo-xetgx)
 
 ## Objetivos:
 * Familiarizarse con la simbología utilizada en expresiones regulares, poder interpretar una expresión regular.
@@ -426,30 +426,29 @@ Uno de los blancos celulares de Rb es la Histone desacetilasa 1 (HDAC) que posee
 
 Una estructura tridimensional permite entender desde el aspecto molecular las diferencias en las interacciones que podrían llevar a diferencias en afinidades. Sin embargo, hasta la fecha, no se posee una estructura del complejo Rb-HDAC1.
 
-1. Modele el complejo utilizando el colab: [AlphaFold2_advanced](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/beta/AlphaFold2_advanced.ipynb). Los resultados se encuentran en la carpeta de materiales, pero si quiere realizarzo siga las instrucciones, si no, vaya al punto 2.
-
-   Este colab, a diferencia del utilizado en la clase de modelado, permite identificar puntos de corte intracatenarios y permite modelar hetero-complejos.
+1. Modele el complejo utilizando el colab: [AlphaFold2](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb#scrollTo=kOblAo-xetgx).
 
    Para tardar menos en el modelado vamos a realizar algunas modificaciones.
 
-   En lugar de ingresar la secuencia completa de Rb, vamos a ingresar únicamente la correspondiente al dominio Rb, 
+   * En lugar de ingresar la secuencia completa de Rb, vamos a ingresar únicamente la correspondiente al dominio Rb, 
 
-   Dado que en 1GUX hay residuos no modelados, no los incluiremos en este análisis utilizando la `/` para indicar los puntos de corte intracatenarios.
+   Dado que en 1GUX hay residuos no modelados, no los incluiremos en este análisis utilizando `:` para indicar los puntos de corte intracatenarios.
 
    Al final, indicaremos con el `:` el incio de la cadena correspondiente al motivo HDAC (`DKRIACEEEFSD`).
 
    Obteniendo finalmente:
 
    ```
-   NTIQQLMMILNSASDQPSENLISYFNNCTVNPKESILKRVKDIGYIFKEKFAKAVGQGCVEIGSQRYKLGVRLYYRVMESMLKSE/NFSKLLNDNIFHMSLLACALEVVMATY/SFPWILNVLNLKAFDFYKVIESFIKAEGNLTREMIKHLERCEHRIMESLAWLSDSPLFDLIKQSK/TSLSLFYKKVYRLAYLRLNTLCERLLSEHPELEHIIWTLFQHTLQNEYELMRDRHLDQIMMCSMYGICKVKNIDLKFKIIVTAYKDLPHAVQETFKRVLIKEEEYDSIIVFYNSVFMQRLKTNILQYASTRPPTLSPIPHI:DKRIACEEEFSD
+   NTIQQLMMILNSASDQPSENLISYFNNCTVNPKESILKRVKDIGYIFKEKFAKAVGQGCVEIGSQRYKLGVRLYYRVMESMLKSE:NFSKLLNDNIFHMSLLACALEVVMATY:SFPWILNVLNLKAFDFYKVIESFIKAEGNLTREMIKHLERCEHRIMESLAWLSDSPLFDLIKQSK:TSLSLFYKKVYRLAYLRLNTLCERLLSEHPELEHIIWTLFQHTLQNEYELMRDRHLDQIMMCSMYGICKVKNIDLKFKIIVTAYKDLPHAVQETFKRVLIKEEEYDSIIVFYNSVFMQRLKTNILQYASTRPPTLSPIPHI:DKRIACEEEFSD
    ```
 
-   Además, este colab permite seleccionar el número de modelos a analizar. Dada la duración de la corrida, seleccionaremos un único modelo.
+   Dada la duración de la corrida, seleccionaremos un único modelo para relajar.
 
-   > * En la sección *Run AlphaFold* en *num_moldes* elija 1.
-   > * En la seccion *Refine structures with Amber-Relax (optional)*, en *num_relax* elija All.
-
+   > * En la sección *Run AlphaFold* en *num_relax* elija 1.
+   
    Luego, corra todo con `ctrl+F9` o vaya a *Runtime → Runall*
+
+   Si no logra modelar porque en la vida ocurren cosas, puede acceder a los resultados [aquí](https://drive.google.com/file/d/1IPjFnwzDtaZ1M9MSKCTaaDmVpUcrIWt0/view?usp=sharing)
 
 2. Abra el modelo obtenido por AlphaFold2 en chimera.
 3. Abra el pdb 1GUX
