@@ -407,7 +407,7 @@ Consurf permite estimar la conservación evolutiva de las posiciones en una mol�
 
    *File → Open*
 
-   En *File Type* seleccione *Chimera commands [.com,.cmd]*
+   En *File Type* seleccione *Chimera commands [.com,.cmd]* y abra el archivo descargado en los materiales `coloringChimera.cmd`.
 
 7. Muestre la surperficie
 
