@@ -33,5 +33,6 @@ tags:
 |                       | 13 - 15.30hs	| Práctico      | [TP8. Motivos Lineales - Parte II](/estructural/practicos/Motivos_Lineales/)                       | J. Glavina |
 | Jueves, 23/05/2024	| 9 - 12hs	    | Teórica       | Consultas teóricas y del trabajo final                 | L. Chemes |
 |                       | 13 - 17hs	    |               | TP8. Motivos Lineales - Parte II (continuacion)        | J. Glavina   |
+| Viernes, 24/05/2024	| 9 - 10.30hs	    |               | Consultas  | L. Chemes  |
 | Viernes, 24/05/2024	| 13 - 17hs	    |               | TP9. Trabajo Práctico Integrador  | J. Glavina  |
-| Viernes, 31/05/2024	| A definir	    |               | Evaluación Final    |   |
+| A definir, después del Lunes 01/06/2024| A definir	    |               | Evaluación Final    |   |
