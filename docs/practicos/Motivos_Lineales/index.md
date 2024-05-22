@@ -10,6 +10,8 @@
 * Consurf: [https://consurf.tau.ac.il/](https://consurf.tau.ac.il/)
 * Colab: [AlphaFold2](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb#scrollTo=kOblAo-xetgx)
 
+* Slides [[PDF]](https://drive.google.com/file/d/1B6cIgEzZLLkmAf37mDhp_EmToNJBRPo3/view?usp=sharing)
+
 ## Objetivos:
 * Familiarizarse con la simbología utilizada en expresiones regulares, poder interpretar una expresión regular.
 * Utilizar la simbología para poder realizar búsquedas basadas en texto

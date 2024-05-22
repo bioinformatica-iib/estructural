@@ -29,7 +29,7 @@ tags:
 |                       | 13 - 17hs     | Práctico      | [TP6. Predicción de desorden y Bases de Datos](/estructural/practicos/Regiones-flexibles/)          | J. Glavina |
 | Martes, 21/05/2024	| 9 - 12hs      | Teórica       | [T6. Motivos Lineales: Identificación en secuencia](/estructural/teoricas/teorica6/)      | L. Chemes |
 |                       | 13 - 15.30hs	| Práctico      | [TP7. Motivos Lineales - Parte I](/estructural/practicos/motivosRegEx/)                        | J. Glavina |
-| Miércoles, 22/05/2024	| 9 - 12hs	    | Teórica       | T7. Motivos Lineales: Validación experimental          | L. Chemes/T.Gibson |
+| Miércoles, 22/05/2024	| 9 - 12hs	    | Teórica       | [T7. Motivos Lineales: Validación experimental](/estructural/teoricas/teorica7/)          | L. Chemes/T.Gibson |
 |                       | 13 - 15.30hs	| Práctico      | [TP8. Motivos Lineales - Parte II](/estructural/practicos/Motivos_Lineales/)                       | J. Glavina |
 | Jueves, 23/05/2024	| 9 - 12hs	    | Teórica       | Consultas teóricas y del trabajo final                 | L. Chemes |
 |                       | 13 - 17hs	    |               | TP8. Motivos Lineales - Parte II (continuacion)        | J. Glavina   |
