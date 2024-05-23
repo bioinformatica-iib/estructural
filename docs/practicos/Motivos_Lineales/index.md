@@ -4,13 +4,15 @@
 
 [:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/183tjsg7_2MUikJhcCHido7Ttflh2E2Be/view?usp=sharing){ .md-button .md-button--primary }
 
+## Slides
+* Slides [[PDF]](https://drive.google.com/file/d/1B6cIgEzZLLkmAf37mDhp_EmToNJBRPo3/view?usp=sharing)
+
 
 ## Recursos a utilizar
 * ELM: [http://elm.eu.org](http://elm.eu.org)
 * Consurf: [https://consurf.tau.ac.il/](https://consurf.tau.ac.il/)
 * Colab: [AlphaFold2](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb#scrollTo=kOblAo-xetgx)
 
-* Slides [[PDF]](https://drive.google.com/file/d/1B6cIgEzZLLkmAf37mDhp_EmToNJBRPo3/view?usp=sharing)
 
 ## Objetivos:
 * Familiarizarse con la simbología utilizada en expresiones regulares, poder interpretar una expresión regular.
