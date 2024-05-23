@@ -311,8 +311,8 @@ Se abrirá una ventana, seleccione la superficie correspondiente (RbSurf) y haga
 * Elija el nombre: RbElectrostatica
 
 El dominio Rb tiene un PI (punto isoeléctrico) de 8.9.
-* ¿Qué le dice esto sobre el carácter químico de Rb?
 
+* ¿Qué le dice esto sobre el carácter químico de Rb?
 * Investigue los residuos con carga positiva en el entorno del motivo LxCxE
 
 ```
