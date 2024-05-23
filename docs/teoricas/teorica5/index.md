@@ -1,11 +1,4 @@
----
-layout: page
-title: Teórica N°5
-subtitle: Proteínas desordenadas y predicción de desorden
-menubar_toc: false
-hero_height: is-small
-construccion: false
----
+# **Teórica 5.** Proteínas desordenadas y predicción de desorden
 
 - Slides [[PDF]](https://drive.google.com/file/d/1pHriaGoy4vvyzFmn-7yxjVq3i-tyHCMw/view?usp=sharing)
 - Recording [[Parte I - MP4]](https://youtu.be/oTFXggKbFi4)

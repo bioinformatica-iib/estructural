@@ -1,11 +1,4 @@
----
-layout: page
-title: Teórica N°4
-subtitle: Interacciones proteína-proteína
-menubar_toc: false
-hero_height: is-small
-construccion: false
----
+# **Teórica 4.** Interacciones proteína-proteína
 
 - Slides [[PDF]](https://drive.google.com/file/d/1Sb12mrqKqywSEVFqZXEGiuWQ4J5o5d9J/view?usp=drivesdk)
 

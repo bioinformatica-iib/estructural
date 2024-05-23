@@ -1,4 +1,4 @@
-# TP 9. Ejercicios integradores.  { markdown data-toc-label = 'TP 9'}
+# **TP 9.** Ejercicios integradores.  { markdown data-toc-label = 'TP 9'}
 
 ## Materiales
 - Los materiales a utilizar son los mismos que en el trabajo práctico anterior. Consulte al docente si necesita algún material que no esté accesible.

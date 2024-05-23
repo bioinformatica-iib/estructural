@@ -1,11 +1,4 @@
----
-layout: page
-title: Teórica N°6
-subtitle: "Motivos Lineales: Identificación en secuencia"
-menubar_toc: false
-hero_height: is-small
-construccion: false
----
+# **Teórica 6.** Motivos Lineales: Identificación en secuencia
 
 - Slides [[PDF]](https://drive.google.com/file/d/1WT20dA-OMLxY5fR5dZeetdFv6A5_mJ1C/view?usp=drive_link)
 

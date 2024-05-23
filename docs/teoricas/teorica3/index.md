@@ -1,11 +1,4 @@
----
-layout: page
-title: Teórica N°3
-subtitle: Modelado por homología
-menubar_toc: false
-hero_height: is-small
-construccion: false
----
+# **Teórica 3.** Modelado por homología
 
 - Slides [[PDF]](https://drive.google.com/file/d/17AS1dJHTmPfJEgiG5pTmnqOWePfGCbEy/view?usp=drive_link)
 

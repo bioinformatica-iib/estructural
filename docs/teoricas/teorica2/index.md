@@ -1,12 +1,4 @@
----
-layout: page
-title: Teórica N°3
-subtitle: Alineamientos de a pares y Búsqueda de secuencias por Similitud
-menubar_toc: false
-hero_height: is-small
-construccion: false
----
-La página se actualizará en breve
+# **Teórica 2.** Estructura de Proteínas
 
 ## Parte I
 - Slides [[Parte 1 - PDF]](https://drive.google.com/file/d/1UsR9FC46L7vnIYI4SI47NQFACpl1PQTp/view?usp=sharing)

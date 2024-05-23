@@ -1,13 +1,5 @@
----
-layout: page
-title: Teórica N°1a
-subtitle: Introducción al Curso
-menubar_toc: true
-hero_height: is-small
-construccion: false
----
 
-**Teórica 1a: Introducción al curso**
+# **Teórica 1a.** Introducción al curso
 
 - Slides [[PDF]](https://drive.google.com/file/d/1Gq1CBqVzJpI8XJhkXqLnZcvrqTBVtHWU/view?usp=sharing)
 
