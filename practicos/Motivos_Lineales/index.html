@@ -855,36 +855,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejercicio-adicional-1-motivos-lineales-en-proteinas-virales" class="md-nav__link">
-    Ejercicio Adicional 1. Motivos lineales en proteínas virales
+  <a href="#ejercicio-adicional-1-usando-jalview-con-la-proteina-tir-aislada-de-e-coli-patogenica" class="md-nav__link">
+    Ejercicio Adicional 1. Usando JalView con la proteína TIR aislada de E. coli patogénica
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-adicional-2-motivos-lineales-en-la-proteina-caga-de-helicobacter-pylori" class="md-nav__link">
-    Ejercicio Adicional 2. Motivos lineales en la Proteína CagA de Helicobacter pylori.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-adicional-3-usando-jalview-con-la-proteina-tir-aislada-de-e-coli-patogenica" class="md-nav__link">
-    Ejercicio Adicional 3. Usando JalView con la proteína TIR aislada de E. coli patogénica
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-adicional-4-usando-jalview-con-la-proteina-caga-aislada-de-la-cepa-helicobacter-patogenica" class="md-nav__link">
-    Ejercicio Adicional 4. Usando JalView con la proteína CagA aislada de la cepa Helicobacter patogénica
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-adicional-5-familiarizandose-con-la-base-de-datos-elm" class="md-nav__link">
-    Ejercicio Adicional 5. Familiarizándose con la base de datos ELM.
+  <a href="#ejercicio-adicional-2-familiarizandose-con-la-base-de-datos-elm" class="md-nav__link">
+    Ejercicio Adicional 2. Familiarizándose con la base de datos ELM.
   </a>
   
 </li>
@@ -1287,30 +1266,31 @@ color byhet,a LxCxE
 <p>Consurf permite estimar la conservación evolutiva de las posiciones en una molécula de proteína/ADN/ARN según las relaciones filogenéticas entre secuencias homólogas. El grado de conservación de una posición depende de la importancia estructural y funcional. Así, evaluar la conservación entre los miembros de la misma familia, puede revelar la importancia de cada posición para la estructura o función.</p>
 <details class="info">
 <summary>Si quiere saber cómo se generaron los materiales que utilizaremos puede hacer click acá</summary>
-<p>Preparando los datos:
-     Sin cerrar la sesión de chimera anterior. 
-     Abra una nueva sesión.
-     Cargue el pdb 1gux y elimine la cadena E y las aguas
-     delete :.E; delete :HOH</p>
-<p>Ahora renombraremos las cadenas A y B para que pasen a ser una única cadena A utilizando el siguiente comando:
-     changechains B A :645-785.B</p>
-<p>IMPORTANTE: Si usted planea realizar esto en otras estructuras, proceda con precaución ya que generará conflictos si hay dos residuos con la misma numeración, probablemente Chimera arroje un Warning si esto sucede y no lo dejará avanzar.
-  Grabe el pdb: File → Save PDB con el nombre: PocketDomain.pdb</p>
-<p>Abra el visualizador de secuencia:
-     Tools → Sequence</p>
-<p>Grabe la secuencia en formato fasta con el nombre: PocketDomain.fasta
-     File → Save As…</p>
-<p>Vaya a ProViz, busque la proteína Rb utilizando el accession number: P06400, elija la primera.</p>
-<p>En alineamiento elija Metazoa, pida que muestre todas las secuencias. Luego, pida que muestra las secuencias con gaps.
-     A la izquierda, en la pestaña de Options, vaya a la sección Download → Export all to fasta.
-     Guarde el alineamiento como Rb_Metazoa.fasta</p>
-<p>Abra el alineamiento en Jalview, vaya a:
-     File → Add sequences → From File y abra: PocketDomain.fasta</p>
+<p>Preparando los datos:</p>
+<p>Sin cerrar la sesión de chimera anterior.</p>
+<p>Abra una nueva sesión.</p>
+<p>Cargue el pdb 1gux y elimine la cadena E y las aguas</p>
+<p><code>delete :.E; delete :HOH</code></p>
+<p>Ahora renombraremos las cadenas A y B para que pasen a ser una única cadena A utilizando el siguiente comando:</p>
+<p><code>changechains B A :645-785.B</code></p>
+<p>IMPORTANTE: Si usted planea realizar esto en otras estructuras, proceda con precaución ya que generará conflictos si hay dos residuos con la misma numeración, probablemente Chimera arroje un Warning si esto sucede y no lo dejará avanzar.</p>
+<p>Grabe el pdb:</p>
+<p><code>File → Save PDB</code> con el nombre: <code>PocketDomain.pdb</code></p>
+<p>Abra el visualizador de secuencia:</p>
+<p><code>Tools → Sequence</code></p>
+<p>Grabe la secuencia en formato fasta con el nombre: <code>PocketDomain.fasta</code></p>
+<p><code>File → Save As…</code></p>
+<p>Vaya a ProViz, busque la proteína Rb utilizando el accession number: <code>P06400</code>, elija la primera.</p>
+<p>En alineamiento elija <code>Metazoa</code>, pida que muestre todas las secuencias. Luego, pida que muestra las secuencias con gaps.</p>
+<p>A la izquierda, en la pestaña de Options, vaya a la sección <code>Download → Export all to fasta</code></p>
+<p>Guarde el alineamiento como <code>Rb_Metazoa.fasta</code></p>
+<p>Abra el alineamiento en Jalview, vaya a:</p>
+<p><code>File → Add sequences → From File</code> y abra: <code>PocketDomain.fasta</code></p>
 <p>Seleccione la secuencia y muevala utilizando las flechas hacia la parte superior del alineamiento.</p>
-<p>Alinee manualmente la secuencia con P06400.</p>
-<p>Recuerde: debe deseleccionar todo: (Select → deselect all), con F2 activa el cursor para editar, y con la barra espaciadora agrega gaps, aseguree que este completo con gaps hasta el final.</p>
-<p>Elimine P06400 (Seleccione la secuencia y vaya a Edit → delete)</p>
-<p>Guarde el alineamiento como Rb_Metazoa_1gux.fasta</p>
+<p>Alinee manualmente la secuencia con <code>P06400</code>.</p>
+<p>Recuerde: debe deseleccionar todo: (<code>Select → deselect all</code>), con <code>F2</code> activa el cursor para editar, y con la barra espaciadora agrega gaps, aseguree que este completo con gaps hasta el final.</p>
+<p>Elimine <code>P06400</code> (Seleccione la secuencia y vaya a <code>Edit → delete</code>)</p>
+<p>Guarde el alineamiento como <code>Rb_Metazoa_1gux.fasta</code></p>
 </details>
 <ol>
 <li>Vaya al servidor de <a href="https://consurf.tau.ac.il/">Consurf</a> y complete los parámetros según lo siguiente:</li>
@@ -1406,128 +1386,7 @@ display HDAC
 <li>Busque en ELM el motivo LxCxE: <code>LIG_Rb_LxCxE_1</code>. La expresión regular observará que es mucho más compleja que LxCxE ¿Observa la variabilidad de la posición hidrofóbica en la regex?</li>
 </ul>
 <h2 id="ejercicios-adicionales">Ejercicios Adicionales</h2>
-<h3 id="ejercicio-adicional-1-motivos-lineales-en-proteinas-virales">Ejercicio Adicional 1. Motivos lineales en proteínas virales</h3>
-<p>La familia viral Adenoviridae (adenovirus) son virus ADNdc desnudos. Los adenovirus que infectan a humanos son responsables de muchas enfermedades respiratorias y de numerosos casos de gastroenteritis en niños. El único género de adenovirus que posee la proteína E1A es el género Mastadenovirus que infecta a mamíferos. Hasta la fecha, no existe ningún homólogo reportado en los restantes géneros de esta familia viral. La proteína E1A posee un rol importante en la replicación del genoma viral ya que desregula el ciclo celular induciendo la división celular. Esta estimulación de la progresión de la fase G1 a la fase S, permite que el virus use la maquinaria celular de replicación del ADN para replicar su propio genoma. Una vez expresada la proteína E1A su localización en la célula infectada es nuclear y minoritariamente citosólica.</p>
-<ol>
-<li>
-<p>Busque en <a href="http://elm.eu.org">ELMdb</a> en la pestaña Prediction la proteína E1A del virus Human adenovirus 5 (E1A_ADE05). </p>
-<p>Utilice los siguientes parámetros:</p>
-<blockquote>
-<ul>
-<li><strong>Cell Compartment:</strong> Not specified</li>
-<li><strong>Motif Probability Cutoff:</strong> 100</li>
-<li><strong>Taxonomic context:</strong> (leave blank)</li>
-</ul>
-</blockquote>
-<ul>
-<li>¿Cuántas clases y cuántas instancias de motivos encuentras?</li>
-</ul>
-</li>
-<li>
-<p>En base a los conocimientos que poseemos de E1A_ADE05 modifique los parámetros Cell Compartment (se puede seleccionar más de un compartimento celular utilizando la tecla ctrl) y taxonomic context.</p>
-<ul>
-<li>¿Cómo cambia el número de motivos encontrados?</li>
-<li>¿Qué otros filtros observa que está utilizando ELM? ¿Por qué se le ocurre que se eligen automáticamente esos filtros?</li>
-<li>¿Qué se puede decir de la estructura de la proteína E1A? ¿Se observa algún dominio? ¿Se observan regiones desordenadas?</li>
-</ul>
-</li>
-<li>
-<p>En cada una de las clases de motivos encontrados, se indica con distintos símbolos (descriptos en la parte superior de la página) si la instancia del motivo es predicha o fue identificada experimentalmente (instancias anotadas o True Positives). </p>
-<ul>
-<li>¿Cuantas instancias anotadas existen?</li>
-</ul>
-</li>
-<li>
-<p>E1A tiene dos motivos de interacción con la proteína Retinoblastoma, un regulador del ciclo celular (motivo AB_groove y motivo LxCxE). Explore la clase <code>LIG_Rb_LxCxE_1</code>, para esto haga click sobre el nombre de la misma, en la lista de la izquierda. Se abrirá la página correspondiente a esa clase donde se listan todas las instancias reportadas en la literatura que están anotadas en ELM.</p>
-<ul>
-<li>¿En qué tipos de proteínas se encuentra el motivo LxCxE?</li>
-</ul>
-</li>
-<li>
-<p>Existen dos tipos de instancias.
-   <em>True Positives (TP):</em> Son instancias identificadas por la expresión regular y que la evidencia experimental muestra que es funcional.
-   <em>False Positives (FP):</em> Son instancias identificadas por la expresión regular, que la evidencia experimental sugieren que son funcionales, pero cuando fue evaluada se cree que no es realmente funcional.</p>
-<ul>
-<li>¿Se te ocurre algún ejemplo donde esto pueda ocurrir?</li>
-</ul>
-</li>
-<li>
-<p>Busque en ELM E1A_ADECR.</p>
-<ul>
-<li>¿Cuál es el contexto taxonómico?</li>
-<li>¿Cuántas instancias anotadas hay? ¿Se encuentran los motivos anotados de E1A_ADE05? ¿A qué puede deberse?</li>
-</ul>
-</li>
-<li>
-<p>La proteína Retinoblastoma (Rb) controla la transición en el ciclo celular de la fase G1 a la fase S mediante la interacción con factores de transcripción de la familia E2F.</p>
-<ul>
-<li>Vaya a ProViz (http://proviz.ucd.ie/) y busque la proteína E2F1_HUMAN (Q01094).</li>
-<li>¿Puede identificar el motivo de interacción con Rb? (Pista: Hay una línea a la izquierda que se llama ELM).</li>
-<li>El motivo ¿Está en un contexto estructural desordenado? ¿Se encuentra conservado? ¿Es el mismo motivo usado por la proteína E1A para interactuar con Rb?</li>
-<li>¿Qué otros motivos identifica? ¿Algunos de estos motivos están involucrados en el ciclo celular?</li>
-</ul>
-</li>
-</ol>
-<h3 id="ejercicio-adicional-2-motivos-lineales-en-la-proteina-caga-de-helicobacter-pylori">Ejercicio Adicional 2. Motivos lineales en la Proteína CagA de Helicobacter pylori.</h3>
-<p>La infección por <em>H. pylori</em> puede causar gastritis, úlcera péptica o cáncer de estómago. Hay una mayor probabilidad de desarrollar cáncer estomacal si la infección es producida por una cepa del Este asiático (como F32) en comparación a una cepa del Oeste (como NCTC 11637). Estas cepas difieren en el número y contexto de secuencia de los motivos EPIYA (Higashi, H., et al., 2002; Jones, K.R., et al., 2009).</p>
-<ol>
-<li>Copie y pegue en ELM las secuencias la proteína CagA de una cepa del Oeste y una cepa del Este asiático, especificando Cytosol como compartimento celular, Homo sapiens como contexto taxonómico y un umbral de corte de la probabilidad del motivo de 0.001.</li>
-</ol>
-<div class="highlight"><pre><span></span><code>&gt; NCTC11637_CagA
-MTNETIDQQPQTEAAFNPQQFINNLQVAFLKVDNAVASYDPDQKPIVDKNDRDN  
-RQAFDGISQLREEYSNKAIKNPTKKNQYFSDFINKSNDLINKDNLIDIGSSIKS  
-FQKFGTQRYRIFTSWVSHQNDPSKINTRSIRNFMENIIQPPIPDDKEKAEFLKS  
-AKQSFAGIIIGNQIRTDQKFMGVFDEFLKERQEAEKNGEPTGGDWLDIFLSFVF  
-NKEQSSDVKEAINQEPVPHVQPDIATTTTHIQGLPPESRDLLDERGNFSKFTLG  
-DMEMLDVEGVADIDPNYKFNQLLIHNNALSSVLMGSHNGIEPEKVSLLYAGNGG  
-FGAKHDWNATVGYKNQQGDNVATLINVHMKNGSGLVIAGGEKGINNPSFCLYKE  
-DQLTGSQRALSQEEIRNKIDFMEFLAQNNAKLDNLSEKEKEKFQNEIEDFQKDS  
-KAYLDALGNDRIAFVSKKDPKHSALITEFGKGDLSYTLKDYGKKADRALDREKN  
-VTLQGNLKHDSVMFVNYSNFKYTNASKSPDKGVGVTNGVSHLDAGFSKVAVFNL  
-PDLNNLAITSFVRRNLENKLVTEGLSLQEANKLIKDFLSSNKELVGKALNFNKA  
-VADAKNTGNYDEVKKAQKDLEKSLRKREHLEKEVEKKLESKSGNKNKMEAKAQA  
-NSQKDKIFALINKEANRDARAIAYSQNLKGIKRELSDKLEKINKDLKDFSKSFD  
-EFKNGKNKDFSKAEETLKALKGSVKDLGINPEWISKVENLNAALNEFKNGKNKD  
-FSKVTQAKSDLENSVKDVIVNQKITDKVDNLNQAVSMAKATGDFSRVEQALADL  
-KNFSKEQLAQQTQKNESFNVGKKSEIYQSVKNGVNGTLVGNGLSGIEATALAKN  
-FSDIKKELNEKFKNFNNNNNNGLENEPIYAKVNKKKTGQVASPEEPIYAQVAKK  
-VNAKIDRLNQAASGLGGVGQAGFPLKRHDKVDDLSKVGRSVSPEPIYATIDDLG  
-GPFPLKRHDKVDDLSKVGRSVSPEPIYATIDDLGGPFPLKRHDKVDDLSKVGRS  
-VSPEPIYATIDDLGGPFPLKRHDKVDDLSKVGLSRNQELAQKIDNLSQAVSEAK  
-AGFFSNLEQTIDKLKDSTKYNSVNLWVESAKKVPASLSAKLDNYATNSHTRINS  
-NIQNGAINEKATGMLTQKNPEWLKLVNDKIVAHNVGSVPLSEYDKIGFNQKNMK  
-DYSDSFKFSTKLNNAVKDVKSSFTQFLANAFSTGYYSLARENAEHGIKNVNTKG  
-GFQKS
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>&gt; F32_CagA
-MTNETIDQTTTPDQTGFVPQRFINNLQVAFIKVDNAVASFDPDQKPIVDKNDKD  
-NRQAYEKISQLREEYANKAIKNPAKKNQYFSDFINKSNDLINKDNLIAVDSSVE  
-SFRKFGDQRYQIFTSWVSLQKDPSKINTQQIRNFMENVIKPPISDDKEKAEFLR  
-SAKQSFAGIIIGNQIRSDEKFMGVFDESLKARQEAEKNAEPAGGDWLDIFLSFV  
-FNKKQSSDLKETLNQEPRPDFEQNLATTTTDIQGLPPEARDLLDERGNFFKFTL  
-GDVEMLDVEGVADKDPNYKFNQLLIHNNALSSMLMGSHSNIEPEKVSLLYGDNG  
-GPEARHDWNATVGYKNQQGNNVATLINAHLNNGSGLIIAGNEDGIKNPSFYLYK  
-EDQLTGLKQALSQEEIQNKVDFMEFLAQNNAKLDNLSEKEKEKFQTEIENFQKD  
-RKAYLDALGNDHIAFVSKKDPKHLALVTEFGNGELSYTLKDYGKKQDKALDGET  
-KTTLQGSLKYDGVMFVNYSNFKYTNASKSPNKGLGTTNGVSHLEANFSKVAVFN  
-LPNLNNLAITNYIRRDLEDKLWAKGLSPQEANKLIKDFLNSNKEMVGKVSNFNK  
-AVAEAKNTGNYDEVKKAQKDLEKSLRKREHLEKEVAKKLESRNDNKNRMEAKAQ  
-ANSQKDKIFALISQEASKEARVATFDPYLKGVRSELSDKLENINKNLKDFGKSF  
-DELKSGKNNDFSKAEETLKALKDSVKDLGINPEWISKIENLNAALNDFKNGKNK  
-DFSKVTQAKSDLENSIKDVIINQKITDKVDNLNQAVSEIKLTGDFSKVEQALAE  
-LKNLSLDLGKNSDLQKSVKNGVNGTLVSNGLSKTEATTLTKNFSDIRKELNEKL  
-FGNSNNNNNGLKNNTEPIYAQVNKKKTGQATSPEEPIYAQVAKKVSAKIDQLNE  
-ATSAINRKIDRINKIASAGKGVGGFSGAGRSASPEPIYATIDFDEANQAGFPLR  
-RSAAVNDLSKVGLSREQELTRRIGDLSQAVSEAKTGHFGNLEQKIDELKDSTKK  
-NALKLWVESAKQVPTSLQAKLDNYATNSHTRINSNVQSGTINEKATGMLTQKNP  
-EWLKLVNDKIVAHNVGSAPLSAYDKIGFNQKNMKDYSDSFKFSTKLNNAVKDIK  
-SSFVQFLTNTFSTGSYSLMKANVEHGVKNTNTKGGFQKS
-</code></pre></div>
-<ul>
-<li>¿Cuáles son las diferencias en las predicciones del motivo EPIYA?</li>
-<li>¿Existen diferencias en la asignación por homología?</li>
-</ul>
-<h3 id="ejercicio-adicional-3-usando-jalview-con-la-proteina-tir-aislada-de-e-coli-patogenica">Ejercicio Adicional 3. Usando JalView con la proteína TIR aislada de E. coli patogénica</h3>
+<h3 id="ejercicio-adicional-1-usando-jalview-con-la-proteina-tir-aislada-de-e-coli-patogenica">Ejercicio Adicional 1. Usando JalView con la proteína TIR aislada de E. coli patogénica</h3>
 <p>Las proteínas TIR son secretadas por la cepa patogénica de E. coli y se asocian a ciertas células de mamíferos, proyectando sus extremos N- y C-terminal a través de la membrana plasmática hacia la parte interior de la célula huésped tomando el control de la regulación celular local, por ejemplo induciendo junto con otras proteínas la formación de un pedestal de actina esencial para el ciclo patogénico de esta bacteria. La porción central de la proteína TIR permanece en el compartimiento extracelular y se asocia a la bacteria. Existen numerosas secuencias de TIR obtenidas de diferentes aislamientos de E. coli patogénica almacenadas en la base de datos UNIPROT.</p>
 <ol>
 <li>Cargue el alineamiento de proteínas TIR que se encuentra en la carpeta MSA del TP de la materia (tir_aligned.fasta) en la ventana de JalView.</li>
@@ -1549,20 +1408,7 @@ SSFVQFLTNTFSTGSYSLMKANVEHGVKNTNTKGGFQKS
 <li>¿Todas las secuencias tienen motivos SH2?</li>
 <li>¿En base a tu respuesta anterior, espera que las proteínas TIR sean o no fosforiladas por tirosin quinasas dentro de la célula?</li>
 </ul>
-<h3 id="ejercicio-adicional-4-usando-jalview-con-la-proteina-caga-aislada-de-la-cepa-helicobacter-patogenica">Ejercicio Adicional 4. Usando JalView con la proteína CagA aislada de la cepa Helicobacter patogénica</h3>
-<p>Las proteínas efectoras CagA son secretadas por la cepa patogénica de Helicobacter ingresando directamente al citoplasma de la célula huésped, en parte utilizando un motivo funcional llamado motivo EPIYA. Estas proteínas modulan el citoesqueleto de actina y el estado general de la célula.</p>
-<ol>
-<li>Cargue el alineamiento de las proteínas CagA.(CagA_aligned.fasta).</li>
-<li>Busque el motivo EPIYA utilizando la expresión regular del motivo: <code>EP[IL]Y[TAG]</code></li>
-</ol>
-<ul>
-<li>¿Las secuencias de CagA: tienen un motivo EPIYA o más de uno?</li>
-<li>¿Todas las secuencias tienen el mismo número?</li>
-<li>¿Cuál es el mayor número de motivos EPIYA en una proteína?</li>
-<li>¿Algún motivo EPIYA se superpone con algún motivo SH2?</li>
-<li>¿Cree que las proteínas CagA son fosforiladas por tirosin-quinasas?</li>
-</ul>
-<h3 id="ejercicio-adicional-5-familiarizandose-con-la-base-de-datos-elm">Ejercicio Adicional 5. Familiarizándose con la base de datos ELM.</h3>
+<h3 id="ejercicio-adicional-2-familiarizandose-con-la-base-de-datos-elm">Ejercicio Adicional 2. Familiarizándose con la base de datos ELM.</h3>
 <ol>
 <li>Realice la búsqueda de la secuencia de la proteína Paxillina (P49023) en ELM, utilizando los parámetros por defecto. Compare los resultados con una búsqueda de la misma secuencia pero modificando el parámetro cellular compartment plasma membrane.</li>
 <li>Busque la proteína SRC_MOUSE (P05480) en ELM.</li>
