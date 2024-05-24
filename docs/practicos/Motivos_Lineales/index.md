@@ -203,6 +203,11 @@ El core del motivo LxCxE es: consiste en 3 posiciones fijas que median la intera
    color byhet,a LxCxE
    ```
 
+!!! info "ribscale licorice"
+
+   Lo único que hace esto es ocultar el modelo de cintas (la representación de flechas para las láminas beta y búcles para las hélices) y mostrar todo como un "tubito"
+
+
    * ¿Puede identificar las posiciones core del motivo?
 
 2. Identifique si existe formación de puentes de hidrógeno entre el péptido que contiene el motivo y Rb.
@@ -218,12 +223,34 @@ El core del motivo LxCxE es: consiste en 3 posiciones fijas que median la intera
    * ¿Qué puentes de hidrógeno puede observar? ¿Se dan entre residuos de la cadena principal del péptido/dominio, o entre residuos de la cadena lateral?
    * ¿Cuáles de estos tipos de puentes de hidrógeno diría que contribuyen a la afinidad del motivo y cuáles a la especificidad?
 
+!!! Info "Esconder los h-bonds"
+
+      Eso se hace con el comando: `~hbonds`
+
+      Si los desea volver a ver, tiene que volver a utilizar FindHBonds.
+
 3. Seleccione los residuos de Rb que interactúan con los residuos del core del motivo. 
 
-      * Pensar: ¿Cómo haría esto? ¿Cómo se define una interacción o contacto? (Pista... comando `zr`)
-      * ¿Qué carácter químico tienen los residuos identificados?
+   * Pensar: ¿Cómo haría esto? ¿Cómo se define una interacción o contacto?
+      
+!!! hint "Chimera Index"
+      
+      Puede encontrar una lista de comandos en el [Chimera Index](https://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/framecommand.html)
 
-      * Detecta visualmente otras interacciones que puedan contribuir a la estabilidad o afinidad de este complejo?
+      Utilizando el comando `select` va a definir una "Zona"
+
+      Puede encontrar ayuda [aquí](https://www.cgl.ucsf.edu/chimera/current/docs/UsersGuide/midas/atom_spec.html#zones)
+
+      Necesita utilizar:
+
+      `select #0:2.e zr<6 & #0:.b`
+
+      Esto va a seleccionar todos los residuos de la cadena B que estén en un radio de 6 angstrom del residuo 2 de la cadena E.
+
+       
+   * ¿Qué carácter químico tienen los residuos identificados?
+
+   * Detecta visualmente otras interacciones que puedan contribuir a la estabilidad o afinidad de este complejo?
       
 El core del motivo LxxLFD que se encuentra en los factores de transcripcion E2F consiste en 4 posiciones fijas que median la interacción con Rb: L, L, F y D.
 
@@ -418,8 +445,7 @@ Consurf permite estimar la conservación evolutiva de las posiciones en una mol�
 4. Deseleccione la superficie en model panel (recuerde que debe destildar la S)
 5. Asegúrese que este modelo está alineado con su estructura y que se abrió como el modelo `#2`.
 
-!!! Warning "Importante!"
-      Si el modelo se cargó con otro número, consulte a sus docentes.
+!!! danger "Importante! Si el modelo se cargó con otro número, consulte a sus docentes."
 
 6. Ahora vamos a colorear utilizando los mismos colores que usa consurf utilizando el script que se encuentra en los materiales descargados, para eso:
 
@@ -472,11 +498,14 @@ Una estructura tridimensional permite entender desde el aspecto molecular las di
 3. Abra el pdb 1GUX
 4. Alinee ambos complejos representados en ribbon.
 5. Oculte las posiciones que se observan (~display)
+
+!!! danger "Preste mucha atención a como están numerados los modelos en su sesión de chimera"
+
 6. Represente ambos motivos en licorice (ribscale licorice) (recuerde seleccionar el motivo correspondiente antes!) y muestre las cadenas laterales coloreando por heteroatomos.
 
    ```
-   sel #0:.E, namesel E7
-   sel #1:.E, namesel HDAC
+   sel #0:.E; namesel E7
+   sel #1:.E; namesel HDAC
    ribscale licorice E7
    ribscale licorice HDAC
    delete :HOH
