@@ -31,7 +31,7 @@ tags:
 |                       | 13 - 15.30hs	| Práctico      | [TP7. Motivos Lineales - Parte I](/estructural/practicos/motivosRegEx/)                        | J. Glavina |
 | Miércoles, 22/05/2024	| 9 - 12hs	    | Teórica       | [T7. Motivos Lineales: Validación experimental](/estructural/teoricas/teorica7/)          | L. Chemes/T.Gibson |
 |                       | 13 - 15.30hs	| Práctico      | [TP8. Motivos Lineales - Parte II](/estructural/practicos/Motivos_Lineales/)                       | J. Glavina |
-| Jueves, 23/05/2024	| 9 - 12hs	    | Teórica       | [Consultas teóricas y del trabajo final](/estructural/practicos/teorica8/)                 | L. Chemes |
+| Jueves, 23/05/2024	| 9 - 12hs	    | Teórica       | [Consultas teóricas y del trabajo final](/estructural/teoricas/teorica8/)                 | L. Chemes |
 |                       | 13 - 17hs	    |               | [TP8. Motivos Lineales - Parte II (continuación)](/estructural/practicos/Motivos_Lineales/)        | J. Glavina   |
 | Viernes, 24/05/2024	| 9 - 10.30hs	    |               | Consultas  | L. Chemes  |
 | Viernes, 24/05/2024	| 13 - 17hs	    |               | [TP9. Trabajo Práctico Integrador](/estructural/practicos/integrador/)  | J. Glavina  |
