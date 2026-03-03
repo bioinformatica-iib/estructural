@@ -1,6 +1,7 @@
 # site
 # --- editar y ajustar de acuerdo al curso 
-site_name: Herramientas Bioinformáticas para el análisis de estructura, desorden e interacciones de proteínas
+site_name: Bioinformática aplicada al análisis de estructura, interacciones y diseño de novo de proteínas
+
 site_description: "Sitio Web del Curso de Bioinformática Estructural"
 #site_author: "Nombre Apellido"
 site_url: https://bioinformatica-iib.github.io/estructural/
@@ -130,6 +131,7 @@ extra_css:
 nav:
     - Inicio: 'index.md'
     - Acerca de: 'acerca.md'
+    - Costos e Inscripción: 'inscripcion.md'
     - Contenidos: 'contenidos.md'
     - Cronograma: 'cronograma.md'
     - Docentes: 'docentes.md'
