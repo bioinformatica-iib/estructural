@@ -23,15 +23,6 @@ tags:
 
 -->
 
-### **Profesor invitado** 
-
-A definir!
-
-<!-- <br>Dr. Toby J. Gibson
-
-<figure class="image is-128x128">
-  <img class= "is-rounded" src="./img/toby.png" width=250>
-</figure> -->
 
 ## Profesores Clases Prácticas
 
@@ -47,3 +38,13 @@ A definir!
 **Ayudantes Ad-honorem:**
 
 * Lic. Ramiro Quinteros
+
+### **Profesores invitados** 
+
+(A definir)
+
+<!-- <br>Dr. Toby J. Gibson
+
+<figure class="image is-128x128">
+  <img class= "is-rounded" src="./img/toby.png" width=250>
+</figure> -->
