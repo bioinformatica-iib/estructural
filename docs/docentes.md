@@ -7,7 +7,7 @@ tags:
 ## Profesores Clases Teóricas
 
 ### **Profesora Responsable** 
-<br>Dra. Lucía B. Chemes
+<br>Dra. Lucía B. Chemesgit
 
 <figure class="image is-128x128">
   <img class= "is-rounded" src="./img/lucia.png" width=250>
@@ -39,7 +39,7 @@ tags:
 
 * Lic. Ramiro Quinteros
 
-### **Profesores invitados** 
+## **Profesores invitados** 
 
 (A definir)
 
