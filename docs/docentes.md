@@ -24,11 +24,14 @@ tags:
 -->
 
 ### **Profesor invitado** 
-<br>Dr. Toby J. Gibson
+
+A definir!
+
+<!-- <br>Dr. Toby J. Gibson
 
 <figure class="image is-128x128">
   <img class= "is-rounded" src="./img/toby.png" width=250>
-</figure>
+</figure> -->
 
 ## Profesores Clases Prácticas
 
@@ -41,7 +44,6 @@ tags:
 * Lic. Mercedes Didier Garnham
 * Lic. Guadalupe Romer
 
-**Ayudantes Adscriptos:**
+**Ayudantes Ad-honorem:**
 
 * Lic. Ramiro Quinteros
-* Sebastián Jinich

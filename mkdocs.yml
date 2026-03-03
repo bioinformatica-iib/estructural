@@ -135,28 +135,28 @@ nav:
     - Docentes: 'docentes.md'
     - Teóricas:
         - teoricas/inicio.md
-        - Teórica 1a: teoricas/teorica1a/index.md
-        - Teórica 1b: teoricas/teorica1b/index.md
-        - Teórica 2: teoricas/teorica2/index.md
-        - Teórica 3: teoricas/teorica3/index.md
-        - Teórica 4: teoricas/teorica4/index.md
-        - Teórica 5: teoricas/teorica5/index.md
-        - Teórica 6: teoricas/teorica6/index.md
-        - Teórica 7: teoricas/teorica7/index.md
-        - Teórica 8: teoricas/teorica8/index.md
+        # - Teórica 1a: teoricas/teorica1a/index.md
+        # - Teórica 1b: teoricas/teorica1b/index.md
+        # - Teórica 2: teoricas/teorica2/index.md
+        # - Teórica 3: teoricas/teorica3/index.md
+        # - Teórica 4: teoricas/teorica4/index.md
+        # - Teórica 5: teoricas/teorica5/index.md
+        # - Teórica 6: teoricas/teorica6/index.md
+        # - Teórica 7: teoricas/teorica7/index.md
+        # - Teórica 8: teoricas/teorica8/index.md
 
     #    - Resumen: teoricas/resumen.md
     - Prácticos: 
         - 'practicos/inicio.md'
-        - TP1 - Bases de Datos: 'practicos/db_uniprot/index.md'
-        - TP2 - Chimera: 'practicos/chimera/index.md'
-        - TP3 - Modelado por homología: 'practicos/Modelado_Por_Homologia/index.md'
-        - TP4 - Modelado Parte II: 'practicos/modelado_alphafold/index.md'
-        - TP5 - Interacciones Proteína-Proteína: 'practicos/ppi/index.md'
-        - TP6 - Predicción de desorden y Bases de Datos: 'practicos/Regiones-flexibles/index.md'
-        - TP7 - Motivos Lineales - Parte I: 'practicos/motivosRegEx/index.md'
-        - TP8 - Motivos Lineales - Parte II: 'practicos/Motivos_Lineales/index.md'
-        - TP9 - Trabajo Práctico Integrador: 'practicos/integrador/index.md'
+        # - TP1 - Bases de Datos: 'practicos/db_uniprot/index.md'
+        # - TP2 - Chimera: 'practicos/chimera/index.md'
+        # - TP3 - Modelado por homología: 'practicos/Modelado_Por_Homologia/index.md'
+        # - TP4 - Modelado Parte II: 'practicos/modelado_alphafold/index.md'
+        # - TP5 - Interacciones Proteína-Proteína: 'practicos/ppi/index.md'
+        # - TP6 - Predicción de desorden y Bases de Datos: 'practicos/Regiones-flexibles/index.md'
+        # - TP7 - Motivos Lineales - Parte I: 'practicos/motivosRegEx/index.md'
+        # - TP8 - Motivos Lineales - Parte II: 'practicos/Motivos_Lineales/index.md'
+        # - TP9 - Trabajo Práctico Integrador: 'practicos/integrador/index.md'
     #    - Resumen: 'practicos/resumen.md'
     #- Instructivos: instructivos.md
 
