@@ -26,46 +26,26 @@ El curso está dirigido a estudiantes avanzados de grado, estudiantes de doctora
 * Curso de posgrado
 * Materia optativa de grado (UNSAM)
 
-## Inscripción
-
-* Formulario de inscripción: [aquí](https://forms.gle/mxp6ssbztHPo528KA)
-
-**Nota para la inscripción:** Si sos estudiante de posgrado (doctorado, postdoctorado, investigador, profesionales, etc) en el formulario deberás incluir detalles de tu formación, una breve carta de motivación y un breve resumen de tu línea de investigación.
-
-
-## Costos
-
-* **Alumnos de Grado y Doctorado UNSAM:** Sin costo
-* **Investigadores y Docentes UNSAM:** $100.000
-* **Alumnos de Grado y Posgrado de otras Universidades Públicas Nacionales:** $100.000
-* **Docentes o Investigadores de Universidades Públicas Nacionales:** $250.000
-* **Alumnos, Docentes e Investigadores de Universidades Privadas:** $360.000
-* **Empresas/Profesionales Independientes:** $500.000
-* **Alumnos / Docentes / Profesionales Internacionales:** USD $350
-
-El pago se realiza por transferencia bancaria. Una vez inscriptos se enviará la información correspondiente.
-
 ## Modalidad del curso
 
-* **Modalidad:** Curso intensivo - modalidad Virtual
-* **Horas de cursada:** 64 hs
+* **Modalidad:** Virtual
+* **Horas de cursada:** 80 hs
 * **Evaluación:** Individual mediante examen/trabajo final
 * **Idioma:** El curso se dictará en español excepto por las charlas de docentes invitados que serán en inglés.
 
 ## Horarios
 
-* **Cursada:** Lunes 13/5 al Viernes 24/5 
-* **Evaluación final:** Viernes 31/5 (Horario a definir).
-* **Teóricos:** 9 a 12hs
-* **Prácticos:** 13 a 17 hs.
-* [**Cronograma completo**](/estructural/cronograma)
+* **Cursada:** Martes 7 de Abril al Jueves 11 de Junio
+* **Teóricos y Prácticos:** Martes y Jueves de 9 a 13hs.
+* **Cronograma completo:** Próximamente
 
 ## Asistencia
 * **Teóricas:** Asistencia opcional (recomendada)
-* **Prácticas:** Trabajos Prácticos (8 Trabajos prácticos, deberán asistir a 7 como mínimo)
+* **Prácticas:** Trabajos Prácticos (9 Trabajos prácticos, deberán asistir a 8 como mínimo)
+* **Evaluación Final:** Asistencia obligatoria.
 
 ## Evaluación
 
-La evaluación final consistirá en la elaboración de un trabajo especial que será presentado en forma escrita y oral. La evaluación será realizada por los docentes del curso.
+La evaluación final consistirá en la elaboración de un trabajo especial/seminario a definir durante la cursada que será presentado en forma escrita y oral. La evaluación será realizada por los docentes del curso.
 
 

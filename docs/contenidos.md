@@ -19,7 +19,7 @@
 * Predicción de interacciones proteína-proteína y proteína-ligando utilizando AlphaFold3 y Boltz.
 * Análisis de alineamientos múltiples de secuencias utilizando Jalview.
 * Predicción de desorden: IUPred y otros predictores.
-* Predicción de low complexity regions, phase separation, agregación, TMHMM, Coiled-coiled.
+* Predicción de regiones de baja complejidad, separación de fases, agregación, TMHMM, Coiled-coiled.
 * Bases de Datos de Proteínas Desordenadas: PED, DISPROT, MOBIdb, PhasePro.
 * Motivos Lineales: Conceptos de Expresión Regular e identificación en alineamientos.
 * Base de Datos de Motivos Lineales: ELMdb.
