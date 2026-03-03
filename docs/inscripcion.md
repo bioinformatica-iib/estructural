@@ -4,8 +4,6 @@ tags:
   - Formulario
 ---
 
-## Profesores Clases Teóricas
-
 ## Inscripción
 
 * Formulario de inscripción: [aquí](https://forms.gle/mxp6ssbztHPo528KA)
