@@ -7,10 +7,17 @@ tags:
 ---
 
 ## Descripción
-El curso proveerá una base teórica y práctica para el estudio de relaciones estructura-función de proteínas utilizando herramientas bioinformáticas. Se introducirán bases de datos y herramientas que permiten identificar dominios funcionales de proteínas, predecir la estructura de proteínas a partir de la secuencia, discernir regiones plegadas y flexibles de proteínas y analizar diferentes tipos de interacciones proteína-proteína. A lo largo de los trabajos prácticos, los alumnos adquirirán manejo de herramientas de visualización y análisis de estructura y secuencia de proteínas utilizando los programas Chimera y Jalview. El curso está dirigido a estudiantes avanzados de grado, estudiantes de doctorado y postdocs/investigadores con formación experimental que deseen adquirir conceptos de bioinformática estructural, y a alumnos con formación bioinformática que no tengan conocimientos previos de estructura-función de proteínas. Los alumnos podrán aplicar estas herramientas a sus temas de estudio durante la cursada.
+
+El curso proveerá una base teórica y práctica para el estudio de relaciones estructura-función de proteínas utilizando herramientas bioinformáticas. Se introducirán bases de datos y herramientas que permiten identificar dominios funcionales de proteínas, predecir la estructura de proteínas a partir de la secuencia, discernir regiones plegadas y flexibles de proteínas y analizar diferentes tipos de interacciones proteína-proteína. Se introducirá el uso de los algoritmos AlphaFold y Boltz para la predicción de estructura e interacciones proteína-proteína y proteína-ligando y de herramientas de IA para el diseño de novo de proteínas. A lo largo de los trabajos prácticos, los alumnos adquirirán manejo de herramientas de visualización y análisis de estructura y secuencia de proteínas utilizando los programas Chimera y Jalview.
+
+El curso está dirigido a estudiantes avanzados de grado, estudiantes de doctorado y postdocs/investigadores con formación experimental que deseen adquirir conceptos de bioinformática estructural, y a alumnos con formación bioinformática que no tengan conocimientos previos de estructura-función de proteínas. Los alumnos podrán aplicar estas herramientas a sus temas de estudio durante la cursada.
 
 ## Requisitos
-El curso no requiere formación bioinformática previa o conocimientos previos de programación. Se recomienda contar con conocimientos básicos de bioquímica/función de proteínas y manejo básico de computadoras.
+
+* El curso no requiere formación bioinformática previa o conocimientos previos de programación.
+* Se recomienda contar con conocimientos básicos de bioquímica/función de proteínas y manejo básico de computadoras.
+* Algunos trabajos prácticos usan notebooks en Colab por lo que es **necesario** tener una cuenta de gmail.
+
 
 ### Alumnos de Grado de Licenciatura de Biotecnología de UNSAM
 **Correlativa:** Bioquímica de Proteínas 
@@ -21,19 +28,20 @@ El curso no requiere formación bioinformática previa o conocimientos previos d
 
 ## Inscripción
 
-* Formulario de inscripción: [aquí](https://forms.gle/zKpT1GBd1jfxjP7j7)
+* Formulario de inscripción: [aquí](https://forms.gle/mxp6ssbztHPo528KA)
 
 **Nota para la inscripción:** Si sos estudiante de posgrado (doctorado, postdoctorado, investigador, profesionales, etc) en el formulario deberás incluir detalles de tu formación, una breve carta de motivación y un breve resumen de tu línea de investigación.
 
-**Becas:** En caso de necesidad se otorgarán becas a estudiantes de doctorado de universidades públicas nacionales. En este caso, se solicitará una breve justificación del pedido. Se otorgarán hasta dos becas de asistencia.
 
 ## Costos
 
-* **Alumnos de Grado UNSAM:** Sin costo.
-* **Alumnos de Doctorado UNSAM:** Sin costo.
-* **Estudiantes y profesionales de otras Universidades Públicas Nacionales:** $40000 (con posibilidad de beca total o parcial)
-* **Alumnos de Universidades Privadas:** $80000
-* **Industria / Alumnos / Docentes / Profesionales Internacionales:** USD $120
+* **Alumnos de Grado y Doctorado UNSAM:** Sin costo
+* **Investigadores y Docentes UNSAM:** $100.000
+* **Alumnos de Grado y Posgrado de otras Universidades Públicas Nacionales:** $100.000
+* **Docentes o Investigadores de Universidades Públicas Nacionales:** $250.000
+* **Alumnos, Docentes e Investigadores de Universidades Privadas:** $360.000
+* **Empresas/Profesionales Independientes:** $500.000
+* **Alumnos / Docentes / Profesionales Internacionales:** USD $350
 
 El pago se realiza por transferencia bancaria. Una vez inscriptos se enviará la información correspondiente.
 
