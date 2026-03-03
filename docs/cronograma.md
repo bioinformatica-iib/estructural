@@ -7,9 +7,10 @@ tags:
   - fechas
   - feriados
 ---
-<!--
-[T1a. Introducción al curso](/estructural/teoricas/teorica1a/)
--->
+
+A definir próximamente !
+
+<!-- 
 :fontawesome-solid-check-double: Puede estar sujeto a modificaciones.
 
 |**Fecha** { data-sort-method='none' }  |   **Horario**   { data-sort-method='none' } |  **Tipo**   { data-sort-method='none' } |   **Tema**  { data-sort-method='none' }  |   **Docente** { data-sort-method='none' } |
@@ -35,4 +36,4 @@ tags:
 |                       | 13 - 17hs	    |               | [TP8. Motivos Lineales - Parte II (continuación)](/estructural/practicos/Motivos_Lineales/)        | J. Glavina   |
 | Viernes, 24/05/2024	| 9 - 10.30hs	    |               | Consultas  | L. Chemes  |
 | Viernes, 24/05/2024	| 13 - 17hs	    |               | [TP9. Trabajo Práctico Integrador](/estructural/practicos/integrador/)  | J. Glavina  |
-| A definir, después del Lunes 01/06/2024| A definir	    |               | Evaluación Final    |   |
+| A definir, después del Lunes 01/06/2024| A definir	    |               | Evaluación Final    |   | -->
