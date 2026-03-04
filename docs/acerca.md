@@ -28,10 +28,10 @@ El curso está dirigido a estudiantes avanzados de grado, estudiantes de doctora
 
 ## Modalidad del curso
 
-* **Modalidad:** Virtual
+* **Modalidad:** Híbrida
 * **Horas de cursada:** 80 hs
 * **Evaluación:** Individual mediante examen/trabajo final
-* **Idioma:** El curso se dictará en español excepto por las charlas de docentes invitados que serán en inglés.
+
 
 ## Horarios
 
