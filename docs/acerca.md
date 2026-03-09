@@ -29,6 +29,10 @@ El curso está dirigido a estudiantes avanzados de grado, estudiantes de doctora
 ## Modalidad del curso
 
 * **Modalidad:** Híbrida
+
+    * Alumnos UNSAM, CABA/AMBA: Presencial
+    * Otras regiones: Virtual (Presencial optativo)
+
 * **Horas de cursada:** 80 hs
 * **Evaluación:** Individual mediante examen/trabajo final
 
