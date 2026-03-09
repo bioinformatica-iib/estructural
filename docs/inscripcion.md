@@ -13,7 +13,7 @@ tags:
 
 ## Costos
 
-* **Alumnos de Grado y Doctorado UNSAM:** Sin costo
+* **Alumnos de Grado, Doctorado y Post-Doc UNSAM:** Sin costo
 * **Post-Doctorandos/Investigadores y Docentes UNSAM:** $100.000
 * **Alumnos de Grado y Posgrado de otras Universidades Públicas Nacionales:** $100.000
 * **Docentes o Investigadores de Universidades Públicas Nacionales:** $250.000
