@@ -41,7 +41,17 @@ tags:
 
 ## **Profesores invitados** 
 
-(A definir)
+* **Cesar A. Ramirez-Sarmiento, PhD**
+    
+    Protein Biophysics, Biochemistry and Bioinformatics Lab (PB3)
+    
+    Pontificia Universidad Católica de Chile
+
+* **Benjamín Basanta, PhD**
+  
+    Computational Protein Design at Arzeda, a Protein Design company co-founded by David Baker and associated with the Institute for Protein Design
+  
+    Seattle, Washington USA
 
 <!-- <br>Dr. Toby J. Gibson
 
