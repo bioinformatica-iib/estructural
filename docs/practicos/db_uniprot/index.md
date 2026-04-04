@@ -496,19 +496,18 @@ La interfaz de [TMHMM Server 2.0](https://services.healthtech.dtu.dk/services/TM
 
 ### Ejercicio 1. Dominios CBS.
 
-Realice una búsqueda en InterPro con el identificador de Pfam PF00571.
+Buscar el identificador de Pfam PF00571.
 
 1. ¿En qué **entrada de InterPro** está integrada?
-2. ¿Corresponde a una proteína, un dominio u otra cosa?
 3. ¿Corresponde a la misma entidad que Pfam? ¿Estas entidades son similares o al menos tienen algo en común?
 4. ¿Qué *signatures* de otras bases de datos fueron fusionados con Pfam para crear la entrada de InterPro?
 5. ¿Cuántas proteínas corresponden a esta entrada? ¿Cuántas arquitecturas de dominio? ¿Cuántas proteínas tienen dos ocurrencias repetidas de esta entrada seguida por un dominio transporter-associated (IPR005170)?
 
 ### Ejercicio 2. Proteína KDM5C.
-Busque en InterPro la entrada correspondiente a la demetilasa lisin-específica 5C (UniProtKB entry P41229). Hacia la izquierda pueden expandirse/colapsarse las *signatures* que definen los distintos tipos de entradas de InterPro, mientras que en la sección central se observan las predicciones de las *signatures* para la proteína de interés.
+Buscar en InterPro la entrada correspondiente a la demetilasa lisin-específica 5C (UniProtKB entry P41229). Hacia la izquierda pueden expandirse/colapsarse las *signatures* que definen los distintos tipos de entradas de InterPro, mientras que en la sección central se observan las predicciones de las *signatures* para la proteína de interés.
 
 1. ¿Qué *signatures* son reconocidas en esta proteína?
-2. Las *signatures* son mapeadas en la secuencia query en los resultados principales. Observe la sección *Homologous superfamily*. ¿Cuál es la arquitectura de esta superfamily?
+2. Las *signatures* son mapeadas en la secuencia query en los resultados principales. 
 
     !!! Info "Tipos de entradas en InterPro"
 
@@ -520,19 +519,19 @@ Busque en InterPro la entrada correspondiente a la demetilasa lisin-específica 
         * **Repeats:** Secuencia corta ( < 50 a aminoácidos) que típicamente se repite varias veces dentro de una proteína.
         * **Homologous Superfamily:** Grupo de proteínas que comparten un origen evolutivo que se refleja en la similitud estructural, aún cuando la similitud de secuencia es baja. Este tipo de entrada contiene *signatures* de las bases de datos CATH-Gene3D y SUPERFAMILY exclusivamente.
 
-3. La *signature* más cercana al C-terminal en esta superfamily es un zinc finger.
+3. La *signature* más cercana al C-terminal es un zinc finger.
 
     * ¿Qué *signatures* de InterPro describen esta región? ¿Qué tipo de *signatures* son?
     * ¿De donde proviene la información que utilizó InterPro para esta asignación?
-    * A la derecha puede observar los identificadores que las *signatures* provenientes de las distintas bases de datos.
+    * A la derecha se pueden observar los identificadores que las *signatures* provenientes de las distintas bases de datos.
 
-4. Entre las *signatures* identificadas está la entrada de dominio IPR001606. ¿Qué bases de datos fueron procesadas para crear esta entrada? ¿Estas mapean todas a la misma región exacta de la proteína de interés? Si la respuesta es no, ¿por qué cree que es así?
-5. ¿Puede identificar regiones intrínsecamente desordenadas en esta proteína? (‘mobidb’ es la fuente en este caso para la anotación de estas regiones).
+4. Entre las *signatures* identificadas está la entrada de dominio IPR001606. ¿Qué bases de datos fueron procesadas para crear esta entrada? 
+5. ¿Se encuentran regiones intrínsecamente desordenadas en esta proteína? (‘mobidb’ es la fuente en este caso para la anotación de estas regiones).
 6. ¿Cuántas proteínas similares a P41229 existen aproximadamente?
 
 ### Ejercicio 3. Búsqueda a partir de secuencia.
 
-Busque en la base de datos de InterPro la entrada que describe la proteína en la siguiente secuencia FASTA:
+Buscar en la base de datos de InterPro la entrada que describe la proteína en la siguiente secuencia FASTA:
 
     >squirrel_seq | example from EBI Train Online
     MALPARLVPLCCLALLALPAQSCGPGRGPVGRRRYVRKQLVPLLYKQFVPSVPERTLGAS
@@ -543,18 +542,18 @@ Busque en la base de datos de InterPro la entrada que describe la proteína en l
     ALRPARVARVAREEAVGVFAPLTAHGTLLVNDVLASCYAVLESHQWAHRAFAPLRLLHAL
     GALLPGGAVQPTGMHWYSRFLYRLAEELLG
 
-1. ¿Pertenece a alguna family?
-2. ¿Puede encontrar el nombre de la entrada de la base de datos PRINTS utilizada para construir esta family signature de InterPro?
+1. ¿Pertenece a alguna *family*?
+2. ¿Cuál es el nombre de la entrada de la base de datos PRINTS utilizada para construir esta *family signature* de InterPro?
 3. ¿Cuál es la diferencia entre las InterPro *signatures* IPR001767 y IPR003587?
-4. Considerando las dos *signatures* del punto anterior y IPR000320, ¿puede describir la arquitectura de esta proteína? ¿Cómo difiere de la arquitectura presentada en la sección *Homologous superfamilies*?
+4. Considerando las dos *signatures* del punto anterior y IPR000320, ¿Cuál es la arquitectura de esta proteína?
 5. ¿Cuál es el rol biológico de esta proteína?
 
     ??? Hint "Pista"
     
-        Clickee en el nombre de la familia de la proteína.
+        Clickear en el nombre de la familia de la proteína.
 
 6. ¿Tiene un péptido señal esta proteína?
-7. ¿Cómo podría saber a simple vista que esta proteína tiene actividad peptidasa?
+7. ¿Es posible saber a simple vista que esta proteína tiene actividad peptidasa?
 
 
 ## Recursos adicionales
