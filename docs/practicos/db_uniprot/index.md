@@ -18,7 +18,8 @@
 
 ## Materiales
 
-[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1L8vrfYpbvOb3ToTHLf4CLJ1g6NdflZSF/view?usp=sharing){ .md-button .md-button--primary }
+[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1L8vrfYpbvOb3ToTHLf4CLJ1g6NdflZSF/view?usp=sharing){ .md-button .md-button--primary } [:fontawesome-solid-download: Presentación](https://docs.google.com/presentation/d/1WpXOlSaWp5ONVZ48iT8AkTX7INUmBQcnqngwT7njoyE/edit?usp=sharing){ .md-button .md-button--primary }
+
 
 ## Organización de la guía
 Cada guía consta de una introducción a la herramienta, seguida de los ejercicios a realizar en el trabajo práctico.
