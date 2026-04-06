@@ -29,11 +29,14 @@ theme:
     - header.autohide
     - navigation.tracking
     - navigation.tabs
-#    - navigation.sections
+    - navigation.sections
 #    - navigation.tabs.sticky # --> hace que la navigation bar baje cuando se escrolea.
 #    - navigation.indexes # Si se saca, cada section del index se puede ampliar INCOMPATIBLE CON toc.integrate y creo que con navigation tracking
-    - toc.integrate # Integra la table of contents a la navigation
+#    - toc.integrate # Integra la table of contents a la navigation
     - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - navigation.expand
     
   palette: 
     - scheme: default
