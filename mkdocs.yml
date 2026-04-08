@@ -140,8 +140,7 @@ nav:
     - Docentes: 'docentes.md'
     - Teóricas:
         - teoricas/inicio.md
-        # - Teórica 1a: teoricas/teorica1a/index.md
-        # - Teórica 1b: teoricas/teorica1b/index.md
+        - Teórica 1: teoricas/teorica1/index.md
         # - Teórica 2: teoricas/teorica2/index.md
         # - Teórica 3: teoricas/teorica3/index.md
         # - Teórica 4: teoricas/teorica4/index.md
@@ -164,6 +163,7 @@ nav:
         # - TP9 - Trabajo Práctico Integrador: 'practicos/integrador/index.md'
     #    - Resumen: 'practicos/resumen.md'
     #- Instructivos: instructivos.md
+    - Como llegar: 'como_llegar/index.md'
 
 # copyright
 # --- editar y ajustar de acuerdo al curso
