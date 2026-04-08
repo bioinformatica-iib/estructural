@@ -4,7 +4,7 @@ tags:
 ---
 
 ## Ubicación
-Las clases se dictan en el Aula 1 del Edificio Innovación, Tecnología y Sociedad (ITS - Referencia 30) del Campus Miguelete de la Universidad Nacional de San Martín
+Las clases se dictan en el Aula Lab 3 del Edificio Innovación, Tecnología y Sociedad (ITS - Referencia 30) del Campus Miguelete de la Universidad Nacional de San Martín
 
 
 ## Transporte Público
