@@ -11,15 +11,15 @@
 * TMHMM: [https://services.healthtech.dtu.dk/service.php?TMHMM-2.0](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0)
 * DeepTMHMM: [https://services.healthtech.dtu.dk/services/DeepTMHMM-1.0/](https://services.healthtech.dtu.dk/services/DeepTMHMM-1.0/)
 
+## Recursos para el trabajo práctico
+
+[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1L8vrfYpbvOb3ToTHLf4CLJ1g6NdflZSF/view?usp=sharing){ .md-button .md-button--primary } &nbsp;&nbsp;
+[:fontawesome-solid-file-powerpoint: Presentación](https://docs.google.com/presentation/d/1WpXOlSaWp5ONVZ48iT8AkTX7INUmBQcnqngwT7njoyE/edit?usp=sharing){ .md-button .md-button--primary }
+
 ## Objetivos
 * Familiarizarse con el uso de la base de datos UniProt
 * Familiarizarse con el uso del predictor de regiones trans-membrana: TMHMM y DeppTMHMM
 * Familiarizarse con el uso de la base de datos InterPro
-
-## Materiales
-
-[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1L8vrfYpbvOb3ToTHLf4CLJ1g6NdflZSF/view?usp=sharing){ .md-button .md-button--primary } [:fontawesome-solid-download: Presentación](https://docs.google.com/presentation/d/1WpXOlSaWp5ONVZ48iT8AkTX7INUmBQcnqngwT7njoyE/edit?usp=sharing){ .md-button .md-button--primary }
-
 
 ## Organización de la guía
 Cada guía consta de una introducción a la herramienta, seguida de los ejercicios a realizar en el trabajo práctico.
