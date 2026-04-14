@@ -20,7 +20,7 @@ A definir próximamente !
 |:---------------------:|:-------------:|:-------------:|:-----------|:-----------|
 | Martes, 07/04/2026	  | 9 - 13 hs     | Teórica       | [T1. Introducción al curso. Bases de Datos y anotación de proteínas](/estructural/teoricas/teorica1/)  | L. Chemes |
 | Jueves, 09/04/2026    | 9 - 13 hs     | Práctico      | [TP1. Bases de Datos de proteínas](/estructural/practicos/db_uniprot/)                                                  | J. Glavina |
-| Martes, 14/04/2026    | 9 - 13 hs     | Teórica       | T2. Estructura de Proteínas                                                       | L. Chemes |
+| Martes, 14/04/2026    | 9 - 13 hs     | Teórica       | [T2. Estructura de Proteínas](/estructural/teoricas/teorica2/)                                                       | L. Chemes |
 | Jueves, 16/04/2026    | 9 - 13 hs     | Práctico      | TP2. Visualización de Proteínas utilizando Chimera                                | J. Glavina |
 | Martes, 21/04/2026    | 9 - 13 hs     | | Consultas  |  |
 | Jueves, 23/04/2026  	| 9 - 13 hs	    | Teórica       | T3. Predicción de estructural de Proteínas                                                        | L. Chemes |
