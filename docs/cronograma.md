@@ -23,7 +23,7 @@ A definir próximamente !
 | Martes, 14/04/2026    | 9 - 13 hs     | Teórica       | [T2. Estructura de Proteínas](/estructural/teoricas/teorica2/)                                                       | L. Chemes |
 | Jueves, 16/04/2026    | 9 - 13 hs     | Práctico      | [TP2. Visualización de Proteínas utilizando Chimera](/estructural/practicos/chimera/)                                | J. Glavina |
 | Martes, 21/04/2026    | 9 - 13 hs     | | Consultas  |  |
-| Jueves, 23/04/2026  	| 9 - 13 hs	    | Teórica       | T3. Predicción de estructural de Proteínas                                                        | L. Chemes |
+| Jueves, 23/04/2026  	| 9 - 13 hs	    | Teórica       | [T3. Predicción estructural de Proteínas](/estructural/teoricas/teorica3/)                                                        | L. Chemes |
 | Martes, 28/04/2026    | 9 - 13 hs   	| Práctico      | TP3a. Modelado estructural de Proteínas | J. Glavina |
 | Jueves, 30/04/2026    | 9 - 13 hs	    | Práctico      | TP3b. Modelado utilizando AlphaFold                                            | J. Glavina |
 | Martes, 05/05/2026    | 9 - 13 hs     | Teórica       | T4. Interacciones proteína-proteína                  | L.Chemes |
@@ -49,7 +49,7 @@ A definir próximamente !
 | Martes, 14/04/2026    | 9 - 13 hs     | Teórica       | [T2. Estructura de Proteínas](/estructural/teoricas/teorica2/)                                                       | L. Chemes |
 | Jueves, 16/04/2026    | 9 - 13 hs     | Práctico      | [TP2. Visualización de Proteínas utilizando Chimera](/estructural/practicos/chimera/)                                | J. Glavina |
 | Martes, 21/04/2026    | 9 - 13 hs     | | Consultas  |  |
-| Jueves, 23/04/2026  	| 9 - 13 hs	    | Teórica       | [T3. Predicción de estructural de Proteínas](/estructural/teoricas/teorica3/)                                                        | L. Chemes |
+| Jueves, 23/04/2026  	| 9 - 13 hs	    | Teórica       | [T3. Predicción estructural de Proteínas](/estructural/teoricas/teorica3/)                                                        | L. Chemes |
 | Martes, 28/04/2026    | 9 - 13 hs   	| Práctico      | [TP3a. Modelado estructural de Proteínas](/estructural/practicos/Modelado_Por_Homologia/)                                             | J. Glavina |
 | Jueves, 30/04/2026    | 9 - 13 hs	    | Práctico      | [TP3b. Modelado utilizando AlphaFold](/estructural/practicos/modelado_alphafold/)                                            | J. Glavina |
 | Martes, 05/05/2026    | 9 - 13 hs     | Teórica       | [T4. Interacciones proteína-proteína](/estructural/teoricas/teorica4/)                  | L.Chemes |
