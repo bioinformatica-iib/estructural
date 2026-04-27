@@ -125,9 +125,11 @@ En este ejercicio modelaremos la estructura de la chaperona de cobre de levadura
 
         Es un criterio en MolProbity para estructuras de baja resolución (>2 Å) que decta errores en el *backbone* 
  
-
+<!--
+Links para acceder a Verify y a Procheck
  https://saves.mbi.ucla.edu/results?job=503042&p=verify
  https://saves.mbi.ucla.edu/results?job=503042&p=procheck
+-->
 
 5. La herramienta **Verify3D** permite determinar la compatibilidad de un modelo 3D de una proteína con su secuencia aminoacídica en base a cuál es el ambiente en el cual se encuentra cada residuo y la compatibilidad con la estructura secundaria en la que se encuentra.  
 
@@ -246,7 +248,7 @@ Hasta el 2021, los algoritmos de predicción de estructura tridimensional de pro
 A partir de la secuencia primaria de una proteína (Fig 1), AlphaFold utiliza una red neuronal para la predicción estructural de alta precisión (en la mayoría de los casos), la cual aumenta con el uso de estructuras homólogas. AlphaFold puede incluso predecir con alta precisión las cadenas laterales si el backbone es preciso.
 
 <p style="text-align:center">
-<img src="./img/alphafold_fig1.png" alt="" style="max-width:70%">
+<img src="./images/alphafold_fig1.png" alt="" style="max-width:70%">
 </p>
 <figcaption style="text-align:center;max-width:70%"> Figura 1. Algoritmo de predicción de estructuras AlphaFold. </figcaption>
 
@@ -264,8 +266,9 @@ AlphaFold incorpora métricas de confianza de la predicción.
 * La segunda métrica se denomina **PAE** (por Predicted Aligned error) y compara el error en la predicción de pares de residuos, esto es el error sobre el residuo y cuando las estructuras real y predicha son alineadas sobre el residuo x. Esta medida permite la identificación global de unidades de plegamiento (dominios) y permite predecir si dos dominios guardan relaciones espaciales definidas, o si tienen variabilidad (por ejemplo, si están conectadas por un linker flexible).
 
 <p style="text-align:center">
-<img src="./img/pae-3.png" alt="" style="max-width:60%">
-<img src="./img/pae-8.png" alt="" style="max-width:60%">
+<img src="./images/pae-3.png" alt="" style="max-width:60%">
+<img src="./images/pae-8.png" alt="" style="max-width:60%">
+
 </p>
 <figcaption style="text-align:center;max-width:60%"> Figura 2. Arriba. Se pueden observar dos dominios globulares, pero se desconoce la disposición espacial relativa entre ellos. Abajo. Se puede observar que además de identificar los dominios globulares, se predien correctamente pares de residuos interdominios. </figcaption>
 
@@ -337,8 +340,10 @@ LAEMTSTRTRMQKQKMNDSMDTSNKEEK
         * has_clash: Booleano (valor yes/no) indicando si la estructura tiene un número significativo de átomos que se superpongan (más del 50% de una cadena o una cadena con más de 100 átomos que se superpongan).
 
         * ranking_score: rango de -100 a 1.5 que se puede utilizar para clasificar las predicciones. Combina ptm, iptm, fraction_disordered y has_clash en un único número según:
-        
-        $0.8 × ipTM + 0.2 × pTM + 0.5 × disorder − 100 × has_clash$
+                
+        $$
+        0.8 \times \mathrm{ipTM} + 0.2 \times \mathrm{pTM} + 0.5 \times \mathrm{disorder} - 100 \times \mathrm{has\_clash}
+        $$
 
         * chain_pair_pae_min: Una matriz $m x m$ donde m es el número de cadenas. Cada elemento (i,j) contiene el mínimo valor de PAE para las filas restringidas a la cadena i y columnas restringidas a la cadena j.
         
