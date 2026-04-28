@@ -11,7 +11,7 @@
 
 ## Materiales
 
-[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1XjpchOpDP5wdxmrLQlW3B6li8j-ceRKK/view?usp=sharing){ .md-button .md-button--primary }
+[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1sKGnMT-WZy7tVDMtUXm_a4D7eWiGb-rG/view?usp=sharing){ .md-button .md-button--primary }
 
 ## Objetivos
 
@@ -255,7 +255,20 @@ A partir de la secuencia primaria de una proteína (Fig 1), AlphaFold utiliza un
 
 ### Arquitectura
 
-AlphaFold utiliza una arquitectura de red que utiliza como inputs el alineamiento de secuencias (MSAs) y una representación de todos los pares de residuos de la secuencia. Mediante un algoritmo iterativo que se basa en la arquitectura Evoformer, se procesan los inputs y en conjunto con un módulo estructural se genera una representación tridimensional de la proteína query. 
+AlphaFold3 utiliza una arquitectura de red similar a la de AlphaFold2, que utiliza como inputs el alineamiento de secuencias (MSAs) y una representación de todos los pares de residuos de la secuencia que luego es utilizado por un módulo estructural para generar la estructura. AlphaFold2 utiliza un algoritmo iterativo que se basa en la arquitectura Evoformer para procesar los inputs y junto con el módulo estructural generar una representación tridimensional de la proteína query. AlphaFold3 para reducir la cantidad del procesamiento del MSA, reemplaza el algoritmo Evoformer con el módulo Pairformer que utiliza un bloque más pequeño de *embedding* para el MSA. Algunas de las mejoras en la *performance* en la predicción están directamente relacionadas con la reducción en la dependencia de la señal del MSA. De todas maneras, para la predicción de estructura de proteínas, AlphaFold3 se basa fuertemente al igual que AlphaFold2 en la co-evolución de residuos observada en el MSA.
+
+A diferencia de AlphaFold2 que predice las posiciones de aminoácidos y sus cadenas laterales, AlphaFold3 predice las coordenadas de los átomos individuales en el complejo, lo cual facilita la predicción de distintos tipos de moléculas.
+
+Tanto AlphaFold2 como AlphaFold3 dividen al complejo en *tokens*. En AlphaFold2 los *tokens* corresponden directamente a aminoácidos. En AlphaFold3, el enfoque de un token por átomo para toda la estructura, permitiría una mayor flexibilidad para modelar distintas moléculas, sin embargo, pone en compromiso restricciones de memoria. Por lo tanto, intenta una estrategia que permita cierto equilibrio. Un token puede ser un aminoácido, un nucléotido, un átomo de un ligando, un ión o por ejemplo, un átomo de un aminoácido o nucleótido modificado químicamente.
+
+Por ejemplo, una estructura de 100 aminoácidos y un ligando de 20 átomos, requiere 120 *tokens*.
+
+A diferencia de AlphaFold2, las métricas de confianza son calculadas por *tokens* y no por aminoácidos.
+
+
+AlpaFold2 era un modelo no-generativo que identifica patrones en los datos. AlphaFold3 es usa un modelo *generativo* de machine learning. Los modelos generativos crean nuevos datos similares a los ejemplos que aprendieron.
+
+
 
 ### Métricas de confianza
 
@@ -325,13 +338,21 @@ LAEMTSTRTRMQKQKMNDSMDTSNKEEK
 
     * El modelo estará listo en unos 5 minutos
 
+2. Observe los resultados obtenidos en el servidor, 
+    * ¿Qué puede decir de la estructura de la proteína?
+    * ¿Cuántos dominios posee? ¿ordenados o desordenados?
+    * ¿Puede decir aproximadamente los límites?
+
+2. Observe el gráfico de PAE.
+    * ¿Qué interpreta?
+
 2.  Descargue los resultados haciendo *click* en los tres puntitos y en *Download*. Se descargará un archivo zip con el nombre que usted utilizó para su trabajo. Descomprima el archivo.
 
     Encontrará 13 archivos que contienen el nombre de su trabajo:
     
     * `*_job-request.json` Tiene los parámetros utilizado en el trabajo.
 
-        * ptm: rango 0-1 indicando el valor predicho de TM para la estructura completa.
+        * ptm: rango 0-1 indicando el valor predicho de TM (*template modelling score*) para la estructura completa.
 
         * iptm: rango 0-1 indicando el valor predicho de TM en la interfaz para todas las interfaces en la estructura.
 
@@ -362,11 +383,16 @@ LAEMTSTRTRMQKQKMNDSMDTSNKEEK
 6. Abra Chimera y cargue los modelos (si no recuerda *File* → *Open …*) y con el mouse seleccione los modelos manteniendo la tecla ctrl presionada para seleccionar más de uno.
 
 11. Alinee los 5 modelos,
+
     * ¿cuál es el RMSD global?
+
 12. Utilice **Match Align** para ver el alineamiento.
+
     * ¿Qué observa?
+
     * ¿Porque si las secuencias son todas iguales no aparece el n-terminal alineado?
-13. Los valores de pLDDT están almacenados en la columna del pdb que corresponde a los b-factors. Coloree los modelos según este atributo ingresando en la command line:
+
+13. Los valores de pLDDT están almacenados en la columna del pdb que corresponde a los *b*-factors. Coloree los modelos según este atributo ingresando en la command line:
 
     ```
     rangecolor bfactor 0 orange red 50 white 100 dodger blue
@@ -402,14 +428,9 @@ LAEMTSTRTRMQKQKMNDSMDTSNKEEK
     * ¿Porqué considera que elegimos 50 como valor mínimo?
     * ¿De qué posición a qué posición consideraría que el modelo es de confianza?
 
-14. Por ahora investigue el gráfico de pLDDT, al final de la clase haremos una demostración del script en R para graficar estos valores.
+14. Para analizar los valores de pLDDT graficaremos los valores de pLDDT por posición para cada uno de los modelos.
 
-    * ¿Qué observa?
-    * ¿Puede identificar las ragiones con un pLDDT mayor a 70?
-    * ¿Puede identificar las ragiones con un pLDDT entre 50 a 70?
-
-    ---
-    Abra R Studio. Ahora graficaremos los pLDDT por posición para cada uno de los modelos.
+    * Abra R Studio.
 
     ``` R
     # SCRIPT CORREGIDO
@@ -479,14 +500,24 @@ LAEMTSTRTRMQKQKMNDSMDTSNKEEK
     ```
 
 
+    * ¿Qué observa?
+
+    * ¿Puede identificar las regiones con un pLDDT mayor a 70?
+
+    * ¿Puede identificar las regiones con un pLDDT entre 50 a 70?
 
 
+7. Comparando con otras estructuras
 
-7. Abra el pdb: 2b9d.
-    * ¿Estaba esta estructura entre los templados?
+    * Abra el pdb: 1n4m.
+
     * ¿Por qué método fue determinada?
+
     * ¿A qué proteína corresponde? ¿De qué organismo?
+
+
 8. Alinee las estructuras utilizando Matchmaker (si no recuerda, *Tools* → *Structure comparison* → *Matchmaker*)
+
     * ¿Cuál es el RMSD global?
 
     Si quieren ver el RMSD por posición sobre la estructura
@@ -503,7 +534,7 @@ LAEMTSTRTRMQKQKMNDSMDTSNKEEK
     
     En la pestaña **Render** seleccione **mavRMSDca** y luego haga clic en `Ok`.
 
-9. Cierre el modelo correspondiente al pdb 2b9d. Via terminal tiene que ingresar el comando close seguido del número del modelo, por ejemplo:
+9. Cierre el modelo correspondiente al pdb 1n4m. Via terminal tiene que ingresar el comando close seguido del número del modelo, por ejemplo:
 
     ```
     close #0
@@ -514,19 +545,7 @@ LAEMTSTRTRMQKQKMNDSMDTSNKEEK
     O bien, en el **model panel**, seleccione el modelo correspondiente y haga clic en close.
 
 
-
-
-15. Encuentre el archivo corespondiente al gráfico del PAE.
-    * ¿Qué interpreta?
-
-16. En base a los resultados obtenidos, 
-    * ¿Qué puede decir de la estructura de la proteína?
-    * ¿Cuántos dominios posee? ¿ordenados o desordenados?
-    * ¿Puede decir aproximadamente los límites?
-
 17. Guarde la sesión y cierre chimera.
-
-
 
 
 5. El algoritmo IUPred será estudiado en mayor profundidad en las próximas clases, por lo tanto, responda brevemete.
@@ -535,7 +554,7 @@ LAEMTSTRTRMQKQKMNDSMDTSNKEEK
 
     En el gráfico, el eje x son las posiciones de la secuencia y en el eje y el *score* de IUPred que va de 0 a 1.
 
-    Ingrese la secuencia de la rana en [IUPRED (actualizada)](https://iupred2a.elte.hu/)
+    Ingrese la secuencia de Rb en [IUPRED (actualizada)](https://iupred2a.elte.hu/)
 
     * ¿Qué relación encuentra con lo obtenido por Verify3D? 
 
