@@ -95,175 +95,93 @@ O bien, ingrese en la command line:
 ---
 
 ### Ejercicio 2
+Como se mencionó en la introducción teórica, cada cadena polipeptídica de hemoglobina contiene un **grupo hemo** (protoporfirina IX con un átomo de hierro en el centro). Este grupo es esencial para la unión reversible del oxígeno. En el Ejercicio 1 modelamos la subunidad gamma-1 sola, sin su cofactor. Ahora vamos a modelar **la misma proteína** pero **incluyendo el hemo** como ligando.
 
-#### Predicción en AlphaFold Server
+#### Clonar y reutilizar el trabajo anterior
 
-Utilice la isoforma CALM1 (UniProt P0DP23):
+1. Ingrese a [AlphaFold Server](https://alphafoldserver.com/).
+2. En la lista de trabajos, ubique el modelo que generó en el **Ejercicio 1** (hemoglobina gamma-1 sin ligandos).
+3. Haga clic en los **tres puntos** a la derecha del nombre del trabajo.
+4. Seleccione **"Clone and reuse"**. Esto creará una copia del trabajo con la misma secuencia y parámetros.
 
-```
->sp|P0DP23|CALM1
-MADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQ
-DMINEVDADGNGTIDFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGY
-ISAAELRHVMTNLGEKLTDEEVDEMIREADIDGDGQVNYEEFVQMMTAK
-```
+#### Agregar el grupo hemo como ligando
 
-1. Copien la secuencia y créen un trabajo en AlphaFold Server.
-2. Usen una semilla (seed) para reproducibilidad.
-3. Envíen y esperen.
+1. En la nueva ventana, haga clic en **"+ Add entity"**.
+2. En **Entity type**, seleccione **"Ligand"**.
+3. En **"Number of copies"**, deje **1**.
+4. En el recuadro de búsqueda busque y seleccione **"HEM - Hem"**. 
+5. Haga clic en **Save job**, asigne un nombre (ej. `HBG1_monomer_hem`) y active la opción **Use seed** (use la misma semilla que en el Ejercicio 1 para poder comparar).
+6. Vuelva a la lista de trabajos, haga clic en su nuevo trabajo y luego en **Continue and preview job**.
+7. Confirme y envíe (**Confirm and submit job**). Espere unos minutos.
 
-#### Análisis de los resultados en el servidor
+#### Análisis de los resultados
 
-Una vez que el servidor terminó, observen:
+Una vez finalizada la predicción, responda:
 
-- El coloreado por pLDDT. ¿Hay regiones con baja confianza (amarillo, naranja, rojo)? ¿Dónde?
-- El gráfico de PAE. ¿Se ven dos bloques diagonales separados por una zona de colores cálidos (error alto)?
-- Anoten los valores de pTM y ranking_score del archivo `*_summary_confidences_0.json`.
+1. **Observación general:** ¿Qué cambios observa en la estructura 3D en comparación con el modelo del Ejercicio 1 (sin hemo)? 
 
-#### Investigación en UniProt
+2. **Gráfico de pLDDT:**  
+  - ¿Qué colores predominan ahora?  
+  - ¿Hay diferencias en los valores locales de pLDDT alrededor de la zona donde se ubica el hemo?  
+  - ¿Alguna región que antes tenía baja confianza (ej. extremos) ahora mejoró o empeoró?
+3. **Gráfico PAE:**  
+  - ¿Se observa una interacción bien predicha entre la proteína y el ligando?
 
-Ahora vayan a [UniProt](https://www.uniprot.org/) y busquen la secuencia (pueden  usar la información del header). Identifiquen la proteína.
+4. **Efecto del ligando:** ¿La inclusión del grupo hemo mejoró significativamente el pLDDT en el entorno del bolsillo de unión? ¿En qué medida?
+5. **Comparación con estructura real:** Si tiene acceso al PDB de una hemoglobina (ej. 1FDH), ¿el hemo predicho por AlphaFold se superpone bien con el hemo experimental?
+6. **Utilidad del modelado con ligandos:** ¿En qué casos recomendaría incluir cofactores o ligandos en una predicción con AlphaFold? ¿Siemre es beneficioso?
 
-Lean con atención las secciones:
+#### (Opcional – Extra) Agregar también el ion hierro (Fe²⁺)
 
-- **Function** (especialmente el recuadro “Miscellaneous” si existe).
-- **Family & Domains**.
-- **Cofactor**.
+Si el tiempo y la paciencia lo permiten, puede realizarse un **tercer modelado** incorporando **dos entidades ligando**: el hemo **y** el ion Fe²⁺ por separado. El hemo ya contiene un átomo de hierro en su estructura, pero AlphaFold permite modelar el ion libre para estudiar su posición.
 
-Respondan en su cuaderno:
+**Pasos adicionales:**
 
-- ¿Cuál es el nombre real de esta proteína?
-- ¿Qué molécula (ión, ligando) se menciona como esencial para su función?
-- ¿Cuántas copias de esa molécula se unen a la proteína?
-- ¿Qué cambio estructural produce esa unión?
+1. Clone nuevamente el trabajo del Ejercicio 1 (o el que ya tiene hemo).
+2. Agregue **dos ligandos**:
+   - El primero: **HEM** (1 copia).
+   - El segundo: **FE** (ion hierro, código `FE`) con 1 copia.
+3. Envíe y espere (el tiempo de cómputo será mayor, posiblemente 15-20 minutos).
+4. Compare este modelo con los dos anteriores:
 
-#### Segundo modelado
+   - ¿El ion Fe²⁺ se ubica dentro del anillo del hemo?
+   - ¿Cambian las métricas de confianza (pTM, ipTM) con respecto al modelo que solo tenía hemo?
 
-Vuelvan a AlphaFold Server y creen un nuevo trabajo con **la misma secuencia proteica**, pero ahora agreguen el ion que descubrieron.
-
-- Entity 1: la proteína (igual).
-- Usen **Add entity → Ion**. Busquen el ligando por nombre
-- Agreguen la cantidad de copias que indica UniProt.
-- Usen la **misma semilla** que en el primer modelado.
-- Envíen y esperen. (Este modelado demora bastante! Pueden seguir avanzando con el ejercicio 3 mientras termina de correr.)
-
-#### Comparación de los resultados
-
-Comparen los dos modelos (sin ligando y con ligando):
-
-1. **pLDDT**: ¿la región que antes tenía baja confianza ahora mejoró?
-2. **PAE**: ¿el gráfico de PAE pasó de mostrar dos bloques separados a un único bloque azul?
-3. **Métricas globales**: completen esta tabla.
-
-| Modelo  | pTM | ipTM | ranking_score  |
-|---------|-----|------|----------------|
-| Sin ion |     |      |                |
-| Con ion |     |      |                |
-
-**Opcional (Chimera)**: superpongan los dos modelos y observen las diferencias estructurales.
-
-<!--
-Hasta acá llegué a revisar! Sigo más tarde
--->
-
-<!--
 ### Ejercicio 3
 
-El correcto funcionamiento de la proteína supresora de tumores p53 depende de su interacción con múltiples socios. Uno de ellos es el coactivador transcripcional CBP/p300, cuya unión es necesaria para la activación de genes que detienen el ciclo celular o inducen apoptosis. El dominio de transactivación (TAD) de p53 (residuos 1‑61) es **intrínsecamente desordenado** en solución. Por su parte, el dominio de unión a coactivadores nucleares (NCBD) de CBP (residuos 2059‑2111) es **parcialmente desordenado**, con una estructura de tipo “molten globule” residual. Cuando ambos dominios se encuentran, **se pliegan sinérgicamente**: NCBD adopta un haz de tres hélicesα y TAD forma dos hélicesα cortas que se insertan en una cavidad hidrofóbica de NCBD. Este fenómeno de “folding‑upon‑binding” es un ejemplo paradigmático de cómo las regiones desordenadas pueden adquirir estructura tridimensional sólo en presencia de su pareja de interacción.
+#### Investigar en UniProt
 
-<div align="center">
-<img src="https://pmc.ncbi.nlm.nih.gov/articles/PMC3608666/bin/pone-0059627-g001.jpg" alt="Estructura del complejo NCBD-TAD (PDB 2L14)" width="400"/>
-<p><b>Figura 1.</b> Estructura del complejo NCBD-TAD (PDB 2L14). NCBD se muestra en azul y TAD en naranja. Ambas proteínas se pliegan sinérgicamente al unirse.</p>
-</div>
+1. Vamos a seguir trabajando con la misma proteína del ejercicio 1. Vuelvan a ingresar a [UniProt](https://www.uniprot.org/). 
+2. En la página de la proteína, busquen la **PTM/processing**. Anoten qué tipos de modificaciones postraduccionales mencionan.
+3. Respondan en sus cuadernos:
+   - ¿Que tipos de modificaciones postraduccionales aparecen en la página? ¿En qué posición ocurren?
 
-En este ejercicio usted utilizará AlphaFold para predecir la estructura de NCBD y TAD por separado y en complejo, y analizará si la interacción induce el plegamiento de regiones desordenadas.
+#### El problema técnico: ¿se puede modelar?
 
+La modificación que encontraron ocurre en el **extremo N-terminal de la proteína** (el primer aminoácido). En este momento, **AlphaFold Server no permite agregar modificaciones postraduccionales en el primer residuo** de una cadena polipeptídica. Cuando intenten hacerlo, el servidor simplemente no les va a dar la opción. Es una limitación técnica de la herramienta.
 
-####  Secuencias
+#### Modelado de una PTM alternativa 
 
-**Dominio NCBD de CBP humano** (residuos 2059‑2111 de UniProt Q92793; 53 residuos)
+Como la modificación biológicamente relevante no se puede modelar, van a elegir **otra PTM que SÍ se pueda cargar en AlphaFold**. Para este ejercicio, van a usar la **lisina en posición 83 (K83)** como ejemplo práctico. 
 
-```
->NCBD_human (CREBBP 2059-2111)
-RKKIFKPEELRQALMPTLEALYRQDPESLPFRQPVDP
-QLLGIPDYFDIVKNPMDLSTIKRKLDTGQYQEPW
-```
+#### Modelado en AlphaFold Server
 
-**Dominio TAD de p53 humano** (residuos 1‑61 de UniProt P04637; 61 residuos)
+1. En AlphaFold Server, clonen el trabajo que hicieron en el **Ejercicio 1** (el modelo de HBG1 sin modificaciones).
+2. En la entidad proteica, hagan clic en el menú vertical (⋮) → **"+ PTMs"**.
+3. Se abrirá una ventana con la secuencia de 147 aminoácidos. **Localicen la lisina en posición 83** (la letra **K** número 83).
+4. Hagan clic sobre esa **K**.
+5. En el menú desplegable, seleccionen **"N6-Acetyl-L-lysine"**.
+6. Guarden el cambio y cierren la ventana.
+7. Mantengan la **misma semilla (seed)** que usaron en el Ejercicio 1.
+8. Asígnenle un nombre, por ejemplo `HBG1_cetyl_L_lysine_K83`, y envíen el trabajo.
 
-```
->TAD_p53_human (TP53 1-61)
-MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPS
-QAMDDLMLSPDDIEQWFTEDPGPDEAPRMPEAAP
-```
+#### Comparar 
 
-#### Predicción de NCBD solo
+Una vez que el modelo acetilado esté listo, compárenlo con el modelo original:
 
-1. En AlphaFold Server, cree un trabajo nuevo, tipo **Protein**.
-2. Pegue la secuencia de **NCBD**.
-3. Asigne un nombre (ej. `NCBD_solo`), active seed, y envíe.
-
-#### Predicción de TAD solo
-
-Realice el mismo procedimiento con la secuencia de TAD (nombre `TAD_solo`). 
-
-#### Predicción del complejo NCBD‑TAD
-
-1. Cree un nuevo trabajo. Agregue **dos entidades proteicas** utilizando el botón `Add entity`.
-2. En Entity 1 pegue la secuencia de **NCBD**.
-3. En Entity 2 pegue la secuencia de **TAD**.
-4. Asegúrese de que el tipo de ambas sea **Protein**.
-5. Nombre del trabajo: `NCBD_TAD_complejo`.
-6. Envíe. Este complejo tiene ~114 residuos, por lo que el tiempo de cómputo será de aproximadamente 10‑15 minutos.
-
-#### Análisis de resultados
-
-Una vez finalizados todos los trabajos, responda las siguientes preguntas utilizando las visualizaciones del servidor y los archivos descargados.
-
-**A. Análisis de NCBD solo**
-
-1. Observe la estructura predicha de NCBD:
-   - ¿Presenta una estructura globular compacta o aparecen segmentos extendidos/flexibles?
-   - Coloree por pLDDT: ¿qué segmentos tienen pLDDT > 90? ¿Cuáles tienen pLDDT < 70?
-2. Examine el gráfico de PAE:
-   - ¿Se observan bloques diagonales bien definidos o hay áreas extensas de alto error (colores rojos)?
-3. Compare con lo reportado en la literatura: NCBD en solución es parcialmente desordenado (molten globule) y sólo se pliega completamente al unir a sus socios[reference:1]. ¿La predicción de AlphaFold para NCBD solo refleja ese desorden? ¿Por qué?
-
-**B. Análisis del complejo NCBD-TAD**
-
-1. Descargue el modelo de mayor ranking (`_model_0.cif`).
-2. Abra el modelo en Chimera. Coloréelo por pLDDT. 
-   - ¿Ambas cadenas tienen ahora pLDDT consistentemente alto (>80) en las regiones que forman la interfaz?
-   - ¿Alguna región permanece con baja confianza? ¿A qué cadena pertenece? ¿Coincide con algún linker o extremo flexible descripto en la literatura?
-3. En el servidor, examine la visualización del PAE **entre cadenas**.
-   - ¿El error predicho entre residuos de NCBD y TAD es bajo (azul) o alto (rojo)? ¿Indica esto que AlphaFold predice con confianza la orientación relativa de las dos proteínas?
-4. Compare la estructura predicha con la estructura experimental de referencia (PDB 2L14). Acceda con Chimera:
-   - Descargue del pdb el modelo 2L14.
-   - Aísle las cadenas correspondientes a NCBD y TAD.
-   - Superponga su modelo predicho con la estructura experimental usando Matchmaker. Calcule el RMSD global. ¿Es menor a 2 Å?
-
-**C. Análisis de desorden con IUPred**
-
-1. Ingrese a [IUPred2A](https://iupred2a.elte.hu/).
-2. Pegue la secuencia de NCBD y ejecute (opción “long disorder”).
-   - ¿Qué porcentaje de residuos de NCBD supera el umbral 0.5 (desorden)? ¿Coincide con las regiones de bajo pLDDT en el modelo de NCBD solo?
-3. Repita para la secuencia de TAD.
-   - TAD es un dominio de transactivación clásicamente desordenado. ¿IUPred lo predice como desordenado en su mayor parte?
-4. ¿Qué esperaría para el gráfico de desorden si pudiera analizar el complejo? ¿Por qué?
-
-**D. Comparación de métricas entre predicciones**
-
-Complete la siguiente tabla con los valores obtenidos de los archivos `*_summary_confidences_0.json`.
-
-| Trabajo             | pTM | Ranking score | Observación cualitativa (pLDDT > 70) |
-|---------------------|-----|---------------|--------------------------------------|
-| NCBD solo           |     |               |                                      |
-| TAD solo (opcional) |     |               |                                      |
-| Complejo NCBD-TAD   |     |               |                                      |
-
-- ¿Cuál de las tres predicciones tiene el mejor ranking score? ¿Qué sugiere esto acerca de la capacidad de AlphaFold para modelar regiones desordenadas?
-
-#### Comparación de los resultados (Ejercicio 2)
-No te olvides de terminar el ejercicio 2! Ya terminó de correr el modelado con los iones?
+- **pLDDT**: ¿La confianza local alrededor de la K83 cambió? ¿Se ve algún efecto en la región?
+- **Métricas globales**: Comparen `pTM` y `ranking_score` entre ambos modelos.
+- **Observación estructural**: Si pueden, superpongan los dos modelos en Chimera y calculen el RMSD local en la zona de la K83.
 
 ### Ejercicio 4
 
@@ -293,9 +211,8 @@ SVDSQSLHDQQPHTQTASGQALKGDGGLYSSLPP
 2. Agregue dos entidades proteicas (**Add entity**).
    - **Entity 1:** pegue la secuencia de la **Cadena A** (RhoGDI‑NTD). Tipo *Protein*.
    - **Entity 2:** pegue la secuencia de la **Cadena B** (p75NTR‑JMD). Tipo *Protein*.
-3. Asigne un nombre al trabajo, por ejemplo `p75_RhoGDI_sinTemplate`. Active “Use seed” (elija un número, ej. `12345`) para reproducibilidad.
-4. En la sección **Templates**, deje la configuración por defecto (el servidor buscará automáticamente templates homólogos en el PDB). Si el servidor permite desactivar completamente los templates, hágalo (por ejemplo, desmarcando “Search for templates”). En caso de no poder desactivarlos, esta predicción representará la condición “estándar” y más adelante compararemos con la condición donde forzamos `8X8T`.
-5. Envíe el trabajo y espere los resultados (~5‑10 minutos).
+3. Asigne un nombre al trabajo, por ejemplo `p75_RhoGDI_sinTemplate`. Active “Use seed” para reproducibilidad.
+4. Envíe el trabajo y espere los resultados (~5‑10 minutos).
 
 #### Predicción con el uso del template 8X8T
 
@@ -357,9 +274,6 @@ Compare los diagramas de PAE de ambas predicciones.
 3. Repita para **p75NTR‑JMD**.
 4. Compare estos porcentajes con las regiones de bajo pLDDT que observó en las predicciones.  
    - ¿El uso del template aumenta el pLDDT en regiones que IUPred predice como desordenadas? ¿Qué implica esto sobre la capacidad de AlphaFold para modelar regiones flexibles cuando se dispone de un template?
-
-#### Comparación de los resultados (Ejercicio 2)
-Ya terminó de correr el ejercicio 2?
 
 ## Ejercicio 5
 
@@ -515,7 +429,71 @@ Explique brevemente cuáles son los **dominios principales de E2F1** y cuál es 
 - ¿Las regiones que están presentes en 2AZE y en su modelo coinciden con alta precisión (RMSD < 2 Å)?
 - ¿Qué partes de su modelo se desvían más? ¿Corresponden a regiones que están ausentes en la estructura cristalográfica?
 
-#### Comparación de los resultados (Ejercicio 2)
-Ahora si terminó de correr el ejercicio 2?
+---
 
--->
+### Ejercicio extra 1
+
+#### Predicción en AlphaFold Server
+
+Utilice la isoforma CALM1 (UniProt P0DP23):
+
+```
+>sp|P0DP23|CALM1
+MADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQ
+DMINEVDADGNGTIDFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGY
+ISAAELRHVMTNLGEKLTDEEVDEMIREADIDGDGQVNYEEFVQMMTAK
+```
+
+1. Copien la secuencia y créen un trabajo en AlphaFold Server.
+2. Usen una semilla (seed) para reproducibilidad.
+3. Envíen y esperen.
+
+#### Análisis de los resultados en el servidor
+
+Una vez que el servidor terminó, observen:
+
+- El coloreado por pLDDT. ¿Hay regiones con baja confianza (amarillo, naranja, rojo)? ¿Dónde?
+- El gráfico de PAE. ¿Se ven dos bloques diagonales separados por una zona de colores cálidos (error alto)?
+- Anoten los valores de pTM y ranking_score del archivo `*_summary_confidences_0.json`.
+
+#### Investigación en UniProt
+
+Ahora vayan a [UniProt](https://www.uniprot.org/) y busquen la secuencia (pueden  usar la información del header). Identifiquen la proteína.
+
+Lean con atención las secciones:
+
+- **Function** (especialmente el recuadro “Miscellaneous” si existe).
+- **Family & Domains**.
+- **Cofactor**.
+
+Respondan en su cuaderno:
+
+- ¿Cuál es el nombre real de esta proteína?
+- ¿Qué molécula (ión, ligando) se menciona como esencial para su función?
+- ¿Cuántas copias de esa molécula se unen a la proteína?
+- ¿Qué cambio estructural produce esa unión?
+
+#### Segundo modelado
+
+Vuelvan a AlphaFold Server y creen un nuevo trabajo con **la misma secuencia proteica**, pero ahora agreguen el ion que descubrieron.
+
+- Entity 1: la proteína (igual).
+- Usen **Add entity → Ion**. Busquen el ligando por nombre
+- Agreguen la cantidad de copias que indica UniProt.
+- Usen la **misma semilla** que en el primer modelado.
+- Envíen y esperen. (Este modelado demora bastante! Pueden seguir avanzando con el ejercicio 3 mientras termina de correr.)
+
+#### Comparación de los resultados
+
+Comparen los dos modelos (sin ligando y con ligando):
+
+1. **pLDDT**: ¿la región que antes tenía baja confianza ahora mejoró?
+2. **PAE**: ¿el gráfico de PAE pasó de mostrar dos bloques separados a un único bloque azul?
+3. **Métricas globales**: completen esta tabla.
+
+| Modelo  | pTM | ipTM | ranking_score  |
+|---------|-----|------|----------------|
+| Sin ion |     |      |                |
+| Con ion |     |      |                |
+
+**Opcional (Chimera)**: superpongan los dos modelos y observen las diferencias estructurales.
