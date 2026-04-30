@@ -11,7 +11,10 @@
 
 ## Materiales
 
-[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1sKGnMT-WZy7tVDMtUXm_a4D7eWiGb-rG/view?usp=sharing){ .md-button .md-button--primary }
+[:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1sKGnMT-WZy7tVDMtUXm_a4D7eWiGb-rG/view?usp=sharing){ .md-button .md-button--primary }  &nbsp;&nbsp; [:fontawesome-solid-download: Slides](https://docs.google.com/presentation/d/1w38cjTQwNr2UgEOMAY8X2Ok2oQUL7XNl/edit?usp=drive_link&ouid=111178905917321759629&rtpof=true&sd=true){ .md-button .md-button--primary }
+<!-- 
+
+https://docs.google.com/presentation/d/1w38cjTQwNr2UgEOMAY8X2Ok2oQUL7XNl/edit?usp=drive_link&ouid=111178905917321759629&rtpof=true&sd=true -->
 
 ## Objetivos
 
