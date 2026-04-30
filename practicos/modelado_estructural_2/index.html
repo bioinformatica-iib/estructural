@@ -1094,12 +1094,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#ejercicio-5" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1108,8 +1103,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ejercicio 5">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#ejercicio-extra-1" class="md-nav__link">
@@ -1293,12 +1287,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#ejercicio-5" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1307,8 +1296,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ejercicio 5">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#ejercicio-extra-1" class="md-nav__link">
@@ -1548,11 +1536,11 @@ NLIPVYCSILAAVVVGLVAYIAFKRWNSCKQNKQGANSRPVNQTPPPEGEKLHSDSGISVDSQSLHDQQPHTQTASGQAL
 <h4 id="prediccion-con-el-uso-del-template-8x8t">Predicción con el uso del template 8X8T</h4>
 <ol>
 <li>Cree un <strong>nuevo trabajo</strong> con las mismas dos entidades proteicas y las mismas secuencias.</li>
-<li>Acceda al <a href="https://www.rcsb.org/structure/8X8T">RCSB PDB</a> o al sitio espejo.</li>
+<li>Acceda al <a href="https://www.rcsb.org/structure/8X8T">RCSB PDB</a>.</li>
 <li>Descargue el archivo en formato PDB (opción “Download Files” → “mmCIFF Format”).</li>
 <li>Guarde el archivo con el nombre <code>8x8t.cif</code> en una carpeta accesible.</li>
 </ol>
-<p>Cuando descargás un archivo PDB que contiene múltiples cadenas (como 8X8T, que tiene cadena A y cadena B), podés separarlas en archivos individuales para usarlas como templates por separado.</p>
+<p>Cuando descargás un archivo PDB que contiene múltiples cadenas (como 8X8T, que tiene cadena A y cadena B), vamos a separarlas en archivos individuales para usarlas como templates por separado.</p>
 <h4 id="guardar-cada-cadena-por-separado-usando-el-model-panel">Guardar cada cadena por separado usando el Model Panel</h4>
 <ol>
 <li><strong>Abrí el archivo PDB</strong> en Chimera (<code>File → Open</code>).</li>
@@ -1627,7 +1615,7 @@ NLIPVYCSILAAVVVGLVAYIAFKRWNSCKQNKQGANSRPVNQTPPPEGEKLHSDSGISVDSQSLHDQQPHTQTASGQAL
 <li>En el modelo sin template: ¿el error predicho entre residuos de la cadena A y la cadena B?</li>
 <li>En el modelo con template: ¿cambia esa región? ¿El template reduce la incertidumbre en la orientación relativa de los dos dominios?</li>
 </ul>
-<h2 id="ejercicio-5">Ejercicio 5</h2>
+<h3 id="ejercicio-5">Ejercicio 5</h3>
 <p>La proteína del retinoblastoma (Rb) es un supresor tumoral que regula negativamente la progresión del ciclo celular. Su función principal es unirse a los factores de transcripción de la familia E2F (en particular E2F1 y su heterodímero con DP1), reclutando complejos remodeladores de cromatina y reprimiendo la transcripción de genes necesarios para la transición G1/S. La unión ocurre entre el dominio <strong>C‑terminal de Rb</strong> (RbC) y el <strong>heterodímero E2F1/DP1</strong>. Cuando Rb es fosforilada por quinasas ciclina‑dependientes (CDK), se libera de E2F/DP y se activa la transcripción.</p>
 <p>La estructura cristalográfica de este complejo trimérico fue depositada con el código <strong>2AZE</strong>. Sin embargo, la estructura resuelta por cristalografía de rayos X (2,55 Å) incluye solo las regiones que son estables y ordenadas en el cristal. En solución, muchos fragmentos de E2F1, DP1 y Rb permanecen flexibles o desordenados, especialmente fuera de la interfaz de unión. </p>
 <p>En este ejercicio usted modelará el trímero completo y, por separado. </p>
@@ -1648,12 +1636,7 @@ MPPKTPRKTAATAAAAAAEPPAPPPPPPPEEDPEQDSGPEDLPLVRLEFEETEEPDFTALCQKLKIPDHVRERAWLTWEK
 <ul>
 <li>Acceda a UniProt: <a href="https://www.uniprot.org/">https://www.uniprot.org/</a></li>
 <li>Busque los códigos <strong>Q01094</strong> (E2F1), <strong>Q14186</strong> (DP1) y <strong>P06400</strong> (Rb).</li>
-<li>En cada página, localice el botón “AlphaFold” o “3D structure” y haga clic para abrir el modelo predicho.</li>
-<li>Observe el coloreado por pLDDT:</li>
-<li><strong>Azul</strong> (pLDDT &gt; 90): muy alta confianza.</li>
-<li><strong>Celeste</strong> (pLDDT 70‑90): buena confianza.</li>
-<li><strong>Amarillo</strong> (pLDDT 50‑70): baja confianza (posiblemente flexible).</li>
-<li><strong>Naranja/Rojo</strong> (pLDDT &lt; 50): muy baja confianza, probablemente desordenado.</li>
+<li>En cada página, localice el botón “AlphaFold” o “3D structure” y haga clic para explorar el modelo predicho.</li>
 </ul>
 <h4 id="modelado-de-rb">Modelado de Rb</h4>
 <ol>
@@ -1661,7 +1644,7 @@ MPPKTPRKTAATAAAAAAEPPAPPPPPPPEEDPEQDSGPEDLPLVRLEFEETEEPDFTALCQKLKIPDHVRERAWLTWEK
 <li>En la <strong>Entity 1</strong>, configure tipo <strong>Protein</strong> y pegue la secuencia de Rb (completa, tal como aparece arriba).</li>
 <li>Asigne un nombre descriptivo, por ejemplo <code>Rb</code>.</li>
 <li>Active la opción <strong>Use seed</strong> y elija un número entero (ej. <code>12345</code>).</li>
-<li>Envíe el trabajo y espere (aproximadamente 5‑10 min, dependiendo del tamaño).</li>
+<li>Envíe el trabajo y espere (aproximadamente 5‑10 min).</li>
 <li>Cuando termine, descargue el archivo <code>.cif</code> del mejor modelo.</li>
 </ol>
 <h4 id="modelado-del-trimero-completo-e2f1-dp1-rb">Modelado del trímero completo (E2F1 + DP1 + Rb)</h4>
@@ -1675,7 +1658,7 @@ MPPKTPRKTAATAAAAAAEPPAPPPPPPPEEDPEQDSGPEDLPLVRLEFEETEEPDFTALCQKLKIPDHVRERAWLTWEK
 <li>Asegúrese de que el tipo de todas sea <strong>Protein</strong> y que el orden de las cadenas sea el indicado.</li>
 <li>Asigne otro nombre, por ejemplo <code>Trimer_E2F1_DP1_Rb</code>.</li>
 <li>Use la <strong>misma semilla</strong> (seed) que en el punto anterior.</li>
-<li>Envíe el trabajo y espere (el tiempo de cómputo será mayor, entre 15 y 30 min).</li>
+<li>Envíe el trabajo y espere (entre 15 y 30 min).</li>
 </ol>
 <h4 id="comparacion-de-la-confianza-entre-el-monomero-y-el-trimero">Comparación de la confianza entre el monómero y el trímero</h4>
 <p>Una vez que ambos trabajos estén listos, compare las métricas de confianza.</p>
