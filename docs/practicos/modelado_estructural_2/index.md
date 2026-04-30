@@ -56,7 +56,7 @@ Una vez finalizada la predicción, responda:
     - ¿Hay algún segmento con pLDDT < 70? ¿A qué posición(es) corresponde?
 * **Gráfico PAE (Predicted Aligned Error):**
     - ¿Observa dos o más bloques bien definidos? ¿Sugiere que la proteína tiene un único dominio rígido?
-    - ¿El error predicho entre residuos distantes es bajo (colores azules) o alto (rojo)?
+    - ¿El error predicho entre residuos distantes es bajo o alto?
 
 #### Descarga de modelos y validación externa
 
