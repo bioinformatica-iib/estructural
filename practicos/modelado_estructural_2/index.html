@@ -1,0 +1,1856 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Sitio Web del Curso de Bioinformática Estructural">
+      
+      
+      
+        <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/modelado_estructural_2/">
+      
+      
+        <link rel="prev" href="../modelado_estructural_1/">
+      
+      
+        <link rel="next" href="../../como_llegar/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/logo-unsam-negro.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>TP3b - Predicción Estructural (B) - Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Cabin";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tp-3-prediccion-estructural-b" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas" class="md-header__button md-logo" aria-label="Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas" data-md-component="logo">
+      
+  <img src="../../img/logo-unsam-negro.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TP3b - Predicción Estructural (B)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue" aria-label="Cambiar a modo oscuro" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue" aria-label="Cambiar a modo claro" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../acerca/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../inscripcion/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Costos e Inscripción
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contenidos/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contenidos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cronograma/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Cronograma
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../docentes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Docentes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../teoricas/inicio/" class="md-tabs__link">
+          
+  
+  
+  Teóricas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../inicio/" class="md-tabs__link">
+          
+  
+  
+  Prácticos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../como_llegar/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Como llegar
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas" class="md-nav__button md-logo" aria-label="Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas" data-md-component="logo">
+      
+  <img src="../../img/logo-unsam-negro.png" alt="logo">
+
+    </a>
+    Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acerca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Acerca de
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inscripcion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Costos e Inscripción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contenidos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contenidos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cronograma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teóricas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Teóricas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teoricas/inicio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teoricas/teorica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teórica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teoricas/teorica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teórica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teoricas/teorica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teórica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inicio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../db_uniprot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP1 - Bases de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chimera/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP2 - Chimera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelado_estructural_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP3a - Predicción Estructural (A)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP3b - Predicción Estructural (B)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP3b - Predicción Estructural (B)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#recursos-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos Online
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos Generales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelado-de-monomeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelado de Monómeros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelado de Monómeros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicio 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicio 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicio 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelado-de-dimeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelado de dímeros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelado de dímeros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicio 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicio 5
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio 5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-extra-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicio extra 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../como_llegar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Como llegar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#recursos-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos Online
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos Generales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelado-de-monomeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelado de Monómeros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelado de Monómeros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicio 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicio 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicio 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelado-de-dimeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelado de dímeros
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelado de dímeros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicio 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicio 5
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio 5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-extra-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicio extra 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div><h1 id="tp-3-prediccion-estructural-b" markdown="markdown"><strong>TP 3</strong>. Predicción Estructural (B)</h1>
+<h2 id="recursos-online">Recursos Online</h2>
+<ul>
+<li>AlphaFold Server: <a href="https://alphafoldserver.com/">https://alphafoldserver.com/</a></li>
+<li>MolProbity: <a href="http://molprobity.biochem.duke.edu/">http://molprobity.biochem.duke.edu/</a></li>
+<li>UCLA-DOE LAB (Verify3D / Procheck): <a href="https://saves.mbi.ucla.edu/">https://saves.mbi.ucla.edu/</a></li>
+<li>IUPred2A: <a href="https://iupred2a.elte.hu/">https://iupred2a.elte.hu/</a></li>
+<li>ChimeraX o Chimera: descargar de <a href="https://www.cgl.ucsf.edu/chimera/">https://www.cgl.ucsf.edu/chimera/</a></li>
+</ul>
+<h2 id="objetivos-generales">Objetivos Generales</h2>
+<ul>
+<li>Utilizar AlphaFold Server para predecir estructuras de proteínas.</li>
+<li>Interpretar las métricas de confianza (pLDDT, PAE)</li>
+<li>Evaluar la calidad de los modelos con herramientas clásicas (MolProbity, Verify3D, Procheck).</li>
+</ul>
+<hr>
+<h2 id="modelado-de-monomeros">Modelado de Monómeros</h2>
+<h3 id="ejercicio-1">Ejercicio 1</h3>
+<p>La hemoglobina es una metaloproteína globular presente en los eritrocitos de todos los vertebrados, cuya función principal es el transporte reversible de oxígeno (O₂) desde los órganos respiratorios hacia los tejidos, y el retorno de dióxido de carbono (CO₂) y protones en sentido inverso, contribuyendo así a la homeostasis del pH sanguíneo. Su estructura cuaternaria es un tetrámero de aproximadamente 64,5 kDa, compuesto por dos pares de cadenas polipeptídicas (globinas), cada una de las cuales contiene un grupo hemo con un átomo de hierro ferroso (Fe²⁺) capaz de unir una molécula de O₂ en forma cooperativa.</p>
+<p>En los humanos adultos, la hemoglobina mayoritaria (HbA, &gt;95%) está formada por dos subunidades α (141 residuos) y dos subunidades β (146 residuos), cuya combinación se escribe como α₂β₂. Existen variantes menores: la HbA₂ (α₂δ₂, ~2-3%) y la hemoglobina fetal (HbF, α₂γ₂), predominante durante la vida intrauterina. La expresión de las diferentes subunidades está regulada durante el desarrollo: los genes de las globinas β y γ se localizan en el cromosoma 11, mientras que los de la globina α se encuentran en el cromosoma 16. Los cambios en la afinidad por el oxígeno entre la HbF y la HbA son clave para la transferencia placentaria de O₂.</p>
+<p>En el adulto, la producción de HbF se restringe a células eritroides "productoras de HbF" (células F), pero mutaciones en los elementos reguladores del locus β-globina pueden dar lugar a la persistencia hereditaria de HbF (HPFH), condición que atenúa la severidad de enfermedades como la anemia falciforme o las talasemias.</p>
+<p>La hemoglobina fetal humana contiene dos subunidades gamma (HBG1 y HBG2) en lugar de las subunidades beta de la hemoglobina adulta. La subunidad gamma-1 (UniProt P69891) es una proteína pequeña (147 residuos) que pliega en un dominio globular típico de la familia de las globinas. Su estructura es muy estable y ha sido resuelta experimentalmente con alta resolución.</p>
+<p>En este ejercicio usted utilizará AlphaFold para predecir su estructura y evaluará qué tan buena es la predicción utilizando tanto las métricas propias del servidor como herramientas externas de validación.</p>
+<h4 id="obtencion-de-la-secuencia">Obtención de la secuencia</h4>
+<ol>
+<li>Ingrese a UniProt (<a href="https://www.uniprot.org/">https://www.uniprot.org/</a>)</li>
+<li>Busque la subunidad gamma-1 ingresando el UniProt ID: P69891</li>
+<li>Ingrese a la sección "Sequence" y copie la secuencia usando "Copy Sequence"</li>
+</ol>
+<h4 id="prediccion-en-alphafold-server">Predicción en AlphaFold Server</h4>
+<ol start="4">
+<li>Ingrese a <a href="https://alphafoldserver.com/">AlphaFold Server</a>.</li>
+<li>En la sección <strong>Entity 1</strong>, asegúrese de que el tipo sea <strong>Protein</strong>.</li>
+<li>Pegue la secuencia anterior en el recuadro.</li>
+<li>Haga clic en <strong>Save job</strong>, asigne un nombre (ej. <code>HBG1_monomer</code>) y active la opción <strong>Use seed</strong> (elija un número entero, ej. <code>42</code> para reproducibilidad).</li>
+<li>Vuelva a la lista de trabajos, haga clic en el suyo y luego en <strong>Continue and preview job</strong>.</li>
+<li>Confirme y envíe (<strong>Confirm and submit job</strong>). Espere unos minutos.</li>
+</ol>
+<h4 id="analisis-de-los-resultados-en-el-servidor">Análisis de los resultados en el servidor</h4>
+<p>Una vez finalizada la predicción, responda:</p>
+<ul>
+<li><strong>Observación general:</strong> ¿La proteína parece compacta o presenta regiones extendidas? ¿Cuántos dominios identifica?</li>
+<li><strong>Gráfico de pLDDT (coloreado en la estructura 3D):</strong> <ul>
+<li>¿Qué colores predominan? (azul = alta confianza &gt;90, celeste = 70-90, amarillo = 50-70, naranja/rojo &lt;50)</li>
+<li>¿Hay algún segmento con pLDDT &lt; 70? ¿A qué posición(es) corresponde?</li>
+</ul>
+</li>
+<li><strong>Gráfico PAE (Predicted Aligned Error):</strong><ul>
+<li>¿Observa dos o más bloques bien definidos? ¿Sugiere que la proteína tiene un único dominio rígido?</li>
+<li>¿El error predicho entre residuos distantes es bajo (colores azules) o alto (rojo)?</li>
+</ul>
+</li>
+</ul>
+<h4 id="descarga-de-modelos-y-validacion-externa">Descarga de modelos y validación externa</h4>
+<ol start="10">
+<li>Descargue el archivo ZIP desde el servidor. Descomprímalo.</li>
+<li>Elija el modelo con mejor <code>ranking_score</code> (generalmente <code>*_model_0.cif</code>). Conviértalo a formato PDB  (usar Chimera para abrir el .cif y guardar como .pdb).</li>
+<li>Utilice <strong>MolProbity</strong> para evaluar la geometría:<ul>
+<li>Suba su archivo PDB a <a href="http://molprobity.biochem.duke.edu/">MolProbity</a>.</li>
+<li>Seleccione las opciones estándar (Clashes, Ramachandran, Rotamer, Cβ deviations, CaBLAM, etc.).</li>
+<li>Ejecute y examine el PDF de resultados.</li>
+<li>Responda:<ul>
+<li>¿Qué porcentaje de residuos se encuentra en regiones favorecidas del gráfico de Ramachandran? ¿Hay outliers?</li>
+<li>¿El clashscore es aceptable (generalmente &lt; 5 para buena calidad)?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Utilice <strong>Verify3D</strong> y <strong>Procheck</strong> (dentro de <a href="https://saves.mbi.ucla.edu/">SAVES</a>):<ul>
+<li>Suba el mismo PDB, marque <strong>Verify3D</strong> y <strong>Procheck</strong>.</li>
+<li>Observe el gráfico de  <strong>Verify3D</strong>. ¿Más del 80% de los residuos tienen score &gt; 0.1? ¿Qué residuos caen por debajo?</li>
+<li>Analice el gráfico de Ramachandran “All residues” de <strong>Procheck</strong>. ¿Qué porcentaje de residuos está en zonas “core”? ¿Hay residuos en regiones prohibidas?</li>
+</ul>
+</li>
+</ol>
+<h4 id="comparacion-con-estructura-experimental">Comparación con estructura experimental</h4>
+<ol>
+<li>Busque en el PDB una estructura de hemoglobina fetal humana que incluya la subunidad gamma (1FDH) y descargue el archivo .pdb. </li>
+<li>
+<p>Superponga su modelo de AlphaFold con la cadena experimental usando Matchmaker (<code>Tools → Structure Comparison → MatchMaker</code>).
+O bien, ingrese en la command line:</p>
+<div class="highlight"><pre><span></span><code>mm #0 #1
+</code></pre></div>
+</li>
+<li>
+<p>Anote el RMSD global. ¿Es menor a 1.5 Å? ¿Cómo se distribuye el error?</p>
+</li>
+</ol>
+<h4 id="preguntas">Preguntas</h4>
+<ol>
+<li>¿Considera que la predicción de AlphaFold para HBG1 es de alta calidad? Justifique usando pLDDT, PAE y las métricas de MolProbity/Verify3D.</li>
+<li>¿Qué región de la proteína mostró menor confianza? ¿Puede relacionarla con alguna característica biológica?</li>
+</ol>
+<hr>
+<h3 id="ejercicio-2">Ejercicio 2</h3>
+<p>Como se mencionó en la introducción teórica, cada cadena polipeptídica de hemoglobina contiene un <strong>grupo hemo</strong> (protoporfirina IX con un átomo de hierro en el centro). Este grupo es esencial para la unión reversible del oxígeno. En el Ejercicio 1 modelamos la subunidad gamma-1 sola, sin su cofactor. Ahora vamos a modelar <strong>la misma proteína</strong> pero <strong>incluyendo el hemo</strong> como ligando.</p>
+<h4 id="clonar-y-reutilizar-el-trabajo-anterior">Clonar y reutilizar el trabajo anterior</h4>
+<ol>
+<li>Ingrese a <a href="https://alphafoldserver.com/">AlphaFold Server</a>.</li>
+<li>En la lista de trabajos, ubique el modelo que generó en el <strong>Ejercicio 1</strong> (hemoglobina gamma-1 sin ligandos).</li>
+<li>Haga clic en los <strong>tres puntos</strong> a la derecha del nombre del trabajo.</li>
+<li>Seleccione <strong>"Clone and reuse"</strong>. Esto creará una copia del trabajo con la misma secuencia y parámetros.</li>
+</ol>
+<h4 id="agregar-el-grupo-hemo-como-ligando">Agregar el grupo hemo como ligando</h4>
+<ol>
+<li>En la nueva ventana, haga clic en <strong>"+ Add entity"</strong>.</li>
+<li>En <strong>Entity type</strong>, seleccione <strong>"Ligand"</strong>.</li>
+<li>En <strong>"Number of copies"</strong>, deje <strong>1</strong>.</li>
+<li>En el recuadro de búsqueda busque y seleccione <strong>"HEM - Hem"</strong>. </li>
+<li>Haga clic en <strong>Save job</strong>, asigne un nombre (ej. <code>HBG1_monomer_hem</code>) y active la opción <strong>Use seed</strong> (use la misma semilla que en el Ejercicio 1 para poder comparar).</li>
+<li>Vuelva a la lista de trabajos, haga clic en su nuevo trabajo y luego en <strong>Continue and preview job</strong>.</li>
+<li>Confirme y envíe (<strong>Confirm and submit job</strong>). Espere unos minutos.</li>
+</ol>
+<h4 id="analisis-de-los-resultados">Análisis de los resultados</h4>
+<p>Una vez finalizada la predicción, responda:</p>
+<ol>
+<li>
+<p><strong>Observación general:</strong> ¿Qué cambios observa en la estructura 3D en comparación con el modelo del Ejercicio 1 (sin hemo)? </p>
+</li>
+<li>
+<p><strong>Gráfico de pLDDT:</strong><br>
+  - ¿Qué colores predominan ahora?<br>
+  - ¿Hay diferencias en los valores locales de pLDDT alrededor de la zona donde se ubica el hemo?<br>
+  - ¿Alguna región que antes tenía baja confianza (ej. extremos) ahora mejoró o empeoró?</p>
+</li>
+<li>
+<p><strong>Gráfico PAE:</strong><br>
+  - ¿Se observa una interacción bien predicha entre la proteína y el ligando?</p>
+</li>
+<li>
+<p><strong>Efecto del ligando:</strong> ¿La inclusión del grupo hemo mejoró significativamente el pLDDT en el entorno del bolsillo de unión? ¿En qué medida?</p>
+</li>
+<li><strong>Comparación con estructura real:</strong> Si tiene acceso al PDB de una hemoglobina (ej. 1FDH), ¿el hemo predicho por AlphaFold se superpone bien con el hemo experimental?</li>
+<li><strong>Utilidad del modelado con ligandos:</strong> ¿En qué casos recomendaría incluir cofactores o ligandos en una predicción con AlphaFold? ¿Siepmre es beneficioso?</li>
+</ol>
+<h4 id="opcional-extra-agregar-tambien-el-ion-hierro-fe2">(Opcional – Extra) Agregar también el ion hierro (Fe²⁺)</h4>
+<p>Si el tiempo y la paciencia lo permiten, puede realizarse un <strong>tercer modelado</strong> incorporando <strong>dos entidades ligando</strong>: el hemo <strong>y</strong> el ion Fe²⁺ por separado. El hemo ya contiene un átomo de hierro en su estructura, pero AlphaFold permite modelar el ion libre para estudiar su posición.</p>
+<p><strong>Pasos adicionales:</strong></p>
+<ol>
+<li>Clone nuevamente el trabajo del Ejercicio 1 (o el que ya tiene hemo).</li>
+<li>Agregue <strong>dos ligandos</strong>:
+   - El primero: <strong>HEM</strong> (1 copia).
+   - El segundo: <strong>FE</strong> (ion hierro, código <code>FE</code>) con 1 copia.</li>
+<li>Envíe y espere (el tiempo de cómputo será mayor, posiblemente 15-20 minutos).</li>
+<li>Compare este modelo con los dos anteriores:</li>
+</ol>
+<ul>
+<li>¿El ion Fe²⁺ se ubica dentro del anillo del hemo?</li>
+<li>¿Cambian las métricas de confianza (pTM, ipTM) con respecto al modelo que solo tenía hemo?</li>
+</ul>
+<hr>
+<h3 id="ejercicio-3">Ejercicio 3</h3>
+<h4 id="investigar-en-uniprot">Investigar en UniProt</h4>
+<ol>
+<li>Vamos a seguir trabajando con la misma proteína del ejercicio 1. Vuelvan a ingresar a <a href="https://www.uniprot.org/">UniProt</a>. </li>
+<li>En la página de la proteína, busquen la <strong>PTM/processing</strong>. ¿Que tipos de modificaciones postraduccionales aparecen en la página? ¿En qué posición ocurren?</li>
+</ol>
+<h4 id="modelado-de-una-ptm">Modelado de una PTM</h4>
+<p>Para este ejercicio, van a usar la <strong>lisina en posición 83 (K83)</strong> como ejemplo práctico. </p>
+<h4 id="modelado-en-alphafold-server">Modelado en AlphaFold Server</h4>
+<ol>
+<li>En AlphaFold Server, clonen el trabajo que hicieron en el <strong>Ejercicio 1</strong> (el modelo de HBG1 sin modificaciones).</li>
+<li>En la entidad proteica, hagan clic en el menú vertical (⋮) → <strong>"+ PTMs"</strong>.</li>
+<li>Se abrirá una ventana con la secuencia de 147 aminoácidos. <strong>Localicen la lisina en posición 83</strong> (la letra <strong>K</strong> número 83).</li>
+<li>Hagan clic sobre esa <strong>K</strong>.</li>
+<li>En el menú desplegable, seleccionen <strong>"N6-Acetyl-L-lysine"</strong>.</li>
+<li>Guarden el cambio y cierren la ventana.</li>
+<li>Mantengan la <strong>misma semilla (seed)</strong> que usaron en el Ejercicio 1.</li>
+<li>Asígnenle un nombre, por ejemplo <code>HBG1_cetyl_L_lysine_K83</code>, y envíen el trabajo.</li>
+</ol>
+<h4 id="comparar">Comparar</h4>
+<p>Una vez que el modelo acetilado esté listo, compárenlo con el modelo original:</p>
+<ul>
+<li><strong>pLDDT</strong>: ¿La confianza local alrededor de la K83 cambió? ¿Se ve algún efecto en la región?</li>
+<li><strong>Métricas globales</strong>: Comparen <code>pTM</code> y <code>ranking_score</code> entre ambos modelos.</li>
+<li><strong>Observación estructural</strong>: Si pueden, superpongan los dos modelos en Chimera y observen el residuo modificado</li>
+</ul>
+<hr>
+<h2 id="modelado-de-dimeros">Modelado de dímeros</h2>
+<h3 id="ejercicio-4">Ejercicio 4</h3>
+<p>El receptor de neurotrofinas p75NTR (p75 neurotrophin receptor) es una proteína transmembrana clave en la supervivencia neuronal, la apoptosis y el crecimiento axonal. Su señalización está finamente regulada por interacciones con múltiples efectores citosólicos. Uno de ellos es la proteína RhoGDI (Rho GDP‑dissociation inhibitor), que controla la actividad de las GTPasas de la familia Rho. En respuesta a la fosforilación de RhoGDI por PKC, se promueve la interacción entre el dominio yuxtamembrana (JMD) de p75NTR y el dominio N‑terminal (NTD) de RhoGDI, lo que desencadena una vía de señalización que culmina en la retracción axonal y apoptosis.</p>
+<p>La estructura tridimensional de este complejo fue resuelta recientemente por resonancia magnética nuclear (RMN) y depositada bajo el código <strong>PDB 8X8T</strong>. En este ejercicio, usted utilizará AlphaFold para predecir la estructura del complejo de dos maneras:</p>
+<ol>
+<li><strong>Sin usar templates estructurales</strong> – para evaluar qué tan bien el método predice de novo la interacción.</li>
+<li><strong>Proporcionando el complejo experimental como template</strong> – para analizar cómo el uso de información estructural previa modifica la calidad y la confianza de la predicción.</li>
+</ol>
+<p>A partir de la entrada <strong>8X8T</strong>, el complejo está formado por dos cadenas (se utilizan las secuencias exactas de la estructura de RMN):</p>
+<div class="highlight"><pre><span></span><code>&gt;Cadena A – Dominio N‑terminal de RhoGDI (residuos 2‑60 de la proteína completa UniProt P52565)**
+MAEQEPTAEQLAQIAAENEEDEHSVNYKPPAQKSIQEIQELDKDDESLRKYKEALLGRVAVSADPNVPNVVVTGLTLVCSS
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&gt;Cadena B – Dominio yuxtamembrana de p75NTR (residuos 273‑332 de UniProt P08138)**
+NLIPVYCSILAAVVVGLVAYIAFKRWNSCKQNKQGANSRPVNQTPPPEGEKLHSDSGISVDSQSLHDQQPHTQTASGQALKGDGGLYSSLPP
+</code></pre></div>
+<h4 id="prediccion">Predicción</h4>
+<ol>
+<li>Ingrese a <a href="https://alphafoldserver.com/">AlphaFold Server</a>.</li>
+<li>Agregue dos entidades proteicas (<strong>Add entity</strong>).
+   - <strong>Entity 1:</strong> pegue la secuencia de la <strong>Cadena A</strong> (RhoGDI‑NTD). Tipo <em>Protein</em>.
+   - <strong>Entity 2:</strong> pegue la secuencia de la <strong>Cadena B</strong> (p75NTR‑JMD). Tipo <em>Protein</em>.</li>
+<li>Asigne un nombre al trabajo, por ejemplo <code>p75_RhoGDI_sinTemplate</code>. Active “Use seed” para reproducibilidad.</li>
+<li>Envíe el trabajo y espere los resultados (~5‑10 minutos).</li>
+</ol>
+<h4 id="prediccion-con-el-uso-del-template-8x8t">Predicción con el uso del template 8X8T</h4>
+<ol>
+<li>Cree un <strong>nuevo trabajo</strong> con las mismas dos entidades proteicas y las mismas secuencias.</li>
+<li>Acceda al <a href="https://www.rcsb.org/structure/8X8T">RCSB PDB</a> o al sitio espejo.</li>
+<li>Descargue el archivo en formato PDB (opción “Download Files” → “mmCIFF Format”).</li>
+<li>Guarde el archivo con el nombre <code>8x8t.cif</code> en una carpeta accesible.</li>
+</ol>
+<p>Cuando descargás un archivo PDB que contiene múltiples cadenas (como 8X8T, que tiene cadena A y cadena B), podés separarlas en archivos individuales para usarlas como templates por separado.</p>
+<h4 id="guardar-cada-cadena-por-separado-usando-el-model-panel">Guardar cada cadena por separado usando el Model Panel</h4>
+<ol>
+<li><strong>Abrí el archivo PDB</strong> en Chimera (<code>File → Open</code>).</li>
+<li><strong>Abrí el Model Panel</strong>: <code>Favorites → Model Panel</code></li>
+<li><strong>Identificá las cadenas</strong>: En el Model Panel, cada cadena suele aparecer como un modelo separado (ej. <code>8x8t.cif (A)</code> y <code>8x8t.cif (B)</code>). Si no están separadas automáticamente:</li>
+</ol>
+<ul>
+<li>Hacé clic en el modelo principal.</li>
+<li>Usá <code>Select → Chain</code> y elegí la cadena que querés (A o B).</li>
+<li>Luego <code>Actions → all</code>.</li>
+</ul>
+<ol start="4">
+<li><strong>Seleccioná la cadena que querés guardar</strong> (ej. Cadena A).</li>
+<li><strong>Guardala como archivo PDB</strong>:
+   - En el Model Panel, seleccioná <strong>solo</strong> el modelo que contiene la cadena A (podés desmarcar los otros modelos).
+   - <code>File → Save PDB...</code>
+   - Elegí un nombre, por ejemplo <code>8x8t_cadena_A.ciff</code></li>
+<li><strong>Repetí</strong> para la cadena B.</li>
+</ol>
+<h4 id="cargar-los-templados-en-alphafold">Cargar los templados en Alphafold</h4>
+<ol>
+<li>Ingresá en los tres puntos a la derecha de la secuencia. En la sección <strong>Templates settings</strong>:
+   - Seleccione la opción “Upload custom template” o “Provide mmCIF file”.
+   - Suba el archivo generado descargado previamente correspondiente a la cadena.
+   - <strong>Verifique la asignación de cadenas:</strong> asegúrese de que la cadena A del template corresponde a RhoGDI‑NTD (Entity 1) y la cadena B a p75NTR‑JMD (Entity 2). </li>
+<li>Envíe el trabajo y espere los resultados.</li>
+</ol>
+<h4 id="analisis-comparativo">Análisis comparativo</h4>
+<p>Una vez que ambos trabajos estén listos, responda las siguientes preguntas utilizando las visualizaciones del servidor, los archivos descargados y Chimera.</p>
+<p><strong>A. Métricas globales de confianza</strong></p>
+<p>Descargue los archivos ZIP de ambos trabajos y abra los archivos <code>*_summary_confidences_0.json</code>. Complete la siguiente tabla:</p>
+<table>
+<thead>
+<tr>
+<th>Predicción</th>
+<th>pTM</th>
+<th>ipTM</th>
+<th>ranking_score</th>
+<th>fraction_disordered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sin template</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Con template 8X8T</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>¿Cuál de las dos predicciones tiene mejor ranking_score? ¿A qué atributos cree que se debe la diferencia?</li>
+<li>¿El ipTM (interfaz) mejora al usar el template? ¿Qué interpretación biológica tiene esto?</li>
+</ul>
+<p><strong>B. pLDDT por cadena</strong></p>
+<p>En la visualización 3D del servidor, observe el coloreado por pLDDT para ambos modelos.</p>
+<ul>
+<li>¿En qué modelo hay más regiones con pLDDT &gt; 90 (azul)? </li>
+<li>¿Alguna de las dos cadenas presenta un aumento sistemático de confianza en el modelo con template? Especifique cuál.</li>
+</ul>
+<p><strong>C. Gráfico de PAE (Predicted Aligned Error)</strong></p>
+<p>Compare los diagramas de PAE de ambas predicciones.</p>
+<ul>
+<li>En el modelo sin template: ¿el error predicho entre residuos de la cadena A y la cadena B?</li>
+<li>En el modelo con template: ¿cambia esa región? ¿El template reduce la incertidumbre en la orientación relativa de los dos dominios?</li>
+</ul>
+<h2 id="ejercicio-5">Ejercicio 5</h2>
+<p>La proteína del retinoblastoma (Rb) es un supresor tumoral que regula negativamente la progresión del ciclo celular. Su función principal es unirse a los factores de transcripción de la familia E2F (en particular E2F1 y su heterodímero con DP1), reclutando complejos remodeladores de cromatina y reprimiendo la transcripción de genes necesarios para la transición G1/S. La unión ocurre entre el dominio <strong>C‑terminal de Rb</strong> (RbC) y el <strong>heterodímero E2F1/DP1</strong>. Cuando Rb es fosforilada por quinasas ciclina‑dependientes (CDK), se libera de E2F/DP y se activa la transcripción.</p>
+<p>La estructura cristalográfica de este complejo trimérico fue depositada con el código <strong>2AZE</strong>. Sin embargo, la estructura resuelta por cristalografía de rayos X (2,55 Å) incluye solo las regiones que son estables y ordenadas en el cristal. En solución, muchos fragmentos de E2F1, DP1 y Rb permanecen flexibles o desordenados, especialmente fuera de la interfaz de unión. </p>
+<p>En este ejercicio usted modelará el trímero completo y, por separado. </p>
+<h4 id="modelado-de-las-tres-secuencias">Modelado de las tres secuencias:</h4>
+<h5 id="cadena-1-e2f1-uniprot-q01094-437-residuos">Cadena 1 – E2F1 (UniProt Q01094, 437 residuos)</h5>
+<div class="highlight"><pre><span></span><code>&gt;sp|Q01094|E2F1_HUMAN Transcription factor E2F1 OS=Homo sapiens OX=9606 GN=E2F1 PE=1 SV=1
+MALAGAPAGGPCAPALEALLGAGALRLLDSSQIVIISAAQDASAPPAPTGPAAPAAGPCDPDLLLFATPQAPRPTPSAPRPALGRPPVKRRLDLETDHQYLAESSGPARGRGRHPGKGVKSPGEKSRYETSLNLTTKRLELLSHSADGVVDLNWAAEVLKVQKRRIYDITNVLEGIQLIAKKSKNHIQWLGSHTTVGVGGRLEGLTQDLRQLQESEQQLDHLMNICTTQLRLLSEDTDSQRLAYVTCQDLRSIADPAEQMVMVIKAPPETQLQAVDSSENFQISLKSKQGPIDVFLCPEETVGGISPGKTPSQEVTSEEENRATDSATIVSPPPSSPPSSLTTDPSQSLLSLEQEPLLSRMGSLRAPVDEDRLSPLVAADSLLEHVREDFSGLLPEEFISLSPPHEALDYHFGLEEGEGIRDLFDCDFGDLTPLDF
+</code></pre></div>
+<h5 id="cadena-2-dp1-uniprot-q14186-410-residuos">Cadena 2 – DP1 (UniProt Q14186, 410 residuos)</h5>
+<div class="highlight"><pre><span></span><code>&gt;sp|Q14186|TFDP1_HUMAN Transcription factor Dp-1 OS=Homo sapiens OX=9606 GN=TFDP1 PE=1 SV=1
+MAKDAGLIEANGELKVFIDQNLSPGKGVVSLVAVHPSTVNPLGKQLLPKTFGQSNVNIAQQVVIGTPQRPAASNTLVVGSPHTPSTHFASQNQPSDSSPWSAGKRNRKGEKNGKGLRHFSMKVCEKVQRKGTTSYNEVDELVAEFSAADNHILPNESAYDQKNIRRRVYDALNVLMAMNIISKEKKEIKWIGLPTNSAQECQNLEVERQRRLERIKQKQSQLQELILQQIAFKNLVQRNRHAEQQASRPPPPNSVIHLPFIIVNTSKKTVIDCSISDKFEYLFNFDNTFEIHDDIEVLKRMGMACGLESGSCSAEDLKMARSLVPKALEPYVTEMAQGTVGGVFITTAGSTSNGTRFSASDLTNGADGMLATSSNGSQYSGSRVETPVSYVGEDDEEDDDFNENDEDD
+</code></pre></div>
+<h5 id="cadena-3-rb-uniprot-p06400-928-residuos">Cadena 3 – Rb (UniProt P06400, 928 residuos)</h5>
+<div class="highlight"><pre><span></span><code>&gt;sp|P06400|RB_HUMAN Retinoblastoma-associated protein OS=Homo sapiens OX=9606 GN=RB1 PE=1 SV=2
+MPPKTPRKTAATAAAAAAEPPAPPPPPPPEEDPEQDSGPEDLPLVRLEFEETEEPDFTALCQKLKIPDHVRERAWLTWEKVSSVDGVLGGYIQKKKELWGICIFIAAVDLDEMSFTFTELQKNIEISVHKFFNLLKEIDTSTKVDNAMSRLLKKYDVLFALFSKLERTCELIYLTQPSSSISTEINSALVLKVSWITFLLAKGEVLQMEDDLVISFQLMLCVLDYFIKLSPPMLLKEPYKTAVIPINGSPRTPRRGQNRSARIAKQLENDTRIIEVLCKEHECNIDEVKNVYFKNFIPFMNSLGLVTSNGLPEVENLSKRYEEIYLKNKDLDARLFLDHDKTLQTDSIDSFETQRTPRKSNLDEEVNVIPPHTPVRTVMNTIQQLMMILNSASDQPSENLISYFNNCTVNPKESILKRVKDIGYIFKEKFAKAVGQGCVEIGSQRYKLGVRLYYRVMESMLKSEEERLSIQNFSKLLNDNIFHMSLLACALEVVMATYSRSTSQNLDSGTDLSFPWILNVLNLKAFDFYKVIESFIKAEGNLTREMIKHLERCEHRIMESLAWLSDSPLFDLIKQSKDREGPTDHLESACPLNLPLQNNHTAADMYLSPVRSPKKKGSTTRVNSTANAETQATSAFQTQKPLKSTSLSLFYKKVYRLAYLRLNTLCERLLSEHPELEHIIWTLFQHTLQNEYELMRDRHLDQIMMCSMYGICKVKNIDLKFKIIVTAYKDLPHAVQETFKRVLIKEEEYDSIIVFYNSVFMQRLKTNILQYASTRPPTLSPIPHIPRSPYKFPSSPLRIPGGNIYISPLKSPYKISEGLPTPTKMTPRSRILVSIGESFGTSEKFQKINQMVCNSDRVLKRSAEGSNPPKPLKKLRFDIEGSDEADGSKHLPGESKFQQKLAEMTSTRTRMQKQKMNDSMDTSNKEEK
+</code></pre></div>
+<p>Antes de modelar, explore las predicciones estructurales que ya están disponibles en la <strong>AlphaFold Protein Structure Database</strong> para cada una de las tres proteínas.</p>
+<ul>
+<li>Acceda a UniProt: <a href="https://www.uniprot.org/">https://www.uniprot.org/</a></li>
+<li>Busque los códigos <strong>Q01094</strong> (E2F1), <strong>Q14186</strong> (DP1) y <strong>P06400</strong> (Rb).</li>
+<li>En cada página, localice el botón “AlphaFold” o “3D structure” y haga clic para abrir el modelo predicho.</li>
+<li>Observe el coloreado por pLDDT:</li>
+<li><strong>Azul</strong> (pLDDT &gt; 90): muy alta confianza.</li>
+<li><strong>Celeste</strong> (pLDDT 70‑90): buena confianza.</li>
+<li><strong>Amarillo</strong> (pLDDT 50‑70): baja confianza (posiblemente flexible).</li>
+<li><strong>Naranja/Rojo</strong> (pLDDT &lt; 50): muy baja confianza, probablemente desordenado.</li>
+</ul>
+<h4 id="modelado-de-rb">Modelado de Rb</h4>
+<ol>
+<li>Ingrese a <a href="https://alphafoldserver.com/">AlphaFold Server</a>.</li>
+<li>En la <strong>Entity 1</strong>, configure tipo <strong>Protein</strong> y pegue la secuencia de Rb (completa, tal como aparece arriba).</li>
+<li>Asigne un nombre descriptivo, por ejemplo <code>Rb</code>.</li>
+<li>Active la opción <strong>Use seed</strong> y elija un número entero (ej. <code>12345</code>).</li>
+<li>Envíe el trabajo y espere (aproximadamente 5‑10 min, dependiendo del tamaño).</li>
+<li>Cuando termine, descargue el archivo <code>.cif</code> del mejor modelo.</li>
+</ol>
+<h4 id="modelado-del-trimero-completo-e2f1-dp1-rb">Modelado del trímero completo (E2F1 + DP1 + Rb)</h4>
+<p>Ahora modele el complejo con las secuencias <strong>completas</strong> de las tres proteínas.</p>
+<ol>
+<li>En AlphaFold Server, cree un <strong>nuevo trabajo</strong>.</li>
+<li>Agregue <strong>tres entidades proteicas</strong> con el botón “Add entity”.
+   - <strong>Entity 1:</strong> E2F1.
+   - <strong>Entity 2:</strong> DP1.
+   - <strong>Entity 3:</strong> Rb.</li>
+<li>Asegúrese de que el tipo de todas sea <strong>Protein</strong> y que el orden de las cadenas sea el indicado.</li>
+<li>Asigne otro nombre, por ejemplo <code>Trimer_E2F1_DP1_Rb</code>.</li>
+<li>Use la <strong>misma semilla</strong> (seed) que en el punto anterior.</li>
+<li>Envíe el trabajo y espere (el tiempo de cómputo será mayor, entre 15 y 30 min).</li>
+</ol>
+<h4 id="comparacion-de-la-confianza-entre-el-monomero-y-el-trimero">Comparación de la confianza entre el monómero y el trímero</h4>
+<p>Una vez que ambos trabajos estén listos, compare las métricas de confianza.</p>
+<p><strong>A. Perfil de pLDDT por residuo</strong></p>
+<ul>
+<li>Sobre el modelo del <strong>trímero</strong>, identifique las cadenas que corresponden a la proteína elegida para modelar sola. ¿Esas regiones presentan ahora pLDDT más altos que cuando la proteína se modeló sola? ¿Dónde ocurre el aumento de confianza?</li>
+<li>¿Qué pasa con los extremos N‑terminal y C‑terminal de E2F1 y DP1 en el trímero? ¿Siguen siendo desordenados o se ordenan en el complejo?</li>
+</ul>
+<p><strong>B. Análisis del PAE (Predicted Aligned Error)</strong></p>
+<p>Examine el gráfico de PAE del trímero.</p>
+<ul>
+<li>¿El error predicho entre residuos de diferentes cadenas es bajo o alto?</li>
+<li>Identifique en el gráfico los bloques que representan interacciones <strong>E2F1‑DP1</strong> (heterodimerización) y <strong>E2F1‑Rb</strong> (unión reguladora). ¿Cuál es más confiable según el PAE?</li>
+</ul>
+<h4 id="comparacion-con-la-estructura-cristalografica-de-referencia">Comparación con la estructura cristalográfica de referencia</h4>
+<ol>
+<li>Descargue el archivo PDB de 2AZE desde el RCSB (código <code>2aze</code>).</li>
+<li>Abra el PDB en Chimera</li>
+<li>Alinee su modelo del trímero completo contra el fragmento experimental usando <strong>MatchMaker</strong>..</li>
+</ol>
+<ul>
+<li>¿Las regiones que están presentes en 2AZE y en su modelo coinciden con alta precisión (RMSD &lt; 2 Å)?</li>
+<li>¿Qué partes de su modelo se desvían más? ¿Corresponden a regiones que están ausentes en la estructura cristalográfica?</li>
+</ul>
+<hr>
+<h3 id="ejercicio-extra-1">Ejercicio extra 1</h3>
+<h4 id="prediccion-en-alphafold-server_1">Predicción en AlphaFold Server</h4>
+<p>Utilice la isoforma CALM1 (UniProt P0DP23):</p>
+<div class="highlight"><pre><span></span><code>&gt;sp|P0DP23|CALM1
+MADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTIDFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGISAAELRHVMTNLGEKLTDEEVDEMIREADIDGDGQVNYEEFVQMMTAK
+</code></pre></div>
+<ol>
+<li>Copien la secuencia y créen un trabajo en AlphaFold Server.</li>
+<li>Usen una semilla (seed) para reproducibilidad.</li>
+<li>Envíen y esperen.</li>
+</ol>
+<h4 id="analisis-de-los-resultados-en-el-servidor_1">Análisis de los resultados en el servidor</h4>
+<p>Una vez que el servidor terminó, observen:</p>
+<ul>
+<li>El coloreado por pLDDT. ¿Hay regiones con baja confianza (amarillo, naranja, rojo)? ¿Dónde?</li>
+<li>El gráfico de PAE. ¿Se ven dos bloques diagonales separados por una zona de colores cálidos (error alto)?</li>
+<li>Anoten los valores de pTM y ranking_score del archivo <code>*_summary_confidences_0.json</code>.</li>
+</ul>
+<h4 id="investigacion-en-uniprot">Investigación en UniProt</h4>
+<p>Ahora vayan a <a href="https://www.uniprot.org/">UniProt</a> y busquen la secuencia (pueden  usar la información del header). Identifiquen la proteína.</p>
+<p>Lean con atención las secciones:</p>
+<ul>
+<li><strong>Function</strong> (especialmente el recuadro “Miscellaneous” si existe).</li>
+<li><strong>Family &amp; Domains</strong>.</li>
+<li><strong>Cofactor</strong>.</li>
+</ul>
+<p>Respondan:</p>
+<ul>
+<li>¿Cuál es el nombre real de esta proteína?</li>
+<li>¿Qué molécula (ión, ligando) se menciona como esencial para su función?</li>
+<li>¿Cuántas copias de esa molécula se unen a la proteína?</li>
+<li>¿Qué cambio estructural produce esa unión?</li>
+</ul>
+<h4 id="segundo-modelado">Segundo modelado</h4>
+<p>Vuelvan a AlphaFold Server y creen un nuevo trabajo con <strong>la misma secuencia proteica</strong>, pero ahora agreguen el ion que descubrieron.</p>
+<ul>
+<li>Entity 1: la proteína (igual).</li>
+<li>Usen <strong>Add entity → Ion</strong>. Busquen el ligando por nombre</li>
+<li>Agreguen la cantidad de copias que indica UniProt.</li>
+<li>Usen la <strong>misma semilla</strong> que en el primer modelado.</li>
+<li>Envíen y esperen. (Este modelado demora bastante!)</li>
+</ul>
+<h4 id="comparacion-de-los-resultados">Comparación de los resultados</h4>
+<p>Comparen los dos modelos (sin ligando y con ligando):</p>
+<ol>
+<li><strong>pLDDT</strong>: ¿la región que antes tenía baja confianza ahora mejoró?</li>
+<li><strong>PAE</strong>: ¿el gráfico de PAE pasó de mostrar dos bloques separados a un único bloque azul?</li>
+<li><strong>Métricas globales</strong>: completen esta tabla.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>pTM</th>
+<th>ipTM</th>
+<th>ranking_score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sin ion</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Con ion</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Opcional (Chimera)</strong>: superpongan los dos modelos y observen las diferencias estructurales.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2024 Area Bioinformática UNSAM
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "toc.follow", "navigation.expand"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
