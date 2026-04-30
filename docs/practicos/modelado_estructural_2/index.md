@@ -214,11 +214,11 @@ NLIPVYCSILAAVVVGLVAYIAFKRWNSCKQNKQGANSRPVNQTPPPEGEKLHSDSGISVDSQSLHDQQPHTQTASGQAL
 #### Predicción con el uso del template 8X8T
 
 1. Cree un **nuevo trabajo** con las mismas dos entidades proteicas y las mismas secuencias.
-2. Acceda al [RCSB PDB](https://www.rcsb.org/structure/8X8T) o al sitio espejo.
+2. Acceda al [RCSB PDB](https://www.rcsb.org/structure/8X8T).
 3. Descargue el archivo en formato PDB (opción “Download Files” → “mmCIFF Format”).
 4. Guarde el archivo con el nombre `8x8t.cif` en una carpeta accesible.
 
-Cuando descargás un archivo PDB que contiene múltiples cadenas (como 8X8T, que tiene cadena A y cadena B), podés separarlas en archivos individuales para usarlas como templates por separado.
+Cuando descargás un archivo PDB que contiene múltiples cadenas (como 8X8T, que tiene cadena A y cadena B), vamos a separarlas en archivos individuales para usarlas como templates por separado.
 
 #### Guardar cada cadena por separado usando el Model Panel
 
@@ -275,7 +275,7 @@ Compare los diagramas de PAE de ambas predicciones.
 - En el modelo sin template: ¿el error predicho entre residuos de la cadena A y la cadena B?
 - En el modelo con template: ¿cambia esa región? ¿El template reduce la incertidumbre en la orientación relativa de los dos dominios?
 
-## Ejercicio 5
+### Ejercicio 5
 
 La proteína del retinoblastoma (Rb) es un supresor tumoral que regula negativamente la progresión del ciclo celular. Su función principal es unirse a los factores de transcripción de la familia E2F (en particular E2F1 y su heterodímero con DP1), reclutando complejos remodeladores de cromatina y reprimiendo la transcripción de genes necesarios para la transición G1/S. La unión ocurre entre el dominio **C‑terminal de Rb** (RbC) y el **heterodímero E2F1/DP1**. Cuando Rb es fosforilada por quinasas ciclina‑dependientes (CDK), se libera de E2F/DP y se activa la transcripción.
 
@@ -311,12 +311,7 @@ Antes de modelar, explore las predicciones estructurales que ya están disponibl
 
 - Acceda a UniProt: [https://www.uniprot.org/](https://www.uniprot.org/)
 - Busque los códigos **Q01094** (E2F1), **Q14186** (DP1) y **P06400** (Rb).
-- En cada página, localice el botón “AlphaFold” o “3D structure” y haga clic para abrir el modelo predicho.
-- Observe el coloreado por pLDDT:
-  - **Azul** (pLDDT > 90): muy alta confianza.
-  - **Celeste** (pLDDT 70‑90): buena confianza.
-  - **Amarillo** (pLDDT 50‑70): baja confianza (posiblemente flexible).
-  - **Naranja/Rojo** (pLDDT < 50): muy baja confianza, probablemente desordenado.
+- En cada página, localice el botón “AlphaFold” o “3D structure” y haga clic para explorar el modelo predicho.
 
 #### Modelado de Rb
 
@@ -324,7 +319,7 @@ Antes de modelar, explore las predicciones estructurales que ya están disponibl
 2. En la **Entity 1**, configure tipo **Protein** y pegue la secuencia de Rb (completa, tal como aparece arriba).
 3. Asigne un nombre descriptivo, por ejemplo `Rb`.
 4. Active la opción **Use seed** y elija un número entero (ej. `12345`).
-5. Envíe el trabajo y espere (aproximadamente 5‑10 min, dependiendo del tamaño).
+5. Envíe el trabajo y espere (aproximadamente 5‑10 min).
 6. Cuando termine, descargue el archivo `.cif` del mejor modelo.
 
 #### Modelado del trímero completo (E2F1 + DP1 + Rb)
@@ -339,7 +334,7 @@ Ahora modele el complejo con las secuencias **completas** de las tres proteínas
 3. Asegúrese de que el tipo de todas sea **Protein** y que el orden de las cadenas sea el indicado.
 4. Asigne otro nombre, por ejemplo `Trimer_E2F1_DP1_Rb`.
 5. Use la **misma semilla** (seed) que en el punto anterior.
-6. Envíe el trabajo y espere (el tiempo de cómputo será mayor, entre 15 y 30 min).
+6. Envíe el trabajo y espere (entre 15 y 30 min).
 
 #### Comparación de la confianza entre el monómero y el trímero
 
