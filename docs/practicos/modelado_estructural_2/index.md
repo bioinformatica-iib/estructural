@@ -184,7 +184,7 @@ Una vez que el modelo acetilado esté listo, compárenlo con el modelo original:
 
 ### Ejercicio 4
 
-El receptor de neurotrofinas p75NTR (p75 neurotrophin receptor) es una proteína transmembrana clave en la supervivencia neuronal, la apoptosis y el crecimiento axonal. Su señalización está finamente regulada por interacciones con múltiples efectores citosólicos. Uno de ellos es la proteína RhoGDI (Rho GDP‑dissociation inhibitor), que controla la actividad de las GTPasas de la familia Rho. En respuesta a la fosforilación de RhoGDI por PKC, se promueve la interacción entre el dominio yuxtamembrana (JMD) de p75NTR y el dominio N‑terminal (NTD) de RhoGDI, lo que desencadena una vía de señalización que culmina en la retracción axonal y apoptosis.
+El receptor de neurotrofinas p75NTR es una proteína transmembrana clave en la supervivencia neuronal, la apoptosis y el crecimiento axonal. Su señalización está regulada por interacciones con múltiples efectores citosólicos. Uno de ellos es la proteína RhoGDI, que controla la actividad de las GTPasas de la familia Rho.
 
 La estructura tridimensional de este complejo fue resuelta recientemente por resonancia magnética nuclear (RMN) y depositada bajo el código **PDB 8X8T**. En este ejercicio, usted utilizará AlphaFold para predecir la estructura del complejo de dos maneras:
 
@@ -194,19 +194,20 @@ La estructura tridimensional de este complejo fue resuelta recientemente por res
 A partir de la entrada **8X8T**, el complejo está formado por dos cadenas (se utilizan las secuencias exactas de la estructura de RMN):
 
 ```
->Cadena A – Dominio N‑terminal de RhoGDI (residuos 2‑60 de la proteína completa UniProt P52565)**
-MAEQEPTAEQLAQIAAENEEDEHSVNYKPPAQKSIQEIQELDKDDESLRKYKEALLGRVAVSADPNVPNVVVTGLTLVCSS
+>8X8T_1|Chain A|Rho GDP-dissociation inhibitor 1|Homo sapiens (9606)
+GSAEQEPTAEQLAQIAAENEEDEHSVNYKPPAQKDIQEIQELDKDDESLRKYKEALLGRVA
 ```
 
 ```
->Cadena B – Dominio yuxtamembrana de p75NTR (residuos 273‑332 de UniProt P08138)**
-NLIPVYCSILAAVVVGLVAYIAFKRWNSCKQNKQGANSRPVNQTPPPEGEKLHSDSGISVDSQSLHDQQPHTQTASGQALKGDGGLYSSLPP
+>8X8T_2|Chain B|p75NTR‑JMD Tumor necrosis factor receptor superfamily member 16|Homo sapiens (9606)
+GSKRWNSCKQNKQGANSRPVNQTPPPEGEKLHSDSGISVDSQSLHDQQPHTQTASGQALKGD
 ```
+
 #### Predicción
 
 1. Ingrese a [AlphaFold Server](https://alphafoldserver.com/).
 2. Agregue dos entidades proteicas (**Add entity**).
-   - **Entity 1:** pegue la secuencia de la **Cadena A** (RhoGDI‑NTD). Tipo *Protein*.
+   - **Entity 1:** pegue la secuencia de la **Cadena A** (Rho-GDP). Tipo *Protein*.
    - **Entity 2:** pegue la secuencia de la **Cadena B** (p75NTR‑JMD). Tipo *Protein*.
 3. Asigne un nombre al trabajo, por ejemplo `p75_RhoGDI_sinTemplate`. Active “Use seed” para reproducibilidad.
 4. Envíe el trabajo y espere los resultados (~5‑10 minutos).
@@ -214,36 +215,18 @@ NLIPVYCSILAAVVVGLVAYIAFKRWNSCKQNKQGANSRPVNQTPPPEGEKLHSDSGISVDSQSLHDQQPHTQTASGQAL
 #### Predicción con el uso del template 8X8T
 
 1. Cree un **nuevo trabajo** con las mismas dos entidades proteicas y las mismas secuencias.
-2. Acceda al [RCSB PDB](https://www.rcsb.org/structure/8X8T).
-3. Descargue el archivo en formato PDB (opción “Download Files” → “mmCIFF Format”).
-4. Guarde el archivo con el nombre `8x8t.cif` en una carpeta accesible.
-
-Cuando descargás un archivo PDB que contiene múltiples cadenas (como 8X8T, que tiene cadena A y cadena B), vamos a separarlas en archivos individuales para usarlas como templates por separado.
-
-#### Guardar cada cadena por separado usando el Model Panel
-
-1. **Abrí el archivo PDB** en Chimera (`File → Open`).
-2. **Abrí el Model Panel**: `Favorites → Model Panel`
-3. **Identificá las cadenas**: En el Model Panel, cada cadena suele aparecer como un modelo separado (ej. `8x8t.cif (A)` y `8x8t.cif (B)`). Si no están separadas automáticamente:
-
-   - Hacé clic en el modelo principal.
-   - Usá `Select → Chain` y elegí la cadena que querés (A o B).
-   - Luego `Actions → all`.
-
-4. **Seleccioná la cadena que querés guardar** (ej. Cadena A).
-5. **Guardala como archivo PDB**:
-   - En el Model Panel, seleccioná **solo** el modelo que contiene la cadena A (podés desmarcar los otros modelos).
-   - `File → Save PDB...`
-   - Elegí un nombre, por ejemplo `8x8t_cadena_A.ciff`
-6. **Repetí** para la cadena B.
+2. Acceda al [RCSB PDB](https://www.rcsb.org/structure/8X8T) para explorar el templado que vamos a usar.
 
 #### Cargar los templados en Alphafold
 
 1. Ingresá en los tres puntos a la derecha de la secuencia. En la sección **Templates settings**:
+   - Descargue el archivo de la estructura del templado disponible en este [link](data/chainA.cif) 
+   - Ingrese al archivo [json](data/test_template.json) y guardelo haciendo click derecho en "Save as...".
    - Seleccione la opción “Upload custom template” o “Provide mmCIF file”.
-   - Suba el archivo generado descargado previamente correspondiente a la cadena.
-   - **Verifique la asignación de cadenas:** asegúrese de que la cadena A del template corresponde a RhoGDI‑NTD (Entity 1) y la cadena B a p75NTR‑JMD (Entity 2). 
-2. Envíe el trabajo y espere los resultados.
+   - Suba el archivo .cif
+   - Suba el archivo .json en la sección de "mapping file". 
+2. Asigne un nombre al trabajo, por ejemplo `p75_RhoGDI_conTemplate`. Active “Use seed” para reproducibilidad y use el mismo seed que el modelado "sin templado".
+3. Envíe el trabajo y espere los resultados.
 
 #### Análisis comparativo
 
