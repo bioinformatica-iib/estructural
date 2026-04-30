@@ -57,12 +57,11 @@ Una vez finalizada la predicción, responda:
 * **Gráfico PAE (Predicted Aligned Error):**
     - ¿Observa dos o más bloques bien definidos? ¿Sugiere que la proteína tiene un único dominio rígido?
     - ¿El error predicho entre residuos distantes es bajo (colores azules) o alto (rojo)?
-* **Métricas globales:** Descargue el archivo ZIP y abra el archivo `*_summary_confidences_0.json`. Anote los valores de `pTM`, `ipTM` y `ranking_score`.
 
 #### Descarga de modelos y validación externa
 
 10. Descargue el archivo ZIP desde el servidor. Descomprímalo.
-11. Elija el modelo con mejor `ranking_score` (generalmente `*_model_0.cif`). Conviértalo a formato PDB si lo prefiere (puede usar Chimera para abrir el .cif y guardar como .pdb).
+11. Elija el modelo con mejor `ranking_score` (generalmente `*_model_0.cif`). Conviértalo a formato PDB  (usar Chimera para abrir el .cif y guardar como .pdb).
 12. Utilice **MolProbity** para evaluar la geometría:
     - Suba su archivo PDB a [MolProbity](http://molprobity.biochem.duke.edu/).
     - Seleccione las opciones estándar (Clashes, Ramachandran, Rotamer, Cβ deviations, CaBLAM, etc.).
@@ -87,7 +86,7 @@ O bien, ingrese en la command line:
 
 4. Anote el RMSD global. ¿Es menor a 1.5 Å? ¿Cómo se distribuye el error?
 
-### Preguntas
+#### Preguntas
 
 1. ¿Considera que la predicción de AlphaFold para HBG1 es de alta calidad? Justifique usando pLDDT, PAE y las métricas de MolProbity/Verify3D.
 2. ¿Qué región de la proteína mostró menor confianza? ¿Puede relacionarla con alguna característica biológica?
@@ -129,7 +128,7 @@ Una vez finalizada la predicción, responda:
 
 4. **Efecto del ligando:** ¿La inclusión del grupo hemo mejoró significativamente el pLDDT en el entorno del bolsillo de unión? ¿En qué medida?
 5. **Comparación con estructura real:** Si tiene acceso al PDB de una hemoglobina (ej. 1FDH), ¿el hemo predicho por AlphaFold se superpone bien con el hemo experimental?
-6. **Utilidad del modelado con ligandos:** ¿En qué casos recomendaría incluir cofactores o ligandos en una predicción con AlphaFold? ¿Siemre es beneficioso?
+6. **Utilidad del modelado con ligandos:** ¿En qué casos recomendaría incluir cofactores o ligandos en una predicción con AlphaFold? ¿Siepmre es beneficioso?
 
 #### (Opcional – Extra) Agregar también el ion hierro (Fe²⁺)
 
@@ -147,22 +146,18 @@ Si el tiempo y la paciencia lo permiten, puede realizarse un **tercer modelado**
    - ¿El ion Fe²⁺ se ubica dentro del anillo del hemo?
    - ¿Cambian las métricas de confianza (pTM, ipTM) con respecto al modelo que solo tenía hemo?
 
+---
+
 ### Ejercicio 3
 
 #### Investigar en UniProt
 
 1. Vamos a seguir trabajando con la misma proteína del ejercicio 1. Vuelvan a ingresar a [UniProt](https://www.uniprot.org/). 
-2. En la página de la proteína, busquen la **PTM/processing**. Anoten qué tipos de modificaciones postraduccionales mencionan.
-3. Respondan en sus cuadernos:
-   - ¿Que tipos de modificaciones postraduccionales aparecen en la página? ¿En qué posición ocurren?
+2. En la página de la proteína, busquen la **PTM/processing**. ¿Que tipos de modificaciones postraduccionales aparecen en la página? ¿En qué posición ocurren?
 
-#### El problema técnico: ¿se puede modelar?
+#### Modelado de una PTM
 
-La modificación que encontraron ocurre en el **extremo N-terminal de la proteína** (el primer aminoácido). En este momento, **AlphaFold Server no permite agregar modificaciones postraduccionales en el primer residuo** de una cadena polipeptídica. Cuando intenten hacerlo, el servidor simplemente no les va a dar la opción. Es una limitación técnica de la herramienta.
-
-#### Modelado de una PTM alternativa 
-
-Como la modificación biológicamente relevante no se puede modelar, van a elegir **otra PTM que SÍ se pueda cargar en AlphaFold**. Para este ejercicio, van a usar la **lisina en posición 83 (K83)** como ejemplo práctico. 
+Para este ejercicio, van a usar la **lisina en posición 83 (K83)** como ejemplo práctico. 
 
 #### Modelado en AlphaFold Server
 
@@ -181,7 +176,11 @@ Una vez que el modelo acetilado esté listo, compárenlo con el modelo original:
 
 - **pLDDT**: ¿La confianza local alrededor de la K83 cambió? ¿Se ve algún efecto en la región?
 - **Métricas globales**: Comparen `pTM` y `ranking_score` entre ambos modelos.
-- **Observación estructural**: Si pueden, superpongan los dos modelos en Chimera y calculen el RMSD local en la zona de la K83.
+- **Observación estructural**: Si pueden, superpongan los dos modelos en Chimera y observen el residuo modificado
+
+---
+
+## Modelado de dímeros
 
 ### Ejercicio 4
 
@@ -196,14 +195,12 @@ A partir de la entrada **8X8T**, el complejo está formado por dos cadenas (se u
 
 ```
 >Cadena A – Dominio N‑terminal de RhoGDI (residuos 2‑60 de la proteína completa UniProt P52565)**
-MAEQEPTAEQLAQIAAENEEDEHSVNYKPPAQKSIQEIQELDKDDESLRKYKEALLGRVAV
-SADPNVPNVVVTGLTLVCSS
+MAEQEPTAEQLAQIAAENEEDEHSVNYKPPAQKSIQEIQELDKDDESLRKYKEALLGRVAVSADPNVPNVVVTGLTLVCSS
 ```
 
 ```
 >Cadena B – Dominio yuxtamembrana de p75NTR (residuos 273‑332 de UniProt P08138)**
-NLIPVYCSILAAVVVGLVAYIAFKRWNSCKQNKQGANSRPVNQTPPPEGEKLHSDSGI
-SVDSQSLHDQQPHTQTASGQALKGDGGLYSSLPP
+NLIPVYCSILAAVVVGLVAYIAFKRWNSCKQNKQGANSRPVNQTPPPEGEKLHSDSGISVDSQSLHDQQPHTQTASGQALKGDGGLYSSLPP
 ```
 #### Predicción
 
@@ -218,16 +215,37 @@ SVDSQSLHDQQPHTQTASGQALKGDGGLYSSLPP
 
 1. Cree un **nuevo trabajo** con las mismas dos entidades proteicas y las mismas secuencias.
 2. Acceda al [RCSB PDB](https://www.rcsb.org/structure/8X8T) o al sitio espejo.
-3. Descargue el archivo en formato PDB (opción “Download Files” → “PDB Format”).
-4. Guarde el archivo con el nombre `8x8t.pdb` en una carpeta accesible.
-5. Asígnele otro nombre, por ejemplo `p75_RhoGDI_conTemplate_8X8T`. Active la misma semilla (ej. `12345`).
-3. En la sección **Templates**:
-   - Seleccione la opción “Upload custom template” o “Provide PDB file”.
-   - Suba el archivo `8x8t.pdb` descargado previamente.
-   - **Verifique la asignación de cadenas:** asegúrese de que la cadena A del template corresponde a RhoGDI‑NTD (Entity 1) y la cadena B a p75NTR‑JMD (Entity 2). Si es necesario, ajuste manualmente el mapeo.
-4. Envíe el trabajo y espere los resultados.
+3. Descargue el archivo en formato PDB (opción “Download Files” → “mmCIFF Format”).
+4. Guarde el archivo con el nombre `8x8t.cif` en una carpeta accesible.
 
-#### 4. Análisis comparativo
+Cuando descargás un archivo PDB que contiene múltiples cadenas (como 8X8T, que tiene cadena A y cadena B), podés separarlas en archivos individuales para usarlas como templates por separado.
+
+#### Guardar cada cadena por separado usando el Model Panel
+
+1. **Abrí el archivo PDB** en Chimera (`File → Open`).
+2. **Abrí el Model Panel**: `Favorites → Model Panel`
+3. **Identificá las cadenas**: En el Model Panel, cada cadena suele aparecer como un modelo separado (ej. `8x8t.cif (A)` y `8x8t.cif (B)`). Si no están separadas automáticamente:
+
+   - Hacé clic en el modelo principal.
+   - Usá `Select → Chain` y elegí la cadena que querés (A o B).
+   - Luego `Actions → all`.
+
+4. **Seleccioná la cadena que querés guardar** (ej. Cadena A).
+5. **Guardala como archivo PDB**:
+   - En el Model Panel, seleccioná **solo** el modelo que contiene la cadena A (podés desmarcar los otros modelos).
+   - `File → Save PDB...`
+   - Elegí un nombre, por ejemplo `8x8t_cadena_A.ciff`
+6. **Repetí** para la cadena B.
+
+#### Cargar los templados en Alphafold
+
+1. Ingresá en los tres puntos a la derecha de la secuencia. En la sección **Templates settings**:
+   - Seleccione la opción “Upload custom template” o “Provide mmCIF file”.
+   - Suba el archivo generado descargado previamente correspondiente a la cadena.
+   - **Verifique la asignación de cadenas:** asegúrese de que la cadena A del template corresponde a RhoGDI‑NTD (Entity 1) y la cadena B a p75NTR‑JMD (Entity 2). 
+2. Envíe el trabajo y espere los resultados.
+
+#### Análisis comparativo
 
 Una vez que ambos trabajos estén listos, responda las siguientes preguntas utilizando las visualizaciones del servidor, los archivos descargados y Chimera.
 
@@ -254,34 +272,16 @@ En la visualización 3D del servidor, observe el coloreado por pLDDT para ambos 
 
 Compare los diagramas de PAE de ambas predicciones.
 
-- En el modelo sin template: ¿el error predicho entre residuos de la cadena A y la cadena B (bloque fuera de la diagonal) es bajo (azul) o alto (rojo/amarillo)?
+- En el modelo sin template: ¿el error predicho entre residuos de la cadena A y la cadena B?
 - En el modelo con template: ¿cambia esa región? ¿El template reduce la incertidumbre en la orientación relativa de los dos dominios?
-
-**D. Comparación cualitativa con la estructura experimental**
-
-1. Abra la estructura experimental `8x8t.pdb`.
-2. Abra los dos modelos predichos (el `.cif` mejor rankeado de cada trabajo).
-3. Superponga cada modelo con el experimental usando `MatchMaker` (referencia: 8X8T). Anote el RMSD global para ambos.
-   - RMSD (modelo sin template vs 8X8T) = __________ Å
-   - RMSD (modelo con template vs 8X8T) = __________ Å
-4. Utilice `Tools → Structure Comparison → Match→Align` y luego coloree por RMSD por residuo (`Render by Attribute` → `mavRMSDca`).  
-   - ¿Las regiones de mayor desviación corresponden a loops o extremos flexibles? ¿El template reduce esas desviaciones?
-
-**E. Efecto sobre el desorden intrínseco (IUPred)**
-
-1. Ingrese a [IUPred2A](https://iupred2a.elte.hu/).
-2. Pegue la secuencia de **RhoGDI‑NTD** y ejecute (opción “long disorder”). Anote el porcentaje de residuos con score > 0.5.
-3. Repita para **p75NTR‑JMD**.
-4. Compare estos porcentajes con las regiones de bajo pLDDT que observó en las predicciones.  
-   - ¿El uso del template aumenta el pLDDT en regiones que IUPred predice como desordenadas? ¿Qué implica esto sobre la capacidad de AlphaFold para modelar regiones flexibles cuando se dispone de un template?
 
 ## Ejercicio 5
 
 La proteína del retinoblastoma (Rb) es un supresor tumoral que regula negativamente la progresión del ciclo celular. Su función principal es unirse a los factores de transcripción de la familia E2F (en particular E2F1 y su heterodímero con DP1), reclutando complejos remodeladores de cromatina y reprimiendo la transcripción de genes necesarios para la transición G1/S. La unión ocurre entre el dominio **C‑terminal de Rb** (RbC) y el **heterodímero E2F1/DP1**. Cuando Rb es fosforilada por quinasas ciclina‑dependientes (CDK), se libera de E2F/DP y se activa la transcripción.
 
-La estructura cristalográfica de este complejo trimérico fue depositada con el código **2AZE**. Sin embargo, la estructura resuelta por cristalografía de rayos X (2,55 Å) incluye solo las regiones que son estables y ordenadas en el cristal. En solución, muchos fragmentos de E2F1, DP1 y Rb permanecen flexibles o desordenados, especialmente fuera de la interfaz de unión. Esto convierte a cada proteína por separado en un **monómero “feo” desde el punto de vista del plegamiento**, pero al unirse entre sí adquieren estructuras más compactas con regiones ordenadas que pueden modelarse con alta confianza.
+La estructura cristalográfica de este complejo trimérico fue depositada con el código **2AZE**. Sin embargo, la estructura resuelta por cristalografía de rayos X (2,55 Å) incluye solo las regiones que son estables y ordenadas en el cristal. En solución, muchos fragmentos de E2F1, DP1 y Rb permanecen flexibles o desordenados, especialmente fuera de la interfaz de unión. 
 
-En este ejercicio usted modelará el trímero completo y, por separado, **la proteína que considere más “fea” luego de inspeccionar sus modelos de AlphaFold en UniProt**. Además, deberá leer sobre la estructura de **E2F1** para entender su arquitectura dominial y el significado funcional de las regiones desordenadas.
+En este ejercicio usted modelará el trímero completo y, por separado. 
 
 #### Modelado de las tres secuencias:
 
@@ -289,14 +289,7 @@ En este ejercicio usted modelará el trímero completo y, por separado, **la pro
 
 ```
 >sp|Q01094|E2F1_HUMAN Transcription factor E2F1 OS=Homo sapiens OX=9606 GN=E2F1 PE=1 SV=1
-MALAGAPAGGPCAPALEALLGAGALRLLDSSQIVIISAAQDASAPPAPTGPAAPAAGPCD
-PDLLLFATPQAPRPTPSAPRPALGRPPVKRRLDLETDHQYLAESSGPARGRGRHPGKGVK
-SPGEKSRYETSLNLTTKRFLELLSHSADGVVDLNWAAEVLKVQKRRIYDITNVLEGIQLI
-AKKSKNHIQWLGSHTTVGVGGRLEGLTQDLRQLQESEQQLDHLMNICTTQLRLLSEDTDS
-QRLAYVTCQDLRSIADPAEQMVMVIKAPPETQLQAVDSSENFQISLKSKQGPIDVFLCPE
-ETVGGISPGKTPSQEVTSEEENRATDSATIVSPPPSSPPSSLTTDPSQSLLSLEQEPLLS
-RMGSLRAPVDEDRLSPLVAADSLLEHVREDFSGLLPEEFISLSPPHEALDYHFGLEEGEG
-IRDLFDCDFGDLTPLDF
+MALAGAPAGGPCAPALEALLGAGALRLLDSSQIVIISAAQDASAPPAPTGPAAPAAGPCDPDLLLFATPQAPRPTPSAPRPALGRPPVKRRLDLETDHQYLAESSGPARGRGRHPGKGVKSPGEKSRYETSLNLTTKRLELLSHSADGVVDLNWAAEVLKVQKRRIYDITNVLEGIQLIAKKSKNHIQWLGSHTTVGVGGRLEGLTQDLRQLQESEQQLDHLMNICTTQLRLLSEDTDSQRLAYVTCQDLRSIADPAEQMVMVIKAPPETQLQAVDSSENFQISLKSKQGPIDVFLCPEETVGGISPGKTPSQEVTSEEENRATDSATIVSPPPSSPPSSLTTDPSQSLLSLEQEPLLSRMGSLRAPVDEDRLSPLVAADSLLEHVREDFSGLLPEEFISLSPPHEALDYHFGLEEGEGIRDLFDCDFGDLTPLDF
 ```
 
 ##### Cadena 2 – DP1 (UniProt Q14186, 410 residuos)
@@ -304,35 +297,14 @@ IRDLFDCDFGDLTPLDF
 ```
 
 >sp|Q14186|TFDP1_HUMAN Transcription factor Dp-1 OS=Homo sapiens OX=9606 GN=TFDP1 PE=1 SV=1
-MAKDAGLIEANGELKVFIDQNLSPGKGVVSLVAVHPSTVNPLGKQLLPKTFGQSNVNIAQ
-QVVIGTPQRPAASNTLVVGSPHTPSTHFASQNQPSDSSPWSAGKRNRKGEKNGKGLRHFS
-MKVCEKVQRKGTTSYNEVADELVAEFSAADNHILPNESAYDQKNIRRRVYDALNVLMAMN
-IISKEKKEIKWIGLPTNSAQECQNLEVERQRRLERIKQKQSQLQELILQQIAFKNLVQRN
-RHAEQQASRPPPPNSVIHLPFIIVNTSKKTVIDCSISNDKFEYLFNFDNTFEIHDDIEVL
-KRMGMACGLESGSCSAEDLKMARSLVPKALEPYVTEMAQGTVGGVFITTAGSTSNGTRFS
-ASDLTNGADGMLATSSNGSQYSGSRVETPVSYVGEDDEEDDDFNENDEDD
+MAKDAGLIEANGELKVFIDQNLSPGKGVVSLVAVHPSTVNPLGKQLLPKTFGQSNVNIAQQVVIGTPQRPAASNTLVVGSPHTPSTHFASQNQPSDSSPWSAGKRNRKGEKNGKGLRHFSMKVCEKVQRKGTTSYNEVDELVAEFSAADNHILPNESAYDQKNIRRRVYDALNVLMAMNIISKEKKEIKWIGLPTNSAQECQNLEVERQRRLERIKQKQSQLQELILQQIAFKNLVQRNRHAEQQASRPPPPNSVIHLPFIIVNTSKKTVIDCSISDKFEYLFNFDNTFEIHDDIEVLKRMGMACGLESGSCSAEDLKMARSLVPKALEPYVTEMAQGTVGGVFITTAGSTSNGTRFSASDLTNGADGMLATSSNGSQYSGSRVETPVSYVGEDDEEDDDFNENDEDD
 ```
 
 ##### Cadena 3 – Rb (UniProt P06400, 928 residuos)
 
 ```
 >sp|P06400|RB_HUMAN Retinoblastoma-associated protein OS=Homo sapiens OX=9606 GN=RB1 PE=1 SV=2
-MPPKTPRKTAATAAAAAAEPPAPPPPPPPEEDPEQDSGPEDLPLVRLEFEETEEPDFTAL
-CQKLKIPDHVRERAWLTWEKVSSVDGVLGGYIQKKKELWGICIFIAAVDLDEMSFTFTEL
-QKNIEISVHKFFNLLKEIDTSTKVDNAMSRLLKKYDVLFALFSKLERTCELIYLTQPSSS
-ISTEINSALVLKVSWITFLLAKGEVLQMEDDLVISFQLMLCVLDYFIKLSPPMLLKEPYK
-TAVIPINGSPRTPRRGQNRSARIAKQLENDTRIIEVLCKEHECNIDEVKNVYFKNFIPFM
-NSLGLVTSNGLPEVENLSKRYEEIYLKNKDLDARLFLDHDKTLQTDSIDSFETQRTPRKS
-NLDEEVNVIPPHTPVRTVMNTIQQLMMILNSASDQPSENLISYFNNCTVNPKESILKRVK
-DIGYIFKEKFAKAVGQGCVEIGSQRYKLGVRLYYRVMESMLKSEEERLSIQNFSKLLNDN
-IFHMSLLACALEVVMATYSRSTSQNLDSGTDLSFPWILNVLNLKAFDFYKVIESFIKAEG
-NLTREMIKHLERCEHRIMESLAWLSDSPLFDLIKQSKDREGPTDHLESACPLNLPLQNNH
-TAADMYLSPVRSPKKKGSTTRVNSTANAETQATSAFQTQKPLKSTSLSLFYKKVYRLAYL
-RLNTLCERLLSEHPELEHIIWTLFQHTLQNEYELMRDRHLDQIMMCSMYGICKVKNIDLK
-FKIIVTAYKDLPHAVQETFKRVLIKEEEYDSIIVFYNSVFMQRLKTNILQYASTRPPTLS
-PIPHIPRSPYKFPSSPLRIPGGNIYISPLKSPYKISEGLPTPTKMTPRSRILVSIGESFG
-TSEKFQKINQMVCNSDRVLKRSAEGSNPPKPLKKLRFDIEGSDEADGSKHLPGESKFQQK
-LAEMTSTRTRMQKQKMNDSMDTSNKEEK
+MPPKTPRKTAATAAAAAAEPPAPPPPPPPEEDPEQDSGPEDLPLVRLEFEETEEPDFTALCQKLKIPDHVRERAWLTWEKVSSVDGVLGGYIQKKKELWGICIFIAAVDLDEMSFTFTELQKNIEISVHKFFNLLKEIDTSTKVDNAMSRLLKKYDVLFALFSKLERTCELIYLTQPSSSISTEINSALVLKVSWITFLLAKGEVLQMEDDLVISFQLMLCVLDYFIKLSPPMLLKEPYKTAVIPINGSPRTPRRGQNRSARIAKQLENDTRIIEVLCKEHECNIDEVKNVYFKNFIPFMNSLGLVTSNGLPEVENLSKRYEEIYLKNKDLDARLFLDHDKTLQTDSIDSFETQRTPRKSNLDEEVNVIPPHTPVRTVMNTIQQLMMILNSASDQPSENLISYFNNCTVNPKESILKRVKDIGYIFKEKFAKAVGQGCVEIGSQRYKLGVRLYYRVMESMLKSEEERLSIQNFSKLLNDNIFHMSLLACALEVVMATYSRSTSQNLDSGTDLSFPWILNVLNLKAFDFYKVIESFIKAEGNLTREMIKHLERCEHRIMESLAWLSDSPLFDLIKQSKDREGPTDHLESACPLNLPLQNNHTAADMYLSPVRSPKKKGSTTRVNSTANAETQATSAFQTQKPLKSTSLSLFYKKVYRLAYLRLNTLCERLLSEHPELEHIIWTLFQHTLQNEYELMRDRHLDQIMMCSMYGICKVKNIDLKFKIIVTAYKDLPHAVQETFKRVLIKEEEYDSIIVFYNSVFMQRLKTNILQYASTRPPTLSPIPHIPRSPYKFPSSPLRIPGGNIYISPLKSPYKISEGLPTPTKMTPRSRILVSIGESFGTSEKFQKINQMVCNSDRVLKRSAEGSNPPKPLKKLRFDIEGSDEADGSKHLPGESKFQQKLAEMTSTRTRMQKQKMNDSMDTSNKEEK
 ```
 
 Antes de modelar, explore las predicciones estructurales que ya están disponibles en la **AlphaFold Protein Structure Database** para cada una de las tres proteínas.
@@ -345,25 +317,19 @@ Antes de modelar, explore las predicciones estructurales que ya están disponibl
   - **Celeste** (pLDDT 70‑90): buena confianza.
   - **Amarillo** (pLDDT 50‑70): baja confianza (posiblemente flexible).
   - **Naranja/Rojo** (pLDDT < 50): muy baja confianza, probablemente desordenado.
-- Registre el **valor medio de pLDDT** que se indica en la página (suele aparecer en una tabla o en el pie de la visualización).
 
-**Pregunta 1:**  
-Según los modelos de AlphaFold en UniProt, ¿cuál de las tres proteínas tiene el **promedio de pLDDT más bajo** y la **mayor proporción de residuos con pLDDT < 70**? Justifique su respuesta con valores aproximados. Seleccionar esta proteína para el siguiente paso
-
-#### Modelado del monómero de peor calidad
-
-Una vez elegida la proteína de peor calidad, modele esa única cadena con AlphaFold Server.
+#### Modelado de Rb
 
 1. Ingrese a [AlphaFold Server](https://alphafoldserver.com/).
-2. En la **Entity 1**, configure tipo **Protein** y pegue la secuencia de la proteína seleccionada (completa, tal como aparece arriba).
-3. Asigne un nombre descriptivo, por ejemplo `Monomer_FEO_E2F1` (o la que corresponda).
+2. En la **Entity 1**, configure tipo **Protein** y pegue la secuencia de Rb (completa, tal como aparece arriba).
+3. Asigne un nombre descriptivo, por ejemplo `Rb`.
 4. Active la opción **Use seed** y elija un número entero (ej. `12345`).
 5. Envíe el trabajo y espere (aproximadamente 5‑10 min, dependiendo del tamaño).
 6. Cuando termine, descargue el archivo `.cif` del mejor modelo.
 
 #### Modelado del trímero completo (E2F1 + DP1 + Rb)
 
-Ahora modele el complejo que aparece en la estructura 2AZE, pero con las secuencias **completas** de las tres proteínas.
+Ahora modele el complejo con las secuencias **completas** de las tres proteínas.
 
 1. En AlphaFold Server, cree un **nuevo trabajo**.
 2. Agregue **tres entidades proteicas** con el botón “Add entity”.
@@ -379,52 +345,23 @@ Ahora modele el complejo que aparece en la estructura 2AZE, pero con las secuenc
 
 Una vez que ambos trabajos estén listos, compare las métricas de confianza.
 
-**A. Métricas globales**
+**A. Perfil de pLDDT por residuo**
 
-Descargue los archivos ZIP de ambos trabajos y abra los archivos `*_summary_confidences_0.json`. Complete la siguiente tabla:
-
-| Predicción             | pTM | ipTM | ranking_score  | fraction_disordered |
-|------------------------|-----|------|----------------|---------------------|
-| Monómero               |     |      |                |                     |
-| Trímero completo       |     |      |                |                     |
-
-- ¿Cuál de los dos trabajo tiene mejor `ranking_score`? ¿Qué parámetro(s) contribuyen más a esa diferencia?
-
-**B. Perfil de pLDDT por residuo**
-
-Visualice los modelos en Chimera (o en la propia interfaz del servidor) coloreando por b‑factor (pLDDT). Utilice el comando:
-
-rangecolor bfactor 0 orange red 50 white 100 dodger blue
-
-
-- Sobre el modelo del **trímero**, identifique las cadenas que corresponden a la proteína “fea” elegida. ¿Esas regiones presentan ahora pLDDT más altos que cuando la proteína se modeló sola? ¿Dónde ocurre el aumento de confianza?
+- Sobre el modelo del **trímero**, identifique las cadenas que corresponden a la proteína elegida para modelar sola. ¿Esas regiones presentan ahora pLDDT más altos que cuando la proteína se modeló sola? ¿Dónde ocurre el aumento de confianza?
 - ¿Qué pasa con los extremos N‑terminal y C‑terminal de E2F1 y DP1 en el trímero? ¿Siguen siendo desordenados o se ordenan en el complejo?
 
-**C. Análisis del PAE (Predicted Aligned Error)**
+**B. Análisis del PAE (Predicted Aligned Error)**
 
 Examine el gráfico de PAE del trímero.
 
-- ¿El error predicho entre residuos de diferentes cadenas es bajo (colores azules) o alto (rojo/amarillo)?
+- ¿El error predicho entre residuos de diferentes cadenas es bajo o alto?
 - Identifique en el gráfico los bloques que representan interacciones **E2F1‑DP1** (heterodimerización) y **E2F1‑Rb** (unión reguladora). ¿Cuál es más confiable según el PAE?
 
-**D. Lectura obligatoria – Estructura de E2F1**
-
-Antes de continuar, se debe leer sobre la **estructura y arquitectura dominial de E2F1**. Se sugiere consultar:
-
-- La entrada de **UniProt Q01094** y la pestaña “Family & Domains”.
-- La página de **InterPro** asociada (IPR003316, IPR037239, etc.).
-- El artículo original de la estructura 2AZE: Rubin et al., *Cell* (2005) – disponible en PubMed.
-- Opcional: revisar el **AlphaFold model** de E2F1 en UniProt para identificar visualmente la región ordenada (dominio de unión a DP y Rb) y los extremos desordenados.
-
-**Pregunta 2 (para responder luego de la lectura):**  
-Explique brevemente cuáles son los **dominios principales de E2F1** y cuál es su función en la regulación del ciclo celular. ¿Cómo se relaciona la presencia de regiones intrínsecamente desordenadas con la capacidad de E2F1 de unirse a múltiples socios (DP1, Rb, p300/CBP, etc.)?
-
-#### 5. Comparación con la estructura cristalográfica de referencia
+#### Comparación con la estructura cristalográfica de referencia
 
 1. Descargue el archivo PDB de 2AZE desde el RCSB (código `2aze`).
-2. Abra el PDB en Chimera y aísle las tres cadenas (A: DP1, B: E2F1, C: Rb-Cterminal). Notará que 2AZE solo contiene **fragmentos** de las proteínas completas (los dominios que son estables en el cristal).
-3. Alinee su modelo del trímero completo contra el fragmento experimental usando **MatchMaker**.
-4. Anote el **RMSD global** para los átomos superpuestos (lo que solapa, porque el modelo experimental es más corto).
+2. Abra el PDB en Chimera
+3. Alinee su modelo del trímero completo contra el fragmento experimental usando **MatchMaker**..
 
 - ¿Las regiones que están presentes en 2AZE y en su modelo coinciden con alta precisión (RMSD < 2 Å)?
 - ¿Qué partes de su modelo se desvían más? ¿Corresponden a regiones que están ausentes en la estructura cristalográfica?
@@ -439,9 +376,7 @@ Utilice la isoforma CALM1 (UniProt P0DP23):
 
 ```
 >sp|P0DP23|CALM1
-MADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQ
-DMINEVDADGNGTIDFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGY
-ISAAELRHVMTNLGEKLTDEEVDEMIREADIDGDGQVNYEEFVQMMTAK
+MADQLTEEQIAEFKEAFSLFDKDGDGTITTKELGTVMRSLGQNPTEAELQDMINEVDADGNGTIDFPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGISAAELRHVMTNLGEKLTDEEVDEMIREADIDGDGQVNYEEFVQMMTAK
 ```
 
 1. Copien la secuencia y créen un trabajo en AlphaFold Server.
@@ -466,7 +401,7 @@ Lean con atención las secciones:
 - **Family & Domains**.
 - **Cofactor**.
 
-Respondan en su cuaderno:
+Respondan:
 
 - ¿Cuál es el nombre real de esta proteína?
 - ¿Qué molécula (ión, ligando) se menciona como esencial para su función?
@@ -481,7 +416,7 @@ Vuelvan a AlphaFold Server y creen un nuevo trabajo con **la misma secuencia pro
 - Usen **Add entity → Ion**. Busquen el ligando por nombre
 - Agreguen la cantidad de copias que indica UniProt.
 - Usen la **misma semilla** que en el primer modelado.
-- Envíen y esperen. (Este modelado demora bastante! Pueden seguir avanzando con el ejercicio 3 mientras termina de correr.)
+- Envíen y esperen. (Este modelado demora bastante!)
 
 #### Comparación de los resultados
 
