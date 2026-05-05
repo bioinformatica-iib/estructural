@@ -143,7 +143,7 @@ nav:
         - Teórica 1: teoricas/teorica1/index.md
         - Teórica 2: teoricas/teorica2/index.md
         - Teórica 3: teoricas/teorica3/index.md
-        # - Teórica 4: teoricas/teorica4/index.md
+        - Teórica 4: teoricas/teorica4/index.md
         # - Teórica 5: teoricas/teorica5/index.md
         # - Teórica 6: teoricas/teorica6/index.md
         # - Teórica 7: teoricas/teorica7/index.md
@@ -163,7 +163,7 @@ nav:
         # - TP8 - Trabajo Práctico Integrador: 'practicos/integrador/index.md'
         # - TP4 - Modelado Parte II: 'practicos/modelado_alphafold/index.md'
     #    - Resumen: 'practicos/resumen.md'
-    - Evaluacion: 'evaluacion.md'
+    # - Evaluacion: 'evaluacion.md'
     #- Instructivos: instructivos.md
     - Como llegar: 'como_llegar/index.md'
 
