@@ -269,7 +269,7 @@ Por ejemplo, una estructura de 100 aminoácidos y un ligando de 20 átomos, requ
 A diferencia de AlphaFold2, las métricas de confianza son calculadas por *tokens* y no por aminoácidos.
 
 
-AlpaFold2 era un modelo no-generativo que identifica patrones en los datos. AlphaFold3 es usa un modelo *generativo* de machine learning. Los modelos generativos crean nuevos datos similares a los ejemplos que aprendieron.
+Mientras AlphaFold2 es un modelo *no-generativo* que identifica patrones en los datos. AlphaFold3 usa un modelo *generativo* de machine learning. Los modelos generativos crean nuevos datos similares a los ejemplos que aprendieron.
 
 
 
@@ -431,30 +431,85 @@ LAEMTSTRTRMQKQKMNDSMDTSNKEEK
     * ¿Porqué considera que elegimos 50 como valor mínimo?
     * ¿De qué posición a qué posición consideraría que el modelo es de confianza?
 
-14. Para analizar los valores de pLDDT graficaremos los valores de pLDDT por posición para cada uno de los modelos.
+14. Para analizar los valores de pLDDT graficaremos los valores de pLDDT por posición para cada uno de los modelos. Para esto es utilizaremos R Studio y el paquete **bio3d** que permite leer estructuras de proteínas.
 
-    * Abra R Studio.
+    **Bio3D** no lee correctamente los mmCif generados por AlphaFold3, por lo tanto, vamos a guardas los modelos mmCif en formato `pdb`. Para esto, en Chimera con los 5 modelos abiertos vaya a:
+
+
+    *File* → *Save PDB...*
+
+
+* Elija la carpeta donde desea guardar los modelos.
+
+* En **File name** elija un nombre para su archivo que incluya *$number*, por ejemplo, `modelo_rb_$number`.
+
+    Chimera automáticamente va a guardar el modelo 0 en el archivo `modelo_rb_0.pdb`, el modelo 1 en el archivo `modelo_rb_1.pdb` ya que reemplaza `$number` con el número de modelo.
+
+* En **Save models** asegúrese de tener todos los modelos que quiere guardar como pdb seleccionados.
+
+* En **Save multiple models in** asegúrese de seleccionar **multiple files** para tener un archivo por cada modelo.
+
+* Verifique que en su carpeta se hayan guardado los 5 modelos en formato PDB.
+
+* Abra R Studio.
 
     ``` R
-    # SCRIPT CORREGIDO
+    # SCRIPT CORREGIDO PARA LEER ARCHIVOS PDB
+
+    # Las líneas que tienen # al inicio no son parte del script, son comentarios
+    # Cada línea la pueden correr usando ctrl+enter
+
+    # Instalo el paquete bio3d, esto es necesario correr la primera vez que usamos bio3d
     install.packages("bio3d")
+    
+    # Cargo el paquete bio3d
     library(bio3d)
 
-    directorio <- "/directorio/donde/estan/los/modelos"
+    # Creo una variable que se llama "directorio" donde voy a guardar la ruta completa a la carpeta
+    # que contiene los modelos, en R si usamos comillas y hacemos tab "busca" la estructura de directorios
+    # y la podemos ir completando hasta llegar a nuestra carpeta deseada.
+    # Esta variable es del tipo "char" o "string" es decir, contiene letras nada más, por eso va entre comillas.
 
-    archivos <- list.files(path = directorio,pattern = "_unrelaxed_",)
+    directorio <- "/directorio/donde/estan/los/modelos/" #
 
-    # Creo la ruta completa para mi archivo 1
+    # Creo una variable archivos donde voy a guardar utilizando la función list.files la lista de archivos que están en la carpeta que indiqué en directorio.
+    
+    # Esta variable es un "array" o "vector". Estas variables poseen un índice lo que me permite recorrerlas, por ejemplo:
+    # mi_lista_de_letras <- c("a", "b", "c")
+    # mi_lista_de_letras es una variable de tipo array que contiene en cada posicion un "string".
+    # En la posicion 1 está guardada "a", en la posicion 2 está guarda "b" etc
+    # si imprimo:
+    # mi_lista_de_letras[1]
+    # me devuelve "a"
+
+    archivos <- list.files(path = directorio,pattern = ".pdb")
+
+    # si imprimen archivos, les debe devolver la lista de archivos.
+    # para imprimir la variable pueden seleccionarla y apretar: ctrl+enter
+
+    # Creo la ruta completa para mi archivo 1 usando la funcion paste para "pegar" directorio con lo que está guardado en archivos[1]
+
     miarchivo <- paste(directorio,archivos[1],sep="")
 
-    # Leo el pdb usando la función read.pdb de la libraría bio3d
+    # Leo el pdb usando la función read.pdb de la librería bio3d
     mipdb <- read.pdb(file = miarchivo)
 
     # Creo una tabla con los datos de interés: el nro de residuo y el valor de plddt almacenado en el campo de b-factors y correspondiendo únicamente a los carbonos alpha.
+    # Para esto creamos la variable "datos" donde guardamos la tabla que en R se llama data.frame
+
+    # En: mipdb$atom está guarda una tabla que corresponde a la estructura de archivo del PDB.
+    # Pueden imprimirla por consola seleccionandola y haciendo ctrl+enter
+
+    # En: mipdb$calpha hay valores booleanos, es decir, son TRUE o FALSE. Indican si la línea del PDB que estoy mirando es un Carbono alpha o no.
+    
+    # En: la columna "resno" se guarda el número de residuo
+    # En: la columna "b" se guardan en general los b-factors. En este caso están guardados los valores de pLDDT. 
+
     datos <- data.frame(Residue = mipdb$atom[mipdb$calpha,"resno"],
                         Rank_1 = mipdb$atom[mipdb$calpha,"b"])
 
-    # uso un ciclo for para iterar sobre mi vector donde están guardados los nombres de los archivos y los guardo en distintas columnas de mi tabla datos.
+    # uso un ciclo for para iterar sobre mi vector donde están guardados los nombres de los archivos y los guardo en distintas columnas de mi tabla datos. Brevemente, para los modelos 2 a 4 voy a ir leyendo los archivos correspondientes y haciendo lo mismo que hicimos para el modelo 1.
+
     for (i in 2:length(archivos)){
         miarchivo2 <- paste(directorio,archivos[i],sep="")
         mipdb2 <- read.pdb(miarchivo2)
@@ -466,7 +521,8 @@ LAEMTSTRTRMQKQKMNDSMDTSNKEEK
     colores <- c("red","blue","purple","green","orange")
     
     # creo el nombre del archivo que va a guardar mi plot.
-    fileOUT <- paste(directorio,"E7_Monomero.png",sep="")
+    # noten que lo va a guardar en el mismo directorio donde están guardados los modelos
+    fileOUT <- paste(directorio,"elijo_nombre_de_archivo.png",sep="")
 
     # creo el dispositivo png
     png(filename = fileOUT, width=20,height=10,units = "cm",res=150)
@@ -483,8 +539,9 @@ LAEMTSTRTRMQKQKMNDSMDTSNKEEK
         col = colores[1],
         xaxt='n',yaxt='n')
 
-    # modifico los ejes x (1) e y (2)
-    axis(side = 1, at = c(1,seq(5,100,by=5)),lwd=0,lwd.ticks = 1)
+    # modifico el EJE X
+    axis(side = 1, at = c(1,seq(5,nrow(datos),by=5)),lwd=0,lwd.ticks = 1)
+    # modifico el EJE Y
     axis(side = 2, at = seq(5,100,by=5),lwd=0,lwd.ticks = 1)
 
     # ploteo los valores de los otros modelos que están guardados en las columnas: 3,4,5,6
@@ -499,7 +556,7 @@ LAEMTSTRTRMQKQKMNDSMDTSNKEEK
 
     box(lwd=3) # creo un box en el plot
 
-    dev.off() # cierro el dispositivo png
+    dev.off() # cierro el dispositivo png (si no corren esta línea no van a tener ningún gráfico)
     ```
 
 
