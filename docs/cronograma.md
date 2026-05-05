@@ -27,17 +27,17 @@ A definir próximamente !
 | Martes, 28/04/2026    | 9 - 13 hs   	| Práctico      | [TP3a. Modelado estructural de Proteínas](/estructural/practicos/modelado_estructural_1) | J. Glavina |
 | Jueves, 30/04/2026    | 9 - 13 hs	    | Práctico      | [TP3b. Modelado utilizando AlphaFold](/estructural/practicos/modelado_estructural_2)   | M. Didier Garnham |
 | Martes, 05/05/2026    | 9 - 13 hs     | Teórica       | T4. Interacciones proteína-proteína                  | L.Chemes |
-| Jueves, 07/05/2026    | 9 - 13 hs	    | Práctico      | TP4. Interacciones proteína-proteína| J. Glavina |
+| Jueves, 07/05/2026    | 9 - 13 hs	    | Práctico      | TP4. Interacciones proteína-proteína| M. Didier Garnham |
 | Martes, 12/05/2026    | 9 - 13 hs	    | Teórica       | T5. Proteínas desordenadas y predicción de desorden    | L. Chemes |
-| Jueves, 14/05/2026    | 9 - 13 hs     | Práctico      | TP5. Predicción de desorden y Bases de Datos         | J. Glavina |
+| Jueves, 14/05/2026    | 9 - 13 hs     | Práctico      | TP5. Predicción de desorden y Bases de Datos         | G. Romer |
 | Martes, 19/05/2026	  | 9 - 13 hs     | Teórica       | T6. Motivos Lineales: Identificación en secuencia | L. Chemes |
 | Jueves, 21/05/2026    | 9 - 13 hs	    | Práctico      | TP6. Motivos Lineales                        | J. Glavina |
 | Martes, 26/05/2026	  | 9 - 13 hs	    | Teórica       | T7. Diseño de Proteínas | L. Chemes |
-| Jueves, 28/05/2026    | 9 - 13 hs	    | Práctico      | TP7. Diseño de Proteínas  | J. Glavina |
-| Martes, 02/06/2026   	| 9 - 13 hs	    | | Evaluación   | L. Chemes |
+| Jueves, 28/05/2026    | 9 - 13 hs	    | Práctico      | TP7. Diseño de Proteínas  | M. Didier Garnham |
+| Martes, 02/06/2026   	| 9 - 13 hs	    | | Presentación Oral (Asistencia Obligatoria)   | L. Chemes |
 | Jueves, 04/06/2026    | 9 - 13 hs	    | Práctico      | TP9. Trabajo Práctico Integrador  | J. Glavina   |
-| Martes, 09/06/2026	  | 9 - 13 hs	    |  | Evaluación  | L. Chemes  |
-| Jueves, 11/06/2026	  | 9 - 13 hs	    |  | Evaluación  | L. Chemes  |
+| Martes, 09/06/2026	  | 9 - 13 hs	    |  | Presentación Oral (Asistencia Obligatoria)  | L. Chemes  |
+| Jueves, 11/06/2026	  | 9 - 13 hs	    |  | Evaluación Escrita (Asistencia Obligatoria)  | L. Chemes  |
 <!-- 
 
 
