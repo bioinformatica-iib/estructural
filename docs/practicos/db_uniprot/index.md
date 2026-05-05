@@ -471,27 +471,34 @@ DeepTMHMM es una herramienta de predicción de hélices transmembrana basada en 
 ## TMHMM - Ejercicios
 
 ### Ejercicio 1. Bacteriorodopsina.
+
 La interfaz de [TMHMM Server 2.0](https://services.healthtech.dtu.dk/services/TMHMM-2.0/) es simple. Se usa la caja de búsqueda en la página principal para correr la predicción a partir de una secuencia.
+
 1. Ingresar la secuencia de la proteína bacteriorodopsina que se encuentra a continuación para realizar la búsqueda en TMHMM. Usar el formato de salida por defecto (‘Extensive, with graphics’) para obtener resultados más descriptivos.
 
 
-    >sp|P02945|BACR_HALSA Bacteriorhodopsin OS=Halobacterium salinarum
-    MLELLPTAVEGVSQAQITGRPEWIWLALGTALMGLGTLYFLVKGMGVSDPDAKKFYAITT
-    LVPAIAFTMYLSMLLGYGLTMVPFGGEQNPIYWARYADWLFTTPLLLLDLALLVDADQGT
-    ILALVGADGIMIGTGLVGALTKVYSYRFVWWAISTAAMLYILYVLFFGFTSKAESMRPEV
-    ASTFKVLRNVTVVLWSAYPVVWLIGSEGAGIVPLNIETLLFMVLDVSAKVGFGLILLRSR
-    AIFGEAEAPEPSAGDGAAATSD
+        >sp|P02945|BACR_HALSA Bacteriorhodopsin OS=Halobacterium salinarum
+        MLELLPTAVEGVSQAQITGRPEWIWLALGTALMGLGTLYFLVKGMGVSDPDAKKFYAITT
+        LVPAIAFTMYLSMLLGYGLTMVPFGGEQNPIYWARYADWLFTTPLLLLDLALLVDADQGT
+        ILALVGADGIMIGTGLVGALTKVYSYRFVWWAISTAAMLYILYVLFFGFTSKAESMRPEV
+        ASTFKVLRNVTVVLWSAYPVVWLIGSEGAGIVPLNIETLLFMVLDVSAKVGFGLILLRSR
+        AIFGEAEAPEPSAGDGAAATSD
 
 
 2. Inspeccionar los resultados de la búsqueda. ¿Cuántas hélices transmembrana se encontraron?
+
 3. Entre los estadísticos se encuentra *Exp number of AAs in TMHs*. Este es el número esperado de aminoácidos en hélices transmembrana según este HMM como método de predicción. Cuando este número es mayor que 18, la proteína es probablemente una proteína transmembrana. ¿Es la bacteriorodopsina una proteína transmembrana?
+
 4. Otro estadístico es *Exp number, first 60 AAs*. Este valor es el mismo que el anterior pero limitado a los primeros 60 aminoácidos. Si este estadístico no posee un valor bajo, es decir de unos pocos residuos, entonces puede llegar a ocurrir que una hélice transmembrana predicha en la región N-terminal sea en realidad un péptido señal.
 
     Se pueden utilizar otras herramientas dedicadas a la predicción de péptidos señal, como [SignalP](https://services.healthtech.dtu.dk/service.php?SignalP-5.0). sabiendo que Halobacterium es una Archea, ¿SignalP predice el N-terminal como un péptido señal?
 
-5. En el gráfico, los bloques rojos corresponden a hélices transmembrana, las líneas azules indican regiones en el interior y los segmentos violetas corresponden a regiones en el exterior. Observando el gráfico, ¿puede haber otra hélice transmembrana que el modelo esté descartando?
+5. En el gráfico, los bloques violetas corresponden a hélices transmembrana, las líneas azules indican regiones en el interior y los segmentos naranjas corresponden a regiones en el exterior. Observando el gráfico, ¿puede haber otra hélice transmembrana que el modelo esté descartando?
+
 6. ¿Cuántos pasos transmembrana tienen las Rodopsinas? En base a las herramientas aprendidas en este trabajo práctico ¿Donde se puede encontrar esta información? (Pista: Está el Accession number de esta proteína!).
+
 7. Realizar la misma búsqueda utilizando DeepTMHMM. ¿Cuántas hélices transmembrana predice esta herramienta? ¿Coinciden con las predicciones de TMHMM?
+
 
 ## InterPro - Ejercicios Adicionales
 
