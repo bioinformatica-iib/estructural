@@ -26,7 +26,7 @@ A definir próximamente !
 | Jueves, 23/04/2026  	| 9 - 13 hs	    | Teórica       | [T3. Predicción estructural de Proteínas](/estructural/teoricas/teorica3/)                                                        | L. Chemes |
 | Martes, 28/04/2026    | 9 - 13 hs   	| Práctico      | [TP3a. Modelado estructural de Proteínas](/estructural/practicos/modelado_estructural_1) | J. Glavina |
 | Jueves, 30/04/2026    | 9 - 13 hs	    | Práctico      | [TP3b. Modelado utilizando AlphaFold](/estructural/practicos/modelado_estructural_2)   | M. Didier Garnham |
-| Martes, 05/05/2026    | 9 - 13 hs     | Teórica       | T4. Interacciones proteína-proteína                  | L.Chemes |
+| Martes, 05/05/2026    | 9 - 13 hs     | Teórica       | [T4. Interacciones proteína-proteína](/estructural/teoricas/teorica4/)                  | L.Chemes |
 | Jueves, 07/05/2026    | 9 - 13 hs	    | Práctico      | TP4. Interacciones proteína-proteína| M. Didier Garnham |
 | Martes, 12/05/2026    | 9 - 13 hs	    | Teórica       | T5. Proteínas desordenadas y predicción de desorden    | L. Chemes |
 | Jueves, 14/05/2026    | 9 - 13 hs     | Práctico      | TP5. Predicción de desorden y Bases de Datos         | G. Romer |
