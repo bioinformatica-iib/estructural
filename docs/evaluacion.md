@@ -71,7 +71,11 @@ Se evaluará mediante la presentación por parte del grupo de:
 4. La presentación del trabajo realizando una evaluación crítica de los resultados (alcances y limitaciones, críticas),
 5. Conclusiones generales sobre los alcances y limitaciones del estudio.
 
+[:fontawesome-solid-download: Listado de papers](https://docs.google.com/document/d/1_6tIquTHHNu8lzzzcC3t1NaUkCTli3S5Gzk62TTkzvI/edit?usp=sharing){ .md-button .md-button--primary }
+
 ### Detalles de la presentación (Ambas modalidades)
+
+[:simple-googleforms: Inscripcion Presentación Oral](https://forms.gle/66fWbnRqCbH88dvH7){ .md-button .md-button--primary }
 
 * Presentación de 10 minutos con 5 minutos de preguntas y respuestas.
 
