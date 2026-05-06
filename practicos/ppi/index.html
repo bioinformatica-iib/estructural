@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="es" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="es" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -15,19 +12,22 @@
       
       
       
+        
+      
+      
       <link rel="icon" href="../../img/logo-unsam-negro.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>TP 5. Interacciones proteína-proteína - Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas</title>
+        <title>TP 4. Interacciones proteína-proteína - Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -40,8 +40,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Cabin";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -54,17 +54,17 @@
 
     
     
-    
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tp-5-interacciones-proteina-proteina" class="md-skip">
+        <a href="#tp-4-interacciones-proteina-proteina" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -104,7 +104,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TP 5. Interacciones proteína-proteína
+              TP 4. Interacciones proteína-proteína
             
           </span>
         </div>
@@ -129,20 +129,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue" aria-label="Cambiar a modo oscuro" type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue" aria-label="Cambiar a modo claro" type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
       </label>
     
   
@@ -158,29 +158,29 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Buscar">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
           </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -188,7 +188,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Inicializando búsqueda
@@ -400,7 +400,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -419,7 +419,7 @@
     Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas
   </label>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
@@ -433,9 +433,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Inicio
+  
+
     
   </span>
+  
   
 
       </a>
@@ -455,9 +460,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Acerca de
+  
+
     
   </span>
+  
   
 
       </a>
@@ -477,9 +487,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Costos e Inscripción
+  
+
     
   </span>
+  
   
 
       </a>
@@ -499,9 +514,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Contenidos
+  
+
     
   </span>
+  
   
 
       </a>
@@ -521,9 +541,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Cronograma
+  
+
     
   </span>
+  
   
 
       </a>
@@ -543,9 +568,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Docentes
+  
+
     
   </span>
+  
   
 
       </a>
@@ -575,7 +605,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7">
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -583,9 +613,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Teóricas
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -594,9 +629,13 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            Teóricas
+            
+  
+    Teóricas
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -610,9 +649,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Inicio
+  
+
     
   </span>
+  
   
 
       </a>
@@ -633,9 +677,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Teórica 1
+  
+
     
   </span>
+  
   
 
       </a>
@@ -656,9 +705,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Teórica 2
+  
+
     
   </span>
+  
   
 
       </a>
@@ -679,9 +733,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Teórica 3
+  
+
     
   </span>
+  
   
 
       </a>
@@ -702,9 +761,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Teórica 4
+  
+
     
   </span>
+  
   
 
       </a>
@@ -742,7 +806,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8">
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -750,9 +814,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Prácticos
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -761,9 +830,13 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Prácticos
+            
+  
+    Prácticos
+  
+
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
                 
@@ -777,9 +850,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Inicio
+  
+
     
   </span>
+  
   
 
       </a>
@@ -800,9 +878,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     TP1 - Bases de Datos
+  
+
     
   </span>
+  
   
 
       </a>
@@ -823,9 +906,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     TP2 - Chimera
+  
+
     
   </span>
+  
   
 
       </a>
@@ -846,9 +934,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     TP3a - Predicción Estructural (A)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -869,9 +962,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     TP3b - Predicción Estructural (B)
+  
+
     
   </span>
+  
   
 
       </a>
@@ -899,9 +997,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Como llegar
+  
+
     
   </span>
+  
   
 
       </a>
@@ -917,7 +1020,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -935,12 +1038,14 @@
       <span class="md-nav__icon md-icon"></span>
       Contenidos
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#recursos-online" class="md-nav__link">
     <span class="md-ellipsis">
-      Recursos Online
+      
+        Recursos Online
+      
     </span>
   </a>
   
@@ -949,124 +1054,108 @@
         <li class="md-nav__item">
   <a href="#objetivos" class="md-nav__link">
     <span class="md-ellipsis">
-      Objetivos
+      
+        Objetivos
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#ejercicio-1-analisis-de-interacciones-moleculares-en-el-complejo-rbc-e2f1-dp1" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducción
+      
+        Ejercicio 1: Análisis de interacciones moleculares en el complejo RbC-E2F1-DP1
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#intact" class="md-nav__link">
+  <a href="#seleccionar-phe845-de-rbc" class="md-nav__link">
     <span class="md-ellipsis">
-      IntAct
+      
+        Seleccionar Phe845 de RbC
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#intact-ejercicios" class="md-nav__link">
+  <a href="#encontrar-todos-los-residuos-de-e2fdp-que-estan-a-menos-de-4-a-de-phe845" class="md-nav__link">
     <span class="md-ellipsis">
-      IntAct - Ejercicios
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="IntAct - Ejercicios">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-1-interacciones-de-la-proteina-retinoblastoma-rb" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 1. Interacciones de la Proteína Retinoblastoma (Rb)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#string" class="md-nav__link">
-    <span class="md-ellipsis">
-      STRING
+        Encontrar todos los residuos de E2F/DP que están a menos de 4 Å de Phe845
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#string-ejercicios" class="md-nav__link">
+  <a href="#aislar-visualmente-los-residuos-seleccionados" class="md-nav__link">
     <span class="md-ellipsis">
-      STRING - Ejercicios
+      
+        Aislar visualmente los residuos seleccionados
+      
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="STRING - Ejercicios">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-1-interacciones-de-la-proteina-retinoblastoma-rb_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 1. Interacciones de la Proteína Retinoblastoma (Rb)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicios" class="md-nav__link">
+  <a href="#colorear-por-hidrofobicidad-para-identificar-residuos-hidrofobicos-vs-polares" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicios
+      
+        Colorear por hidrofobicidad para identificar residuos hidrofóbicos vs. polares
+      
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Ejercicios">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-1-interacciones-de-la-proteina-spike-de-sars-cov2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 1. Interacciones de la Proteína Spike de SARS-COV2
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-2-analisis-de-interaccion-rbd-ace2-reconocimiento-de-superficie-de-contacto" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 2. Análisis de interacción RBD-ACE2: Reconocimiento de superficie de Contacto
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#otros-recursos" class="md-nav__link">
+  <a href="#identificar-los-residuos-de-e2fdp-que-estan-en-contacto" class="md-nav__link">
     <span class="md-ellipsis">
-      Otros recursos
+      
+        Identificar los residuos de E2F/DP que están en contacto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buscar-puentes-de-hidrogeno-entre-phe845-y-esos-residuos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buscar puentes de hidrógeno entre Phe845 y esos residuos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completar-la-tabla-para-phe845" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completar la tabla para Phe845
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repetir-el-procedimiento-para-uno-de-otros-tres-residuos-de-la-helice-rh1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repetir el procedimiento para uno de otros tres residuos de la hélice rH1
+      
     </span>
   </a>
   
@@ -1082,26 +1171,27 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
 
-<div><h1 id="tp-5-interacciones-proteina-proteina" markdown="markdown"><strong>TP 5.</strong> Interacciones proteína-proteína</h1>
-<h2 id="recursos-online">Recursos Online</h2>
+<div><h1 id="tp-4-interacciones-proteina-proteina" markdown="markdown"><strong>TP 4.</strong> Interacciones proteína-proteína</h1>
+<h3 id="recursos-online">Recursos Online</h3>
 <ul>
+<li>AlphaFold Server: <a href="https://alphafoldserver.com/">https://alphafoldserver.com/</a></li>
 <li>Intact: <a href="https://www.ebi.ac.uk/intact/home">https://www.ebi.ac.uk/intact/home</a></li>
-<li>STRING: <a href="https://string-db.org/">https://string-db.org/</a></li>
-<li>KEGG. <a href="https://www.kegg.jp/kegg/pathway.html">https://www.kegg.jp/kegg/pathway.html</a></li>
+<li>Boltz-1 <a href="https://github.com/jwohlwend/boltz">https://github.com/jwohlwend/boltz</a></li>
 </ul>
-<h2 id="objetivos">Objetivos</h2>
+<h3 id="objetivos">Objetivos</h3>
 <ul>
 <li>Familiarizarse con el uso de la base de datos de interacciones proteína-proteína</li>
 <li>Entender los distintos tipos de evidencia experimental, o no experimental, que se puede tener para el estudio de interacciones proteína-proteína</li>
 <li>Entender los distintos tipos de interacciones proteína-proteína que se pueden detectar experimentalmente</li>
 </ul>
-<h2 id="introduccion">Introducción</h2>
+<h2 id="ejercicio-1-analisis-de-interacciones-moleculares-en-el-complejo-rbc-e2f1-dp1">Ejercicio 1: Análisis de interacciones moleculares en el complejo RbC-E2F1-DP1</h2>
 <p>Las interacciones proteína-proteína son esenciales en casi todos los procesos celulares, por lo tanto es uno de los campos más estudiados ya que su entendimiento es crucial para comprender la fisiología celular en estados normales o anormales (como enfermedades) y para el desarrollo de drogas. Además, el conocimiento de las distintas interacciones permitiría identificar posibles roles funcionales para proteínas aún no caracterizadas.</p>
 <p>Las interacciones proteína-proteína son contactos físicos que ocurren entre determinadas proteínas. Estos contactos son específicos, ocurren entre regiones de interacción de las proteínas, definen una función específica y pueden ser transiente o estables.</p>
 <p>Una interacción estable define un complejo proteico, mientras que una interacción transiente es una interacción breve que puede llevar a un cambio mayor y son la parte dinámica del interactoma celular.</p>
@@ -1114,10 +1204,10 @@
 <li><strong>Bases de datos secundarias o meta-bases de datos:</strong> Integran datos anotados (o curados) de bases de datos primarias en una base de datos. Por ejemplo, APID y PINA.</li>
 <li><strong>Bases de datos predictivas:</strong> Combinan los datos experimentales de las bases de datos primarias con predicciones computacionales. Por ejemplo, STRING y UniHI.</li>
 </ul>
-<h2 id="intact">IntAct</h2>
+<h4 id="intact">IntAct</h4>
 <p>IntAct es una base de datos pública de interacciones moleculares. Es mantenida por un grupo de curadores y desarrolladores en el European Bioinformatics Institute (EMBL-EBI, Hinxton, UK) y es la base de datos más abarcativa de interacciones moleculares. Los datos de interacciones moleculares son curados a partir de la literatura. Si bien la mayoría de las interacciones almacenadas en IntAct son interacciones proteína-proteína, existen otras interacciones que involucran pequeños compuestos químicos o ácidos nucleicos. IntAct además es miembro del consorcio internacional de intercambio molecular (International Molecular Exchange Consortium, IMEx). El objetivo de este consorcio es unificar el esfuerzo de curación de los datos experimentales de interacciones moleculares.</p>
-<h2 id="intact-ejercicios">IntAct - Ejercicios</h2>
-<h3 id="ejercicio-1-interacciones-de-la-proteina-retinoblastoma-rb">Ejercicio 1. Interacciones de la Proteína Retinoblastoma (Rb)</h3>
+<p>En este ejercicio analizaremos la estructura cristalográfica <strong>2AZE</strong> (RbC-E2F1-DP1), publicada por <strong><a href="data/1-s2.0-S0092867405012316-main.pdf">Rubin et al. (Cell, 2005)</a></strong>. Además, compararemos estos contactos experimentales con los modelos generados por <strong>AlphaFold 3</strong> en la clase anterior.</p>
+<h4 id="busqueda-de-interacciones-en-intact">Búsqueda de interacciones en IntAct</h4>
 <ol>
 <li>
 <p>Busque en Intact la proteína retinoblastoma (Rb) humana usando su accession number (P06400).</p>
@@ -1153,9 +1243,9 @@
 <ul>
 <li>¿Hay muchos patógenos que interactúen con Rb?</li>
 </ul>
-<p>Seleccione interacciones que sean entre Rb y otra proteína Humana tildando la especie correspondiente: <em>Homo sapiens</em> y luego seleccionando que #sea <strong>Intra</strong> especie con el botón <em>Filter out cross-species interactions</em>.</p>
+<p>Seleccione interacciones que sean entre Rb y otra proteína Humana tildando la especie correspondiente: <em>Homo sapiens</em> y luego seleccionando que ##sea <strong>Intra</strong> especie con el botón <em>Filter out cross-species interactions</em>.</p>
 <p></p><p style="text-align:center">
-<a class="glightbox" href="./img/Intact_fig2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/Intact_fig2.png" alt="" style="max-width:80%"></a>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./img/Intact_fig2.png" data-desc-position="bottom"><img src="./img/Intact_fig2.png" alt="" style="max-width:80%"></a>
 </p>
 </li>
 <li>
@@ -1215,250 +1305,744 @@
 </ul>
 </li>
 </ol>
-<h2 id="string">STRING</h2>
-<p>La base de datos STRING contiene datos de interacciones proteína-proteína conocidos y predichos. Los datos derivan de experimentos high-throughput, datos de co-expresión, literatura y contexto genómico. Abarca más de 5 millones de proteínas de más de 1100 organismos. </p>
-<h2 id="string-ejercicios">STRING - Ejercicios</h2>
-<h3 id="ejercicio-1-interacciones-de-la-proteina-retinoblastoma-rb_1">Ejercicio 1. Interacciones de la Proteína Retinoblastoma (Rb)</h3>
+<h4 id="visualizacion-de-la-estructura-experimental-2aze-en-chimera">Visualización de la estructura experimental 2AZE en Chimera</h4>
+<p>La estructura <strong>2AZE</strong> contiene:</p>
+<ul>
+<li>
+<p><strong>Cadena C</strong>: RbC (residuos ~829-874)</p>
+</li>
+<li>
+<p><strong>Cadena A</strong>: E2F1 </p>
+</li>
+<li>
+<p><strong>Cadena B</strong>: DP1 </p>
+</li>
+</ul>
+<h6 id="pasos">Pasos</h6>
 <ol>
 <li>
-<p>En STRING se puede realizar una búsqueda por el o los nombres de la proteína, o el identificador, múltiples proteínas, múltiples secuencias, organismos o familias de proteínas.</p>
-<p>Haga click en Search y en protein name e ingrese “retinoblastoma”</p>
-<ul>
-<li>Observe el resultado. ¿Por qué hay más de un resultado? ¿Cuál es el que deseamos?</li>
-</ul>
-<p>En el campo <em>protein name</em> también puede ingresar el accession number: P06400.</p>
-<p>El número de interactores que devuelve la red puede cambiarse en la pestaña <em>Settings</em>, por defecto está elegido 10. Por lo cual devuelve los 10 interactores con mejor puntuación en STRING. La red también puede expandirse utilizando los botones <em>more/less</em> para obtener una segunda capa de interacción con proteínas que conectan con la primera capa aunque no necesariamente con Rb.</p>
-<ul>
-<li>Presione <em>More</em>, ¿observa algún interactor que no interactúe con Rb?</li>
-</ul>
-<details class="info">
-<summary>Nota en score de STRING</summary>
-<p>Puede haber uno o más scores en STRING para cada interacción proteína-proteína.</p>
-<p>Estos scores no se relacionan con la fuerza o especificidad de la interacción. Son indicadores de confianza de STRING. Es decir, dada la evidencia disponible, cuán probable es que esa interacción sea verdadera.</p>
-<p>Un score de 0.5 indicaría que una de cada dos interacciones es errónea, o sea, sería un falso positivo.</p>
-<p>Para la mayoría de los tipos de evidencia hay dos scores:</p>
-<ul>
-<li>
-<p><strong>normal score</strong></p>
+<p><strong>Descargar 2AZE</strong> desde RCSB PDB:<br>
+<a href="https://www.rcsb.org/structure/2AZE">https://www.rcsb.org/structure/2AZE</a>  </p>
 </li>
 <li>
-<p><strong>transferred score:</strong> Este score se calcula a partir de datos que no provienen del organismo de interés si no de otro organismo y luego es <em>transferido</em> vía homología.</p>
-</li>
-</ul>
-</details>
+<p><strong>Abrir Chimera</strong> y cargar el archivo:<br>
+<code>File → Open → 2AZE.cif</code></p>
 </li>
 <li>
-<p>Presione en <em>Less</em>, y haga click en E2F4 y observe la información disponible. Haga click en el edge que conecta E2F4 y RB1:</p>
-<ul>
-<li>De los siete tipos de origen de evidencia ¿De dónde proviene la evidencia de interacción entre estas dos proteínas?</li>
-</ul>
+<p><strong>Colorear por cadena</strong> para facilitar la identificación:
+   - Cadena A (E2F1): 
+   <code>Select → Chain → A</code>
+   <code>Actions → Color → red</code>
+   <code>Actions → Ribbon → Show</code></p>
 </li>
-<li>
-<p>Vaya a <em>Legend</em> y responda:</p>
-<ul>
-<li>¿Todas las interacciones entre las proteínas de esta red tienen evidencia <strong>experimental</strong> asociada?</li>
-</ul>
-</li>
-<li>
-<p>¿Se encuentran los interactores con mayor score detectados en IntAct?</p>
-</li>
-<li>
-<p>Vaya a <em>Analysis</em>. Luego, Vaya a la sección <em>KEGG Pathways</em> de la tabla y asegúrese que esté ordenada por <em>strength</em> de mayor a menor. Luego, haga click en el nodo <strong>Rb1</strong> de la red de interacción y luego seleccione <em>Show this node's terms in the analysis table</em>. Observe que en la tabla se resaltan los términos enriquecidos en cada base de datos relacionados con Rb.</p>
-<ul>
-<li>¿A qué corresponden las primeras 10 líneas de KEGG?</li>
-</ul>
-<details class="info">
-<summary>KEGG PATHWAY</summary>
-<p><em>KEGG (Kyoto Encyclopedia of Genes and Genomes)</em> es una colección de bases de datos. </p>
+</ol>
 <ul>
 <li>
-<p>KEGG Pathway es una de las base de datos de KEGG que almacena mapas de rutas para las funciones celulares y de organismos.</p>
+<p>Cadena B (DP1): 
+   <code>Select → Chain → B</code>
+   <code>Actions → Color → blue</code>
+   <code>Actions → Ribbon → Show</code></p>
 </li>
 <li>
-<p>El <em>strength</em> (como dice en <em>explain columns</em> en la parte superior de la primera tabla) es claculado como Log<sub>10</sub>(observado / esperado).</p>
+<p>Cadena C (RbC): 
+   <code>Select → Chain → C</code>
+   <code>Actions → Color → orange</code>
+   <code>Actions → Ribbon → Show</code></p>
 </li>
 </ul>
-<p>Esta medida describe cuan grande es el efecto de enriquecimiento. Es la relación entre:</p>
-<pre><code>1. El número de proteínas en la red que están anotadas con un término.
-2. El número de proteínas que se espera que están anotadas con ese término en una red *random* con el mismo tamaño.
+<h4 id="analisis-de-puentes-de-hidrogeno-en-2aze">Análisis de puentes de hidrógeno en 2AZE</h4>
+<p>Según el paper (Figura 4A y texto), RbC establece puentes de hidrógeno clave con DP1 y posiblemente con E2F1. Vamos a identificarlos en Chimera.</p>
+<h6 id="pasos_1">Pasos</h6>
+<ol>
+<li>
+<p>Primero, seleccionamos RbC: <code>Select → Chain → C</code>  </p>
+</li>
+<li>
+<p><strong>Calcular puentes de hidrógeno</strong> en la selección actual:<br>
+<code>Tools → Structure Analysis → FindHBonds</code></p>
+</li>
+</ol>
+<ul>
+<li>Seleccionar <code>Find these bonds: both</code></li>
+<li>Seleccionar <code>Relax H-Bonds</code>. Permitir relajación de 0.5 Å y 60°</li>
+<li>Seleccionar <code>Only find H-bonds → with al least one end selected</code> </li>
+<li>Seleccionar <code>Include intra-molecule H-bonds</code></li>
+<li>Seleccionar <code>Include intra-residue H-bonds</code></li>
+<li>Seleccionar <code>Write information to ReplyLog</code></li>
+<li>Click en <strong>Apply</strong></li>
+</ul>
+<ol start="3">
+<li>
+<p><strong>Analizar los resultados</strong>:
+   - En la pantalla 3D aparecerán líneas punteadas verdes.
+   - Abrir el <strong>Reply Log</strong>: <code>Favorites → ReplyLog</code></p>
+</li>
+<li>
+<p>Ingresar a la publicación <strong><a href="data/1-s2.0-S0092867405012316-main.pdf">Rubin et al. (Cell, 2005)</a></strong>
+   - Leer la sección "RbCcore-E2F1CM-DP1CM Interactions"
+   - ¿Que cantidad de puentes de hidrógeno que conectan RbC rS1 y E2F eS2 según la publicación?. ¿Esta cantidad coincide con lo encontrado en Chimera?
+   - Seleccione los residuos responsables de la interacción según el paper usando <code>select #0:xxx-xxx.C</code> (Reemplazando xxx por los residuos mencionados en el paper en la se)
+   - Calcule los puentes de hidrógenos de la selección.
+   - ¿El núevo número obtenido corresponde con lo indicado en la publicación?</p>
+</li>
+</ol>
+<h4 id="analisis-de-la-interfaz-hidrofobica">Análisis de la interfaz hidrofóbica</h4>
+<p>El paper menciona que la hélice <strong>rH1</strong> de RbC (residuos ~845-852) hace contactos hidrofóbicos con el <strong>β-sándwich</strong> expuesto de E2F1-DP1. Estos contactos son críticos para la afinidad.</p>
+<h2 id="seleccionar-phe845-de-rbc">Seleccionar Phe845 de RbC</h2>
+<p>En la línea de comandos (<code>Favorites → Command Line</code>) escribí:</p>
+<pre><code>`select #0:845.C`
 </code></pre>
-</details>
+<h2 id="encontrar-todos-los-residuos-de-e2fdp-que-estan-a-menos-de-4-a-de-phe845">Encontrar todos los residuos de E2F/DP que están a menos de 4 Å de Phe845</h2>
+<p>Con Phe845 seleccionado, ingresá en la línea de comandos:</p>
+<pre><code>`select sel z&lt;4`.
+</code></pre>
+<p>Ahora Chimera selecciona Phe845 <strong>y</strong> todos los átomos de cadenas A/B a menos de 4 Å.</p>
+<h2 id="aislar-visualmente-los-residuos-seleccionados">Aislar visualmente los residuos seleccionados</h2>
+<ul>
+<li><code>Select → Invert (all models)</code> (se selecciona todo lo que no es tu interfaz).</li>
+<li><code>Actions → Atoms/Bonds → Hide</code>.</li>
+<li><code>Actions → Ribbon → Hide</code>.</li>
+<li><code>Select → Invert (all models)</code> (vuelve a seleccionar solo Phe845 y sus vecinos).</li>
+</ul>
+<p>Verás únicamente los residuos involucrados en la zona de contacto.</p>
+<h2 id="colorear-por-hidrofobicidad-para-identificar-residuos-hidrofobicos-vs-polares">Colorear por hidrofobicidad para identificar residuos hidrofóbicos vs. polares</h2>
+<ul>
+<li><code>Tools → Depiction → Render by Attribute</code>.</li>
+<li><strong>Attribute of</strong>: <code>residues</code>.</li>
+<li><strong>Render attribute</strong>: <code>kdHydrophobicity</code>.</li>
+<li>Click en <strong>Apply</strong>.</li>
+</ul>
+<p><strong>Interpretación de colores:</strong>
+- <strong>Naranja / rojo</strong> → hidrofóbico (apolar).
+- <strong>Blanco / celeste</strong> → intermedio.
+- <strong>Azul</strong> → hidrofílico (polar).</p>
+<h2 id="identificar-los-residuos-de-e2fdp-que-estan-en-contacto">Identificar los residuos de E2F/DP que están en contacto</h2>
+<ul>
+<li>Abrí <code>En la sección inferior a la derecha → Inspect Selection</code> (lupa verde).</li>
+<li>Seleccioná  <strong>Residues</strong> y apretá <code>Write List</code>. Se va a abrir una nueva pestaña y apretar <code>Log</code>.</li>
+<li>En el Reply Log mira el listado y anotá: número, nombre de tres letras y cadena.</li>
+<li>De los residuos correspondientes a la cadena no seleccion</li>
+<li>En la interfaz de Chimera anotar el color que ves (naranja o azul) para cada residuo.</li>
+</ul>
+<p>Ejemplo: <code>ILE 262.A</code> (naranja), <code>ASP 295.A</code> (azul).</p>
+<h2 id="buscar-puentes-de-hidrogeno-entre-phe845-y-esos-residuos">Buscar puentes de hidrógeno entre Phe845 y esos residuos</h2>
+<ul>
+<li><code>Tools → Structure Analysis → FindHBonds</code>.</li>
+<li>Click en <strong>Apply</strong>.</li>
+</ul>
+<p>Observá líneas punteadas verdes en la pantalla. En el <code>Reply Log</code> (Favorites → Reply Log) aparece la lista detallada. Anotá si hay puentes de H con alguno de los residuos vecinos.</p>
+<h2 id="completar-la-tabla-para-phe845">Completar la tabla para Phe845</h2>
+<!--
+| Residuo RbC | Residuo E2F/DP (cadena) | Color (naranja/azul) | ¿Puente de H? | Distancia <4 Å | Tipo de interacción |
+|-------------|------------------------|----------------------|---------------|----------------|---------------------|
+| Phe845 (C)  | ILE 262.A              | naranja              | No            | Sí             | van der Waals hidrofóbica |
+| Phe845 (C)  | ILE 293.A              | naranja              | No            | Sí             | van der Waals hidrofóbica |
+| Phe845 (C)  | HIS 294.A              | azul                 | Verificar     | Sí             | polar (posible H-bond) |
+| Phe845 (C)  | ASP 295.A              | azul                 | Verificar     | Sí             | polar o iónica |
+-->
+
+<table>
+<thead>
+<tr>
+<th>Residuo RbC</th>
+<th>Residuo E2F/DP (cadena)</th>
+<th>Hidrofobicidad</th>
+<th>¿Puente de H?</th>
+<th>Distancia &lt;4 Å</th>
+<th>Tipo de interacción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phe845 (C)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Phe845 (C)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Phe845 (C)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Phe845 (C)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Criterio de tipo de interacción:</strong><br>
+Para decir que un par de residuos tienen fuerza de tipo Van der Waals se pueden usar los siguientes criterios: distancia &lt;4 Å + misma hidrofobicidad/hidrofilicidad + sin puente de H.  </p>
+<h2 id="repetir-el-procedimiento-para-uno-de-otros-tres-residuos-de-la-helice-rh1">Repetir el procedimiento para uno de otros tres residuos de la hélice rH1</h2>
+<ul>
+<li><strong>Ile848</strong> (seleccionar <code>#0:848.C</code>)</li>
+<li><strong>Met851</strong> (seleccionar <code>#0:851.C</code>)</li>
+<li><strong>Val852</strong> (seleccionar <code>#0:852.C</code>)</li>
+</ul>
+<h4 id="comparacion-con-el-modelo-de-alphafold-3">Comparación con el modelo de AlphaFold 3</h4>
+<p>Ustedes ya generaron en la clase anterior el modelo del complejo <strong>completo</strong> (Rb pocket + RbC + E2F1 + DP1) usando AlphaFold 3. Ahora van a comparar la predicción de AF3 con la estructura experimental 2AZE.</p>
+<h6 id="pasos_2">Pasos</h6>
+<ol>
+<li>Realizar el modelado de las regiones cristalizadas en 2AZE:</li>
+</ol>
+<p>Secuencias:
+</p><div class="highlight"><pre><span></span><code>&gt;2AZE_1|Chain A|Transcription factor Dp-1|Homo sapiens (9606)
+GEFAQECQNLEVERQRRLERIKQKQSQLQELILQQIAFKNLVQRNRHAEQQASRPPPPNSVIHLPFIIVNTSKKTVIDCSISNDKFEYLFNFDNTFEIHDDIEVLKRMGMACGLESGSCSAEDLKMARSLVPKALEPYVTEMAQGTVGGVFITTA
+
+&gt;2AZE_2|Chain B|Transcription factor E2F1|Homo sapiens (9606)
+GSHMGGRLEGLTQDLRQLQESEQQLDHLMNICTTQLRLLSEDTDSQRLAYVTCQDLRSIADPAEQMVMVIKAPPETQLQAVDSSENFQISLKSKQGPIDVFLCPEE
+
+&gt;2AZE_3|Chain C|Retinoblastoma-associated protein|Homo sapiens (9606)
+SRILVSIGESFGTSEKFQKINQMVCNSDRVLKRSAEGSNPPKPLKK
+</code></pre></div>
+<ol>
+<li>Ingresar a AlphaFold Server (https://alphafoldserver.com/).</li>
+<li>Crear un nuevo trabajo con tres entidades (cada una como “Protein”):
+   - <strong>Entity 3</strong>: secuencia de la cadena A (DP1)
+   - <strong>Entity 2</strong>: secuencia de la cadena B (E2F1)
+   - <strong>Entity 1</strong>: secuencia de la cadena C (RbC)</li>
+<li>Nombrar el trabajo como <code>2AZE_AF3</code>. </li>
+<li>Ejecutar y esperar a que terminen los 5 modelos.</li>
+<li>
+<p>Descargar el <code>.zip</code>, extraer el archivo <code>model_0.cif</code> (el mejor rankeado por ipTM/pTM).</p>
 </li>
 <li>
-<p>Elija los dos interactores de mayor score detectados en Intact y haga lo mismo.</p>
-<ul>
-<li>¿Cuáles son los KEGG pathways comunes a las tres proteínas?</li>
-</ul>
-</li>
-<li>
-<p>En la sección KEGG pathways haga click en el <strong>identificador</strong> que corresponde a Cell Cycle.</p>
-<ul>
-<li>¿Puede encontrar a Rb?</li>
-<li>¿Encuentra a los interactores con mayor evidencia?</li>
-<li>¿Puede nombrar al menos una enzima que fosforile a Rb y otra que la desfosforile?</li>
-</ul>
+<p>Abrir el modelado el Chimera y replicar el análisis anterior para evaluar la capacidad de Alphafold de modelar puentes de hidrógeno y contactos hidrofóbicos. </p>
 </li>
 </ol>
-<h2 id="ejercicios">Ejercicios</h2>
-<h3 id="ejercicio-1-interacciones-de-la-proteina-spike-de-sars-cov2">Ejercicio 1. Interacciones de la Proteína Spike de SARS-COV2</h3>
-<ol>
-<li>
-<p>Busque en IntAct las interacciónes que existen de la proteína Spike de SARS-COV2 (P0DTC2) con humanos (recuerde usar los filtros para ver interacciones sólo con humanos). </p>
-<p>A la izquierda de la red tilde la opción de agrupar por Species. </p>
-<ul>
-<li>¿Cuántas proteínas Spike observa en la red? </li>
-</ul>
-<p>Coloque el puntero sobre el nodo y encuentre los identificadores.</p>
-<ul>
-<li>¿Son los mismos?</li>
-</ul>
-</li>
-<li>
-<p>Haga clic en la que el identificador es: P0DTC2-PRO_0000449647, verá que la tabla en la parte inferior sólo muestra las interacciones relacionadas con esta proteína. Siga el link a Uniprot:</p>
-<ul>
-<li>¿A qué corresponde?</li>
-</ul>
-</li>
-<li>
-<p>Haga click en la que el identificador es: P59594. En la tabla haga click en el ícono que se encuentra en la primera columna. Se abrirá una nueva ventana con detalles de la interacción, que están detallados en la parte inferior.</p>
-<ul>
-<li>¿Por qué cree que se obtuvo esta proteína?</li>
-</ul>
-</li>
-<li>
-<p>¿Qué tipo de evidencia hay para las interacciones identificadas?</p>
-</li>
-<li>Destilde la opción <em>Expand</em>.<ul>
-<li>¿Cuales son las proteínas con más evidencia?</li>
-<li>¿Poseen evidencia estructural?</li>
-<li>¿Qué técnicas se utilizaron?</li>
-</ul>
-</li>
-</ol>
-<h3 id="ejercicio-2-analisis-de-interaccion-rbd-ace2-reconocimiento-de-superficie-de-contacto">Ejercicio 2. Análisis de interacción RBD-ACE2: Reconocimiento de superficie de Contacto</h3>
-<p>El objetivo de este ejercicio consiste en analizar la superficie de interacción entre RBD y ACE2. Se focalizará en la identificación de los residuos involucrados y en la determinación de la naturaleza de las interacciones. En particular se intentará establecer si existe algún contacto estrecho que estabilice la región RBM.</p>
-<ol>
-<li>
-<p>Abrir Chimera y abrir el archivo “6m0j.pdb” utilizando el atajo que se encuentra a la derecha de la ventana.</p>
-</li>
-<li>
-<p>Esconder todos los átomos y colorear la visualización “ribbon” de acuerdo a su estructura secundaria.</p>
-<p><em>Actions</em> → <em>Atoms/Bonds</em> → <em>hide</em></p>
-<p><em>Tools</em> → <em>Depiction</em> → <em>Color Secondary Structure</em> y <code>OK</code></p>
-</li>
-<li>
-<p>Recorrer la región de RBD que pudiera estar involucrada en la interacción con ACE2. La región RBM comprende los residuos Asn 437 y Tyr 508 de RBD. Marque esta región en el panel de secuencia.</p>
-<ul>
-<li>¿Qué tipos de estructura secundaria se encuentran en esta región de Spike?</li>
-<li>¿Cuál es la más abundante?</li>
-<li>¿Y en ACE2 cual es la estructura secundaria probablemente involucrada en la interacción? </li>
-</ul>
-</li>
-<li>
-<p>Se seleccionarán las regiones de ACE2 y RBD involucradas en la interacción. Para tal fin se utilizará la línea de comandos y a las selecciones se les asignarán los nombres “enACE2” y “enRBD” respectivamente.</p>
-<div class="highlight"><pre><span></span><code>select :19-46.a,75-84.a,324-331.a,352-359.a,388-393.a
+<p>*** Importante: Recordá que en el modelado los residuos comienzan en la posición 0, por lo que la numeración no será la misma que en la estructura cristalizada.***
+Por ejemplo select #0:845.C sería select #0:17.c</p>
+<p>Según tus observaciones:
+- ¿AF3 reproduce correctamente los puentes de H de backbone? (Responde: sí, parcialmente, o no, y justifica cuántos y cuáles).
+- ¿AF3 reproduce los contactos hidrofóbicos de la hélice rH1? (Responde: sí, en qué medida, y mencioná algún contacto que haya fallado).</p>
+<!--
+---
+
+## Ejercicio 2: Modelado y análisis de interacciones de c-Src quinasa con inhibidores
+
+c-Src es una tirosina quinasa no receptora que juega un papel central en la proliferación celular y está hiperactivada en múltiples cánceres (colón, mama, pulmón, páncreas). El dominio quinasa (SH1) presenta una estructura bilobulada típica:
+
+- **Lóbulo N-terminal**: contiene la bisagra (hinge region) donde se une el ATP (residuos clave: M344, E342).
+- **Lóbulo C-terminal**: contiene el loop de activación con el motivo DFG (D407, F408, G409).
+- **Gatekeeper residue (T341)**: controla el acceso al bolsillo hidrofóbico I; su mutación a Met o Ile causa resistencia a inhibidores como dasatinib.
+- **αC-hélice**: su desplazamiento (conformación CHO) estabiliza inhibidores tipo II.
+
+El inhibidor **dasatinib** (BMS-354825) es un inhibidor tipo I de alta potencia (IC50 = 0.5 nM) que se une a la conformación activa (DFG-in, αC-in). Forma tres puentes de H críticos:
+
+1. NH del tiazol con backbone O de M344
+2. N del tiazol con backbone N de M344
+3. Amida con T341 (gatekeeper)
+
+En este ejercicio, usaremos **Boltz** (herramienta de modelado de complejos proteína-ligando) para predecir estructuras de c-Src con inhibidores y evaluar el impacto de mutaciones.
+
+#### Recursos necesarios
+- PDB 3G5D (c-Src + dasatinib, referencia experimental)
+- PDB 2SRC (c-Src inactiva completa, multi-dominio)
+- PDB 2OIQ (c-Src + imatinib, conformación DFG-out)
+- PDB 2H8H (c-Src + saracatinib, tipo II)
+
+#### Búsqueda en IntAct de interacciones de c-Src con inhibidores
+
+###### Pasos
+
+1. Ingresar a IntAct: https://www.ebi.ac.uk/intact/
+2. Buscar "c-Src" AND "dasatinib"
+3. Buscar "SRC" AND "inhibitor"
+4. Explorar también la entrada del PDB 3G5D para ver interacciones anotadas.
+
+###### Responda
+
+a) ¿IntAct reporta interacciones directas entre c-Src y dasatinib? ¿Qué método experimental se usó (ITC, SPR, cristalografía)?
+
+b) ¿Qué otros inhibidores de c-Src aparecen en IntAct? (ej: bosutinib, saracatinib)
+
+c) En la estructura 3G5D, ¿qué residuos de c-Src están anotados como "binding site" para dasatinib?
+
+#### Modelado de c-Src wild type con Boltz
+
+###### Preparación de la secuencia y ligandos
+
+**Secuencia del dominio quinasa de c-Src humano (residuos 250-533)**: (completar con la secuencia FASTA provista por la cátedra)
+
+**Estructura química de dasatinib (SMILES)**: (completar)
+
+###### Configuración de Boltz
+
+Falta!
+
+###### Visualización en Chimera
+
+1. Descargar PDB 3G5D desde RCSB (estructura experimental c-Src + dasatinib).
+2. Abrir ambos modelos (experimental + predicciones Boltz) en Chimera.
+3. Alinear usando MatchMaker (referencia: 3G5D).
+4. Analizar.
+
+###### Responda
+
+a) ¿Boltz predice correctamente la orientación de dasatinib en el sitio ATP?
+
+b) ¿Los tres puentes de H reportados (con M344 y T341) se reproducen en el modelo?
+
+c) Calcule el RMSD de los átomos pesados de dasatinib entre el modelo y 3G5D. ¿Es menor a 1.5 Å?
+
+d) ¿Qué pLDDT (confianza local) tiene el loop de activación (residuos ~400-410) en el modelo?
+
+#### Modelado de c-Src con mutación T341M (gatekeeper resistente)
+
+La mutación **T341M** (treonina → metionina) aumenta el tamaño del gatekeeper, cerrando el acceso al bolsillo hidrofóbico I y generando resistencia a inhibidores tipo I como dasatinib y bosutinib.
+
+###### Pasos
+
+1. Modificar la secuencia de c-Src: cambiar el residuo en posición 341 de T a M.
+2. Crear nuevo archivo para la mutante con dasatinib.
+3. Ejecutar Boltz con la misma secuencia del ligando.
+4. Alinear el modelo mutante con 3G5D.
+
+###### Responda
+
+a) ¿Cómo se orienta la metionina 341? ¿Ocluye parcialmente el sitio de unión?
+
+b) ¿Se mantienen los tres puentes de H de dasatinib? Si no, ¿cuál se pierde?
+
+c) Según el paper (Sección 2.3, páginas 14-15), dasatinib pierde actividad contra T341M (EC50 > 10 μM). ¿Su modelo es consistente con este dato?
+
+d) Visualice la superficie de van der Waals del sitio activo. ¿Hay steric clash entre M341 y dasatinib?
+
+#### Modelado de c-Src + inhibidor tipo II (saracatinib o imatinib)
+
+Los inhibidores tipo II (ej: saracatinib, PDB 2H8H; o imatinib, PDB 2OIQ) se unen a la conformación inactiva (DFG-out), donde F408 se desplaza y se abre el **bolsillo DFG**.
+
+###### Pasos
+
+1. Seleccionar un inhibidor tipo II: saracatinib (AZD0530) o imatinib.
+2. Obtener SMILES desde PubChem.
+3. Modelar c-Src WT + inhibidor tipo II con Boltz.
+4. Comparar con la estructura experimental correspondiente (2H8H para saracatinib, 2OIQ para imatinib).
+
+###### Responda
+
+a) En el modelo tipo II, ¿observa el outward flip de F408 (DFG-out)? ¿Cómo lo identifica en Chimera?
+
+b) ¿Se forma el puente de H característico entre el inhibidor y D407 (backbone) y E313 (αC-hélice)?
+
+c) Compare el RMSD del modelo con la estructura experimental. ¿Boltz predice mejor la conformación tipo I o tipo II?
+
+#### Modelado con mutación en la tríada catalítica (D407A, F408A)
+
+La tríada **DFG** (D407-F408-G409) es esencial para la catálisis y para la unión de inhibidores tipo II. Mutaremos ambos residuos a alanina para ver el efecto.
+
+###### Pasos
+
+1. Crear secuencia mutante: cambiar D407 por A y F408 por A.
+2. Modelar c-Src_D407A_F408A + dasatinib (tipo I) y también + saracatinib (tipo II) si el tiempo lo permite.
+3. Comparar con los modelos WT.
+
+###### Responda
+
+a) ¿La mutación D407A/F408A afecta la unión de dasatinib? ¿Se pierden los puentes de H con M344?
+
+b) ¿Cómo se ve afectada la unión del inhibidor tipo II? ¿Se mantiene el puente de H con el backbone de D407 si D407 es ahora A?
+
+c) Según el paper (Tablas S3 y S4), la mutación del DFG pocket elimina la unión de imatinib y análogos. ¿Su modelo reproduce esto?
+
+d) ¿Qué diferencia observa en el pLDDT del loop de activación entre WT y mutante? ¿La mutación desestabiliza la región?
+
+## Ejercicios extra
+
+#### Ejercicio E1
+
+En la Tabla 12 y Figura 8, Boltz-2 logra una correlación de Pearson R = 0.83 en TYK2. En el screening virtual prospectivo (Sección 5.4, Figura 8), todos los compuestos generados por SynFlowNet y la librería Kinase fueron predichos como binders por ABFE.
+
+###### Consigna
+
+1. Usando Boltz-2 (o el modelo de afinidad que tengan disponible), predigan la afinidad de los 10 compuestos públicos de TYK2 reportados en el paper (Figura 21 del suplemento). Si no tienen las estructuras, usen 3 compuestos conocidos de TYK2 de PDBbind o KLIFS.
+
+2. Comparen sus predicciones contra los valores experimentales (Ki o IC50 en nM). Calculen:
+   - Pearson R
+   - MAE en kcal/mol
+   - Porcentaje dentro de 1 kcal/mol
+
+3. Comparen sus resultados con lo reportado en el paper (R = 0.83, centered MAE = 0.53 kcal/mol según Tabla 12).
+
+###### Respondan
+
+a) ¿Obtuvieron una correlación similar a la reportada? Si no, ¿a qué creen que se deba (ej: versión de Boltz-2, parámetros de inferencia, selección de compuestos)?
+
+b) Según el paper, TYK2 está en el test set del modelo de afinidad (es decir, no hubo fuga de datos). ¿Cómo influye esto en la confianza que le tendrían a Boltz-2 para un screening virtual sobre TYK2?
+
+c) ¿Qué características de TYK2 como blanco (quinasa, bolsillo ATP bien definido, muchos datos de entrenamiento) podrían explicar el buen desempeño?
+
+#### Ejercicio E2
+
+En la Figura 12 (página 44 del PDF), se muestran los resultados para múltiples asayos del validation set. Varios GPCRs (ej: P21453, P51686, P41146, P43115) presentan correlaciones de Pearson muy variables: desde R = 0.732 (P21453) hasta R = 0.065 (P43115) y R = 0.104 (P51686). El promedio del validation set fue R = 0.42 (Tabla 15).
+
+###### Consigna
+
+1. Seleccionen dos asayos de GPCR de la Figura 12: uno con desempeño alto (ej: P21453, R=0.73) y uno con desempeño bajo (ej: P43115, R=0.065).
+
+2. Para cada uno, respondan:
+
+   a) ¿Cuál es el MAE centered reportado? ¿Es muy diferente entre ambos?
+
+   b) Observen la dispersión de los puntos en la gráfica. ¿Hay algún compuesto outlier que pueda estar afectando la correlación?
+
+   c) Según el texto del paper (Sección 6, página 11), ¿qué limitación mencionan sobre GPCRs? ¿Cómo se relaciona con lo que ven acá?
+
+3. Comparación con su propia predicción (opcional): Si tienen acceso a Boltz-2, tomen 10 compuestos de un asayo de GPCR de BindingDB y predigan afinidad. Comparen R y MAE contra lo reportado.
+
+###### Respondan
+
+a) ¿Por qué creen que Boltz-2 funciona bien en algunos GPCRs y mal en otros? (Ayuda: pensar en disponibilidad de estructuras experimentales en el entrenamiento, diversidad de ligandos, dinámica conformacional del receptor)
+
+b) ¿Qué métrica del paper (ipTM, pLDDT del pocket, diversidad química del asayo) podría usarse como filtro para saber a priori si Boltz-2 va a funcionar bien en un asayo nuevo?
+
+c) ¿Qué recomendarían a un equipo de descubrimiento de fármacos que quiere usar Boltz-2 para optimizar leads contra un GPCR?
+
+#### Ejercicio E3
+
+En la Sección 5.3 y Tabla 16 (página 43), Boltz-2 evaluado en 8 asayos internos ciegos de Recursion mostró un desempeño muy variable: correlaciones desde R = 0.165 hasta R = 0.634, con un promedio de R = 0.39. En particular, la Tabla 16 muestra un centered MAE de 1.36 kcal/mol (vs 0.86 kcal/mol en validation set) y solo 3 de 8 asayos superaron R > 0.55. El paper reconoce que "sin preparación adicional, el desempeño es limitado en algunas clases de proteínas".
+
+###### Consigna
+
+1. Sin acceso a los datos de Recursion, usen esta información para responder.
+
+2. Comparen los resultados de la Tabla 16 (private benchmarks) con la Tabla 15 (validation set público). Calculen la diferencia en:
+   - Pearson R promedio
+   - centered MAE
+   - Porcentaje dentro de 1 kcal/mol
+
+3. Identifiquen posibles causas de esta caída de desempeño según lo discutido en el paper (Secciones 5.3 y 6).
+
+###### Respondan
+
+a) ¿Cuáles son las tres razones principales que da el paper para explicar por qué el desempeño en asayos privados puede ser peor que en benchmarks públicos?
+
+b) En la Tabla 16, el centered MAE es 1.36 kcal/mol. ¿Es este valor útil para distinguir entre un compuesto que merece ser sintetizado y uno que no? ¿Por qué?
+
+c) Si ustedes lideran un proyecto de discovery en la industria y ven estos resultados, ¿qué harían? ¿Usarían Boltz-2 igual? ¿Cómo lo validarían internamente?
+
+d) Reflexión final: ¿Qué aprendieron sobre las fortalezas y debilidades de Boltz-2 haciendo estos tres ejercicios?
+
+#### Ejemplo E4
+
+##### Caso seleccionado
+
+| Item | Valor |
+|------|-------|
+| Proteína | NF-kB p50 (dominio de unión a ADN, residuos 40-366) |
+| PDB referencia | 1VKX |
+| Secuencia ADN consenso | 5'-GGGGACTTTCC-3' (cadena sentido) |
+| Longitud ADN | 11 pb |
+| Resolución estructura | 2.3 Å |
+
+##### Obtener la secuencia de la proteína
+
+Secuencia del dominio de unión a ADN de NF-kB p50 (residuos 41-363, según numeración de 1VKX):
+
+(completar con la secuencia FASTA provista por la cátedra)
+
+##### Entrada en AlphaFold Server
+
+**Entity 1 (Protein)**
+- Paste la secuencia de NF-kB p50
+
+**Entity 2 (DNA)**
+- Type: DNA
+- Sequence: GGGGACTTTCC
+- Double stranded: Yes
+
+**Configuración**
+- Job name: NFKB_p50_ADN_1VKX
+- Seed: 1
+- Number of models: 5
+
+##### Analizar en Chimera después de obtener el modelo
+
+1. **Alineamiento estructura experimental (1VKX) vs modelo AF3**
+   - Calcular RMSD de la proteína (Cα)
+   - Calcular RMSD del ADN (átomos de fósforo)
+
+2. **Interacciones específicas a chequear (según 1VKX)**
+   - Arg54, Arg56, Arg59: deben contactar guaninas del ADN
+   - Tyr57: interacción de stacking
+   - Residuos básicos (Lys, Arg) con fosfatos
+
+3. **Métricas de AF3 a reportar**
+   - ipTM (protein-DNA interface)
+   - pLDDT promedio en la interfaz
+   - PAE entre proteína y ADN
+
+##### Responder
+
+a) ¿Cuál es el RMSD de la proteína entre el modelo AF3 y 1VKX?
+
+b) ¿El modelo AF3 predice que Arg54, Arg56 y Arg59 contactan las mismas guaninas que en el cristal?
+
+c) ¿Qué valor de ipTM reporta AF3 para este complejo?
+
+d) ¿Hay diferencias en la curvatura del ADN entre el modelo y el cristal?
+
+#### Ejemplo E5 
+
+Repetir la misma predicción cambiando la secuencia de ADN por una secuencia scramble:
+
+**Secuencia scramble**: AGTCCGACTAG
+
+**Pregunta**: ¿El ipTM del complejo con secuencia scramble es significativamente menor al de la secuencia consenso?
+
+#### Ejemplo E6: STRING
+La base de datos STRING contiene datos de interacciones proteína-proteína conocidos y predichos. Los datos derivan de experimentos high-throughput, datos de co-expresión, literatura y contexto genómico. Abarca más de 5 millones de proteínas de más de 1100 organismos. 
+
+##### Interacciones de la Proteína Retinoblastoma (Rb)
+
+1. En STRING se puede realizar una búsqueda por el o los nombres de la proteína, o el identificador, múltiples proteínas, múltiples secuencias, organismos o familias de proteínas.
+
+    Haga click en Search y en protein name e ingrese “retinoblastoma”
+
+    * Observe el resultado. ¿Por qué hay más de un resultado? ¿Cuál es el que deseamos?
+
+    En el campo *protein name* también puede ingresar el accession number: P06400.
+
+    El número de interactores que devuelve la red puede cambiarse en la pestaña *Settings*, por defecto está elegido 10. Por lo cual devuelve los 10 interactores con mejor puntuación en STRING. La red también puede expandirse utilizando los botones *more/less* para obtener una segunda capa de interacción con proteínas que conectan con la primera capa aunque no necesariamente con Rb.
+
+    * Presione *More*, ¿observa algún interactor que no interactúe con Rb?
+
+    ??? info "Nota en score de STRING"
+
+        Puede haber uno o más scores en STRING para cada interacción proteína-proteína.
+
+        Estos scores no se relacionan con la fuerza o especificidad de la interacción. Son indicadores de confianza de STRING. Es decir, dada la evidencia disponible, cuán probable es que esa interacción sea verdadera.
+
+        Un score de 0.5 indicaría que una de cada dos interacciones es errónea, o sea, sería un falso positivo.
+
+        Para la mayoría de los tipos de evidencia hay dos scores:
+
+        * **normal score**
+
+        * **transferred score:** Este score se calcula a partir de datos que no provienen del organismo de interés si no de otro organismo y luego es *transferido* vía homología.
+
+2. Presione en *Less*, y haga click en E2F4 y observe la información disponible. Haga click en el edge que conecta E2F4 y RB1:
+    * De los siete tipos de origen de evidencia ¿De dónde proviene la evidencia de interacción entre estas dos proteínas?
+
+3. Vaya a *Legend* y responda:
+    * ¿Todas las interacciones entre las proteínas de esta red tienen evidencia **experimental** asociada?
+
+4. ¿Se encuentran los interactores con mayor score detectados en IntAct?
+
+5. Vaya a *Analysis*. Luego, Vaya a la sección *KEGG Pathways* de la tabla y asegúrese que esté ordenada por *strength* de mayor a menor. Luego, haga click en el nodo **Rb1** de la red de interacción y luego seleccione *Show this node's terms in the analysis table*. Observe que en la tabla se resaltan los términos enriquecidos en cada base de datos relacionados con Rb.
+    * ¿A qué corresponden las primeras 10 líneas de KEGG?
+
+    ??? info "KEGG PATHWAY"
+
+        *KEGG (Kyoto Encyclopedia of Genes and Genomes)* es una colección de bases de datos. 
+
+        * KEGG Pathway es una de las base de datos de KEGG que almacena mapas de rutas para las funciones celulares y de organismos.
+
+        * El *strength* (como dice en *explain columns* en la parte superior de la primera tabla) es claculado como Log~10~(observado / esperado).
+
+        Esta medida describe cuan grande es el efecto de enriquecimiento. Es la relación entre:
+
+            1. El número de proteínas en la red que están anotadas con un término.
+            2. El número de proteínas que se espera que están anotadas con ese término en una red *random* con el mismo tamaño.
+
+6. Elija los dos interactores de mayor score detectados en Intact y haga lo mismo.
+    * ¿Cuáles son los KEGG pathways comunes a las tres proteínas?
+
+7. En la sección KEGG pathways haga click en el **identificador** que corresponde a Cell Cycle.
+    * ¿Puede encontrar a Rb?
+    * ¿Encuentra a los interactores con mayor evidencia?
+    * ¿Puede nombrar al menos una enzima que fosforile a Rb y otra que la desfosforile?
+
+
+<!--
+#### Ejercicios
+
+###### Ejercicio 1. Interacciones de la Proteína Spike de SARS-COV2
+
+1. Busque en IntAct las interacciónes que existen de la proteína Spike de SARS-COV2 (P0DTC2) con humanos (recuerde usar los filtros para ver interacciones sólo con humanos). 
+
+    A la izquierda de la red tilde la opción de agrupar por Species. 
+
+    * ¿Cuántas proteínas Spike observa en la red? 
+
+    Coloque el puntero sobre el nodo y encuentre los identificadores.
+
+    * ¿Son los mismos?
+
+2. Haga clic en la que el identificador es: P0DTC2-PRO_0000449647, verá que la tabla en la parte inferior sólo muestra las interacciones relacionadas con esta proteína. Siga el link a Uniprot:
+
+    * ¿A qué corresponde?
+
+3. Haga click en la que el identificador es: P59594. En la tabla haga click en el ícono que se encuentra en la primera columna. Se abrirá una nueva ventana con detalles de la interacción, que están detallados en la parte inferior.
+
+    * ¿Por qué cree que se obtuvo esta proteína?
+
+4. ¿Qué tipo de evidencia hay para las interacciones identificadas?
+5. Destilde la opción *Expand*.
+    * ¿Cuales son las proteínas con más evidencia?
+    * ¿Poseen evidencia estructural?
+    * ¿Qué técnicas se utilizaron?
+
+###### Ejercicio 2. Análisis de interacción RBD-ACE2: Reconocimiento de superficie de Contacto
+El objetivo de este ejercicio consiste en analizar la superficie de interacción entre RBD y ACE2. Se focalizará en la identificación de los residuos involucrados y en la determinación de la naturaleza de las interacciones. En particular se intentará establecer si existe algún contacto estrecho que estabilice la región RBM.
+
+1. Abrir Chimera y abrir el archivo “6m0j.pdb” utilizando el atajo que se encuentra a la derecha de la ventana.
+
+2. Esconder todos los átomos y colorear la visualización “ribbon” de acuerdo a su estructura secundaria.
+
+    *Actions* → *Atoms/Bonds* → *hide*
+
+    *Tools* → *Depiction* → *Color Secondary Structure* y `OK`
+
+3. Recorrer la región de RBD que pudiera estar involucrada en la interacción con ACE2. La región RBM comprende los residuos Asn 437 y Tyr 508 de RBD. Marque esta región en el panel de secuencia.
+
+    * ¿Qué tipos de estructura secundaria se encuentran en esta región de Spike?
+    * ¿Cuál es la más abundante?
+    * ¿Y en ACE2 cual es la estructura secundaria probablemente involucrada en la interacción? 
+
+4. Se seleccionarán las regiones de ACE2 y RBD involucradas en la interacción. Para tal fin se utilizará la línea de comandos y a las selecciones se les asignarán los nombres “enACE2” y “enRBD” respectivamente.
+
+    <div class="highlight"><pre><span></span><code>select :19-46.a,75-84.a,324-331.a,352-359.a,388-393.a
 namesel enACE2
 select :403-423.e,437-508.e; namesel enRBD
 </code></pre></div>
-<p>Para acceder con mayor facilidad, se fijará la ventana de selecciones con nombre. De esta manera el menú queda en una ventana accesoria permitiendo acceder fácilmente a las selecciones previamente nombradas.</p>
-<p><em>Select</em> → <em>Named Selections</em> (buscar la línea de puntos por arriba de “enACE2”)</p>
-<ul>
-<li>¿Qué ocurre al presionar el nombre de las selecciones en esta nueva ventana?</li>
-</ul>
-</li>
-<li>
-<p>Colorear ambas regiones de modo que se puedan diferenciar de forma sencilla. </p>
-</li>
-<li>
-<p>Utilizar la ventana de selecciones previamente fijada para seleccionar la región “enACE2” y luego asignarle un color distintivo (evitando los colores “rojo”, “azul” y “amarillo”). </p>
-<p><em>Actions</em> → <em>Color</em></p>
-<p>Recuerde que también puede hacerlo por línea de comandos:</p>
-<div class="highlight"><pre><span></span><code>color green,a,r enACE2
+
+    Para acceder con mayor facilidad, se fijará la ventana de selecciones con nombre. De esta manera el menú queda en una ventana accesoria permitiendo acceder fácilmente a las selecciones previamente nombradas.
+
+    *Select* → *Named Selections* (buscar la línea de puntos por arriba de “enACE2”)
+
+    * ¿Qué ocurre al presionar el nombre de las selecciones en esta nueva ventana?
+
+5. Colorear ambas regiones de modo que se puedan diferenciar de forma sencilla. 
+6. Utilizar la ventana de selecciones previamente fijada para seleccionar la región “enACE2” y luego asignarle un color distintivo (evitando los colores “rojo”, “azul” y “amarillo”). 
+
+    *Actions* → *Color*
+
+    Recuerde que también puede hacerlo por línea de comandos:
+
+    <div class="highlight"><pre><span></span><code>color green,a,r enACE2
 </code></pre></div>
-<p>De esta forma se habrán coloreado tanto la representación <strong>ribbon</strong> (por eso la <code>r</code>), como los átomos (por eso la <code>a</code>) de cada residuo en la selección. Esto último dificulta distinguir los diferentes elementos químicos. Por lo tanto, adicionalmente se utilizará la coloración <strong>by heteroatom</strong>.</p>
-<p><em>Actions</em> → <em>Color</em> → <em>by heteroatom</em></p>
-<p>Recuerde que también puede hacerlo por línea de comandos:</p>
-<div class="highlight"><pre><span></span><code>color byhetero enACE2
+
+    De esta forma se habrán coloreado tanto la representación **ribbon** (por eso la `r`), como los átomos (por eso la `a`) de cada residuo en la selección. Esto último dificulta distinguir los diferentes elementos químicos. Por lo tanto, adicionalmente se utilizará la coloración **by heteroatom**.
+
+    *Actions* → *Color* → *by heteroatom*
+
+    Recuerde que también puede hacerlo por línea de comandos:
+
+    <div class="highlight"><pre><span></span><code>color byhetero enACE2
 </code></pre></div>
-<p>Repetir la operación seleccionando en la ventana de selecciones “enRBD”.</p>
-<p><em>Actions</em> → <em>Color</em> (elegir un color)
-<em>Actions</em> → <em>Color</em> → <em>by heteroatom</em> (para poder distinguir mejor los elementos químicos)</p>
-<p>Por línea de comandos:</p>
-<div class="highlight"><pre><span></span><code>color pink,a,r enRBD
+
+    Repetir la operación seleccionando en la ventana de selecciones “enRBD”.
+
+    *Actions* → *Color* (elegir un color)
+    *Actions* → *Color* → *by heteroatom* (para poder distinguir mejor los elementos químicos)
+
+    Por línea de comandos:
+
+    <div class="highlight"><pre><span></span><code>color pink,a,r enRBD
 color byhetero enRBD
 </code></pre></div>
-</li>
-<li>
-<p>Como primer abordaje para la identificación de contactos entre ambas cadenas, se seleccionarán con la línea de comandos aquellos residuos de ACE2 que tengan al menos un átomo a una distancia menor de 4 Å de un residuo de RBD. Estos residuos se denominarán “resACE2”. </p>
-<div class="highlight"><pre><span></span><code>select :.e zr &lt; 4 &amp; :.a; namesel resACE2
+
+7. Como primer abordaje para la identificación de contactos entre ambas cadenas, se seleccionarán con la línea de comandos aquellos residuos de ACE2 que tengan al menos un átomo a una distancia menor de 4 Å de un residuo de RBD. Estos residuos se denominarán “resACE2”. 
+
+    <div class="highlight"><pre><span></span><code>select :.e zr &lt; 4 &amp; :.a; namesel resACE2
 </code></pre></div>
-<ul>
-<li>¿Qué aparece ahora en la ventana de selecciones nombradas? ¿Utilizando la “lupa verde”, cuántos residuos involucra esta selección?   </li>
-</ul>
-</li>
-<li>
-<p>De manera similar se procede con los residuos de RBD, y a esta selección se la llamará “resRBD”.</p>
-<div class="highlight"><pre><span></span><code>select resACE2 zr &lt; 4 &amp; :.e; namesel resRBD
+
+    * ¿Qué aparece ahora en la ventana de selecciones nombradas? ¿Utilizando la “lupa verde”, cuántos residuos involucra esta selección?   
+
+8. De manera similar se procede con los residuos de RBD, y a esta selección se la llamará “resRBD”.
+
+    <div class="highlight"><pre><span></span><code>select resACE2 zr &lt; 4 &amp; :.e; namesel resRBD
 </code></pre></div>
-<ul>
-<li>¿Cuántos residuos abarca esta selección? En las ventanas de secuencias explorar qué residuos se resaltan al tocar las selecciones “enACE2”, “resACE2”, “enRBD” y “resRBD”.</li>
-</ul>
-</li>
-<li>
-<p>Visualizar las cadenas laterales de los residuos en “resACE2” y “resRBD” utilizando la ventana de selecciones (asegurarse que se encuentren seleccionados). </p>
-<p><em>Actions</em> → <em>Atoms/Bonds</em> → <em>show</em></p>
-<p>Por línea de comandos:</p>
-<div class="highlight"><pre><span></span><code>display resACE2
+
+    * ¿Cuántos residuos abarca esta selección? En las ventanas de secuencias explorar qué residuos se resaltan al tocar las selecciones “enACE2”, “resACE2”, “enRBD” y “resRBD”.
+
+9. Visualizar las cadenas laterales de los residuos en “resACE2” y “resRBD” utilizando la ventana de selecciones (asegurarse que se encuentren seleccionados). 
+
+    *Actions* → *Atoms/Bonds* → *show*
+
+    Por línea de comandos:
+
+    <div class="highlight"><pre><span></span><code>display resACE2
 display resRBD
 </code></pre></div>
-<p>Experimentar diferentes representaciones para los átomos de las cadenas laterales seleccionadas.</p>
-<p><em>Actions</em> → <em>Atoms/Bonds</em> → <em>stick/ball stick/sphere/wire</em></p>
-<div class="highlight"><pre><span></span><code>represent stick
+
+    Experimentar diferentes representaciones para los átomos de las cadenas laterales seleccionadas.
+
+    *Actions* → *Atoms/Bonds* → *stick/ball stick/sphere/wire*
+
+    <div class="highlight"><pre><span></span><code>represent stick
 represent bs
 represent sphere
 represent wire
 </code></pre></div>
-</li>
-<li>
-<p>A continuación, se hará foco en analizar algunas interacciones establecidas entre los residuos de RBD y los correspondientes de ACE2 utilizando la línea de comandos. Para las cuatro interacciones descriptas abajo, analice y responda:</p>
-<ul>
-<li>¿De qué tipo de interacción se trata? <strong>I-</strong> interacción hidrofóbica, <strong>II-</strong> puente de hidrógeno, <strong>III-</strong> puente salino. </li>
-<li>¿Los contactos se dan entre residuos de cadena principal o lateral? </li>
-<li>Determine para cada caso la distancia de contacto.</li>
-</ul>
-<p>Para responder este punto, haga cada una de las cuatro selecciones indicadas a continuación, observe las interacciones y realice las mediciones como hizo previamente. Pista: si sospecha que hay un puente de hidrógeno puede buscarlo utilizando los comandos usados previamente de la siguiente manera:</p>
-<p>Luego de seleccionar el par de residuos correspondiente:</p>
-<p><em>Tools</em> → <em>Structure Analysis</em> → <em>FindHBond</em></p>
-<p>En la ventana puede tildarse la opción: <em>Only find H-bonds</em> y seleccionar <em>with both ends selected</em>.</p>
-<p>Luego presione <code>OK</code>.</p>
-<p><strong>Gln 493 (RBD); Glu 35(ACE2)</strong></p>
-<div class="highlight"><pre><span></span><code>~select; ~display; select :493.e, 35.a; namesel Q493-E35; display Q493-E35; focus Q493-E35; represent stick
+
+10. A continuación, se hará foco en analizar algunas interacciones establecidas entre los residuos de RBD y los correspondientes de ACE2 utilizando la línea de comandos. Para las cuatro interacciones descriptas abajo, analice y responda:
+
+    * ¿De qué tipo de interacción se trata? **I-** interacción hidrofóbica, **II-** puente de hidrógeno, **III-** puente salino. 
+    * ¿Los contactos se dan entre residuos de cadena principal o lateral? 
+    * Determine para cada caso la distancia de contacto.
+
+    Para responder este punto, haga cada una de las cuatro selecciones indicadas a continuación, observe las interacciones y realice las mediciones como hizo previamente. Pista: si sospecha que hay un puente de hidrógeno puede buscarlo utilizando los comandos usados previamente de la siguiente manera:
+
+    Luego de seleccionar el par de residuos correspondiente:
+
+    *Tools* → *Structure Analysis* → *FindHBond*
+
+    En la ventana puede tildarse la opción: *Only find H-bonds* y seleccionar *with both ends selected*.
+
+    Luego presione `OK`.
+
+    **Gln 493 (RBD); Glu 35(ACE2)**
+
+    <div class="highlight"><pre><span></span><code>~select; ~display; select :493.e, 35.a; namesel Q493-E35; display Q493-E35; focus Q493-E35; represent stick
 </code></pre></div>
-<p><strong>Lys 417 (RBD); Asp 30 (ACE2)</strong>
-</p><div class="highlight"><pre><span></span><code>~select; ~display; select :417.e, 30.a; namesel K417-D30; display K417-D30; focus K417-D30; represent stick
+
+    **Lys 417 (RBD); Asp 30 (ACE2)**
+    <div class="highlight"><pre><span></span><code>~select; ~display; select :417.e, 30.a; namesel K417-D30; display K417-D30; focus K417-D30; represent stick
 </code></pre></div>
-<p><strong>Tyr 449 (RBD); Gln 42 (ACE2)</strong>
-</p><div class="highlight"><pre><span></span><code>~select; ~display; select :449.e, 42.a; namesel Y449-Q42; display Y449-Q42; focus Y449-Q42; represent stick
+
+    **Tyr 449 (RBD); Gln 42 (ACE2)**
+    <div class="highlight"><pre><span></span><code>~select; ~display; select :449.e, 42.a; namesel Y449-Q42; display Y449-Q42; focus Y449-Q42; represent stick
 </code></pre></div>
-<p><strong>Phe 486 (RBD); Leu 79, Met 82, Tyr 83 (ACE2)</strong>
-</p><div class="highlight"><pre><span></span><code>~select; ~display; select :486.e, 79.a, 82-83.a; namesel F486-L79-M82-Y83; display F486-L79-M82-Y83; focus F486-L79-M82-Y83; represent stick
+
+    **Phe 486 (RBD); Leu 79, Met 82, Tyr 83 (ACE2)**
+    <div class="highlight"><pre><span></span><code>~select; ~display; select :486.e, 79.a, 82-83.a; namesel F486-L79-M82-Y83; display F486-L79-M82-Y83; focus F486-L79-M82-Y83; represent stick
 </code></pre></div>
-<p>Para Volver a la visualización completa de “resACE2” y “resRBD”. </p>
-<div class="highlight"><pre><span></span><code>~select; ~display; display resACE2 | resRBD; focus resACE2 | resRBD; represent stick
+
+    Para Volver a la visualización completa de “resACE2” y “resRBD”. 
+
+    <div class="highlight"><pre><span></span><code>~select; ~display; display resACE2 | resRBD; focus resACE2 | resRBD; represent stick
 </code></pre></div>
-</li>
-<li>
-<p>Salvar y cerrar sesión.</p>
-<p><em>File</em> → <em>Save Session As…</em>
-<em>File</em> → <em>Close Session</em></p>
-</li>
-</ol>
+
+11. Salvar y cerrar sesión.
+
+    *File* → *Save Session As…*
+    *File* → *Close Session*
+-->
+
 <!---
-## Recordings
+#### Recordings
 - Cierre [[MP4]](https://drive.google.com/file/d/1QgWc-uD7JdZ2DHDW6e5tnod6JaISA1Vq/view?usp=sharing)
 -->
 
-<h2 id="otros-recursos">Otros recursos</h2>
+<h4 id="otros-recursos">Otros recursos</h4>
 <ul>
 <li>
 <p>https://www.ebi.ac.uk/training/online/courses/protein-interactions-and-their-importance/</p>
@@ -1496,9 +2080,9 @@ represent wire
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Volver al principio
 </button>
         
@@ -1511,7 +2095,7 @@ represent wire
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024 Area Bioinformática UNSAM
+      Copyright © 2024 Area Bioinformática UNSAM
     </div>
   
   
@@ -1534,10 +2118,11 @@ represent wire
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "toc.follow", "navigation.expand"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "toc.follow", "navigation.expand"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
@@ -1550,7 +2135,7 @@ represent wire
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
