@@ -220,11 +220,17 @@ GSKRWNSCKQNKQGANSRPVNQTPPPEGEKLHSDSGISVDSQSLHDQQPHTQTASGQALKGD
 #### Cargar los templados en Alphafold
 
 1. Ingresá en los tres puntos a la derecha de la secuencia. En la sección **Templates settings**:
-   - Descargue el archivo de la estructura del templado disponible en este [link](data/chainA.cif) 
+
+   - Descargue el archivo de la estructura del templado disponible en este [link](data/chainA.cif).
+
    - Ingrese al archivo [json](data/test_template.json) y guardelo haciendo click derecho en "Save as...".
+
    - Seleccione la opción “Upload custom template” o “Provide mmCIF file”.
+
    - Suba el archivo .cif
+
    - Suba el archivo .json en la sección de "mapping file". 
+
 2. Asigne un nombre al trabajo, por ejemplo `p75_RhoGDI_conTemplate`. Active “Use seed” para reproducibilidad y use el mismo seed que el modelado "sin templado".
 3. Envíe el trabajo y espere los resultados.
 
