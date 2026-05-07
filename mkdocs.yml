@@ -156,7 +156,7 @@ nav:
         - TP2 - Chimera: 'practicos/chimera/index.md'
         - TP3a - Predicción Estructural (A): 'practicos/modelado_estructural_1/index.md'
         - TP3b - Predicción Estructural (B): 'practicos/modelado_estructural_2/index.md'
-        # - TP4 - Interacciones Proteína-Proteína: 'practicos/ppi/index.md'
+        - TP4 - Interacciones Proteína-Proteína: 'practicos/ppi/index.md'
         # - TP5 - Predicción de desorden y Bases de Datos: 'practicos/Regiones-flexibles/index.md'
         # - TP6 - Motivos Lineales - Parte I: 'practicos/motivosRegEx/index.md'
         # - TP7 - Motivos Lineales - Parte II: 'practicos/Motivos_Lineales/index.md'
