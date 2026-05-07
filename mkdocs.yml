@@ -163,7 +163,7 @@ nav:
         # - TP8 - Trabajo Práctico Integrador: 'practicos/integrador/index.md'
         # - TP4 - Modelado Parte II: 'practicos/modelado_alphafold/index.md'
     #    - Resumen: 'practicos/resumen.md'
-    # - Evaluacion: 'evaluacion.md'
+    - Evaluacion: 'evaluacion.md'
     #- Instructivos: instructivos.md
     - Como llegar: 'como_llegar/index.md'
 
