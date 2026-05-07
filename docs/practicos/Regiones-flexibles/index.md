@@ -5,10 +5,9 @@
 [:fontawesome-solid-download: Materiales](https://drive.google.com/file/d/1XUmp9b69L4vSz8fqTrfrq_wnDQ0IRSRZ/view?usp=sharing){ .md-button .md-button--primary } &nbsp;&nbsp;
 [:fontawesome-solid-file-powerpoint: Presentación](https://docs.google.com/presentation/d/1svJ48FtCXDD1T26IQO44oq8Ne4iQLgwQfNyjd_rpJ-M/edit?usp=sharing){ .md-button .md-button--primary }
 
+## Parte I: Análisis de alineamientos múltiples de secuencia (MSA) de proteínas
 
-## Parte I: Análisis de alineamientos múltiples de secuencia de proteínas
-
-### Recursos a utilizar
+### Recursos
 
 * ProViz: [http://slim.icr.ac.uk/proviz/](http://slim.icr.ac.uk/proviz/)
 * JalView: [https://www.jalview.org/](https://www.jalview.org/)
@@ -17,10 +16,10 @@
 
 ### Objetivos
 
-* Aprender a utilizar Jalview para visualizar un MSA y familiarizarse con el manejo de programas de visualización de alineamientos.
+* Aprender a utilizar Jalview para la visualizacion, edición y anotación de MSAs.
 * Interpretar alineamientos múltiples de secuencias. Identificar regiones de secuencia conservadas y asociarlas a diferentes elementos funcionales de las proteínas. 
-* Identificar regiones ordenadas y desordenadas en alineamientos múltiples de secuencia
-* Visualizar y analizar los patrones de sustitución aminoacídica encontrados en proteínas modulares. Correlacionar con sus conocimientos sobre matrices de sustitución 
+* Diferenciar regiones ordenadas y desordenadas mediante el análisis de alineamientos.
+* Correlacionar los patrones de sustitución aminoacídica visualizados con matrices de puntuación.
 
 ### Ejercicio 1. Visualización de Alineamientos en ProViz.
 
@@ -30,32 +29,33 @@
       ¿Porqué es importante visualizar un MSA? ¿Qué información podemos obtener de los MSA?
 
 
-**ProViz** es una herramienta que permite visualizar alineamientos y estructura de dominios de una proteína online.
+**ProViz** permite integrar información de alineamientos con estructuras de dominios, motivos y modificaciones post-traduccionales (PTMs). En este ejercicio, vamos a analizar la proteína p53, con la que estuvimos trabajando en TPs anteriores.
 
-Ingresar a la web de **ProViz** [http://slim.icr.ac.uk/proviz/](http://slim.icr.ac.uk/proviz/) y buscar la proteína p53 ingresando su **Accession Number** en la ventana “search” (Accession Number: P04637).
+1. Acceder a [**ProViz**](http://slim.icr.ac.uk/proviz/) y buscar la proteína p53 ingresando su **Accession Number** en la ventana “search” (Accession Number: P04637).
 
-Clickear en **Visualize**. Se va a abrir una nueva ventana con el MSA de p53 junto con información de estructura secundaria, dominios, motivos, PTMs, entre otros datos. 
+2. Seleccionar **Visualize**. Se va a abrir una nueva ventana con el MSA de p53, junto con información de estructura secundaria, dominios, motivos, PTMs, entre otros datos. 
 
 !!! Importante
       Para responder las preguntas debajo, la opción desplegable de la esquina superior derecha debe decir **QFO**. Pueden investigar qué pasa si cambian a otras opciones, como *mammalian* o *vertebrates*.
 
 
-1. ¿Qué regiones parecen estar mejor alineadas (indicar aproximadamente de qué posición a qué posición de la primera secuencia)?
+3. Análisis de conservación:
 
-2. ¿Existe diferencia en la composición de secuencia entre las regiones mejor alineadas y las no tan bien alineadas?
+      1. Identificar los rangos de residuos (posiciones de inicio y fin) de las regiones mejor alineadas.
 
-3. ¿Se observan diferencias en el grado de conservación de estas regiones?
+      2. Evaluar si existe un sesgo en la composición aminoacídica entre las regiones mejor y peor alineadas.
+      
+      3. Comparar el grado de conservación entre estas regiones.
+      
+      4. ¿Cuál puede ser la causa biológica de las diferencias observadas?
 
-4. ¿A qué pueden deberse las diferencias observadas?
+4. Integración con bases de datos:
 
-5. Observar las distintas regiones en la parte inferior del alineamiento. ProViz reúne la información de numerosas bases de datos y permite visualizarlas conectadas a un alineamiento.
+      ProViz reúne la información de numerosasa bases de datos y permite visualizarlas conectadas a un alineamiento. El el TP1 recolectamos información sobre p53 de UniProt y PFAM/InterPro. 
 
-   En el TP1 recolectamos información sobre p53 de UniProt y PFAM/InterPro. Encontrar esta información en ProViz (Si no quedó registrada, usen el código UNIPROT (P04637) o el ID (P53_HUMAN)).
+      1. Localizar los dominios identificados previamente en UniProt y/o Pfam dentro de la interfaz de ProViz
 
-   * ¿Qué se observa en el alineamiento en las regiones que abarcan los dominios PFAM respecto de la conservación?
-
-   * ¿En qué regiones de la secuencia se encuentran estos dominios? Anotar de qué residuo a qué residuo abarca cada dominio, para usar más adelante (O recuperarlo de TPs previos).
-
+      2. Registrar las regiones y límites de cada dominio para comparaciones posteriores.
 
 ### JalView, software de visualización de alineamientos.
 
@@ -67,29 +67,37 @@ Para poder visualizar alineamientos múltiples de secuencias (MSA, de sus siglas
 
 * Los desarrolladores de JalView crearon numerosos videos de entrenamiento disponibles en el [Canal de YouTube de JalView](https://www.youtube.com/channel/UCIjpnvZB770yz7ftbrJ0tfw)
 
-### Ejercicio 2. Usando JalView para analizar un MSA de p53
-1. Abrir Jalview y cargar el conjunto de secuencias de p53 disponible en [los materiales del TP1](https://drive.google.com/file/d/1L8vrfYpbvOb3ToTHLf4CLJ1g6NdflZSF/view?usp=sharing).
+### Ejercicio 2. Manejo y edición de MSAs en Jalview
+
+1. Carga de datos 
+
+      Abrir Jalview y cargar el conjunto de secuencias de p53 disponible en [los materiales del TP1](https://drive.google.com/file/d/1L8vrfYpbvOb3ToTHLf4CLJ1g6NdflZSF/view?usp=sharing).
 
       *File* → *Input Alignment* →  *From File*
 
-2. Para realizar el alineamiento utilizaremos el programa **Clustal**, al cual accederemos de manera remota desde JalView de la siguiente manera:
+2. Alineamiento 
 
-      *Web Service* → *Alignment* →  *Clustal* → *With defaults*
+      Ejecutar el servicio remoto de **Clustal**. En caso de no funcionar, utilizar el archivo `p53_aligned.fasta` 
 
-      Si no llegara a funcionar, las secuencias ya alineadas se encuentran en el archivo `p53_aligned.fasta`
+      *Web Service* → *Alignment* →  *Clustal* → *With defaults* 
 
-3. Inspeccionar el alineamiento visualmente y reconocer algunas características de las secuencias. Si no se muestran todos los residuos y algunos aparecen como `.`, es porque se encuentran ocultos. Para mostrar los residuos ocultos, ir a:
+3. Curado del alineamiento 
+
+      Inspeccionar el alineamiento visualmente y reconocer algunas características de las secuencias. Si no se muestran todos los residuos y algunos aparecen como `.`, es porque se encuentran ocultos. Para mostrar los residuos ocultos, ir a:
 
       *Format* → *Show Non-Conserved* y destildar la opción.
 
-      * Algunas secuencias son más cortas que otras ¿por qué puede pasar esto?
-      * ¿Todas las secuencias comienzan con el aminoácido metionina? ¿A qué corresponden las secuencias que no?  
-      * ¿Para construir un alineamiento de alta calidad, preservarían o descartarían estas secuencias?  
-      * Remover las secuencias que **no** corresponden a proteínas completas.
-         
-         Para ello seleccionar las secuencias haciendo click sobre el nombre de la misma en el panel izquierdo, la secuencia se marcará con una caja roja punteada. Remover la secuencia seleccionada utilizando la tecla *Backspace* o *Del*.
+      1. Algunas secuencias son más cortas que otras ¿por qué puede pasar esto?
 
-      * ¿Existen regiones del alineamiento que no estén alineadas correctamente?
+      2. ¿Todas las secuencias comienzan con el aminoácido metionina? ¿A qué corresponden las secuencias que no?
+
+      3. ¿Para construir un alineamiento de alta calidad, preservarían o descartarían estas secuencias?
+
+      4. Remover las secuencias que **no** corresponden a proteínas completas.
+         
+         Seleccionar las secuencias haciendo click sobre el nombre de la misma en el panel izquierdo, la secuencia se marcará con una caja roja punteada. Remover la secuencia seleccionada utilizando la tecla *Backspace* o *Del*.
+
+      5. Ajustar manualmente regiones mal alineadas eliminando o agregando gaps.
 
          Para editar el alineamiento, primero realizar:
          
@@ -100,9 +108,9 @@ Para poder visualizar alineamientos múltiples de secuencias (MSA, de sus siglas
          **Agregar gaps:** Presionar F2. En primera posición del alineamiento en la primera secuencia aparecerá un cursor de color negro. Colocarlo en la posición donde se desee ingresar un gap y presione la barra espaciadora.
 
 
-### Ejercicio 3. Análisis de distintas propiedades del MSA utilizando el menú COLOUR.
+### Ejercicio 3. Propiedades fisicoquímicas y conservación
 
-El menú *Colour* permite colorear el alineamiento con diferentes paletas de colores que permiten visualizar determinadas características fisicoquímicas o relacionadas con la conservación o identidad de secuencia que facilitan el análisis de la información contenida en el MSA.
+El menú *Colour* permite colorear el alineamiento con diferentes paletas de colores, muy útiles para visualizar determinadas características fisicoquímicas o relacionadas con la conservación o identidad de secuencia, lo que facilita el análisis de la información contenida en el MSA.
 
 Por ejemplo: 
 
@@ -112,43 +120,48 @@ Por ejemplo:
 
 También es posible disminuir la intensidad de los colores según el grado de conservación (*By conservation*) o filtrar los colores según el porcentaje de identidad (*Above identity threshold*) a partir de un umbral deseado.
 
-1. Seleccionar para colorear el alineamiento desde el menú la opción:
+1. Esquema de color
+
+      Aplicar desde el menú la opción:
 
       *Colour* → *Clustalx*
 
       Este esquema es muy comúnmente utilizado para la visualización de MSAs y permite representar información importante contenida en los patrones de sustitución de un MSA.
 
-      Observando el alineamiento, identificar:
+      1. Investigar los criterios de color de este esquema.
+      *Nota:* Google provee respuestas pero pueden ir directamente al [esquema de colores de ClustalX](http://www.jalview.org/help/html/colourSchemes/clustal.html)  
+      
+      2. ¿Cuántos colores existen y qué propiedades fisicoquímicas representa cada grupo de color?
 
-      * ¿Cuál es la base del esquema de color “ClustalX” provisto por Jalview? *Nota:* Google provee respuestas pero pueden ir directamente al [esquema de colores de ClustalX](http://www.jalview.org/help/html/colourSchemes/clustal.html)  
-      * ¿Cuántos colores existen?  
-      * ¿Qué propiedades fisicoquímicas representa cada grupo de color?  
-      * La cisteína cumple un rol estructural importante en algunas proteínas (¿cual?). ¿Qué se observa respecto de la coloración de la cisteína? ¿Es siempre igual? ¿A qué se debe el cambio en la representación?
+      3. La cisteína cumple un rol estructural importante en algunas proteínas (¿cual?). ¿Qué se observa respecto de la coloración de la cisteína? ¿Es siempre igual? ¿A qué se debe el cambio en la representación?
 
 
 !!! Info "Atención"
 
-      En Proviz la cisteína estaba siempre coloreada del mismo color, pero en el esquema de colores de ClustalX no lo está.  
+      En ProViz la cisteína estaba siempre coloreada del mismo color, pero en el esquema de colores de ClustalX no lo está.  
 
       * ¿En qué situaciones los residuos no están coloreados?  
       * Hay residuos que siempre están coloreados? ¿Cuáles son y a qué cree que se debe?
 
 
-2. Manteniendo el esquema de color Clustal, es posible filtrar regiones de acuerdo al % identidad en el alineamiento múltiple. Para ello, aplicar el filtro de identidad yendo a:
+2. Filtros de identidad
+
+      Manteniendo el esquema de color Clustal, es posible filtrar regiones de acuerdo al % identidad en el alineamiento múltiple:
 
       *Colour* → *Above identity threshold*
 
-      Se abrirá una ventana en la cual se puede seleccionar el % identidad del filtro en escala de 0 a 100%. Explorar los cambios en todo el alineamiento al variar la escala de 0 a 100%.
+      Se abrirá una ventana en la cual se puede seleccionar el porcentaje de identidad del filtro en escala de 0 a 100%. Utilizando el filtro, responder:
 
-      Utilizando el filtro, responder:
+      1. ¿Qué regiones muestran una identidad de secuencia mayor al 80% en el MSA de p53? ¿Y al 100%?
+      2. Correlacionar estas regiones con los dominios globulares de Pfam. 
 
-      * ¿Qué regiones muestran una identidad de secuencia mayor al 80% en el MSA de p53? ¿Y al 100%?
-      * Anotar los límites de estas regiones y responder: ¿Qué correlación observa con la información obtenida de PFAM?
-      
-      En las regiones conservadas, observar los patrones de sustitución en diferentes columnas del MSA. Estos patrones son un reflejo de la historia evolutiva de la proteína y contienen mucha información funcional que aprenderemos a cuantificar más adelante en la materia. Observando detenidamente, responder:
+3. Patrones de sustitución
 
-      * ¿Qué tipos de patrones se observan?  
-      * ¿Qué relación guardan estos patrones con las matrices PAM y BLOSUM utilizadas para construir alineamientos de proteínas?
+      En las regiones conservadas, observar los patrones de sustitución en diferentes columnas del MSA. Estos patrones son un reflejo de la historia evolutiva de la proteína y contienen mucha información funcional. 
+
+      1.  ¿Qué tipos de patrones se observan?
+
+      2. ¿Qué relación guardan estos patrones con las matrices PAM y BLOSUM utilizadas para construir alineamientos de proteínas?
 
 !!! Info
 
@@ -165,20 +178,24 @@ También es posible disminuir la intensidad de los colores según el grado de co
 <figcaption style="text-align:center;max-width:70%">
 Figura 1. Matrix BLOSUM62.</figcaption>
 
-En base a este alineamiento, analizar las regiones desordenadas y ordenadas ya reconocidas en p53. Comparar estas observaciones del alineamiento con el alineamiento visualizado en ProViz en el **Ejercicio 1**.
+4. Discusión 
 
-   * ¿Se pueden distinguir las mismas regiones?
-   * ¿Hay diferencias en la composición de secuencia en cada región?
-   * ¿Se observan diferencias en el grado de conservación?
-   * ¿Las especies a las que corresponde cada secuencia son las mismas en los alineamientos? ¿Cuál posee organismos más distantes?
-   * Discutir qué ventajas tiene trabajar con un alineamiento propio respecto de trabajar con el alineamiento de ProViz?
+      En base a este alineamiento, analizar las regiones desordenadas y ordenadas ya reconocidas en p53. Comparar el alinamiento propio en JalView con el de ProViz del **Ejercicio 1**.
+      
+      1. ¿Se pueden distinguir las mismas regiones?
+      
+      2. ¿Hay diferencias en la composición de secuencia en cada región? ¿Se observan diferencias en el grado de conservación?
+      
+      4. ¿Las especies a las que corresponde cada secuencia son las mismas en los alineamientos? ¿Cuál posee organismos más distantes?
+      
+      5. ¿Qué ventajas tiene trabajar con un alineamiento propio respecto de trabajar con el alineamiento de ProViz?
 
 
 ## Parte II: Predicción de Desorden
 
-### Recursos a utilizar:
+### Recursos:
 
-* IUPred2A            [https://iupred2a.elte.hu](https://iupred2a.elte.hu)
+* IUPred3            [https://iupred3.elte.hu](https://iupred3.elte.hu)
 
 ### Objetivos.
 
@@ -199,18 +216,22 @@ Entre los algoritmos que se basan en composición de secuencia podemos nombrar I
 
 ### Ejercicio 1. Predicción de desorden a partir de la secuencia.
 
-Ingresar en la web de **IUPred2A**: [https://iupred2a.elte.hu](https://iupred2a.elte.hu)
+1. Ejecución
 
-Ingresar la proteína p53 (puede ingresarse la secuencia de aminoácidos, el **Uniprot ID** - P53_HUMAN o el **accession number** - P04637). 
+      En la web de **IUPred3**: [https://iupred3.elte.hu](https://iupred3.elte.hu) ingresar la proteína p53 (se puede utilizar la secuencia de aminoácidos, el **Uniprot ID** - P53_HUMAN o el **accession number** - P04637). 
 
-El algoritmo IUPred considera que un residuo es:
+      El algoritmo IUPred considera que un residuo es:
 
-* **Desordenado** cuando el valor de IUPred es mayor o igual a 0.5
-* **Ordenado** cuando es menor a 0.5
+      * **Desordenado** cuando el valor de IUPred es mayor o igual a 0.5
+      * **Ordenado** cuando es menor a 0.5
 
-1. Anotar las posiciones iniciales y finales de las regiones predichas como desordenadas. ¿Se correlacionan las regiones predichas como ordenadas o desordenadas con las diferencias observadas en el ejercicio anterior?
+      1. Anotar las posiciones iniciales y finales de las regiones predichas como desordenadas. ¿Cómo correlacionan estas regiones con las diferencias observadas en el ejercicio anterior?
 
-2. Descargar los datos en formato `texto` y guardar el archivo como `P53_HUMAN.iupred`.
+2. Procesamiento de datos
+
+      1. Descargar los datos en formato `texto` y guardar el archivo como `P53_HUMAN.iupred`.
+
+      2. Explorar el archivo descargado. ¿Cómo es el formato de los datos? ¿Las columnas tienen nombre? ¿Serán interpretadas correctamente por R?
 
 !!! info "Nota"
 
@@ -220,32 +241,25 @@ El algoritmo IUPred considera que un residuo es:
       
       Por suerte, el algoritmo IUPred puede también correrse de manera local y además es rápido. Para esto es necesario tener instalado Python3 en la computadora.
 
+3. Análisis con R.
 
-3. Explorar el archivo descargado y responder.
-
-   * ¿Cómo es el formato de los datos?
-
-   * ¿Las columnas tienen nombre? ¿Serán interpretadas correctamente por R?
-
-4. **Crear un script en R.**
-
-      Para esto, abrir RStudio y seleccionar New --> RScript.
-
+      1. Abrir RStudio y seleccionar New --> RScript.
+      
       Antes de empezar con el código, ver en qué directorio se está trabajando y configurarlo para trabajar en el directorio deseado (las funciones eran: ```getwd()``` y ```setwd()```).
 
-5. **Cargar los datos** 
+      2. Cargar los datos.  
       
       Vamos a utiliza la función `read.csv()`, con algunos argumentos modificados para que lea correctamente el archivo. Para saber qué es cada argumento siempre se puede revisar el uso de las funciones con ```help(read.csv)``` o presionando F1 sobre la función.
 
       ``` R
       p53 <- read.csv(file="/directorio_correspondiente/P53_HUMAN.iupred",
-                     header=F ,sep="\t", col.names=c("Posición","Aminoácido","Iupred","Anchor"),
+                     header=F ,sep="\t", col.names=c("Posición","Aminoácido","Iupred","Evidencia_experimental"),
                      comment.char="#")
       ```
 
       Asegurarse que los datos se cargaron correctamente, esperamos un dataframe con 4 columnas.
 
-5. Ahora vamos a clasificar las posiciones en pase a la predicción realizada por IUPred como *Orden* y *Desorden*.
+      3. Clasificar las posiciones en pase a la predicción realizada por IUPred como *Orden* y *Desorden*.
 
       Primero crearemos una columna en el dataframe:
 
@@ -271,28 +285,28 @@ El algoritmo IUPred considera que un residuo es:
       theme_linedraw()
       ```
 
-      Debería obtener un gráfico como el siguiente:
+      Se genera el siguiente gráfico:
 
       ![](./images/IUPred.png)
 
-      Ahora, quisiéramos evaluar el porcentaje de residuos predichos ordenados y desordenados. Por suerte, R tiene una función que “cuenta” por nosotros:
+      4. Evaluar el porcentaje total de residuos en las regiones ordenadas y desordenadas.
 
       ``` R
       cuentaTotal <- table(p53$Prediccion)
       porcentaje <- 100*cuentaTotal/length(p53$Posición)
       ```
 
-6. En base a los valores obtenidos, ¿La proteína p53 es altamente desordenada?
+      En base a los valores obtenidos, ¿La proteína p53 es altamente desordenada?
 
-7. Por último, analizaremos la composición de aminoácidos de p53. Pero antes: ¿Qué residuos se esperan ver enriquecidos en las regiones desordenadas y cuales en las ordenadas? ¿Por qué?
-
-      Vamos a graficar el porcentaje de cada aminoácido predicho como ordenado o desordenado en la secuencia de p53
+      5. Analizar la composición de aminoácidos de p53. 
+      
+      ¿Qué residuos se esperan ver enriquecidos en las regiones desordenadas y cuales en las ordenadas? ¿Por qué?
 
       ``` R
       aminoacidos <- table(p53$Aminoácido,p53$Prediccion)
+      
+      # ¿Que hace la funcion table?
       ```
-
-      * ¿Qué hizo la función ```table``` en este caso?
 
       Para calcular el porcentaje de aminoácidos:
 
@@ -300,7 +314,7 @@ El algoritmo IUPred considera que un residuo es:
       aminoacidos_porcentaje <- 100*aminoacidos/length(p53$Posición)
       ```
 
-      Ahora vamos a convertir la tabla en un dataframe para graficar con `ggplot2`:
+      Convertir la tabla en un dataframe para graficar con `ggplot2`:
 
       ``` R
       aminoacidos_df<-as.data.frame(aminoacidos_porcentaje)
@@ -315,29 +329,27 @@ El algoritmo IUPred considera que un residuo es:
 
       ![](./images/Aminoacidos.png)
 
-      * ¿Qué aminoácidos son los más abundantes en las regiones desordenadas? ¿La abundancia de los aminoácidos coincide con lo esperado?
+      ¿Qué aminoácidos son los más abundantes en las regiones desordenadas? ¿La abundancia de los aminoácidos coincide con lo esperado?
 
-8. Ahora vamos a ver si se observa o no correlación con los valores de pLDDT. Para esto vamos a cargar la librería `bio3d` que nos permite leer archivos en formato `pdb`.
+4. Validación con AlphaFold2
+
+      Ahora vamos a ver si se observa o no correlación con los valores de pLDDT. Para esto vamos a cargar la librería `bio3d` que nos permite leer archivos en formato `pdb`.
+
+      1. **Cargar el modelo**
 
       ``` R
       library(bio3d)
-      ```
 
-      Leemos el archivo:
-
-      ``` R
       pdbP53 <- read.pdb(file = "/directorioQueCorresponda/AF-P04637-F1-model_v2.pdb")
       ```
-
-      Guardamos en el dataframe de p53 los datos que me intersan.
-
-      El pLDDT está guardado en el campo de b-factors del pdb, y necesitamos un único valor por residuo. Por lo tanto, elegimos que sea el correspondiente a los carbonos α y lo guardamos en una columna que se llama pLDDT
+      
+      2. **Extraer información:** El pLDDT está guardado en el campo de b-factors del pdb, y necesitamos un único valor por residuo. Por lo tanto, elegimos que sea el correspondiente a los carbonos α y lo guardamos en una columna que se llama pLDDT
 
       ``` R
       p53$pLDDT <- pdbP53$atom[pdbP53$calpha,"b"]
       ```
 
-      Luego, clasificamos las posiciones según el valor de pLDDT
+      3. **Clasificar las posiciones según el valor de pLDDT**
 
       ``` R
       p53$pLDDT_Prediccion <- ">80"
@@ -345,7 +357,7 @@ El algoritmo IUPred considera que un residuo es:
       p53$pLDDT_Prediccion[which(p53$pLDDT>50 & p53$pLDDT<=80)]<-">50 & <= 80"
       ```
 
-      Hago el gráfico de IUPred y pLDDT por posición:
+      4. **Graficar valores de IUPred y pLDDT por posición**
 
       ``` R
       pLDDT_con_Iupred <- ggplot(p53,aes(x=Posición,y=Iupred)) +
@@ -358,14 +370,14 @@ El algoritmo IUPred considera que un residuo es:
       pLDDT_con_Iupred
       ```
 
-      Observar el gráfico y responder:
+      5. **Observar el gráfico y responder:**
 
       * ¿Qué es la línea azul?
       * ¿Qué es la línea roja?
       * ¿Por qué cree que se utiliza pLDDT/100 en el gráfico?
       * ¿Que puede decir de la relación entre la predicción de desorden y los valores de pLDDT?
 
-      Estudiemos la correlación entre IUPred y el pLDDT:
+      6. **Correlación entre IUPred y el pLDDT:**
 
       ``` R
       pLDDT_vs_IUPred<-ggplot(p53,aes(x=pLDDT,y=Iupred)) +
@@ -380,13 +392,11 @@ El algoritmo IUPred considera que un residuo es:
 
 ## Parte III: Bases de Datos
 
-### Recursos a utilizar:
+### Recursos
 
 * DisProt: [https://www.disprot.org](https://www.disprot.org)
 * MobiDB: [http://mobidb.bio.unipd.it/](http://mobidb.bio.unipd.it/)
 * PED: [https://proteinensemble.org/](https://proteinensemble.org/)
-
-### Ejercicio 1. Base de datos DisProt
 
 #### Disprot
 La base de datos [DisProt](https://disprot.org/) es una colección de evidencia de desorden experimental recolectada de la literatura y curada manualmente. La evidencia corresponde a una región proteica, e incluye por lo menos:
@@ -407,9 +417,7 @@ La ontología de desorden está organizada en tres categorías diferentes:
 * Función de desorden (*Disorder Function*): La función de una región incluyendo términos específicos a desorden.
 
 
-### Ejercicio 1. Conociendo la base de datos Disprot usando p53.
-
-La proteína p53 es una proteína supresora de tumores, es decir que su mutación favorece el crecimiento tumoral. p53 es uno de los genes más mutados en el cáncer humano, y actúa como un factor de transcripción que se expresa en todos los tejidos. Cumple un rol principal en el ciclo celular y es el regulador principal de la apoptosis. Es esencial para inducir la respuesta celular ante el daño al ADN, deteniendo el ciclo celular cuando las células no pueden reparar el ADN dañado por agentes genotóxicos. Si falla p53 podrían facilitar la formación de tumores celulares y en consecuencia producir cáncer. Alrededor de un 50% de los tumores humanos identificados poseen mutaciones en la proteína p53. Esta proteína, por su importancia para la salud humana, es una de las proteínas más estudiadas en cuanto a su estructura y función.
+### Ejercicio 1. DisProt.
 
 Ingresar a la página web de [DisProt](https://disprot.org/) y encontrar la proteína p53 (P04637). La búsqueda puede realizarse utilizando el Accession Number o por palabras claves. El identificador de DisProt que deberían encontrar es DP00086.
 
@@ -430,13 +438,11 @@ Ingresar a la página web de [DisProt](https://disprot.org/) y encontrar la prot
 5. ¿La evidencia experimental recolectada coincide con las predicciones realizadas por IUPred y lo observado en ProViz?
 
 
-### Ejercicio 2. Base de datos MobiDB
+### Ejercicio 2. MobiDB
 
 La base de datos MobiDB centraliza diferentes recursos que facilitan la anotación de proteínas desordenadas y de su función. MobiDB abarca distintos aspectos del desorden, desde regiones que carecen una estructura tridimensional definida anotadas o predichas como desordenadas hasta regiones que interactúan con otras proteínas, ADN o ARN preservando una estructura desordenada. Los datos provienen de bases de datos externas con datos manualmente curados, de datos experimentales como estructuras tridimensionales de las proteínas o predicciones.
 
-1. Ingresar a la web de MobiDB: [http://mobidb.bio.unipd.it](http://mobidb.bio.unipd.it)
-
-      Buscar la proteína p53 (P04637).
+1. Ingresar a la web de MobiDB: [http://mobidb.bio.unipd.it](http://mobidb.bio.unipd.it). Buscar la proteína p53 (P04637).
 
 2. En la parte superior, sobre la estructura hay tres pestañas:
 
@@ -459,13 +465,13 @@ La base de datos MobiDB centraliza diferentes recursos que facilitan la anotaci�
       * ¿Cuáles regiones son predichas como desordenadas por la mayoría de los métodos?
       * ¿Qué métodos predicen más desorden y cuáles menos? ¿Hay mucha variación?
 
-3. Ahora observar la línea que dice **Missing residues (strict)**, donde se indica el consenso en base a la evidencia estructural. Ubique el mouse sobre las distintas regiones y responda: ¿Qué significan los distintos colores de las regiones marcados en el consenso?
+3. Ahora observar la línea que dice **Missing residues (strict)**, donde se indica el consenso en base a la evidencia estructural. ¿Qué significan los distintos colores de las regiones marcados en el consenso?
 
 4. Explorar la evidencia proveniente de la estructura cristalográfica, desplegando la sección *Missing residues (strict)*.
 
       * ¿Qué regiones tienen una estructura? 
 
-      * Observar la entrada 5AOM_A. Ahora ve a la página web del [Protein Data Bank](https://www.rscb.org) y buscar el PDB 5AOM, o ir directamente desde [este link](https://www.rcsb.org/structure/5AOM). En la web de la base de datos de PDB ir a la sección *Macromolecules*. Mirar la sección correspondiente a la cadena A (UNMODELED A). ¿Cómo se determinó que estas regiones eran desordenadas?
+      * Observar la entrada 5AOM_A. Buscar en la página del [Protein Data Bank](https://www.rscb.org) el PDB 5AOM, o ir directamente desde [este link](https://www.rcsb.org/structure/5AOM). En la web de la base de datos de PDB ir a la sección *Macromolecules*. Mirar la sección correspondiente a la cadena A (UNMODELED A). ¿Cómo se determinó que estas regiones eran desordenadas?
 
 
 ### Ejercicio 3. Base de datos de Ensambles Estructurales
@@ -476,7 +482,7 @@ El primer lanzamiento de la base de datos [PED](https://proteinensemble.org/) fu
 
       * ¿Cuantos modelos tiene?
 
-2. Seleccione una region de residuos:
+2. Seleccionar una region de residuos:
 
       ```
       select :60-90
@@ -496,7 +502,7 @@ El primer lanzamiento de la base de datos [PED](https://proteinensemble.org/) fu
 PhaSePro es curada manualmente y abarca únicamente casos verificados de LLPS integrando un amplio rango de información biofísica, funciones biológicas y regulación de estos sistemas moleculares.
 
 1. Ingresar a PhaSePro
-2. Entrar a Browse/Search e investigue las distintas organellas. ¿Reconoce alguna?
+2. Entrar a Browse/Search e investigar las distintas organelas. ¿Reconocen alguna?
 3. Buscar la entrada: P35974
 4. ¿Qué region media LLPS?
 5. Buscar en disprot la entrada de la proteína homóloga: `DP00133 - Phosphoprotein`.
