@@ -4,7 +4,7 @@
 ### Recursos Online
 * AlphaFold Server: [https://alphafoldserver.com/](https://alphafoldserver.com/)
 * Intact: [https://www.ebi.ac.uk/intact/home](https://www.ebi.ac.uk/intact/home)
-* Boltz-1 [https://github.com/jwohlwend/boltz](https://github.com/jwohlwend/boltz)
+* Boltz [https://github.com/jwohlwend/boltz](https://github.com/jwohlwend/boltz)
 
 ### Objetivos
 
@@ -32,7 +32,7 @@ Se pueden clasificar entre tres tipos principales:
 * **Bases de datos secundarias o meta-bases de datos:** Integran datos anotados (o curados) de bases de datos primarias en una base de datos. Por ejemplo, APID y PINA.
 * **Bases de datos predictivas:** Combinan los datos experimentales de las bases de datos primarias con predicciones computacionales. Por ejemplo, STRING y UniHI.
 
-#### IntAct
+### IntAct
 IntAct es una base de datos pública de interacciones moleculares. Es mantenida por un grupo de curadores y desarrolladores en el European Bioinformatics Institute (EMBL-EBI, Hinxton, UK) y es la base de datos más abarcativa de interacciones moleculares. Los datos de interacciones moleculares son curados a partir de la literatura. Si bien la mayoría de las interacciones almacenadas en IntAct son interacciones proteína-proteína, existen otras interacciones que involucran pequeños compuestos químicos o ácidos nucleicos. IntAct además es miembro del consorcio internacional de intercambio molecular (International Molecular Exchange Consortium, IMEx). El objetivo de este consorcio es unificar el esfuerzo de curación de los datos experimentales de interacciones moleculares.
 
 En este ejercicio analizaremos la estructura cristalográfica **2AZE** (RbC-E2F1-DP1), publicada por **[Rubin et al. (Cell, 2005)](data/1-s2.0-S0092867405012316-main.pdf)**. Además, compararemos estos contactos experimentales con los modelos generados por **AlphaFold 3** en la clase anterior.
@@ -112,7 +112,7 @@ En este ejercicio analizaremos la estructura cristalográfica **2AZE** (RbC-E2F1
     * ¿Qué tipo de evidencia experimental poseen?
     * ¿Cuánta evidencia posee cada interactor?
 
-#### Visualización de la estructura experimental 2AZE en Chimera
+### Visualización de la estructura experimental 
 
 La estructura **2AZE** contiene:
 
@@ -122,13 +122,13 @@ La estructura **2AZE** contiene:
 
 - **Cadena B**: DP1 
 
-###### Pasos
+#### Pasos
 
 1. **Descargar 2AZE** desde RCSB PDB:  
    [https://www.rcsb.org/structure/2AZE](https://www.rcsb.org/structure/2AZE)  
 
 2. **Abrir Chimera** y cargar el archivo:  
-   `File → Open → 2AZE.cif`
+   `File → Open → 2AZE.pdb`
 
 3. **Colorear por cadena** para facilitar la identificación:
    - Cadena A (E2F1): 
@@ -146,11 +146,11 @@ La estructura **2AZE** contiene:
    `Actions → Color → orange`
    `Actions → Ribbon → Show`
 
-#### Análisis de puentes de hidrógeno en 2AZE
+### Análisis de puentes de hidrógeno 
 
 Según el paper (Figura 4A y texto), RbC establece puentes de hidrógeno clave con DP1 y posiblemente con E2F1. Vamos a identificarlos en Chimera.
 
-###### Pasos
+#### Pasos
 
 1. Primero, seleccionamos RbC: `Select → Chain → C`  
 
@@ -176,25 +176,25 @@ Según el paper (Figura 4A y texto), RbC establece puentes de hidrógeno clave c
    - Calcule los puentes de hidrógenos de la selección.
    - ¿El núevo número obtenido corresponde con lo indicado en la publicación?
 
-#### Análisis de la interfaz hidrofóbica
+### Análisis de la interfaz hidrofóbica
 
 El paper menciona que la hélice **rH1** de RbC (residuos ~845-852) hace contactos hidrofóbicos con el **β-sándwich** expuesto de E2F1-DP1. Estos contactos son críticos para la afinidad.
 
-## Seleccionar Phe845 de RbC
+#### Seleccionar Phe845 de RbC
 
 En la línea de comandos (`Favorites → Command Line`) escribí:
 
-    `select #0:845.C`
+    select #0:845.C
 
-## Encontrar todos los residuos de E2F/DP que están a menos de 4 Å de Phe845
+#### Encontrar todos los residuos de E2F/DP que están a menos de 4 Å de Phe845
 
 Con Phe845 seleccionado, ingresá en la línea de comandos:
 
-    `select sel z<4`.
+    select sel z<4
 
 Ahora Chimera selecciona Phe845 **y** todos los átomos de cadenas A/B a menos de 4 Å.
 
-## Aislar visualmente los residuos seleccionados
+#### Aislar visualmente los residuos seleccionados
 
 - `Select → Invert (all models)` (se selecciona todo lo que no es tu interfaz).
 - `Actions → Atoms/Bonds → Hide`.
@@ -203,7 +203,7 @@ Ahora Chimera selecciona Phe845 **y** todos los átomos de cadenas A/B a menos d
 
 Verás únicamente los residuos involucrados en la zona de contacto.
 
-## Colorear por hidrofobicidad para identificar residuos hidrofóbicos vs. polares
+#### Colorear por hidrofobicidad para identificar residuos hidrofóbicos vs. polares
 
 - `Tools → Depiction → Render by Attribute`.
 - **Attribute of**: `residues`.
@@ -211,11 +211,11 @@ Verás únicamente los residuos involucrados en la zona de contacto.
 - Click en **Apply**.
 
 **Interpretación de colores:**
-- **Naranja / rojo** → hidrofóbico (apolar).
+- **Naranja / rojo** → hidrofóbico (no polar).
 - **Blanco / celeste** → intermedio.
 - **Azul** → hidrofílico (polar).
 
-## Identificar los residuos de E2F/DP que están en contacto
+#### Identificar los residuos de E2F/DP que están en contacto
 
 - Abrí `En la sección inferior a la derecha → Inspect Selection` (lupa verde).
 - Seleccioná  **Residues** y apretá `Write List`. Se va a abrir una nueva pestaña y apretar `Log`.
@@ -225,14 +225,14 @@ Verás únicamente los residuos involucrados en la zona de contacto.
 
 Ejemplo: `ILE 262.A` (naranja), `ASP 295.A` (azul).
 
-## Buscar puentes de hidrógeno entre Phe845 y esos residuos
+#### Buscar puentes de hidrógeno entre Phe845 y esos residuos
 
 - `Tools → Structure Analysis → FindHBonds`.
 - Click en **Apply**.
 
 Observá líneas punteadas verdes en la pantalla. En el `Reply Log` (Favorites → Reply Log) aparece la lista detallada. Anotá si hay puentes de H con alguno de los residuos vecinos.
 
-## Completar la tabla para Phe845
+#### Completar la tabla para Phe845
 <!--
 | Residuo RbC | Residuo E2F/DP (cadena) | Color (naranja/azul) | ¿Puente de H? | Distancia <4 Å | Tipo de interacción |
 |-------------|------------------------|----------------------|---------------|----------------|---------------------|
@@ -250,20 +250,19 @@ Observá líneas punteadas verdes en la pantalla. En el `Reply Log` (Favorites �
 | Phe845 (C)  |                        |                      |               |                |                     |
 
 **Criterio de tipo de interacción:**  
-Para decir que un par de residuos tienen fuerza de tipo Van der Waals se pueden usar los siguientes criterios: distancia <4 Å + misma hidrofobicidad/hidrofilicidad + sin puente de H.  
+Para decir que un par de residuos tienen fuerza de tipo Van der Waals se pueden usar los siguientes criterios: distancia <4 Å + residuos no polares + sin puente de H.  
 
-## Repetir el procedimiento para uno de otros tres residuos de la hélice rH1
+#### Repetir el procedimiento para alguno de los otros tres residuos de la hélice rH1
 
 - **Ile848** (seleccionar `#0:848.C`)
 - **Met851** (seleccionar `#0:851.C`)
 - **Val852** (seleccionar `#0:852.C`)
 
-#### Comparación con el modelo de AlphaFold 3
+### Comparación con el modelo de AlphaFold 3
 
-Ustedes ya generaron en la clase anterior el modelo del complejo **completo** (Rb pocket + RbC + E2F1 + DP1) usando AlphaFold 3. Ahora van a comparar la predicción de AF3 con la estructura experimental 2AZE.
+Ahora van a comparar la predicción de AF3 con la estructura experimental 2AZE.
 
-
-###### Pasos
+#### Pasos
 1. Realizar el modelado de las regiones cristalizadas en 2AZE:
 
 Secuencias:
@@ -319,32 +318,32 @@ El inhibidor **dasatinib** (BMS-354825) es un inhibidor tipo I de alta potencia 
 
 En este ejercicio, usaremos **Boltz** (herramienta de modelado de complejos proteína-ligando) para predecir estructuras de c-Src con inhibidores y evaluar el impacto de mutaciones.
 
-#### Recursos necesarios
+### Recursos necesarios
 - PDB 3G5D (c-Src + dasatinib, referencia experimental)
-- PDB 2SRC (c-Src inactiva completa, multi-dominio)
-- PDB 2OIQ (c-Src + imatinib, conformación DFG-out)
-- PDB 2H8H (c-Src + saracatinib, tipo II)
 
-#### Búsqueda en IntAct de interacciones de c-Src con inhibidores
+### Búsqueda en IntAct de interacciones de c-Src con inhibidores
 
-###### Pasos
+#### Pasos
 
 1. Ingresar a IntAct: https://www.ebi.ac.uk/intact/
 2. Buscar "SRC"
 3. En "Interactor Type" seleccionar "small molecule"
 4. En la pestaña de Interactors buscar "dasatinib".
 
-###### Responda
+#### Responda
 
 - ¿Cuánatas veces aparece este interactor en la búsqueda actual?
 
 - ¿Qué otros inhibidores aparecen en IntAct? (ej: bosutinib, saracatinib)
 
+### Exploración estructural
 Ahora vamos a explorar la estructura cristalográfica de c-Src con un ligando. 
-1. Explorar la entrada del PDB 3G5D.
-2. Descargar la estructura en formato .cif
 
-###### Responda
+1. Explorar la entrada del PDB 3G5D.
+
+2. Descargar la estructura en formato .pdb y abrir en Chimera
+
+#### Responda
 
 - ¿Cuántas cadenas tienen la estructura descargada?
 
@@ -354,206 +353,156 @@ Ahora vamos a explorar la estructura cristalográfica de c-Src con un ligando.
 
 - ¿Cual es la energía de afinidad indicada en la entrada del PDB?
 
+### Modelado de c-Src con dasatinib usando Boltz
 
-#### Modelado de c-Src wild type con Boltz
+Boltz es una familia de modelos de inteligencia artificial diseñados para predecir la estructura tridimensional de complejos biomoleculares. Fue desarrollado por investigadores del MIT y Recursion Pharmaceuticals como una alternativa open source a AlphaFold3 de Google DeepMind.
 
-Ahora vamos a modelar esta interacción usando Boltz
+#### Boltz-1
 
-###### Preparación de la secuencia y ligandos
+Primera versión [(Wohlwend et al., 2025)](https://www.biorxiv.org/content/10.1101/2024.11.19.624167v4). Permite modelar complejos multiméricos con métricas de confianza (pLDDT, ipTM). Es de código abierto.
 
+#### Boltz-2
+
+Segunda generación [(Passaro et al., 2025)](https://www.biorxiv.org/content/10.1101/2025.06.14.659707v1.full). Dos novedades principales:
+
+**1. Mejoras estructurales:** entrenamiento con ensambles y dinámica molecular, controlabilidad (restricciones de distancia, plantillas), corrección física (Boltz-steering).
+
+**2. Predicción de afinidad proteína-ligando:** es el primer modelo de IA que se acerca a la precisión de métodos de free energy perturbation (FEP), pero siendo >1000 veces más rápido. Alcanza correlaciones de Pearson de 0.66 en el benchmark FEP+ y double la precisión media en hit discovery (MF-PCBA) respecto a métodos previos.
+
+Vamos a modelar la interacción de c-Src + dasatinib usando Boltz-2
+
+#### Preparación de la secuencia y ligandos
+
+```
 **Secuencia del dominio quinasa de c-Src humano (residuos 250-533)**: 
 GHMQTQGLAKDAWEIPRESLRLEVKLGQGCFGEVWMGTWNGTTRVAIKTLKPGTMSPEAFLQEAQVMKKLRHEKLVQLYAVVSEEPIYIVTEYMSKGCLLDFLKGEMGKYLRLPQLVDMAAQIASGMAYVERMNYVHRDLRAANILVGENLVCKVADFGLARLIEDNEYTARQGAKFPIKWTAPEAALYGRFTIKSDVWSFGILLTELTTKGRVPYPGMVNREVLDQVERGYRMPCPPECPESLHDLMCQCWRKDPEERPTFEYLQAFLEDYFTSTEPQYQPGENL
+```
 
+```
 **Estructura química de dasatinib (SMILES)**: 
 CC1=C(C(=CC=C1)Cl)NC(=O)C2=CN=C(S2)NC3=CC(=NC(=N3)C)N4CCN(CC4)CCO
+```
 
-###### Configuración de Boltz
+#### Configuración de Boltz
 
-Falta!
+1) Abrir la notebook de Boltz usando este link: https://colab.research.google.com/drive/1K93MOXsLXDxmAxT3GHIalO-GW8D46rs0?usp=sharing
 
-###### Visualización en Chimera
+2) Guardar una copia en Google Drive (Archivo → Guardar una copia en Drive).
 
-1. Abrir ambos modelos (experimental + predicciones Boltz) en Chimera.
-2. Alinear usando MatchMaker (referencia: 3G5D).
-3. Analizar el modelado de la proteína y la ubicación del ligando.
+3) Conectarse al entorno usando GPU T4:
+   - Entorno de ejecución → Cambiar tipo de entorno de ejecución
+   - Acelerador de hardware: T4 GPU
+   - Guardar
+   - Luego hacer clic en "Conectar"
 
-###### Responda
+4) Ejecutar la celda "Install Dependencies and Boltz2 with CUDA support". Esperar a que termine (2-5 minutos). Permitir el acceso de la notebook a nuestra cuenta de drive. Este acceso nos permitirá guardar los resultados del análisis. 
+
+5) Ejecutar la celda "Download CCD Dataset and Test Boltz2". Esto descarga diccionarios de ligandos.
+
+6) Ejecutar la celda "Generate Parameters". Crea el archivo YAML base.
+
+7) Configurar entidades:
+   - En la celda "Protein (Primary)": pegar la secuencia de la proteína (formato FASTA sin encabezado).
+   - Para agregar ligando: hacer clic en "Add Entity" → seleccionar "Ligand".
+   - En SMILES, ingresar la fórmula del compuesto.
+   - Marcar la opción "Predict Ligand Affinity".
+   - Hacer clic en "Save YAML" y luego en "Next".
+
+8) Configurar la predicción:
+   - En advanced options sleccionar Sampling Steps: 50
+   - Job Name: nombre descriptivo (ej: cSrc_dasatinib)
+   - Hacer clic en "Ok"
+
+9) Ejecutar la celda "Run Boltz2 Engine". Esperar a que finalice (10-40 minutos).
+
+10) Ejecutar la celda "Analyse Results" para ver métricas y vista previa.
+
+11) Ejecutar la celda "Copy Results to Drive" para guardar en Google Drive.
+
+12) Ejecutar la celda "Download Results (.zip)" y descargar el archivo.
+
+13) Explorar la carpeta descargada. Contiene:
+    - model_0.pdb (estructuras predichas)
+    - confidence_summary.json (métricas ipTM, pTM, pLDDT)
+    - input.yaml (configuración usada)
+    - carpetas msa/ y templates/
+
+#### Visualización en Chimera
+
+1) Abrir ambos modelos (experimental + predicciones Boltz) en Chimera.
+
+2) Alinear usando MatchMaker (referencia: 3G5D).
+
+3) Analizar el modelado de la proteína y la ubicación del ligando.
+
+##### Responda
 
 a) ¿Boltz predice correctamente la orientación de dasatinib en el sitio ATP?
 
 b) ¿Los puentes de H reportados se reproducen en el modelo?
 
-c) Calcule el RMSD de los átomos pesados de dasatinib entre el modelo y 3G5D. ¿Es menor a 1.5 Å?
+c) ¿Se corresponde la afinidad con la reportada en la entrada del PDB?
 
-d) ¿Se corresponde la afinidad con la reportada en la entrada del PDB?
+### Modelado de c-Src con mutación T341M
 
-#### Modelado de c-Src con mutación T341M
+La mutación **T341M** (treonina → metionina) aumenta el tamaño del gatekeeper, cerrando el acceso al bolsillo hidrofóbico I y generando resistencia a inhibidores tipo I como dasatinib.
 
-La mutación **T341M** (treonina → metionina) aumenta el tamaño del gatekeeper, cerrando el acceso al bolsillo hidrofóbico I y generando resistencia a inhibidores tipo I como dasatinib y bosutinib.
-
-###### Pasos
+#### Pasos
 
 1. Modificar la secuencia de c-Src: cambiar el residuo en posición 341 de T a M.
-2. Crear nuevo archivo para la mutante con dasatinib.
-3. Ejecutar Boltz con la misma secuencia del ligando.
-4. Alinear el modelo mutante con 3G5D.
 
-###### Responda
+    ??? info "Importante" 
+        La secuencia proporcionada corresponde al dominio quinasa de c-Src, que abarca los **residuos 250 a 533** de la proteína completa (UniProt P12931). El número de residuo 341 (T341 en la proteína completa) se encuentra dentro de este fragmento ya que 341 > 250.
+
+        Para calcular la posición relativa dentro de nuestra secuencia:
+
+        **341 (posición en proteína completa) - 250 (inicio del dominio) = posición 91 en nuestra secuencia.**
+
+        Es decir, la treonina que debe mutarse es el **aminoácido número 91** contando desde el extremo N-terminal de la secuencia que estamos utilizando.
+
+        **Mutada T341M:**
+
+        GHMQTQGLAKDAWEIPRESLRLEVKLGQGCFGEVWMGTWNGTTRVAIKTLKPGTMSPEAFLQEAQVMKKLRHEKLVQLYAVVSEEPIYIVMEYMSKGCLLDFLKGEMGKYLRLPQLVDMAAQIASGMAYVERMNYVHRDLRAANILVGENLVCKVADFGLARLIEDNEYTARQGAKFPIKWTAPEAALYGRFTIKSDVWSFGILLTELTTKGRVPYPGMVNREVLDQVERGYRMPCPPECPESLHDLMCQCWRKDPEERPTFEYLQAFLEDYFTSTEPQYQPGENL
+
+2. Ejecutar Boltz con la misma secuencia del ligando en las mismas condiciones que el ejercicio anterior.
+
+3. Alinear el modelo mutante con 3G5D.
+
+#### Responda
 
 a) ¿Cómo se orienta la metionina 341? ¿Ocluye parcialmente el sitio de unión?
 
 b) ¿Se mantienen los tres puentes de H de dasatinib? Si no, ¿cuál se pierde?
 
-c) Según el paper (Sección 2.3, páginas 14-15), dasatinib pierde actividad contra T341M (EC50 > 10 μM). ¿Su modelo es consistente con este dato?
+c) Según el paper asociada a la entrada de PDB, dasatinib pierde actividad contra T341M (EC50 > 10 μM). ¿Su modelo es consistente con este dato?
 
-<!--
-## Ejercicios extra
+### Ejercicio extra: Mutación de la triada catalítica
 
-#### Ejercicio E1
+#### Residuos a modificar
 
-En la Tabla 12 y Figura 8, Boltz-2 logra una correlación de Pearson R = 0.83 en TYK2. En el screening virtual prospectivo (Sección 5.4, Figura 8), todos los compuestos generados por SynFlowNet y la librería Kinase fueron predichos como binders por ABFE.
+- **D407A**: cambiar Aspartato (D) por Alanina (A) en la posición 157 de la secuencia del dominio quinasa (residuos 250-533).
+- **F408A**: cambiar Fenilalanina (F) por Alanina (A) en la posición 158 de la secuencia del dominio quinasa.
 
-###### Consigna
+En el motivo DFG original (`ADFGL`), luego de las mutaciones queda `AAAGL`.
 
-1. Usando Boltz-2, predigan la afinidad de los 10 compuestos públicos de TYK2 reportados en el paper (Figura 21 del suplemento). Si no tienen las estructuras, usen 3 compuestos conocidos de TYK2 de PDBbind o KLIFS.
+#### Secuencia mutada (D407A + F408A)
 
-2. Comparen sus predicciones contra los valores experimentales (Ki o IC50 en nM). Calculen:
-   - Pearson R
-   - MAE en kcal/mol
-   - Porcentaje dentro de 1 kcal/mol
+```
+GHMQTQGLAKDAWEIPRESLRLEVKLGQGCFGEVWMGTWNGTTRVAIKTLKPGTMSPEAFLQEAQVMKKLRHEKLVQLYAVVSEEPIYIVMEYMSKGCLLDFLKGEMGKYLRLPQLVDMAAQIASGMAYVERMNYVHRDLRAANILVGENLVCKVAAAGLARLIEDNEYTARQGAKFPIKWTAPEAALYGRFTIKSDVWSFGILLTELTTKGRVPYPGMVNREVLDQVERGYRMPCPPECPESLHDLMCQCWRKDPEERPTFEYLQAFLEDYFTSTEPQYQPGENL
+```
 
-3. Comparen sus resultados con lo reportado en el paper (R = 0.83, centered MAE = 0.53 kcal/mol según Tabla 12).
+#### Preguntas guía
 
-###### Respondan
+1) En base a tu modelo de Boltz-2 para la proteína mutada + dasatinib: ¿observas cambios en los puentes de hidrógeno o en las distancias de contacto con respecto a la proteína WT? ¿Cuáles?
 
-a) ¿Obtuvieron una correlación similar a la reportada? Si no, ¿a qué creen que se deba (ej: versión de Boltz-2, parámetros de inferencia, selección de compuestos)?
+2) Compará la estructura predicha por Boltz-2 de la proteína mutada vs la WT. ¿Hay diferencias en el loop de activación? ¿Eso afectaría la unión del ligando?
 
-b) Según el paper, TYK2 está en el test set del modelo de afinidad (es decir, no hubo fuga de datos). ¿Cómo influye esto en la confianza que le tendrían a Boltz-2 para un screening virtual sobre TYK2?
+3) ¿La mutación D407A podría alterar la afinidad de unión de un inhibidor que interactúa con el aspartato? Justificá con lo que observaste.
 
-c) ¿Qué características de TYK2 como blanco (quinasa, bolsillo ATP bien definido, muchos datos de entrenamiento) podrían explicar el buen desempeño?
-
-#### Ejercicio E2
-
-En la Figura 12 (página 44 del PDF), se muestran los resultados para múltiples asayos del validation set. Varios GPCRs (ej: P21453, P51686, P41146, P43115) presentan correlaciones de Pearson muy variables: desde R = 0.732 (P21453) hasta R = 0.065 (P43115) y R = 0.104 (P51686). El promedio del validation set fue R = 0.42 (Tabla 15).
-
-###### Consigna
-
-1. Seleccionen dos asayos de GPCR de la Figura 12: uno con desempeño alto (ej: P21453, R=0.73) y uno con desempeño bajo (ej: P43115, R=0.065).
-
-2. Para cada uno, respondan:
-
-   a) ¿Cuál es el MAE centered reportado? ¿Es muy diferente entre ambos?
-
-   b) Observen la dispersión de los puntos en la gráfica. ¿Hay algún compuesto outlier que pueda estar afectando la correlación?
-
-   c) Según el texto del paper (Sección 6, página 11), ¿qué limitación mencionan sobre GPCRs? ¿Cómo se relaciona con lo que ven acá?
-
-3. Comparación con su propia predicción (opcional): Si tienen acceso a Boltz-2, tomen 10 compuestos de un asayo de GPCR de BindingDB y predigan afinidad. Comparen R y MAE contra lo reportado.
-
-###### Respondan
-
-a) ¿Por qué creen que Boltz-2 funciona bien en algunos GPCRs y mal en otros? (Ayuda: pensar en disponibilidad de estructuras experimentales en el entrenamiento, diversidad de ligandos, dinámica conformacional del receptor)
-
-b) ¿Qué métrica del paper (ipTM, pLDDT del pocket, diversidad química del asayo) podría usarse como filtro para saber a priori si Boltz-2 va a funcionar bien en un asayo nuevo?
-
-c) ¿Qué recomendarían a un equipo de descubrimiento de fármacos que quiere usar Boltz-2 para optimizar leads contra un GPCR?
-
-#### Ejercicio E3
-
-En la Sección 5.3 y Tabla 16 (página 43), Boltz-2 evaluado en 8 asayos internos ciegos de Recursion mostró un desempeño muy variable: correlaciones desde R = 0.165 hasta R = 0.634, con un promedio de R = 0.39. En particular, la Tabla 16 muestra un centered MAE de 1.36 kcal/mol (vs 0.86 kcal/mol en validation set) y solo 3 de 8 asayos superaron R > 0.55. El paper reconoce que "sin preparación adicional, el desempeño es limitado en algunas clases de proteínas".
-
-###### Consigna
-
-1. Sin acceso a los datos de Recursion, usen esta información para responder.
-
-2. Comparen los resultados de la Tabla 16 (private benchmarks) con la Tabla 15 (validation set público). Calculen la diferencia en:
-   - Pearson R promedio
-   - centered MAE
-   - Porcentaje dentro de 1 kcal/mol
-
-3. Identifiquen posibles causas de esta caída de desempeño según lo discutido en el paper (Secciones 5.3 y 6).
-
-###### Respondan
-
-a) ¿Cuáles son las tres razones principales que da el paper para explicar por qué el desempeño en asayos privados puede ser peor que en benchmarks públicos?
-
-b) En la Tabla 16, el centered MAE es 1.36 kcal/mol. ¿Es este valor útil para distinguir entre un compuesto que merece ser sintetizado y uno que no? ¿Por qué?
-
-c) Si ustedes lideran un proyecto de discovery en la industria y ven estos resultados, ¿qué harían? ¿Usarían Boltz-2 igual? ¿Cómo lo validarían internamente?
-
-d) Reflexión final: ¿Qué aprendieron sobre las fortalezas y debilidades de Boltz-2 haciendo estos tres ejercicios?
-
-#### Ejemplo E4
-
-##### Caso seleccionado
-
-| Item | Valor |
-|------|-------|
-| Proteína | NF-kB p50 (dominio de unión a ADN, residuos 40-366) |
-| PDB referencia | 1VKX |
-| Secuencia ADN consenso | 5'-GGGGACTTTCC-3' (cadena sentido) |
-| Longitud ADN | 11 pb |
-| Resolución estructura | 2.3 Å |
-
-##### Obtener la secuencia de la proteína
-
-Secuencia del dominio de unión a ADN de NF-kB p50 (residuos 41-363, según numeración de 1VKX):
-
-(completar con la secuencia FASTA provista por la cátedra)
-
-##### Entrada en AlphaFold Server
-
-**Entity 1 (Protein)**
-- Paste la secuencia de NF-kB p50
-
-**Entity 2 (DNA)**
-- Type: DNA
-- Sequence: GGGGACTTTCC
-- Double stranded: Yes
-
-**Configuración**
-- Job name: NFKB_p50_ADN_1VKX
-- Seed: 1
-- Number of models: 5
-
-##### Analizar en Chimera después de obtener el modelo
-
-1. **Alineamiento estructura experimental (1VKX) vs modelo AF3**
-   - Calcular RMSD de la proteína (Cα)
-   - Calcular RMSD del ADN (átomos de fósforo)
-
-2. **Interacciones específicas a chequear (según 1VKX)**
-   - Arg54, Arg56, Arg59: deben contactar guaninas del ADN
-   - Tyr57: interacción de stacking
-   - Residuos básicos (Lys, Arg) con fosfatos
-
-3. **Métricas de AF3 a reportar**
-   - ipTM (protein-DNA interface)
-   - pLDDT promedio en la interfaz
-   - PAE entre proteína y ADN
-
-##### Responder
-
-a) ¿Cuál es el RMSD de la proteína entre el modelo AF3 y 1VKX?
-
-b) ¿El modelo AF3 predice que Arg54, Arg56 y Arg59 contactan las mismas guaninas que en el cristal?
-
-c) ¿Qué valor de ipTM reporta AF3 para este complejo?
-
-d) ¿Hay diferencias en la curvatura del ADN entre el modelo y el cristal?
-
-#### Ejemplo E5 
-
-Repetir la misma predicción cambiando la secuencia de ADN por una secuencia scramble:
-
-**Secuencia scramble**: AGTCCGACTAG
-
-**Pregunta**: ¿El ipTM del complejo con secuencia scramble es significativamente menor al de la secuencia consenso?
-
-#### Ejemplo E6: STRING
+## Ejercicio Extra: STRING
 La base de datos STRING contiene datos de interacciones proteína-proteína conocidos y predichos. Los datos derivan de experimentos high-throughput, datos de co-expresión, literatura y contexto genómico. Abarca más de 5 millones de proteínas de más de 1100 organismos. 
 
-##### Interacciones de la Proteína Retinoblastoma (Rb)
+### Interacciones de la Proteína Retinoblastoma (Rb)
 
 1. En STRING se puede realizar una búsqueda por el o los nombres de la proteína, o el identificador, múltiples proteínas, múltiples secuencias, organismos o familias de proteínas.
 
@@ -612,7 +561,6 @@ La base de datos STRING contiene datos de interacciones proteína-proteína cono
     * ¿Puede encontrar a Rb?
     * ¿Encuentra a los interactores con mayor evidencia?
     * ¿Puede nombrar al menos una enzima que fosforile a Rb y otra que la desfosforile?
-
 
 <!--
 #### Ejercicios
