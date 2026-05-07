@@ -1161,6 +1161,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ejercicio-2-modelado-y-analisis-de-interacciones-de-c-src-quinasa-con-inhibidores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicio 2: Modelado y análisis de interacciones de c-Src quinasa con inhibidores
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1524,145 +1535,108 @@ SRILVSIGESFGTSEKFQKINQMVCNSDRVLKRSAEGSNPPKPLKK
 </li>
 <li>
 <p>Abrir el modelado el Chimera y replicar el análisis anterior para evaluar la capacidad de Alphafold de modelar puentes de hidrógeno y contactos hidrofóbicos. </p>
+<details class="importante">
+<summary>Importante</summary>
+<p>Recordá que en el modelado los residuos comienzan en la posición 0, por lo que la numeración no será la misma que en la estructura cristalizada.</p>
+<p>Por ejemplo select #0:845.C sería select #0:17.C</p>
+</details>
 </li>
 </ol>
-<p>*** Importante: Recordá que en el modelado los residuos comienzan en la posición 0, por lo que la numeración no será la misma que en la estructura cristalizada.***
-Por ejemplo select #0:845.C sería select #0:17.c</p>
 <p>Según tus observaciones:
 - ¿AF3 reproduce correctamente los puentes de H de backbone? (Responde: sí, parcialmente, o no, y justifica cuántos y cuáles).
 - ¿AF3 reproduce los contactos hidrofóbicos de la hélice rH1? (Responde: sí, en qué medida, y mencioná algún contacto que haya fallado).</p>
+<hr>
+<h2 id="ejercicio-2-modelado-y-analisis-de-interacciones-de-c-src-quinasa-con-inhibidores">Ejercicio 2: Modelado y análisis de interacciones de c-Src quinasa con inhibidores</h2>
+<p>c-Src es una tirosina quinasa no receptora que juega un papel central en la proliferación celular y está hiperactivada en múltiples cánceres (colón, mama, pulmón, páncreas). El dominio quinasa (SH1) presenta una estructura bilobulada típica:</p>
+<ul>
+<li><strong>Lóbulo N-terminal</strong>: contiene la bisagra (hinge region) donde se une el ATP (residuos clave: M344, E342).</li>
+<li><strong>Lóbulo C-terminal</strong>: contiene el loop de activación con el motivo DFG (D407, F408, G409).</li>
+<li><strong>Gatekeeper residue (T341)</strong>: controla el acceso al bolsillo hidrofóbico I; su mutación a Met o Ile causa resistencia a inhibidores como dasatinib.</li>
+<li><strong>αC-hélice</strong>: su desplazamiento (conformación CHO) estabiliza inhibidores tipo II.</li>
+</ul>
+<p>El inhibidor <strong>dasatinib</strong> (BMS-354825) es un inhibidor tipo I de alta potencia (IC50 = 0.5 nM) que se une a la conformación activa (DFG-in, αC-in). Forma tres puentes de H críticos:</p>
+<ol>
+<li>NH del tiazol con backbone O de M344</li>
+<li>N del tiazol con backbone N de M344</li>
+<li>Amida con T341 (gatekeeper)</li>
+</ol>
+<p>En este ejercicio, usaremos <strong>Boltz</strong> (herramienta de modelado de complejos proteína-ligando) para predecir estructuras de c-Src con inhibidores y evaluar el impacto de mutaciones.</p>
+<h4 id="recursos-necesarios">Recursos necesarios</h4>
+<ul>
+<li>PDB 3G5D (c-Src + dasatinib, referencia experimental)</li>
+<li>PDB 2SRC (c-Src inactiva completa, multi-dominio)</li>
+<li>PDB 2OIQ (c-Src + imatinib, conformación DFG-out)</li>
+<li>PDB 2H8H (c-Src + saracatinib, tipo II)</li>
+</ul>
+<h4 id="busqueda-en-intact-de-interacciones-de-c-src-con-inhibidores">Búsqueda en IntAct de interacciones de c-Src con inhibidores</h4>
+<h6 id="pasos_3">Pasos</h6>
+<ol>
+<li>Ingresar a IntAct: https://www.ebi.ac.uk/intact/</li>
+<li>Buscar "SRC"</li>
+<li>En "Interactor Type" seleccionar "small molecule"</li>
+<li>En la pestaña de Interactors buscar "dasatinib".</li>
+</ol>
+<h6 id="responda">Responda</h6>
+<ul>
+<li>
+<p>¿Cuánatas veces aparece este interactor en la búsqueda actual?</p>
+</li>
+<li>
+<p>¿Qué otros inhibidores aparecen en IntAct? (ej: bosutinib, saracatinib)</p>
+</li>
+</ul>
+<p>Ahora vamos a explorar la estructura cristalográfica de c-Src con un ligando. 
+1. Explorar la entrada del PDB 3G5D.
+2. Descargar la estructura en formato .cif</p>
+<h6 id="responda_1">Responda</h6>
+<ul>
+<li>
+<p>¿Cuántas cadenas tienen la estructura descargada?</p>
+</li>
+<li>
+<p>¿Podés identificar la posición del ligando?</p>
+</li>
+<li>
+<p>¿Hay puentes de hidrógeno entre la proteína y el ligando? En caso afirmativo, indicar en que residuos</p>
+</li>
+<li>
+<p>¿Cual es la energía de afinidad indicada en la entrada del PDB?</p>
+</li>
+</ul>
+<h4 id="modelado-de-c-src-wild-type-con-boltz">Modelado de c-Src wild type con Boltz</h4>
+<p>Ahora vamos a modelar esta interacción usando Boltz</p>
+<h6 id="preparacion-de-la-secuencia-y-ligandos">Preparación de la secuencia y ligandos</h6>
+<p><strong>Secuencia del dominio quinasa de c-Src humano (residuos 250-533)</strong>: 
+GHMQTQGLAKDAWEIPRESLRLEVKLGQGCFGEVWMGTWNGTTRVAIKTLKPGTMSPEAFLQEAQVMKKLRHEKLVQLYAVVSEEPIYIVTEYMSKGCLLDFLKGEMGKYLRLPQLVDMAAQIASGMAYVERMNYVHRDLRAANILVGENLVCKVADFGLARLIEDNEYTARQGAKFPIKWTAPEAALYGRFTIKSDVWSFGILLTELTTKGRVPYPGMVNREVLDQVERGYRMPCPPECPESLHDLMCQCWRKDPEERPTFEYLQAFLEDYFTSTEPQYQPGENL</p>
+<p><strong>Estructura química de dasatinib (SMILES)</strong>: 
+CC1=C(C(=CC=C1)Cl)NC(=O)C2=CN=C(S2)NC3=CC(=NC(=N3)C)N4CCN(CC4)CCO</p>
+<h6 id="configuracion-de-boltz">Configuración de Boltz</h6>
+<p>Falta!</p>
+<h6 id="visualizacion-en-chimera">Visualización en Chimera</h6>
+<ol>
+<li>Abrir ambos modelos (experimental + predicciones Boltz) en Chimera.</li>
+<li>Alinear usando MatchMaker (referencia: 3G5D).</li>
+<li>Analizar el modelado de la proteína y la ubicación del ligando.</li>
+</ol>
+<h6 id="responda_2">Responda</h6>
+<p>a) ¿Boltz predice correctamente la orientación de dasatinib en el sitio ATP?</p>
+<p>b) ¿Los puentes de H reportados se reproducen en el modelo?</p>
+<p>c) Calcule el RMSD de los átomos pesados de dasatinib entre el modelo y 3G5D. ¿Es menor a 1.5 Å?</p>
+<p>d) ¿Se corresponde la afinidad con la reportada en la entrada del PDB?</p>
+<h4 id="modelado-de-c-src-con-mutacion-t341m">Modelado de c-Src con mutación T341M</h4>
+<p>La mutación <strong>T341M</strong> (treonina → metionina) aumenta el tamaño del gatekeeper, cerrando el acceso al bolsillo hidrofóbico I y generando resistencia a inhibidores tipo I como dasatinib y bosutinib.</p>
+<h6 id="pasos_4">Pasos</h6>
+<ol>
+<li>Modificar la secuencia de c-Src: cambiar el residuo en posición 341 de T a M.</li>
+<li>Crear nuevo archivo para la mutante con dasatinib.</li>
+<li>Ejecutar Boltz con la misma secuencia del ligando.</li>
+<li>Alinear el modelo mutante con 3G5D.</li>
+</ol>
+<h6 id="responda_3">Responda</h6>
+<p>a) ¿Cómo se orienta la metionina 341? ¿Ocluye parcialmente el sitio de unión?</p>
+<p>b) ¿Se mantienen los tres puentes de H de dasatinib? Si no, ¿cuál se pierde?</p>
+<p>c) Según el paper (Sección 2.3, páginas 14-15), dasatinib pierde actividad contra T341M (EC50 &gt; 10 μM). ¿Su modelo es consistente con este dato?</p>
 <!--
----
-
-## Ejercicio 2: Modelado y análisis de interacciones de c-Src quinasa con inhibidores
-
-c-Src es una tirosina quinasa no receptora que juega un papel central en la proliferación celular y está hiperactivada en múltiples cánceres (colón, mama, pulmón, páncreas). El dominio quinasa (SH1) presenta una estructura bilobulada típica:
-
-- **Lóbulo N-terminal**: contiene la bisagra (hinge region) donde se une el ATP (residuos clave: M344, E342).
-- **Lóbulo C-terminal**: contiene el loop de activación con el motivo DFG (D407, F408, G409).
-- **Gatekeeper residue (T341)**: controla el acceso al bolsillo hidrofóbico I; su mutación a Met o Ile causa resistencia a inhibidores como dasatinib.
-- **αC-hélice**: su desplazamiento (conformación CHO) estabiliza inhibidores tipo II.
-
-El inhibidor **dasatinib** (BMS-354825) es un inhibidor tipo I de alta potencia (IC50 = 0.5 nM) que se une a la conformación activa (DFG-in, αC-in). Forma tres puentes de H críticos:
-
-1. NH del tiazol con backbone O de M344
-2. N del tiazol con backbone N de M344
-3. Amida con T341 (gatekeeper)
-
-En este ejercicio, usaremos **Boltz** (herramienta de modelado de complejos proteína-ligando) para predecir estructuras de c-Src con inhibidores y evaluar el impacto de mutaciones.
-
-#### Recursos necesarios
-- PDB 3G5D (c-Src + dasatinib, referencia experimental)
-- PDB 2SRC (c-Src inactiva completa, multi-dominio)
-- PDB 2OIQ (c-Src + imatinib, conformación DFG-out)
-- PDB 2H8H (c-Src + saracatinib, tipo II)
-
-#### Búsqueda en IntAct de interacciones de c-Src con inhibidores
-
-###### Pasos
-
-1. Ingresar a IntAct: https://www.ebi.ac.uk/intact/
-2. Buscar "c-Src" AND "dasatinib"
-3. Buscar "SRC" AND "inhibitor"
-4. Explorar también la entrada del PDB 3G5D para ver interacciones anotadas.
-
-###### Responda
-
-a) ¿IntAct reporta interacciones directas entre c-Src y dasatinib? ¿Qué método experimental se usó (ITC, SPR, cristalografía)?
-
-b) ¿Qué otros inhibidores de c-Src aparecen en IntAct? (ej: bosutinib, saracatinib)
-
-c) En la estructura 3G5D, ¿qué residuos de c-Src están anotados como "binding site" para dasatinib?
-
-#### Modelado de c-Src wild type con Boltz
-
-###### Preparación de la secuencia y ligandos
-
-**Secuencia del dominio quinasa de c-Src humano (residuos 250-533)**: (completar con la secuencia FASTA provista por la cátedra)
-
-**Estructura química de dasatinib (SMILES)**: (completar)
-
-###### Configuración de Boltz
-
-Falta!
-
-###### Visualización en Chimera
-
-1. Descargar PDB 3G5D desde RCSB (estructura experimental c-Src + dasatinib).
-2. Abrir ambos modelos (experimental + predicciones Boltz) en Chimera.
-3. Alinear usando MatchMaker (referencia: 3G5D).
-4. Analizar.
-
-###### Responda
-
-a) ¿Boltz predice correctamente la orientación de dasatinib en el sitio ATP?
-
-b) ¿Los tres puentes de H reportados (con M344 y T341) se reproducen en el modelo?
-
-c) Calcule el RMSD de los átomos pesados de dasatinib entre el modelo y 3G5D. ¿Es menor a 1.5 Å?
-
-d) ¿Qué pLDDT (confianza local) tiene el loop de activación (residuos ~400-410) en el modelo?
-
-#### Modelado de c-Src con mutación T341M (gatekeeper resistente)
-
-La mutación **T341M** (treonina → metionina) aumenta el tamaño del gatekeeper, cerrando el acceso al bolsillo hidrofóbico I y generando resistencia a inhibidores tipo I como dasatinib y bosutinib.
-
-###### Pasos
-
-1. Modificar la secuencia de c-Src: cambiar el residuo en posición 341 de T a M.
-2. Crear nuevo archivo para la mutante con dasatinib.
-3. Ejecutar Boltz con la misma secuencia del ligando.
-4. Alinear el modelo mutante con 3G5D.
-
-###### Responda
-
-a) ¿Cómo se orienta la metionina 341? ¿Ocluye parcialmente el sitio de unión?
-
-b) ¿Se mantienen los tres puentes de H de dasatinib? Si no, ¿cuál se pierde?
-
-c) Según el paper (Sección 2.3, páginas 14-15), dasatinib pierde actividad contra T341M (EC50 > 10 μM). ¿Su modelo es consistente con este dato?
-
-d) Visualice la superficie de van der Waals del sitio activo. ¿Hay steric clash entre M341 y dasatinib?
-
-#### Modelado de c-Src + inhibidor tipo II (saracatinib o imatinib)
-
-Los inhibidores tipo II (ej: saracatinib, PDB 2H8H; o imatinib, PDB 2OIQ) se unen a la conformación inactiva (DFG-out), donde F408 se desplaza y se abre el **bolsillo DFG**.
-
-###### Pasos
-
-1. Seleccionar un inhibidor tipo II: saracatinib (AZD0530) o imatinib.
-2. Obtener SMILES desde PubChem.
-3. Modelar c-Src WT + inhibidor tipo II con Boltz.
-4. Comparar con la estructura experimental correspondiente (2H8H para saracatinib, 2OIQ para imatinib).
-
-###### Responda
-
-a) En el modelo tipo II, ¿observa el outward flip de F408 (DFG-out)? ¿Cómo lo identifica en Chimera?
-
-b) ¿Se forma el puente de H característico entre el inhibidor y D407 (backbone) y E313 (αC-hélice)?
-
-c) Compare el RMSD del modelo con la estructura experimental. ¿Boltz predice mejor la conformación tipo I o tipo II?
-
-#### Modelado con mutación en la tríada catalítica (D407A, F408A)
-
-La tríada **DFG** (D407-F408-G409) es esencial para la catálisis y para la unión de inhibidores tipo II. Mutaremos ambos residuos a alanina para ver el efecto.
-
-###### Pasos
-
-1. Crear secuencia mutante: cambiar D407 por A y F408 por A.
-2. Modelar c-Src_D407A_F408A + dasatinib (tipo I) y también + saracatinib (tipo II) si el tiempo lo permite.
-3. Comparar con los modelos WT.
-
-###### Responda
-
-a) ¿La mutación D407A/F408A afecta la unión de dasatinib? ¿Se pierden los puentes de H con M344?
-
-b) ¿Cómo se ve afectada la unión del inhibidor tipo II? ¿Se mantiene el puente de H con el backbone de D407 si D407 es ahora A?
-
-c) Según el paper (Tablas S3 y S4), la mutación del DFG pocket elimina la unión de imatinib y análogos. ¿Su modelo reproduce esto?
-
-d) ¿Qué diferencia observa en el pLDDT del loop de activación entre WT y mutante? ¿La mutación desestabiliza la región?
-
 ## Ejercicios extra
 
 #### Ejercicio E1
@@ -1671,7 +1645,7 @@ En la Tabla 12 y Figura 8, Boltz-2 logra una correlación de Pearson R = 0.83 en
 
 ###### Consigna
 
-1. Usando Boltz-2 (o el modelo de afinidad que tengan disponible), predigan la afinidad de los 10 compuestos públicos de TYK2 reportados en el paper (Figura 21 del suplemento). Si no tienen las estructuras, usen 3 compuestos conocidos de TYK2 de PDBbind o KLIFS.
+1. Usando Boltz-2, predigan la afinidad de los 10 compuestos públicos de TYK2 reportados en el paper (Figura 21 del suplemento). Si no tienen las estructuras, usen 3 compuestos conocidos de TYK2 de PDBbind o KLIFS.
 
 2. Comparen sus predicciones contra los valores experimentales (Ki o IC50 en nM). Calculen:
    - Pearson R
