@@ -296,7 +296,9 @@ SRILVSIGESFGTSEKFQKINQMVCNSDRVLKRSAEGSNPPKPLKK
 
 
 Según tus observaciones:
+
 - ¿AF3 reproduce correctamente los puentes de H de backbone? (Responde: sí, parcialmente, o no, y justifica cuántos y cuáles).
+
 - ¿AF3 reproduce los contactos hidrofóbicos de la hélice rH1? (Responde: sí, en qué medida, y mencioná algún contacto que haya fallado).
 
 ---
