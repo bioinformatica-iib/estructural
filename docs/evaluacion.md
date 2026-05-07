@@ -5,14 +5,14 @@
 
 * Lunes 1 de Junio. Entrega de las presentaciones de todos los grupos.
 
-* Martes 2 de Junio 9 hs. Presentación oral.
+* Martes 2 de Junio 9 a 13 hs. Presentación oral.
 
-* Martes 9 de Junio 9 hs. Presentación oral.
+* Martes 9 de Junio 9 a 13 hs. Presentación oral.
 
 
 ### Evaluación Escrita
 
-* Jueves 11 de Junio 9 hs
+* Jueves 11 de Junio 9 a 13 hs
 
 
 ## Lineamientos Generales de Presentaciones Orales
@@ -23,12 +23,12 @@
 
     * Presentación de literatura
 
-* Enviar mail a la JTP para informar los integrantes y la modalidad elegida
+* Llenar el formulario para informar los integrantes y la modalidad elegida
 
 
 
 
-* **Conformación de los grupos:** Se deberán formar grupos de **TRES** integrantes, quienes tengan problemas para armarlos, comunicarse con Juliana. Hay tiempo para conformar los grupos hasta el **Jueves 14/5**.
+* **Conformación de los grupos:** Se deberán formar grupos de **TRES** integrantes, quienes tengan problemas para armarlos, avisen así coordinamos. Hay tiempo para conformar los grupos hasta el **Jueves 14/5**.
 
 * **Selección de modalidad:** Se podrá seleccionar entre dos opciones. Esto incluye definir qué modalidad van a usar y qué sistema de estudio/tema de seminario van a cubrir. Hay tiempo para las selecciones hasta el **Jueves 14/5**.
 
