@@ -51,7 +51,7 @@
 
 4. Integración con bases de datos:
 
-      ProViz reúne la información de numerosasa bases de datos y permite visualizarlas conectadas a un alineamiento. El el TP1 recolectamos información sobre p53 de UniProt y PFAM/InterPro. 
+      ProViz reúne la información de numerosas bases de datos y permite visualizarlas conectadas a un alineamiento. El el TP1 recolectamos información sobre p53 de UniProt y PFAM/InterPro. 
 
       1. Localizar los dominios identificados previamente en UniProt y/o Pfam dentro de la interfaz de ProViz
 
