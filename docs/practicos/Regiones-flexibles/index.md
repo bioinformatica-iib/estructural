@@ -71,7 +71,7 @@ Para poder visualizar alineamientos múltiples de secuencias (MSA, de sus siglas
 
 1. Carga de datos 
 
-      Abrir Jalview y cargar el conjunto de secuencias de p53 disponible en [los materiales del TP1](https://drive.google.com/file/d/1L8vrfYpbvOb3ToTHLf4CLJ1g6NdflZSF/view?usp=sharing).
+      Abrir Jalview y cargar el conjunto de secuencias de p53 disponible en [los materiales del TP](https://drive.google.com/file/d/1XUmp9b69L4vSz8fqTrfrq_wnDQ0IRSRZ/view).
 
       *File* → *Input Alignment* →  *From File*
 
@@ -106,6 +106,10 @@ Para poder visualizar alineamientos múltiples de secuencias (MSA, de sus siglas
          **Eliminar gaps:** Seleccionar con el mouse el gap o arrastrando sobre el grupo de gaps a eliminar y presionar “Backspace” o “Del”
 
          **Agregar gaps:** Presionar F2. En primera posición del alineamiento en la primera secuencia aparecerá un cursor de color negro. Colocarlo en la posición donde se desee ingresar un gap y presione la barra espaciadora.
+
+         Una forma mas sencilla de editar alineamientos el aplicando algún código de color. En la próxima sección lo vamos a ver en detalle, por el momento prueben aplicando:
+
+         *Colour* → *Codigo de color a elección*
 
 
 ### Ejercicio 3. Propiedades fisicoquímicas y conservación
@@ -152,7 +156,7 @@ También es posible disminuir la intensidad de los colores según el grado de co
 
       Se abrirá una ventana en la cual se puede seleccionar el porcentaje de identidad del filtro en escala de 0 a 100%. Utilizando el filtro, responder:
 
-      1. ¿Qué regiones muestran una identidad de secuencia mayor al 80% en el MSA de p53? ¿Y al 100%?
+      1. ¿Qué regiones muestran una identidad de secuencia mayor al 80% en el MSA de p53? ¿Y del 100%?
       2. Correlacionar estas regiones con los dominios globulares de Pfam. 
 
 3. Patrones de sustitución
@@ -259,7 +263,7 @@ Entre los algoritmos que se basan en composición de secuencia podemos nombrar I
 
       Asegurarse que los datos se cargaron correctamente, esperamos un dataframe con 4 columnas.
 
-      3. Clasificar las posiciones en pase a la predicción realizada por IUPred como *Orden* y *Desorden*.
+      3. Clasificar las posiciones en base a la predicción realizada por IUPred como *Orden* y *Desorden*.
 
       Primero crearemos una columna en el dataframe:
 
@@ -282,7 +286,7 @@ Entre los algoritmos que se basan en composición de secuencia podemos nombrar I
       geom_line(color="navyblue") +
       geom_point(aes(color=Prediccion)) +
       geom_hline(yintercept = 0.5,lty="dotted",size=1) +
-      theme_linedraw()
+      theme_minimal()
       ```
 
       Se genera el siguiente gráfico:
@@ -366,7 +370,7 @@ Entre los algoritmos que se basan en composición de secuencia podemos nombrar I
       geom_line(color="navyblue") +
       geom_line(data = p53,mapping = aes(x=Posición,y=pLDDT/100),col="red")+
       geom_hline(yintercept = 0.5,lty="dotted",size=1) +
-      theme_linedraw() 
+      theme_minimal() 
       pLDDT_con_Iupred
       ```
 
@@ -386,7 +390,7 @@ Entre los algoritmos que se basan en composición de secuencia podemos nombrar I
       geom_point(aes(col=pLDDT_Prediccion)) +
       geom_hline(yintercept = 0.5,lty="dotted",size=1) +
       geom_vline(xintercept = 50,lty="dotted",size=1) +
-      theme_linedraw()
+      theme_minimal()
       pLDDT_vs_IUPred
       ```
 
@@ -571,7 +575,7 @@ Una de las aplicaciones principales de la predicción de desorden es encontrar r
    LDDQRRMMTPQKLREYQDIIREVKDANA
    ```
 
-1. Utilizando IUPred2A, pegar solamente la secuencia sin el header ¿Qué región de la proteína trataría de cristalizar?
+1. Utilizando IUPred3, pegar solamente la secuencia sin el header ¿Qué región de la proteína trataría de cristalizar?
 
 3. Para ver si la selección fue la correcta, *blastear* la secuencia en la página web [https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi).
 
