@@ -29,8 +29,8 @@ A definir próximamente !
 | Martes, 05/05/2026    | 9 - 13 hs     | Teórica       | [T4. Interacciones proteína-proteína](/estructural/teoricas/teorica4/)                  | L.Chemes |
 | Jueves, 07/05/2026    | 9 - 13 hs	    | Práctico      | [TP4. Interacciones proteína-proteína](/estructural/practicos/ppi)| M. Didier Garnham |
 | Martes, 12/05/2026    | 9 - 13 hs	    | Teórica       | [T5. Proteínas desordenadas y predicción de desorden](/estructural/teoricas/teorica5/)    | L. Chemes |
-| Jueves, 14/05/2026    | 9 - 13 hs     | Práctico      | [TP5. Predicción de desorden y Bases de Datos](/estructural/practicos/Regiones-flexibles)         | G. Romer |
-| Martes, 19/05/2026	  | 9 - 13 hs     | Teórica       | T6. Motivos Lineales: Identificación en secuencia | L. Chemes |
+| Jueves, 14/05/2026    | 9 - 13 hs     | Práctico      | [TP5. Predicción de desorden y Bases de Datos](/estructural/practicos/Regiones-flexibles/)         | G. Romer |
+| Martes, 19/05/2026	  | 9 - 13 hs     | Teórica       | [T6. Motivos Lineales: Identificación en secuencia](/estructural/teoricas/teorica6/) | L. Chemes |
 | Jueves, 21/05/2026    | 9 - 13 hs	    | Práctico      | TP6. Motivos Lineales                        | J. Glavina |
 | Martes, 26/05/2026	  | 9 - 13 hs	    | Teórica       | T7. Diseño de Proteínas | L. Chemes |
 | Jueves, 28/05/2026    | 9 - 13 hs	    | Práctico      | TP7. Diseño de Proteínas  | M. Didier Garnham |
