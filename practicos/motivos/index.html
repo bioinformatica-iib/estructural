@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/Motivos_Lineales/">
+        <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/motivos/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>TP 8. Motivos Lineales - Parte II - Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas</title>
+        <title>TP 7. Motivos Lineales - Parte I - Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tp-8-motivos-lineales-parte-ii" class="md-skip">
+        <a href="#tp-7-motivos-lineales-parte-i" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TP 8. Motivos Lineales - Parte II
+              TP 7. Motivos Lineales - Parte I
             
           </span>
         </div>
@@ -1071,24 +1071,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#materiales" class="md-nav__link">
-    <span class="md-ellipsis">
-      Materiales
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#slides" class="md-nav__link">
-    <span class="md-ellipsis">
-      Slides
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#recursos-a-utilizar" class="md-nav__link">
     <span class="md-ellipsis">
       Recursos a utilizar
@@ -1100,7 +1082,16 @@
         <li class="md-nav__item">
   <a href="#objetivos" class="md-nav__link">
     <span class="md-ellipsis">
-      Objetivos:
+      Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
     </span>
   </a>
   
@@ -1117,78 +1108,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejercicio-1-identificacion-de-motivos-cortos-de-interaccion-en-p53-en-un-alineamiento-propio" class="md-nav__link">
+  <a href="#ejercicio-1-familiarizandonos-con-expresiones-regulares" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 1. Identificación de motivos cortos de interacción en p53 en un alineamiento propio.
+      Ejercicio 1. Familiarizándonos con expresiones regulares
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-2-base-de-datos-de-motivos-lineales-en-eucariotas-elmdb" class="md-nav__link">
+  <a href="#ejercicio-2-identificando-sobre-representacion-de-motivos-en-un-conjunto-de-secuencias" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 2. Base de datos de motivos lineales en Eucariotas (ELMdb)
+      Ejercicio 2. Identificando sobre-representación de motivos en un conjunto de secuencias
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-3-identificando-interacciones-entre-motivos-lineales-y-proteinas-globulares" class="md-nav__link">
+  <a href="#ejercicio-4-utilizando-una-expresion-regular-obtenida-de-instancias-experimentales-para-identificar-motivos-nuevos" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 3. Identificando interacciones entre motivos lineales y proteínas globulares
+      Ejercicio 4. Utilizando una expresión regular obtenida de instancias experimentales para identificar motivos nuevos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-4-analizando-superficies-de-interaccion-entre-motivos-lineales-y-proteinas-globulares" class="md-nav__link">
+  <a href="#ejercicio-5-utilice-un-conjunto-de-secuencias-relacionadas-para-identificar-motivos-de-novo" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 4. Analizando superficies de interacción entre motivos lineales y proteínas globulares
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-5-modelado-de-un-motivo-unido-a-un-dominio-globular-en-alphafold2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio 5. Modelado de un motivo unido a un dominio globular en Alphafold2
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejercicios-adicionales" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicios Adicionales
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ejercicios Adicionales">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-adicional-1-usando-jalview-con-la-proteina-tir-aislada-de-e-coli-patogenica" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio Adicional 1. Usando JalView con la proteína TIR aislada de E. coli patogénica
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejercicio-adicional-2-familiarizandose-con-la-base-de-datos-elm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejercicio Adicional 2. Familiarizándose con la base de datos ELM.
+      Ejercicio 5. Utilice un conjunto de secuencias relacionadas para identificar motivos de novo
     </span>
   </a>
   
@@ -1215,26 +1164,376 @@
 
 
 
-<div><h1 id="tp-8-motivos-lineales-parte-ii" markdown="markdown"><strong>TP 8</strong>. Motivos Lineales - Parte II</h1>
+<div><h1 id="tp-7-motivos-lineales-parte-i" markdown="markdown"><strong>TP 7</strong>. Motivos Lineales - Parte I</h1>
+<h2 id="recursos-a-utilizar">Recursos a utilizar</h2>
+<ul>
+<li>Regex101: <a href="https://regex101.com">https://regex101.com</a></li>
+<li>WebLogo: <a href="https://weblogo.threeplusone.com/create.cgi">https://weblogo.threeplusone.com/create.cgi</a></li>
+<li>MEME: <a href="https://meme-suite.org/meme/tools/meme">https://meme-suite.org/meme/tools/meme</a></li>
+<li>SLiMSearch: <a href="http://slim.icr.ac.uk/slimsearch/">http://slim.icr.ac.uk/slimsearch/</a></li>
+<li>SLiMFinder: <a href="http://www.slimsuite.unsw.edu.au/servers/slimfinder.php">http://www.slimsuite.unsw.edu.au/servers/slimfinder.php</a></li>
+</ul>
+<h2 id="objetivos">Objetivos</h2>
+<ul>
+<li>Familiarizarse con la simbología utilizada en expresiones regulares</li>
+<li>Utilizar la simbología para poder realizar búsquedas basadas en texto</li>
+<li>Familiarizarse con la creación e interpretación de logos de secuencia.</li>
+<li>Familiarizarse con el análisis de enriquecimiento de motivos en un set de secuencias</li>
+<li>Identificar candidatos a nuevos motivos.</li>
+</ul>
+<h2 id="introduccion">Introducción</h2>
+<p>La simbología comúnmente utilizada en expresiones regulares es:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Sı́mbolo</th>
+<th style="text-align: center;">Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>.</code></td>
+<td style="text-align: center;">Cualquier aminoácido es permitido</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[XY]</code></td>
+<td style="text-align: center;">Solo los aminoácidos X e Y son permitidos</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>[^XY]</code></td>
+<td style="text-align: center;">Los aminoácidos X e Y están prohibidos</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>{min,max}</code></td>
+<td style="text-align: center;">Número mı́nimo y máximo de veces que se puede repetir una posición</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>^X</code></td>
+<td style="text-align: center;">El aminoácido X se encuentra en el extremo N-terminal</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>X$</code></td>
+<td style="text-align: center;">El aminoácido X se encuentra en el extremo C-terminal</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>A|B</code></td>
+<td style="text-align: center;">Se encuentra, o bien el aminoácido A, o bien el aminoácido B</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>(AB)|(CD)</code></td>
+<td style="text-align: center;">Se encuentran, o bien, la secuencia de aminoácidos AB, o bien, la secuencia de aminoácidos CD</td>
+</tr>
+</tbody>
+</table>
+<p>Las expresiones regulares admiten otros símbolos especiales con funciones más avanzadas.</p>
+<p>Estos símbolos nos permiten definir patrones que son observados en proteínas naturales para luego identificarlos en otras proteínas y ser puestos a prueba experimentalmente.</p>
+<p>Esta forma de escribir las expresiones regulares es una convención. Es muy utilizada para la búsqueda de motivos y también en lenguajes de programación, como por ejemplo Python. Existen otras, así que debemos conocer la sintaxis correcta de la aplicación o sistema que estemos usando.</p>
+<h2 id="ejercicios">Ejercicios</h2>
+<h3 id="ejercicio-1-familiarizandonos-con-expresiones-regulares">Ejercicio 1. Familiarizándonos con expresiones regulares</h3>
+<p>La reparación del ADN durante la replicación ocurre por un proceso llamado Translesion synthesis (TLS). En este proceso, una polimerasa TLS, inserta un nucleótido en la lesión del ADN y luego, una polimerasa de la familia B extiende el templado. La acción coordinada de estas polimerasas se logra por la interacción de proteínas de andamiaje como PCNA (Proliferating Cell Nuclear Antigen) y la polimerasa TLS Rev1.</p>
+<p>Existen estructuras cristalográficas de distintos péptidos unidos a Rev1 (PDBs: 2N1G, 2LSK, 2LSJ, 4FJO, 2LSI y 4GK5) que permiten entender algunas características de la interacción.</p>
+<p>La evidencia experimental recolectada de la literatura indica:</p>
+<ul>
+<li>La interacción está mediada principalmente por dos residuos consecutivos de fenilalanina (Ohashi,2009).</li>
+<li>Estas dos fenilaninas interactúan con un bolsillo hidrofóbico en la superficie de Rev1 (Pozhidaeva, 2012; Zhao,2017).</li>
+<li>Las fenilalaninas se encuentran en el primer giro de una hélice α.</li>
+<li>Se requieren al menos 4 residuos posteriores a las fenilalaninas que formen parte de una hélice (Ohashi, 2009).</li>
+<li>El resto de la región de interacción se pliega formando hélices α de longitud variable (Pustovalova, 2016)</li>
+<li>Se observan uno o dos residuos cargados positivamente en la 2da y/o 3ra posición luego de las fenilalaninas, que median interacciones electrostáticas con una superficie acídica de Rev1. Sin embargo, se observó que la posición de estos residuos es variable: también pueden encontrarse inmediatamente después de las fenilalaninas.</li>
+</ul>
+<p style="text-align:center">
+<a class="glightbox" href="./img/Rev1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/Rev1.png" alt="" style="max-width:70%"></a>
+</p>
+
+<figcaption style="text-align:left;max-width:70%">
+Figura 1. Fragmento de la polimerasa TLS Rev1 unido al motivo lineal de la polimerasa η (pol eta) humana. Se muestra en naranja el backbone del segmento de polimerasa η representado en Cartoon y en azul las dos fenilalaninas conservadas que median la interacción representadas en Sticks (PDB: 2LSK) y que conforman el motivo lineal.
+</figcaption>
+
+<p>Los siguientes fragmentos de secuencia corresponden a regiones de distintas proteínas que participan en la reparación del ADN y que se unen a la proteína Rev1. La interacción de estos fragmentos con la proteína Rev1 se verificó de manera experimental por distintos métodos.</p>
+<div class="highlight"><pre><span></span><code>&gt;sp|Q03834|MSH6_YEAST|31-38
+SQKKMKQSSLLSFFSKQVPSGTPSKKVQ
+&gt;sp|Q60596|XRCC1_MOUSE|191-200
+DDSANSLKPGALFFSRINKTSSASTSDPAG
+&gt;sp|Q9H040|SPRTN_HUMAN|418-428
+RPRLEDKTVFDNFFIKKEQIKSSGNDPKYST
+&gt;sp|Q15054|DPOD3_HUMAN|236-245
+NKAPGKGNMMSNFFGKAAMNKFKVNLDSEQ
+&gt;sp|Q9UNA4|POLI_HUMAN|569-579
+SCPLHASRGVLSFFSKKQMQDIPINPRDHLS
+&gt;sp|Q9Y253|POLH_HUMAN|481-490
+TATKKATTSLESFFQKAAERQKVKEASLSS 
+&gt;sp|Q9Y253|POLH_HUMAN_2|529-539
+PFQTSQSTGTEPFFKQKSLLLKQKQLNNSSV
+&gt;sp|Q9QUG2|POLK_MOUSE|564-575
+LAKPLEMSHKKSFFDKKRSERISNCQDTSRCK
+&gt;sp|Q9UBT6|POLK_HUMAN|565-576
+FVKPLEMSHKKSFFDKKRSERKWSHQDTFKCE
+</code></pre></div>
+<ol>
+<li>
+<p>Copie y pegue las secuencias en el recuadro Test String en regex101 (https://regex101.com).
+    Escribiendo en el campo Regular Expression, intente definir una expresión regular que permita identificar el motivo que media la interacción de estas proteínas con Rev1 y que cumpla con la evidencia experimental observada.</p>
+</li>
+<li>
+<p>Evalúe si la siguiente secuencia cumple o no con la expresión regular:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>&gt;sp|Q04049|POLH_YEAST|625-632
+KKQVTSSKNILSFFTRKK
+</code></pre></div>
+<ol start="3">
+<li>
+<p>Copie y pegue las secuencias del punto 1 y punto 2 en un archivo de texto plano. </p>
+</li>
+<li>
+<p>Abra el archivo en Jalview y realice un alineamiento con Clustal. Explore el alineamiento. ¿Quedaron alineadas las posiciones invariables del motivo?</p>
+</li>
+<li>
+<p>Suba el alineamiento obtenido en la página web de <a href="https://weblogo.threeplusone.com/create.cgi">weblogo</a> para construir un logo de secuencia. </p>
+<div class="admonition info">
+<p class="admonition-title">Logos de Secuencia</p>
+<p>Un <strong>logo de secuencia</strong> consiste en un gráfico que muestra un apilamiento de símbolos (las letras que denominan a cada aminoácido o nucleótido) por cada posición del alineamiento. La altura total es proporcional a la conservación de la secuencia en dicha posición; la altura de cada símbolo indica la frecuencia relativa de cada símbolo en esa posición. De esta forma, un logo provee una descripción más precisa de la conservación secuencial que una secuencia consenso, y provee una medida del contenido de información de cada posición. </p>
+</div>
+<p>No trabajaremos en profundidad el contenido de información, pero podemos conocer su forma matemática.</p>
+<p>El contenido de información (IC) de una posición L del alineamiento es la diferencia entre la incerteza esperada (H previa, corresponde a todos los estados posibles) y la incerteza observada en la posición del alineamiento (H posterior, todos los estados observados), según surge de su definición:</p>
+<p></p><p style="text-align:center">
+<a class="glightbox" href="https://latex.codecogs.com/svg.latex?\Large&amp;space;IC_{(L)}=H_{previo}-H_{posterior}" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://latex.codecogs.com/svg.latex?\Large&amp;space;IC_{(L)}=H_{previo}-H_{posterior}" title="\Large IC_{(L)}=H_{previo}-H_{posterior}"></a>
+</p>
+<p>donde para proteínas:</p>
+<p></p><p style="text-align:center">
+<a class="glightbox" href="https://latex.codecogs.com/svg.latex?\Large&amp;space;H_{previo}=log_{2}20%20=%204.32\%20bits" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://latex.codecogs.com/svg.latex?\Large&amp;space;H_{previo}=log_{2}20%20=%204.32\%20bits" title="\Large H_{previo}=log_{2}20 = 4.32 bits"></a>
+</p>
+<p></p><p style="text-align:center">
+<a class="glightbox" href="https://latex.codecogs.com/svg.latex?\Large&amp;space;H_{posterior}=-\sum_{i=1}^{M}\%20f(a,L)\%20log_{2}f(a,L)" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://latex.codecogs.com/svg.latex?\Large&amp;space;H_{posterior}=-\sum_{i=1}^{M}\%20f(a,L)\%20log_{2}f(a,L)" title="\Large H_{posterior}=-\sum_{i=1}^{M}\ f(a,L)\ log_{2}f(a,L)"></a>
+</p>
+<p>Para secuencias nucleotídicas La incerteza previa tiene un valor máximo de 2 bits (log<sub>2</sub> 4) correspondiente al caso en que todos los símbolos (o nucleótidos) sean igualmente probables. </p>
+<p>Por lo tanto, el contenido de información de una posición del alineamiento será máximo cuando todos los símbolos de dicha posición sean iguales (y por lo tanto, se verifique que <em>H<sub>posterior</sub></em> = 0).</p>
+<p>De esta manera, el contenido de información está directamente relacionado con el <strong>grado de conservación</strong>.</p>
+<p>Puede utilizar las siguientes opciones (o probar las variantes que crea convenientes) al construir el logo:</p>
+<ul>
+<li><em>Output Format.</em> PNG</li>
+<li><em>Sequence type:</em> Protein</li>
+<li><em>Scale stack widths:</em> Pruebe con y sin tildar</li>
+<li><em>Composition:</em> No adjustment for composition</li>
+<li><em>Error bars:</em> No tiene que estar tildado</li>
+<li><em>Show Sequence Ends labels:</em> No tiene que estar tildado</li>
+<li><em>Version fineprint:</em> No tiene que estar tildado</li>
+<li><em>X-axis Label:</em> Position</li>
+<li><em>Y-axis Label:</em> Information Content</li>
+<li><em>Y-axis scale:</em> 4.5</li>
+<li><em>Y-axis tic spacing:</em> 0.5</li>
+<li><em>Color scheme:</em> Chemistry (AA)</li>
+</ul>
+</li>
+<li>
+<p>Analice el logo de secuencia obtenido. </p>
+<ul>
+<li>Recuerde, ¿qué indican la altura y el color de cada letra?</li>
+<li>¿Qué posiciones de este logo tienen mayor y menor contenido de información? ¿Se relacionan con las posiciones del motivo?</li>
+<li>¿Con qué cree que está relacionado el ancho de la pila de letras?</li>
+<li>¿Puede identificar posiciones definidas y variables del motivo a través del logo de secuencia?</li>
+<li>¿Puede relacionar el logo de secuencia con la expresión regular que describe al motivo? </li>
+</ul>
+</li>
+</ol>
+<h3 id="ejercicio-2-identificando-sobre-representacion-de-motivos-en-un-conjunto-de-secuencias">Ejercicio 2. Identificando sobre-representación de motivos en un conjunto de secuencias</h3>
+<p>El algoritmo MEME (<em>Multiple EM for Motif Elicitation</em>) permite la identificación de motivos novedosos y sin gaps, es decir, identifica patrones de longitud fija y recurrentes en un conjunto de secuencias, sin necesidad de tener información previa sobre el motivo, y sin necesidad de alinear los motivos! </p>
+<p>MEME se utiliza mucho para motivos lineales en proteínas y también para identificar sitios funcionales a nivel genómico, como sitios de unión al ADN de factores de transcripción o maquinaria transcripcional, por ejemplo los TATA box y otros elementos vinculados.</p>
+<p>MEME divide patrones de longitud variable en dos o más motivos separados. </p>
+<ol>
+<li>
+<p>Ingrese a la web de <a href="https://meme-suite.org/meme/tools/meme">MEME</a>.</p>
+</li>
+<li>
+<p>En la sección: <strong>Input the primary sequences</strong> ingrese las secuencias del ejercicio anterior sin alinear en MEME. (Puede subir un archivo con las secuencias, o seleccionar la opción <strong>Type in sequences</strong> en el menú desplegable para habilitar un cuadro de texto donde pegarlas).</p>
+<p>Puede utilizar las siguientes opciones (o puede probar las variantes que crea convenientes):</p>
+<ul>
+<li>
+<p><em>Select the site distribution:</em></p>
+<p>Esta opción se relaciona con el número de veces que aparece un motivo en la secuencia.</p>
+<ul>
+<li>Seleccione: <em>Zero or One Occurrence Per Sequence (zoops)</em> </li>
+</ul>
+</li>
+<li>
+<p><em>Select the number of motifs:</em></p>
+<p>Esta opción se relaciona con el número de motivos que MEME va a buscar.
+* Ingrese: 10.</p>
+</li>
+</ul>
+<p>En las opciones <strong>avanzadas</strong>:</p>
+<ul>
+<li>
+<p><em>What should be used as the background model?</em></p>
+<p>Esta opción se relaciona con la distribución esperada de aminoácidos o nucleótidos que debe usar MEME.</p>
+<p>Por default, (0-order) MEME calcula una distribución background a partir de las secuencias primarias ingresadas por el usuario.</p>
+<ul>
+<li>Seleccione: <em>0-order model of sequences</em></li>
+</ul>
+</li>
+<li>
+<p><em>How wide can motifs be?</em></p>
+<p>Esta opción se refiere a la longitud mínima y máxima del motivo. </p>
+<p>Ingrese:</p>
+<ul>
+<li><em>Minimum width:</em> 4</li>
+<li>
+<p><em>Maximum width:</em> 12</p>
+</li>
+<li>
+<p>¿Por qué cree que elegimos estos parámetros?</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>How many sites must each motif have?</em></p>
+<p>Ingrese:</p>
+<ul>
+<li><em>Minimum sites:</em>  2</li>
+<li>
+<p><em>Maximum sites:</em>  40</p>
+</li>
+<li>
+<p>¿Con qué se relaciona este parámetro?</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Repita la búsqueda pero ahora, en las opciones avanzadas, habilite una opción más. </p>
+<ul>
+<li><em>Should MEME shuffle the sequences?</em> Esta opción reescribe las secuencias en orden aleatorio.</li>
+</ul>
+<p>Seleccione: <em>Shuffle the sequences</em></p>
+<ul>
+<li>Observe el resultado obtenido. ¿Recupera MEME el logo de secuencia esperado?</li>
+<li>Compare los resultados con los de la búsqueda anterior. ¿Cómo podría explicar las diferencias observadas?</li>
+</ul>
+</li>
+</ol>
+<h3 id="ejercicio-4-utilizando-una-expresion-regular-obtenida-de-instancias-experimentales-para-identificar-motivos-nuevos">Ejercicio 4. Utilizando una expresión regular obtenida de instancias experimentales para identificar motivos nuevos</h3>
+<p>La expresión regular del motivo de unión a Rev1 está definida en la base de datos ELM (que veremos más adelante) como: <code>FF[^P]{0,2}[KR]{1,2}[^P]{0,4}</code></p>
+<ul>
+<li>
+<p>¿Usted llegó a algo similar? </p>
+<div class="admonition danger">
+<p class="admonition-title">Atencion!</p>
+<p>Si no entiende esta expresión regular, o no llegó a algo parecido ¡consulte a sus docentes!</p>
+</div>
+</li>
+</ul>
+<p>SLiMSearch es una herramienta que, utilizando expresiones regulares, permite buscar la presencia de motivos conocidos en las proteínas almacenadas en UniProt y priorizarlos según datos adicionales. Por ejemplo, SLiMSearch informa las características de la arquitectura de regiones y dominios de la secuencia portadora del motivo, sus variantes secuenciales y modificaciones postraduccionales, su estructura (en caso de ser conocida), medidas de conservación evolutiva y accesibilidad de los motivos, y el enriquecimiento del posible motivo en funciones conocidas.</p>
+<ul>
+<li><strong>Antes de Empezar con SLiMSearch:</strong> Busque en <a href="https://www.uniprot.org/">UniProt</a> a Rev1 (Q9UBZ9). ¿Cuál es la localización celular de Rev1?</li>
+</ul>
+<p>Vaya a la web de <a href="http://slim.icr.ac.uk/slimsearch/">SLiMSearch</a> e ingrese la expresión regular del motivo indicada en este ejercicio. En el campo <em>Choose species</em> puede elegir sobre qué proteoma buscar; por default se buscará en <em>Homo sapiens</em>.</p>
+<ol>
+<li>
+<p>¿Cuántos motivos (hits) y cuántas proteínas obtuvo?</p>
+</li>
+<li>
+<p>Explore la lista de proteínas. ¿Encuentra algunas de las proteínas o sus homólogos que estaban en sus secuencias originales? ¿Qué significa si las encontró?</p>
+</li>
+<li>
+<p>En la parte superior de la tabla haga click en <em>expand</em>.</p>
+<p>Las últimas columnas que están resumidas van a mostrar más información.</p>
+<ul>
+<li>¿Cuáles de estos campos le parecen más interesantes para intentar reconocer verdaderos motivos?</li>
+</ul>
+</li>
+<li>
+<p>Ordene la tabla por el score de conservación (a menor score, mayor conservación) en <em>Mammalia</em>.</p>
+</li>
+<li>
+<p>Explore la lista de proteínas y observe las coloreadas en amarillo. Tienen un <em>Warning</em>. Al pie de la tabla se indica lo que significa cada tono de amarillo.</p>
+<ul>
+<li>¿A qué se debe el warning de la <strong>BTB/POZ domain-containing protein KCTD8</strong>? ¿Por qué cree que es útil?</li>
+<li>Observe la <strong>DNA polymerase delta subunit 3 (POLD3)</strong>.<ul>
+<li>¿Cuántas veces aparece en la hoja 1?</li>
+<li>¿Se corresponde con la región de la POLD3 en su conjunto de secuencias?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Busque en la lista la proteína <strong>Kinesin-like protein KIF11 (KIF11)</strong>, y averigüe su localización.</p>
+<ul>
+<li>¿Tiene sentido tener esta proteína como candidata para evaluar su interacción con Rev1?</li>
+</ul>
+</li>
+<li>
+<p>SLiMSearch permite utilizar filtros para mejorar la búsqueda.</p>
+<p>Para eso vaya a la pestaña <em>Filters</em>.</p>
+<p>Haga click en <em>Localisation</em>.</p>
+<p>Luego, en la tabla busque los términos relacionados al núcleo (nuclear part, nucleus, etc serían aproximadamente doce términos que están primeros y últimos al escribir “nucl” en la búsqueda) y selecciónelos para realizar un <em>Filter In</em> (es decir, quedarse con las instancias que poseen dicha localización, asegúrese que Nucleus y nucleus estén seleccionados).</p>
+<p>Luego, haga click en <strong>Add</strong> y vaya a la pestaña de <strong>Instances</strong> en la parte superior de la página.</p>
+</li>
+<li>
+<p>Encuentre en la lista de proteínas filtradas la proteína: <strong>Chromosome transmission fidelity protein 18 homolog (CHTF18)</strong> (Q8WVB6). Puede ordenar alfabéticamente para encontrarla más fácil.</p>
+<ul>
+<li>
+<p>Búsquela en ProViz.</p>
+</li>
+<li>
+<p>Ubique la región donde se encuentra el posible motivo sugerido por SLiMSearch.</p>
+</li>
+<li>
+<p>Evalúe el contexto estructural. ¿Es favorable?</p>
+</li>
+<li>Evalúe el grado de conservación. ¿Está conservado?</li>
+<li>¿Le parece que es un buen candidato para evaluar?</li>
+</ul>
+</li>
+<li>
+<p>Vaya a <em>Functions</em>.</p>
+<ul>
+<li>¿Qué funciones están enriquecidas en su lista de proteínas filtradas?</li>
+</ul>
+<p>Según los conocimientos que posee sobre este motivo, elija las funciones correspondientes para filtrar los datos.</p>
+<ul>
+<li>
+<p>¿Cuántos <em>Hits</em> y cuántas proteínas obtiene ahora?</p>
+</li>
+<li>
+<p>Encuentre en la lista de proteínas filtradas la proteína: <strong>Chromosome transmission fidelity protein 18 homolog (CHTF18)</strong> (Q8WVB6). ¿Le sigue pareciendo que es un buen candidato para evaluar?</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="ejercicio-5-utilice-un-conjunto-de-secuencias-relacionadas-para-identificar-motivos-de-novo">Ejercicio 5. Utilice un conjunto de secuencias relacionadas para identificar motivos de novo</h3>
+<p>La longitud y variabilidad de los motivos lineales hace difícil distinguir patrones que ocurren al azar de aquellos que constituyen verdaderos motivos en proteínas naturales. La herramienta SLiMFinder permite identificar motivos estadísticamente sobrerrepresentados en un conjunto de secuencias relacionadas. A diferencia de MEME, SLiMFinder permite identificar motivos con segmentos de secuencia y longitud variable. Incorpora filtros para concentrar la búsqueda en regiones desordenadas o de mayor conservación relativa, para aumentar así la confiabilidad en la predicción. Los resultados se presentan con un valor de significancia estadística que estima la probabilidad de que el motivo se hubiera encontrado por azar, adaptado al tamaño y composición de las secuencias provistas por el usuario. De esta forma, SLiMFinder otorga un método eficiente y con baja tasa de falsos positivos para descubrir nuevos motivos.</p>
+<ol>
+<li>
+<p>Vaya a la web de <a href="http://www.slimsuite.unsw.edu.au/servers/slimfinder.php">SLiMFinder</a> y pegue las secuencias de unión a Rev1 del ejercicio 2 en el campo de la derecha (Alternative fasta input). </p>
+</li>
+<li>
+<p>En la opción <em>Masking Options</em> puede decidir que sólo se consideren motivos predichos en regiones desordenadas (<em>Disorder masking</em>) y/o conservadas evolutivamente (<em>Conservation masking</em>). Sobre la base de lo que conoce de este motivo, ¿qué filtros activaría?</p>
+</li>
+<li>
+<p>Revise los resultados. En la pestaña <em>main</em> encontrará los resultados generales de la predicción de motivos, mientras que la pestaña <em>occ</em> detallará en qué proteínas ocurren. ¿Qué motivos se predicen? ¿Coinciden con lo esperado?</p>
+</li>
+</ol>
+<h1 id="tp-8-motivos-lineales-parte-ii" markdown="markdown"><strong>TP 8</strong>. Motivos Lineales - Parte II</h1>
 <h2 id="materiales">Materiales</h2>
 <p><a class="md-button md-button--primary" href="https://drive.google.com/file/d/183tjsg7_2MUikJhcCHido7Ttflh2E2Be/view?usp=sharing"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48"></path></svg></span> Materiales</a></p>
 <h2 id="slides">Slides</h2>
 <ul>
 <li>Slides <a href="https://drive.google.com/file/d/1B6cIgEzZLLkmAf37mDhp_EmToNJBRPo3/view?usp=sharing">[PDF]</a></li>
 </ul>
-<h2 id="recursos-a-utilizar">Recursos a utilizar</h2>
+<h2 id="recursos-a-utilizar_1">Recursos a utilizar</h2>
 <ul>
 <li>ELM: <a href="http://elm.eu.org">http://elm.eu.org</a></li>
 <li>Consurf: <a href="https://consurf.tau.ac.il/">https://consurf.tau.ac.il/</a></li>
 <li>Colab: <a href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb#scrollTo=kOblAo-xetgx">AlphaFold2</a></li>
 </ul>
-<h2 id="objetivos">Objetivos:</h2>
+<h2 id="objetivos_1">Objetivos:</h2>
 <ul>
 <li>Familiarizarse con la simbología utilizada en expresiones regulares, poder interpretar una expresión regular.</li>
 <li>Utilizar la simbología para poder realizar búsquedas basadas en texto</li>
 <li>Familiarizarse con la base de datos ELM.</li>
 </ul>
-<h2 id="ejercicios">Ejercicios</h2>
+<h2 id="ejercicios_1">Ejercicios</h2>
 <h3 id="ejercicio-1-identificacion-de-motivos-cortos-de-interaccion-en-p53-en-un-alineamiento-propio">Ejercicio 1. Identificación de motivos cortos de interacción en p53 en un alineamiento propio.</h3>
 <p>La región amino terminal de p53 posee un motivo de unión a la E3 ligasa MDM2, el cual está caracterizado por una secuencia conservada que puede representarse por la expresión regular: <code>F[^P]{3}W[^P]{2,3}[VIL]</code>.</p>
 <ol>
@@ -1761,7 +2060,62 @@ display HDAC
 <ul>
 <li>Compare el número de instancias humanas con el número de instancias virales.</li>
 <li>¿Por qué hay tantas proteínas virales que interactúan con retinoblastoma? (Pista: La respuesta está en el abstract de la clase del motivo <code>LIG_Rb_LxCxE_1</code>)</li>
-</ul></div>
+</ul>
+<h3 id="ejercicio-adicional-1-construyendo-una-expresion-regular">Ejercicio Adicional 1. Construyendo una expresión regular</h3>
+<p>Los receptores nucleares interactúan con diversas proteínas mediantes un motivo lineal llamado NRBox (Nuclear Receptor Box) (Heery,1997). Existen numerosas estructuras de péptidos unidos a diferentes receptores nucleares (PDBs: 3CS8, 2GPO, 1GWQ, 1RJK, 1M2Z) que permitieron estudiar y entender algunas características de la interacción.</p>
+<p>La evidencia experimental recolectada de la literatura indica que:</p>
+<ul>
+<li>El motivo NRBox forma una hélice alfa</li>
+<li>Existen tres leucinas cuyas cadenas laterales se encuentran en una misma cara de la hélice e interactúan con un bolsillo hidrofóbico en la superficie del receptor nuclear (Figura 1).</li>
+</ul>
+<p style="text-align:center">
+<a class="glightbox" href="./img/NRBox.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/NRBox.png" alt="" style="max-width:70%"></a>
+</p>
+
+<figcaption style="text-align:left;max-width:70%">
+Figura 1. Fragmento de la proteína PGC-1 alfa unido al receptor nuclear PPAR-gamma. Se muestra en naranja el backbone de la proteína representado en Cartoon y en azul las tres leucinas que median la interacción representadas en Sticks (PDB:3CS8) y que integran el motivo NRBox.
+</figcaption>
+
+<p>Los siguientes fragmentos de secuencia de distintas proteínas incluyen regiones que interactúan con diversos receptores nucleares y cuya interacción se verificó de manera experimental por distintos métodos.</p>
+<div class="highlight"><pre><span></span><code>&gt;sp|Q15648|MED1_HUMAN|644-650
+SMAGNTKNHPMLMNLLKDNPAQDFSTL
+&gt;sp|O43593|HAIR_HUMAN|565-571
+AKHLLSGLGDRLCRLLRREREALAWAQ
+&gt;sp|Q16881-4|TRXR1_HUMAN|46-52
+GPTLKAYQEGRLQKLLKMNGPEDLPKS
+&gt;sp|P48552|NRIP1_HUMAN|500-506
+DVHQDSIVLTYLEGLLMHQAAGGSGTA
+&gt;sp|Q9UQ80|PA2G4_HUMAN|353-359
+YKSEMEVQDAELKALLQSSASRKTQKK 
+&gt;sp|Q90ZL7|Q90ZL7_DANRE|69-75
+VQHADGEKSNVLRKLLKRANSYEDAVM
+&gt;sp|Q9UBK2|PRGC1_HUMAN|143-149
+PPPQEAEEPSLLKKLLLAPANTQLSYN 
+&gt;sp|Q9JL19|NCOA6_MOUSE|1494-1500
+MSPAMREAPTSLSQLLDNSGAPNVTIK
+&gt;sp|Q15596|NCOA2_HUMAN|689-695
+HGTSLKEKHKILHRLLQDSSSPVDLAK
+&gt;sp|Q92793|CBP_HUMAN|69-75
+LVPDAASKHKQLSELLRGGSGSSINPG
+</code></pre></div>
+<ol>
+<li>
+<p>Copie y pegue las secuencias en el recuadro Test String en <a href="https://regex101.com">regex101</a>. </p>
+<p>Escribiendo en el campo Regular Expression, intente definir una expresión regular que permita identificar el motivo que media la interacción de estas proteínas con los receptores nucleares y que cumpla con la evidencia experimental observada.</p>
+<div class="admonition danger">
+<p class="admonition-title">Regex101</p>
+<pre><code>**Regex101** no es una herramienta que se use comúnmente. Simplemente es un recurso educativo para entender expresiones regulares.
+</code></pre>
+</div>
+</li>
+<li>
+<p>Considerando que el motivo se encuentra en una hélice, </p>
+<ul>
+<li>¿Modificaría la expresión regular que obtuvo?</li>
+<li>¿Cuál sería la utilidad de definir una expresión regular más específica?</li>
+</ul>
+</li>
+</ol></div>
 
 
 
