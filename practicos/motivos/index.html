@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://bioinformatica-iib.github.io/estructural/practicos/motivos/">
       
       
+        <link rel="prev" href="../Regiones-flexibles/">
+      
+      
+        <link rel="next" href="../../evaluacion/">
       
       
       <link rel="icon" href="../../img/logo-unsam-negro.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>TP 7. Motivos Lineales - Parte I - Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas</title>
+        <title>TP6 - Motivos Lineales - Bioinformática aplicada al análisis de estructura, interacciones y diseño de proteínas</title>
       
     
     
@@ -116,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TP 7. Motivos Lineales - Parte I
+              TP6 - Motivos Lineales
             
           </span>
         </div>
@@ -354,10 +358,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../inicio/" class="md-tabs__link">
           
   
@@ -789,28 +795,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   
@@ -823,7 +832,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Prácticos
@@ -991,6 +1000,229 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    TP6 - Motivos Lineales
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    TP6 - Motivos Lineales
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-a-utilizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos a utilizar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1-familiarizandonos-con-expresiones-regulares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 1. Familiarizándonos con expresiones regulares
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2-identificando-sobre-representacion-de-motivos-en-un-conjunto-de-secuencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 2. Identificando sobre-representación de motivos en un conjunto de secuencias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3-utilizando-una-expresion-regular-obtenida-de-instancias-experimentales-para-identificar-motivos-nuevos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 3. Utilizando una expresión regular obtenida de instancias experimentales para identificar motivos nuevos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-4-identificacion-de-motivos-cortos-de-interaccion-en-p53-en-un-alineamiento-propio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 4. Identificación de motivos cortos de interacción en p53 en un alineamiento propio.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-5-base-de-datos-de-motivos-lineales-en-eucariotas-elmdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 5. Base de datos de motivos lineales en Eucariotas (ELMdb)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-6-identificando-interacciones-entre-motivos-lineales-y-proteinas-globulares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 6. Identificando interacciones entre motivos lineales y proteínas globulares
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-7-analizando-superficies-de-interaccion-entre-motivos-lineales-y-proteinas-globulares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 7. Analizando superficies de interacción entre motivos lineales y proteínas globulares
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Adicionales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios Adicionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-adicional-1-usando-jalview-con-la-proteina-tir-aislada-de-e-coli-patogenica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio Adicional 1. Usando JalView con la proteína TIR aislada de E. coli patogénica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-adicional-2-familiarizandose-con-la-base-de-datos-elm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio Adicional 2. Familiarizándose con la base de datos ELM.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-adicional-3-construyendo-una-expresion-regular" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio Adicional 3. Construyendo una expresión regular
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-adicional-4-modelado-de-un-motivo-unido-a-un-dominio-globular-en-alphafold2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio Adicional 4. Modelado de un motivo unido a un dominio globular en Alphafold2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1126,18 +1358,96 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-4-utilizando-una-expresion-regular-obtenida-de-instancias-experimentales-para-identificar-motivos-nuevos" class="md-nav__link">
+  <a href="#ejercicio-3-utilizando-una-expresion-regular-obtenida-de-instancias-experimentales-para-identificar-motivos-nuevos" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 4. Utilizando una expresión regular obtenida de instancias experimentales para identificar motivos nuevos
+      Ejercicio 3. Utilizando una expresión regular obtenida de instancias experimentales para identificar motivos nuevos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejercicio-5-utilice-un-conjunto-de-secuencias-relacionadas-para-identificar-motivos-de-novo" class="md-nav__link">
+  <a href="#ejercicio-4-identificacion-de-motivos-cortos-de-interaccion-en-p53-en-un-alineamiento-propio" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 5. Utilice un conjunto de secuencias relacionadas para identificar motivos de novo
+      Ejercicio 4. Identificación de motivos cortos de interacción en p53 en un alineamiento propio.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-5-base-de-datos-de-motivos-lineales-en-eucariotas-elmdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 5. Base de datos de motivos lineales en Eucariotas (ELMdb)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-6-identificando-interacciones-entre-motivos-lineales-y-proteinas-globulares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 6. Identificando interacciones entre motivos lineales y proteínas globulares
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-7-analizando-superficies-de-interaccion-entre-motivos-lineales-y-proteinas-globulares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 7. Analizando superficies de interacción entre motivos lineales y proteínas globulares
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Adicionales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios Adicionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-adicional-1-usando-jalview-con-la-proteina-tir-aislada-de-e-coli-patogenica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio Adicional 1. Usando JalView con la proteína TIR aislada de E. coli patogénica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-adicional-2-familiarizandose-con-la-base-de-datos-elm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio Adicional 2. Familiarizándose con la base de datos ELM.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-adicional-3-construyendo-una-expresion-regular" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio Adicional 3. Construyendo una expresión regular
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-adicional-4-modelado-de-un-motivo-unido-a-un-dominio-globular-en-alphafold2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio Adicional 4. Modelado de un motivo unido a un dominio globular en Alphafold2
     </span>
   </a>
   
@@ -1165,13 +1475,15 @@
 
 
 <div><h1 id="tp-7-motivos-lineales-parte-i" markdown="markdown"><strong>TP 7</strong>. Motivos Lineales - Parte I</h1>
+<p><a class="md-button md-button--primary" href="https://drive.google.com/file/d/1exSLrfnSGEXjslwhCx4p3VBcTXcJ12Wq/view?usp=sharing"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48"></path></svg></span> Materiales</a></p>
 <h2 id="recursos-a-utilizar">Recursos a utilizar</h2>
 <ul>
 <li>Regex101: <a href="https://regex101.com">https://regex101.com</a></li>
 <li>WebLogo: <a href="https://weblogo.threeplusone.com/create.cgi">https://weblogo.threeplusone.com/create.cgi</a></li>
 <li>MEME: <a href="https://meme-suite.org/meme/tools/meme">https://meme-suite.org/meme/tools/meme</a></li>
-<li>SLiMSearch: <a href="http://slim.icr.ac.uk/slimsearch/">http://slim.icr.ac.uk/slimsearch/</a></li>
-<li>SLiMFinder: <a href="http://www.slimsuite.unsw.edu.au/servers/slimfinder.php">http://www.slimsuite.unsw.edu.au/servers/slimfinder.php</a></li>
+<li>SLiMSearch: <a href="https://slim-tools.org/tools/slimsearch/input">http://slim.icr.ac.uk/slimsearch/</a></li>
+<li>ELM: <a href="http://elm.eu.org">http://elm.eu.org</a></li>
+<li>Consurf: <a href="https://consurf.tau.ac.il/">https://consurf.tau.ac.il/</a></li>
 </ul>
 <h2 id="objetivos">Objetivos</h2>
 <ul>
@@ -1180,6 +1492,7 @@
 <li>Familiarizarse con la creación e interpretación de logos de secuencia.</li>
 <li>Familiarizarse con el análisis de enriquecimiento de motivos en un set de secuencias</li>
 <li>Identificar candidatos a nuevos motivos.</li>
+<li>Familiarizarse con la base de datos ELM.</li>
 </ul>
 <h2 id="introduccion">Introducción</h2>
 <p>La simbología comúnmente utilizada en expresiones regulares es:</p>
@@ -1391,7 +1704,7 @@ KKQVTSSKNILSFFTRKK
 <ul>
 <li><em>Minimum sites:</em>  2</li>
 <li>
-<p><em>Maximum sites:</em>  40</p>
+<p><em>Maximum sites:</em>  10</p>
 </li>
 <li>
 <p>¿Con qué se relaciona este parámetro?</p>
@@ -1412,7 +1725,7 @@ KKQVTSSKNILSFFTRKK
 </ul>
 </li>
 </ol>
-<h3 id="ejercicio-4-utilizando-una-expresion-regular-obtenida-de-instancias-experimentales-para-identificar-motivos-nuevos">Ejercicio 4. Utilizando una expresión regular obtenida de instancias experimentales para identificar motivos nuevos</h3>
+<h3 id="ejercicio-3-utilizando-una-expresion-regular-obtenida-de-instancias-experimentales-para-identificar-motivos-nuevos">Ejercicio 3. Utilizando una expresión regular obtenida de instancias experimentales para identificar motivos nuevos</h3>
 <p>La expresión regular del motivo de unión a Rev1 está definida en la base de datos ELM (que veremos más adelante) como: <code>FF[^P]{0,2}[KR]{1,2}[^P]{0,4}</code></p>
 <ul>
 <li>
@@ -1424,32 +1737,62 @@ KKQVTSSKNILSFFTRKK
 </li>
 </ul>
 <p>SLiMSearch es una herramienta que, utilizando expresiones regulares, permite buscar la presencia de motivos conocidos en las proteínas almacenadas en UniProt y priorizarlos según datos adicionales. Por ejemplo, SLiMSearch informa las características de la arquitectura de regiones y dominios de la secuencia portadora del motivo, sus variantes secuenciales y modificaciones postraduccionales, su estructura (en caso de ser conocida), medidas de conservación evolutiva y accesibilidad de los motivos, y el enriquecimiento del posible motivo en funciones conocidas.</p>
-<ul>
-<li><strong>Antes de Empezar con SLiMSearch:</strong> Busque en <a href="https://www.uniprot.org/">UniProt</a> a Rev1 (Q9UBZ9). ¿Cuál es la localización celular de Rev1?</li>
-</ul>
-<p>Vaya a la web de <a href="http://slim.icr.ac.uk/slimsearch/">SLiMSearch</a> e ingrese la expresión regular del motivo indicada en este ejercicio. En el campo <em>Choose species</em> puede elegir sobre qué proteoma buscar; por default se buscará en <em>Homo sapiens</em>.</p>
 <ol>
+<li>
+<p>Busque en <a href="https://www.uniprot.org/">UniProt</a> a Rev1 (Q9UBZ9). </p>
+<ul>
+<li>¿Cuál es la localización celular de Rev1?</li>
+</ul>
+</li>
+<li>
+<p>Vaya a la web de <a href="https://slim-tools.org/tools/slimsearch/input">SLiMSearch</a></p>
+<ul>
+<li>
+<p>En el campo <em>Motif</em> ingrese la expresión regular del motivo indicada en este ejercicio.</p>
+</li>
+<li>
+<p>En el campo <em>Choose species</em> puede elegir sobre qué proteoma buscar; por default se buscará en <em>Homo sapiens</em>.</p>
+</li>
+<li>
+<p>En el campo de <em>Disorder Cut-off</em> puede elegir un umbral de corte para realizar la búsqueda en regiones desordenadas. ¿Puede identificar en base a qué algoritmo?</p>
+</li>
+</ul>
+<details class="info">
+<summary>Help! This thing is taking too long</summary>
+<p><a href="https://slim-tools.org/tools/slimsearch/results/annotations?jobId=0d9a3f9ed74d77835701a0c36f08c50e">Go to Results</a></p>
+</details>
+</li>
 <li>
 <p>¿Cuántos motivos (hits) y cuántas proteínas obtuvo?</p>
 </li>
 <li>
-<p>Explore la lista de proteínas. ¿Encuentra algunas de las proteínas o sus homólogos que estaban en sus secuencias originales? ¿Qué significa si las encontró?</p>
-</li>
-<li>
-<p>En la parte superior de la tabla haga click en <em>expand</em>.</p>
+<p>En la parte superior derecha de la tabla haga click en <em>expand</em>.</p>
 <p>Las últimas columnas que están resumidas van a mostrar más información.</p>
 <ul>
 <li>¿Cuáles de estos campos le parecen más interesantes para intentar reconocer verdaderos motivos?</li>
 </ul>
 </li>
 <li>
-<p>Ordene la tabla por el score de conservación (a menor score, mayor conservación) en <em>Mammalia</em>.</p>
+<p>Ordene la tabla por el score de conservación (a menor score, mayor conservación) en <em>Mammalia</em> (aprete la flechita hacia abajo en la columna).</p>
 </li>
 <li>
-<p>Explore la lista de proteínas y observe las coloreadas en amarillo. Tienen un <em>Warning</em>. Al pie de la tabla se indica lo que significa cada tono de amarillo.</p>
+<p>Explore la lista.</p>
 <ul>
-<li>¿A qué se debe el warning de la <strong>BTB/POZ domain-containing protein KCTD8</strong>? ¿Por qué cree que es útil?</li>
-<li>Observe la <strong>DNA polymerase delta subunit 3 (POLD3)</strong>.<ul>
+<li>¿Encuentra algunas de las proteínas o proteínas homólogas a partir de las cuáles determinó la expresión regular?</li>
+</ul>
+</li>
+<li>
+<p>Observe las coloreadas en amarillo. Tienen un <em>Warning</em> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7.2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8.2-40.1l216-368C228.7 39.5 241.8 32 256 32m0 128c-13.3 0-24 10.7-24 24v112c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24m32 224a32 32 0 1 0-64 0 32 32 0 1 0 64 0"></path></svg></span> al lado del nombre de la proteína en la primera columna de la tabla.</p>
+<ul>
+<li>
+<p>¿Qué warning observa?</p>
+</li>
+<li>
+<p>¿A qué se debe el warning de la <strong>BTB/POZ domain-containing protein KCTD8</strong>? ¿Por qué cree que es útil?</p>
+</li>
+<li>
+<p>Observe la <strong>DNA polymerase delta subunit 3 (POLD3)</strong>.</p>
+<ul>
 <li>¿Cuántas veces aparece en la hoja 1?</li>
 <li>¿Se corresponde con la región de la POLD3 en su conjunto de secuencias?</li>
 </ul>
@@ -1465,7 +1808,7 @@ KKQVTSSKNILSFFTRKK
 <li>
 <p>SLiMSearch permite utilizar filtros para mejorar la búsqueda.</p>
 <p>Para eso vaya a la pestaña <em>Filters</em>.</p>
-<p>Haga click en <em>Localisation</em>.</p>
+<p>Haga click en <em>Localisation</em> en el menú de la izquierda.</p>
 <p>Luego, en la tabla busque los términos relacionados al núcleo (nuclear part, nucleus, etc serían aproximadamente doce términos que están primeros y últimos al escribir “nucl” en la búsqueda) y selecciónelos para realizar un <em>Filter In</em> (es decir, quedarse con las instancias que poseen dicha localización, asegúrese que Nucleus y nucleus estén seleccionados).</p>
 <p>Luego, haga click en <strong>Add</strong> y vaya a la pestaña de <strong>Instances</strong> en la parte superior de la página.</p>
 </li>
@@ -1481,8 +1824,12 @@ KKQVTSSKNILSFFTRKK
 <li>
 <p>Evalúe el contexto estructural. ¿Es favorable?</p>
 </li>
-<li>Evalúe el grado de conservación. ¿Está conservado?</li>
-<li>¿Le parece que es un buen candidato para evaluar?</li>
+<li>
+<p>Evalúe el grado de conservación. ¿Está conservado?</p>
+</li>
+<li>
+<p>¿Le parece que es un buen candidato para evaluar?</p>
+</li>
 </ul>
 </li>
 <li>
@@ -1501,40 +1848,19 @@ KKQVTSSKNILSFFTRKK
 </ul>
 </li>
 </ol>
-<h3 id="ejercicio-5-utilice-un-conjunto-de-secuencias-relacionadas-para-identificar-motivos-de-novo">Ejercicio 5. Utilice un conjunto de secuencias relacionadas para identificar motivos de novo</h3>
-<p>La longitud y variabilidad de los motivos lineales hace difícil distinguir patrones que ocurren al azar de aquellos que constituyen verdaderos motivos en proteínas naturales. La herramienta SLiMFinder permite identificar motivos estadísticamente sobrerrepresentados en un conjunto de secuencias relacionadas. A diferencia de MEME, SLiMFinder permite identificar motivos con segmentos de secuencia y longitud variable. Incorpora filtros para concentrar la búsqueda en regiones desordenadas o de mayor conservación relativa, para aumentar así la confiabilidad en la predicción. Los resultados se presentan con un valor de significancia estadística que estima la probabilidad de que el motivo se hubiera encontrado por azar, adaptado al tamaño y composición de las secuencias provistas por el usuario. De esta forma, SLiMFinder otorga un método eficiente y con baja tasa de falsos positivos para descubrir nuevos motivos.</p>
-<ol>
-<li>
-<p>Vaya a la web de <a href="http://www.slimsuite.unsw.edu.au/servers/slimfinder.php">SLiMFinder</a> y pegue las secuencias de unión a Rev1 del ejercicio 2 en el campo de la derecha (Alternative fasta input). </p>
-</li>
-<li>
-<p>En la opción <em>Masking Options</em> puede decidir que sólo se consideren motivos predichos en regiones desordenadas (<em>Disorder masking</em>) y/o conservadas evolutivamente (<em>Conservation masking</em>). Sobre la base de lo que conoce de este motivo, ¿qué filtros activaría?</p>
-</li>
-<li>
-<p>Revise los resultados. En la pestaña <em>main</em> encontrará los resultados generales de la predicción de motivos, mientras que la pestaña <em>occ</em> detallará en qué proteínas ocurren. ¿Qué motivos se predicen? ¿Coinciden con lo esperado?</p>
-</li>
-</ol>
-<h1 id="tp-8-motivos-lineales-parte-ii" markdown="markdown"><strong>TP 8</strong>. Motivos Lineales - Parte II</h1>
-<h2 id="materiales">Materiales</h2>
-<p><a class="md-button md-button--primary" href="https://drive.google.com/file/d/183tjsg7_2MUikJhcCHido7Ttflh2E2Be/view?usp=sharing"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48"></path></svg></span> Materiales</a></p>
-<h2 id="slides">Slides</h2>
-<ul>
-<li>Slides <a href="https://drive.google.com/file/d/1B6cIgEzZLLkmAf37mDhp_EmToNJBRPo3/view?usp=sharing">[PDF]</a></li>
-</ul>
-<h2 id="recursos-a-utilizar_1">Recursos a utilizar</h2>
-<ul>
-<li>ELM: <a href="http://elm.eu.org">http://elm.eu.org</a></li>
-<li>Consurf: <a href="https://consurf.tau.ac.il/">https://consurf.tau.ac.il/</a></li>
-<li>Colab: <a href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb#scrollTo=kOblAo-xetgx">AlphaFold2</a></li>
-</ul>
-<h2 id="objetivos_1">Objetivos:</h2>
-<ul>
-<li>Familiarizarse con la simbología utilizada en expresiones regulares, poder interpretar una expresión regular.</li>
-<li>Utilizar la simbología para poder realizar búsquedas basadas en texto</li>
-<li>Familiarizarse con la base de datos ELM.</li>
-</ul>
-<h2 id="ejercicios_1">Ejercicios</h2>
-<h3 id="ejercicio-1-identificacion-de-motivos-cortos-de-interaccion-en-p53-en-un-alineamiento-propio">Ejercicio 1. Identificación de motivos cortos de interacción en p53 en un alineamiento propio.</h3>
+<!--
+### Ejercicio 5. Utilice un conjunto de secuencias relacionadas para identificar motivos de novo 
+
+La longitud y variabilidad de los motivos lineales hace difícil distinguir patrones que ocurren al azar de aquellos que constituyen verdaderos motivos en proteínas naturales. La herramienta SLiMFinder permite identificar motivos estadísticamente sobrerrepresentados en un conjunto de secuencias relacionadas. A diferencia de MEME, SLiMFinder permite identificar motivos con segmentos de secuencia y longitud variable. Incorpora filtros para concentrar la búsqueda en regiones desordenadas o de mayor conservación relativa, para aumentar así la confiabilidad en la predicción. Los resultados se presentan con un valor de significancia estadística que estima la probabilidad de que el motivo se hubiera encontrado por azar, adaptado al tamaño y composición de las secuencias provistas por el usuario. De esta forma, SLiMFinder otorga un método eficiente y con baja tasa de falsos positivos para descubrir nuevos motivos.
+
+1. Vaya a la web de [SLiMFinder](http://www.slimsuite.unsw.edu.au/servers/slimfinder.php) y pegue las secuencias de unión a Rev1 del ejercicio 2 en el campo de la derecha (Alternative fasta input). 
+
+2. En la opción *Masking Options* puede decidir que sólo se consideren motivos predichos en regiones desordenadas (*Disorder masking*) y/o conservadas evolutivamente (*Conservation masking*). Sobre la base de lo que conoce de este motivo, ¿qué filtros activaría?
+
+3. Revise los resultados. En la pestaña *main* encontrará los resultados generales de la predicción de motivos, mientras que la pestaña *occ* detallará en qué proteínas ocurren. ¿Qué motivos se predicen? ¿Coinciden con lo esperado?
+-->
+
+<h3 id="ejercicio-4-identificacion-de-motivos-cortos-de-interaccion-en-p53-en-un-alineamiento-propio">Ejercicio 4. Identificación de motivos cortos de interacción en p53 en un alineamiento propio.</h3>
 <p>La región amino terminal de p53 posee un motivo de unión a la E3 ligasa MDM2, el cual está caracterizado por una secuencia conservada que puede representarse por la expresión regular: <code>F[^P]{3}W[^P]{2,3}[VIL]</code>.</p>
 <ol>
 <li>
@@ -1581,23 +1907,15 @@ KKQVTSSKNILSFFTRKK
 <p>Si en futuras ocasiones desea usar estas <em>features</em> con estas secuencias, debe abrir en Jalview el alineamiento utilizando, luego ir a <em>File → Load features/annotations</em>.</p>
 </li>
 </ol>
-<h3 id="ejercicio-2-base-de-datos-de-motivos-lineales-en-eucariotas-elmdb">Ejercicio 2. Base de datos de motivos lineales en Eucariotas (ELMdb)</h3>
+<h3 id="ejercicio-5-base-de-datos-de-motivos-lineales-en-eucariotas-elmdb">Ejercicio 5. Base de datos de motivos lineales en Eucariotas (ELMdb)</h3>
 <p>La base de datos ELM (<em>Eukaryotic Linear Motifs</em>) es una base de datos que se enfoca principalmente en la anotación y detección de motivos lineales (SLiMs). Para ello cuenta con un repositorio de motivos manualmente anotados, por lo cual está altamente curada, y también cuenta con una herramienta de predicción de motivos. Esta predicción de motivos se realiza mediante una búsqueda de patrones de secuencia basada en texto utilizando expresiones regulares (en particular, todas las expresiones regulares definidas dentro de la base de datos).</p>
 <ol>
 <li>
-<p>Busque en <a href="http://elm.eu.org/">ELMdb</a> en la pestaña Prediction la proteína PGC-1-alpha utilizando el accession number o uniprot ID (Q9UBK2 - PRGC1_HUMAN). Esta es una de las proteínas de la lista que usamos en el ejercicio donde construimos la expresión regular:</p>
-<p><code>L[^P][^P]LL</code></p>
-<p>del motivo NRBox en otro trabajo práctico.</p>
-<p>Para cada motivo encontrado, se indica con símbolos (descriptos en la parte superior de la página) si la instancia del motivo es predicha o fue identificada experimentalmente (anotadas o “True Positives”). Responda:</p>
-<ul>
-<li>¿Encuentra el motivo NRBox entre los True positives?</li>
-<li>¿Cuántas instancias True Positive existen para esta proteína?</li>
-<li>¿Cómo es la estructura de la proteína donde se encuentran estos motivos?</li>
-</ul>
+<p>Ingresa a la base de datos <a href="http://elm.eu.org/">ELMdb</a></p>
 </li>
 <li>
-<p>Copie y pegue la siguiente secuencia en ELM y utilice los parámetros que se indican a continuación.</p>
-<div class="highlight"><pre><span></span><code>&gt;seq
+<p>Copie y pegue secuencia de P53_HUMAN en ELM y utilice los parámetros que se indican a continuación.</p>
+<div class="highlight"><pre><span></span><code>&gt;P53_HUMAN
 MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDI  
 EQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQ  
 KTYQGSYGFRLGFLHSGTAKSVTCTYSPALNKMFCQLAKTCPVQLWVDST  
@@ -1624,13 +1942,10 @@ KDAQAGKEPGGSRAHSSHLKSKKGQSTSRHKKLMFKTEGPDSD
 </ul>
 </li>
 <li>
-<p>Por si no se dió cuenta, la proteína utilizada en el ejercicio anterior es p53 de humanos.</p>
+<p>Averigüe en Uniprot la localización celular de p53 de humanos.</p>
 <ul>
-<li>Abra en una nueva pestaña la página de <a href="http://elm.eu.org/">ELMdb</a>.  </li>
-<li>Vaya de nuevo a la pestaña de predicción.  </li>
-<li>Limpie el formulario con el botón Reset Form.  </li>
-<li>Ingrese el Uniprot ID de la proteína (P53_human).</li>
-<li>¿Qué compartimentos celulares se le asignaron? ¿Tienen sentido?</li>
+<li>Seleccione en <em>Cell compartment</em> los mismos</li>
+<li>En <em>Taxonomic context</em> ingrese Homo sapiens</li>
 </ul>
 </li>
 <li>
@@ -1642,10 +1957,6 @@ KDAQAGKEPGGSRAHSSHLKSKKGQSTSRHKKLMFKTEGPDSD
 </ul>
 </li>
 <li>
-<p>Investigue el motivo <code>CLV_PCSK_FUR_1</code> en la predicción realizada sólo con la secuencia (la del punto 1).</p>
-<ul>
-<li>¿Por qué cree que fue filtrado?</li>
-</ul>
 <p>Observe las distintas instancias predichas:</p>
 <ul>
 <li>¿Cuántas instancias anotadas como <em>true positive</em> posee esta proteína?</li>
@@ -1675,16 +1986,8 @@ KDAQAGKEPGGSRAHSSHLKSKKGQSTSRHKKLMFKTEGPDSD
 <li>¿Por qué cree que es útil usar la localización celular, el contexto taxonómico y el umbral de probabilidad del motivo?</li>
 </ul>
 </li>
-<li>
-<p>Busque la proteína P53_MOUSE en <a href="http://elm.eu.org/">ELMdb</a>.</p>
-<ul>
-<li>¿Qué compartimentos celulares y que contexto taxonómico se asignaron?</li>
-<li>¿Existen instancias anotadas?</li>
-<li>¿Existen instancias asignadas por homología? ¿A qué organismo pertenecen?</li>
-</ul>
-</li>
 </ol>
-<h3 id="ejercicio-3-identificando-interacciones-entre-motivos-lineales-y-proteinas-globulares">Ejercicio 3. Identificando interacciones entre motivos lineales y proteínas globulares</h3>
+<h3 id="ejercicio-6-identificando-interacciones-entre-motivos-lineales-y-proteinas-globulares">Ejercicio 6. Identificando interacciones entre motivos lineales y proteínas globulares</h3>
 <p>La proteína Retinoblastoma participa en la regulación del ciclo celular. Rb está conformada por tres módulos. El dominio N, el dominio pocket y el dominio C.</p>
 <p>El dominio pocket está conformado por dos sub-dominios A y B. Este dominio interactúa con numerosas proteínas celulares, incluyendo los factores de transcripción E2F, HDAC y otras proteínas reguladoras del ciclo celular como también proteínas virales.</p>
 <p>Hasta la fecha, se identificaron dos dominios que interactúan con el dominio pocket. El motivo LxCxE que se une al sub-dominio B y el motivo LxxLFD que se une en un bolsillo conservado entre los subdominios A y B. El motivo LxCxE se encuentra en kinasas, histonas desacetilasas entre otras. El motivo LxxLFD se encuentra en el dominio de transactivación de los factores de transcripción E2F.</p>
@@ -1813,7 +2116,7 @@ color byhet,a E2F
 <li>¿Qué carácter químico tienen estos residuos?</li>
 </ul>
 <p>No cierre la sesión ya que seguiremos analizando este complejo en el siguiente ejercicio.</p>
-<h3 id="ejercicio-4-analizando-superficies-de-interaccion-entre-motivos-lineales-y-proteinas-globulares">Ejercicio 4. Analizando superficies de interacción entre motivos lineales y proteínas globulares</h3>
+<h3 id="ejercicio-7-analizando-superficies-de-interaccion-entre-motivos-lineales-y-proteinas-globulares">Ejercicio 7. Analizando superficies de interacción entre motivos lineales y proteínas globulares</h3>
 <h4 id="1-analisis-de-superficies-hidrofobicas">1. Análisis de superficies hidrofóbicas.</h4>
 <p>Represente la superficie de Rb y coloréela por hidrofobicidad.</p>
 <p>A partir de ahora nos manejaremos con la superficie de 1gux, por lo que oculte Rb_1n4m:</p>
@@ -1871,7 +2174,7 @@ color byhet,a LxCxE
 </ul>
 <p>Considerando que en la proteína E7, el logo de secuencia es el siguiente. </p>
 <p style="text-align:center">
-<a class="glightbox" href="./images/e7_logo.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./images/e7_logo.png" alt="" style="max-width:70%"></a>
+<a class="glightbox" href="./img/e7_logo.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="./img/e7_logo.png" alt="" style="max-width:70%"></a>
 </p>
 
 <ul>
@@ -1953,57 +2256,6 @@ y haga click en <em>submit</em></li>
 <p>Grabe la sesión y cierre Chimera.</p>
 </li>
 </ul>
-<h3 id="ejercicio-5-modelado-de-un-motivo-unido-a-un-dominio-globular-en-alphafold2">Ejercicio 5. Modelado de un motivo unido a un dominio globular en Alphafold2</h3>
-<p>Uno de los blancos celulares de Rb es la Histone desacetilasa 1 (HDAC) que posee el motivo LxCxE. Sin embargo la afinidad de HDAC1 por Rb, es mucho menor (20µM) en comparación a la afinidad del motivo de la proteína E7 (5nM).</p>
-<p>Una estructura tridimensional permite entender desde el aspecto molecular las diferencias en las interacciones que podrían llevar a diferencias en afinidades. Sin embargo, hasta la fecha, no se posee una estructura del complejo Rb-HDAC1.</p>
-<ol>
-<li>Modele el complejo utilizando el colab: <a href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb#scrollTo=kOblAo-xetgx">AlphaFold2</a>.</li>
-</ol>
-<p>Para tardar menos en el modelado vamos a realizar algunas modificaciones.</p>
-<ul>
-<li>En lugar de ingresar la secuencia completa de Rb, vamos a ingresar únicamente la correspondiente al dominio Rb, </li>
-</ul>
-<p>Dado que en 1GUX hay residuos no modelados, no los incluiremos en este análisis utilizando <code>:</code> para indicar los puntos de corte intracatenarios.</p>
-<p>Al final, indicaremos con el <code>:</code> el incio de la cadena correspondiente al motivo HDAC (<code>DKRIACEEEFSD</code>).</p>
-<p>Obteniendo finalmente:</p>
-<div class="highlight"><pre><span></span><code>NTIQQLMMILNSASDQPSENLISYFNNCTVNPKESILKRVKDIGYIFKEKFAKAVGQGCVEIGSQRYKLGVRLYYRVMESMLKSE:NFSKLLNDNIFHMSLLACALEVVMATY:SFPWILNVLNLKAFDFYKVIESFIKAEGNLTREMIKHLERCEHRIMESLAWLSDSPLFDLIKQSK:TSLSLFYKKVYRLAYLRLNTLCERLLSEHPELEHIIWTLFQHTLQNEYELMRDRHLDQIMMCSMYGICKVKNIDLKFKIIVTAYKDLPHAVQETFKRVLIKEEEYDSIIVFYNSVFMQRLKTNILQYASTRPPTLSPIPHI:DKRIACEEEFSD
-</code></pre></div>
-<p>Dada la duración de la corrida, seleccionaremos un único modelo para relajar.</p>
-<blockquote>
-<ul>
-<li>En la sección <em>Run AlphaFold</em> en <em>num_relax</em> elija 1.</li>
-</ul>
-</blockquote>
-<p>Luego, corra todo con <code>ctrl+F9</code> o vaya a <em>Runtime → Runall</em></p>
-<p>Si no logra modelar porque en la vida ocurren cosas, puede acceder a los resultados <a href="https://drive.google.com/file/d/1IPjFnwzDtaZ1M9MSKCTaaDmVpUcrIWt0/view?usp=sharing">aquí</a></p>
-<ol start="2">
-<li>Abra el modelo obtenido por AlphaFold2 en chimera.</li>
-<li>Abra el pdb 1GUX</li>
-<li>Alinee ambos complejos representados en ribbon.</li>
-<li>Oculte las posiciones que se observan (~display)</li>
-</ol>
-<div class="admonition danger">
-<p class="admonition-title">Preste mucha atención a como están numerados los modelos en su sesión de chimera</p>
-</div>
-<ol start="6">
-<li>Represente ambos motivos en licorice (ribscale licorice) (recuerde seleccionar el motivo correspondiente antes!) y muestre las cadenas laterales coloreando por heteroatomos.</li>
-</ol>
-<div class="highlight"><pre><span></span><code>sel #0:.E; namesel E7
-sel #1:.E; namesel HDAC
-ribscale licorice E7
-ribscale licorice HDAC
-delete :HOH
-delete element.H
-display E7
-display HDAC
-</code></pre></div>
-<ul>
-<li>¿Qué encuentran conservado, y qué diferente?</li>
-<li>¿Por qué podría tener más baja afinidad HDAC1 que E7?</li>
-<li>Observa la posición hidrofóbica luego del core del motivo: LxCxE para E7 y para HDAC. </li>
-<li>¿Observa variabilidad en la posición hidrofóbica?</li>
-<li>Busque en ELM el motivo LxCxE: <code>LIG_Rb_LxCxE_1</code>. La expresión regular observará que es mucho más compleja que LxCxE ¿Observa la variabilidad de la posición hidrofóbica en la regex?</li>
-</ul>
 <h2 id="ejercicios-adicionales">Ejercicios Adicionales</h2>
 <h3 id="ejercicio-adicional-1-usando-jalview-con-la-proteina-tir-aislada-de-e-coli-patogenica">Ejercicio Adicional 1. Usando JalView con la proteína TIR aislada de E. coli patogénica</h3>
 <p>Las proteínas TIR son secretadas por la cepa patogénica de E. coli y se asocian a ciertas células de mamíferos, proyectando sus extremos N- y C-terminal a través de la membrana plasmática hacia la parte interior de la célula huésped tomando el control de la regulación celular local, por ejemplo induciendo junto con otras proteínas la formación de un pedestal de actina esencial para el ciclo patogénico de esta bacteria. La porción central de la proteína TIR permanece en el compartimiento extracelular y se asocia a la bacteria. Existen numerosas secuencias de TIR obtenidas de diferentes aislamientos de E. coli patogénica almacenadas en la base de datos UNIPROT.</p>
@@ -2061,7 +2313,7 @@ display HDAC
 <li>Compare el número de instancias humanas con el número de instancias virales.</li>
 <li>¿Por qué hay tantas proteínas virales que interactúan con retinoblastoma? (Pista: La respuesta está en el abstract de la clase del motivo <code>LIG_Rb_LxCxE_1</code>)</li>
 </ul>
-<h3 id="ejercicio-adicional-1-construyendo-una-expresion-regular">Ejercicio Adicional 1. Construyendo una expresión regular</h3>
+<h3 id="ejercicio-adicional-3-construyendo-una-expresion-regular">Ejercicio Adicional 3. Construyendo una expresión regular</h3>
 <p>Los receptores nucleares interactúan con diversas proteínas mediantes un motivo lineal llamado NRBox (Nuclear Receptor Box) (Heery,1997). Existen numerosas estructuras de péptidos unidos a diferentes receptores nucleares (PDBs: 3CS8, 2GPO, 1GWQ, 1RJK, 1M2Z) que permitieron estudiar y entender algunas características de la interacción.</p>
 <p>La evidencia experimental recolectada de la literatura indica que:</p>
 <ul>
@@ -2115,7 +2367,69 @@ LVPDAASKHKQLSELLRGGSGSSINPG
 <li>¿Cuál sería la utilidad de definir una expresión regular más específica?</li>
 </ul>
 </li>
-</ol></div>
+<li>
+<p>Busque en <a href="http://elm.eu.org/">ELMdb</a> en la pestaña Prediction la proteína PGC-1-alpha utilizando el accession number o uniprot ID (Q9UBK2 - PRGC1_HUMAN). Esta es una de las proteínas de la lista que usamos en el ejercicio donde construimos la expresión regular:</p>
+<p><code>L[^P][^P]LL</code></p>
+<p>del motivo NRBox en otro trabajo práctico.</p>
+<p>Para cada motivo encontrado, se indica con símbolos (descriptos en la parte superior de la página) si la instancia del motivo es predicha o fue identificada experimentalmente (anotadas o “True Positives”). Responda:</p>
+<ul>
+<li>¿Encuentra el motivo NRBox entre los True positives?</li>
+<li>¿Cuántas instancias True Positive existen para esta proteína?</li>
+<li>¿Cómo es la estructura de la proteína donde se encuentran estos motivos?</li>
+</ul>
+</li>
+</ol>
+<h3 id="ejercicio-adicional-4-modelado-de-un-motivo-unido-a-un-dominio-globular-en-alphafold2">Ejercicio Adicional 4. Modelado de un motivo unido a un dominio globular en Alphafold2</h3>
+<p>Uno de los blancos celulares de Rb es la Histone desacetilasa 1 (HDAC) que posee el motivo LxCxE. Sin embargo la afinidad de HDAC1 por Rb, es mucho menor (20µM) en comparación a la afinidad del motivo de la proteína E7 (5nM).</p>
+<p>Una estructura tridimensional permite entender desde el aspecto molecular las diferencias en las interacciones que podrían llevar a diferencias en afinidades. Sin embargo, hasta la fecha, no se posee una estructura del complejo Rb-HDAC1.</p>
+<ol>
+<li>Modele el complejo utilizando el colab: <a href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb#scrollTo=kOblAo-xetgx">AlphaFold2</a>.</li>
+</ol>
+<p>Para tardar menos en el modelado vamos a realizar algunas modificaciones.</p>
+<ul>
+<li>En lugar de ingresar la secuencia completa de Rb, vamos a ingresar únicamente la correspondiente al dominio Rb, </li>
+</ul>
+<p>Dado que en 1GUX hay residuos no modelados, no los incluiremos en este análisis utilizando <code>:</code> para indicar los puntos de corte intracatenarios.</p>
+<p>Al final, indicaremos con el <code>:</code> el incio de la cadena correspondiente al motivo HDAC (<code>DKRIACEEEFSD</code>).</p>
+<p>Obteniendo finalmente:</p>
+<div class="highlight"><pre><span></span><code>NTIQQLMMILNSASDQPSENLISYFNNCTVNPKESILKRVKDIGYIFKEKFAKAVGQGCVEIGSQRYKLGVRLYYRVMESMLKSE:NFSKLLNDNIFHMSLLACALEVVMATY:SFPWILNVLNLKAFDFYKVIESFIKAEGNLTREMIKHLERCEHRIMESLAWLSDSPLFDLIKQSK:TSLSLFYKKVYRLAYLRLNTLCERLLSEHPELEHIIWTLFQHTLQNEYELMRDRHLDQIMMCSMYGICKVKNIDLKFKIIVTAYKDLPHAVQETFKRVLIKEEEYDSIIVFYNSVFMQRLKTNILQYASTRPPTLSPIPHI:DKRIACEEEFSD
+</code></pre></div>
+<p>Dada la duración de la corrida, seleccionaremos un único modelo para relajar.</p>
+<blockquote>
+<ul>
+<li>En la sección <em>Run AlphaFold</em> en <em>num_relax</em> elija 1.</li>
+</ul>
+</blockquote>
+<p>Luego, corra todo con <code>ctrl+F9</code> o vaya a <em>Runtime → Runall</em></p>
+<p>Si no logra modelar porque en la vida ocurren cosas, puede acceder a los resultados <a href="https://drive.google.com/file/d/1IPjFnwzDtaZ1M9MSKCTaaDmVpUcrIWt0/view?usp=sharing">aquí</a></p>
+<ol start="2">
+<li>Abra el modelo obtenido por AlphaFold2 en chimera.</li>
+<li>Abra el pdb 1GUX</li>
+<li>Alinee ambos complejos representados en ribbon.</li>
+<li>Oculte las posiciones que se observan (~display)</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Preste mucha atención a como están numerados los modelos en su sesión de chimera</p>
+</div>
+<ol start="6">
+<li>Represente ambos motivos en licorice (ribscale licorice) (recuerde seleccionar el motivo correspondiente antes!) y muestre las cadenas laterales coloreando por heteroatomos.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sel #0:.E; namesel E7
+sel #1:.E; namesel HDAC
+ribscale licorice E7
+ribscale licorice HDAC
+delete :HOH
+delete element.H
+display E7
+display HDAC
+</code></pre></div>
+<ul>
+<li>¿Qué encuentran conservado, y qué diferente?</li>
+<li>¿Por qué podría tener más baja afinidad HDAC1 que E7?</li>
+<li>Observa la posición hidrofóbica luego del core del motivo: LxCxE para E7 y para HDAC. </li>
+<li>¿Observa variabilidad en la posición hidrofóbica?</li>
+<li>Busque en ELM el motivo LxCxE: <code>LIG_Rb_LxCxE_1</code>. La expresión regular observará que es mucho más compleja que LxCxE ¿Observa la variabilidad de la posición hidrofóbica en la regex?</li>
+</ul></div>
 
 
 
