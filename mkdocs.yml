@@ -158,7 +158,7 @@ nav:
         - TP3b - Predicción Estructural (B): 'practicos/modelado_estructural_2/index.md'
         - TP4 - Interacciones Proteína-Proteína: 'practicos/ppi/index.md'
         - TP5 - Predicción de desorden y Bases de Datos: 'practicos/Regiones-flexibles/index.md'
-        # - TP6 - Motivos Lineales - Parte I: 'practicos/motivosRegEx/index.md'
+        - TP6 - Motivos Lineales: 'practicos/motivos/index.md'
         # - TP7 - Motivos Lineales - Parte II: 'practicos/Motivos_Lineales/index.md'
         # - TP8 - Trabajo Práctico Integrador: 'practicos/integrador/index.md'
         # - TP4 - Modelado Parte II: 'practicos/modelado_alphafold/index.md'
