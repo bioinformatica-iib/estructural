@@ -1508,11 +1508,21 @@
 <p>La infección por SARS-CoV-2 depende críticamente de la interacción entre la proteína <strong>Spike</strong> del virus y el receptor celular humano <strong>ACE2</strong>. Específicamente, el dominio de unión al receptor (<strong>RBD</strong>) de la Spike es la región que reconoce y se acopla a ACE2. Bloquear físicamente esta interfaz mediante una molécula diseñada a medida impide el anclaje del virus y, por lo tanto, neutraliza la infección celular.</p>
 <h2 id="objetivo-del-practico">Objetivo del Práctico</h2>
 <p>En esta práctica vamos a implementar la primera etapa de una estrategia computacional de <strong>diseño de proteínas <em>de novo</em></strong>. El objetivo es generar un esqueleto proteico pequeño (minibinder) que esté geométricamente optimizado para interactuar de forma estable con los residuos clave (<em>hotspots</em>) del RBD.</p>
-<p>Para lograrlo, utilizaremos un pipeline completo que combina herramientas basadas en redes neuronales generativas con métodos de evaluación energética y predicción estructural:
-1. <strong>RFdiffusion:</strong> Generación de la estructura tridimensional del esqueleto (<em>backbone</em>) adaptada al blanco.
-2. <strong>PyRosetta:</strong> Filtrado inicial de los candidatos según criterios empíricos de estabilidad y calidad estructural.
-3. <strong>ProteinMPNN:</strong> Diseño de la secuencia exacta de aminoácidos óptima para el esqueleto seleccionado.
-4. <strong>ColabFold:</strong> Validación por predicción de la estructura final y evaluación de la afinidad de unión.</p>
+<p>Para lograrlo, utilizaremos un pipeline completo que combina herramientas basadas en redes neuronales generativas con métodos de evaluación energética y predicción estructural:</p>
+<ol>
+<li>
+<p><strong>RFdiffusion:</strong> Generación de la estructura tridimensional del esqueleto (<em>backbone</em>) adaptada al blanco.</p>
+</li>
+<li>
+<p><strong>PyRosetta:</strong> Filtrado inicial de los candidatos según criterios empíricos de estabilidad y calidad estructural.</p>
+</li>
+<li>
+<p><strong>ProteinMPNN:</strong> Diseño de la secuencia exacta de aminoácidos óptima para el esqueleto seleccionado.</p>
+</li>
+<li>
+<p><strong>ColabFold:</strong> Validación por predicción de la estructura final y evaluación de la afinidad de unión.</p>
+</li>
+</ol>
 <h2 id="preparacion-del-entorno">Preparación del Entorno</h2>
 <p>Para que el entorno de Colab reconozca tus archivos al instante y no tengas problemas de sincronización, seguí estos pasos en orden antes de ejecutar cualquier celda de la notebook:</p>
 <h3 id="paso-1-configurar-las-carpetas-en-google-drive">Paso 1: Configurar las carpetas en Google Drive</h3>
