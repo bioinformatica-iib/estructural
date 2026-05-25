@@ -40,6 +40,7 @@ Para que el entorno de Colab reconozca tus archivos al instante y no tengas prob
 1. Abrí la notebook del TP compartida por la cátedra.
 2. **Hacé tu copia propia:** Andá a `Archivo` ➔ `Guardar una copia en Drive`. Cerrá la pestaña anterior y trabajá únicamente en tu copia.
 3. **Activá la GPU:** Andá a `Entorno de ejecución` ➔ `Cambiar tipo de entorno de ejecución` y asegurate de que el acelerador sea **GPU** (T4 o superior).
+4. Move la notebook a la carpeta creada en el **Paso 1**.
 
 ### Paso 3: Montar el Drive y Verificar
 1. Ejecutá la celda del **Bloque 0** y aceptá los permisos para vincular tu cuenta de Google Drive.
