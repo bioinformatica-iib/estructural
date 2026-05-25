@@ -18,9 +18,13 @@ La infección por SARS-CoV-2 depende críticamente de la interacción entre la p
 En esta práctica vamos a implementar la primera etapa de una estrategia computacional de **diseño de proteínas *de novo***. El objetivo es generar un esqueleto proteico pequeño (minibinder) que esté geométricamente optimizado para interactuar de forma estable con los residuos clave (*hotspots*) del RBD.
 
 Para lograrlo, utilizaremos un pipeline completo que combina herramientas basadas en redes neuronales generativas con métodos de evaluación energética y predicción estructural:
+
 1. **RFdiffusion:** Generación de la estructura tridimensional del esqueleto (*backbone*) adaptada al blanco.
+
 2. **PyRosetta:** Filtrado inicial de los candidatos según criterios empíricos de estabilidad y calidad estructural.
+
 3. **ProteinMPNN:** Diseño de la secuencia exacta de aminoácidos óptima para el esqueleto seleccionado.
+
 4. **ColabFold:** Validación por predicción de la estructura final y evaluación de la afinidad de unión.
 
 ## Preparación del Entorno
