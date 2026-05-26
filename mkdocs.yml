@@ -159,7 +159,7 @@ nav:
         - TP4 - Interacciones Proteína-Proteína: 'practicos/ppi/index.md'
         - TP5 - Predicción de desorden y Bases de Datos: 'practicos/Regiones-flexibles/index.md'
         - TP6 - Motivos Lineales: 'practicos/motivos/index.md'
-        - TP7 - Motivos Lineales - Parte II: 'practicos/protein_design/index.md'
+        - TP7 - Protein Design: 'practicos/protein_design/index.md'
         # - TP8 - Trabajo Práctico Integrador: 'practicos/integrador/index.md'
         # - TP4 - Modelado Parte II: 'practicos/modelado_alphafold/index.md'
     #    - Resumen: 'practicos/resumen.md'
