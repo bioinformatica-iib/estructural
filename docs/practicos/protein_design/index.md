@@ -6,6 +6,8 @@
 
 [ :fontawesome-solid-link: Colab Notebook](https://colab.research.google.com/drive/1-qU3AiVauklK1zi2rIH352Qn_lzc0Gsw?usp=sharing){ .md-button .md-button--primary }
 
+[ :fontawesome-solid-link: Native sequence redesign](https://github.com/pb3lab/AI4PD_2025/blob/main/tutorials/native_enzdes/native_enzdes_v2.ipynb){ .md-button .md-button--primary }
+
 <!--
 ## Slides
 * Slides [[PDF]](https://drive.google.com/file/d/1B6cIgEzZLLkmAf37mDhp_EmToNJBRPo3/view?usp=sharing)
