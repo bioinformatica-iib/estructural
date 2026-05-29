@@ -32,7 +32,7 @@ A definir próximamente !
 | Jueves, 14/05/2026    | 9 - 13 hs     | Práctico      | [TP5. Predicción de desorden y Bases de Datos](/estructural/practicos/Regiones-flexibles/)         | G. Romer |
 | Martes, 19/05/2026	  | 9 - 13 hs     | Teórica       | [T6. Motivos Lineales](/estructural/teoricas/teorica6/) | L. Chemes |
 | Jueves, 21/05/2026    | 9 - 13 hs	    | Práctico      | [TP6. Motivos Lineales](/estructural/practicos/motivos/)                        | J. Glavina |
-| Martes, 26/05/2026	  | 9 - 13 hs	    | Teórica       | T7. Diseño de Proteínas | L. Chemes |
+| Martes, 26/05/2026	  | 9 - 13 hs	    | Teórica       | [T7. Diseño de Proteínas](/estructural/teoricas/teorica7/) | L. Chemes |
 | Jueves, 28/05/2026    | 9 - 13 hs	    | Práctico      | [TP7. Diseño de Proteínas](/estructural/practicos/protein_design/)  | M. Didier Garnham |
 | Martes, 02/06/2026   	| 9 - 13 hs	    | | Presentación Oral (Asistencia Obligatoria)   | L. Chemes |
 | Jueves, 04/06/2026    | 9 - 13 hs	    | Práctico      | TP9. Trabajo Práctico Integrador  | J. Glavina   |
