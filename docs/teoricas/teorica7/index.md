@@ -2,8 +2,7 @@
 
 ## Dr. Benjamín Basanta
 
-Benjamín Basanta es Licenciado en Ciencias Biológicas de la Universidad de Buenos
-Aires (2006-2012), y realizó su doctorado en el Institute for Protein Design en el
+Benjamín Basanta es Licenciado en Ciencias Biológicas de la Universidad de Buenos Aires (2006-2012), y realizó su doctorado en el Institute for Protein Design en el
 Laboratorio de David Baker en la Universidad de Washington, USA (2013-2019).
 Posteriormente, realizó estudios postdoctorales con Gabriel Lander en Scripps
 Research Institute en California, USA (2020-2022), y desde 2022 es Scientist II en el
@@ -27,10 +26,9 @@ Universidad de Washington, aprendiendo sobre diseño de novo de enzimas.
 
 [:fontawesome-solid-download: Slides](https://drive.google.com/file/d/1edYi01F9ZsQ9QxuXXsUr0zshVz6LwH7N/view?usp=sharing){ .md-button .md-button--primary } &nbsp;&nbsp;
 
+[:fontawesome-brands-youtube: Video YouTube](https://youtu.be/W192wVzRMKw){ .md-button .md-button--primary } 
+
 <!--
-
-[:fontawesome-brands-youtube: Video YouTube](https://youtu.be/8DFw-4d9vAQ){ .md-button .md-button--primary } 
-
 - Slides [[PDF]](https://drive.google.com/file/d/15inKT-kcVz22jr1BkHg442xHbNY97CuR/view?usp=sharing)
 #### Motivos Lineales en Patógenos
 - Slides [[PDF]]()
