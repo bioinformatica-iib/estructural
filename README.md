@@ -6,12 +6,12 @@ en la web un curso o materia.
 El material para las clases se escribe en markdown (texto plano), y se puede
 editar directamente desde un repositorio (ej GitHub).
 
-`cursos-unsam-mkdocs-template` usa [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). 
-Consultar la documentación (que está buenísima!) en
-[Setup](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/),
+El sitio se genera con [Zensical](https://zensical.org) (sucesor de Material for MkDocs).
+Consultar la documentación en
+[Setup](https://zensical.org/docs/setup/basics/),
 para ver como customizar las paginas de un curso (logo, colores, etc). 
 
-Y consultar [Reference](https://squidfunk.github.io/mkdocs-material/reference/), 
+Y consultar [Authoring](https://zensical.org/docs/authoring/markdown/), 
 para ver como incluir notas, botones, tablas, diagramas, iconos al escribir y
 preparar el material del curso etc. 
 
@@ -26,31 +26,5 @@ preparar el material del curso etc.
 
 ## En mas detalle
 
-`cursos-unsam-mkdocs-template` es un template, asi que hay que copiarlo o forkear. mkdocs es un
-generador de sitios estáticos, y Material for Mkdocs es un conjunto de aditivos
-para hacer que escribir y publicar contenido sea fácil divertido y los sitios
-sean profesionales y se vean bien en cualquier dispositivo. 
-
-Todas las dependencias (paquetes y adicionales) están manejadas por
-[poetry](https://python-poetry.org) y el esqueleto ya tiene lo necesario para
-ser generado y publicado en [netlify](https://www.netlify.com/). 
-
-Poetry hace facil correr todo el sitio localmente si es que quieren editar e ir
-viendo como queda. Para eso, **instalar poetry** (seguir instrucciones en la
-página), y luego: 
-```
-cd cursos-unsam-mkdocs-fork
-poetry install 
-```
-
-Asi que después de esto, si quieren correr el sitio localmente:
-```
-poetry shell 
-mkdocs serve
-``` 
-
-Esto activa el entorno python con todas las dependencias y luego corre mkdocs
-para generar el sitio. Pueden navegarlo en http://127.0.0.1:8000. 
-
-Netlify usa `requirements.txt` y `netlify.toml` (además del resto) para poder
-generar el sitio. 
+Cómo instalar el entorno (uv + Zensical), previsualizar el sitio localmente y
+publicarlo: ver [HOWTO/INSTALAR.md](HOWTO/INSTALAR.md).
