@@ -10,7 +10,7 @@ tags:
 <br>Dra. Lucía B. Chemes
 
 <figure class="image is-128x128">
-  <img class= "is-rounded" src="./img/lucia.png" width=250>
+  <img class= "is-rounded" src="docentes/img/lucia.png" width=250>
 </figure>
 
 <!--
@@ -18,7 +18,7 @@ tags:
 <br>Dr. Nicolás Palópoli
 
 <figure class="image is-128x128">
-  <img class= "is-rounded" src="./img/nico.png">
+  <img class= "is-rounded" src="docentes/img/nico.png">
 </figure>
 
 -->
@@ -56,5 +56,5 @@ tags:
 <!-- <br>Dr. Toby J. Gibson
 
 <figure class="image is-128x128">
-  <img class= "is-rounded" src="./img/toby.png" width=250>
+  <img class= "is-rounded" src="docentes/img/toby.png" width=250>
 </figure> -->
