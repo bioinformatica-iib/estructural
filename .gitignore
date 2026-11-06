@@ -5,3 +5,4 @@ token
 
 # uv
 .venv/
+.cache/
