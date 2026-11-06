@@ -1,5 +1,5 @@
 
-# **TP 4.** Interacciones proteína-proteína { markdown data-toc-label = 'TP 4'}
+# **TP 4.** Interacciones proteína-proteína { markdown data-toc-label='TP 4'}
 
 ### Recursos Online
 * AlphaFold Server: [https://alphafoldserver.com/](https://alphafoldserver.com/)

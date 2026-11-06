@@ -1,4 +1,4 @@
-# **TP 7**. Motivos Lineales - Parte I { markdown data-toc-label = 'TP 7'}
+# **TP 7**. Motivos Lineales - Parte I { markdown data-toc-label='TP 7'}
 
 ## Recursos a utilizar
 * Regex101: [https://regex101.com](https://regex101.com)

@@ -1,4 +1,4 @@
-# **TP 8**. Motivos Lineales - Parte II { markdown data-toc-label = 'TP 8'}
+# **TP 8**. Motivos Lineales - Parte II { markdown data-toc-label='TP 8'}
 
 ## Materiales
 

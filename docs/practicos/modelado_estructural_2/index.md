@@ -1,4 +1,4 @@
-# **TP 3**. Predicción Estructural (B) { markdown data-toc-label = 'TP 3b ' }
+# **TP 3**. Predicción Estructural (B) { markdown data-toc-label='TP 3b ' }
 
 ## Recursos Online
 
