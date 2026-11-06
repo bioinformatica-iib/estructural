@@ -2,3 +2,6 @@
 site/
 # Github token
 token
+
+# uv
+.venv/

@@ -1,22 +1,18 @@
-[tool.poetry]
-name = "cursos-unsam-mkdocs-template"
-version = "0.1.0"
-description = "Template Mkdocs de Cursos y Materias UNSAM"
-authors = ["Fernán Agüero <fernan@iib.unsam.edu.ar>"]
+# Entorno para generar el sitio con Zensical (https://zensical.org).
+#   uv sync                 # una vez: crea .venv/ con las versiones de uv.lock
+#   uv run zensical serve   # previsualizar en http://localhost:8000
+[project]
+name = "estructural-site"
+version = "2026.11"
+description = "Sitio web del curso (estructural), generado con Zensical"
+authors = [{ name = "Fernán Agüero", email = "fernan@iib.unsam.edu.ar" }]
 license = "MIT"
+requires-python = ">=3.12"
+dependencies = [
+    "zensical==0.1.0",
+    # 3.11.3 rompe toc con data-toc-label sin valor (ver zensical-migration DECISIONS D13)
+    "markdown!=3.11.3",
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-mkdocs-material = "^8.2.15"
-mkdocs-video = "^1.3.0"
-pymdown-extensions = "^9.4"
-mkdocs-pymdownx-material-extras = "^2.0.3"
-fontawesome-markdown = "^0.2.6"
-mkdocs-awesome-pages-plugin = "^2.7.0"
-mkdocs-git-revision-date-plugin = "^0.3.2"
-
-[tool.poetry.dev-dependencies]
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.uv]
+package = false
